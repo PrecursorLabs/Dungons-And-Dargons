@@ -61,10 +61,17 @@
             this.label28 = new System.Windows.Forms.Label();
             this.Update_timer = new System.Windows.Forms.Timer(this.components);
             this.Main_tabs = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Events_tab = new System.Windows.Forms.TabPage();
+            this.Equipment_tab = new System.Windows.Forms.TabPage();
             this.MP_tbox = new System.Windows.Forms.TextBox();
+            this.Inventory_tab = new System.Windows.Forms.TabPage();
+            this.Spells_tab = new System.Windows.Forms.TabPage();
+            this.GameMaster_tab = new System.Windows.Forms.TabPage();
+            this.Inventory_lbox = new System.Windows.Forms.ListBox();
+            this.UPDATE_btn = new System.Windows.Forms.Button();
+            this.Combat_tbox = new System.Windows.Forms.TabPage();
             this.Main_tabs.SuspendLayout();
+            this.Inventory_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // Log_lbox
@@ -74,7 +81,7 @@
             this.Log_lbox.FormattingEnabled = true;
             this.Log_lbox.Location = new System.Drawing.Point(12, 344);
             this.Log_lbox.Name = "Log_lbox";
-            this.Log_lbox.Size = new System.Drawing.Size(173, 173);
+            this.Log_lbox.Size = new System.Drawing.Size(166, 173);
             this.Log_lbox.TabIndex = 6;
             this.Log_lbox.SelectedIndexChanged += new System.EventHandler(this.Log_lbox_SelectedIndexChanged);
             // 
@@ -119,7 +126,7 @@
             this.PERC_tbox.ForeColor = System.Drawing.Color.Black;
             this.PERC_tbox.Location = new System.Drawing.Point(56, 316);
             this.PERC_tbox.Name = "PERC_tbox";
-            this.PERC_tbox.Size = new System.Drawing.Size(100, 22);
+            this.PERC_tbox.Size = new System.Drawing.Size(122, 22);
             this.PERC_tbox.TabIndex = 103;
             // 
             // INT_tbox
@@ -130,7 +137,7 @@
             this.INT_tbox.ForeColor = System.Drawing.Color.Black;
             this.INT_tbox.Location = new System.Drawing.Point(56, 290);
             this.INT_tbox.Name = "INT_tbox";
-            this.INT_tbox.Size = new System.Drawing.Size(100, 22);
+            this.INT_tbox.Size = new System.Drawing.Size(122, 22);
             this.INT_tbox.TabIndex = 102;
             // 
             // STR_tbox
@@ -141,7 +148,7 @@
             this.STR_tbox.ForeColor = System.Drawing.Color.Black;
             this.STR_tbox.Location = new System.Drawing.Point(56, 264);
             this.STR_tbox.Name = "STR_tbox";
-            this.STR_tbox.Size = new System.Drawing.Size(100, 22);
+            this.STR_tbox.Size = new System.Drawing.Size(122, 22);
             this.STR_tbox.TabIndex = 101;
             // 
             // DEX_tbox
@@ -152,7 +159,7 @@
             this.DEX_tbox.ForeColor = System.Drawing.Color.Black;
             this.DEX_tbox.Location = new System.Drawing.Point(56, 238);
             this.DEX_tbox.Name = "DEX_tbox";
-            this.DEX_tbox.Size = new System.Drawing.Size(100, 22);
+            this.DEX_tbox.Size = new System.Drawing.Size(122, 22);
             this.DEX_tbox.TabIndex = 100;
             // 
             // CHAR_tbox
@@ -163,7 +170,7 @@
             this.CHAR_tbox.ForeColor = System.Drawing.Color.Black;
             this.CHAR_tbox.Location = new System.Drawing.Point(56, 212);
             this.CHAR_tbox.Name = "CHAR_tbox";
-            this.CHAR_tbox.Size = new System.Drawing.Size(100, 22);
+            this.CHAR_tbox.Size = new System.Drawing.Size(122, 22);
             this.CHAR_tbox.TabIndex = 99;
             // 
             // SDEF_tbox
@@ -174,7 +181,7 @@
             this.SDEF_tbox.ForeColor = System.Drawing.Color.Black;
             this.SDEF_tbox.Location = new System.Drawing.Point(56, 186);
             this.SDEF_tbox.Name = "SDEF_tbox";
-            this.SDEF_tbox.Size = new System.Drawing.Size(100, 22);
+            this.SDEF_tbox.Size = new System.Drawing.Size(122, 22);
             this.SDEF_tbox.TabIndex = 98;
             // 
             // DEF_tbox
@@ -185,7 +192,7 @@
             this.DEF_tbox.ForeColor = System.Drawing.Color.Black;
             this.DEF_tbox.Location = new System.Drawing.Point(56, 160);
             this.DEF_tbox.Name = "DEF_tbox";
-            this.DEF_tbox.Size = new System.Drawing.Size(100, 22);
+            this.DEF_tbox.Size = new System.Drawing.Size(122, 22);
             this.DEF_tbox.TabIndex = 97;
             // 
             // SATK_tbox
@@ -196,7 +203,7 @@
             this.SATK_tbox.ForeColor = System.Drawing.Color.Black;
             this.SATK_tbox.Location = new System.Drawing.Point(56, 134);
             this.SATK_tbox.Name = "SATK_tbox";
-            this.SATK_tbox.Size = new System.Drawing.Size(100, 22);
+            this.SATK_tbox.Size = new System.Drawing.Size(122, 22);
             this.SATK_tbox.TabIndex = 96;
             // 
             // ATK_tbox
@@ -207,7 +214,7 @@
             this.ATK_tbox.ForeColor = System.Drawing.Color.Black;
             this.ATK_tbox.Location = new System.Drawing.Point(56, 109);
             this.ATK_tbox.Name = "ATK_tbox";
-            this.ATK_tbox.Size = new System.Drawing.Size(100, 22);
+            this.ATK_tbox.Size = new System.Drawing.Size(122, 22);
             this.ATK_tbox.TabIndex = 95;
             // 
             // MMP_tbox
@@ -216,7 +223,7 @@
             this.MMP_tbox.Enabled = false;
             this.MMP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MMP_tbox.ForeColor = System.Drawing.Color.Black;
-            this.MMP_tbox.Location = new System.Drawing.Point(138, 81);
+            this.MMP_tbox.Location = new System.Drawing.Point(120, 82);
             this.MMP_tbox.Name = "MMP_tbox";
             this.MMP_tbox.Size = new System.Drawing.Size(58, 22);
             this.MMP_tbox.TabIndex = 94;
@@ -227,7 +234,7 @@
             this.MHP_tbox.Enabled = false;
             this.MHP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MHP_tbox.ForeColor = System.Drawing.Color.Black;
-            this.MHP_tbox.Location = new System.Drawing.Point(138, 54);
+            this.MHP_tbox.Location = new System.Drawing.Point(120, 54);
             this.MHP_tbox.Name = "MHP_tbox";
             this.MHP_tbox.Size = new System.Drawing.Size(58, 22);
             this.MHP_tbox.TabIndex = 93;
@@ -240,7 +247,7 @@
             this.LVL_tbox.ForeColor = System.Drawing.Color.Black;
             this.LVL_tbox.Location = new System.Drawing.Point(56, 30);
             this.LVL_tbox.Name = "LVL_tbox";
-            this.LVL_tbox.Size = new System.Drawing.Size(100, 22);
+            this.LVL_tbox.Size = new System.Drawing.Size(122, 22);
             this.LVL_tbox.TabIndex = 92;
             // 
             // Name_tbox
@@ -251,7 +258,7 @@
             this.Name_tbox.ForeColor = System.Drawing.Color.Black;
             this.Name_tbox.Location = new System.Drawing.Point(56, 6);
             this.Name_tbox.Name = "Name_tbox";
-            this.Name_tbox.Size = new System.Drawing.Size(100, 22);
+            this.Name_tbox.Size = new System.Drawing.Size(122, 22);
             this.Name_tbox.TabIndex = 91;
             // 
             // label16
@@ -379,33 +386,40 @@
             // 
             // Main_tabs
             // 
-            this.Main_tabs.Controls.Add(this.tabPage1);
-            this.Main_tabs.Controls.Add(this.tabPage2);
-            this.Main_tabs.Location = new System.Drawing.Point(202, 31);
+            this.Main_tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Main_tabs.Controls.Add(this.Events_tab);
+            this.Main_tabs.Controls.Add(this.Equipment_tab);
+            this.Main_tabs.Controls.Add(this.Inventory_tab);
+            this.Main_tabs.Controls.Add(this.Spells_tab);
+            this.Main_tabs.Controls.Add(this.Combat_tbox);
+            this.Main_tabs.Controls.Add(this.GameMaster_tab);
+            this.Main_tabs.Location = new System.Drawing.Point(184, 34);
             this.Main_tabs.Name = "Main_tabs";
             this.Main_tabs.SelectedIndex = 0;
-            this.Main_tabs.Size = new System.Drawing.Size(741, 486);
+            this.Main_tabs.Size = new System.Drawing.Size(768, 517);
             this.Main_tabs.TabIndex = 107;
             // 
-            // tabPage1
+            // Events_tab
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(733, 460);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Events_tab.Location = new System.Drawing.Point(4, 22);
+            this.Events_tab.Name = "Events_tab";
+            this.Events_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.Events_tab.Size = new System.Drawing.Size(760, 491);
+            this.Events_tab.TabIndex = 0;
+            this.Events_tab.Text = "Events";
+            this.Events_tab.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // Equipment_tab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(733, 460);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Equipment_tab.Location = new System.Drawing.Point(4, 22);
+            this.Equipment_tab.Name = "Equipment_tab";
+            this.Equipment_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.Equipment_tab.Size = new System.Drawing.Size(760, 491);
+            this.Equipment_tab.TabIndex = 1;
+            this.Equipment_tab.Text = "Equipment";
+            this.Equipment_tab.UseVisualStyleBackColor = true;
             // 
             // MP_tbox
             // 
@@ -418,12 +432,74 @@
             this.MP_tbox.Size = new System.Drawing.Size(58, 22);
             this.MP_tbox.TabIndex = 108;
             // 
+            // Inventory_tab
+            // 
+            this.Inventory_tab.Controls.Add(this.Inventory_lbox);
+            this.Inventory_tab.Location = new System.Drawing.Point(4, 22);
+            this.Inventory_tab.Name = "Inventory_tab";
+            this.Inventory_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.Inventory_tab.Size = new System.Drawing.Size(760, 491);
+            this.Inventory_tab.TabIndex = 2;
+            this.Inventory_tab.Text = "Inventory";
+            this.Inventory_tab.UseVisualStyleBackColor = true;
+            // 
+            // Spells_tab
+            // 
+            this.Spells_tab.Location = new System.Drawing.Point(4, 22);
+            this.Spells_tab.Name = "Spells_tab";
+            this.Spells_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.Spells_tab.Size = new System.Drawing.Size(760, 491);
+            this.Spells_tab.TabIndex = 3;
+            this.Spells_tab.Text = "Spells";
+            this.Spells_tab.UseVisualStyleBackColor = true;
+            // 
+            // GameMaster_tab
+            // 
+            this.GameMaster_tab.Location = new System.Drawing.Point(4, 22);
+            this.GameMaster_tab.Name = "GameMaster_tab";
+            this.GameMaster_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.GameMaster_tab.Size = new System.Drawing.Size(760, 491);
+            this.GameMaster_tab.TabIndex = 4;
+            this.GameMaster_tab.Text = "GameMaster";
+            this.GameMaster_tab.UseVisualStyleBackColor = true;
+            // 
+            // Inventory_lbox
+            // 
+            this.Inventory_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Inventory_lbox.FormattingEnabled = true;
+            this.Inventory_lbox.Location = new System.Drawing.Point(3, 3);
+            this.Inventory_lbox.Name = "Inventory_lbox";
+            this.Inventory_lbox.Size = new System.Drawing.Size(754, 485);
+            this.Inventory_lbox.TabIndex = 0;
+            this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
+            // 
+            // UPDATE_btn
+            // 
+            this.UPDATE_btn.Location = new System.Drawing.Point(12, 528);
+            this.UPDATE_btn.Name = "UPDATE_btn";
+            this.UPDATE_btn.Size = new System.Drawing.Size(75, 23);
+            this.UPDATE_btn.TabIndex = 1;
+            this.UPDATE_btn.Text = "Update";
+            this.UPDATE_btn.UseVisualStyleBackColor = true;
+            this.UPDATE_btn.Click += new System.EventHandler(this.UPDATE_btn_Click);
+            // 
+            // Combat_tbox
+            // 
+            this.Combat_tbox.Location = new System.Drawing.Point(4, 22);
+            this.Combat_tbox.Name = "Combat_tbox";
+            this.Combat_tbox.Padding = new System.Windows.Forms.Padding(3);
+            this.Combat_tbox.Size = new System.Drawing.Size(760, 491);
+            this.Combat_tbox.TabIndex = 5;
+            this.Combat_tbox.Text = "Combat";
+            this.Combat_tbox.UseVisualStyleBackColor = true;
+            // 
             // User
             // 
             this.AccessibleName = "UserForm";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 555);
+            this.Controls.Add(this.UPDATE_btn);
             this.Controls.Add(this.MP_tbox);
             this.Controls.Add(this.Main_tabs);
             this.Controls.Add(this.HP_tbox);
@@ -460,6 +536,7 @@
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);
             this.Main_tabs.ResumeLayout(false);
+            this.Inventory_tab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,8 +575,14 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Timer Update_timer;
         private System.Windows.Forms.TabControl Main_tabs;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Events_tab;
+        private System.Windows.Forms.TabPage Equipment_tab;
         private System.Windows.Forms.TextBox MP_tbox;
+        private System.Windows.Forms.TabPage Inventory_tab;
+        private System.Windows.Forms.ListBox Inventory_lbox;
+        private System.Windows.Forms.TabPage Spells_tab;
+        private System.Windows.Forms.TabPage GameMaster_tab;
+        private System.Windows.Forms.Button UPDATE_btn;
+        private System.Windows.Forms.TabPage Combat_tbox;
     }
 }

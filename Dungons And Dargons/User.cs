@@ -110,6 +110,7 @@ namespace Dungons_And_Dargons
         {
             try
             {
+                Inventory_lbox.Items.Clear();
                 Log_lbox.Items.Add("Grabbing Inventory");
                 string sql = "SELECT Items_idWeapons FROM player_has_items WHERE Player_idPlayer=" + PlayerID.ToString();
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -146,7 +147,6 @@ namespace Dungons_And_Dargons
         {
             Name_tbox.Text = PName;
             LVL_tbox.Text = Level.ToString();
-            AGE_tbox.Text = Age.ToString();
             XP_tbox.Text = XP.ToString();
             MHP_tbox.Text = HPMax.ToString();
             HP_tbox.Text = HP.ToString();
@@ -235,7 +235,6 @@ namespace Dungons_And_Dargons
 
         private void Main_tabs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            asfas
         }
     }
 }
