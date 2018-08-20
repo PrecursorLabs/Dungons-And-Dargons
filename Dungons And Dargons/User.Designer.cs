@@ -70,8 +70,13 @@
             this.Inventory_lbox = new System.Windows.Forms.ListBox();
             this.UPDATE_btn = new System.Windows.Forms.Button();
             this.Combat_tbox = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
+            this.GameMaster_tab.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Log_lbox
@@ -455,6 +460,7 @@
             // 
             // GameMaster_tab
             // 
+            this.GameMaster_tab.Controls.Add(this.tabControl1);
             this.GameMaster_tab.Location = new System.Drawing.Point(4, 22);
             this.GameMaster_tab.Name = "GameMaster_tab";
             this.GameMaster_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -492,6 +498,36 @@
             this.Combat_tbox.TabIndex = 5;
             this.Combat_tbox.Text = "Combat";
             this.Combat_tbox.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(486, 119);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(8, 8);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(0, 0);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(0, 0);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // User
             // 
@@ -537,6 +573,8 @@
             this.Load += new System.EventHandler(this.User_Load);
             this.Main_tabs.ResumeLayout(false);
             this.Inventory_tab.ResumeLayout(false);
+            this.GameMaster_tab.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,5 +622,8 @@
         private System.Windows.Forms.TabPage GameMaster_tab;
         private System.Windows.Forms.Button UPDATE_btn;
         private System.Windows.Forms.TabPage Combat_tbox;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
