@@ -60,11 +60,11 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.Update_timer = new System.Windows.Forms.Timer(this.components);
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Main_tabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tabControl1.SuspendLayout();
+            this.MP_tbox = new System.Windows.Forms.TextBox();
+            this.Main_tabs.SuspendLayout();
             this.SuspendLayout();
             // 
             // Log_lbox
@@ -377,15 +377,15 @@
             this.Update_timer.Interval = 6000;
             this.Update_timer.Tick += new System.EventHandler(this.Update_timer_Tick);
             // 
-            // tabControl1
+            // Main_tabs
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(202, 31);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(741, 486);
-            this.tabControl1.TabIndex = 107;
+            this.Main_tabs.Controls.Add(this.tabPage1);
+            this.Main_tabs.Controls.Add(this.tabPage2);
+            this.Main_tabs.Location = new System.Drawing.Point(202, 31);
+            this.Main_tabs.Name = "Main_tabs";
+            this.Main_tabs.SelectedIndex = 0;
+            this.Main_tabs.Size = new System.Drawing.Size(741, 486);
+            this.Main_tabs.TabIndex = 107;
             // 
             // tabPage1
             // 
@@ -402,21 +402,21 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.Size = new System.Drawing.Size(733, 460);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // MP_tbox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(56, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(58, 22);
-            this.textBox1.TabIndex = 108;
+            this.MP_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MP_tbox.Enabled = false;
+            this.MP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MP_tbox.ForeColor = System.Drawing.Color.Black;
+            this.MP_tbox.Location = new System.Drawing.Point(56, 81);
+            this.MP_tbox.Name = "MP_tbox";
+            this.MP_tbox.Size = new System.Drawing.Size(58, 22);
+            this.MP_tbox.TabIndex = 108;
             // 
             // User
             // 
@@ -424,8 +424,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 555);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.MP_tbox);
+            this.Controls.Add(this.Main_tabs);
             this.Controls.Add(this.HP_tbox);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.XP_tbox);
@@ -459,7 +459,7 @@
             this.Name = "User";
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.Main_tabs.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,9 +497,9 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Timer Update_timer;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl Main_tabs;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox MP_tbox;
     }
 }
