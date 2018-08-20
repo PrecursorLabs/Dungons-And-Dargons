@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dungons And Dargons", "Dungons And Dargons\Dungons And Dargons.csproj", "{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2BE5E2D-B2AD-47DA-87D7-E32E0C5FB1EB}
+	EndGlobalSection
+EndGlobal
