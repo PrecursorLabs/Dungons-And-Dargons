@@ -223,9 +223,18 @@ namespace Dungons_And_Dargons
 
         private void Inventory_lbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string IID = Inventory_lbox.Items[Inventory_lbox.SelectedIndex].ToString().Split('<', '>')[1];
-            Item Iview = new Item(Convert.ToInt32(IID),conn,PName);
-            Iview.Show();
+            if (Inventory_lbox.SelectedItem != null)
+            {
+                try
+                {
+                    string IID = Inventory_lbox.Items[Inventory_lbox.SelectedIndex].ToString().Split('<', '>')[1];
+                    Item Iview = new Item(Convert.ToInt32(IID), conn, PName);
+                    Iview.Show();
+                } catch(Exception ex)
+                {
+
+                }
+            }
         }
 
         private void Update_timer_Tick(object sender, EventArgs e)
@@ -233,8 +242,9 @@ namespace Dungons_And_Dargons
             UPDATE_btn.PerformClick();
         }
 
-        private void Main_tabs_SelectedIndexChanged(object sender, EventArgs e)
+        private void Log_desc_tbox_TextChanged(object sender, EventArgs e)
         {
+
         }
     }
 }
