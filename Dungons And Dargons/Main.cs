@@ -20,7 +20,7 @@ namespace Dungons_And_Dargons
 
         private void Login_btn_Click(object sender, EventArgs e)
         {
-            string connStr = "server=localhost;user=DBUser;database=dungonsdargons;port=3306;password=dnd5114";
+            string connStr = "server=119.18.36.10;user=DBUser;database=dungonsdargons;port=3306;password=dnd5114";
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
@@ -57,6 +57,7 @@ namespace Dungons_And_Dargons
             catch (Exception ex)
             {
                 Log_lbox.Items.Add((ex.ToString()));
+                MessageBox.Show(ex.ToString());
             }
 
             conn.Close();

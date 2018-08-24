@@ -14,7 +14,7 @@ namespace Dungons_And_Dargons
 {
     public partial class User : Form
     {
-        public static string connStr = "server=localhost;user=DBUser;database=dungonsdargons;port=3306;password=dnd5114";
+        public static string connStr = "server=119.18.36.10;user=DBUser;database=dungonsdargons;port=3306;password=dnd5114";
         MySqlConnection conn = new MySqlConnection(connStr);
         public int PlayerID;
         public string UserName = "User";
@@ -211,6 +211,11 @@ namespace Dungons_And_Dargons
         private void Log_desc_tbox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ten_timer_Tick(object sender, EventArgs e)
+        {
+            Log_lbox.Items.Clear();
         }
     }
 }
