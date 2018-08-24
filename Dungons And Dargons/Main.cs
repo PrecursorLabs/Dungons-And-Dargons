@@ -44,6 +44,10 @@ namespace Dungons_And_Dargons
                     this.Hide();
                     User UserForm = new User(Name_tbox.Text, ip_tbox.Text, dbpassword_tbox.Text);
                     UserForm.ShowDialog();
+                    Application.UserAppDataRegistry.SetValue("IPString", ip_tbox.Text);
+                    Application.UserAppDataRegistry.SetValue("DBPassString", dbpassword_tbox.Text);
+                    Application.UserAppDataRegistry.SetValue("UsernameString", Name_tbox.Text);
+                    Application.UserAppDataRegistry.SetValue("PasswordString", Pass_tbox.Text);
                     rdr.Close();
                     conn.Close();
                     this.Close();
@@ -57,7 +61,6 @@ namespace Dungons_And_Dargons
             catch (Exception ex)
             {
                 Log_lbox.Items.Add((ex.ToString()));
-                MessageBox.Show(ex.ToString());
             }
 
             conn.Close();
@@ -66,6 +69,20 @@ namespace Dungons_And_Dargons
 
         private void Main_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Application.UserAppDataRegistry.GetValue("IPString") != null)
+                {
+                    ip_tbox.Text = Application.UserAppDataRegistry.GetValue("IPString").ToString();
+                    dbpassword_tbox.Text = Application.UserAppDataRegistry.GetValue("DBPassString").ToString();
+                    Name_tbox.Text = Application.UserAppDataRegistry.GetValue("UsernameString").ToString();
+                    Pass_tbox.Text = Application.UserAppDataRegistry.GetValue("PasswordString").ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 

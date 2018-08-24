@@ -48,7 +48,7 @@
             this.Name_tbox.Location = new System.Drawing.Point(89, 64);
             this.Name_tbox.Name = "Name_tbox";
             this.Name_tbox.Size = new System.Drawing.Size(107, 20);
-            this.Name_tbox.TabIndex = 0;
+            this.Name_tbox.TabIndex = 2;
             this.Name_tbox.TextChanged += new System.EventHandler(this.Name_tbox_TextChanged);
             // 
             // Pass_tbox
@@ -59,7 +59,7 @@
             this.Pass_tbox.Location = new System.Drawing.Point(89, 90);
             this.Pass_tbox.Name = "Pass_tbox";
             this.Pass_tbox.Size = new System.Drawing.Size(107, 20);
-            this.Pass_tbox.TabIndex = 1;
+            this.Pass_tbox.TabIndex = 3;
             this.Pass_tbox.UseSystemPasswordChar = true;
             this.Pass_tbox.TextChanged += new System.EventHandler(this.Pass_tbox_TextChanged);
             // 
@@ -128,7 +128,7 @@
             this.dbpassword_tbox.Location = new System.Drawing.Point(89, 38);
             this.dbpassword_tbox.Name = "dbpassword_tbox";
             this.dbpassword_tbox.Size = new System.Drawing.Size(107, 20);
-            this.dbpassword_tbox.TabIndex = 7;
+            this.dbpassword_tbox.TabIndex = 1;
             this.dbpassword_tbox.UseSystemPasswordChar = true;
             // 
             // label5
@@ -151,7 +151,7 @@
             this.ip_tbox.Location = new System.Drawing.Point(89, 12);
             this.ip_tbox.Name = "ip_tbox";
             this.ip_tbox.Size = new System.Drawing.Size(107, 20);
-            this.ip_tbox.TabIndex = 10;
+            this.ip_tbox.TabIndex = 0;
             // 
             // Main
             // 
