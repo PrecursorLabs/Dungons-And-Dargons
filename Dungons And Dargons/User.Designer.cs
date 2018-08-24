@@ -70,8 +70,16 @@
             this.GameMaster_tab = new System.Windows.Forms.TabPage();
             this.GameMaster_stabs = new System.Windows.Forms.TabControl();
             this.EventCon_tab = new System.Windows.Forms.TabPage();
+            this.Write_log_group = new System.Windows.Forms.GroupBox();
+            this.Log_desc_tbox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.log_des_lbox = new System.Windows.Forms.ListBox();
+            this.Message_btn = new System.Windows.Forms.Button();
             this.Event_log_lbox = new System.Windows.Forms.ListBox();
             this.CreateEvent_group = new System.Windows.Forms.GroupBox();
+            this.Edesc_tbox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CeventTarget_lbox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,27 +88,20 @@
             this.Estat_cbox = new System.Windows.Forms.ComboBox();
             this.ApplyEvent_btn = new System.Windows.Forms.Button();
             this.NPCM_tab = new System.Windows.Forms.TabPage();
-            this.MP_tbox = new System.Windows.Forms.TextBox();
-            this.UPDATE_btn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Edesc_tbox = new System.Windows.Forms.TextBox();
-            this.Write_log_group = new System.Windows.Forms.GroupBox();
-            this.Log_desc_tbox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.log_des_lbox = new System.Windows.Forms.ListBox();
-            this.Message_btn = new System.Windows.Forms.Button();
             this.NPCC_tab = new System.Windows.Forms.TabPage();
             this.GMItemc_tab = new System.Windows.Forms.TabPage();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.CombatManager_tab = new System.Windows.Forms.TabPage();
+            this.MP_tbox = new System.Windows.Forms.TextBox();
+            this.UPDATE_btn = new System.Windows.Forms.Button();
+            this.Satiety_tbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
             this.GameMaster_tab.SuspendLayout();
             this.GameMaster_stabs.SuspendLayout();
             this.EventCon_tab.SuspendLayout();
-            this.CreateEvent_group.SuspendLayout();
             this.Write_log_group.SuspendLayout();
+            this.CreateEvent_group.SuspendLayout();
             this.SuspendLayout();
             // 
             // Log_lbox
@@ -108,9 +109,9 @@
             this.Log_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Log_lbox.FormattingEnabled = true;
-            this.Log_lbox.Location = new System.Drawing.Point(12, 344);
+            this.Log_lbox.Location = new System.Drawing.Point(12, 370);
             this.Log_lbox.Name = "Log_lbox";
-            this.Log_lbox.Size = new System.Drawing.Size(166, 173);
+            this.Log_lbox.Size = new System.Drawing.Size(166, 147);
             this.Log_lbox.TabIndex = 6;
             this.Log_lbox.SelectedIndexChanged += new System.EventHandler(this.Log_lbox_SelectedIndexChanged);
             // 
@@ -531,6 +532,69 @@
             this.EventCon_tab.Text = "Event";
             this.EventCon_tab.UseVisualStyleBackColor = true;
             // 
+            // Write_log_group
+            // 
+            this.Write_log_group.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Write_log_group.Controls.Add(this.Log_desc_tbox);
+            this.Write_log_group.Controls.Add(this.label5);
+            this.Write_log_group.Controls.Add(this.label6);
+            this.Write_log_group.Controls.Add(this.log_des_lbox);
+            this.Write_log_group.Controls.Add(this.Message_btn);
+            this.Write_log_group.Location = new System.Drawing.Point(3, 219);
+            this.Write_log_group.Name = "Write_log_group";
+            this.Write_log_group.Size = new System.Drawing.Size(365, 237);
+            this.Write_log_group.TabIndex = 117;
+            this.Write_log_group.TabStop = false;
+            this.Write_log_group.Text = "Write Log";
+            // 
+            // Log_desc_tbox
+            // 
+            this.Log_desc_tbox.Location = new System.Drawing.Point(47, 16);
+            this.Log_desc_tbox.Multiline = true;
+            this.Log_desc_tbox.Name = "Log_desc_tbox";
+            this.Log_desc_tbox.Size = new System.Drawing.Size(308, 65);
+            this.Log_desc_tbox.TabIndex = 116;
+            this.Log_desc_tbox.TextChanged += new System.EventHandler(this.Log_desc_tbox_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 115;
+            this.label5.Text = "Desc:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(2, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 114;
+            this.label6.Text = "Target:";
+            // 
+            // log_des_lbox
+            // 
+            this.log_des_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.log_des_lbox.FormattingEnabled = true;
+            this.log_des_lbox.Location = new System.Drawing.Point(46, 90);
+            this.log_des_lbox.Name = "log_des_lbox";
+            this.log_des_lbox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.log_des_lbox.Size = new System.Drawing.Size(119, 69);
+            this.log_des_lbox.TabIndex = 2;
+            // 
+            // Message_btn
+            // 
+            this.Message_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Message_btn.Location = new System.Drawing.Point(280, 208);
+            this.Message_btn.Name = "Message_btn";
+            this.Message_btn.Size = new System.Drawing.Size(75, 23);
+            this.Message_btn.TabIndex = 0;
+            this.Message_btn.Text = "Send";
+            this.Message_btn.UseVisualStyleBackColor = true;
+            // 
             // Event_log_lbox
             // 
             this.Event_log_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -561,6 +625,23 @@
             this.CreateEvent_group.TabIndex = 0;
             this.CreateEvent_group.TabStop = false;
             this.CreateEvent_group.Text = "CreateEvent";
+            // 
+            // Edesc_tbox
+            // 
+            this.Edesc_tbox.Location = new System.Drawing.Point(51, 76);
+            this.Edesc_tbox.Multiline = true;
+            this.Edesc_tbox.Name = "Edesc_tbox";
+            this.Edesc_tbox.Size = new System.Drawing.Size(308, 65);
+            this.Edesc_tbox.TabIndex = 116;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 115;
+            this.label3.Text = "Desc:";
             // 
             // label4
             // 
@@ -647,107 +728,6 @@
             this.NPCM_tab.Text = "NPC Manager";
             this.NPCM_tab.UseVisualStyleBackColor = true;
             // 
-            // MP_tbox
-            // 
-            this.MP_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.MP_tbox.Enabled = false;
-            this.MP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MP_tbox.ForeColor = System.Drawing.Color.Black;
-            this.MP_tbox.Location = new System.Drawing.Point(56, 81);
-            this.MP_tbox.Name = "MP_tbox";
-            this.MP_tbox.Size = new System.Drawing.Size(58, 22);
-            this.MP_tbox.TabIndex = 108;
-            // 
-            // UPDATE_btn
-            // 
-            this.UPDATE_btn.Location = new System.Drawing.Point(12, 528);
-            this.UPDATE_btn.Name = "UPDATE_btn";
-            this.UPDATE_btn.Size = new System.Drawing.Size(166, 23);
-            this.UPDATE_btn.TabIndex = 1;
-            this.UPDATE_btn.Text = "Update";
-            this.UPDATE_btn.UseVisualStyleBackColor = true;
-            this.UPDATE_btn.Click += new System.EventHandler(this.UPDATE_btn_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 115;
-            this.label3.Text = "Desc:";
-            // 
-            // Edesc_tbox
-            // 
-            this.Edesc_tbox.Location = new System.Drawing.Point(51, 76);
-            this.Edesc_tbox.Multiline = true;
-            this.Edesc_tbox.Name = "Edesc_tbox";
-            this.Edesc_tbox.Size = new System.Drawing.Size(308, 65);
-            this.Edesc_tbox.TabIndex = 116;
-            // 
-            // Write_log_group
-            // 
-            this.Write_log_group.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Write_log_group.Controls.Add(this.Log_desc_tbox);
-            this.Write_log_group.Controls.Add(this.label5);
-            this.Write_log_group.Controls.Add(this.label6);
-            this.Write_log_group.Controls.Add(this.log_des_lbox);
-            this.Write_log_group.Controls.Add(this.Message_btn);
-            this.Write_log_group.Location = new System.Drawing.Point(3, 219);
-            this.Write_log_group.Name = "Write_log_group";
-            this.Write_log_group.Size = new System.Drawing.Size(365, 237);
-            this.Write_log_group.TabIndex = 117;
-            this.Write_log_group.TabStop = false;
-            this.Write_log_group.Text = "Write Log";
-            // 
-            // Log_desc_tbox
-            // 
-            this.Log_desc_tbox.Location = new System.Drawing.Point(47, 16);
-            this.Log_desc_tbox.Multiline = true;
-            this.Log_desc_tbox.Name = "Log_desc_tbox";
-            this.Log_desc_tbox.Size = new System.Drawing.Size(308, 65);
-            this.Log_desc_tbox.TabIndex = 116;
-            this.Log_desc_tbox.TextChanged += new System.EventHandler(this.Log_desc_tbox_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 115;
-            this.label5.Text = "Desc:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 114;
-            this.label6.Text = "Target:";
-            // 
-            // log_des_lbox
-            // 
-            this.log_des_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.log_des_lbox.FormattingEnabled = true;
-            this.log_des_lbox.Location = new System.Drawing.Point(46, 90);
-            this.log_des_lbox.Name = "log_des_lbox";
-            this.log_des_lbox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.log_des_lbox.Size = new System.Drawing.Size(119, 69);
-            this.log_des_lbox.TabIndex = 2;
-            // 
-            // Message_btn
-            // 
-            this.Message_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Message_btn.Location = new System.Drawing.Point(280, 208);
-            this.Message_btn.Name = "Message_btn";
-            this.Message_btn.Size = new System.Drawing.Size(75, 23);
-            this.Message_btn.TabIndex = 0;
-            this.Message_btn.Text = "Send";
-            this.Message_btn.UseVisualStyleBackColor = true;
-            // 
             // NPCC_tab
             // 
             this.NPCC_tab.Location = new System.Drawing.Point(4, 22);
@@ -778,12 +758,55 @@
             this.CombatManager_tab.Text = "Combat Manager";
             this.CombatManager_tab.UseVisualStyleBackColor = true;
             // 
+            // MP_tbox
+            // 
+            this.MP_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MP_tbox.Enabled = false;
+            this.MP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MP_tbox.ForeColor = System.Drawing.Color.Black;
+            this.MP_tbox.Location = new System.Drawing.Point(56, 81);
+            this.MP_tbox.Name = "MP_tbox";
+            this.MP_tbox.Size = new System.Drawing.Size(58, 22);
+            this.MP_tbox.TabIndex = 108;
+            // 
+            // UPDATE_btn
+            // 
+            this.UPDATE_btn.Location = new System.Drawing.Point(12, 528);
+            this.UPDATE_btn.Name = "UPDATE_btn";
+            this.UPDATE_btn.Size = new System.Drawing.Size(166, 23);
+            this.UPDATE_btn.TabIndex = 1;
+            this.UPDATE_btn.Text = "Update";
+            this.UPDATE_btn.UseVisualStyleBackColor = true;
+            this.UPDATE_btn.Click += new System.EventHandler(this.UPDATE_btn_Click);
+            // 
+            // Satiety_tbox
+            // 
+            this.Satiety_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Satiety_tbox.Enabled = false;
+            this.Satiety_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Satiety_tbox.ForeColor = System.Drawing.Color.Black;
+            this.Satiety_tbox.Location = new System.Drawing.Point(56, 344);
+            this.Satiety_tbox.Name = "Satiety_tbox";
+            this.Satiety_tbox.Size = new System.Drawing.Size(122, 22);
+            this.Satiety_tbox.TabIndex = 110;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 349);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 109;
+            this.label7.Text = "SAT:";
+            // 
             // User
             // 
             this.AccessibleName = "UserForm";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 555);
+            this.Controls.Add(this.Satiety_tbox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.UPDATE_btn);
             this.Controls.Add(this.MP_tbox);
             this.Controls.Add(this.Main_tabs);
@@ -825,10 +848,10 @@
             this.GameMaster_tab.ResumeLayout(false);
             this.GameMaster_stabs.ResumeLayout(false);
             this.EventCon_tab.ResumeLayout(false);
-            this.CreateEvent_group.ResumeLayout(false);
-            this.CreateEvent_group.PerformLayout();
             this.Write_log_group.ResumeLayout(false);
             this.Write_log_group.PerformLayout();
+            this.CreateEvent_group.ResumeLayout(false);
+            this.CreateEvent_group.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -899,6 +922,7 @@
         private System.Windows.Forms.TabPage NPCC_tab;
         private System.Windows.Forms.TabPage GMItemc_tab;
         private System.Windows.Forms.TabPage CombatManager_tab;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox Satiety_tbox;
+        private System.Windows.Forms.Label label7;
     }
 }

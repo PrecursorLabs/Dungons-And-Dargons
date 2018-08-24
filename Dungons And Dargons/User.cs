@@ -39,6 +39,7 @@ namespace Dungons_And_Dargons
         public int STR = 0;
         public int INTEL = 0;
         public int PERC = 0;
+        public int SATIE = 0;
         public string PlayerOwner;
 
         public User(string username)
@@ -51,14 +52,25 @@ namespace Dungons_And_Dargons
         {
             this.FormClosing += new FormClosingEventHandler(User_Closing);
             this.Text = UserName;
+            conn.Open();
+            GetData();
+            if (!GAMEMASTER)
+            {
+                Main_tabs.TabPages.Remove(GameMaster_tab);
+            }
+
+        }
 
 
+
+
+        public void GetData()
+        {
             try
             {
                 Log_lbox.Items.Add("Grabbing Info");
-                conn.Open();
 
-                string sql = "SELECT idPlayer, GAMEMASTER, PLevel, XP, Age, PName, PDescription, HPMax, HPCur, MPMax, MPCur, ATK, SATK, DEF, SDEF, CHARIS, DEX, STR, INTEL, PERC, POwner FROM player WHERE USERNAME='" + UserName + "'";
+                string sql = "SELECT idPlayer, GAMEMASTER, PLevel, XP, Age, PName, PDescription, HPMax, HPCur, MPMax, MPCur, ATK, SATK, DEF, SDEF, CHARIS, DEX, STR, INTEL, PERC, Satiety, POwner FROM player WHERE USERNAME='" + UserName + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 int count = 0;
@@ -85,24 +97,20 @@ namespace Dungons_And_Dargons
                     STR = Convert.ToInt32(rdr[17]);
                     INTEL = Convert.ToInt32(rdr[18]);
                     PERC = Convert.ToInt32(rdr[19]);
-                    PlayerOwner = Convert.ToString(rdr[20]);
+                    SATIE = Convert.ToInt32(rdr[20]);
+                    PlayerOwner = Convert.ToString(rdr[21]);
 
                 }
+
                 Log_lbox.Items.Add("Grabbed Info");
                 rdr.Close();
-                UpdateStats();
                 UpdateInventory();
+                UpdateStats();
             }
             catch (Exception ex)
             {
                 Log_lbox.Items.Add((ex.ToString()));
             }
-
-            if (!GAMEMASTER)
-            {
-                Main_tabs.TabPages.Remove(GameMaster_tab);
-            }
-
         }
 
 
@@ -161,54 +169,12 @@ namespace Dungons_And_Dargons
             STR_tbox.Text = STR.ToString();
             INT_tbox.Text = INTEL.ToString();
             PERC_tbox.Text = PERC.ToString();
+            Satiety_tbox.Text = SATIE.ToString();
         }
 
         private void UPDATE_btn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Log_lbox.Items.Add("Grabbing Info");
-
-                string sql = "SELECT idPlayer, GAMEMASTER, PLevel, XP, Age, PName, PDescription, HPMax, HPCur, MPMax, MPCur, ATK, SATK, DEF, SDEF, CHARIS, DEX, STR, INTEL, PERC, POwner FROM player WHERE USERNAME='" + UserName + "'";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                int count = 0;
-                while (rdr.Read())
-                {
-                    count++;
-                    PlayerID = Convert.ToInt32(rdr[0]);
-                    GAMEMASTER = Convert.ToBoolean(rdr[1]);
-                    Level = Convert.ToInt32(rdr[2]);
-                    XP = Convert.ToInt32(rdr[3]);
-                    Age = Convert.ToInt32(rdr[4]);
-                    PName = Convert.ToString(rdr[5]);
-                    Description = Convert.ToString(rdr[6]);
-                    HPMax = Convert.ToInt32(rdr[7]);
-                    HP = Convert.ToInt32(rdr[8]);
-                    MPMax = Convert.ToInt32(rdr[9]);
-                    MP = Convert.ToInt32(rdr[10]);
-                    ATK = Convert.ToInt32(rdr[11]);
-                    SATK = Convert.ToInt32(rdr[12]);
-                    DEF = Convert.ToInt32(rdr[13]);
-                    SDEF = Convert.ToInt32(rdr[14]);
-                    CHARIS = Convert.ToInt32(rdr[15]);
-                    DEX = Convert.ToInt32(rdr[16]);
-                    STR = Convert.ToInt32(rdr[17]);
-                    INTEL = Convert.ToInt32(rdr[18]);
-                    PERC = Convert.ToInt32(rdr[19]);
-                    PlayerOwner = Convert.ToString(rdr[20]);
-
-                }
-
-                Log_lbox.Items.Add("Grabbed Info");
-                rdr.Close();
-                UpdateInventory();
-                UpdateStats();
-            }
-            catch (Exception ex)
-            {
-                Log_lbox.Items.Add((ex.ToString()));
-            }
+            GetData();
         }
 
         private void Log_lbox_SelectedIndexChanged(object sender, EventArgs e)
