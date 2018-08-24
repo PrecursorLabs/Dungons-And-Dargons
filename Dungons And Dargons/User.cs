@@ -14,7 +14,7 @@ namespace Dungons_And_Dargons
 {
     public partial class User : Form
     {
-        public static string connStr = "server=119.18.36.10;user=DBUser;database=dungonsdargons;port=3306;password=dnd5114";
+        public static string connStr = "server=127.0.0.1;user=DBUser;database=dungonsdargons;port=3306;password=pword";
         MySqlConnection conn = new MySqlConnection(connStr);
         public int PlayerID;
         public string UserName = "User";
@@ -41,17 +41,22 @@ namespace Dungons_And_Dargons
         public int PERC = 0;
         public int SATIE = 0;
         public string PlayerOwner;
+        private string DBip;
+        private string DBpassword;
 
-        public User(string username)
+        public User(string username, string ip, string password)
         {
             InitializeComponent();
             UserName = username;
+            DBip = ip;
+            DBpassword = password;
         }
 
         private void User_Load(object sender, EventArgs e)
         {
             this.FormClosing += new FormClosingEventHandler(User_Closing);
             this.Text = UserName;
+            connStr = "server=" + DBip + ";user=DBUser;database=dungonsdargons;port=3306;password=" + DBpassword;
             conn.Open();
             GetData();
             if (!GAMEMASTER)

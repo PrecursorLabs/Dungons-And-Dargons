@@ -20,7 +20,7 @@ namespace Dungons_And_Dargons
 
         private void Login_btn_Click(object sender, EventArgs e)
         {
-            string connStr = "server=119.18.36.10;user=DBUser;database=dungonsdargons;port=3306;password=dnd5114";
+            string connStr = "server=" + ip_tbox.Text + ";user=DBUser;database=dungonsdargons;port=3306;password=" + dbpassword_tbox.Text + "";
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
@@ -42,7 +42,7 @@ namespace Dungons_And_Dargons
                     Log_lbox.Items.Add("Login Succesful Your id is " + rdr[0]);
                     MessageBox.Show("Login Succesful Your id is " + rdr[0]);
                     this.Hide();
-                    User UserForm = new User(Name_tbox.Text);
+                    User UserForm = new User(Name_tbox.Text, ip_tbox.Text, dbpassword_tbox.Text);
                     UserForm.ShowDialog();
                     rdr.Close();
                     conn.Close();
@@ -65,6 +65,26 @@ namespace Dungons_And_Dargons
         }
 
         private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Name_tbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pass_tbox_TextChanged(object sender, EventArgs e)
         {
 
         }
