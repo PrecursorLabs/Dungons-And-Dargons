@@ -7,10 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dungons And Dargons", "Dung
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Clean|Any CPU = Clean|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}.Clean|Any CPU.ActiveCfg = Clean|Any CPU
+		{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}.Clean|Any CPU.Build.0 = Clean|Any CPU
 		{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E11A5C93-D01C-4AE5-8F05-362013E3E0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
