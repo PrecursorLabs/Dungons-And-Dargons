@@ -67,6 +67,7 @@ namespace Dungons_And_Dargons
 
             HP_pbar.Maximum = MyPlayer.HPMax;
             HP_pbar.Value = MyPlayer.HP;
+
             MP_pbar.Maximum = MyPlayer.MPMax;
             MP_pbar.Value = MyPlayer.MP;
             XP_pbar.Maximum = MyPlayer.XPREQ;

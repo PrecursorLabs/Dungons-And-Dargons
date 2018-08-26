@@ -192,8 +192,6 @@
             this.XP_pbar = new System.Windows.Forms.ProgressBar();
             this.HP_pbar = new System.Windows.Forms.ProgressBar();
             this.MP_pbar = new System.Windows.Forms.ProgressBar();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
             this.GameMaster_tab.SuspendLayout();
@@ -230,7 +228,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCHP_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // HP_tbox
@@ -843,7 +840,7 @@
             this.NPCM_tab.Location = new System.Drawing.Point(4, 22);
             this.NPCM_tab.Name = "NPCM_tab";
             this.NPCM_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.NPCM_tab.Size = new System.Drawing.Size(790, 459);
+            this.NPCM_tab.Size = new System.Drawing.Size(730, 459);
             this.NPCM_tab.TabIndex = 1;
             this.NPCM_tab.Text = "NPC Manager";
             this.NPCM_tab.UseVisualStyleBackColor = true;
@@ -908,7 +905,7 @@
             this.NPCS_lbox.FormattingEnabled = true;
             this.NPCS_lbox.Location = new System.Drawing.Point(194, 6);
             this.NPCS_lbox.Name = "NPCS_lbox";
-            this.NPCS_lbox.Size = new System.Drawing.Size(590, 446);
+            this.NPCS_lbox.Size = new System.Drawing.Size(530, 446);
             this.NPCS_lbox.TabIndex = 114;
             // 
             // NPCC_tab
@@ -923,7 +920,7 @@
             this.NPCC_tab.Location = new System.Drawing.Point(4, 22);
             this.NPCC_tab.Name = "NPCC_tab";
             this.NPCC_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.NPCC_tab.Size = new System.Drawing.Size(790, 459);
+            this.NPCC_tab.Size = new System.Drawing.Size(730, 459);
             this.NPCC_tab.TabIndex = 2;
             this.NPCC_tab.Text = "NPC Creator";
             this.NPCC_tab.UseVisualStyleBackColor = true;
@@ -2088,7 +2085,7 @@
             this.GMItemc_tab.Location = new System.Drawing.Point(4, 22);
             this.GMItemc_tab.Name = "GMItemc_tab";
             this.GMItemc_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.GMItemc_tab.Size = new System.Drawing.Size(790, 459);
+            this.GMItemc_tab.Size = new System.Drawing.Size(730, 459);
             this.GMItemc_tab.TabIndex = 3;
             this.GMItemc_tab.Text = "Items";
             this.GMItemc_tab.UseVisualStyleBackColor = true;
@@ -2098,7 +2095,7 @@
             this.CombatManager_tab.Location = new System.Drawing.Point(4, 22);
             this.CombatManager_tab.Name = "CombatManager_tab";
             this.CombatManager_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.CombatManager_tab.Size = new System.Drawing.Size(790, 459);
+            this.CombatManager_tab.Size = new System.Drawing.Size(730, 459);
             this.CombatManager_tab.TabIndex = 4;
             this.CombatManager_tab.Text = "Combat Manager";
             this.CombatManager_tab.UseVisualStyleBackColor = true;
@@ -2200,10 +2197,6 @@
             this.MP_pbar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.MP_pbar.TabIndex = 115;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // User
             // 
             this.AccessibleName = "UserForm";
@@ -2294,7 +2287,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCHP_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2464,7 +2456,5 @@
         private System.Windows.Forms.ProgressBar XP_pbar;
         private System.Windows.Forms.ProgressBar HP_pbar;
         private System.Windows.Forms.ProgressBar MP_pbar;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
