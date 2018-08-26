@@ -88,13 +88,14 @@
             this.Estat_cbox = new System.Windows.Forms.ComboBox();
             this.ApplyEvent_btn = new System.Windows.Forms.Button();
             this.NPCM_tab = new System.Windows.Forms.TabPage();
+            this.npcManager_tabs = new System.Windows.Forms.TabControl();
+            this.Filter_tab = new System.Windows.Forms.TabPage();
+            this.label56 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.NPCC_tab = new System.Windows.Forms.TabPage();
-            this.GMItemc_tab = new System.Windows.Forms.TabPage();
-            this.CombatManager_tab = new System.Windows.Forms.TabPage();
-            this.MP_tbox = new System.Windows.Forms.TextBox();
-            this.UPDATE_btn = new System.Windows.Forms.Button();
-            this.Satiety_tbox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.UPLOAD_btn = new System.Windows.Forms.Button();
             this.Roll_btn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -180,8 +181,15 @@
             this.label53 = new System.Windows.Forms.Label();
             this.CCName_tbox = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.UPLOAD_btn = new System.Windows.Forms.Button();
+            this.GMItemc_tab = new System.Windows.Forms.TabPage();
+            this.CombatManager_tab = new System.Windows.Forms.TabPage();
+            this.MP_tbox = new System.Windows.Forms.TextBox();
+            this.UPDATE_btn = new System.Windows.Forms.Button();
+            this.Satiety_tbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.ten_timer = new System.Windows.Forms.Timer(this.components);
+            this.label57 = new System.Windows.Forms.Label();
+            this.Gold_tbox = new System.Windows.Forms.TextBox();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
             this.GameMaster_tab.SuspendLayout();
@@ -189,6 +197,9 @@
             this.EventCon_tab.SuspendLayout();
             this.Write_log_group.SuspendLayout();
             this.CreateEvent_group.SuspendLayout();
+            this.NPCM_tab.SuspendLayout();
+            this.npcManager_tabs.SuspendLayout();
+            this.Filter_tab.SuspendLayout();
             this.NPCC_tab.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCOXPMOD_tbox)).BeginInit();
@@ -834,6 +845,7 @@
             // 
             // NPCM_tab
             // 
+            this.NPCM_tab.Controls.Add(this.npcManager_tabs);
             this.NPCM_tab.Location = new System.Drawing.Point(4, 22);
             this.NPCM_tab.Name = "NPCM_tab";
             this.NPCM_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -841,6 +853,68 @@
             this.NPCM_tab.TabIndex = 1;
             this.NPCM_tab.Text = "NPC Manager";
             this.NPCM_tab.UseVisualStyleBackColor = true;
+            // 
+            // npcManager_tabs
+            // 
+            this.npcManager_tabs.Controls.Add(this.Filter_tab);
+            this.npcManager_tabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.npcManager_tabs.Location = new System.Drawing.Point(3, 3);
+            this.npcManager_tabs.Name = "npcManager_tabs";
+            this.npcManager_tabs.SelectedIndex = 0;
+            this.npcManager_tabs.Size = new System.Drawing.Size(784, 453);
+            this.npcManager_tabs.TabIndex = 0;
+            // 
+            // Filter_tab
+            // 
+            this.Filter_tab.Controls.Add(this.label56);
+            this.Filter_tab.Controls.Add(this.comboBox1);
+            this.Filter_tab.Controls.Add(this.label55);
+            this.Filter_tab.Controls.Add(this.textBox1);
+            this.Filter_tab.Location = new System.Drawing.Point(4, 22);
+            this.Filter_tab.Name = "Filter_tab";
+            this.Filter_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.Filter_tab.Size = new System.Drawing.Size(776, 427);
+            this.Filter_tab.TabIndex = 0;
+            this.Filter_tab.Text = "Filter";
+            this.Filter_tab.UseVisualStyleBackColor = true;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(7, 34);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(49, 13);
+            this.label56.TabIndex = 113;
+            this.label56.Text = "Relation:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Player",
+            "Enemy",
+            "NPC",
+            "ALL"});
+            this.comboBox1.Location = new System.Drawing.Point(62, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 112;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(18, 8);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(38, 13);
+            this.label55.TabIndex = 111;
+            this.label55.Text = "Name:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(62, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // NPCC_tab
             // 
@@ -859,67 +933,15 @@
             this.NPCC_tab.Text = "NPC Creator";
             this.NPCC_tab.UseVisualStyleBackColor = true;
             // 
-            // GMItemc_tab
+            // UPLOAD_btn
             // 
-            this.GMItemc_tab.Location = new System.Drawing.Point(4, 22);
-            this.GMItemc_tab.Name = "GMItemc_tab";
-            this.GMItemc_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.GMItemc_tab.Size = new System.Drawing.Size(790, 459);
-            this.GMItemc_tab.TabIndex = 3;
-            this.GMItemc_tab.Text = "Items";
-            this.GMItemc_tab.UseVisualStyleBackColor = true;
-            // 
-            // CombatManager_tab
-            // 
-            this.CombatManager_tab.Location = new System.Drawing.Point(4, 22);
-            this.CombatManager_tab.Name = "CombatManager_tab";
-            this.CombatManager_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.CombatManager_tab.Size = new System.Drawing.Size(790, 459);
-            this.CombatManager_tab.TabIndex = 4;
-            this.CombatManager_tab.Text = "Combat Manager";
-            this.CombatManager_tab.UseVisualStyleBackColor = true;
-            // 
-            // MP_tbox
-            // 
-            this.MP_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.MP_tbox.Enabled = false;
-            this.MP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MP_tbox.ForeColor = System.Drawing.Color.Black;
-            this.MP_tbox.Location = new System.Drawing.Point(56, 81);
-            this.MP_tbox.Name = "MP_tbox";
-            this.MP_tbox.Size = new System.Drawing.Size(58, 22);
-            this.MP_tbox.TabIndex = 108;
-            // 
-            // UPDATE_btn
-            // 
-            this.UPDATE_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UPDATE_btn.Location = new System.Drawing.Point(12, 528);
-            this.UPDATE_btn.Name = "UPDATE_btn";
-            this.UPDATE_btn.Size = new System.Drawing.Size(166, 23);
-            this.UPDATE_btn.TabIndex = 1;
-            this.UPDATE_btn.Text = "Update";
-            this.UPDATE_btn.UseVisualStyleBackColor = true;
-            this.UPDATE_btn.Click += new System.EventHandler(this.UPDATE_btn_Click);
-            // 
-            // Satiety_tbox
-            // 
-            this.Satiety_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Satiety_tbox.Enabled = false;
-            this.Satiety_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Satiety_tbox.ForeColor = System.Drawing.Color.Black;
-            this.Satiety_tbox.Location = new System.Drawing.Point(56, 344);
-            this.Satiety_tbox.Name = "Satiety_tbox";
-            this.Satiety_tbox.Size = new System.Drawing.Size(122, 22);
-            this.Satiety_tbox.TabIndex = 110;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 349);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 109;
-            this.label7.Text = "SAT:";
+            this.UPLOAD_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UPLOAD_btn.Location = new System.Drawing.Point(87, 430);
+            this.UPLOAD_btn.Name = "UPLOAD_btn";
+            this.UPLOAD_btn.Size = new System.Drawing.Size(75, 23);
+            this.UPLOAD_btn.TabIndex = 16;
+            this.UPLOAD_btn.Text = "UPLOAD";
+            this.UPLOAD_btn.UseVisualStyleBackColor = true;
             // 
             // Roll_btn
             // 
@@ -2066,20 +2088,94 @@
             this.label54.TabIndex = 2;
             this.label54.Text = "Name:";
             // 
-            // UPLOAD_btn
+            // GMItemc_tab
             // 
-            this.UPLOAD_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UPLOAD_btn.Location = new System.Drawing.Point(87, 430);
-            this.UPLOAD_btn.Name = "UPLOAD_btn";
-            this.UPLOAD_btn.Size = new System.Drawing.Size(75, 23);
-            this.UPLOAD_btn.TabIndex = 16;
-            this.UPLOAD_btn.Text = "UPLOAD";
-            this.UPLOAD_btn.UseVisualStyleBackColor = true;
+            this.GMItemc_tab.Location = new System.Drawing.Point(4, 22);
+            this.GMItemc_tab.Name = "GMItemc_tab";
+            this.GMItemc_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.GMItemc_tab.Size = new System.Drawing.Size(790, 459);
+            this.GMItemc_tab.TabIndex = 3;
+            this.GMItemc_tab.Text = "Items";
+            this.GMItemc_tab.UseVisualStyleBackColor = true;
+            // 
+            // CombatManager_tab
+            // 
+            this.CombatManager_tab.Location = new System.Drawing.Point(4, 22);
+            this.CombatManager_tab.Name = "CombatManager_tab";
+            this.CombatManager_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.CombatManager_tab.Size = new System.Drawing.Size(790, 459);
+            this.CombatManager_tab.TabIndex = 4;
+            this.CombatManager_tab.Text = "Combat Manager";
+            this.CombatManager_tab.UseVisualStyleBackColor = true;
+            // 
+            // MP_tbox
+            // 
+            this.MP_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MP_tbox.Enabled = false;
+            this.MP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MP_tbox.ForeColor = System.Drawing.Color.Black;
+            this.MP_tbox.Location = new System.Drawing.Point(56, 81);
+            this.MP_tbox.Name = "MP_tbox";
+            this.MP_tbox.Size = new System.Drawing.Size(58, 22);
+            this.MP_tbox.TabIndex = 108;
+            // 
+            // UPDATE_btn
+            // 
+            this.UPDATE_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UPDATE_btn.Location = new System.Drawing.Point(12, 528);
+            this.UPDATE_btn.Name = "UPDATE_btn";
+            this.UPDATE_btn.Size = new System.Drawing.Size(166, 23);
+            this.UPDATE_btn.TabIndex = 1;
+            this.UPDATE_btn.Text = "Update";
+            this.UPDATE_btn.UseVisualStyleBackColor = true;
+            this.UPDATE_btn.Click += new System.EventHandler(this.UPDATE_btn_Click);
+            // 
+            // Satiety_tbox
+            // 
+            this.Satiety_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Satiety_tbox.Enabled = false;
+            this.Satiety_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Satiety_tbox.ForeColor = System.Drawing.Color.Black;
+            this.Satiety_tbox.Location = new System.Drawing.Point(56, 344);
+            this.Satiety_tbox.Name = "Satiety_tbox";
+            this.Satiety_tbox.Size = new System.Drawing.Size(122, 22);
+            this.Satiety_tbox.TabIndex = 110;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 349);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 109;
+            this.label7.Text = "SAT:";
             // 
             // ten_timer
             // 
             this.ten_timer.Interval = 600000;
             this.ten_timer.Tick += new System.EventHandler(this.ten_timer_Tick);
+            // 
+            // label57
+            // 
+            this.label57.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(262, 9);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(32, 13);
+            this.label57.TabIndex = 112;
+            this.label57.Text = "Gold:";
+            // 
+            // Gold_tbox
+            // 
+            this.Gold_tbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Gold_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Gold_tbox.Enabled = false;
+            this.Gold_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gold_tbox.ForeColor = System.Drawing.Color.Black;
+            this.Gold_tbox.Location = new System.Drawing.Point(300, 4);
+            this.Gold_tbox.Name = "Gold_tbox";
+            this.Gold_tbox.Size = new System.Drawing.Size(70, 22);
+            this.Gold_tbox.TabIndex = 111;
             // 
             // User
             // 
@@ -2087,6 +2183,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 555);
+            this.Controls.Add(this.label57);
+            this.Controls.Add(this.Gold_tbox);
             this.Controls.Add(this.Satiety_tbox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.UPDATE_btn);
@@ -2134,6 +2232,10 @@
             this.Write_log_group.PerformLayout();
             this.CreateEvent_group.ResumeLayout(false);
             this.CreateEvent_group.PerformLayout();
+            this.NPCM_tab.ResumeLayout(false);
+            this.npcManager_tabs.ResumeLayout(false);
+            this.Filter_tab.ResumeLayout(false);
+            this.Filter_tab.PerformLayout();
             this.NPCC_tab.ResumeLayout(false);
             this.NPCC_tab.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -2323,5 +2425,13 @@
         private System.Windows.Forms.TextBox CCName_tbox;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Timer ten_timer;
+        private System.Windows.Forms.TabControl npcManager_tabs;
+        private System.Windows.Forms.TabPage Filter_tab;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox Gold_tbox;
     }
 }

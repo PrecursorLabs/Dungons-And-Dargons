@@ -16,73 +16,181 @@ namespace Dungons_And_Dargons
     {
         MySqlConnection conn;
         public static string connStr;
-        public int PlayerID;
-        public string UserName = "User";
-        public string PName = "Guy";
-        public string Description = "About Guy";
-        public Boolean GAMEMASTER = false;
-        public int Level = 0;
-        public int XP = 0;
-        public int xpReq = 0;
-        public int Age = 0;
-        public int Gold = 0;
-        public int HP = 0;
-        public int MP = 0;
-        public int HPMax = 0;
-        public int MPMax = 0;
-        public int ATK = 0;
-        public int SATK = 0;
-        public int DEF = 0;
-        public int SDEF = 0;
-        public int CHARIS = 0;
-        public int DEX = 0;
-        public int STR = 0;
-        public int INTEL = 0;
-        public int PERC = 0;
-        public int SATIE = 0;
-        public string PlayerOwner;
         private string DBip;
         private string DBpassword;
 
+        NPC MyPlayer;
+
         public User(string username, string ip, string password)
         {
-            UserName = username;
             DBip = ip;
             DBpassword = password;
             connStr = "server=" + DBip + ";user=DBUser;database=dungonsdargons;port=3306;password=" + DBpassword;
             conn = new MySqlConnection(connStr);
             InitializeComponent();
+            conn.Open();
+            MyPlayer = new NPC(conn);
+            MyPlayer.UserName = username;
+            MyPlayer.GetData();
+            MyPlayer.GetInventory();
         }
 
         private void User_Load(object sender, EventArgs e)
         {
             this.FormClosing += new FormClosingEventHandler(User_Closing);
-            this.Text = UserName;
-            conn.Open();
-            GetData();
-            if (!GAMEMASTER)
-            {
-                Main_tabs.TabPages.Remove(GameMaster_tab);
-            }
-
+            this.Text = MyPlayer.UserName;
+            UpdateDisplay();
+            if (!MyPlayer.GAMEMASTER) Main_tabs.TabPages.Remove(GameMaster_tab);
         }
 
 
+        public void UpdateDisplay()
+        {
+            Name_tbox.Text = MyPlayer.PName;
+            LVL_tbox.Text = MyPlayer.Level.ToString();
+            XP_tbox.Text = MyPlayer.XP.ToString();
+            MHP_tbox.Text = MyPlayer.HPMax.ToString();
+            HP_tbox.Text = MyPlayer.HP.ToString();
+            MMP_tbox.Text = MyPlayer.MPMax.ToString();
+            MP_tbox.Text = MyPlayer.MP.ToString();
+            ATK_tbox.Text = MyPlayer.ATK.ToString();
+            SATK_tbox.Text = MyPlayer.SATK.ToString();
+            DEF_tbox.Text = MyPlayer.DEF.ToString();
+            SDEF_tbox.Text = MyPlayer.SDEF.ToString();
+            CHAR_tbox.Text = MyPlayer.CHARIS.ToString();
+            DEX_tbox.Text = MyPlayer.DEX.ToString();
+            STR_tbox.Text = MyPlayer.STR.ToString();
+            INT_tbox.Text = MyPlayer.INTEL.ToString();
+            PERC_tbox.Text = MyPlayer.PERC.ToString();
+            Satiety_tbox.Text = MyPlayer.SATIE.ToString();
+            Gold_tbox.Text = MyPlayer.Gold.ToString();
 
+            Inventory_lbox.Items.Clear();
+            foreach (string item in MyPlayer.Inventory)
+            {
+                Inventory_lbox.Items.Add(item);
+            }
+        }
+
+        private void UPDATE_btn_Click(object sender, EventArgs e)
+        {
+            MyPlayer.GetData();
+            MyPlayer.GetInventory();
+            UpdateDisplay();
+        }
+
+        private void Log_lbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void User_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.FormClosing -= new FormClosingEventHandler(User_Closing);
+            conn.Close();
+        }
+
+        private void Inventory_lbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Inventory_lbox.SelectedItem != null)
+            {
+                string IID = Inventory_lbox.Items[Inventory_lbox.SelectedIndex].ToString().Split('<', '>')[1];
+                Item Iview = new Item(Convert.ToInt32(IID), conn, MyPlayer.PName);
+                Iview.Show();
+            }
+        }
+
+        private void Update_timer_Tick(object sender, EventArgs e)
+        {
+            UPDATE_btn.PerformClick();
+        }
+
+        private void Log_desc_tbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ten_timer_Tick(object sender, EventArgs e)
+        {
+            Log_lbox.Items.Clear();
+        }
+    }
+
+    public class NPC {
+        MySqlConnection conn;
+        public int PlayerID { get; set; }
+        public string UserName { get; set; }
+        public string PName { get; set; }
+        public string Description { get; set; }
+
+        public int Level { get; set; }
+        public int XP { get; set; }
+        public int xpReq { get; set; }
+        public int Age { get; set; }
+        public int Gold { get; set; }
+        public int HP { get; set; }
+        public int MP { get; set; }
+        public int HPMax { get; set; }
+        public int MPMax { get; set; }
+        public int ATK { get; set; }
+        public int SATK { get; set; }
+        public int DEF { get; set; }
+        public int SDEF { get; set; }
+        public int CHARIS { get; set; }
+        public int DEX { get; set; }
+        public int STR { get; set; }
+        public int INTEL { get; set; }
+        public int PERC { get; set; }
+        public int SATIE { get; set; }
+
+        public string PlayerOwner { get; set; }
+
+        public Boolean GAMEMASTER { get; set; }
+        public Boolean isPlayer { get; set; }
+        public Boolean isEnemy { get; set; }
+        public Boolean isNPC { get; set; }
+
+        public List<string> Inventory { get; set; }
+
+        public NPC(MySqlConnection inconn)
+        {
+            conn = inconn;
+            Inventory = new List<String>();
+        }
 
         public void GetData()
         {
             try
             {
-                Log_lbox.Items.Add("Grabbing Info");
-
-                string sql = "SELECT idPlayer, GAMEMASTER, PLevel, XP, Age, PName, PDescription, HPMax, HPCur, MPMax, MPCur, ATK, SATK, DEF, SDEF, CHARIS, DEX, STR, INTEL, PERC, Satiety, POwner FROM player WHERE USERNAME='" + UserName + "'";
+                string sql = "SELECT idPlayer," +
+                    " GAMEMASTER," +
+                    " PLevel," +
+                    " XP," +
+                    " Age," +
+                    " PName," +
+                    " PDescription," +
+                    " HPMax," +
+                    " HPCur," +
+                    " MPMax," +
+                    " MPCur," +
+                    " ATK," +
+                    " SATK," +
+                    " DEF," +
+                    " SDEF," +
+                    " CHARIS," +
+                    " DEX," +
+                    " STR," +
+                    " INTEL," +
+                    " PERC," +
+                    " Satiety," +
+                    " POwner," +
+                    " PLAYER," +
+                    " NPC," +
+                    " ENEMY" +
+                    " FROM player WHERE USERNAME='" + UserName + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
-                int count = 0;
                 while (rdr.Read())
                 {
-                    count++;
                     PlayerID = Convert.ToInt32(rdr[0]);
                     GAMEMASTER = Convert.ToBoolean(rdr[1]);
                     Level = Convert.ToInt32(rdr[2]);
@@ -105,35 +213,70 @@ namespace Dungons_And_Dargons
                     PERC = Convert.ToInt32(rdr[19]);
                     SATIE = Convert.ToInt32(rdr[20]);
                     PlayerOwner = Convert.ToString(rdr[21]);
-
+                    isPlayer = Convert.ToBoolean(rdr[22]);
+                    isNPC = Convert.ToBoolean(rdr[23]);
+                    isEnemy = Convert.ToBoolean(rdr[24]);
                 }
-
-                Log_lbox.Items.Add("Grabbed Info");
+                
                 rdr.Close();
-                UpdateInventory();
-                UpdateStats();
             }
             catch (Exception ex)
             {
-                Log_lbox.Items.Add((ex.ToString()));
+                MessageBox.Show(ex.ToString());
             }
+
+
         }
 
-
-        public void UpdateInventory()
+        public void PostData()
         {
             try
             {
-                Inventory_lbox.Items.Clear();
-                Log_lbox.Items.Add("Grabbing Inventory");
+                string sql = "UPDATE player" +
+                    " GAMEMASTER = '" + GAMEMASTER + "'," +
+                    " PLevel = '" + Level + "'," +
+                    " XP = '" + XP + "'," +
+                    " Age = '" + Age + "'," +
+                    " PName = '" + PName + "'," +
+                    " PDescription = '" + Description + "'," +
+                    " HPMax = '" + HPMax + "'," +
+                    " HPCur = '" + HP + "'," +
+                    " MPMax = '" + MPMax + "'," +
+                    " MPCur = '" + MP + "'," +
+                    " ATK = '" + ATK + "'," +
+                    " SATK = '" + SATK + "'," +
+                    " DEF = '" + DEF + "'," +
+                    " SDEF = '" + SDEF + "'," +
+                    " CHARIS = '" + CHARIS + "'," +
+                    " DEX = '" + DEX + "'," +
+                    " STR = '" + STR + "'," +
+                    " INTEL = '" + INTEL + "'," +
+                    " PERC = '" + PERC + "'," +
+                    " Satiety = '" + SATIE + "'," +
+                    " PLAYER = '" + isPlayer + "'," +
+                    " NPC = '" + isNPC + "'," +
+                    " ENEMY = '" + isEnemy + "'" +
+                    " WHERE idPlayer='" + PlayerID + "'";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public void GetInventory()
+        {
+            try
+            {
+                Inventory.Clear();
                 string sql = "SELECT Items_idWeapons FROM player_has_items WHERE Player_idPlayer=" + PlayerID.ToString();
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
-                int count = 0;
                 List<int> al = new List<int>();
                 while (rdr.Read())
                 {
-                    count++;
                     al.Add(Convert.ToInt32(rdr[0]));
                 }
                 rdr.Close();
@@ -144,84 +287,47 @@ namespace Dungons_And_Dargons
                     MySqlDataReader rdr2 = cmd2.ExecuteReader();
                     while (rdr2.Read())
                     {
-                        Inventory_lbox.Items.Add(Convert.ToString(rdr2[0]) + " (ID: <" + ItemID.ToString() +">)");
+                        Inventory.Add(Convert.ToString(rdr2[0]) + " (ID: <" + ItemID.ToString() + ">)");
                     }
                     rdr2.Close();
                 }
-                Log_lbox.Items.Add("Grabbed Inventory");
             }
             catch (Exception ex)
             {
-                Log_lbox.Items.Add((ex.ToString()));
+                MessageBox.Show(ex.ToString());
             }
         }
 
-
-        public void UpdateStats()
+        public void SetInventory()
         {
-            Name_tbox.Text = PName;
-            LVL_tbox.Text = Level.ToString();
-            XP_tbox.Text = XP.ToString();
-            MHP_tbox.Text = HPMax.ToString();
-            HP_tbox.Text = HP.ToString();
-            MMP_tbox.Text = MPMax.ToString();
-            MP_tbox.Text = MP.ToString();
-            ATK_tbox.Text = ATK.ToString();
-            SATK_tbox.Text = SATK.ToString();
-            DEF_tbox.Text = DEF.ToString();
-            SDEF_tbox.Text = SDEF.ToString();
-            CHAR_tbox.Text = CHARIS.ToString();
-            DEX_tbox.Text = DEX.ToString();
-            STR_tbox.Text = STR.ToString();
-            INT_tbox.Text = INTEL.ToString();
-            PERC_tbox.Text = PERC.ToString();
-            Satiety_tbox.Text = SATIE.ToString();
-        }
-
-        private void UPDATE_btn_Click(object sender, EventArgs e)
-        {
-            GetData();
-        }
-
-        private void Log_lbox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void User_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            this.FormClosing -= new FormClosingEventHandler(User_Closing);
-            conn.Close();
-        }
-
-        private void Inventory_lbox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Inventory_lbox.SelectedItem != null)
+            try
             {
+                string sql = "DELETE FROM player_has_items WHERE Player_idPlayer = '" + PlayerID + "'";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            foreach (string item in Inventory) {
+
+                string IID = item.Split('<', '>')[1];
                 try
                 {
-                    string IID = Inventory_lbox.Items[Inventory_lbox.SelectedIndex].ToString().Split('<', '>')[1];
-                    Item Iview = new Item(Convert.ToInt32(IID), conn, PName);
-                    Iview.Show();
-                } catch(Exception ex)
+                    string sql = "INSERT INTO player_has_items (Player_idPlayer, Items_idWeapons) " +
+                        "VALUES (" + PlayerID + "," + IID + ")";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
                 {
-
+                    MessageBox.Show(ex.ToString());
                 }
             }
-        }
-
-        private void Update_timer_Tick(object sender, EventArgs e)
-        {
-            UPDATE_btn.PerformClick();
-        }
-
-        private void Log_desc_tbox_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void ten_timer_Tick(object sender, EventArgs e)
-        {
-            Log_lbox.Items.Clear();
-        }
     }
 }
