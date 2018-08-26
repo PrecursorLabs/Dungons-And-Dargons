@@ -64,10 +64,13 @@ namespace Dungons_And_Dargons
             PERC_tbox.Text = MyPlayer.PERC.ToString();
             Satiety_tbox.Text = MyPlayer.SATIE.ToString();
             Gold_tbox.Text = MyPlayer.Gold.ToString();
-            HP_pbar.Value = (MyPlayer.HP / MyPlayer.HPMax) * 100;
-            HP_pbar.Value = (MyPlayer.MP / MyPlayer.MPMax) * 100;
-            HP_pbar.Value = (MyPlayer.XP / MyPlayer.XPReq) * 100;
 
+            HP_pbar.Maximum = MyPlayer.HPMax;
+            HP_pbar.Value = MyPlayer.HP;
+            MP_pbar.Maximum = MyPlayer.MPMax;
+            MP_pbar.Value = MyPlayer.MP;
+            XP_pbar.Maximum = MyPlayer.XPREQ;
+            XP_pbar.Value = MyPlayer.XP;
             Inventory_lbox.Items.Clear();
             foreach (string item in MyPlayer.Inventory)
             {
@@ -131,7 +134,7 @@ namespace Dungons_And_Dargons
 
         public int Level { get; set; }
         public int XP { get; set; }
-        public int XPReq { get; set; }
+        public int XPREQ { get; set; }
         public int Age { get; set; }
         public int Gold { get; set; }
         public int HP { get; set; }
@@ -192,7 +195,7 @@ namespace Dungons_And_Dargons
                     " POwner," +
                     " PLAYER," +
                     " NPC," +
-                    " ENEMY" +
+                    " ENEMY," +
                     " XPREQ" +
                     " FROM player WHERE USERNAME='" + UserName + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -224,7 +227,7 @@ namespace Dungons_And_Dargons
                     isPlayer = Convert.ToBoolean(rdr[22]);
                     isNPC = Convert.ToBoolean(rdr[23]);
                     isEnemy = Convert.ToBoolean(rdr[24]);
-                    XPReq = Convert.ToInt32(rdr[25]);
+                    XPREQ = Convert.ToInt32(rdr[25]);
                 }
                 
                 rdr.Close();
@@ -271,7 +274,7 @@ namespace Dungons_And_Dargons
                     " Satiety = '" + SATIE + "'," +
                     " PLAYER = '" + isPlayer + "'," +
                     " NPC = '" + isNPC + "'," +
-                    " ENEMY = '" + isEnemy + "'" +
+                    " ENEMY = '" + isEnemy + "'," +
                     " XPREQ = '" + Convert.ToDecimal(XP) + "'" +
                     " WHERE idPlayer='" + PlayerID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);

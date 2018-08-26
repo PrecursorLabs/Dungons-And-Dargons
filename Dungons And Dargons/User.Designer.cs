@@ -192,6 +192,8 @@
             this.XP_pbar = new System.Windows.Forms.ProgressBar();
             this.HP_pbar = new System.Windows.Forms.ProgressBar();
             this.MP_pbar = new System.Windows.Forms.ProgressBar();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
             this.GameMaster_tab.SuspendLayout();
@@ -228,6 +230,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCHP_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // HP_tbox
@@ -540,10 +543,10 @@
             this.Main_tabs.Controls.Add(this.Spells_tab);
             this.Main_tabs.Controls.Add(this.Combat_tbox);
             this.Main_tabs.Controls.Add(this.GameMaster_tab);
-            this.Main_tabs.Location = new System.Drawing.Point(184, 34);
+            this.Main_tabs.Location = new System.Drawing.Point(244, 34);
             this.Main_tabs.Name = "Main_tabs";
             this.Main_tabs.SelectedIndex = 0;
-            this.Main_tabs.Size = new System.Drawing.Size(812, 517);
+            this.Main_tabs.Size = new System.Drawing.Size(752, 517);
             this.Main_tabs.TabIndex = 107;
             // 
             // Events_tab
@@ -551,7 +554,7 @@
             this.Events_tab.Location = new System.Drawing.Point(4, 22);
             this.Events_tab.Name = "Events_tab";
             this.Events_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Events_tab.Size = new System.Drawing.Size(804, 491);
+            this.Events_tab.Size = new System.Drawing.Size(744, 491);
             this.Events_tab.TabIndex = 0;
             this.Events_tab.Text = "Events";
             this.Events_tab.UseVisualStyleBackColor = true;
@@ -563,7 +566,7 @@
             this.Equipment_tab.Name = "Equipment_tab";
             this.Equipment_tab.Padding = new System.Windows.Forms.Padding(3);
             this.Equipment_tab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Equipment_tab.Size = new System.Drawing.Size(804, 491);
+            this.Equipment_tab.Size = new System.Drawing.Size(744, 491);
             this.Equipment_tab.TabIndex = 1;
             this.Equipment_tab.Text = "Equipment";
             this.Equipment_tab.UseVisualStyleBackColor = true;
@@ -574,7 +577,7 @@
             this.Inventory_tab.Location = new System.Drawing.Point(4, 22);
             this.Inventory_tab.Name = "Inventory_tab";
             this.Inventory_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Inventory_tab.Size = new System.Drawing.Size(804, 491);
+            this.Inventory_tab.Size = new System.Drawing.Size(744, 491);
             this.Inventory_tab.TabIndex = 2;
             this.Inventory_tab.Text = "Inventory";
             this.Inventory_tab.UseVisualStyleBackColor = true;
@@ -585,7 +588,7 @@
             this.Inventory_lbox.FormattingEnabled = true;
             this.Inventory_lbox.Location = new System.Drawing.Point(3, 3);
             this.Inventory_lbox.Name = "Inventory_lbox";
-            this.Inventory_lbox.Size = new System.Drawing.Size(798, 485);
+            this.Inventory_lbox.Size = new System.Drawing.Size(738, 485);
             this.Inventory_lbox.TabIndex = 0;
             this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
             // 
@@ -594,7 +597,7 @@
             this.Spells_tab.Location = new System.Drawing.Point(4, 22);
             this.Spells_tab.Name = "Spells_tab";
             this.Spells_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Spells_tab.Size = new System.Drawing.Size(804, 491);
+            this.Spells_tab.Size = new System.Drawing.Size(744, 491);
             this.Spells_tab.TabIndex = 3;
             this.Spells_tab.Text = "Spells";
             this.Spells_tab.UseVisualStyleBackColor = true;
@@ -604,7 +607,7 @@
             this.Combat_tbox.Location = new System.Drawing.Point(4, 22);
             this.Combat_tbox.Name = "Combat_tbox";
             this.Combat_tbox.Padding = new System.Windows.Forms.Padding(3);
-            this.Combat_tbox.Size = new System.Drawing.Size(804, 491);
+            this.Combat_tbox.Size = new System.Drawing.Size(744, 491);
             this.Combat_tbox.TabIndex = 5;
             this.Combat_tbox.Text = "Combat";
             this.Combat_tbox.UseVisualStyleBackColor = true;
@@ -615,7 +618,7 @@
             this.GameMaster_tab.Location = new System.Drawing.Point(4, 22);
             this.GameMaster_tab.Name = "GameMaster_tab";
             this.GameMaster_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.GameMaster_tab.Size = new System.Drawing.Size(804, 491);
+            this.GameMaster_tab.Size = new System.Drawing.Size(744, 491);
             this.GameMaster_tab.TabIndex = 4;
             this.GameMaster_tab.Text = "GameMaster";
             this.GameMaster_tab.UseVisualStyleBackColor = true;
@@ -631,7 +634,7 @@
             this.GameMaster_stabs.Location = new System.Drawing.Point(3, 3);
             this.GameMaster_stabs.Name = "GameMaster_stabs";
             this.GameMaster_stabs.SelectedIndex = 0;
-            this.GameMaster_stabs.Size = new System.Drawing.Size(798, 485);
+            this.GameMaster_stabs.Size = new System.Drawing.Size(738, 485);
             this.GameMaster_stabs.TabIndex = 0;
             // 
             // EventCon_tab
@@ -642,7 +645,7 @@
             this.EventCon_tab.Location = new System.Drawing.Point(4, 22);
             this.EventCon_tab.Name = "EventCon_tab";
             this.EventCon_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.EventCon_tab.Size = new System.Drawing.Size(790, 459);
+            this.EventCon_tab.Size = new System.Drawing.Size(730, 459);
             this.EventCon_tab.TabIndex = 0;
             this.EventCon_tab.Text = "Event";
             this.EventCon_tab.UseVisualStyleBackColor = true;
@@ -718,7 +721,7 @@
             this.Event_log_lbox.FormattingEnabled = true;
             this.Event_log_lbox.Location = new System.Drawing.Point(374, 6);
             this.Event_log_lbox.Name = "Event_log_lbox";
-            this.Event_log_lbox.Size = new System.Drawing.Size(462, 615);
+            this.Event_log_lbox.Size = new System.Drawing.Size(402, 615);
             this.Event_log_lbox.TabIndex = 1;
             // 
             // CreateEvent_group
@@ -2172,27 +2175,34 @@
             // 
             // XP_pbar
             // 
-            this.XP_pbar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.XP_pbar.Location = new System.Drawing.Point(56, 84);
+            this.XP_pbar.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.XP_pbar.Location = new System.Drawing.Point(84, 85);
             this.XP_pbar.Name = "XP_pbar";
             this.XP_pbar.Size = new System.Drawing.Size(122, 23);
+            this.XP_pbar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.XP_pbar.TabIndex = 113;
             // 
             // HP_pbar
             // 
-            this.HP_pbar.ForeColor = System.Drawing.Color.Red;
-            this.HP_pbar.Location = new System.Drawing.Point(56, 114);
+            this.HP_pbar.ForeColor = System.Drawing.Color.LawnGreen;
+            this.HP_pbar.Location = new System.Drawing.Point(84, 114);
             this.HP_pbar.Name = "HP_pbar";
             this.HP_pbar.Size = new System.Drawing.Size(122, 23);
+            this.HP_pbar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.HP_pbar.TabIndex = 114;
             // 
             // MP_pbar
             // 
-            this.MP_pbar.ForeColor = System.Drawing.Color.Aqua;
-            this.MP_pbar.Location = new System.Drawing.Point(56, 143);
+            this.MP_pbar.ForeColor = System.Drawing.Color.SteelBlue;
+            this.MP_pbar.Location = new System.Drawing.Point(84, 143);
             this.MP_pbar.Name = "MP_pbar";
             this.MP_pbar.Size = new System.Drawing.Size(122, 23);
+            this.MP_pbar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.MP_pbar.TabIndex = 115;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // User
             // 
@@ -2284,6 +2294,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCHP_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2453,5 +2464,7 @@
         private System.Windows.Forms.ProgressBar XP_pbar;
         private System.Windows.Forms.ProgressBar HP_pbar;
         private System.Windows.Forms.ProgressBar MP_pbar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
