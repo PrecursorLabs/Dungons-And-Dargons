@@ -1,5 +1,7 @@
 ﻿namespace Dungons_And_Dargons
 {
+
+
     partial class User
     {
         /// <summary>
@@ -189,9 +191,6 @@
             this.ten_timer = new System.Windows.Forms.Timer(this.components);
             this.label57 = new System.Windows.Forms.Label();
             this.Gold_tbox = new System.Windows.Forms.TextBox();
-            this.XP_pbar = new System.Windows.Forms.ProgressBar();
-            this.HP_pbar = new System.Windows.Forms.ProgressBar();
-            this.MP_pbar = new System.Windows.Forms.ProgressBar();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
             this.GameMaster_tab.SuspendLayout();
@@ -2170,39 +2169,12 @@
             this.Gold_tbox.Size = new System.Drawing.Size(70, 22);
             this.Gold_tbox.TabIndex = 111;
             // 
-            // XP_pbar
-            // 
-            this.XP_pbar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.XP_pbar.Location = new System.Drawing.Point(56, 84);
-            this.XP_pbar.Name = "XP_pbar";
-            this.XP_pbar.Size = new System.Drawing.Size(122, 23);
-            this.XP_pbar.TabIndex = 113;
-            // 
-            // HP_pbar
-            // 
-            this.HP_pbar.ForeColor = System.Drawing.Color.Red;
-            this.HP_pbar.Location = new System.Drawing.Point(56, 114);
-            this.HP_pbar.Name = "HP_pbar";
-            this.HP_pbar.Size = new System.Drawing.Size(122, 23);
-            this.HP_pbar.TabIndex = 114;
-            // 
-            // MP_pbar
-            // 
-            this.MP_pbar.ForeColor = System.Drawing.Color.Aqua;
-            this.MP_pbar.Location = new System.Drawing.Point(56, 143);
-            this.MP_pbar.Name = "MP_pbar";
-            this.MP_pbar.Size = new System.Drawing.Size(122, 23);
-            this.MP_pbar.TabIndex = 115;
-            // 
             // User
             // 
             this.AccessibleName = "UserForm";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 555);
-            this.Controls.Add(this.MP_pbar);
-            this.Controls.Add(this.HP_pbar);
-            this.Controls.Add(this.XP_pbar);
             this.Controls.Add(this.label57);
             this.Controls.Add(this.Gold_tbox);
             this.Controls.Add(this.Satiety_tbox);
@@ -2450,8 +2422,5 @@
         private System.Windows.Forms.TextBox Gold_tbox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox NPCS_lbox;
-        private System.Windows.Forms.ProgressBar XP_pbar;
-        private System.Windows.Forms.ProgressBar HP_pbar;
-        private System.Windows.Forms.ProgressBar MP_pbar;
     }
 }

@@ -9,9 +9,71 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices;
 
 namespace Dungons_And_Dargons
 {
+
+    public enum ProgressBarDisplayText
+    {
+        Percentage,
+        CustomText
+    }
+
+    class CustomProgressBar : ProgressBar
+    {
+        //Property to set to decide whether to print a % or Text
+        public ProgressBarDisplayText DisplayStyle { get; set; }
+
+        //Property to hold the custom text
+        public String CustomText { get; set; }
+
+        public CustomProgressBar()
+        {
+            // Modify the ControlStyles flags
+            //http://msdn.microsoft.com/en-us/library/system.windows.forms.controlstyles.aspx
+            SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint, true);
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Rectangle rect = ClientRectangle;
+            Graphics g = e.Graphics;
+
+            ProgressBarRenderer.DrawHorizontalBar(g, rect);
+            rect.Inflate(-3, -3);
+            if (Value > 0)
+            {
+                // As we doing this ourselves we need to draw the chunks on the progress bar
+                Rectangle clip = new Rectangle(rect.X, rect.Y, (int)Math.Round(((float)Value / Maximum) * rect.Width), rect.Height);
+                ProgressBarRenderer.DrawHorizontalChunks(g, clip);
+            }
+
+            // Set the Display text (Either a % amount or our custom text
+            string text = DisplayStyle == ProgressBarDisplayText.Percentage ? Value.ToString() + '%' : CustomText;
+
+
+            using (Font f = new Font(FontFamily.GenericSerif, 10))
+            {
+
+                SizeF len = g.MeasureString(text, f);
+                // Calculate the location of the text (the middle of progress bar)
+                // Point location = new Point(Convert.ToInt32((rect.Width / 2) - (len.Width / 2)), Convert.ToInt32((rect.Height / 2) - (len.Height / 2)));
+                Point location = new Point(Convert.ToInt32((Width / 2) - len.Width / 2), Convert.ToInt32((Height / 2) - len.Height / 2));
+                // The commented-out code will centre the text into the highlighted area only. This will centre the text regardless of the highlighted area.
+                // Draw the custom text
+                g.DrawString(text, f, Brushes.Red, location);
+            }
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            this.ResumeLayout(false);
+
+        }
+    }
+
     public partial class User : Form
     {
         MySqlConnection conn;
@@ -33,6 +95,7 @@ namespace Dungons_And_Dargons
             MyPlayer.UserName = username;
             MyPlayer.GetData();
             MyPlayer.GetInventory();
+
         }
 
         private void User_Load(object sender, EventArgs e)
@@ -64,9 +127,7 @@ namespace Dungons_And_Dargons
             PERC_tbox.Text = MyPlayer.PERC.ToString();
             Satiety_tbox.Text = MyPlayer.SATIE.ToString();
             Gold_tbox.Text = MyPlayer.Gold.ToString();
-            HP_pbar.Value = (MyPlayer.HP / MyPlayer.HPMax) * 100;
-            HP_pbar.Value = (MyPlayer.MP / MyPlayer.MPMax) * 100;
-            HP_pbar.Value = (MyPlayer.XP / MyPlayer.XPReq) * 100;
+
 
             Inventory_lbox.Items.Clear();
             foreach (string item in MyPlayer.Inventory)
@@ -131,7 +192,7 @@ namespace Dungons_And_Dargons
 
         public int Level { get; set; }
         public int XP { get; set; }
-        public int XPReq { get; set; }
+        public int XPREQ { get; set; }
         public int Age { get; set; }
         public int Gold { get; set; }
         public int HP { get; set; }
@@ -192,7 +253,7 @@ namespace Dungons_And_Dargons
                     " POwner," +
                     " PLAYER," +
                     " NPC," +
-                    " ENEMY" +
+                    " ENEMY," +
                     " XPREQ" +
                     " FROM player WHERE USERNAME='" + UserName + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -224,7 +285,7 @@ namespace Dungons_And_Dargons
                     isPlayer = Convert.ToBoolean(rdr[22]);
                     isNPC = Convert.ToBoolean(rdr[23]);
                     isEnemy = Convert.ToBoolean(rdr[24]);
-                    XPReq = Convert.ToInt32(rdr[25]);
+                    XPREQ = Convert.ToInt32(rdr[25]);
                 }
                 
                 rdr.Close();
