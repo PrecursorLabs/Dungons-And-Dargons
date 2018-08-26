@@ -64,6 +64,9 @@ namespace Dungons_And_Dargons
             PERC_tbox.Text = MyPlayer.PERC.ToString();
             Satiety_tbox.Text = MyPlayer.SATIE.ToString();
             Gold_tbox.Text = MyPlayer.Gold.ToString();
+            HP_pbar.Value = (MyPlayer.HP / MyPlayer.HPMax) * 100;
+            HP_pbar.Value = (MyPlayer.MP / MyPlayer.MPMax) * 100;
+            HP_pbar.Value = (MyPlayer.XP / MyPlayer.XPReq) * 100;
 
             Inventory_lbox.Items.Clear();
             foreach (string item in MyPlayer.Inventory)
@@ -111,7 +114,11 @@ namespace Dungons_And_Dargons
 
         private void ten_timer_Tick(object sender, EventArgs e)
         {
-            Log_lbox.Items.Clear();
+        }
+
+        private void label57_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
@@ -124,7 +131,7 @@ namespace Dungons_And_Dargons
 
         public int Level { get; set; }
         public int XP { get; set; }
-        public int xpReq { get; set; }
+        public int XPReq { get; set; }
         public int Age { get; set; }
         public int Gold { get; set; }
         public int HP { get; set; }
@@ -186,6 +193,7 @@ namespace Dungons_And_Dargons
                     " PLAYER," +
                     " NPC," +
                     " ENEMY" +
+                    " XPREQ" +
                     " FROM player WHERE USERNAME='" + UserName + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
@@ -216,6 +224,7 @@ namespace Dungons_And_Dargons
                     isPlayer = Convert.ToBoolean(rdr[22]);
                     isNPC = Convert.ToBoolean(rdr[23]);
                     isEnemy = Convert.ToBoolean(rdr[24]);
+                    XPReq = Convert.ToInt32(rdr[25]);
                 }
                 
                 rdr.Close();
@@ -230,6 +239,13 @@ namespace Dungons_And_Dargons
 
         public void PostData()
         {
+            double LVL = Convert.ToDouble(Level);
+            double XP = 0;
+            for (int i = 1; i < (LVL + 1); i++)
+            {
+                XP += Math.Pow(i, 3);
+            }
+
             try
             {
                 string sql = "UPDATE player" +
@@ -256,6 +272,7 @@ namespace Dungons_And_Dargons
                     " PLAYER = '" + isPlayer + "'," +
                     " NPC = '" + isNPC + "'," +
                     " ENEMY = '" + isEnemy + "'" +
+                    " XPREQ = '" + Convert.ToDecimal(XP) + "'" +
                     " WHERE idPlayer='" + PlayerID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
