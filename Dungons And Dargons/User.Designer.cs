@@ -1,7 +1,5 @@
 ﻿namespace Dungons_And_Dargons
 {
-
-
     partial class User
     {
         /// <summary>
@@ -31,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.Log_lbox = new System.Windows.Forms.ListBox();
             this.HP_tbox = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.XP_tbox = new System.Windows.Forms.TextBox();
@@ -89,12 +88,12 @@
             this.Estat_cbox = new System.Windows.Forms.ComboBox();
             this.ApplyEvent_btn = new System.Windows.Forms.Button();
             this.NPCM_tab = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Filter_Name = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
+            this.npcManager_tabs = new System.Windows.Forms.TabControl();
+            this.Filter_tab = new System.Windows.Forms.TabPage();
             this.label56 = new System.Windows.Forms.Label();
-            this.Filter_Relation = new System.Windows.Forms.ComboBox();
-            this.NPCS_lbox = new System.Windows.Forms.ListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.NPCC_tab = new System.Windows.Forms.TabPage();
             this.UPLOAD_btn = new System.Windows.Forms.Button();
             this.Roll_btn = new System.Windows.Forms.Button();
@@ -199,7 +198,8 @@
             this.Write_log_group.SuspendLayout();
             this.CreateEvent_group.SuspendLayout();
             this.NPCM_tab.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.npcManager_tabs.SuspendLayout();
+            this.Filter_tab.SuspendLayout();
             this.NPCC_tab.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCOXPMOD_tbox)).BeginInit();
@@ -229,13 +229,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.CCHP_UD)).BeginInit();
             this.SuspendLayout();
             // 
+            // Log_lbox
+            // 
+            this.Log_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Log_lbox.FormattingEnabled = true;
+            this.Log_lbox.Location = new System.Drawing.Point(12, 370);
+            this.Log_lbox.Name = "Log_lbox";
+            this.Log_lbox.Size = new System.Drawing.Size(166, 147);
+            this.Log_lbox.TabIndex = 6;
+            this.Log_lbox.SelectedIndexChanged += new System.EventHandler(this.Log_lbox_SelectedIndexChanged);
+            // 
             // HP_tbox
             // 
             this.HP_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.HP_tbox.Enabled = false;
             this.HP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HP_tbox.ForeColor = System.Drawing.Color.Black;
-            this.HP_tbox.Location = new System.Drawing.Point(56, 186);
+            this.HP_tbox.Location = new System.Drawing.Point(56, 54);
             this.HP_tbox.Name = "HP_tbox";
             this.HP_tbox.Size = new System.Drawing.Size(58, 22);
             this.HP_tbox.TabIndex = 106;
@@ -244,7 +255,7 @@
             // 
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(26, 89);
+            this.label30.Location = new System.Drawing.Point(376, 9);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(24, 13);
             this.label30.TabIndex = 105;
@@ -257,7 +268,7 @@
             this.XP_tbox.Enabled = false;
             this.XP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XP_tbox.ForeColor = System.Drawing.Color.Black;
-            this.XP_tbox.Location = new System.Drawing.Point(557, 6);
+            this.XP_tbox.Location = new System.Drawing.Point(406, 6);
             this.XP_tbox.Name = "XP_tbox";
             this.XP_tbox.Size = new System.Drawing.Size(70, 22);
             this.XP_tbox.TabIndex = 104;
@@ -268,7 +279,7 @@
             this.PERC_tbox.Enabled = false;
             this.PERC_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PERC_tbox.ForeColor = System.Drawing.Color.Black;
-            this.PERC_tbox.Location = new System.Drawing.Point(56, 468);
+            this.PERC_tbox.Location = new System.Drawing.Point(56, 316);
             this.PERC_tbox.Name = "PERC_tbox";
             this.PERC_tbox.Size = new System.Drawing.Size(122, 22);
             this.PERC_tbox.TabIndex = 103;
@@ -279,7 +290,7 @@
             this.INT_tbox.Enabled = false;
             this.INT_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.INT_tbox.ForeColor = System.Drawing.Color.Black;
-            this.INT_tbox.Location = new System.Drawing.Point(56, 442);
+            this.INT_tbox.Location = new System.Drawing.Point(56, 290);
             this.INT_tbox.Name = "INT_tbox";
             this.INT_tbox.Size = new System.Drawing.Size(122, 22);
             this.INT_tbox.TabIndex = 102;
@@ -290,7 +301,7 @@
             this.STR_tbox.Enabled = false;
             this.STR_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STR_tbox.ForeColor = System.Drawing.Color.Black;
-            this.STR_tbox.Location = new System.Drawing.Point(56, 416);
+            this.STR_tbox.Location = new System.Drawing.Point(56, 264);
             this.STR_tbox.Name = "STR_tbox";
             this.STR_tbox.Size = new System.Drawing.Size(122, 22);
             this.STR_tbox.TabIndex = 101;
@@ -301,7 +312,7 @@
             this.DEX_tbox.Enabled = false;
             this.DEX_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DEX_tbox.ForeColor = System.Drawing.Color.Black;
-            this.DEX_tbox.Location = new System.Drawing.Point(56, 390);
+            this.DEX_tbox.Location = new System.Drawing.Point(56, 238);
             this.DEX_tbox.Name = "DEX_tbox";
             this.DEX_tbox.Size = new System.Drawing.Size(122, 22);
             this.DEX_tbox.TabIndex = 100;
@@ -312,7 +323,7 @@
             this.CHAR_tbox.Enabled = false;
             this.CHAR_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CHAR_tbox.ForeColor = System.Drawing.Color.Black;
-            this.CHAR_tbox.Location = new System.Drawing.Point(56, 364);
+            this.CHAR_tbox.Location = new System.Drawing.Point(56, 212);
             this.CHAR_tbox.Name = "CHAR_tbox";
             this.CHAR_tbox.Size = new System.Drawing.Size(122, 22);
             this.CHAR_tbox.TabIndex = 99;
@@ -323,7 +334,7 @@
             this.SDEF_tbox.Enabled = false;
             this.SDEF_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SDEF_tbox.ForeColor = System.Drawing.Color.Black;
-            this.SDEF_tbox.Location = new System.Drawing.Point(56, 338);
+            this.SDEF_tbox.Location = new System.Drawing.Point(56, 186);
             this.SDEF_tbox.Name = "SDEF_tbox";
             this.SDEF_tbox.Size = new System.Drawing.Size(122, 22);
             this.SDEF_tbox.TabIndex = 98;
@@ -334,7 +345,7 @@
             this.DEF_tbox.Enabled = false;
             this.DEF_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DEF_tbox.ForeColor = System.Drawing.Color.Black;
-            this.DEF_tbox.Location = new System.Drawing.Point(56, 312);
+            this.DEF_tbox.Location = new System.Drawing.Point(56, 160);
             this.DEF_tbox.Name = "DEF_tbox";
             this.DEF_tbox.Size = new System.Drawing.Size(122, 22);
             this.DEF_tbox.TabIndex = 97;
@@ -345,7 +356,7 @@
             this.SATK_tbox.Enabled = false;
             this.SATK_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SATK_tbox.ForeColor = System.Drawing.Color.Black;
-            this.SATK_tbox.Location = new System.Drawing.Point(56, 286);
+            this.SATK_tbox.Location = new System.Drawing.Point(56, 134);
             this.SATK_tbox.Name = "SATK_tbox";
             this.SATK_tbox.Size = new System.Drawing.Size(122, 22);
             this.SATK_tbox.TabIndex = 96;
@@ -356,7 +367,7 @@
             this.ATK_tbox.Enabled = false;
             this.ATK_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ATK_tbox.ForeColor = System.Drawing.Color.Black;
-            this.ATK_tbox.Location = new System.Drawing.Point(56, 261);
+            this.ATK_tbox.Location = new System.Drawing.Point(56, 109);
             this.ATK_tbox.Name = "ATK_tbox";
             this.ATK_tbox.Size = new System.Drawing.Size(122, 22);
             this.ATK_tbox.TabIndex = 95;
@@ -367,7 +378,7 @@
             this.MMP_tbox.Enabled = false;
             this.MMP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MMP_tbox.ForeColor = System.Drawing.Color.Black;
-            this.MMP_tbox.Location = new System.Drawing.Point(120, 214);
+            this.MMP_tbox.Location = new System.Drawing.Point(120, 82);
             this.MMP_tbox.Name = "MMP_tbox";
             this.MMP_tbox.Size = new System.Drawing.Size(58, 22);
             this.MMP_tbox.TabIndex = 94;
@@ -378,7 +389,7 @@
             this.MHP_tbox.Enabled = false;
             this.MHP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MHP_tbox.ForeColor = System.Drawing.Color.Black;
-            this.MHP_tbox.Location = new System.Drawing.Point(120, 186);
+            this.MHP_tbox.Location = new System.Drawing.Point(120, 54);
             this.MHP_tbox.Name = "MHP_tbox";
             this.MHP_tbox.Size = new System.Drawing.Size(58, 22);
             this.MHP_tbox.TabIndex = 93;
@@ -417,7 +428,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 471);
+            this.label17.Location = new System.Drawing.Point(12, 319);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(39, 13);
             this.label17.TabIndex = 89;
@@ -426,7 +437,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(22, 445);
+            this.label18.Location = new System.Drawing.Point(22, 293);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(28, 13);
             this.label18.TabIndex = 88;
@@ -435,7 +446,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(18, 419);
+            this.label19.Location = new System.Drawing.Point(18, 267);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(32, 13);
             this.label19.TabIndex = 87;
@@ -444,7 +455,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(18, 393);
+            this.label20.Location = new System.Drawing.Point(18, 241);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(32, 13);
             this.label20.TabIndex = 86;
@@ -453,7 +464,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(10, 367);
+            this.label21.Location = new System.Drawing.Point(10, 215);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(40, 13);
             this.label21.TabIndex = 85;
@@ -462,7 +473,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(9, 341);
+            this.label22.Location = new System.Drawing.Point(9, 189);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(41, 13);
             this.label22.TabIndex = 84;
@@ -471,7 +482,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(19, 315);
+            this.label23.Location = new System.Drawing.Point(19, 163);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(31, 13);
             this.label23.TabIndex = 83;
@@ -480,7 +491,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(9, 289);
+            this.label24.Location = new System.Drawing.Point(9, 137);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(41, 13);
             this.label24.TabIndex = 82;
@@ -489,7 +500,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(19, 263);
+            this.label25.Location = new System.Drawing.Point(19, 111);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(31, 13);
             this.label25.TabIndex = 81;
@@ -498,7 +509,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(24, 148);
+            this.label26.Location = new System.Drawing.Point(24, 85);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(26, 13);
             this.label26.TabIndex = 80;
@@ -507,7 +518,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(24, 117);
+            this.label27.Location = new System.Drawing.Point(25, 59);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(25, 13);
             this.label27.TabIndex = 79;
@@ -654,7 +665,7 @@
             this.Write_log_group.Controls.Add(this.label6);
             this.Write_log_group.Controls.Add(this.log_des_lbox);
             this.Write_log_group.Controls.Add(this.Message_btn);
-            this.Write_log_group.Location = new System.Drawing.Point(3, 390);
+            this.Write_log_group.Location = new System.Drawing.Point(3, 219);
             this.Write_log_group.Name = "Write_log_group";
             this.Write_log_group.Size = new System.Drawing.Size(365, 237);
             this.Write_log_group.TabIndex = 117;
@@ -717,7 +728,7 @@
             this.Event_log_lbox.FormattingEnabled = true;
             this.Event_log_lbox.Location = new System.Drawing.Point(374, 6);
             this.Event_log_lbox.Name = "Event_log_lbox";
-            this.Event_log_lbox.Size = new System.Drawing.Size(462, 615);
+            this.Event_log_lbox.Size = new System.Drawing.Size(366, 446);
             this.Event_log_lbox.TabIndex = 1;
             // 
             // CreateEvent_group
@@ -735,7 +746,7 @@
             this.CreateEvent_group.Controls.Add(this.ApplyEvent_btn);
             this.CreateEvent_group.Location = new System.Drawing.Point(3, 6);
             this.CreateEvent_group.Name = "CreateEvent_group";
-            this.CreateEvent_group.Size = new System.Drawing.Size(365, 378);
+            this.CreateEvent_group.Size = new System.Drawing.Size(365, 207);
             this.CreateEvent_group.TabIndex = 0;
             this.CreateEvent_group.TabStop = false;
             this.CreateEvent_group.Text = "CreateEvent";
@@ -825,7 +836,7 @@
             // ApplyEvent_btn
             // 
             this.ApplyEvent_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ApplyEvent_btn.Location = new System.Drawing.Point(284, 349);
+            this.ApplyEvent_btn.Location = new System.Drawing.Point(284, 178);
             this.ApplyEvent_btn.Name = "ApplyEvent_btn";
             this.ApplyEvent_btn.Size = new System.Drawing.Size(75, 23);
             this.ApplyEvent_btn.TabIndex = 0;
@@ -834,8 +845,7 @@
             // 
             // NPCM_tab
             // 
-            this.NPCM_tab.Controls.Add(this.groupBox1);
-            this.NPCM_tab.Controls.Add(this.NPCS_lbox);
+            this.NPCM_tab.Controls.Add(this.npcManager_tabs);
             this.NPCM_tab.Location = new System.Drawing.Point(4, 22);
             this.NPCM_tab.Name = "NPCM_tab";
             this.NPCM_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -844,68 +854,67 @@
             this.NPCM_tab.Text = "NPC Manager";
             this.NPCM_tab.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // npcManager_tabs
             // 
-            this.groupBox1.Controls.Add(this.Filter_Name);
-            this.groupBox1.Controls.Add(this.label55);
-            this.groupBox1.Controls.Add(this.label56);
-            this.groupBox1.Controls.Add(this.Filter_Relation);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(185, 453);
-            this.groupBox1.TabIndex = 115;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filter";
+            this.npcManager_tabs.Controls.Add(this.Filter_tab);
+            this.npcManager_tabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.npcManager_tabs.Location = new System.Drawing.Point(3, 3);
+            this.npcManager_tabs.Name = "npcManager_tabs";
+            this.npcManager_tabs.SelectedIndex = 0;
+            this.npcManager_tabs.Size = new System.Drawing.Size(784, 453);
+            this.npcManager_tabs.TabIndex = 0;
             // 
-            // Filter_Name
+            // Filter_tab
             // 
-            this.Filter_Name.Location = new System.Drawing.Point(70, 30);
-            this.Filter_Name.Name = "Filter_Name";
-            this.Filter_Name.Size = new System.Drawing.Size(100, 20);
-            this.Filter_Name.TabIndex = 0;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(26, 33);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(38, 13);
-            this.label55.TabIndex = 111;
-            this.label55.Text = "Name:";
+            this.Filter_tab.Controls.Add(this.label56);
+            this.Filter_tab.Controls.Add(this.comboBox1);
+            this.Filter_tab.Controls.Add(this.label55);
+            this.Filter_tab.Controls.Add(this.textBox1);
+            this.Filter_tab.Location = new System.Drawing.Point(4, 22);
+            this.Filter_tab.Name = "Filter_tab";
+            this.Filter_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.Filter_tab.Size = new System.Drawing.Size(776, 427);
+            this.Filter_tab.TabIndex = 0;
+            this.Filter_tab.Text = "Filter";
+            this.Filter_tab.UseVisualStyleBackColor = true;
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(15, 59);
+            this.label56.Location = new System.Drawing.Point(7, 34);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(49, 13);
             this.label56.TabIndex = 113;
             this.label56.Text = "Relation:";
             // 
-            // Filter_Relation
+            // comboBox1
             // 
-            this.Filter_Relation.FormattingEnabled = true;
-            this.Filter_Relation.Items.AddRange(new object[] {
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "Player",
             "Enemy",
             "NPC",
             "ALL"});
-            this.Filter_Relation.Location = new System.Drawing.Point(70, 56);
-            this.Filter_Relation.Name = "Filter_Relation";
-            this.Filter_Relation.Size = new System.Drawing.Size(100, 21);
-            this.Filter_Relation.TabIndex = 112;
+            this.comboBox1.Location = new System.Drawing.Point(62, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 112;
             // 
-            // NPCS_lbox
+            // label55
             // 
-            this.NPCS_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NPCS_lbox.FormattingEnabled = true;
-            this.NPCS_lbox.Location = new System.Drawing.Point(194, 6);
-            this.NPCS_lbox.Name = "NPCS_lbox";
-            this.NPCS_lbox.Size = new System.Drawing.Size(590, 446);
-            this.NPCS_lbox.TabIndex = 114;
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(18, 8);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(38, 13);
+            this.label55.TabIndex = 111;
+            this.label55.Text = "Name:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(62, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // NPCC_tab
             // 
@@ -927,7 +936,7 @@
             // UPLOAD_btn
             // 
             this.UPLOAD_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UPLOAD_btn.Location = new System.Drawing.Point(87, 696);
+            this.UPLOAD_btn.Location = new System.Drawing.Point(87, 430);
             this.UPLOAD_btn.Name = "UPLOAD_btn";
             this.UPLOAD_btn.Size = new System.Drawing.Size(75, 23);
             this.UPLOAD_btn.TabIndex = 16;
@@ -937,7 +946,7 @@
             // Roll_btn
             // 
             this.Roll_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Roll_btn.Location = new System.Drawing.Point(6, 696);
+            this.Roll_btn.Location = new System.Drawing.Point(6, 430);
             this.Roll_btn.Name = "Roll_btn";
             this.Roll_btn.Size = new System.Drawing.Size(75, 23);
             this.Roll_btn.TabIndex = 15;
@@ -2105,7 +2114,7 @@
             this.MP_tbox.Enabled = false;
             this.MP_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MP_tbox.ForeColor = System.Drawing.Color.Black;
-            this.MP_tbox.Location = new System.Drawing.Point(56, 214);
+            this.MP_tbox.Location = new System.Drawing.Point(56, 81);
             this.MP_tbox.Name = "MP_tbox";
             this.MP_tbox.Size = new System.Drawing.Size(58, 22);
             this.MP_tbox.TabIndex = 108;
@@ -2127,7 +2136,7 @@
             this.Satiety_tbox.Enabled = false;
             this.Satiety_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Satiety_tbox.ForeColor = System.Drawing.Color.Black;
-            this.Satiety_tbox.Location = new System.Drawing.Point(56, 496);
+            this.Satiety_tbox.Location = new System.Drawing.Point(56, 344);
             this.Satiety_tbox.Name = "Satiety_tbox";
             this.Satiety_tbox.Size = new System.Drawing.Size(122, 22);
             this.Satiety_tbox.TabIndex = 110;
@@ -2135,7 +2144,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 501);
+            this.label7.Location = new System.Drawing.Point(18, 349);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 109;
@@ -2150,12 +2159,11 @@
             // 
             this.label57.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(18, 63);
+            this.label57.Location = new System.Drawing.Point(262, 9);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(32, 13);
             this.label57.TabIndex = 112;
             this.label57.Text = "Gold:";
-            this.label57.Click += new System.EventHandler(this.label57_Click);
             // 
             // Gold_tbox
             // 
@@ -2164,7 +2172,7 @@
             this.Gold_tbox.Enabled = false;
             this.Gold_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gold_tbox.ForeColor = System.Drawing.Color.Black;
-            this.Gold_tbox.Location = new System.Drawing.Point(56, 58);
+            this.Gold_tbox.Location = new System.Drawing.Point(300, 4);
             this.Gold_tbox.Name = "Gold_tbox";
             this.Gold_tbox.Size = new System.Drawing.Size(70, 22);
             this.Gold_tbox.TabIndex = 111;
@@ -2211,6 +2219,7 @@
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label28);
+            this.Controls.Add(this.Log_lbox);
             this.Name = "User";
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);
@@ -2224,8 +2233,9 @@
             this.CreateEvent_group.ResumeLayout(false);
             this.CreateEvent_group.PerformLayout();
             this.NPCM_tab.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.npcManager_tabs.ResumeLayout(false);
+            this.Filter_tab.ResumeLayout(false);
+            this.Filter_tab.PerformLayout();
             this.NPCC_tab.ResumeLayout(false);
             this.NPCC_tab.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -2262,6 +2272,7 @@
         }
 
         #endregion
+        private System.Windows.Forms.ListBox Log_lbox;
         private System.Windows.Forms.TextBox HP_tbox;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox XP_tbox;
@@ -2414,13 +2425,13 @@
         private System.Windows.Forms.TextBox CCName_tbox;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Timer ten_timer;
+        private System.Windows.Forms.TabControl npcManager_tabs;
+        private System.Windows.Forms.TabPage Filter_tab;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.ComboBox Filter_Relation;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox Filter_Name;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.TextBox Gold_tbox;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox NPCS_lbox;
     }
 }
