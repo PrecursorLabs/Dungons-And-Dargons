@@ -45,7 +45,7 @@ namespace Dungons_And_Dargons
         {
             try
             {
-                string sql = "SELECT idWeapons, Name, Description, Weapon, Consumable, Helm, Maille, Gloves, Pants, Boot, Artifact, Healing, M_HP, M_MP, M_ATK, M_SATK, M_DEF, M_SDEF, M_CHAR, M_DEX, M_STR, M_INT, M_PERC FROM items WHERE idWeapons=" + IID;
+                string sql = "SELECT idItems, Name, Description, Weapon, Consumable, Helm, Maille, Gloves, Pants, Boot, Artifact, Healing, M_HP, M_MP, M_ATK, M_SATK, M_DEF, M_SDEF, M_CHAR, M_DEX, M_STR, M_INT, M_PERC FROM items WHERE idItems=" + IID;
                 MySqlCommand cmd = new MySqlCommand(sql, Iconn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 int count = 0;

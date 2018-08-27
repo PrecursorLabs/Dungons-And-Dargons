@@ -48,11 +48,9 @@ namespace Dungons_And_Dargons
         {
             Name_tbox.Text = MyPlayer.PName;
             LVL_tbox.Text = MyPlayer.Level.ToString();
-            XP_tbox.Text = MyPlayer.XP.ToString();
-            MHP_tbox.Text = MyPlayer.HPMax.ToString();
-            HP_tbox.Text = MyPlayer.HP.ToString();
-            MMP_tbox.Text = MyPlayer.MPMax.ToString();
-            MP_tbox.Text = MyPlayer.MP.ToString();
+            XP_lbl.Text = "XP: " + MyPlayer.XP.ToString() + "/" + MyPlayer.XPREQ.ToString();
+            HP_lbl.Text = "HP: " + MyPlayer.HP.ToString() + "/" + MyPlayer.HPMax.ToString();
+            MP_lbl.Text = "MP: " + MyPlayer.MP.ToString() + "/" + MyPlayer.MPMax.ToString();
             ATK_tbox.Text = MyPlayer.ATK.ToString();
             SATK_tbox.Text = MyPlayer.SATK.ToString();
             DEF_tbox.Text = MyPlayer.DEF.ToString();
@@ -73,6 +71,19 @@ namespace Dungons_And_Dargons
             XP_pbar.Maximum = MyPlayer.XPREQ;
             XP_pbar.Value = MyPlayer.XP;
             Inventory_lbox.Items.Clear();
+
+            HP_pbar.ForeColor = Color.LawnGreen;
+
+            if (MyPlayer.HP < MyPlayer.HPMax / 2)
+            {
+                HP_pbar.ForeColor = Color.Yellow;
+            }
+
+            if (MyPlayer.HP < MyPlayer.HPMax / 4)
+            {
+                HP_pbar.ForeColor = Color.Red;
+            }
+
             foreach (string item in MyPlayer.Inventory)
             {
                 Inventory_lbox.Items.Add(item);
@@ -109,20 +120,6 @@ namespace Dungons_And_Dargons
         private void Update_timer_Tick(object sender, EventArgs e)
         {
             UPDATE_btn.PerformClick();
-        }
-
-        private void Log_desc_tbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ten_timer_Tick(object sender, EventArgs e)
-        {
-        }
-
-        private void label57_Click(object sender, EventArgs e)
-        {
-
         }
     }
 
@@ -292,7 +289,7 @@ namespace Dungons_And_Dargons
             try
             {
                 Inventory.Clear();
-                string sql = "SELECT Items_idWeapons FROM player_has_items WHERE Player_idPlayer=" + PlayerID.ToString();
+                string sql = "SELECT Items_idItems FROM player_has_items WHERE Player_idPlayer=" + PlayerID.ToString();
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 List<int> al = new List<int>();
@@ -303,7 +300,7 @@ namespace Dungons_And_Dargons
                 rdr.Close();
                 foreach (int ItemID in al)
                 {
-                    string sql2 = "SELECT Name FROM items WHERE idWeapons=" + ItemID.ToString();
+                    string sql2 = "SELECT Name FROM items WHERE idItems=" + ItemID.ToString();
                     MySqlCommand cmd2 = new MySqlCommand(sql2, conn);
                     MySqlDataReader rdr2 = cmd2.ExecuteReader();
                     while (rdr2.Read())
@@ -337,7 +334,7 @@ namespace Dungons_And_Dargons
                 string IID = item.Split('<', '>')[1];
                 try
                 {
-                    string sql = "INSERT INTO player_has_items (Player_idPlayer, Items_idWeapons) " +
+                    string sql = "INSERT INTO player_has_items (Player_idPlayer, Items_idItems) " +
                         "VALUES (" + PlayerID + "," + IID + ")";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
