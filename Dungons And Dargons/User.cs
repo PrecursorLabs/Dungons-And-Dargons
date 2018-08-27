@@ -48,11 +48,9 @@ namespace Dungons_And_Dargons
         {
             Name_tbox.Text = MyPlayer.PName;
             LVL_tbox.Text = MyPlayer.Level.ToString();
-            XP_tbox.Text = MyPlayer.XP.ToString();
-            MHP_tbox.Text = MyPlayer.HPMax.ToString();
-            HP_tbox.Text = MyPlayer.HP.ToString();
-            MMP_tbox.Text = MyPlayer.MPMax.ToString();
-            MP_tbox.Text = MyPlayer.MP.ToString();
+            XP_lbl.Text = "XP: " + MyPlayer.XP.ToString() + "/" + MyPlayer.XPREQ.ToString();
+            HP_lbl.Text = "HP: " + MyPlayer.HP.ToString() + "/" + MyPlayer.HPMax.ToString();
+            MP_lbl.Text = "MP: " + MyPlayer.MP.ToString() + "/" + MyPlayer.MPMax.ToString();
             ATK_tbox.Text = MyPlayer.ATK.ToString();
             SATK_tbox.Text = MyPlayer.SATK.ToString();
             DEF_tbox.Text = MyPlayer.DEF.ToString();
