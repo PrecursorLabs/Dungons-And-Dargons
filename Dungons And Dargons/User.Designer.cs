@@ -155,37 +155,37 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.EditorItems_lbox = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
+            this.ID_editor_up = new System.Windows.Forms.NumericUpDown();
             this.label73 = new System.Windows.Forms.Label();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
+            this.DICE_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label72 = new System.Windows.Forms.Label();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
+            this.SAT_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label71 = new System.Windows.Forms.Label();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
+            this.MHEAL_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label70 = new System.Windows.Forms.Label();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
+            this.HEAL_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label69 = new System.Windows.Forms.Label();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.PERC_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label68 = new System.Windows.Forms.Label();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.INT_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label67 = new System.Windows.Forms.Label();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.STR_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label66 = new System.Windows.Forms.Label();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.SDEF_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label65 = new System.Windows.Forms.Label();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.ATK_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label64 = new System.Windows.Forms.Label();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.DEX_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label63 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.CHAR_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label62 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.DEF_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label61 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.SATK_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label60 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.MP_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label59 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.HP_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label58 = new System.Windows.Forms.Label();
             this.Item_type_editor_cbox = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -249,15 +249,15 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
+            this.ENH_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label74 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Type_editor_cbox = new System.Windows.Forms.ComboBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
+            this.ENCH_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label76 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button13 = new System.Windows.Forms.Button();
+            this.NItem_editor_btn = new System.Windows.Forms.Button();
+            this.Orcalite_editor_checkb = new System.Windows.Forms.CheckBox();
+            this.MItem_editor_ud = new System.Windows.Forms.Button();
             this.SpellsManager_tab = new System.Windows.Forms.TabPage();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
@@ -298,24 +298,24 @@
             this.GMItemc_tab.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_editor_up)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DICE_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SAT_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MHEAL_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HEAL_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PERC_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INT_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.STR_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SDEF_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ATK_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DEX_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CHAR_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DEF_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SATK_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MP_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HP_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ENH_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ENCH_editor_ud)).BeginInit();
             this.SuspendLayout();
             // 
             // Update_timer
@@ -421,8 +421,8 @@
             this.GameMaster_stabs.Controls.Add(this.NPCM_tab);
             this.GameMaster_stabs.Controls.Add(this.NPCC_tab);
             this.GameMaster_stabs.Controls.Add(this.GMItemc_tab);
-            this.GameMaster_stabs.Controls.Add(this.CombatManager_tab);
             this.GameMaster_stabs.Controls.Add(this.SpellsManager_tab);
+            this.GameMaster_stabs.Controls.Add(this.CombatManager_tab);
             this.GameMaster_stabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GameMaster_stabs.Location = new System.Drawing.Point(3, 3);
             this.GameMaster_stabs.Name = "GameMaster_stabs";
@@ -1909,46 +1909,46 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button13);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.button12);
+            this.groupBox2.Controls.Add(this.MItem_editor_ud);
+            this.groupBox2.Controls.Add(this.Orcalite_editor_checkb);
+            this.groupBox2.Controls.Add(this.NItem_editor_btn);
             this.groupBox2.Controls.Add(this.label76);
-            this.groupBox2.Controls.Add(this.numericUpDown18);
+            this.groupBox2.Controls.Add(this.ENCH_editor_ud);
             this.groupBox2.Controls.Add(this.label75);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.numericUpDown17);
+            this.groupBox2.Controls.Add(this.Type_editor_cbox);
+            this.groupBox2.Controls.Add(this.ENH_editor_ud);
             this.groupBox2.Controls.Add(this.label74);
-            this.groupBox2.Controls.Add(this.numericUpDown16);
+            this.groupBox2.Controls.Add(this.ID_editor_up);
             this.groupBox2.Controls.Add(this.label73);
-            this.groupBox2.Controls.Add(this.numericUpDown15);
+            this.groupBox2.Controls.Add(this.DICE_editor_ud);
             this.groupBox2.Controls.Add(this.label72);
-            this.groupBox2.Controls.Add(this.numericUpDown14);
+            this.groupBox2.Controls.Add(this.SAT_editor_ud);
             this.groupBox2.Controls.Add(this.label71);
-            this.groupBox2.Controls.Add(this.numericUpDown13);
+            this.groupBox2.Controls.Add(this.MHEAL_editor_ud);
             this.groupBox2.Controls.Add(this.label70);
-            this.groupBox2.Controls.Add(this.numericUpDown12);
+            this.groupBox2.Controls.Add(this.HEAL_editor_ud);
             this.groupBox2.Controls.Add(this.label69);
-            this.groupBox2.Controls.Add(this.numericUpDown11);
+            this.groupBox2.Controls.Add(this.PERC_editor_ud);
             this.groupBox2.Controls.Add(this.label68);
-            this.groupBox2.Controls.Add(this.numericUpDown10);
+            this.groupBox2.Controls.Add(this.INT_editor_ud);
             this.groupBox2.Controls.Add(this.label67);
-            this.groupBox2.Controls.Add(this.numericUpDown9);
+            this.groupBox2.Controls.Add(this.STR_editor_ud);
             this.groupBox2.Controls.Add(this.label66);
-            this.groupBox2.Controls.Add(this.numericUpDown8);
+            this.groupBox2.Controls.Add(this.SDEF_editor_ud);
             this.groupBox2.Controls.Add(this.label65);
-            this.groupBox2.Controls.Add(this.numericUpDown7);
+            this.groupBox2.Controls.Add(this.ATK_editor_ud);
             this.groupBox2.Controls.Add(this.label64);
-            this.groupBox2.Controls.Add(this.numericUpDown6);
+            this.groupBox2.Controls.Add(this.DEX_editor_ud);
             this.groupBox2.Controls.Add(this.label63);
-            this.groupBox2.Controls.Add(this.numericUpDown5);
+            this.groupBox2.Controls.Add(this.CHAR_editor_ud);
             this.groupBox2.Controls.Add(this.label62);
-            this.groupBox2.Controls.Add(this.numericUpDown4);
+            this.groupBox2.Controls.Add(this.DEF_editor_ud);
             this.groupBox2.Controls.Add(this.label61);
-            this.groupBox2.Controls.Add(this.numericUpDown3);
+            this.groupBox2.Controls.Add(this.SATK_editor_ud);
             this.groupBox2.Controls.Add(this.label60);
-            this.groupBox2.Controls.Add(this.numericUpDown2);
+            this.groupBox2.Controls.Add(this.MP_editor_ud);
             this.groupBox2.Controls.Add(this.label59);
-            this.groupBox2.Controls.Add(this.numericUpDown1);
+            this.groupBox2.Controls.Add(this.HP_editor_ud);
             this.groupBox2.Controls.Add(this.label58);
             this.groupBox2.Controls.Add(this.Item_type_editor_cbox);
             this.groupBox2.Controls.Add(this.label30);
@@ -1964,18 +1964,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor/Creator";
             // 
-            // numericUpDown16
+            // ID_editor_up
             // 
-            this.numericUpDown16.Enabled = false;
-            this.numericUpDown16.Location = new System.Drawing.Point(364, 13);
-            this.numericUpDown16.Maximum = new decimal(new int[] {
+            this.ID_editor_up.Enabled = false;
+            this.ID_editor_up.Location = new System.Drawing.Point(364, 13);
+            this.ID_editor_up.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown16.Name = "numericUpDown16";
-            this.numericUpDown16.Size = new System.Drawing.Size(50, 20);
-            this.numericUpDown16.TabIndex = 37;
+            this.ID_editor_up.Name = "ID_editor_up";
+            this.ID_editor_up.Size = new System.Drawing.Size(50, 20);
+            this.ID_editor_up.TabIndex = 37;
             // 
             // label73
             // 
@@ -1986,17 +1986,17 @@
             this.label73.TabIndex = 36;
             this.label73.Text = "ID:";
             // 
-            // numericUpDown15
+            // DICE_editor_ud
             // 
-            this.numericUpDown15.Location = new System.Drawing.Point(265, 290);
-            this.numericUpDown15.Maximum = new decimal(new int[] {
+            this.DICE_editor_ud.Location = new System.Drawing.Point(265, 290);
+            this.DICE_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown15.Name = "numericUpDown15";
-            this.numericUpDown15.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown15.TabIndex = 35;
+            this.DICE_editor_ud.Name = "DICE_editor_ud";
+            this.DICE_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.DICE_editor_ud.TabIndex = 35;
             // 
             // label72
             // 
@@ -2007,17 +2007,17 @@
             this.label72.TabIndex = 34;
             this.label72.Text = "DICE:";
             // 
-            // numericUpDown14
+            // SAT_editor_ud
             // 
-            this.numericUpDown14.Location = new System.Drawing.Point(156, 290);
-            this.numericUpDown14.Maximum = new decimal(new int[] {
+            this.SAT_editor_ud.Location = new System.Drawing.Point(156, 290);
+            this.SAT_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown14.TabIndex = 33;
+            this.SAT_editor_ud.Name = "SAT_editor_ud";
+            this.SAT_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.SAT_editor_ud.TabIndex = 33;
             // 
             // label71
             // 
@@ -2028,17 +2028,17 @@
             this.label71.TabIndex = 32;
             this.label71.Text = "SAT:";
             // 
-            // numericUpDown13
+            // MHEAL_editor_ud
             // 
-            this.numericUpDown13.Location = new System.Drawing.Point(46, 290);
-            this.numericUpDown13.Maximum = new decimal(new int[] {
+            this.MHEAL_editor_ud.Location = new System.Drawing.Point(46, 290);
+            this.MHEAL_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown13.TabIndex = 31;
+            this.MHEAL_editor_ud.Name = "MHEAL_editor_ud";
+            this.MHEAL_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.MHEAL_editor_ud.TabIndex = 31;
             // 
             // label70
             // 
@@ -2049,17 +2049,17 @@
             this.label70.TabIndex = 30;
             this.label70.Text = "MHEAL:";
             // 
-            // numericUpDown12
+            // HEAL_editor_ud
             // 
-            this.numericUpDown12.Location = new System.Drawing.Point(265, 266);
-            this.numericUpDown12.Maximum = new decimal(new int[] {
+            this.HEAL_editor_ud.Location = new System.Drawing.Point(265, 266);
+            this.HEAL_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown12.TabIndex = 29;
+            this.HEAL_editor_ud.Name = "HEAL_editor_ud";
+            this.HEAL_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.HEAL_editor_ud.TabIndex = 29;
             // 
             // label69
             // 
@@ -2070,17 +2070,17 @@
             this.label69.TabIndex = 28;
             this.label69.Text = "HEAL:";
             // 
-            // numericUpDown11
+            // PERC_editor_ud
             // 
-            this.numericUpDown11.Location = new System.Drawing.Point(156, 264);
-            this.numericUpDown11.Maximum = new decimal(new int[] {
+            this.PERC_editor_ud.Location = new System.Drawing.Point(156, 264);
+            this.PERC_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown11.TabIndex = 27;
+            this.PERC_editor_ud.Name = "PERC_editor_ud";
+            this.PERC_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.PERC_editor_ud.TabIndex = 27;
             // 
             // label68
             // 
@@ -2091,17 +2091,17 @@
             this.label68.TabIndex = 26;
             this.label68.Text = "PERC:";
             // 
-            // numericUpDown10
+            // INT_editor_ud
             // 
-            this.numericUpDown10.Location = new System.Drawing.Point(46, 264);
-            this.numericUpDown10.Maximum = new decimal(new int[] {
+            this.INT_editor_ud.Location = new System.Drawing.Point(46, 264);
+            this.INT_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown10.TabIndex = 25;
+            this.INT_editor_ud.Name = "INT_editor_ud";
+            this.INT_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.INT_editor_ud.TabIndex = 25;
             // 
             // label67
             // 
@@ -2112,17 +2112,17 @@
             this.label67.TabIndex = 24;
             this.label67.Text = "INT:";
             // 
-            // numericUpDown9
+            // STR_editor_ud
             // 
-            this.numericUpDown9.Location = new System.Drawing.Point(265, 238);
-            this.numericUpDown9.Maximum = new decimal(new int[] {
+            this.STR_editor_ud.Location = new System.Drawing.Point(265, 238);
+            this.STR_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown9.TabIndex = 23;
+            this.STR_editor_ud.Name = "STR_editor_ud";
+            this.STR_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.STR_editor_ud.TabIndex = 23;
             // 
             // label66
             // 
@@ -2133,17 +2133,17 @@
             this.label66.TabIndex = 22;
             this.label66.Text = "STR:";
             // 
-            // numericUpDown8
+            // SDEF_editor_ud
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(265, 212);
-            this.numericUpDown8.Maximum = new decimal(new int[] {
+            this.SDEF_editor_ud.Location = new System.Drawing.Point(265, 212);
+            this.SDEF_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown8.TabIndex = 21;
+            this.SDEF_editor_ud.Name = "SDEF_editor_ud";
+            this.SDEF_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.SDEF_editor_ud.TabIndex = 21;
             // 
             // label65
             // 
@@ -2154,17 +2154,17 @@
             this.label65.TabIndex = 20;
             this.label65.Text = "SDEF:";
             // 
-            // numericUpDown7
+            // ATK_editor_ud
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(265, 186);
-            this.numericUpDown7.Maximum = new decimal(new int[] {
+            this.ATK_editor_ud.Location = new System.Drawing.Point(265, 186);
+            this.ATK_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown7.TabIndex = 19;
+            this.ATK_editor_ud.Name = "ATK_editor_ud";
+            this.ATK_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.ATK_editor_ud.TabIndex = 19;
             // 
             // label64
             // 
@@ -2175,17 +2175,17 @@
             this.label64.TabIndex = 18;
             this.label64.Text = "ATK:";
             // 
-            // numericUpDown6
+            // DEX_editor_ud
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(156, 238);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
+            this.DEX_editor_ud.Location = new System.Drawing.Point(156, 238);
+            this.DEX_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown6.TabIndex = 17;
+            this.DEX_editor_ud.Name = "DEX_editor_ud";
+            this.DEX_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.DEX_editor_ud.TabIndex = 17;
             // 
             // label63
             // 
@@ -2196,17 +2196,17 @@
             this.label63.TabIndex = 16;
             this.label63.Text = "DEX:";
             // 
-            // numericUpDown5
+            // CHAR_editor_ud
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(46, 238);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
+            this.CHAR_editor_ud.Location = new System.Drawing.Point(46, 238);
+            this.CHAR_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown5.TabIndex = 15;
+            this.CHAR_editor_ud.Name = "CHAR_editor_ud";
+            this.CHAR_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.CHAR_editor_ud.TabIndex = 15;
             // 
             // label62
             // 
@@ -2217,17 +2217,17 @@
             this.label62.TabIndex = 14;
             this.label62.Text = "CHAR:";
             // 
-            // numericUpDown4
+            // DEF_editor_ud
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(156, 212);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.DEF_editor_ud.Location = new System.Drawing.Point(156, 212);
+            this.DEF_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown4.TabIndex = 13;
+            this.DEF_editor_ud.Name = "DEF_editor_ud";
+            this.DEF_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.DEF_editor_ud.TabIndex = 13;
             // 
             // label61
             // 
@@ -2238,17 +2238,17 @@
             this.label61.TabIndex = 12;
             this.label61.Text = "DEF:";
             // 
-            // numericUpDown3
+            // SATK_editor_ud
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(46, 212);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.SATK_editor_ud.Location = new System.Drawing.Point(46, 212);
+            this.SATK_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown3.TabIndex = 11;
+            this.SATK_editor_ud.Name = "SATK_editor_ud";
+            this.SATK_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.SATK_editor_ud.TabIndex = 11;
             // 
             // label60
             // 
@@ -2259,17 +2259,17 @@
             this.label60.TabIndex = 10;
             this.label60.Text = "SATK:";
             // 
-            // numericUpDown2
+            // MP_editor_ud
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(156, 186);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.MP_editor_ud.Location = new System.Drawing.Point(156, 186);
+            this.MP_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown2.TabIndex = 9;
+            this.MP_editor_ud.Name = "MP_editor_ud";
+            this.MP_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.MP_editor_ud.TabIndex = 9;
             // 
             // label59
             // 
@@ -2280,17 +2280,17 @@
             this.label59.TabIndex = 8;
             this.label59.Text = "MP:";
             // 
-            // numericUpDown1
+            // HP_editor_ud
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(46, 186);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.HP_editor_ud.Location = new System.Drawing.Point(46, 186);
+            this.HP_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown1.TabIndex = 7;
+            this.HP_editor_ud.Name = "HP_editor_ud";
+            this.HP_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.HP_editor_ud.TabIndex = 7;
             // 
             // label58
             // 
@@ -2923,17 +2923,17 @@
             this.button11.Text = "-";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown17
+            // ENH_editor_ud
             // 
-            this.numericUpDown17.Location = new System.Drawing.Point(46, 316);
-            this.numericUpDown17.Maximum = new decimal(new int[] {
+            this.ENH_editor_ud.Location = new System.Drawing.Point(46, 316);
+            this.ENH_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown17.Name = "numericUpDown17";
-            this.numericUpDown17.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown17.TabIndex = 39;
+            this.ENH_editor_ud.Name = "ENH_editor_ud";
+            this.ENH_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.ENH_editor_ud.TabIndex = 39;
             // 
             // label74
             // 
@@ -2944,21 +2944,21 @@
             this.label74.TabIndex = 38;
             this.label74.Text = "ENH:";
             // 
-            // comboBox1
+            // Type_editor_cbox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Type_editor_cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Type_editor_cbox.FormattingEnabled = true;
+            this.Type_editor_cbox.Items.AddRange(new object[] {
             "Fire",
             "Earth",
             "Lightning",
             "Ice",
             "Dark",
             "Light"});
-            this.comboBox1.Location = new System.Drawing.Point(265, 316);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(59, 21);
-            this.comboBox1.TabIndex = 40;
+            this.Type_editor_cbox.Location = new System.Drawing.Point(265, 316);
+            this.Type_editor_cbox.Name = "Type_editor_cbox";
+            this.Type_editor_cbox.Size = new System.Drawing.Size(59, 21);
+            this.Type_editor_cbox.TabIndex = 40;
             // 
             // label75
             // 
@@ -2969,17 +2969,17 @@
             this.label75.TabIndex = 41;
             this.label75.Text = "Type:";
             // 
-            // numericUpDown18
+            // ENCH_editor_ud
             // 
-            this.numericUpDown18.Location = new System.Drawing.Point(156, 318);
-            this.numericUpDown18.Maximum = new decimal(new int[] {
+            this.ENCH_editor_ud.Location = new System.Drawing.Point(156, 318);
+            this.ENCH_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown18.Name = "numericUpDown18";
-            this.numericUpDown18.Size = new System.Drawing.Size(59, 20);
-            this.numericUpDown18.TabIndex = 43;
+            this.ENCH_editor_ud.Name = "ENCH_editor_ud";
+            this.ENCH_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.ENCH_editor_ud.TabIndex = 43;
             // 
             // label76
             // 
@@ -2990,35 +2990,35 @@
             this.label76.TabIndex = 44;
             this.label76.Text = "ENCH:";
             // 
-            // button12
+            // NItem_editor_btn
             // 
-            this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button12.Location = new System.Drawing.Point(6, 448);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 45;
-            this.button12.Text = "New Item";
-            this.button12.UseVisualStyleBackColor = true;
+            this.NItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.NItem_editor_btn.Location = new System.Drawing.Point(6, 448);
+            this.NItem_editor_btn.Name = "NItem_editor_btn";
+            this.NItem_editor_btn.Size = new System.Drawing.Size(75, 23);
+            this.NItem_editor_btn.TabIndex = 45;
+            this.NItem_editor_btn.Text = "New Item";
+            this.NItem_editor_btn.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // Orcalite_editor_checkb
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(9, 342);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 17);
-            this.checkBox1.TabIndex = 46;
-            this.checkBox1.Text = "Oracalcite";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Orcalite_editor_checkb.AutoSize = true;
+            this.Orcalite_editor_checkb.Location = new System.Drawing.Point(9, 342);
+            this.Orcalite_editor_checkb.Name = "Orcalite_editor_checkb";
+            this.Orcalite_editor_checkb.Size = new System.Drawing.Size(74, 17);
+            this.Orcalite_editor_checkb.TabIndex = 46;
+            this.Orcalite_editor_checkb.Text = "Oracalcite";
+            this.Orcalite_editor_checkb.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // MItem_editor_ud
             // 
-            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button13.Location = new System.Drawing.Point(87, 448);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 47;
-            this.button13.Text = "Modify  Item";
-            this.button13.UseVisualStyleBackColor = true;
+            this.MItem_editor_ud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.MItem_editor_ud.Location = new System.Drawing.Point(87, 448);
+            this.MItem_editor_ud.Name = "MItem_editor_ud";
+            this.MItem_editor_ud.Size = new System.Drawing.Size(75, 23);
+            this.MItem_editor_ud.TabIndex = 47;
+            this.MItem_editor_ud.Text = "Modify  Item";
+            this.MItem_editor_ud.UseVisualStyleBackColor = true;
             // 
             // SpellsManager_tab
             // 
@@ -3141,24 +3141,24 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_editor_up)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DICE_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SAT_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MHEAL_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HEAL_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PERC_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.INT_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.STR_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SDEF_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ATK_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DEX_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CHAR_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DEF_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SATK_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MP_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HP_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ENH_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ENCH_editor_ud)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3353,47 +3353,47 @@
         private System.Windows.Forms.TextBox Item_name_editor_tbox;
         private System.Windows.Forms.ComboBox Item_type_editor_cbox;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.NumericUpDown numericUpDown16;
+        private System.Windows.Forms.NumericUpDown ID_editor_up;
         private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.NumericUpDown numericUpDown15;
+        private System.Windows.Forms.NumericUpDown DICE_editor_ud;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.NumericUpDown numericUpDown14;
+        private System.Windows.Forms.NumericUpDown SAT_editor_ud;
         private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.NumericUpDown numericUpDown13;
+        private System.Windows.Forms.NumericUpDown MHEAL_editor_ud;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
+        private System.Windows.Forms.NumericUpDown HEAL_editor_ud;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
+        private System.Windows.Forms.NumericUpDown PERC_editor_ud;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.NumericUpDown INT_editor_ud;
         private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.NumericUpDown STR_editor_ud;
         private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown SDEF_editor_ud;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown ATK_editor_ud;
         private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown DEX_editor_ud;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown CHAR_editor_ud;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown DEF_editor_ud;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown SATK_editor_ud;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown MP_editor_ud;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown HP_editor_ud;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.NumericUpDown numericUpDown17;
+        private System.Windows.Forms.NumericUpDown ENH_editor_ud;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.NumericUpDown numericUpDown18;
+        private System.Windows.Forms.NumericUpDown ENCH_editor_ud;
         private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.ComboBox Type_editor_cbox;
+        private System.Windows.Forms.CheckBox Orcalite_editor_checkb;
+        private System.Windows.Forms.Button NItem_editor_btn;
+        private System.Windows.Forms.Button MItem_editor_ud;
         private System.Windows.Forms.TabPage SpellsManager_tab;
     }
 }
