@@ -171,9 +171,10 @@ namespace Dungons_And_Dargons
             {
                 string sql = "SELECT idPlayer," +
                     " GAMEMASTER," +
-                    " PLevel," +
+                    " PLevel, " +
                     " XP," +
                     " Age," +
+                    " Gold," +
                     " PName," +
                     " PDescription," +
                     " HPMax," +
@@ -205,27 +206,28 @@ namespace Dungons_And_Dargons
                     Level = Convert.ToInt32(rdr[2]);
                     XP = Convert.ToInt32(rdr[3]);
                     Age = Convert.ToInt32(rdr[4]);
-                    PName = Convert.ToString(rdr[5]);
-                    Description = Convert.ToString(rdr[6]);
-                    HPMax = Convert.ToInt32(rdr[7]);
-                    HP = Convert.ToInt32(rdr[8]);
-                    MPMax = Convert.ToInt32(rdr[9]);
-                    MP = Convert.ToInt32(rdr[10]);
-                    ATK = Convert.ToInt32(rdr[11]);
-                    SATK = Convert.ToInt32(rdr[12]);
-                    DEF = Convert.ToInt32(rdr[13]);
-                    SDEF = Convert.ToInt32(rdr[14]);
-                    CHARIS = Convert.ToInt32(rdr[15]);
-                    DEX = Convert.ToInt32(rdr[16]);
-                    STR = Convert.ToInt32(rdr[17]);
-                    INTEL = Convert.ToInt32(rdr[18]);
-                    PERC = Convert.ToInt32(rdr[19]);
-                    SATIE = Convert.ToInt32(rdr[20]);
-                    PlayerOwner = Convert.ToString(rdr[21]);
-                    isPlayer = Convert.ToBoolean(rdr[22]);
-                    isNPC = Convert.ToBoolean(rdr[23]);
-                    isEnemy = Convert.ToBoolean(rdr[24]);
-                    XPREQ = Convert.ToInt32(rdr[25]);
+                    Gold = Convert.ToInt32(rdr[5]);
+                    PName = Convert.ToString(rdr[6]);
+                    Description = Convert.ToString(rdr[7]);
+                    HPMax = Convert.ToInt32(rdr[8]);
+                    HP = Convert.ToInt32(rdr[9]);
+                    MPMax = Convert.ToInt32(rdr[10]);
+                    MP = Convert.ToInt32(rdr[11]);
+                    ATK = Convert.ToInt32(rdr[12]);
+                    SATK = Convert.ToInt32(rdr[13]);
+                    DEF = Convert.ToInt32(rdr[14]);
+                    SDEF = Convert.ToInt32(rdr[15]);
+                    CHARIS = Convert.ToInt32(rdr[16]);
+                    DEX = Convert.ToInt32(rdr[17]);
+                    STR = Convert.ToInt32(rdr[18]);
+                    INTEL = Convert.ToInt32(rdr[19]);
+                    PERC = Convert.ToInt32(rdr[20]);
+                    SATIE = Convert.ToInt32(rdr[21]);
+                    PlayerOwner = Convert.ToString(rdr[22]);
+                    isPlayer = Convert.ToBoolean(rdr[23]);
+                    isNPC = Convert.ToBoolean(rdr[24]);
+                    isEnemy = Convert.ToBoolean(rdr[25]);
+                    XPREQ = Convert.ToInt32(rdr[26]);
                 }
                 
                 rdr.Close();
@@ -254,6 +256,7 @@ namespace Dungons_And_Dargons
                     " PLevel = '" + Level + "'," +
                     " XP = '" + XP + "'," +
                     " Age = '" + Age + "'," +
+                    " Gold = '" + Gold + "'," +
                     " PName = '" + PName + "'," +
                     " PDescription = '" + Description + "'," +
                     " HPMax = '" + HPMax + "'," +

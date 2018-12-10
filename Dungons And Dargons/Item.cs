@@ -20,7 +20,7 @@ namespace Dungons_And_Dargons
         public string Type;
         public string IPOwner;
         public string Description;
-        public string[] Buffs = new string[11];
+        public string[] Buffs = new string[17];
         public string[] Players = new string[32];
 
         private bool Weapon = false;
@@ -45,7 +45,7 @@ namespace Dungons_And_Dargons
         {
             try
             {
-                string sql = "SELECT idItems, Name, Description, Weapon, Consumable, Helm, Maille, Gloves, Pants, Boot, Artifact, Healing, M_HP, M_MP, M_ATK, M_SATK, M_DEF, M_SDEF, M_CHAR, M_DEX, M_STR, M_INT, M_PERC FROM items WHERE idItems=" + IID;
+                string sql = "SELECT idItems, Name, Description, Weapon, Consumable, Helm, Maille, Gloves, Pants, Boot, Artifact, Healing, M_HP, M_MP, M_ATK, M_SATK, M_DEF, M_SDEF, M_CHAR, M_DEX, M_STR, M_INT, M_PERC, Tier, Grade, Enhance, Durability, MaxDurability, Dice FROM items WHERE idItems=" + IID;
                 MySqlCommand cmd = new MySqlCommand(sql, Iconn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 int count = 0;
@@ -75,6 +75,25 @@ namespace Dungons_And_Dargons
                     Buffs[8] = "STR +" + rdr[20];
                     Buffs[9] = "INT +" + rdr[21];
                     Buffs[10] = "PERC +" + rdr[22];
+
+                    if (Convert.ToInt16(rdr[23]) > 0 || Convert.ToInt16(rdr[24]) > 0)
+                    {
+                        Buffs[11] = "Tier +" + rdr[23];
+                        Buffs[12] = "Grade +" + rdr[24];
+                    }
+                    if (Convert.ToInt16(rdr[25]) > 0)
+                    {
+                        Buffs[13] = "Enhance +" + rdr[25];
+                    }
+                    if (rdr[27].GetType() != typeof(DBNull))
+                    {
+                        Buffs[14] = "Durability +" + rdr[26];
+                        Buffs[15] = "Max Durability +" + rdr[27];
+                    }
+                    if (Convert.ToInt16(rdr[28]) > 0)
+                    {
+                        Buffs[16] = "Dice D" + rdr[28];
+                    }
 
                     count++;
                 }
@@ -128,10 +147,13 @@ namespace Dungons_And_Dargons
 
                 foreach (string buff in Buffs)
                 {
-                    int buffdig = Convert.ToInt32(new String(buff.Where(Char.IsDigit).ToArray()));
-                    if (buffdig > 0)
+                    if(buff != null)
                     {
-                        Buffs_lbox.Items.Add(buff);
+                        int buffdig = Convert.ToInt32(new String(buff.Where(Char.IsDigit).ToArray()));
+                        if (buffdig > 0)
+                        {
+                            Buffs_lbox.Items.Add(buff);
+                        }
                     }
                     
                 }

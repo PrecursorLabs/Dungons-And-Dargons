@@ -155,6 +155,15 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.EditorItems_lbox = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.MItem_editor_ud = new System.Windows.Forms.Button();
+            this.Orcalite_editor_checkb = new System.Windows.Forms.CheckBox();
+            this.NItem_editor_btn = new System.Windows.Forms.Button();
+            this.label76 = new System.Windows.Forms.Label();
+            this.ENCH_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.label75 = new System.Windows.Forms.Label();
+            this.Type_editor_cbox = new System.Windows.Forms.ComboBox();
+            this.ENH_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.label74 = new System.Windows.Forms.Label();
             this.ID_editor_up = new System.Windows.Forms.NumericUpDown();
             this.label73 = new System.Windows.Forms.Label();
             this.DICE_editor_ud = new System.Windows.Forms.NumericUpDown();
@@ -193,6 +202,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.Item_name_editor_tbox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.SpellsManager_tab = new System.Windows.Forms.TabPage();
             this.CombatManager_tab = new System.Windows.Forms.TabPage();
             this.PERCP_btn = new System.Windows.Forms.Button();
             this.INTP_btn = new System.Windows.Forms.Button();
@@ -249,16 +259,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.ENH_editor_ud = new System.Windows.Forms.NumericUpDown();
-            this.label74 = new System.Windows.Forms.Label();
-            this.Type_editor_cbox = new System.Windows.Forms.ComboBox();
-            this.label75 = new System.Windows.Forms.Label();
-            this.ENCH_editor_ud = new System.Windows.Forms.NumericUpDown();
-            this.label76 = new System.Windows.Forms.Label();
-            this.NItem_editor_btn = new System.Windows.Forms.Button();
-            this.Orcalite_editor_checkb = new System.Windows.Forms.CheckBox();
-            this.MItem_editor_ud = new System.Windows.Forms.Button();
-            this.SpellsManager_tab = new System.Windows.Forms.TabPage();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
             this.GameMaster_tab.SuspendLayout();
@@ -298,6 +298,8 @@
             this.GMItemc_tab.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ENCH_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ENH_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_editor_up)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DICE_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SAT_editor_ud)).BeginInit();
@@ -314,8 +316,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SATK_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MP_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HP_editor_ud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ENH_editor_ud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ENCH_editor_ud)).BeginInit();
             this.SuspendLayout();
             // 
             // Update_timer
@@ -637,7 +637,7 @@
             this.NPCM_tab.Padding = new System.Windows.Forms.Padding(3);
             this.NPCM_tab.Size = new System.Drawing.Size(752, 483);
             this.NPCM_tab.TabIndex = 1;
-            this.NPCM_tab.Text = "NPC Manager";
+            this.NPCM_tab.Text = "Character Manager";
             this.NPCM_tab.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -1964,6 +1964,103 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor/Creator";
             // 
+            // MItem_editor_ud
+            // 
+            this.MItem_editor_ud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.MItem_editor_ud.Location = new System.Drawing.Point(87, 448);
+            this.MItem_editor_ud.Name = "MItem_editor_ud";
+            this.MItem_editor_ud.Size = new System.Drawing.Size(75, 23);
+            this.MItem_editor_ud.TabIndex = 47;
+            this.MItem_editor_ud.Text = "Modify  Item";
+            this.MItem_editor_ud.UseVisualStyleBackColor = true;
+            // 
+            // Orcalite_editor_checkb
+            // 
+            this.Orcalite_editor_checkb.AutoSize = true;
+            this.Orcalite_editor_checkb.Location = new System.Drawing.Point(9, 342);
+            this.Orcalite_editor_checkb.Name = "Orcalite_editor_checkb";
+            this.Orcalite_editor_checkb.Size = new System.Drawing.Size(74, 17);
+            this.Orcalite_editor_checkb.TabIndex = 46;
+            this.Orcalite_editor_checkb.Text = "Oracalcite";
+            this.Orcalite_editor_checkb.UseVisualStyleBackColor = true;
+            // 
+            // NItem_editor_btn
+            // 
+            this.NItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.NItem_editor_btn.Location = new System.Drawing.Point(6, 448);
+            this.NItem_editor_btn.Name = "NItem_editor_btn";
+            this.NItem_editor_btn.Size = new System.Drawing.Size(75, 23);
+            this.NItem_editor_btn.TabIndex = 45;
+            this.NItem_editor_btn.Text = "New Item";
+            this.NItem_editor_btn.UseVisualStyleBackColor = true;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(110, 320);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(40, 13);
+            this.label76.TabIndex = 44;
+            this.label76.Text = "ENCH:";
+            // 
+            // ENCH_editor_ud
+            // 
+            this.ENCH_editor_ud.Location = new System.Drawing.Point(156, 318);
+            this.ENCH_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.ENCH_editor_ud.Name = "ENCH_editor_ud";
+            this.ENCH_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.ENCH_editor_ud.TabIndex = 43;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(225, 320);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(34, 13);
+            this.label75.TabIndex = 41;
+            this.label75.Text = "Type:";
+            // 
+            // Type_editor_cbox
+            // 
+            this.Type_editor_cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Type_editor_cbox.FormattingEnabled = true;
+            this.Type_editor_cbox.Items.AddRange(new object[] {
+            "Fire",
+            "Earth",
+            "Lightning",
+            "Ice",
+            "Dark",
+            "Light"});
+            this.Type_editor_cbox.Location = new System.Drawing.Point(265, 316);
+            this.Type_editor_cbox.Name = "Type_editor_cbox";
+            this.Type_editor_cbox.Size = new System.Drawing.Size(59, 21);
+            this.Type_editor_cbox.TabIndex = 40;
+            // 
+            // ENH_editor_ud
+            // 
+            this.ENH_editor_ud.Location = new System.Drawing.Point(46, 316);
+            this.ENH_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.ENH_editor_ud.Name = "ENH_editor_ud";
+            this.ENH_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.ENH_editor_ud.TabIndex = 39;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(7, 318);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(33, 13);
+            this.label74.TabIndex = 38;
+            this.label74.Text = "ENH:";
+            // 
             // ID_editor_up
             // 
             this.ID_editor_up.Enabled = false;
@@ -2360,6 +2457,16 @@
             this.label26.Size = new System.Drawing.Size(38, 13);
             this.label26.TabIndex = 0;
             this.label26.Text = "Name:";
+            // 
+            // SpellsManager_tab
+            // 
+            this.SpellsManager_tab.Location = new System.Drawing.Point(4, 22);
+            this.SpellsManager_tab.Name = "SpellsManager_tab";
+            this.SpellsManager_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.SpellsManager_tab.Size = new System.Drawing.Size(752, 483);
+            this.SpellsManager_tab.TabIndex = 5;
+            this.SpellsManager_tab.Text = "Spells";
+            this.SpellsManager_tab.UseVisualStyleBackColor = true;
             // 
             // CombatManager_tab
             // 
@@ -2923,113 +3030,6 @@
             this.button11.Text = "-";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // ENH_editor_ud
-            // 
-            this.ENH_editor_ud.Location = new System.Drawing.Point(46, 316);
-            this.ENH_editor_ud.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.ENH_editor_ud.Name = "ENH_editor_ud";
-            this.ENH_editor_ud.Size = new System.Drawing.Size(59, 20);
-            this.ENH_editor_ud.TabIndex = 39;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(7, 318);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(33, 13);
-            this.label74.TabIndex = 38;
-            this.label74.Text = "ENH:";
-            // 
-            // Type_editor_cbox
-            // 
-            this.Type_editor_cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Type_editor_cbox.FormattingEnabled = true;
-            this.Type_editor_cbox.Items.AddRange(new object[] {
-            "Fire",
-            "Earth",
-            "Lightning",
-            "Ice",
-            "Dark",
-            "Light"});
-            this.Type_editor_cbox.Location = new System.Drawing.Point(265, 316);
-            this.Type_editor_cbox.Name = "Type_editor_cbox";
-            this.Type_editor_cbox.Size = new System.Drawing.Size(59, 21);
-            this.Type_editor_cbox.TabIndex = 40;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(225, 320);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(34, 13);
-            this.label75.TabIndex = 41;
-            this.label75.Text = "Type:";
-            // 
-            // ENCH_editor_ud
-            // 
-            this.ENCH_editor_ud.Location = new System.Drawing.Point(156, 318);
-            this.ENCH_editor_ud.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.ENCH_editor_ud.Name = "ENCH_editor_ud";
-            this.ENCH_editor_ud.Size = new System.Drawing.Size(59, 20);
-            this.ENCH_editor_ud.TabIndex = 43;
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(110, 320);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(40, 13);
-            this.label76.TabIndex = 44;
-            this.label76.Text = "ENCH:";
-            // 
-            // NItem_editor_btn
-            // 
-            this.NItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.NItem_editor_btn.Location = new System.Drawing.Point(6, 448);
-            this.NItem_editor_btn.Name = "NItem_editor_btn";
-            this.NItem_editor_btn.Size = new System.Drawing.Size(75, 23);
-            this.NItem_editor_btn.TabIndex = 45;
-            this.NItem_editor_btn.Text = "New Item";
-            this.NItem_editor_btn.UseVisualStyleBackColor = true;
-            // 
-            // Orcalite_editor_checkb
-            // 
-            this.Orcalite_editor_checkb.AutoSize = true;
-            this.Orcalite_editor_checkb.Location = new System.Drawing.Point(9, 342);
-            this.Orcalite_editor_checkb.Name = "Orcalite_editor_checkb";
-            this.Orcalite_editor_checkb.Size = new System.Drawing.Size(74, 17);
-            this.Orcalite_editor_checkb.TabIndex = 46;
-            this.Orcalite_editor_checkb.Text = "Oracalcite";
-            this.Orcalite_editor_checkb.UseVisualStyleBackColor = true;
-            // 
-            // MItem_editor_ud
-            // 
-            this.MItem_editor_ud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.MItem_editor_ud.Location = new System.Drawing.Point(87, 448);
-            this.MItem_editor_ud.Name = "MItem_editor_ud";
-            this.MItem_editor_ud.Size = new System.Drawing.Size(75, 23);
-            this.MItem_editor_ud.TabIndex = 47;
-            this.MItem_editor_ud.Text = "Modify  Item";
-            this.MItem_editor_ud.UseVisualStyleBackColor = true;
-            // 
-            // SpellsManager_tab
-            // 
-            this.SpellsManager_tab.Location = new System.Drawing.Point(4, 22);
-            this.SpellsManager_tab.Name = "SpellsManager_tab";
-            this.SpellsManager_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.SpellsManager_tab.Size = new System.Drawing.Size(752, 483);
-            this.SpellsManager_tab.TabIndex = 5;
-            this.SpellsManager_tab.Text = "Spells";
-            this.SpellsManager_tab.UseVisualStyleBackColor = true;
-            // 
             // User
             // 
             this.AccessibleName = "UserForm";
@@ -3141,6 +3141,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ENCH_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ENH_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_editor_up)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DICE_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SAT_editor_ud)).EndInit();
@@ -3157,8 +3159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SATK_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MP_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HP_editor_ud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ENH_editor_ud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ENCH_editor_ud)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
