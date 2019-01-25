@@ -1,4 +1,2 @@
 # Dungons-And-Dargons
-Nothing
-
-ur MOM IS NOTHING
+Wip client for our Dungons And Dargons Game
