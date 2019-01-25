@@ -155,11 +155,13 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.EditorItems_lbox = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.Item_Character_Cbox = new System.Windows.Forms.ComboBox();
             this.MItem_editor_ud = new System.Windows.Forms.Button();
             this.Orcalite_editor_checkb = new System.Windows.Forms.CheckBox();
             this.NItem_editor_btn = new System.Windows.Forms.Button();
             this.label76 = new System.Windows.Forms.Label();
-            this.ENCH_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.DUR_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label75 = new System.Windows.Forms.Label();
             this.Type_editor_cbox = new System.Windows.Forms.ComboBox();
             this.ENH_editor_ud = new System.Windows.Forms.NumericUpDown();
@@ -259,6 +261,12 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.label78 = new System.Windows.Forms.Label();
+            this.MDUR_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.label80 = new System.Windows.Forms.Label();
+            this.GRADE_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.TIER_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.label81 = new System.Windows.Forms.Label();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
             this.GameMaster_tab.SuspendLayout();
@@ -298,7 +306,7 @@
             this.GMItemc_tab.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ENCH_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DUR_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ENH_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_editor_up)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DICE_editor_ud)).BeginInit();
@@ -316,6 +324,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.SATK_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MP_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HP_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MDUR_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GRADE_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TIER_editor_ud)).BeginInit();
             this.SuspendLayout();
             // 
             // Update_timer
@@ -1909,11 +1920,19 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label80);
+            this.groupBox2.Controls.Add(this.GRADE_editor_ud);
+            this.groupBox2.Controls.Add(this.TIER_editor_ud);
+            this.groupBox2.Controls.Add(this.label81);
+            this.groupBox2.Controls.Add(this.label78);
+            this.groupBox2.Controls.Add(this.MDUR_editor_ud);
+            this.groupBox2.Controls.Add(this.label77);
+            this.groupBox2.Controls.Add(this.Item_Character_Cbox);
             this.groupBox2.Controls.Add(this.MItem_editor_ud);
             this.groupBox2.Controls.Add(this.Orcalite_editor_checkb);
             this.groupBox2.Controls.Add(this.NItem_editor_btn);
             this.groupBox2.Controls.Add(this.label76);
-            this.groupBox2.Controls.Add(this.ENCH_editor_ud);
+            this.groupBox2.Controls.Add(this.DUR_editor_ud);
             this.groupBox2.Controls.Add(this.label75);
             this.groupBox2.Controls.Add(this.Type_editor_cbox);
             this.groupBox2.Controls.Add(this.ENH_editor_ud);
@@ -1964,6 +1983,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor/Creator";
             // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(6, 22);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(56, 13);
+            this.label77.TabIndex = 49;
+            this.label77.Text = "Character:";
+            // 
+            // Item_Character_Cbox
+            // 
+            this.Item_Character_Cbox.FormattingEnabled = true;
+            this.Item_Character_Cbox.Location = new System.Drawing.Point(68, 19);
+            this.Item_Character_Cbox.Name = "Item_Character_Cbox";
+            this.Item_Character_Cbox.Size = new System.Drawing.Size(176, 21);
+            this.Item_Character_Cbox.TabIndex = 48;
+            // 
             // MItem_editor_ud
             // 
             this.MItem_editor_ud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1977,7 +2013,7 @@
             // Orcalite_editor_checkb
             // 
             this.Orcalite_editor_checkb.AutoSize = true;
-            this.Orcalite_editor_checkb.Location = new System.Drawing.Point(9, 342);
+            this.Orcalite_editor_checkb.Location = new System.Drawing.Point(8, 407);
             this.Orcalite_editor_checkb.Name = "Orcalite_editor_checkb";
             this.Orcalite_editor_checkb.Size = new System.Drawing.Size(74, 17);
             this.Orcalite_editor_checkb.TabIndex = 46;
@@ -1997,28 +2033,28 @@
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(110, 320);
+            this.label76.Location = new System.Drawing.Point(110, 354);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(40, 13);
+            this.label76.Size = new System.Drawing.Size(34, 13);
             this.label76.TabIndex = 44;
-            this.label76.Text = "ENCH:";
+            this.label76.Text = "DUR:";
             // 
-            // ENCH_editor_ud
+            // DUR_editor_ud
             // 
-            this.ENCH_editor_ud.Location = new System.Drawing.Point(156, 318);
-            this.ENCH_editor_ud.Maximum = new decimal(new int[] {
+            this.DUR_editor_ud.Location = new System.Drawing.Point(156, 352);
+            this.DUR_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.ENCH_editor_ud.Name = "ENCH_editor_ud";
-            this.ENCH_editor_ud.Size = new System.Drawing.Size(59, 20);
-            this.ENCH_editor_ud.TabIndex = 43;
+            this.DUR_editor_ud.Name = "DUR_editor_ud";
+            this.DUR_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.DUR_editor_ud.TabIndex = 43;
             // 
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(225, 320);
+            this.label75.Location = new System.Drawing.Point(81, 408);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(34, 13);
             this.label75.TabIndex = 41;
@@ -2035,14 +2071,14 @@
             "Ice",
             "Dark",
             "Light"});
-            this.Type_editor_cbox.Location = new System.Drawing.Point(265, 316);
+            this.Type_editor_cbox.Location = new System.Drawing.Point(121, 404);
             this.Type_editor_cbox.Name = "Type_editor_cbox";
             this.Type_editor_cbox.Size = new System.Drawing.Size(59, 21);
             this.Type_editor_cbox.TabIndex = 40;
             // 
             // ENH_editor_ud
             // 
-            this.ENH_editor_ud.Location = new System.Drawing.Point(46, 316);
+            this.ENH_editor_ud.Location = new System.Drawing.Point(46, 350);
             this.ENH_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2055,7 +2091,7 @@
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(7, 318);
+            this.label74.Location = new System.Drawing.Point(7, 352);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(33, 13);
             this.label74.TabIndex = 38;
@@ -2064,7 +2100,7 @@
             // ID_editor_up
             // 
             this.ID_editor_up.Enabled = false;
-            this.ID_editor_up.Location = new System.Drawing.Point(364, 13);
+            this.ID_editor_up.Location = new System.Drawing.Point(364, 47);
             this.ID_editor_up.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2077,7 +2113,7 @@
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(337, 15);
+            this.label73.Location = new System.Drawing.Point(337, 49);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(21, 13);
             this.label73.TabIndex = 36;
@@ -2085,7 +2121,7 @@
             // 
             // DICE_editor_ud
             // 
-            this.DICE_editor_ud.Location = new System.Drawing.Point(265, 290);
+            this.DICE_editor_ud.Location = new System.Drawing.Point(265, 324);
             this.DICE_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2098,7 +2134,7 @@
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(224, 292);
+            this.label72.Location = new System.Drawing.Point(224, 326);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(35, 13);
             this.label72.TabIndex = 34;
@@ -2106,7 +2142,7 @@
             // 
             // SAT_editor_ud
             // 
-            this.SAT_editor_ud.Location = new System.Drawing.Point(156, 290);
+            this.SAT_editor_ud.Location = new System.Drawing.Point(156, 324);
             this.SAT_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2119,7 +2155,7 @@
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(119, 292);
+            this.label71.Location = new System.Drawing.Point(119, 326);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(31, 13);
             this.label71.TabIndex = 32;
@@ -2127,7 +2163,7 @@
             // 
             // MHEAL_editor_ud
             // 
-            this.MHEAL_editor_ud.Location = new System.Drawing.Point(46, 290);
+            this.MHEAL_editor_ud.Location = new System.Drawing.Point(46, 324);
             this.MHEAL_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2140,7 +2176,7 @@
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(-3, 292);
+            this.label70.Location = new System.Drawing.Point(-3, 326);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(47, 13);
             this.label70.TabIndex = 30;
@@ -2148,7 +2184,7 @@
             // 
             // HEAL_editor_ud
             // 
-            this.HEAL_editor_ud.Location = new System.Drawing.Point(265, 266);
+            this.HEAL_editor_ud.Location = new System.Drawing.Point(265, 300);
             this.HEAL_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2161,7 +2197,7 @@
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(222, 268);
+            this.label69.Location = new System.Drawing.Point(222, 302);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(38, 13);
             this.label69.TabIndex = 28;
@@ -2169,7 +2205,7 @@
             // 
             // PERC_editor_ud
             // 
-            this.PERC_editor_ud.Location = new System.Drawing.Point(156, 264);
+            this.PERC_editor_ud.Location = new System.Drawing.Point(156, 298);
             this.PERC_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2182,7 +2218,7 @@
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(111, 266);
+            this.label68.Location = new System.Drawing.Point(111, 300);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(39, 13);
             this.label68.TabIndex = 26;
@@ -2190,7 +2226,7 @@
             // 
             // INT_editor_ud
             // 
-            this.INT_editor_ud.Location = new System.Drawing.Point(46, 264);
+            this.INT_editor_ud.Location = new System.Drawing.Point(46, 298);
             this.INT_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2203,7 +2239,7 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(12, 266);
+            this.label67.Location = new System.Drawing.Point(12, 300);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(28, 13);
             this.label67.TabIndex = 24;
@@ -2211,7 +2247,7 @@
             // 
             // STR_editor_ud
             // 
-            this.STR_editor_ud.Location = new System.Drawing.Point(265, 238);
+            this.STR_editor_ud.Location = new System.Drawing.Point(265, 272);
             this.STR_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2224,7 +2260,7 @@
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(228, 240);
+            this.label66.Location = new System.Drawing.Point(228, 274);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(32, 13);
             this.label66.TabIndex = 22;
@@ -2232,7 +2268,7 @@
             // 
             // SDEF_editor_ud
             // 
-            this.SDEF_editor_ud.Location = new System.Drawing.Point(265, 212);
+            this.SDEF_editor_ud.Location = new System.Drawing.Point(265, 246);
             this.SDEF_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2245,7 +2281,7 @@
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(221, 214);
+            this.label65.Location = new System.Drawing.Point(221, 248);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(38, 13);
             this.label65.TabIndex = 20;
@@ -2253,7 +2289,7 @@
             // 
             // ATK_editor_ud
             // 
-            this.ATK_editor_ud.Location = new System.Drawing.Point(265, 186);
+            this.ATK_editor_ud.Location = new System.Drawing.Point(265, 220);
             this.ATK_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2266,7 +2302,7 @@
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(228, 188);
+            this.label64.Location = new System.Drawing.Point(228, 222);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(31, 13);
             this.label64.TabIndex = 18;
@@ -2274,7 +2310,7 @@
             // 
             // DEX_editor_ud
             // 
-            this.DEX_editor_ud.Location = new System.Drawing.Point(156, 238);
+            this.DEX_editor_ud.Location = new System.Drawing.Point(156, 272);
             this.DEX_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2287,7 +2323,7 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(118, 240);
+            this.label63.Location = new System.Drawing.Point(118, 274);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(32, 13);
             this.label63.TabIndex = 16;
@@ -2295,7 +2331,7 @@
             // 
             // CHAR_editor_ud
             // 
-            this.CHAR_editor_ud.Location = new System.Drawing.Point(46, 238);
+            this.CHAR_editor_ud.Location = new System.Drawing.Point(46, 272);
             this.CHAR_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2308,7 +2344,7 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(0, 240);
+            this.label62.Location = new System.Drawing.Point(0, 274);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(40, 13);
             this.label62.TabIndex = 14;
@@ -2316,7 +2352,7 @@
             // 
             // DEF_editor_ud
             // 
-            this.DEF_editor_ud.Location = new System.Drawing.Point(156, 212);
+            this.DEF_editor_ud.Location = new System.Drawing.Point(156, 246);
             this.DEF_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2329,7 +2365,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(119, 214);
+            this.label61.Location = new System.Drawing.Point(119, 248);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(31, 13);
             this.label61.TabIndex = 12;
@@ -2337,7 +2373,7 @@
             // 
             // SATK_editor_ud
             // 
-            this.SATK_editor_ud.Location = new System.Drawing.Point(46, 212);
+            this.SATK_editor_ud.Location = new System.Drawing.Point(46, 246);
             this.SATK_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2350,7 +2386,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(2, 214);
+            this.label60.Location = new System.Drawing.Point(2, 248);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(38, 13);
             this.label60.TabIndex = 10;
@@ -2358,7 +2394,7 @@
             // 
             // MP_editor_ud
             // 
-            this.MP_editor_ud.Location = new System.Drawing.Point(156, 186);
+            this.MP_editor_ud.Location = new System.Drawing.Point(156, 220);
             this.MP_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2371,7 +2407,7 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(124, 188);
+            this.label59.Location = new System.Drawing.Point(124, 222);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(26, 13);
             this.label59.TabIndex = 8;
@@ -2379,7 +2415,7 @@
             // 
             // HP_editor_ud
             // 
-            this.HP_editor_ud.Location = new System.Drawing.Point(46, 186);
+            this.HP_editor_ud.Location = new System.Drawing.Point(46, 220);
             this.HP_editor_ud.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -2392,7 +2428,7 @@
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(15, 188);
+            this.label58.Location = new System.Drawing.Point(15, 222);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(25, 13);
             this.label58.TabIndex = 6;
@@ -2411,7 +2447,7 @@
             "Gloves",
             "Pants",
             "Boots"});
-            this.Item_type_editor_cbox.Location = new System.Drawing.Point(46, 157);
+            this.Item_type_editor_cbox.Location = new System.Drawing.Point(46, 191);
             this.Item_type_editor_cbox.Name = "Item_type_editor_cbox";
             this.Item_type_editor_cbox.Size = new System.Drawing.Size(104, 21);
             this.Item_type_editor_cbox.TabIndex = 5;
@@ -2419,7 +2455,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 160);
+            this.label30.Location = new System.Drawing.Point(6, 194);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(34, 13);
             this.label30.TabIndex = 4;
@@ -2427,7 +2463,7 @@
             // 
             // item_desc_editor_tbox
             // 
-            this.item_desc_editor_tbox.Location = new System.Drawing.Point(9, 58);
+            this.item_desc_editor_tbox.Location = new System.Drawing.Point(9, 92);
             this.item_desc_editor_tbox.Multiline = true;
             this.item_desc_editor_tbox.Name = "item_desc_editor_tbox";
             this.item_desc_editor_tbox.Size = new System.Drawing.Size(325, 93);
@@ -2436,7 +2472,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 42);
+            this.label27.Location = new System.Drawing.Point(6, 76);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(63, 13);
             this.label27.TabIndex = 2;
@@ -2444,7 +2480,7 @@
             // 
             // Item_name_editor_tbox
             // 
-            this.Item_name_editor_tbox.Location = new System.Drawing.Point(50, 13);
+            this.Item_name_editor_tbox.Location = new System.Drawing.Point(50, 47);
             this.Item_name_editor_tbox.Name = "Item_name_editor_tbox";
             this.Item_name_editor_tbox.Size = new System.Drawing.Size(284, 20);
             this.Item_name_editor_tbox.TabIndex = 1;
@@ -2452,7 +2488,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 16);
+            this.label26.Location = new System.Drawing.Point(6, 50);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(38, 13);
             this.label26.TabIndex = 0;
@@ -3030,6 +3066,69 @@
             this.button11.Text = "-";
             this.button11.UseVisualStyleBackColor = true;
             // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(219, 354);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(43, 13);
+            this.label78.TabIndex = 51;
+            this.label78.Text = "MDUR:";
+            // 
+            // MDUR_editor_ud
+            // 
+            this.MDUR_editor_ud.Location = new System.Drawing.Point(265, 352);
+            this.MDUR_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.MDUR_editor_ud.Name = "MDUR_editor_ud";
+            this.MDUR_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.MDUR_editor_ud.TabIndex = 50;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(107, 380);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(48, 13);
+            this.label80.TabIndex = 55;
+            this.label80.Text = "GRADE:";
+            // 
+            // GRADE_editor_ud
+            // 
+            this.GRADE_editor_ud.Location = new System.Drawing.Point(156, 378);
+            this.GRADE_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.GRADE_editor_ud.Name = "GRADE_editor_ud";
+            this.GRADE_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.GRADE_editor_ud.TabIndex = 54;
+            // 
+            // TIER_editor_ud
+            // 
+            this.TIER_editor_ud.Location = new System.Drawing.Point(46, 376);
+            this.TIER_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.TIER_editor_ud.Name = "TIER_editor_ud";
+            this.TIER_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.TIER_editor_ud.TabIndex = 53;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(7, 378);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(35, 13);
+            this.label81.TabIndex = 52;
+            this.label81.Text = "TIER:";
+            // 
             // User
             // 
             this.AccessibleName = "UserForm";
@@ -3141,7 +3240,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ENCH_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DUR_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ENH_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ID_editor_up)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DICE_editor_ud)).EndInit();
@@ -3159,6 +3258,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.SATK_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MP_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HP_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MDUR_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GRADE_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TIER_editor_ud)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3388,12 +3490,20 @@
         private System.Windows.Forms.NumericUpDown ENH_editor_ud;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.NumericUpDown ENCH_editor_ud;
+        private System.Windows.Forms.NumericUpDown DUR_editor_ud;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.ComboBox Type_editor_cbox;
         private System.Windows.Forms.CheckBox Orcalite_editor_checkb;
         private System.Windows.Forms.Button NItem_editor_btn;
         private System.Windows.Forms.Button MItem_editor_ud;
         private System.Windows.Forms.TabPage SpellsManager_tab;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.ComboBox Item_Character_Cbox;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.NumericUpDown GRADE_editor_ud;
+        private System.Windows.Forms.NumericUpDown TIER_editor_ud;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.NumericUpDown MDUR_editor_ud;
     }
 }
