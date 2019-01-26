@@ -39,8 +39,7 @@
             this.GameMaster_stabs = new System.Windows.Forms.TabControl();
             this.NPCM_tab = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Filter_Name = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
+            this.CM_UPDATE_BTN = new System.Windows.Forms.Button();
             this.label56 = new System.Windows.Forms.Label();
             this.Filter_Relation = new System.Windows.Forms.ComboBox();
             this.NPCS_lbox = new System.Windows.Forms.ListBox();
@@ -512,8 +511,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Filter_Name);
-            this.groupBox1.Controls.Add(this.label55);
+            this.groupBox1.Controls.Add(this.CM_UPDATE_BTN);
             this.groupBox1.Controls.Add(this.label56);
             this.groupBox1.Controls.Add(this.Filter_Relation);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -524,26 +522,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
             // 
-            // Filter_Name
+            // CM_UPDATE_BTN
             // 
-            this.Filter_Name.Location = new System.Drawing.Point(70, 30);
-            this.Filter_Name.Name = "Filter_Name";
-            this.Filter_Name.Size = new System.Drawing.Size(100, 20);
-            this.Filter_Name.TabIndex = 0;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(26, 33);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(38, 13);
-            this.label55.TabIndex = 111;
-            this.label55.Text = "Name:";
+            this.CM_UPDATE_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CM_UPDATE_BTN.Location = new System.Drawing.Point(6, 437);
+            this.CM_UPDATE_BTN.Name = "CM_UPDATE_BTN";
+            this.CM_UPDATE_BTN.Size = new System.Drawing.Size(75, 23);
+            this.CM_UPDATE_BTN.TabIndex = 66;
+            this.CM_UPDATE_BTN.Text = "Update";
+            this.CM_UPDATE_BTN.UseVisualStyleBackColor = true;
+            this.CM_UPDATE_BTN.Click += new System.EventHandler(this.CM_UPDATE_BTN_Click);
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(15, 59);
+            this.label56.Location = new System.Drawing.Point(24, 22);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(49, 13);
             this.label56.TabIndex = 113;
@@ -557,7 +550,7 @@
             "Enemy",
             "NPC",
             "ALL"});
-            this.Filter_Relation.Location = new System.Drawing.Point(70, 56);
+            this.Filter_Relation.Location = new System.Drawing.Point(79, 19);
             this.Filter_Relation.Name = "Filter_Relation";
             this.Filter_Relation.Size = new System.Drawing.Size(100, 21);
             this.Filter_Relation.TabIndex = 112;
@@ -4298,8 +4291,6 @@
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.ComboBox Filter_Relation;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox Filter_Name;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox NPCS_lbox;
         private System.Windows.Forms.ProgressBar MP_pbar;
@@ -4518,5 +4509,6 @@
         private System.Windows.Forms.Button MP_M_BTN;
         private System.Windows.Forms.Button MP_P_BTN;
         private System.Windows.Forms.Button Stats_Apply_BTN;
+        private System.Windows.Forms.Button CM_UPDATE_BTN;
     }
 }

@@ -1015,6 +1015,40 @@ namespace Dungons_And_Dargons
                 MessageBox.Show("Please Modify Stats");
             }
         }
+
+        private void CM_UPDATE_BTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sql = "SELECT PName, idPlayer FROM player";
+                switch (Filter_Relation.SelectedItem)
+                {
+                    case "Player":
+                        sql = "SELECT PName, idPlayer FROM player WHERE PLAYER='1'";
+                        break;
+                    case "Enemy":
+                        sql = "SELECT PName, idPlayer FROM player WHERE ENEMY='1'";
+                        break;
+                    case "NPC":
+                        sql = "SELECT PName, idPlayer FROM player WHERE NPC='1'";
+                        break;
+                    case "ALL":
+                        break;
+                }
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                NPCS_lbox.Items.Clear();
+                while (rdr.Read())
+                {
+                    NPCS_lbox.Items.Add(Convert.ToString(rdr[0]) + " (ID: <" + Convert.ToString(rdr[1]) + ">)");
+                }
+                rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 
     public class NPC {
