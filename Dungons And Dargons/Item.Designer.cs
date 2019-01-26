@@ -156,6 +156,7 @@
             this.MinimumSize = new System.Drawing.Size(247, 379);
             this.Name = "Item";
             this.Text = "Item";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Item_FormClosing);
             this.Load += new System.EventHandler(this.Item_Load);
             this.ResumeLayout(false);

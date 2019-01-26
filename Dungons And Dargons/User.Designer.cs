@@ -565,6 +565,7 @@
             this.NPCS_lbox.Name = "NPCS_lbox";
             this.NPCS_lbox.Size = new System.Drawing.Size(613, 446);
             this.NPCS_lbox.TabIndex = 114;
+            this.NPCS_lbox.SelectedIndexChanged += new System.EventHandler(this.NPCS_lbox_SelectedIndexChanged);
             // 
             // NPCC_tab
             // 
