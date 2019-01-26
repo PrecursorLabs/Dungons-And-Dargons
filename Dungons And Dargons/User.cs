@@ -313,7 +313,7 @@ namespace Dungons_And_Dargons
 
                 string sql = "INSERT INTO `items`" +
                     " (`Name`, `Description`, `Dice`, `M_HP`, `M_MP`, `M_ATK`, `M_SATK`, `M_DEF`, `M_SDEF`, `M_CHAR`, `M_DEX`, `M_STR`, `M_INT`, `M_PERC`" +
-                    ", `Weapon`, `Consumable`, `Helm`, `Maille`, `Gloves`, `Pants`, `boot`, `Artifact`, `Healing`, `Satiety`, `Equipped`, `Turns`, `Quantity`, `Enhance`, `Durability`, `MaxDurability`, `Tier`, `EType`, `ELevel`, `Oracalcite`)" +
+                    ", `Weapon`, `Consumable`, `Helm`, `Maille`, `Gloves`, `Pants`, `boot`, `Artifact`, `Healing`, `Satiety`, `Equipped`, `Turns`, `Quantity`, `Enhance`, `Durability`, `MaxDurability`, `Tier`, `Grade`, `EType`, `ELevel`, `Oracalcite`)" +
                     " VALUES" +
                     " ('" + Item_name_editor_tbox.Text + "'," +
                     " '" + item_desc_editor_tbox.Text + "'," +

@@ -4052,7 +4052,6 @@
             // 
             // Stats_Apply_BTN
             // 
-            this.Stats_Apply_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Stats_Apply_BTN.Location = new System.Drawing.Point(178, 486);
             this.Stats_Apply_BTN.Name = "Stats_Apply_BTN";
             this.Stats_Apply_BTN.Size = new System.Drawing.Size(46, 23);
