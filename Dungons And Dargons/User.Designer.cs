@@ -31,32 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.Update_timer = new System.Windows.Forms.Timer(this.components);
             this.Main_tabs = new System.Windows.Forms.TabControl();
-            this.Events_tab = new System.Windows.Forms.TabPage();
             this.Equipment_tab = new System.Windows.Forms.TabPage();
             this.Inventory_tab = new System.Windows.Forms.TabPage();
             this.Inventory_lbox = new System.Windows.Forms.ListBox();
             this.Spells_tab = new System.Windows.Forms.TabPage();
-            this.Combat_tbox = new System.Windows.Forms.TabPage();
             this.GameMaster_tab = new System.Windows.Forms.TabPage();
             this.GameMaster_stabs = new System.Windows.Forms.TabControl();
-            this.EventCon_tab = new System.Windows.Forms.TabPage();
-            this.Write_log_group = new System.Windows.Forms.GroupBox();
-            this.Log_desc_tbox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.log_des_lbox = new System.Windows.Forms.ListBox();
-            this.Message_btn = new System.Windows.Forms.Button();
-            this.Event_log_lbox = new System.Windows.Forms.ListBox();
-            this.CreateEvent_group = new System.Windows.Forms.GroupBox();
-            this.Edesc_tbox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.CeventTarget_lbox = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Etype_cbox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Estat_cbox = new System.Windows.Forms.ComboBox();
-            this.ApplyEvent_btn = new System.Windows.Forms.Button();
             this.NPCM_tab = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Filter_Name = new System.Windows.Forms.TextBox();
@@ -70,6 +50,100 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Artifact_INT = new System.Windows.Forms.CheckBox();
+            this.Weapon_INT = new System.Windows.Forms.CheckBox();
+            this.Boots_INT = new System.Windows.Forms.CheckBox();
+            this.Pants_INT = new System.Windows.Forms.CheckBox();
+            this.Gloves_INT = new System.Windows.Forms.CheckBox();
+            this.Maille_INT = new System.Windows.Forms.CheckBox();
+            this.Helm_INT = new System.Windows.Forms.CheckBox();
+            this.Artifact_STR = new System.Windows.Forms.CheckBox();
+            this.Weapon_STR = new System.Windows.Forms.CheckBox();
+            this.Boots_STR = new System.Windows.Forms.CheckBox();
+            this.Pants_STR = new System.Windows.Forms.CheckBox();
+            this.Gloves_STR = new System.Windows.Forms.CheckBox();
+            this.Maille_STR = new System.Windows.Forms.CheckBox();
+            this.Helm_STR = new System.Windows.Forms.CheckBox();
+            this.Artifact_DEX = new System.Windows.Forms.CheckBox();
+            this.Weapon_DEX = new System.Windows.Forms.CheckBox();
+            this.Boots_DEX = new System.Windows.Forms.CheckBox();
+            this.DEX = new System.Windows.Forms.CheckBox();
+            this.Gloves_DEX = new System.Windows.Forms.CheckBox();
+            this.Maille_DEX = new System.Windows.Forms.CheckBox();
+            this.Helm_DEX = new System.Windows.Forms.CheckBox();
+            this.Artifact_CHAR = new System.Windows.Forms.CheckBox();
+            this.Weapon_CHAR = new System.Windows.Forms.CheckBox();
+            this.Boots_CHAR = new System.Windows.Forms.CheckBox();
+            this.Pants_CHAR = new System.Windows.Forms.CheckBox();
+            this.Gloves_CHAR = new System.Windows.Forms.CheckBox();
+            this.Maille_CHAR = new System.Windows.Forms.CheckBox();
+            this.Helm_CHAR = new System.Windows.Forms.CheckBox();
+            this.Artifact_SDEF = new System.Windows.Forms.CheckBox();
+            this.Weapon_SDEF = new System.Windows.Forms.CheckBox();
+            this.Boots_SDEF = new System.Windows.Forms.CheckBox();
+            this.SDEF = new System.Windows.Forms.CheckBox();
+            this.Gloves_SDEF = new System.Windows.Forms.CheckBox();
+            this.Maille_SDEF = new System.Windows.Forms.CheckBox();
+            this.Helm_SDEF = new System.Windows.Forms.CheckBox();
+            this.Artifact_DEF = new System.Windows.Forms.CheckBox();
+            this.Weapon_DEF = new System.Windows.Forms.CheckBox();
+            this.Boots_DEF = new System.Windows.Forms.CheckBox();
+            this.Pants_DEF = new System.Windows.Forms.CheckBox();
+            this.Gloves_DEF = new System.Windows.Forms.CheckBox();
+            this.Helm_DEF = new System.Windows.Forms.CheckBox();
+            this.Maille_DEF = new System.Windows.Forms.CheckBox();
+            this.Artifact_SATK = new System.Windows.Forms.CheckBox();
+            this.Weapon_SATK = new System.Windows.Forms.CheckBox();
+            this.Boots_SATK = new System.Windows.Forms.CheckBox();
+            this.Pants_SATK = new System.Windows.Forms.CheckBox();
+            this.Gloves_SATK = new System.Windows.Forms.CheckBox();
+            this.Maille_SATK = new System.Windows.Forms.CheckBox();
+            this.Helm_SATK = new System.Windows.Forms.CheckBox();
+            this.Artifact_ATK = new System.Windows.Forms.CheckBox();
+            this.Weapon_ATK = new System.Windows.Forms.CheckBox();
+            this.Boots_ATK = new System.Windows.Forms.CheckBox();
+            this.Pants_ATK = new System.Windows.Forms.CheckBox();
+            this.Gloves_ATK = new System.Windows.Forms.CheckBox();
+            this.Maille_ATK = new System.Windows.Forms.CheckBox();
+            this.Helm_ATK = new System.Windows.Forms.CheckBox();
+            this.Artifact_MP = new System.Windows.Forms.CheckBox();
+            this.Weapon_MP = new System.Windows.Forms.CheckBox();
+            this.Boots_MP = new System.Windows.Forms.CheckBox();
+            this.Pants_MP = new System.Windows.Forms.CheckBox();
+            this.Gloves_MP = new System.Windows.Forms.CheckBox();
+            this.Maille_MP = new System.Windows.Forms.CheckBox();
+            this.Artifact_HP = new System.Windows.Forms.CheckBox();
+            this.Weapon_HP = new System.Windows.Forms.CheckBox();
+            this.Boots_HP = new System.Windows.Forms.CheckBox();
+            this.Pants_HP = new System.Windows.Forms.CheckBox();
+            this.Gloves_HP = new System.Windows.Forms.CheckBox();
+            this.Maille_HP = new System.Windows.Forms.CheckBox();
+            this.Helm_HP = new System.Windows.Forms.CheckBox();
+            this.Helm_MP = new System.Windows.Forms.CheckBox();
+            this.Helm_PERC = new System.Windows.Forms.CheckBox();
+            this.Maille_PERC = new System.Windows.Forms.CheckBox();
+            this.Gloves_PERC = new System.Windows.Forms.CheckBox();
+            this.Pants_PERC = new System.Windows.Forms.CheckBox();
+            this.Boots_PERC = new System.Windows.Forms.CheckBox();
+            this.Weapon_PERC = new System.Windows.Forms.CheckBox();
+            this.Artifact_PERC = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.CCOMMP_tbox = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -155,6 +229,11 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.EditorItems_lbox = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.UItem_editor_btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ELevel_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.EType_editor_tbox = new System.Windows.Forms.TextBox();
+            this.EItem_editor_btn = new System.Windows.Forms.Button();
             this.DItem_editor_btn = new System.Windows.Forms.Button();
             this.label70 = new System.Windows.Forms.Label();
             this.TURNS_editor_ud = new System.Windows.Forms.NumericUpDown();
@@ -169,12 +248,11 @@
             this.label77 = new System.Windows.Forms.Label();
             this.Item_Character_Cbox = new System.Windows.Forms.ComboBox();
             this.MItem_editor_btn = new System.Windows.Forms.Button();
-            this.Orcalite_editor_checkb = new System.Windows.Forms.CheckBox();
+            this.Oracalcite_editor_checkb = new System.Windows.Forms.CheckBox();
             this.NItem_editor_btn = new System.Windows.Forms.Button();
             this.label76 = new System.Windows.Forms.Label();
             this.DUR_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label75 = new System.Windows.Forms.Label();
-            this.Type_editor_cbox = new System.Windows.Forms.ComboBox();
             this.ENH_editor_ud = new System.Windows.Forms.NumericUpDown();
             this.label74 = new System.Windows.Forms.Label();
             this.ID_editor_up = new System.Windows.Forms.NumericUpDown();
@@ -212,18 +290,7 @@
             this.Item_name_editor_tbox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.SpellsManager_tab = new System.Windows.Forms.TabPage();
-            this.CombatManager_tab = new System.Windows.Forms.TabPage();
-            this.PERCP_btn = new System.Windows.Forms.Button();
-            this.INTP_btn = new System.Windows.Forms.Button();
-            this.STRP_btn = new System.Windows.Forms.Button();
-            this.DEXP_btn = new System.Windows.Forms.Button();
-            this.CHARP_btn = new System.Windows.Forms.Button();
-            this.SDEFP_btn = new System.Windows.Forms.Button();
-            this.DEFP_btn = new System.Windows.Forms.Button();
-            this.SATKP_btn = new System.Windows.Forms.Button();
-            this.ATKP_btn = new System.Windows.Forms.Button();
-            this.MPP_btn = new System.Windows.Forms.Button();
-            this.HPP_btn = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.MP_pbar = new System.Windows.Forms.ProgressBar();
             this.HP_pbar = new System.Windows.Forms.ProgressBar();
             this.XP_pbar = new System.Windows.Forms.ProgressBar();
@@ -257,28 +324,39 @@
             this.MP_lbl = new System.Windows.Forms.Label();
             this.HP_lbl = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.STATS_LBL = new System.Windows.Forms.Label();
+            this.ATK_P_BTN = new System.Windows.Forms.Button();
+            this.ATK_M_BTN = new System.Windows.Forms.Button();
+            this.SATK_M_BTN = new System.Windows.Forms.Button();
+            this.SATK_P_BTN = new System.Windows.Forms.Button();
+            this.DEF_M_BTN = new System.Windows.Forms.Button();
+            this.DEF_P_BTN = new System.Windows.Forms.Button();
+            this.SDEF_M_BTN = new System.Windows.Forms.Button();
+            this.SDEF_P_BTN = new System.Windows.Forms.Button();
+            this.CHAR_M_BTN = new System.Windows.Forms.Button();
+            this.CHAR_P_BTN = new System.Windows.Forms.Button();
+            this.DEX_M_BTN = new System.Windows.Forms.Button();
+            this.DEX_P_BTN = new System.Windows.Forms.Button();
+            this.STR_M_BTN = new System.Windows.Forms.Button();
+            this.STR_P_BTN = new System.Windows.Forms.Button();
+            this.INT_M_BTN = new System.Windows.Forms.Button();
+            this.INT_P_BTN = new System.Windows.Forms.Button();
+            this.PERC_M_BTN = new System.Windows.Forms.Button();
+            this.PERC_P_BTN = new System.Windows.Forms.Button();
+            this.HP_M_BTN = new System.Windows.Forms.Button();
+            this.HP_P_BTN = new System.Windows.Forms.Button();
+            this.MP_M_BTN = new System.Windows.Forms.Button();
+            this.MP_P_BTN = new System.Windows.Forms.Button();
+            this.Stats_Apply_BTN = new System.Windows.Forms.Button();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
             this.GameMaster_tab.SuspendLayout();
             this.GameMaster_stabs.SuspendLayout();
-            this.EventCon_tab.SuspendLayout();
-            this.Write_log_group.SuspendLayout();
-            this.CreateEvent_group.SuspendLayout();
             this.NPCM_tab.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.NPCC_tab.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCOXPMOD_tbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCOPERCMOD_tbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCOINTMOD_tbox)).BeginInit();
@@ -307,6 +385,7 @@
             this.GMItemc_tab.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ELevel_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TURNS_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QTY_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GRADE_editor_ud)).BeginInit();
@@ -341,27 +420,15 @@
             this.Main_tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Main_tabs.Controls.Add(this.Events_tab);
             this.Main_tabs.Controls.Add(this.Equipment_tab);
             this.Main_tabs.Controls.Add(this.Inventory_tab);
             this.Main_tabs.Controls.Add(this.Spells_tab);
-            this.Main_tabs.Controls.Add(this.Combat_tbox);
             this.Main_tabs.Controls.Add(this.GameMaster_tab);
             this.Main_tabs.Location = new System.Drawing.Point(222, 10);
             this.Main_tabs.Name = "Main_tabs";
             this.Main_tabs.SelectedIndex = 0;
-            this.Main_tabs.Size = new System.Drawing.Size(774, 541);
+            this.Main_tabs.Size = new System.Drawing.Size(835, 530);
             this.Main_tabs.TabIndex = 107;
-            // 
-            // Events_tab
-            // 
-            this.Events_tab.Location = new System.Drawing.Point(4, 22);
-            this.Events_tab.Name = "Events_tab";
-            this.Events_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Events_tab.Size = new System.Drawing.Size(766, 515);
-            this.Events_tab.TabIndex = 0;
-            this.Events_tab.Text = "Events";
-            this.Events_tab.UseVisualStyleBackColor = true;
             // 
             // Equipment_tab
             // 
@@ -370,7 +437,7 @@
             this.Equipment_tab.Name = "Equipment_tab";
             this.Equipment_tab.Padding = new System.Windows.Forms.Padding(3);
             this.Equipment_tab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Equipment_tab.Size = new System.Drawing.Size(766, 515);
+            this.Equipment_tab.Size = new System.Drawing.Size(827, 504);
             this.Equipment_tab.TabIndex = 1;
             this.Equipment_tab.Text = "Equipment";
             this.Equipment_tab.UseVisualStyleBackColor = true;
@@ -381,7 +448,7 @@
             this.Inventory_tab.Location = new System.Drawing.Point(4, 22);
             this.Inventory_tab.Name = "Inventory_tab";
             this.Inventory_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Inventory_tab.Size = new System.Drawing.Size(766, 515);
+            this.Inventory_tab.Size = new System.Drawing.Size(827, 504);
             this.Inventory_tab.TabIndex = 2;
             this.Inventory_tab.Text = "Inventory";
             this.Inventory_tab.UseVisualStyleBackColor = true;
@@ -392,7 +459,7 @@
             this.Inventory_lbox.FormattingEnabled = true;
             this.Inventory_lbox.Location = new System.Drawing.Point(3, 3);
             this.Inventory_lbox.Name = "Inventory_lbox";
-            this.Inventory_lbox.Size = new System.Drawing.Size(760, 509);
+            this.Inventory_lbox.Size = new System.Drawing.Size(821, 498);
             this.Inventory_lbox.TabIndex = 0;
             this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
             // 
@@ -401,20 +468,10 @@
             this.Spells_tab.Location = new System.Drawing.Point(4, 22);
             this.Spells_tab.Name = "Spells_tab";
             this.Spells_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Spells_tab.Size = new System.Drawing.Size(766, 515);
+            this.Spells_tab.Size = new System.Drawing.Size(827, 504);
             this.Spells_tab.TabIndex = 3;
             this.Spells_tab.Text = "Spells";
             this.Spells_tab.UseVisualStyleBackColor = true;
-            // 
-            // Combat_tbox
-            // 
-            this.Combat_tbox.Location = new System.Drawing.Point(4, 22);
-            this.Combat_tbox.Name = "Combat_tbox";
-            this.Combat_tbox.Padding = new System.Windows.Forms.Padding(3);
-            this.Combat_tbox.Size = new System.Drawing.Size(766, 515);
-            this.Combat_tbox.TabIndex = 5;
-            this.Combat_tbox.Text = "Combat";
-            this.Combat_tbox.UseVisualStyleBackColor = true;
             // 
             // GameMaster_tab
             // 
@@ -422,223 +479,24 @@
             this.GameMaster_tab.Location = new System.Drawing.Point(4, 22);
             this.GameMaster_tab.Name = "GameMaster_tab";
             this.GameMaster_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.GameMaster_tab.Size = new System.Drawing.Size(766, 515);
+            this.GameMaster_tab.Size = new System.Drawing.Size(827, 504);
             this.GameMaster_tab.TabIndex = 4;
             this.GameMaster_tab.Text = "GameMaster";
             this.GameMaster_tab.UseVisualStyleBackColor = true;
             // 
             // GameMaster_stabs
             // 
-            this.GameMaster_stabs.Controls.Add(this.EventCon_tab);
             this.GameMaster_stabs.Controls.Add(this.NPCM_tab);
             this.GameMaster_stabs.Controls.Add(this.NPCC_tab);
             this.GameMaster_stabs.Controls.Add(this.GMItemc_tab);
             this.GameMaster_stabs.Controls.Add(this.SpellsManager_tab);
-            this.GameMaster_stabs.Controls.Add(this.CombatManager_tab);
+            this.GameMaster_stabs.Controls.Add(this.tabPage1);
             this.GameMaster_stabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GameMaster_stabs.Location = new System.Drawing.Point(3, 3);
             this.GameMaster_stabs.Name = "GameMaster_stabs";
             this.GameMaster_stabs.SelectedIndex = 0;
-            this.GameMaster_stabs.Size = new System.Drawing.Size(760, 509);
+            this.GameMaster_stabs.Size = new System.Drawing.Size(821, 498);
             this.GameMaster_stabs.TabIndex = 0;
-            // 
-            // EventCon_tab
-            // 
-            this.EventCon_tab.Controls.Add(this.Write_log_group);
-            this.EventCon_tab.Controls.Add(this.Event_log_lbox);
-            this.EventCon_tab.Controls.Add(this.CreateEvent_group);
-            this.EventCon_tab.Location = new System.Drawing.Point(4, 22);
-            this.EventCon_tab.Name = "EventCon_tab";
-            this.EventCon_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.EventCon_tab.Size = new System.Drawing.Size(752, 483);
-            this.EventCon_tab.TabIndex = 0;
-            this.EventCon_tab.Text = "Event";
-            this.EventCon_tab.UseVisualStyleBackColor = true;
-            // 
-            // Write_log_group
-            // 
-            this.Write_log_group.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Write_log_group.Controls.Add(this.Log_desc_tbox);
-            this.Write_log_group.Controls.Add(this.label5);
-            this.Write_log_group.Controls.Add(this.label6);
-            this.Write_log_group.Controls.Add(this.log_des_lbox);
-            this.Write_log_group.Controls.Add(this.Message_btn);
-            this.Write_log_group.Location = new System.Drawing.Point(3, 237);
-            this.Write_log_group.Name = "Write_log_group";
-            this.Write_log_group.Size = new System.Drawing.Size(365, 240);
-            this.Write_log_group.TabIndex = 117;
-            this.Write_log_group.TabStop = false;
-            this.Write_log_group.Text = "Write Log";
-            // 
-            // Log_desc_tbox
-            // 
-            this.Log_desc_tbox.Location = new System.Drawing.Point(47, 16);
-            this.Log_desc_tbox.Multiline = true;
-            this.Log_desc_tbox.Name = "Log_desc_tbox";
-            this.Log_desc_tbox.Size = new System.Drawing.Size(308, 65);
-            this.Log_desc_tbox.TabIndex = 116;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 115;
-            this.label5.Text = "Desc:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 114;
-            this.label6.Text = "Target:";
-            // 
-            // log_des_lbox
-            // 
-            this.log_des_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.log_des_lbox.FormattingEnabled = true;
-            this.log_des_lbox.Location = new System.Drawing.Point(46, 90);
-            this.log_des_lbox.Name = "log_des_lbox";
-            this.log_des_lbox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.log_des_lbox.Size = new System.Drawing.Size(119, 69);
-            this.log_des_lbox.TabIndex = 2;
-            // 
-            // Message_btn
-            // 
-            this.Message_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Message_btn.Location = new System.Drawing.Point(280, 211);
-            this.Message_btn.Name = "Message_btn";
-            this.Message_btn.Size = new System.Drawing.Size(75, 23);
-            this.Message_btn.TabIndex = 0;
-            this.Message_btn.Text = "Send";
-            this.Message_btn.UseVisualStyleBackColor = true;
-            // 
-            // Event_log_lbox
-            // 
-            this.Event_log_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Event_log_lbox.FormattingEnabled = true;
-            this.Event_log_lbox.Location = new System.Drawing.Point(374, 6);
-            this.Event_log_lbox.Name = "Event_log_lbox";
-            this.Event_log_lbox.Size = new System.Drawing.Size(372, 628);
-            this.Event_log_lbox.TabIndex = 1;
-            // 
-            // CreateEvent_group
-            // 
-            this.CreateEvent_group.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.CreateEvent_group.Controls.Add(this.Edesc_tbox);
-            this.CreateEvent_group.Controls.Add(this.label3);
-            this.CreateEvent_group.Controls.Add(this.label4);
-            this.CreateEvent_group.Controls.Add(this.CeventTarget_lbox);
-            this.CreateEvent_group.Controls.Add(this.label2);
-            this.CreateEvent_group.Controls.Add(this.Etype_cbox);
-            this.CreateEvent_group.Controls.Add(this.label1);
-            this.CreateEvent_group.Controls.Add(this.Estat_cbox);
-            this.CreateEvent_group.Controls.Add(this.ApplyEvent_btn);
-            this.CreateEvent_group.Location = new System.Drawing.Point(3, 6);
-            this.CreateEvent_group.Name = "CreateEvent_group";
-            this.CreateEvent_group.Size = new System.Drawing.Size(365, 225);
-            this.CreateEvent_group.TabIndex = 0;
-            this.CreateEvent_group.TabStop = false;
-            this.CreateEvent_group.Text = "CreateEvent";
-            // 
-            // Edesc_tbox
-            // 
-            this.Edesc_tbox.Location = new System.Drawing.Point(51, 76);
-            this.Edesc_tbox.Multiline = true;
-            this.Edesc_tbox.Name = "Edesc_tbox";
-            this.Edesc_tbox.Size = new System.Drawing.Size(308, 65);
-            this.Edesc_tbox.TabIndex = 116;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 115;
-            this.label3.Text = "Desc:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
-            this.label4.TabIndex = 114;
-            this.label4.Text = "Target:";
-            // 
-            // CeventTarget_lbox
-            // 
-            this.CeventTarget_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CeventTarget_lbox.FormattingEnabled = true;
-            this.CeventTarget_lbox.Location = new System.Drawing.Point(50, 151);
-            this.CeventTarget_lbox.Name = "CeventTarget_lbox";
-            this.CeventTarget_lbox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.CeventTarget_lbox.Size = new System.Drawing.Size(119, 43);
-            this.CeventTarget_lbox.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 111;
-            this.label2.Text = "Type:";
-            // 
-            // Etype_cbox
-            // 
-            this.Etype_cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Etype_cbox.FormattingEnabled = true;
-            this.Etype_cbox.Items.AddRange(new object[] {
-            "Individual",
-            "General"});
-            this.Etype_cbox.Location = new System.Drawing.Point(50, 49);
-            this.Etype_cbox.Name = "Etype_cbox";
-            this.Etype_cbox.Size = new System.Drawing.Size(121, 21);
-            this.Etype_cbox.TabIndex = 110;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 109;
-            this.label1.Text = "Stat:";
-            // 
-            // Estat_cbox
-            // 
-            this.Estat_cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Estat_cbox.FormattingEnabled = true;
-            this.Estat_cbox.Items.AddRange(new object[] {
-            "CHAR",
-            "DEX",
-            "STR",
-            "INT",
-            "PERC"});
-            this.Estat_cbox.Location = new System.Drawing.Point(50, 25);
-            this.Estat_cbox.Name = "Estat_cbox";
-            this.Estat_cbox.Size = new System.Drawing.Size(121, 21);
-            this.Estat_cbox.TabIndex = 1;
-            // 
-            // ApplyEvent_btn
-            // 
-            this.ApplyEvent_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ApplyEvent_btn.Location = new System.Drawing.Point(284, 196);
-            this.ApplyEvent_btn.Name = "ApplyEvent_btn";
-            this.ApplyEvent_btn.Size = new System.Drawing.Size(75, 23);
-            this.ApplyEvent_btn.TabIndex = 0;
-            this.ApplyEvent_btn.Text = "Send";
-            this.ApplyEvent_btn.UseVisualStyleBackColor = true;
             // 
             // NPCM_tab
             // 
@@ -647,7 +505,7 @@
             this.NPCM_tab.Location = new System.Drawing.Point(4, 22);
             this.NPCM_tab.Name = "NPCM_tab";
             this.NPCM_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.NPCM_tab.Size = new System.Drawing.Size(752, 483);
+            this.NPCM_tab.Size = new System.Drawing.Size(813, 472);
             this.NPCM_tab.TabIndex = 1;
             this.NPCM_tab.Text = "Character Manager";
             this.NPCM_tab.UseVisualStyleBackColor = true;
@@ -661,7 +519,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(185, 477);
+            this.groupBox1.Size = new System.Drawing.Size(185, 466);
             this.groupBox1.TabIndex = 115;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
@@ -712,7 +570,7 @@
             this.NPCS_lbox.FormattingEnabled = true;
             this.NPCS_lbox.Location = new System.Drawing.Point(194, 6);
             this.NPCS_lbox.Name = "NPCS_lbox";
-            this.NPCS_lbox.Size = new System.Drawing.Size(552, 459);
+            this.NPCS_lbox.Size = new System.Drawing.Size(613, 446);
             this.NPCS_lbox.TabIndex = 114;
             // 
             // NPCC_tab
@@ -727,7 +585,7 @@
             this.NPCC_tab.Location = new System.Drawing.Point(4, 22);
             this.NPCC_tab.Name = "NPCC_tab";
             this.NPCC_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.NPCC_tab.Size = new System.Drawing.Size(752, 483);
+            this.NPCC_tab.Size = new System.Drawing.Size(813, 472);
             this.NPCC_tab.TabIndex = 2;
             this.NPCC_tab.Text = "NPC Creator";
             this.NPCC_tab.UseVisualStyleBackColor = true;
@@ -735,7 +593,7 @@
             // UPLOAD_btn
             // 
             this.UPLOAD_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UPLOAD_btn.Location = new System.Drawing.Point(87, 720);
+            this.UPLOAD_btn.Location = new System.Drawing.Point(87, 709);
             this.UPLOAD_btn.Name = "UPLOAD_btn";
             this.UPLOAD_btn.Size = new System.Drawing.Size(75, 23);
             this.UPLOAD_btn.TabIndex = 16;
@@ -745,7 +603,7 @@
             // Roll_btn
             // 
             this.Roll_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Roll_btn.Location = new System.Drawing.Point(6, 720);
+            this.Roll_btn.Location = new System.Drawing.Point(6, 709);
             this.Roll_btn.Name = "Roll_btn";
             this.Roll_btn.Size = new System.Drawing.Size(75, 23);
             this.Roll_btn.TabIndex = 15;
@@ -772,9 +630,20 @@
             // 
             // panel2
             // 
-            this.panel2.AutoSize = true;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Controls.Add(this.textBox9);
+            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.CCOMMP_tbox);
             this.panel2.Controls.Add(this.label33);
             this.panel2.Controls.Add(this.label32);
@@ -822,10 +691,969 @@
             this.panel2.Controls.Add(this.label38);
             this.panel2.Controls.Add(this.label39);
             this.panel2.Controls.Add(this.label40);
-            this.panel2.Location = new System.Drawing.Point(365, 19);
+            this.panel2.Location = new System.Drawing.Point(347, 19);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(334, 364);
+            this.panel2.Size = new System.Drawing.Size(460, 364);
             this.panel2.TabIndex = 11;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 7;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.Controls.Add(this.label82, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label79, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_INT, 6, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_INT, 5, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_INT, 4, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_INT, 3, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_INT, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_INT, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_INT, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_STR, 6, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_STR, 5, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_STR, 4, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_STR, 3, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_STR, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_STR, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_STR, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEX, 6, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_DEX, 5, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_DEX, 4, 8);
+            this.tableLayoutPanel1.Controls.Add(this.DEX, 3, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEX, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_DEX, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_DEX, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_CHAR, 6, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_CHAR, 5, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_CHAR, 4, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_CHAR, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_CHAR, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_CHAR, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_CHAR, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_SDEF, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_SDEF, 5, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_SDEF, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.SDEF, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_SDEF, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_SDEF, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_SDEF, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEF, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_DEF, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_DEF, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_DEF, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEF, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_DEF, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_DEF, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_SATK, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_SATK, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_SATK, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_SATK, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_SATK, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_SATK, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_SATK, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_ATK, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_ATK, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_ATK, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_ATK, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_ATK, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_ATK, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_ATK, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_MP, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_MP, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_MP, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_MP, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_MP, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_MP, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_HP, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_HP, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_HP, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_HP, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_HP, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_HP, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_HP, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_MP, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_PERC, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_PERC, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_PERC, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_PERC, 3, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_PERC, 4, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Weapon_PERC, 5, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_PERC, 6, 11);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(299, 29);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 12;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(158, 318);
+            this.tableLayoutPanel1.TabIndex = 89;
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Location = new System.Drawing.Point(135, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(15, 15);
+            this.label82.TabIndex = 171;
+            this.label82.Text = "A";
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(113, 0);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(16, 15);
+            this.label79.TabIndex = 170;
+            this.label79.Text = "W";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(91, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(16, 15);
+            this.label6.TabIndex = 169;
+            this.label6.Text = "B";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(69, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 15);
+            this.label5.TabIndex = 168;
+            this.label5.Text = "P";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(47, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 15);
+            this.label4.TabIndex = 167;
+            this.label4.Text = "G";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 15);
+            this.label3.TabIndex = 166;
+            this.label3.Text = "M";
+            // 
+            // Artifact_INT
+            // 
+            this.Artifact_INT.AutoSize = true;
+            this.Artifact_INT.Location = new System.Drawing.Point(135, 263);
+            this.Artifact_INT.Name = "Artifact_INT";
+            this.Artifact_INT.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_INT.TabIndex = 164;
+            this.Artifact_INT.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_INT
+            // 
+            this.Weapon_INT.AutoSize = true;
+            this.Weapon_INT.Location = new System.Drawing.Point(113, 263);
+            this.Weapon_INT.Name = "Weapon_INT";
+            this.Weapon_INT.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_INT.TabIndex = 163;
+            this.Weapon_INT.UseVisualStyleBackColor = true;
+            // 
+            // Boots_INT
+            // 
+            this.Boots_INT.AutoSize = true;
+            this.Boots_INT.Location = new System.Drawing.Point(91, 263);
+            this.Boots_INT.Name = "Boots_INT";
+            this.Boots_INT.Size = new System.Drawing.Size(15, 14);
+            this.Boots_INT.TabIndex = 162;
+            this.Boots_INT.UseVisualStyleBackColor = true;
+            // 
+            // Pants_INT
+            // 
+            this.Pants_INT.AutoSize = true;
+            this.Pants_INT.Location = new System.Drawing.Point(69, 263);
+            this.Pants_INT.Name = "Pants_INT";
+            this.Pants_INT.Size = new System.Drawing.Size(15, 14);
+            this.Pants_INT.TabIndex = 161;
+            this.Pants_INT.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_INT
+            // 
+            this.Gloves_INT.AutoSize = true;
+            this.Gloves_INT.Location = new System.Drawing.Point(47, 263);
+            this.Gloves_INT.Name = "Gloves_INT";
+            this.Gloves_INT.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_INT.TabIndex = 160;
+            this.Gloves_INT.UseVisualStyleBackColor = true;
+            // 
+            // Maille_INT
+            // 
+            this.Maille_INT.AutoSize = true;
+            this.Maille_INT.Location = new System.Drawing.Point(25, 263);
+            this.Maille_INT.Name = "Maille_INT";
+            this.Maille_INT.Size = new System.Drawing.Size(15, 14);
+            this.Maille_INT.TabIndex = 159;
+            this.Maille_INT.UseVisualStyleBackColor = true;
+            // 
+            // Helm_INT
+            // 
+            this.Helm_INT.AutoSize = true;
+            this.Helm_INT.Location = new System.Drawing.Point(3, 263);
+            this.Helm_INT.Name = "Helm_INT";
+            this.Helm_INT.Size = new System.Drawing.Size(15, 14);
+            this.Helm_INT.TabIndex = 158;
+            this.Helm_INT.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_STR
+            // 
+            this.Artifact_STR.AutoSize = true;
+            this.Artifact_STR.Location = new System.Drawing.Point(135, 237);
+            this.Artifact_STR.Name = "Artifact_STR";
+            this.Artifact_STR.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_STR.TabIndex = 157;
+            this.Artifact_STR.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_STR
+            // 
+            this.Weapon_STR.AutoSize = true;
+            this.Weapon_STR.Location = new System.Drawing.Point(113, 237);
+            this.Weapon_STR.Name = "Weapon_STR";
+            this.Weapon_STR.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_STR.TabIndex = 156;
+            this.Weapon_STR.UseVisualStyleBackColor = true;
+            // 
+            // Boots_STR
+            // 
+            this.Boots_STR.AutoSize = true;
+            this.Boots_STR.Location = new System.Drawing.Point(91, 237);
+            this.Boots_STR.Name = "Boots_STR";
+            this.Boots_STR.Size = new System.Drawing.Size(15, 14);
+            this.Boots_STR.TabIndex = 155;
+            this.Boots_STR.UseVisualStyleBackColor = true;
+            // 
+            // Pants_STR
+            // 
+            this.Pants_STR.AutoSize = true;
+            this.Pants_STR.Location = new System.Drawing.Point(69, 237);
+            this.Pants_STR.Name = "Pants_STR";
+            this.Pants_STR.Size = new System.Drawing.Size(15, 14);
+            this.Pants_STR.TabIndex = 154;
+            this.Pants_STR.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_STR
+            // 
+            this.Gloves_STR.AutoSize = true;
+            this.Gloves_STR.Location = new System.Drawing.Point(47, 237);
+            this.Gloves_STR.Name = "Gloves_STR";
+            this.Gloves_STR.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_STR.TabIndex = 153;
+            this.Gloves_STR.UseVisualStyleBackColor = true;
+            // 
+            // Maille_STR
+            // 
+            this.Maille_STR.AutoSize = true;
+            this.Maille_STR.Location = new System.Drawing.Point(25, 237);
+            this.Maille_STR.Name = "Maille_STR";
+            this.Maille_STR.Size = new System.Drawing.Size(15, 14);
+            this.Maille_STR.TabIndex = 152;
+            this.Maille_STR.UseVisualStyleBackColor = true;
+            // 
+            // Helm_STR
+            // 
+            this.Helm_STR.AutoSize = true;
+            this.Helm_STR.Location = new System.Drawing.Point(3, 237);
+            this.Helm_STR.Name = "Helm_STR";
+            this.Helm_STR.Size = new System.Drawing.Size(15, 14);
+            this.Helm_STR.TabIndex = 151;
+            this.Helm_STR.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_DEX
+            // 
+            this.Artifact_DEX.AutoSize = true;
+            this.Artifact_DEX.Location = new System.Drawing.Point(135, 211);
+            this.Artifact_DEX.Name = "Artifact_DEX";
+            this.Artifact_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_DEX.TabIndex = 150;
+            this.Artifact_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_DEX
+            // 
+            this.Weapon_DEX.AutoSize = true;
+            this.Weapon_DEX.Location = new System.Drawing.Point(113, 211);
+            this.Weapon_DEX.Name = "Weapon_DEX";
+            this.Weapon_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_DEX.TabIndex = 149;
+            this.Weapon_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Boots_DEX
+            // 
+            this.Boots_DEX.AutoSize = true;
+            this.Boots_DEX.Location = new System.Drawing.Point(91, 211);
+            this.Boots_DEX.Name = "Boots_DEX";
+            this.Boots_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Boots_DEX.TabIndex = 148;
+            this.Boots_DEX.UseVisualStyleBackColor = true;
+            // 
+            // DEX
+            // 
+            this.DEX.AutoSize = true;
+            this.DEX.Location = new System.Drawing.Point(69, 211);
+            this.DEX.Name = "DEX";
+            this.DEX.Size = new System.Drawing.Size(15, 14);
+            this.DEX.TabIndex = 147;
+            this.DEX.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_DEX
+            // 
+            this.Gloves_DEX.AutoSize = true;
+            this.Gloves_DEX.Location = new System.Drawing.Point(47, 211);
+            this.Gloves_DEX.Name = "Gloves_DEX";
+            this.Gloves_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_DEX.TabIndex = 146;
+            this.Gloves_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Maille_DEX
+            // 
+            this.Maille_DEX.AutoSize = true;
+            this.Maille_DEX.Location = new System.Drawing.Point(25, 211);
+            this.Maille_DEX.Name = "Maille_DEX";
+            this.Maille_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Maille_DEX.TabIndex = 145;
+            this.Maille_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Helm_DEX
+            // 
+            this.Helm_DEX.AutoSize = true;
+            this.Helm_DEX.Location = new System.Drawing.Point(3, 211);
+            this.Helm_DEX.Name = "Helm_DEX";
+            this.Helm_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Helm_DEX.TabIndex = 144;
+            this.Helm_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_CHAR
+            // 
+            this.Artifact_CHAR.AutoSize = true;
+            this.Artifact_CHAR.Location = new System.Drawing.Point(135, 185);
+            this.Artifact_CHAR.Name = "Artifact_CHAR";
+            this.Artifact_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_CHAR.TabIndex = 143;
+            this.Artifact_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_CHAR
+            // 
+            this.Weapon_CHAR.AutoSize = true;
+            this.Weapon_CHAR.Location = new System.Drawing.Point(113, 185);
+            this.Weapon_CHAR.Name = "Weapon_CHAR";
+            this.Weapon_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_CHAR.TabIndex = 142;
+            this.Weapon_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Boots_CHAR
+            // 
+            this.Boots_CHAR.AutoSize = true;
+            this.Boots_CHAR.Location = new System.Drawing.Point(91, 185);
+            this.Boots_CHAR.Name = "Boots_CHAR";
+            this.Boots_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Boots_CHAR.TabIndex = 141;
+            this.Boots_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Pants_CHAR
+            // 
+            this.Pants_CHAR.AutoSize = true;
+            this.Pants_CHAR.Location = new System.Drawing.Point(69, 185);
+            this.Pants_CHAR.Name = "Pants_CHAR";
+            this.Pants_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Pants_CHAR.TabIndex = 140;
+            this.Pants_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_CHAR
+            // 
+            this.Gloves_CHAR.AutoSize = true;
+            this.Gloves_CHAR.Location = new System.Drawing.Point(47, 185);
+            this.Gloves_CHAR.Name = "Gloves_CHAR";
+            this.Gloves_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_CHAR.TabIndex = 139;
+            this.Gloves_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Maille_CHAR
+            // 
+            this.Maille_CHAR.AutoSize = true;
+            this.Maille_CHAR.Location = new System.Drawing.Point(25, 185);
+            this.Maille_CHAR.Name = "Maille_CHAR";
+            this.Maille_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Maille_CHAR.TabIndex = 138;
+            this.Maille_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Helm_CHAR
+            // 
+            this.Helm_CHAR.AutoSize = true;
+            this.Helm_CHAR.Location = new System.Drawing.Point(3, 185);
+            this.Helm_CHAR.Name = "Helm_CHAR";
+            this.Helm_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Helm_CHAR.TabIndex = 137;
+            this.Helm_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_SDEF
+            // 
+            this.Artifact_SDEF.AutoSize = true;
+            this.Artifact_SDEF.Location = new System.Drawing.Point(135, 159);
+            this.Artifact_SDEF.Name = "Artifact_SDEF";
+            this.Artifact_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_SDEF.TabIndex = 136;
+            this.Artifact_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_SDEF
+            // 
+            this.Weapon_SDEF.AutoSize = true;
+            this.Weapon_SDEF.Location = new System.Drawing.Point(113, 159);
+            this.Weapon_SDEF.Name = "Weapon_SDEF";
+            this.Weapon_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_SDEF.TabIndex = 135;
+            this.Weapon_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Boots_SDEF
+            // 
+            this.Boots_SDEF.AutoSize = true;
+            this.Boots_SDEF.Location = new System.Drawing.Point(91, 159);
+            this.Boots_SDEF.Name = "Boots_SDEF";
+            this.Boots_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Boots_SDEF.TabIndex = 134;
+            this.Boots_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // SDEF
+            // 
+            this.SDEF.AutoSize = true;
+            this.SDEF.Location = new System.Drawing.Point(69, 159);
+            this.SDEF.Name = "SDEF";
+            this.SDEF.Size = new System.Drawing.Size(15, 14);
+            this.SDEF.TabIndex = 133;
+            this.SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_SDEF
+            // 
+            this.Gloves_SDEF.AutoSize = true;
+            this.Gloves_SDEF.Location = new System.Drawing.Point(47, 159);
+            this.Gloves_SDEF.Name = "Gloves_SDEF";
+            this.Gloves_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_SDEF.TabIndex = 132;
+            this.Gloves_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Maille_SDEF
+            // 
+            this.Maille_SDEF.AutoSize = true;
+            this.Maille_SDEF.Location = new System.Drawing.Point(25, 159);
+            this.Maille_SDEF.Name = "Maille_SDEF";
+            this.Maille_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Maille_SDEF.TabIndex = 131;
+            this.Maille_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Helm_SDEF
+            // 
+            this.Helm_SDEF.AutoSize = true;
+            this.Helm_SDEF.Location = new System.Drawing.Point(3, 159);
+            this.Helm_SDEF.Name = "Helm_SDEF";
+            this.Helm_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Helm_SDEF.TabIndex = 130;
+            this.Helm_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_DEF
+            // 
+            this.Artifact_DEF.AutoSize = true;
+            this.Artifact_DEF.Location = new System.Drawing.Point(135, 133);
+            this.Artifact_DEF.Name = "Artifact_DEF";
+            this.Artifact_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_DEF.TabIndex = 129;
+            this.Artifact_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_DEF
+            // 
+            this.Weapon_DEF.AutoSize = true;
+            this.Weapon_DEF.Location = new System.Drawing.Point(113, 133);
+            this.Weapon_DEF.Name = "Weapon_DEF";
+            this.Weapon_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_DEF.TabIndex = 128;
+            this.Weapon_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Boots_DEF
+            // 
+            this.Boots_DEF.AutoSize = true;
+            this.Boots_DEF.Location = new System.Drawing.Point(91, 133);
+            this.Boots_DEF.Name = "Boots_DEF";
+            this.Boots_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Boots_DEF.TabIndex = 127;
+            this.Boots_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Pants_DEF
+            // 
+            this.Pants_DEF.AutoSize = true;
+            this.Pants_DEF.Location = new System.Drawing.Point(69, 133);
+            this.Pants_DEF.Name = "Pants_DEF";
+            this.Pants_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Pants_DEF.TabIndex = 126;
+            this.Pants_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_DEF
+            // 
+            this.Gloves_DEF.AutoSize = true;
+            this.Gloves_DEF.Location = new System.Drawing.Point(47, 133);
+            this.Gloves_DEF.Name = "Gloves_DEF";
+            this.Gloves_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_DEF.TabIndex = 125;
+            this.Gloves_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Helm_DEF
+            // 
+            this.Helm_DEF.AutoSize = true;
+            this.Helm_DEF.Location = new System.Drawing.Point(3, 133);
+            this.Helm_DEF.Name = "Helm_DEF";
+            this.Helm_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Helm_DEF.TabIndex = 124;
+            this.Helm_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Maille_DEF
+            // 
+            this.Maille_DEF.AutoSize = true;
+            this.Maille_DEF.Location = new System.Drawing.Point(25, 133);
+            this.Maille_DEF.Name = "Maille_DEF";
+            this.Maille_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Maille_DEF.TabIndex = 87;
+            this.Maille_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_SATK
+            // 
+            this.Artifact_SATK.AutoSize = true;
+            this.Artifact_SATK.Location = new System.Drawing.Point(135, 107);
+            this.Artifact_SATK.Name = "Artifact_SATK";
+            this.Artifact_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_SATK.TabIndex = 123;
+            this.Artifact_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_SATK
+            // 
+            this.Weapon_SATK.AutoSize = true;
+            this.Weapon_SATK.Location = new System.Drawing.Point(113, 107);
+            this.Weapon_SATK.Name = "Weapon_SATK";
+            this.Weapon_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_SATK.TabIndex = 122;
+            this.Weapon_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Boots_SATK
+            // 
+            this.Boots_SATK.AutoSize = true;
+            this.Boots_SATK.Location = new System.Drawing.Point(91, 107);
+            this.Boots_SATK.Name = "Boots_SATK";
+            this.Boots_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Boots_SATK.TabIndex = 121;
+            this.Boots_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Pants_SATK
+            // 
+            this.Pants_SATK.AutoSize = true;
+            this.Pants_SATK.Location = new System.Drawing.Point(69, 107);
+            this.Pants_SATK.Name = "Pants_SATK";
+            this.Pants_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Pants_SATK.TabIndex = 120;
+            this.Pants_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_SATK
+            // 
+            this.Gloves_SATK.AutoSize = true;
+            this.Gloves_SATK.Location = new System.Drawing.Point(47, 107);
+            this.Gloves_SATK.Name = "Gloves_SATK";
+            this.Gloves_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_SATK.TabIndex = 119;
+            this.Gloves_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Maille_SATK
+            // 
+            this.Maille_SATK.AutoSize = true;
+            this.Maille_SATK.Location = new System.Drawing.Point(25, 107);
+            this.Maille_SATK.Name = "Maille_SATK";
+            this.Maille_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Maille_SATK.TabIndex = 118;
+            this.Maille_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Helm_SATK
+            // 
+            this.Helm_SATK.AutoSize = true;
+            this.Helm_SATK.Location = new System.Drawing.Point(3, 107);
+            this.Helm_SATK.Name = "Helm_SATK";
+            this.Helm_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Helm_SATK.TabIndex = 117;
+            this.Helm_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_ATK
+            // 
+            this.Artifact_ATK.AutoSize = true;
+            this.Artifact_ATK.Location = new System.Drawing.Point(135, 81);
+            this.Artifact_ATK.Name = "Artifact_ATK";
+            this.Artifact_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_ATK.TabIndex = 116;
+            this.Artifact_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_ATK
+            // 
+            this.Weapon_ATK.AutoSize = true;
+            this.Weapon_ATK.Location = new System.Drawing.Point(113, 81);
+            this.Weapon_ATK.Name = "Weapon_ATK";
+            this.Weapon_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_ATK.TabIndex = 115;
+            this.Weapon_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Boots_ATK
+            // 
+            this.Boots_ATK.AutoSize = true;
+            this.Boots_ATK.Location = new System.Drawing.Point(91, 81);
+            this.Boots_ATK.Name = "Boots_ATK";
+            this.Boots_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Boots_ATK.TabIndex = 114;
+            this.Boots_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Pants_ATK
+            // 
+            this.Pants_ATK.AutoSize = true;
+            this.Pants_ATK.Location = new System.Drawing.Point(69, 81);
+            this.Pants_ATK.Name = "Pants_ATK";
+            this.Pants_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Pants_ATK.TabIndex = 113;
+            this.Pants_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_ATK
+            // 
+            this.Gloves_ATK.AutoSize = true;
+            this.Gloves_ATK.Location = new System.Drawing.Point(47, 81);
+            this.Gloves_ATK.Name = "Gloves_ATK";
+            this.Gloves_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_ATK.TabIndex = 112;
+            this.Gloves_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Maille_ATK
+            // 
+            this.Maille_ATK.AutoSize = true;
+            this.Maille_ATK.Location = new System.Drawing.Point(25, 81);
+            this.Maille_ATK.Name = "Maille_ATK";
+            this.Maille_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Maille_ATK.TabIndex = 111;
+            this.Maille_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Helm_ATK
+            // 
+            this.Helm_ATK.AutoSize = true;
+            this.Helm_ATK.Location = new System.Drawing.Point(3, 81);
+            this.Helm_ATK.Name = "Helm_ATK";
+            this.Helm_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Helm_ATK.TabIndex = 110;
+            this.Helm_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_MP
+            // 
+            this.Artifact_MP.AutoSize = true;
+            this.Artifact_MP.Location = new System.Drawing.Point(135, 55);
+            this.Artifact_MP.Name = "Artifact_MP";
+            this.Artifact_MP.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_MP.TabIndex = 109;
+            this.Artifact_MP.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_MP
+            // 
+            this.Weapon_MP.AutoSize = true;
+            this.Weapon_MP.Location = new System.Drawing.Point(113, 55);
+            this.Weapon_MP.Name = "Weapon_MP";
+            this.Weapon_MP.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_MP.TabIndex = 108;
+            this.Weapon_MP.UseVisualStyleBackColor = true;
+            // 
+            // Boots_MP
+            // 
+            this.Boots_MP.AutoSize = true;
+            this.Boots_MP.Location = new System.Drawing.Point(91, 55);
+            this.Boots_MP.Name = "Boots_MP";
+            this.Boots_MP.Size = new System.Drawing.Size(15, 14);
+            this.Boots_MP.TabIndex = 107;
+            this.Boots_MP.UseVisualStyleBackColor = true;
+            // 
+            // Pants_MP
+            // 
+            this.Pants_MP.AutoSize = true;
+            this.Pants_MP.Location = new System.Drawing.Point(69, 55);
+            this.Pants_MP.Name = "Pants_MP";
+            this.Pants_MP.Size = new System.Drawing.Size(15, 14);
+            this.Pants_MP.TabIndex = 106;
+            this.Pants_MP.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_MP
+            // 
+            this.Gloves_MP.AutoSize = true;
+            this.Gloves_MP.Location = new System.Drawing.Point(47, 55);
+            this.Gloves_MP.Name = "Gloves_MP";
+            this.Gloves_MP.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_MP.TabIndex = 105;
+            this.Gloves_MP.UseVisualStyleBackColor = true;
+            // 
+            // Maille_MP
+            // 
+            this.Maille_MP.AutoSize = true;
+            this.Maille_MP.Location = new System.Drawing.Point(25, 55);
+            this.Maille_MP.Name = "Maille_MP";
+            this.Maille_MP.Size = new System.Drawing.Size(15, 14);
+            this.Maille_MP.TabIndex = 104;
+            this.Maille_MP.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_HP
+            // 
+            this.Artifact_HP.AutoSize = true;
+            this.Artifact_HP.Location = new System.Drawing.Point(135, 29);
+            this.Artifact_HP.Name = "Artifact_HP";
+            this.Artifact_HP.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_HP.TabIndex = 103;
+            this.Artifact_HP.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_HP
+            // 
+            this.Weapon_HP.AutoSize = true;
+            this.Weapon_HP.Location = new System.Drawing.Point(113, 29);
+            this.Weapon_HP.Name = "Weapon_HP";
+            this.Weapon_HP.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_HP.TabIndex = 102;
+            this.Weapon_HP.UseVisualStyleBackColor = true;
+            // 
+            // Boots_HP
+            // 
+            this.Boots_HP.AutoSize = true;
+            this.Boots_HP.Location = new System.Drawing.Point(91, 29);
+            this.Boots_HP.Name = "Boots_HP";
+            this.Boots_HP.Size = new System.Drawing.Size(15, 14);
+            this.Boots_HP.TabIndex = 101;
+            this.Boots_HP.UseVisualStyleBackColor = true;
+            // 
+            // Pants_HP
+            // 
+            this.Pants_HP.AutoSize = true;
+            this.Pants_HP.Location = new System.Drawing.Point(69, 29);
+            this.Pants_HP.Name = "Pants_HP";
+            this.Pants_HP.Size = new System.Drawing.Size(15, 14);
+            this.Pants_HP.TabIndex = 100;
+            this.Pants_HP.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_HP
+            // 
+            this.Gloves_HP.AutoSize = true;
+            this.Gloves_HP.Location = new System.Drawing.Point(47, 29);
+            this.Gloves_HP.Name = "Gloves_HP";
+            this.Gloves_HP.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_HP.TabIndex = 99;
+            this.Gloves_HP.UseVisualStyleBackColor = true;
+            // 
+            // Maille_HP
+            // 
+            this.Maille_HP.AutoSize = true;
+            this.Maille_HP.Location = new System.Drawing.Point(25, 29);
+            this.Maille_HP.Name = "Maille_HP";
+            this.Maille_HP.Size = new System.Drawing.Size(15, 14);
+            this.Maille_HP.TabIndex = 98;
+            this.Maille_HP.UseVisualStyleBackColor = true;
+            // 
+            // Helm_HP
+            // 
+            this.Helm_HP.AutoSize = true;
+            this.Helm_HP.Location = new System.Drawing.Point(3, 29);
+            this.Helm_HP.Name = "Helm_HP";
+            this.Helm_HP.Size = new System.Drawing.Size(15, 14);
+            this.Helm_HP.TabIndex = 90;
+            this.Helm_HP.UseVisualStyleBackColor = true;
+            // 
+            // Helm_MP
+            // 
+            this.Helm_MP.AutoSize = true;
+            this.Helm_MP.Location = new System.Drawing.Point(3, 55);
+            this.Helm_MP.Name = "Helm_MP";
+            this.Helm_MP.Size = new System.Drawing.Size(15, 14);
+            this.Helm_MP.TabIndex = 91;
+            this.Helm_MP.UseVisualStyleBackColor = true;
+            // 
+            // Helm_PERC
+            // 
+            this.Helm_PERC.AutoSize = true;
+            this.Helm_PERC.Location = new System.Drawing.Point(3, 289);
+            this.Helm_PERC.Name = "Helm_PERC";
+            this.Helm_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Helm_PERC.TabIndex = 88;
+            this.Helm_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Maille_PERC
+            // 
+            this.Maille_PERC.AutoSize = true;
+            this.Maille_PERC.Location = new System.Drawing.Point(25, 289);
+            this.Maille_PERC.Name = "Maille_PERC";
+            this.Maille_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Maille_PERC.TabIndex = 92;
+            this.Maille_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_PERC
+            // 
+            this.Gloves_PERC.AutoSize = true;
+            this.Gloves_PERC.Location = new System.Drawing.Point(47, 289);
+            this.Gloves_PERC.Name = "Gloves_PERC";
+            this.Gloves_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_PERC.TabIndex = 93;
+            this.Gloves_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Pants_PERC
+            // 
+            this.Pants_PERC.AutoSize = true;
+            this.Pants_PERC.Location = new System.Drawing.Point(69, 289);
+            this.Pants_PERC.Name = "Pants_PERC";
+            this.Pants_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Pants_PERC.TabIndex = 94;
+            this.Pants_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Boots_PERC
+            // 
+            this.Boots_PERC.AutoSize = true;
+            this.Boots_PERC.Location = new System.Drawing.Point(91, 289);
+            this.Boots_PERC.Name = "Boots_PERC";
+            this.Boots_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Boots_PERC.TabIndex = 95;
+            this.Boots_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Weapon_PERC
+            // 
+            this.Weapon_PERC.AutoSize = true;
+            this.Weapon_PERC.Location = new System.Drawing.Point(113, 289);
+            this.Weapon_PERC.Name = "Weapon_PERC";
+            this.Weapon_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Weapon_PERC.TabIndex = 96;
+            this.Weapon_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_PERC
+            // 
+            this.Artifact_PERC.AutoSize = true;
+            this.Artifact_PERC.Location = new System.Drawing.Point(135, 289);
+            this.Artifact_PERC.Name = "Artifact_PERC";
+            this.Artifact_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_PERC.TabIndex = 97;
+            this.Artifact_PERC.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 15);
+            this.label2.TabIndex = 165;
+            this.label2.Text = "H";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox9.Enabled = false;
+            this.textBox9.Location = new System.Drawing.Point(231, 314);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(62, 20);
+            this.textBox9.TabIndex = 86;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox8.Enabled = false;
+            this.textBox8.Location = new System.Drawing.Point(231, 287);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(62, 20);
+            this.textBox8.TabIndex = 85;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox7.Enabled = false;
+            this.textBox7.Location = new System.Drawing.Point(231, 261);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(62, 20);
+            this.textBox7.TabIndex = 84;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox6.Enabled = false;
+            this.textBox6.Location = new System.Drawing.Point(231, 236);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(62, 20);
+            this.textBox6.TabIndex = 83;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox5.Enabled = false;
+            this.textBox5.Location = new System.Drawing.Point(231, 210);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(62, 20);
+            this.textBox5.TabIndex = 82;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox4.Enabled = false;
+            this.textBox4.Location = new System.Drawing.Point(231, 184);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(62, 20);
+            this.textBox4.TabIndex = 81;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(231, 159);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(62, 20);
+            this.textBox3.TabIndex = 80;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(231, 132);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(62, 20);
+            this.textBox2.TabIndex = 79;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(231, 106);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(62, 20);
+            this.textBox1.TabIndex = 78;
             // 
             // CCOMMP_tbox
             // 
@@ -1894,7 +2722,7 @@
             this.GMItemc_tab.Location = new System.Drawing.Point(4, 22);
             this.GMItemc_tab.Name = "GMItemc_tab";
             this.GMItemc_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.GMItemc_tab.Size = new System.Drawing.Size(752, 483);
+            this.GMItemc_tab.Size = new System.Drawing.Size(813, 472);
             this.GMItemc_tab.TabIndex = 3;
             this.GMItemc_tab.Text = "Items";
             this.GMItemc_tab.UseVisualStyleBackColor = true;
@@ -1905,7 +2733,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(427, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(322, 477);
+            this.groupBox3.Size = new System.Drawing.Size(383, 466);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Items";
@@ -1915,7 +2743,7 @@
             this.EditorItems_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EditorItems_lbox.Location = new System.Drawing.Point(3, 16);
             this.EditorItems_lbox.Name = "EditorItems_lbox";
-            this.EditorItems_lbox.Size = new System.Drawing.Size(316, 458);
+            this.EditorItems_lbox.Size = new System.Drawing.Size(377, 447);
             this.EditorItems_lbox.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.EditorItems_lbox.TabIndex = 0;
             this.EditorItems_lbox.TileSize = new System.Drawing.Size(200, 60);
@@ -1925,6 +2753,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.UItem_editor_btn);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.ELevel_editor_ud);
+            this.groupBox2.Controls.Add(this.EType_editor_tbox);
+            this.groupBox2.Controls.Add(this.EItem_editor_btn);
             this.groupBox2.Controls.Add(this.DItem_editor_btn);
             this.groupBox2.Controls.Add(this.label70);
             this.groupBox2.Controls.Add(this.TURNS_editor_ud);
@@ -1939,12 +2772,11 @@
             this.groupBox2.Controls.Add(this.label77);
             this.groupBox2.Controls.Add(this.Item_Character_Cbox);
             this.groupBox2.Controls.Add(this.MItem_editor_btn);
-            this.groupBox2.Controls.Add(this.Orcalite_editor_checkb);
+            this.groupBox2.Controls.Add(this.Oracalcite_editor_checkb);
             this.groupBox2.Controls.Add(this.NItem_editor_btn);
             this.groupBox2.Controls.Add(this.label76);
             this.groupBox2.Controls.Add(this.DUR_editor_ud);
             this.groupBox2.Controls.Add(this.label75);
-            this.groupBox2.Controls.Add(this.Type_editor_cbox);
             this.groupBox2.Controls.Add(this.ENH_editor_ud);
             this.groupBox2.Controls.Add(this.label74);
             this.groupBox2.Controls.Add(this.ID_editor_up);
@@ -1984,15 +2816,65 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(424, 477);
+            this.groupBox2.Size = new System.Drawing.Size(424, 466);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor/Creator";
             // 
+            // UItem_editor_btn
+            // 
+            this.UItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UItem_editor_btn.Location = new System.Drawing.Point(249, 437);
+            this.UItem_editor_btn.Name = "UItem_editor_btn";
+            this.UItem_editor_btn.Size = new System.Drawing.Size(75, 23);
+            this.UItem_editor_btn.TabIndex = 65;
+            this.UItem_editor_btn.Text = "Update";
+            this.UItem_editor_btn.UseVisualStyleBackColor = true;
+            this.UItem_editor_btn.Click += new System.EventHandler(this.UItem_editor_btn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(216, 408);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Ech Level:";
+            // 
+            // ELevel_editor_ud
+            // 
+            this.ELevel_editor_ud.Location = new System.Drawing.Point(280, 405);
+            this.ELevel_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.ELevel_editor_ud.Name = "ELevel_editor_ud";
+            this.ELevel_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.ELevel_editor_ud.TabIndex = 63;
+            // 
+            // EType_editor_tbox
+            // 
+            this.EType_editor_tbox.Location = new System.Drawing.Point(143, 405);
+            this.EType_editor_tbox.Name = "EType_editor_tbox";
+            this.EType_editor_tbox.Size = new System.Drawing.Size(67, 20);
+            this.EType_editor_tbox.TabIndex = 62;
+            // 
+            // EItem_editor_btn
+            // 
+            this.EItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.EItem_editor_btn.Location = new System.Drawing.Point(340, 437);
+            this.EItem_editor_btn.Name = "EItem_editor_btn";
+            this.EItem_editor_btn.Size = new System.Drawing.Size(75, 23);
+            this.EItem_editor_btn.TabIndex = 61;
+            this.EItem_editor_btn.Text = "Enhance";
+            this.EItem_editor_btn.UseVisualStyleBackColor = true;
+            this.EItem_editor_btn.Click += new System.EventHandler(this.EItem_editor_btn_Click);
+            // 
             // DItem_editor_btn
             // 
             this.DItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DItem_editor_btn.Location = new System.Drawing.Point(168, 448);
+            this.DItem_editor_btn.Location = new System.Drawing.Point(168, 437);
             this.DItem_editor_btn.Name = "DItem_editor_btn";
             this.DItem_editor_btn.Size = new System.Drawing.Size(75, 23);
             this.DItem_editor_btn.TabIndex = 60;
@@ -2125,7 +3007,7 @@
             // MItem_editor_btn
             // 
             this.MItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.MItem_editor_btn.Location = new System.Drawing.Point(87, 448);
+            this.MItem_editor_btn.Location = new System.Drawing.Point(87, 437);
             this.MItem_editor_btn.Name = "MItem_editor_btn";
             this.MItem_editor_btn.Size = new System.Drawing.Size(75, 23);
             this.MItem_editor_btn.TabIndex = 47;
@@ -2133,21 +3015,20 @@
             this.MItem_editor_btn.UseVisualStyleBackColor = true;
             this.MItem_editor_btn.Click += new System.EventHandler(this.MItem_editor_btn_Click);
             // 
-            // Orcalite_editor_checkb
+            // Oracalcite_editor_checkb
             // 
-            this.Orcalite_editor_checkb.AutoSize = true;
-            this.Orcalite_editor_checkb.Enabled = false;
-            this.Orcalite_editor_checkb.Location = new System.Drawing.Point(8, 407);
-            this.Orcalite_editor_checkb.Name = "Orcalite_editor_checkb";
-            this.Orcalite_editor_checkb.Size = new System.Drawing.Size(74, 17);
-            this.Orcalite_editor_checkb.TabIndex = 46;
-            this.Orcalite_editor_checkb.Text = "Oracalcite";
-            this.Orcalite_editor_checkb.UseVisualStyleBackColor = true;
+            this.Oracalcite_editor_checkb.AutoSize = true;
+            this.Oracalcite_editor_checkb.Location = new System.Drawing.Point(8, 407);
+            this.Oracalcite_editor_checkb.Name = "Oracalcite_editor_checkb";
+            this.Oracalcite_editor_checkb.Size = new System.Drawing.Size(74, 17);
+            this.Oracalcite_editor_checkb.TabIndex = 46;
+            this.Oracalcite_editor_checkb.Text = "Oracalcite";
+            this.Oracalcite_editor_checkb.UseVisualStyleBackColor = true;
             // 
             // NItem_editor_btn
             // 
             this.NItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.NItem_editor_btn.Location = new System.Drawing.Point(6, 448);
+            this.NItem_editor_btn.Location = new System.Drawing.Point(6, 437);
             this.NItem_editor_btn.Name = "NItem_editor_btn";
             this.NItem_editor_btn.Size = new System.Drawing.Size(75, 23);
             this.NItem_editor_btn.TabIndex = 45;
@@ -2181,26 +3062,9 @@
             this.label75.AutoSize = true;
             this.label75.Location = new System.Drawing.Point(81, 408);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(34, 13);
+            this.label75.Size = new System.Drawing.Size(56, 13);
             this.label75.TabIndex = 41;
-            this.label75.Text = "Type:";
-            // 
-            // Type_editor_cbox
-            // 
-            this.Type_editor_cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Type_editor_cbox.Enabled = false;
-            this.Type_editor_cbox.FormattingEnabled = true;
-            this.Type_editor_cbox.Items.AddRange(new object[] {
-            "Fire",
-            "Earth",
-            "Lightning",
-            "Ice",
-            "Dark",
-            "Light"});
-            this.Type_editor_cbox.Location = new System.Drawing.Point(121, 405);
-            this.Type_editor_cbox.Name = "Type_editor_cbox";
-            this.Type_editor_cbox.Size = new System.Drawing.Size(59, 21);
-            this.Type_editor_cbox.TabIndex = 40;
+            this.label75.Text = "Ech Type:";
             // 
             // ENH_editor_ud
             // 
@@ -2586,130 +3450,20 @@
             this.SpellsManager_tab.Location = new System.Drawing.Point(4, 22);
             this.SpellsManager_tab.Name = "SpellsManager_tab";
             this.SpellsManager_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.SpellsManager_tab.Size = new System.Drawing.Size(752, 483);
+            this.SpellsManager_tab.Size = new System.Drawing.Size(813, 472);
             this.SpellsManager_tab.TabIndex = 5;
             this.SpellsManager_tab.Text = "Spells";
             this.SpellsManager_tab.UseVisualStyleBackColor = true;
             // 
-            // CombatManager_tab
+            // tabPage1
             // 
-            this.CombatManager_tab.Location = new System.Drawing.Point(4, 22);
-            this.CombatManager_tab.Name = "CombatManager_tab";
-            this.CombatManager_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.CombatManager_tab.Size = new System.Drawing.Size(752, 483);
-            this.CombatManager_tab.TabIndex = 4;
-            this.CombatManager_tab.Text = "Combat Manager";
-            this.CombatManager_tab.UseVisualStyleBackColor = true;
-            // 
-            // PERCP_btn
-            // 
-            this.PERCP_btn.Enabled = false;
-            this.PERCP_btn.Location = new System.Drawing.Point(200, 456);
-            this.PERCP_btn.Name = "PERCP_btn";
-            this.PERCP_btn.Size = new System.Drawing.Size(16, 23);
-            this.PERCP_btn.TabIndex = 172;
-            this.PERCP_btn.Text = "+";
-            this.PERCP_btn.UseVisualStyleBackColor = true;
-            // 
-            // INTP_btn
-            // 
-            this.INTP_btn.Enabled = false;
-            this.INTP_btn.Location = new System.Drawing.Point(200, 428);
-            this.INTP_btn.Name = "INTP_btn";
-            this.INTP_btn.Size = new System.Drawing.Size(16, 23);
-            this.INTP_btn.TabIndex = 171;
-            this.INTP_btn.Text = "+";
-            this.INTP_btn.UseVisualStyleBackColor = true;
-            // 
-            // STRP_btn
-            // 
-            this.STRP_btn.Enabled = false;
-            this.STRP_btn.Location = new System.Drawing.Point(200, 400);
-            this.STRP_btn.Name = "STRP_btn";
-            this.STRP_btn.Size = new System.Drawing.Size(16, 23);
-            this.STRP_btn.TabIndex = 170;
-            this.STRP_btn.Text = "+";
-            this.STRP_btn.UseVisualStyleBackColor = true;
-            // 
-            // DEXP_btn
-            // 
-            this.DEXP_btn.Enabled = false;
-            this.DEXP_btn.Location = new System.Drawing.Point(200, 372);
-            this.DEXP_btn.Name = "DEXP_btn";
-            this.DEXP_btn.Size = new System.Drawing.Size(16, 23);
-            this.DEXP_btn.TabIndex = 169;
-            this.DEXP_btn.Text = "+";
-            this.DEXP_btn.UseVisualStyleBackColor = true;
-            // 
-            // CHARP_btn
-            // 
-            this.CHARP_btn.Enabled = false;
-            this.CHARP_btn.Location = new System.Drawing.Point(200, 344);
-            this.CHARP_btn.Name = "CHARP_btn";
-            this.CHARP_btn.Size = new System.Drawing.Size(16, 23);
-            this.CHARP_btn.TabIndex = 168;
-            this.CHARP_btn.Text = "+";
-            this.CHARP_btn.UseVisualStyleBackColor = true;
-            // 
-            // SDEFP_btn
-            // 
-            this.SDEFP_btn.Enabled = false;
-            this.SDEFP_btn.Location = new System.Drawing.Point(200, 316);
-            this.SDEFP_btn.Name = "SDEFP_btn";
-            this.SDEFP_btn.Size = new System.Drawing.Size(16, 23);
-            this.SDEFP_btn.TabIndex = 167;
-            this.SDEFP_btn.Text = "+";
-            this.SDEFP_btn.UseVisualStyleBackColor = true;
-            // 
-            // DEFP_btn
-            // 
-            this.DEFP_btn.Enabled = false;
-            this.DEFP_btn.Location = new System.Drawing.Point(200, 288);
-            this.DEFP_btn.Name = "DEFP_btn";
-            this.DEFP_btn.Size = new System.Drawing.Size(16, 23);
-            this.DEFP_btn.TabIndex = 166;
-            this.DEFP_btn.Text = "+";
-            this.DEFP_btn.UseVisualStyleBackColor = true;
-            // 
-            // SATKP_btn
-            // 
-            this.SATKP_btn.Enabled = false;
-            this.SATKP_btn.Location = new System.Drawing.Point(200, 260);
-            this.SATKP_btn.Name = "SATKP_btn";
-            this.SATKP_btn.Size = new System.Drawing.Size(16, 23);
-            this.SATKP_btn.TabIndex = 165;
-            this.SATKP_btn.Text = "+";
-            this.SATKP_btn.UseVisualStyleBackColor = true;
-            // 
-            // ATKP_btn
-            // 
-            this.ATKP_btn.Enabled = false;
-            this.ATKP_btn.Location = new System.Drawing.Point(200, 233);
-            this.ATKP_btn.Name = "ATKP_btn";
-            this.ATKP_btn.Size = new System.Drawing.Size(16, 23);
-            this.ATKP_btn.TabIndex = 164;
-            this.ATKP_btn.Text = "+";
-            this.ATKP_btn.UseVisualStyleBackColor = true;
-            // 
-            // MPP_btn
-            // 
-            this.MPP_btn.Enabled = false;
-            this.MPP_btn.Location = new System.Drawing.Point(200, 191);
-            this.MPP_btn.Name = "MPP_btn";
-            this.MPP_btn.Size = new System.Drawing.Size(16, 23);
-            this.MPP_btn.TabIndex = 163;
-            this.MPP_btn.Text = "+";
-            this.MPP_btn.UseVisualStyleBackColor = true;
-            // 
-            // HPP_btn
-            // 
-            this.HPP_btn.Enabled = false;
-            this.HPP_btn.Location = new System.Drawing.Point(200, 149);
-            this.HPP_btn.Name = "HPP_btn";
-            this.HPP_btn.Size = new System.Drawing.Size(16, 23);
-            this.HPP_btn.TabIndex = 162;
-            this.HPP_btn.Text = "+";
-            this.HPP_btn.UseVisualStyleBackColor = true;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(813, 472);
+            this.tabPage1.TabIndex = 6;
+            this.tabPage1.Text = "Combat Tools";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // MP_pbar
             // 
@@ -2784,7 +3538,7 @@
             // UPDATE_btn
             // 
             this.UPDATE_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UPDATE_btn.Location = new System.Drawing.Point(6, 526);
+            this.UPDATE_btn.Location = new System.Drawing.Point(6, 515);
             this.UPDATE_btn.Name = "UPDATE_btn";
             this.UPDATE_btn.Size = new System.Drawing.Size(166, 23);
             this.UPDATE_btn.TabIndex = 128;
@@ -3044,164 +3798,320 @@
             this.label28.TabIndex = 129;
             this.label28.Text = "Name:";
             // 
-            // button1
+            // STATS_LBL
             // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(178, 149);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(16, 23);
-            this.button1.TabIndex = 173;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = true;
+            this.STATS_LBL.AutoSize = true;
+            this.STATS_LBL.Location = new System.Drawing.Point(127, 133);
+            this.STATS_LBL.Name = "STATS_LBL";
+            this.STATS_LBL.Size = new System.Drawing.Size(45, 13);
+            this.STATS_LBL.TabIndex = 184;
+            this.STATS_LBL.Text = "STATS:";
+            this.STATS_LBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // ATK_P_BTN
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(178, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(16, 23);
-            this.button2.TabIndex = 174;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ATK_P_BTN.Location = new System.Drawing.Point(178, 233);
+            this.ATK_P_BTN.Name = "ATK_P_BTN";
+            this.ATK_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.ATK_P_BTN.TabIndex = 185;
+            this.ATK_P_BTN.Text = "+";
+            this.ATK_P_BTN.UseVisualStyleBackColor = true;
+            this.ATK_P_BTN.Visible = false;
+            this.ATK_P_BTN.Click += new System.EventHandler(this.ATK_P_BTN_Click);
             // 
-            // button3
+            // ATK_M_BTN
             // 
-            this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(178, 233);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(16, 23);
-            this.button3.TabIndex = 175;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ATK_M_BTN.Location = new System.Drawing.Point(198, 233);
+            this.ATK_M_BTN.Name = "ATK_M_BTN";
+            this.ATK_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.ATK_M_BTN.TabIndex = 186;
+            this.ATK_M_BTN.Text = "-";
+            this.ATK_M_BTN.UseVisualStyleBackColor = true;
+            this.ATK_M_BTN.Visible = false;
+            this.ATK_M_BTN.Click += new System.EventHandler(this.ATK_M_BTN_Click);
             // 
-            // button4
+            // SATK_M_BTN
             // 
-            this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(178, 260);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(16, 23);
-            this.button4.TabIndex = 176;
-            this.button4.Text = "-";
-            this.button4.UseVisualStyleBackColor = true;
+            this.SATK_M_BTN.Location = new System.Drawing.Point(198, 261);
+            this.SATK_M_BTN.Name = "SATK_M_BTN";
+            this.SATK_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.SATK_M_BTN.TabIndex = 188;
+            this.SATK_M_BTN.Text = "-";
+            this.SATK_M_BTN.UseVisualStyleBackColor = true;
+            this.SATK_M_BTN.Visible = false;
+            this.SATK_M_BTN.Click += new System.EventHandler(this.SATK_M_BTN_Click);
             // 
-            // button5
+            // SATK_P_BTN
             // 
-            this.button5.Enabled = false;
-            this.button5.Location = new System.Drawing.Point(178, 289);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(16, 23);
-            this.button5.TabIndex = 177;
-            this.button5.Text = "-";
-            this.button5.UseVisualStyleBackColor = true;
+            this.SATK_P_BTN.Location = new System.Drawing.Point(178, 261);
+            this.SATK_P_BTN.Name = "SATK_P_BTN";
+            this.SATK_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.SATK_P_BTN.TabIndex = 187;
+            this.SATK_P_BTN.Text = "+";
+            this.SATK_P_BTN.UseVisualStyleBackColor = true;
+            this.SATK_P_BTN.Visible = false;
+            this.SATK_P_BTN.Click += new System.EventHandler(this.SATK_P_BTN_Click);
             // 
-            // button6
+            // DEF_M_BTN
             // 
-            this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(178, 316);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(16, 23);
-            this.button6.TabIndex = 178;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = true;
+            this.DEF_M_BTN.Location = new System.Drawing.Point(198, 289);
+            this.DEF_M_BTN.Name = "DEF_M_BTN";
+            this.DEF_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.DEF_M_BTN.TabIndex = 190;
+            this.DEF_M_BTN.Text = "-";
+            this.DEF_M_BTN.UseVisualStyleBackColor = true;
+            this.DEF_M_BTN.Visible = false;
+            this.DEF_M_BTN.Click += new System.EventHandler(this.DEF_M_BTN_Click);
             // 
-            // button7
+            // DEF_P_BTN
             // 
-            this.button7.Enabled = false;
-            this.button7.Location = new System.Drawing.Point(178, 344);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(16, 23);
-            this.button7.TabIndex = 179;
-            this.button7.Text = "-";
-            this.button7.UseVisualStyleBackColor = true;
+            this.DEF_P_BTN.Location = new System.Drawing.Point(178, 289);
+            this.DEF_P_BTN.Name = "DEF_P_BTN";
+            this.DEF_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.DEF_P_BTN.TabIndex = 189;
+            this.DEF_P_BTN.Text = "+";
+            this.DEF_P_BTN.UseVisualStyleBackColor = true;
+            this.DEF_P_BTN.Visible = false;
+            this.DEF_P_BTN.Click += new System.EventHandler(this.DEF_P_BTN_Click);
             // 
-            // button8
+            // SDEF_M_BTN
             // 
-            this.button8.Enabled = false;
-            this.button8.Location = new System.Drawing.Point(178, 373);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(16, 23);
-            this.button8.TabIndex = 180;
-            this.button8.Text = "-";
-            this.button8.UseVisualStyleBackColor = true;
+            this.SDEF_M_BTN.Location = new System.Drawing.Point(198, 317);
+            this.SDEF_M_BTN.Name = "SDEF_M_BTN";
+            this.SDEF_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.SDEF_M_BTN.TabIndex = 192;
+            this.SDEF_M_BTN.Text = "-";
+            this.SDEF_M_BTN.UseVisualStyleBackColor = true;
+            this.SDEF_M_BTN.Visible = false;
+            this.SDEF_M_BTN.Click += new System.EventHandler(this.SDEF_M_BTN_Click);
             // 
-            // button9
+            // SDEF_P_BTN
             // 
-            this.button9.Enabled = false;
-            this.button9.Location = new System.Drawing.Point(178, 400);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(16, 23);
-            this.button9.TabIndex = 181;
-            this.button9.Text = "-";
-            this.button9.UseVisualStyleBackColor = true;
+            this.SDEF_P_BTN.Location = new System.Drawing.Point(178, 317);
+            this.SDEF_P_BTN.Name = "SDEF_P_BTN";
+            this.SDEF_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.SDEF_P_BTN.TabIndex = 191;
+            this.SDEF_P_BTN.Text = "+";
+            this.SDEF_P_BTN.UseVisualStyleBackColor = true;
+            this.SDEF_P_BTN.Visible = false;
+            this.SDEF_P_BTN.Click += new System.EventHandler(this.SDEF_P_BTN_Click);
             // 
-            // button10
+            // CHAR_M_BTN
             // 
-            this.button10.Enabled = false;
-            this.button10.Location = new System.Drawing.Point(178, 428);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(16, 23);
-            this.button10.TabIndex = 182;
-            this.button10.Text = "-";
-            this.button10.UseVisualStyleBackColor = true;
+            this.CHAR_M_BTN.Location = new System.Drawing.Point(198, 345);
+            this.CHAR_M_BTN.Name = "CHAR_M_BTN";
+            this.CHAR_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.CHAR_M_BTN.TabIndex = 194;
+            this.CHAR_M_BTN.Text = "-";
+            this.CHAR_M_BTN.UseVisualStyleBackColor = true;
+            this.CHAR_M_BTN.Visible = false;
+            this.CHAR_M_BTN.Click += new System.EventHandler(this.CHAR_M_BTN_Click);
             // 
-            // button11
+            // CHAR_P_BTN
             // 
-            this.button11.Enabled = false;
-            this.button11.Location = new System.Drawing.Point(178, 456);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(16, 23);
-            this.button11.TabIndex = 183;
-            this.button11.Text = "-";
-            this.button11.UseVisualStyleBackColor = true;
+            this.CHAR_P_BTN.Location = new System.Drawing.Point(178, 345);
+            this.CHAR_P_BTN.Name = "CHAR_P_BTN";
+            this.CHAR_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.CHAR_P_BTN.TabIndex = 193;
+            this.CHAR_P_BTN.Text = "+";
+            this.CHAR_P_BTN.UseVisualStyleBackColor = true;
+            this.CHAR_P_BTN.Visible = false;
+            this.CHAR_P_BTN.Click += new System.EventHandler(this.CHAR_P_BTN_Click);
+            // 
+            // DEX_M_BTN
+            // 
+            this.DEX_M_BTN.Location = new System.Drawing.Point(198, 373);
+            this.DEX_M_BTN.Name = "DEX_M_BTN";
+            this.DEX_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.DEX_M_BTN.TabIndex = 196;
+            this.DEX_M_BTN.Text = "-";
+            this.DEX_M_BTN.UseVisualStyleBackColor = true;
+            this.DEX_M_BTN.Visible = false;
+            this.DEX_M_BTN.Click += new System.EventHandler(this.DEX_M_BTN_Click);
+            // 
+            // DEX_P_BTN
+            // 
+            this.DEX_P_BTN.Location = new System.Drawing.Point(178, 373);
+            this.DEX_P_BTN.Name = "DEX_P_BTN";
+            this.DEX_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.DEX_P_BTN.TabIndex = 195;
+            this.DEX_P_BTN.Text = "+";
+            this.DEX_P_BTN.UseVisualStyleBackColor = true;
+            this.DEX_P_BTN.Visible = false;
+            this.DEX_P_BTN.Click += new System.EventHandler(this.DEX_P_BTN_Click);
+            // 
+            // STR_M_BTN
+            // 
+            this.STR_M_BTN.Location = new System.Drawing.Point(198, 401);
+            this.STR_M_BTN.Name = "STR_M_BTN";
+            this.STR_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.STR_M_BTN.TabIndex = 198;
+            this.STR_M_BTN.Text = "-";
+            this.STR_M_BTN.UseVisualStyleBackColor = true;
+            this.STR_M_BTN.Visible = false;
+            this.STR_M_BTN.Click += new System.EventHandler(this.STR_M_BTN_Click);
+            // 
+            // STR_P_BTN
+            // 
+            this.STR_P_BTN.Location = new System.Drawing.Point(178, 401);
+            this.STR_P_BTN.Name = "STR_P_BTN";
+            this.STR_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.STR_P_BTN.TabIndex = 197;
+            this.STR_P_BTN.Text = "+";
+            this.STR_P_BTN.UseVisualStyleBackColor = true;
+            this.STR_P_BTN.Visible = false;
+            this.STR_P_BTN.Click += new System.EventHandler(this.STR_P_BTN_Click);
+            // 
+            // INT_M_BTN
+            // 
+            this.INT_M_BTN.Location = new System.Drawing.Point(198, 429);
+            this.INT_M_BTN.Name = "INT_M_BTN";
+            this.INT_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.INT_M_BTN.TabIndex = 200;
+            this.INT_M_BTN.Text = "-";
+            this.INT_M_BTN.UseVisualStyleBackColor = true;
+            this.INT_M_BTN.Visible = false;
+            this.INT_M_BTN.Click += new System.EventHandler(this.INT_M_BTN_Click);
+            // 
+            // INT_P_BTN
+            // 
+            this.INT_P_BTN.Location = new System.Drawing.Point(178, 429);
+            this.INT_P_BTN.Name = "INT_P_BTN";
+            this.INT_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.INT_P_BTN.TabIndex = 199;
+            this.INT_P_BTN.Text = "+";
+            this.INT_P_BTN.UseVisualStyleBackColor = true;
+            this.INT_P_BTN.Visible = false;
+            this.INT_P_BTN.Click += new System.EventHandler(this.INT_P_BTN_Click);
+            // 
+            // PERC_M_BTN
+            // 
+            this.PERC_M_BTN.Location = new System.Drawing.Point(199, 457);
+            this.PERC_M_BTN.Name = "PERC_M_BTN";
+            this.PERC_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.PERC_M_BTN.TabIndex = 202;
+            this.PERC_M_BTN.Text = "-";
+            this.PERC_M_BTN.UseVisualStyleBackColor = true;
+            this.PERC_M_BTN.Visible = false;
+            this.PERC_M_BTN.Click += new System.EventHandler(this.PERC_M_BTN_Click);
+            // 
+            // PERC_P_BTN
+            // 
+            this.PERC_P_BTN.Location = new System.Drawing.Point(179, 457);
+            this.PERC_P_BTN.Name = "PERC_P_BTN";
+            this.PERC_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.PERC_P_BTN.TabIndex = 201;
+            this.PERC_P_BTN.Text = "+";
+            this.PERC_P_BTN.UseVisualStyleBackColor = true;
+            this.PERC_P_BTN.Visible = false;
+            this.PERC_P_BTN.Click += new System.EventHandler(this.PERC_P_BTN_Click);
+            // 
+            // HP_M_BTN
+            // 
+            this.HP_M_BTN.Location = new System.Drawing.Point(199, 149);
+            this.HP_M_BTN.Name = "HP_M_BTN";
+            this.HP_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.HP_M_BTN.TabIndex = 204;
+            this.HP_M_BTN.Text = "-";
+            this.HP_M_BTN.UseVisualStyleBackColor = true;
+            this.HP_M_BTN.Visible = false;
+            this.HP_M_BTN.Click += new System.EventHandler(this.HP_M_BTN_Click);
+            // 
+            // HP_P_BTN
+            // 
+            this.HP_P_BTN.Location = new System.Drawing.Point(179, 149);
+            this.HP_P_BTN.Name = "HP_P_BTN";
+            this.HP_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.HP_P_BTN.TabIndex = 203;
+            this.HP_P_BTN.Text = "+";
+            this.HP_P_BTN.UseVisualStyleBackColor = true;
+            this.HP_P_BTN.Visible = false;
+            this.HP_P_BTN.Click += new System.EventHandler(this.HP_P_BTN_Click);
+            // 
+            // MP_M_BTN
+            // 
+            this.MP_M_BTN.Location = new System.Drawing.Point(199, 191);
+            this.MP_M_BTN.Name = "MP_M_BTN";
+            this.MP_M_BTN.Size = new System.Drawing.Size(17, 23);
+            this.MP_M_BTN.TabIndex = 206;
+            this.MP_M_BTN.Text = "-";
+            this.MP_M_BTN.UseVisualStyleBackColor = true;
+            this.MP_M_BTN.Visible = false;
+            this.MP_M_BTN.Click += new System.EventHandler(this.MP_M_BTN_Click);
+            // 
+            // MP_P_BTN
+            // 
+            this.MP_P_BTN.Location = new System.Drawing.Point(179, 191);
+            this.MP_P_BTN.Name = "MP_P_BTN";
+            this.MP_P_BTN.Size = new System.Drawing.Size(17, 23);
+            this.MP_P_BTN.TabIndex = 205;
+            this.MP_P_BTN.Text = "+";
+            this.MP_P_BTN.UseVisualStyleBackColor = true;
+            this.MP_P_BTN.Visible = false;
+            this.MP_P_BTN.Click += new System.EventHandler(this.MP_P_BTN_Click);
+            // 
+            // Stats_Apply_BTN
+            // 
+            this.Stats_Apply_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Stats_Apply_BTN.Location = new System.Drawing.Point(178, 486);
+            this.Stats_Apply_BTN.Name = "Stats_Apply_BTN";
+            this.Stats_Apply_BTN.Size = new System.Drawing.Size(46, 23);
+            this.Stats_Apply_BTN.TabIndex = 207;
+            this.Stats_Apply_BTN.Text = "Apply";
+            this.Stats_Apply_BTN.UseVisualStyleBackColor = true;
+            this.Stats_Apply_BTN.Visible = false;
+            this.Stats_Apply_BTN.Click += new System.EventHandler(this.Stats_Apply_BTN_Click);
             // 
             // User
             // 
             this.AccessibleName = "UserForm";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 555);
-            this.Controls.Add(this.PERCP_btn);
+            this.ClientSize = new System.Drawing.Size(1060, 544);
+            this.Controls.Add(this.Stats_Apply_BTN);
+            this.Controls.Add(this.MP_M_BTN);
+            this.Controls.Add(this.MP_P_BTN);
+            this.Controls.Add(this.HP_M_BTN);
+            this.Controls.Add(this.HP_P_BTN);
+            this.Controls.Add(this.PERC_M_BTN);
+            this.Controls.Add(this.PERC_P_BTN);
+            this.Controls.Add(this.INT_M_BTN);
+            this.Controls.Add(this.INT_P_BTN);
+            this.Controls.Add(this.STR_M_BTN);
+            this.Controls.Add(this.STR_P_BTN);
+            this.Controls.Add(this.DEX_M_BTN);
+            this.Controls.Add(this.DEX_P_BTN);
+            this.Controls.Add(this.CHAR_M_BTN);
+            this.Controls.Add(this.CHAR_P_BTN);
+            this.Controls.Add(this.SDEF_M_BTN);
+            this.Controls.Add(this.SDEF_P_BTN);
+            this.Controls.Add(this.DEF_M_BTN);
+            this.Controls.Add(this.DEF_P_BTN);
+            this.Controls.Add(this.SATK_M_BTN);
+            this.Controls.Add(this.SATK_P_BTN);
+            this.Controls.Add(this.ATK_M_BTN);
+            this.Controls.Add(this.ATK_P_BTN);
+            this.Controls.Add(this.STATS_LBL);
             this.Controls.Add(this.MP_pbar);
-            this.Controls.Add(this.INTP_btn);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.STRP_btn);
             this.Controls.Add(this.HP_pbar);
-            this.Controls.Add(this.DEXP_btn);
             this.Controls.Add(this.XP_pbar);
-            this.Controls.Add(this.CHARP_btn);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.SDEFP_btn);
             this.Controls.Add(this.label57);
-            this.Controls.Add(this.DEFP_btn);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.SATKP_btn);
             this.Controls.Add(this.Gold_tbox);
-            this.Controls.Add(this.ATKP_btn);
             this.Controls.Add(this.Satiety_tbox);
-            this.Controls.Add(this.MPP_btn);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.HPP_btn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.UPDATE_btn);
-            this.Controls.Add(this.button9);
             this.Controls.Add(this.XP_lbl);
             this.Controls.Add(this.PERC_tbox);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.INT_tbox);
             this.Controls.Add(this.STR_tbox);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.DEX_tbox);
             this.Controls.Add(this.CHAR_tbox);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.SDEF_tbox);
             this.Controls.Add(this.DEF_tbox);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.SATK_tbox);
             this.Controls.Add(this.ATK_tbox);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.LVL_tbox);
             this.Controls.Add(this.Name_tbox);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
@@ -3223,11 +4133,6 @@
             this.Inventory_tab.ResumeLayout(false);
             this.GameMaster_tab.ResumeLayout(false);
             this.GameMaster_stabs.ResumeLayout(false);
-            this.EventCon_tab.ResumeLayout(false);
-            this.Write_log_group.ResumeLayout(false);
-            this.Write_log_group.PerformLayout();
-            this.CreateEvent_group.ResumeLayout(false);
-            this.CreateEvent_group.PerformLayout();
             this.NPCM_tab.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -3235,6 +4140,8 @@
             this.NPCC_tab.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCOXPMOD_tbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCOPERCMOD_tbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCOINTMOD_tbox)).EndInit();
@@ -3265,6 +4172,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ELevel_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TURNS_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QTY_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GRADE_editor_ud)).EndInit();
@@ -3294,36 +4202,15 @@
         #endregion
         private System.Windows.Forms.Timer Update_timer;
         private System.Windows.Forms.TabControl Main_tabs;
-        private System.Windows.Forms.TabPage Events_tab;
         private System.Windows.Forms.TabPage Equipment_tab;
         private System.Windows.Forms.TabPage Inventory_tab;
         private System.Windows.Forms.ListBox Inventory_lbox;
         private System.Windows.Forms.TabPage Spells_tab;
         private System.Windows.Forms.TabPage GameMaster_tab;
-        private System.Windows.Forms.TabPage Combat_tbox;
         private System.Windows.Forms.TabControl GameMaster_stabs;
-        private System.Windows.Forms.TabPage EventCon_tab;
         private System.Windows.Forms.TabPage NPCM_tab;
-        private System.Windows.Forms.GroupBox CreateEvent_group;
-        private System.Windows.Forms.Button ApplyEvent_btn;
-        private System.Windows.Forms.ListBox Event_log_lbox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox Estat_cbox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox Etype_cbox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox CeventTarget_lbox;
-        private System.Windows.Forms.TextBox Edesc_tbox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox Write_log_group;
-        private System.Windows.Forms.TextBox Log_desc_tbox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox log_des_lbox;
-        private System.Windows.Forms.Button Message_btn;
         private System.Windows.Forms.TabPage NPCC_tab;
         private System.Windows.Forms.TabPage GMItemc_tab;
-        private System.Windows.Forms.TabPage CombatManager_tab;
         private System.Windows.Forms.Button UPLOAD_btn;
         private System.Windows.Forms.Button Roll_btn;
         private System.Windows.Forms.Label label8;
@@ -3416,17 +4303,6 @@
         private System.Windows.Forms.TextBox Filter_Name;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox NPCS_lbox;
-        private System.Windows.Forms.Button PERCP_btn;
-        private System.Windows.Forms.Button INTP_btn;
-        private System.Windows.Forms.Button STRP_btn;
-        private System.Windows.Forms.Button DEXP_btn;
-        private System.Windows.Forms.Button CHARP_btn;
-        private System.Windows.Forms.Button SDEFP_btn;
-        private System.Windows.Forms.Button DEFP_btn;
-        private System.Windows.Forms.Button SATKP_btn;
-        private System.Windows.Forms.Button ATKP_btn;
-        private System.Windows.Forms.Button MPP_btn;
-        private System.Windows.Forms.Button HPP_btn;
         private System.Windows.Forms.ProgressBar MP_pbar;
         private System.Windows.Forms.ProgressBar HP_pbar;
         private System.Windows.Forms.ProgressBar XP_pbar;
@@ -3460,26 +4336,34 @@
         private System.Windows.Forms.Label MP_lbl;
         private System.Windows.Forms.Label HP_lbl;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListView EditorItems_lbox;
+        private System.Windows.Forms.TabPage SpellsManager_tab;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox item_desc_editor_tbox;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox Item_name_editor_tbox;
-        private System.Windows.Forms.ComboBox Item_type_editor_cbox;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox EType_editor_tbox;
+        private System.Windows.Forms.Button EItem_editor_btn;
+        private System.Windows.Forms.Button DItem_editor_btn;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.NumericUpDown TURNS_editor_ud;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.NumericUpDown QTY_editor_ud;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.NumericUpDown GRADE_editor_ud;
+        private System.Windows.Forms.NumericUpDown TIER_editor_ud;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.NumericUpDown MDUR_editor_ud;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.ComboBox Item_Character_Cbox;
+        private System.Windows.Forms.Button MItem_editor_btn;
+        private System.Windows.Forms.CheckBox Oracalcite_editor_checkb;
+        private System.Windows.Forms.Button NItem_editor_btn;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.NumericUpDown DUR_editor_ud;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.NumericUpDown ENH_editor_ud;
+        private System.Windows.Forms.Label label74;
         private System.Windows.Forms.NumericUpDown ID_editor_up;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.NumericUpDown DICE_editor_ud;
@@ -3508,28 +4392,132 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.NumericUpDown HP_editor_ud;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.NumericUpDown ENH_editor_ud;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.NumericUpDown DUR_editor_ud;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.ComboBox Type_editor_cbox;
-        private System.Windows.Forms.CheckBox Orcalite_editor_checkb;
-        private System.Windows.Forms.Button NItem_editor_btn;
-        private System.Windows.Forms.Button MItem_editor_btn;
-        private System.Windows.Forms.TabPage SpellsManager_tab;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.ComboBox Item_Character_Cbox;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.NumericUpDown GRADE_editor_ud;
-        private System.Windows.Forms.NumericUpDown TIER_editor_ud;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.NumericUpDown MDUR_editor_ud;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.NumericUpDown QTY_editor_ud;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.NumericUpDown TURNS_editor_ud;
-        private System.Windows.Forms.Button DItem_editor_btn;
+        private System.Windows.Forms.ComboBox Item_type_editor_cbox;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox item_desc_editor_tbox;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox Item_name_editor_tbox;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown ELevel_editor_ud;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox Artifact_INT;
+        private System.Windows.Forms.CheckBox Weapon_INT;
+        private System.Windows.Forms.CheckBox Boots_INT;
+        private System.Windows.Forms.CheckBox Pants_INT;
+        private System.Windows.Forms.CheckBox Gloves_INT;
+        private System.Windows.Forms.CheckBox Maille_INT;
+        private System.Windows.Forms.CheckBox Helm_INT;
+        private System.Windows.Forms.CheckBox Artifact_STR;
+        private System.Windows.Forms.CheckBox Weapon_STR;
+        private System.Windows.Forms.CheckBox Boots_STR;
+        private System.Windows.Forms.CheckBox Pants_STR;
+        private System.Windows.Forms.CheckBox Gloves_STR;
+        private System.Windows.Forms.CheckBox Maille_STR;
+        private System.Windows.Forms.CheckBox Helm_STR;
+        private System.Windows.Forms.CheckBox Artifact_DEX;
+        private System.Windows.Forms.CheckBox Weapon_DEX;
+        private System.Windows.Forms.CheckBox Boots_DEX;
+        private System.Windows.Forms.CheckBox DEX;
+        private System.Windows.Forms.CheckBox Gloves_DEX;
+        private System.Windows.Forms.CheckBox Maille_DEX;
+        private System.Windows.Forms.CheckBox Helm_DEX;
+        private System.Windows.Forms.CheckBox Artifact_CHAR;
+        private System.Windows.Forms.CheckBox Weapon_CHAR;
+        private System.Windows.Forms.CheckBox Boots_CHAR;
+        private System.Windows.Forms.CheckBox Pants_CHAR;
+        private System.Windows.Forms.CheckBox Gloves_CHAR;
+        private System.Windows.Forms.CheckBox Maille_CHAR;
+        private System.Windows.Forms.CheckBox Helm_CHAR;
+        private System.Windows.Forms.CheckBox Artifact_SDEF;
+        private System.Windows.Forms.CheckBox Weapon_SDEF;
+        private System.Windows.Forms.CheckBox Boots_SDEF;
+        private System.Windows.Forms.CheckBox SDEF;
+        private System.Windows.Forms.CheckBox Gloves_SDEF;
+        private System.Windows.Forms.CheckBox Maille_SDEF;
+        private System.Windows.Forms.CheckBox Helm_SDEF;
+        private System.Windows.Forms.CheckBox Artifact_DEF;
+        private System.Windows.Forms.CheckBox Weapon_DEF;
+        private System.Windows.Forms.CheckBox Boots_DEF;
+        private System.Windows.Forms.CheckBox Pants_DEF;
+        private System.Windows.Forms.CheckBox Gloves_DEF;
+        private System.Windows.Forms.CheckBox Helm_DEF;
+        private System.Windows.Forms.CheckBox Maille_DEF;
+        private System.Windows.Forms.CheckBox Artifact_SATK;
+        private System.Windows.Forms.CheckBox Weapon_SATK;
+        private System.Windows.Forms.CheckBox Boots_SATK;
+        private System.Windows.Forms.CheckBox Pants_SATK;
+        private System.Windows.Forms.CheckBox Gloves_SATK;
+        private System.Windows.Forms.CheckBox Maille_SATK;
+        private System.Windows.Forms.CheckBox Helm_SATK;
+        private System.Windows.Forms.CheckBox Artifact_ATK;
+        private System.Windows.Forms.CheckBox Weapon_ATK;
+        private System.Windows.Forms.CheckBox Boots_ATK;
+        private System.Windows.Forms.CheckBox Pants_ATK;
+        private System.Windows.Forms.CheckBox Gloves_ATK;
+        private System.Windows.Forms.CheckBox Maille_ATK;
+        private System.Windows.Forms.CheckBox Helm_ATK;
+        private System.Windows.Forms.CheckBox Artifact_MP;
+        private System.Windows.Forms.CheckBox Weapon_MP;
+        private System.Windows.Forms.CheckBox Boots_MP;
+        private System.Windows.Forms.CheckBox Pants_MP;
+        private System.Windows.Forms.CheckBox Gloves_MP;
+        private System.Windows.Forms.CheckBox Maille_MP;
+        private System.Windows.Forms.CheckBox Artifact_HP;
+        private System.Windows.Forms.CheckBox Weapon_HP;
+        private System.Windows.Forms.CheckBox Boots_HP;
+        private System.Windows.Forms.CheckBox Pants_HP;
+        private System.Windows.Forms.CheckBox Gloves_HP;
+        private System.Windows.Forms.CheckBox Maille_HP;
+        private System.Windows.Forms.CheckBox Helm_HP;
+        private System.Windows.Forms.CheckBox Helm_MP;
+        private System.Windows.Forms.CheckBox Helm_PERC;
+        private System.Windows.Forms.CheckBox Maille_PERC;
+        private System.Windows.Forms.CheckBox Gloves_PERC;
+        private System.Windows.Forms.CheckBox Pants_PERC;
+        private System.Windows.Forms.CheckBox Boots_PERC;
+        private System.Windows.Forms.CheckBox Weapon_PERC;
+        private System.Windows.Forms.CheckBox Artifact_PERC;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button UItem_editor_btn;
+        private System.Windows.Forms.Label STATS_LBL;
+        private System.Windows.Forms.Button ATK_P_BTN;
+        private System.Windows.Forms.Button ATK_M_BTN;
+        private System.Windows.Forms.Button SATK_M_BTN;
+        private System.Windows.Forms.Button SATK_P_BTN;
+        private System.Windows.Forms.Button DEF_M_BTN;
+        private System.Windows.Forms.Button DEF_P_BTN;
+        private System.Windows.Forms.Button SDEF_M_BTN;
+        private System.Windows.Forms.Button SDEF_P_BTN;
+        private System.Windows.Forms.Button CHAR_M_BTN;
+        private System.Windows.Forms.Button CHAR_P_BTN;
+        private System.Windows.Forms.Button DEX_M_BTN;
+        private System.Windows.Forms.Button DEX_P_BTN;
+        private System.Windows.Forms.Button STR_M_BTN;
+        private System.Windows.Forms.Button STR_P_BTN;
+        private System.Windows.Forms.Button INT_M_BTN;
+        private System.Windows.Forms.Button INT_P_BTN;
+        private System.Windows.Forms.Button PERC_M_BTN;
+        private System.Windows.Forms.Button PERC_P_BTN;
+        private System.Windows.Forms.Button HP_M_BTN;
+        private System.Windows.Forms.Button HP_P_BTN;
+        private System.Windows.Forms.Button MP_M_BTN;
+        private System.Windows.Forms.Button MP_P_BTN;
+        private System.Windows.Forms.Button Stats_Apply_BTN;
     }
 }
