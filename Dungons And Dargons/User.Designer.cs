@@ -440,6 +440,7 @@
             this.Equipment_tab.TabIndex = 1;
             this.Equipment_tab.Text = "Equipment";
             this.Equipment_tab.UseVisualStyleBackColor = true;
+            this.Equipment_tab.Click += new System.EventHandler(this.Equipment_tab_Click);
             // 
             // Inventory_tab
             // 

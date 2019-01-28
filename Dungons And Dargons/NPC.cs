@@ -74,35 +74,35 @@ namespace Dungons_And_Dargons
         {
             try
             {
-                string sql = "SELECT idPlayer," +
-                    " GAMEMASTER," +
-                    " PLevel, " +
-                    " XP," +
-                    " Age," +
-                    " Gold," +
-                    " PName," +
-                    " PDescription," +
-                    " HPMax," +
-                    " HPCur," +
-                    " MPMax," +
-                    " MPCur," +
-                    " ATK," +
-                    " SATK," +
-                    " DEF," +
-                    " SDEF," +
-                    " CHARIS," +
-                    " DEX," +
-                    " STR," +
-                    " INTEL," +
-                    " PERC," +
-                    " Satiety," +
-                    " POwner," +
-                    " PLAYER," +
-                    " NPC," +
-                    " ENEMY," +
-                    " XPREQ," +
-                    " STATS" +
-                    " FROM player WHERE USERNAME='" + UserName + "'";
+                string sql = "SELECT `idPlayer`," +
+                    " `GAMEMASTER`," +
+                    " `PLevel`, " +
+                    " `XP`," +
+                    " `Age`," +
+                    " `Gold`," +
+                    " `PName`," +
+                    " `PDescription`," +
+                    " `HPMax`," +
+                    " `HPCur`," +
+                    " `MPMax`," +
+                    " `MPCur`," +
+                    " `ATK`," +
+                    " `SATK`," +
+                    " `DEF`," +
+                    " `SDEF`," +
+                    " `CHARIS`," +
+                    " `DEX`," +
+                    " `STR`," +
+                    " `INTEL`," +
+                    " `PERC`," +
+                    " `Satiety`," +
+                    " `POwner`," +
+                    " `PLAYER`," +
+                    " `NPC`," +
+                    " `ENEMY`," +
+                    " `XPREQ`," +
+                    " `STATS`" +
+                    " FROM `player` WHERE `idPlayer`='" + PlayerID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
@@ -201,7 +201,7 @@ namespace Dungons_And_Dargons
             try
             {
                 Inventory.Clear();
-                string sql = "SELECT Items_idItems FROM player_has_items WHERE Player_idPlayer=" + PlayerID.ToString();
+                string sql = "SELECT `Items_idItems` FROM `player_has_items` WHERE `Player_idPlayer`=" + PlayerID.ToString();
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 List<int> al = new List<int>();
@@ -212,7 +212,7 @@ namespace Dungons_And_Dargons
                 rdr.Close();
                 foreach (int ItemID in al)
                 {
-                    string sql2 = "SELECT Name FROM items WHERE idItems=" + ItemID.ToString();
+                    string sql2 = "SELECT `Name` FROM `items` WHERE `idItems`=" + ItemID.ToString();
                     MySqlCommand cmd2 = new MySqlCommand(sql2, conn);
                     MySqlDataReader rdr2 = cmd2.ExecuteReader();
                     while (rdr2.Read())
@@ -232,7 +232,7 @@ namespace Dungons_And_Dargons
         {
             try
             {
-                string sql = "DELETE FROM player_has_items WHERE Player_idPlayer = '" + PlayerID + "'";
+                string sql = "DELETE FROM `player_has_items` WHERE `Player_idPlayer` = '" + PlayerID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
@@ -247,7 +247,7 @@ namespace Dungons_And_Dargons
                 string IID = item.Split('<', '>')[1];
                 try
                 {
-                    string sql = "INSERT INTO player_has_items (Player_idPlayer, Items_idItems) " +
+                    string sql = "INSERT INTO `player_has_items` (`Player_idPlayer`, `Items_idItems`) " +
                         "VALUES (" + PlayerID + "," + IID + ")";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
@@ -260,5 +260,38 @@ namespace Dungons_And_Dargons
 
         }
 
+    }
+
+    class NPCS
+    {
+        MySqlConnection conn;
+        public NPCS(MySqlConnection inconn)
+        {
+            conn = inconn;
+        }
+
+        public List<NPC> GetNPCS(string WHERE, string Propety)
+        {
+            List<NPC> GotNPCS = new List<NPC>();
+            try
+            {
+                string sql = "SELECT `idPlayer` FROM `player` WHERE `" + WHERE + "`='" + Propety + "'";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                List<int> al = new List<int>();
+                while (rdr.Read())
+                {
+                    NPC GotNPC = new NPC(conn);
+                    GotNPC.PlayerID = Convert.ToInt32(rdr[0]);
+                    GotNPCS.Add(GotNPC);
+                }
+                rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return GotNPCS;
+        }
     }
 }

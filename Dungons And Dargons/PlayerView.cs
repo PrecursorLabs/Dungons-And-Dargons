@@ -12,13 +12,13 @@ using MySql.Data.MySqlClient;
 
 namespace Dungons_And_Dargons
 {
-    public partial class Player : Form
+    public partial class PlayerView : Form
     {
         MySqlConnection Pconn;
         public int PID;
         NPC SELNPC;
 
-        public Player(int ID, MySqlConnection conn)
+        public PlayerView(int ID, MySqlConnection conn)
         {
             InitializeComponent();
             PID = ID;

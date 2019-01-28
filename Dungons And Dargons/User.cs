@@ -21,7 +21,10 @@ namespace Dungons_And_Dargons
         NPC MyPlayer;
         Random rnd = new Random();
 
-        public User(string username, string ip, string password)
+        NPCS GM_NPC_LIST;
+        ITEMS GM_ITEM_LIST;
+
+        public User(int PlayerID, string ip, string password)
         {
             DBip = ip;
             DBpassword = password;
@@ -30,7 +33,11 @@ namespace Dungons_And_Dargons
             InitializeComponent();
             conn.Open();
             MyPlayer = new NPC(conn);
-            MyPlayer.UserName = username;
+
+            GM_NPC_LIST = new NPCS(conn);
+            GM_ITEM_LIST = new ITEMS(conn);
+
+            MyPlayer.PlayerID = PlayerID;
             MyPlayer.GetData();
             MyPlayer.GetInventory();
         }
@@ -196,38 +203,6 @@ namespace Dungons_And_Dargons
 
         }
 
-        private void Update_Item_Pool()
-        {
-            try
-            {
-                string sql = "SELECT idItems FROM items";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                List<int> al = new List<int>();
-                while (rdr.Read())
-                {
-                    al.Add(Convert.ToInt32(rdr[0]));
-                }
-                rdr.Close();
-                EditorItems_lbox.Items.Clear();
-                foreach (int ItemID in al)
-                {
-                    string sql2 = "SELECT Name FROM items WHERE idItems=" + ItemID.ToString();
-                    MySqlCommand cmd2 = new MySqlCommand(sql2, conn);
-                    MySqlDataReader rdr2 = cmd2.ExecuteReader();
-                    while (rdr2.Read())
-                    {
-                        EditorItems_lbox.Items.Add(Convert.ToString(rdr2[0]) + " (ID: <" + ItemID.ToString() + ">)");
-                    }
-                    rdr2.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
         private void UPDATE_btn_Click(object sender, EventArgs e)
         {
             UpdateDisplay();
@@ -248,7 +223,7 @@ namespace Dungons_And_Dargons
             if (Inventory_lbox.SelectedItem != null)
             {
                 string IID = Inventory_lbox.Items[Inventory_lbox.SelectedIndex].ToString().Split('<', '>')[1];
-                Item Iview = new Item(Convert.ToInt32(IID), conn, MyPlayer.PName);
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PName);
                 Iview.Show();
             }
         }
@@ -258,7 +233,7 @@ namespace Dungons_And_Dargons
             if (NPCS_lbox.SelectedItem != null)
             {
                 string IID = NPCS_lbox.Items[NPCS_lbox.SelectedIndex].ToString().Split('<', '>')[1];
-                Player Pview = new Player(Convert.ToInt32(IID), conn);
+                PlayerView Pview = new PlayerView(Convert.ToInt32(IID), conn);
                 Pview.Show();
             }
         }
@@ -270,105 +245,39 @@ namespace Dungons_And_Dargons
 
         private void NItem_editor_btn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string NItem_Consumable = "0";
-                string NItem_Healing = "0";
-                string NItem_Artifact = "0";
-                string NItem_Weapon = "0";
-                string NItem_Helmet = "0";
-                string NItem_Maille = "0";
-                string NItem_Gloves = "0";
-                string NItem_Pants = "0";
-                string NItem_Boots = "0";
-                switch (Item_type_editor_cbox.SelectedItem)
-                {
-                    case "HealthPotion":
-                        NItem_Healing = "1";
-                        NItem_Consumable = "1";
-                        HP_editor_ud.Value = 1;
-                        break;
-                    case "ManaPotion":
-                        NItem_Healing = "1";
-                        NItem_Consumable = "1";
-                        MP_editor_ud.Value = 1;
-                        break;
-                    case "Consumable":
-                        NItem_Consumable = "1";
-                        break;
-                    case "Artifact":
-                        NItem_Artifact = "1";
-                        break;
-                    case "Weapon":
-                        NItem_Weapon = "1";
-                        break;
-                    case "Helmet":
-                        NItem_Helmet = "1";
-                        break;
-                    case "Maille":
-                        NItem_Maille = "1";
-                        break;
-                    case "Gloves":
-                        NItem_Gloves = "1";
-                        break;
-                    case "Pants":
-                        NItem_Pants = "1";
-                        break;
-                    case "Boots":
-                        NItem_Boots = "1";
-                        break;
-                    case "Miscellaneous":
-                        break;
-                }
+            ITEM IEDITOR_ITEM = new ITEM(conn);
+            IEDITOR_ITEM.Name = Item_name_editor_tbox.Text;
+            IEDITOR_ITEM.Description = item_desc_editor_tbox.Text;
+            IEDITOR_ITEM.Dice = (int)DICE_editor_ud.Value;
+            IEDITOR_ITEM.M_HP = (int)HP_editor_ud.Value;
+            IEDITOR_ITEM.M_MP = (int)MP_editor_ud.Value;
+            IEDITOR_ITEM.M_ATK = (int)ATK_editor_ud.Value;
+            IEDITOR_ITEM.M_SATK = (int)SATK_editor_ud.Value;
+            IEDITOR_ITEM.M_DEF = (int)DEF_editor_ud.Value;
+            IEDITOR_ITEM.M_SDEF = (int)SDEF_editor_ud.Value;
+            IEDITOR_ITEM.M_CHAR = (int)CHAR_editor_ud.Value;
+            IEDITOR_ITEM.M_DEX = (int)DEX_editor_ud.Value;
+            IEDITOR_ITEM.M_STR = (int)STR_editor_ud.Value;
+            IEDITOR_ITEM.M_INT = (int)INT_editor_ud.Value;
+            IEDITOR_ITEM.M_PERC = (int)PERC_editor_ud.Value;
+            IEDITOR_ITEM.Satiety = (int)SAT_editor_ud.Value;
+            IEDITOR_ITEM.Equipped = false;
+            IEDITOR_ITEM.Turns = (int)TURNS_editor_ud.Value;
+            IEDITOR_ITEM.Quantity = (int)QTY_editor_ud.Value;
+            IEDITOR_ITEM.Enhance = (int)ENH_editor_ud.Value;
+            IEDITOR_ITEM.Durability = (int)DUR_editor_ud.Value;
+            IEDITOR_ITEM.MaxDurability = (int)MDUR_editor_ud.Value;
+            IEDITOR_ITEM.Tier = (int)TIER_editor_ud.Value;
+            IEDITOR_ITEM.Grade = (int)GRADE_editor_ud.Value;
+            IEDITOR_ITEM.EType = EType_editor_tbox.Text;
+            IEDITOR_ITEM.ELevel = (int)ELevel_editor_ud.Value;
+            IEDITOR_ITEM.Oracalcite = Oracalcite_editor_checkb.Checked;
 
-                string sql = "INSERT INTO `items`" +
-                    " (`Name`, `Description`, `Dice`, `M_HP`, `M_MP`, `M_ATK`, `M_SATK`, `M_DEF`, `M_SDEF`, `M_CHAR`, `M_DEX`, `M_STR`, `M_INT`, `M_PERC`" +
-                    ", `Weapon`, `Consumable`, `Helm`, `Maille`, `Gloves`, `Pants`, `boot`, `Artifact`, `Healing`, `Satiety`, `Equipped`, `Turns`, `Quantity`, `Enhance`, `Durability`, `MaxDurability`, `Tier`, `Grade`, `EType`, `ELevel`, `Oracalcite`)" +
-                    " VALUES" +
-                    " ('" + Item_name_editor_tbox.Text + "'," +
-                    " '" + item_desc_editor_tbox.Text + "'," +
-                    " '" + DICE_editor_ud.Value + "'," +
-                    " '" + HP_editor_ud.Value + "'," +
-                    " '" + MP_editor_ud.Value + "'," +
-                    " '" + ATK_editor_ud.Value + "'," +
-                    " '" + SATK_editor_ud.Value + "'," +
-                    " '" + DEF_editor_ud.Value + "'," +
-                    " '" + SDEF_editor_ud.Value + "'," +
-                    " '" + CHAR_editor_ud.Value + "'," +
-                    " '" + DEX_editor_ud.Value + "'," +
-                    " '" + STR_editor_ud.Value + "'," +
-                    " '" + INT_editor_ud.Value + "'," +
-                    " '" + PERC_editor_ud.Value + "'," +
-                    " '" + NItem_Weapon + "'," +
-                    " '" + NItem_Consumable + "'," +
-                    " '" + NItem_Helmet + "'," +
-                    " '" + NItem_Maille + "'," +
-                    " '" + NItem_Gloves + "'," +
-                    " '" + NItem_Pants + "'," +
-                    " '" + NItem_Boots + "'," +
-                    " '" + NItem_Artifact + "'," +
-                    " '" + NItem_Healing + "'," +
-                    " '" + SAT_editor_ud.Value + "'," +
-                    " '0'," +
-                    " '" + TURNS_editor_ud.Value + "'," +
-                    " '" + QTY_editor_ud.Value + "'," +
-                    " '" + ENH_editor_ud.Value + "'," +
-                    " '" + DUR_editor_ud.Value + "'," +
-                    " '" + MDUR_editor_ud.Value + "'," +
-                    " '" + TIER_editor_ud.Value + "'," +
-                    " '" + GRADE_editor_ud.Value + "'," +
-                    " '" + EType_editor_tbox.Text + "'," +
-                    " '" + ELevel_editor_ud.Value + "'," +
-                    " '" + Convert.ToInt32(Oracalcite_editor_checkb.Checked) + "');";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            Update_Item_Pool();
-        }
+            IEDITOR_ITEM.Type_To_Prop(Item_type_editor_cbox.SelectedItem.ToString());
+
+            IEDITOR_ITEM.CreateData();
+            UItem_editor_btn.PerformClick();
+    }
 
         private void EditorItems_lbox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -379,240 +288,87 @@ namespace Dungons_And_Dargons
             }
             if (IID != "Dead")
             {
-                try
-                {
-                    string sql = "SELECT idItems, Name, Description, Dice, M_HP, M_MP, M_ATK, M_SATK, M_DEF, M_SDEF, M_CHAR," +
-                        " M_DEX, M_STR, M_INT, M_PERC, Weapon, Consumable, Helm, Maille, Gloves, Pants, boot, Artifact, Healing," +
-                        " Satiety, Turns, Quantity, Enhance, Durability, MaxDurability, Tier, Grade, EType, ELevel, Oracalcite" +
-                        " FROM items WHERE idItems=" + IID;
-                    MySqlCommand cmd = new MySqlCommand(sql, conn);
-                    MySqlDataReader rdr = cmd.ExecuteReader();
-                    int count = 0;
+                ITEM IEDITOR_ITEM = new ITEM(conn);
+                IEDITOR_ITEM.ItemID = Convert.ToInt32(IID);
+                IEDITOR_ITEM.GetData();
 
-                    int Weapon = 0;
-                    int Consumable = 0;
-                    int Helm = 0;
-                    int Maille = 0;
-                    int Gloves = 0;
-                    int Pants = 0;
-                    int Boot = 0;
-                    int Artifact = 0;
-                    int Healing = 0;
+                ID_editor_up.Value = IEDITOR_ITEM.ItemID;
+                Item_type_editor_cbox.SelectedItem = IEDITOR_ITEM.Prop_To_Type();
 
-                    while (rdr.Read())
-                    {
-                        ID_editor_up.Value = Convert.ToInt32(rdr[0]);
-                        Item_name_editor_tbox.Text = Convert.ToString(rdr[1]);
-                        item_desc_editor_tbox.Text = Convert.ToString(rdr[2]);
-                        DICE_editor_ud.Value = Convert.ToInt32(rdr[3]);
-                        HP_editor_ud.Value = Convert.ToInt32(rdr[4]);
-                        MP_editor_ud.Value = Convert.ToInt32(rdr[5]);
-                        ATK_editor_ud.Value = Convert.ToInt32(rdr[6]);
-                        SATK_editor_ud.Value = Convert.ToInt32(rdr[7]);
-                        DEF_editor_ud.Value = Convert.ToInt32(rdr[8]);
-                        SDEF_editor_ud.Value = Convert.ToInt32(rdr[9]);
-                        CHAR_editor_ud.Value = Convert.ToInt32(rdr[10]);
-                        DEX_editor_ud.Value = Convert.ToInt32(rdr[11]);
-                        STR_editor_ud.Value = Convert.ToInt32(rdr[12]);
-                        INT_editor_ud.Value = Convert.ToInt32(rdr[13]);
-                        PERC_editor_ud.Value = Convert.ToInt32(rdr[14]);
-                        Weapon = Convert.ToInt32(rdr[15]);
-                        Consumable = Convert.ToInt32(rdr[16]);
-                        Helm = Convert.ToInt32(rdr[17]);
-                        Maille = Convert.ToInt32(rdr[18]);
-                        Gloves = Convert.ToInt32(rdr[19]);
-                        Pants = Convert.ToInt32(rdr[20]);
-                        Boot = Convert.ToInt32(rdr[21]);
-                        Artifact = Convert.ToInt32(rdr[22]);
-                        Healing = Convert.ToInt32(rdr[23]);
-                        SAT_editor_ud.Value = Convert.ToInt32(rdr[24]);
-                        TURNS_editor_ud.Value = Convert.ToInt32(rdr[25]);
-                        QTY_editor_ud.Value = Convert.ToInt32(rdr[26]);
-                        ENH_editor_ud.Value = Convert.ToInt32(rdr[27]);
-                        DUR_editor_ud.Value = Convert.ToInt32(rdr[28]);
-                        MDUR_editor_ud.Value = Convert.ToInt32(rdr[29]);
-                        TIER_editor_ud.Value = Convert.ToInt32(rdr[30]);
-                        GRADE_editor_ud.Value = Convert.ToInt32(rdr[31]);
-                        EType_editor_tbox.Text = Convert.ToString(rdr[32]);
-                        ELevel_editor_ud.Value = Convert.ToInt32(rdr[33]);
-                        Oracalcite_editor_checkb.Checked = Convert.ToBoolean(rdr[34]);
-                        count++;
-                    }
-
-                    if (Weapon == 0 && Helm == 0 && Maille == 0 && Gloves == 0 && Pants == 0 && Boot == 0)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "Miscellaneous";
-                    }
-
-
-                    if (Healing == 1 && Consumable == 1 && Convert.ToInt32(rdr[4]) == 1)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "HealthPotion";
-                    }
-
-                    if (Healing == 1 && Consumable == 1 && Convert.ToInt32(rdr[5]) == 1)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "ManaPotion";
-                    }
-
-                    if (Artifact == 1)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "Artifact";
-                    }
-
-                    if (Weapon == 1)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "Weapon";
-                    }
-
-                    if (Helm == 1)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "Helmet";
-                    }
-
-                    if (Maille == 1)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "Maille";
-                    }
-
-                    if (Gloves == 1)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "Gloves";
-                    }
-
-                    if (Pants == 1)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "Pants";
-                    }
-
-                    if (Boot == 1)
-                    {
-                        Item_type_editor_cbox.SelectedItem = "Boots";
-                    }
-                    rdr.Close();
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
+                Item_name_editor_tbox.Text = IEDITOR_ITEM.Name;
+                item_desc_editor_tbox.Text = IEDITOR_ITEM.Description;
+                DICE_editor_ud.Value = IEDITOR_ITEM.Dice;
+                HP_editor_ud.Value = IEDITOR_ITEM.M_HP;
+                MP_editor_ud.Value = IEDITOR_ITEM.M_MP;
+                ATK_editor_ud.Value = IEDITOR_ITEM.M_ATK;
+                SATK_editor_ud.Value = IEDITOR_ITEM.M_SATK;
+                DEF_editor_ud.Value = IEDITOR_ITEM.M_DEF;
+                SDEF_editor_ud.Value = IEDITOR_ITEM.M_SDEF;
+                CHAR_editor_ud.Value = IEDITOR_ITEM.M_CHAR;
+                DEX_editor_ud.Value = IEDITOR_ITEM.M_DEX;
+                STR_editor_ud.Value = IEDITOR_ITEM.M_STR;
+                INT_editor_ud.Value = IEDITOR_ITEM.M_INT;
+                PERC_editor_ud.Value = IEDITOR_ITEM.M_PERC;
+                SAT_editor_ud.Value = IEDITOR_ITEM.Satiety;
+                TURNS_editor_ud.Value = IEDITOR_ITEM.Turns;
+                QTY_editor_ud.Value = IEDITOR_ITEM.Quantity;
+                ENH_editor_ud.Value = IEDITOR_ITEM.Enhance;
+                DUR_editor_ud.Value = IEDITOR_ITEM.Durability;
+                MDUR_editor_ud.Value = IEDITOR_ITEM.MaxDurability;
+                TIER_editor_ud.Value = IEDITOR_ITEM.Tier;
+                GRADE_editor_ud.Value = IEDITOR_ITEM.Grade;
+                EType_editor_tbox.Text = IEDITOR_ITEM.EType;
+                ELevel_editor_ud.Value = IEDITOR_ITEM.ELevel;
+                Oracalcite_editor_checkb.Checked = IEDITOR_ITEM.Oracalcite;
             }
 
         }
 
         private void DItem_editor_btn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string sql = "DELETE FROM `items` WHERE `idItems` = " + ID_editor_up.Value + "";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            Update_Item_Pool();
+            ITEM IEDITOR_ITEM = new ITEM(conn);
+            IEDITOR_ITEM.ItemID = (int)ID_editor_up.Value;
+            IEDITOR_ITEM.GetData();
+            IEDITOR_ITEM.Delete();
+            UItem_editor_btn.PerformClick();
         }
 
         private void MItem_editor_btn_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-                string NItem_Consumable = "0";
-                string NItem_Healing = "0";
-                string NItem_Artifact = "0";
-                string NItem_Weapon = "0";
-                string NItem_Helmet = "0";
-                string NItem_Maille = "0";
-                string NItem_Gloves = "0";
-                string NItem_Pants = "0";
-                string NItem_Boots = "0";
-                switch (Item_type_editor_cbox.SelectedItem)
-                {
-                    case "HealthPotion":
-                        NItem_Healing = "1";
-                        NItem_Consumable = "1";
-                        HP_editor_ud.Value = 1;
-                        break;
-                    case "ManaPotion":
-                        NItem_Healing = "1";
-                        NItem_Consumable = "1";
-                        MP_editor_ud.Value = 1;
-                        break;
-                    case "Consumable":
-                        NItem_Consumable = "1";
-                        break;
-                    case "Artifact":
-                        NItem_Artifact = "1";
-                        break;
-                    case "Weapon":
-                        NItem_Weapon = "1";
-                        break;
-                    case "Helmet":
-                        NItem_Helmet = "1";
-                        break;
-                    case "Maille":
-                        NItem_Maille = "1";
-                        break;
-                    case "Gloves":
-                        NItem_Gloves = "1";
-                        break;
-                    case "Pants":
-                        NItem_Pants = "1";
-                        break;
-                    case "Boots":
-                        NItem_Boots = "1";
-                        break;
-                    case "Miscellaneous":
-                        break;
+            ITEM IEDITOR_ITEM = new ITEM(conn);
+            IEDITOR_ITEM.ItemID = (int)ID_editor_up.Value;
+            IEDITOR_ITEM.Name = Item_name_editor_tbox.Text;
+            IEDITOR_ITEM.Description = item_desc_editor_tbox.Text;
+            IEDITOR_ITEM.Dice = (int)DICE_editor_ud.Value;
+            IEDITOR_ITEM.M_HP = (int)HP_editor_ud.Value;
+            IEDITOR_ITEM.M_MP = (int)MP_editor_ud.Value;
+            IEDITOR_ITEM.M_ATK = (int)ATK_editor_ud.Value;
+            IEDITOR_ITEM.M_SATK = (int)SATK_editor_ud.Value;
+            IEDITOR_ITEM.M_DEF = (int)DEF_editor_ud.Value;
+            IEDITOR_ITEM.M_SDEF = (int)SDEF_editor_ud.Value;
+            IEDITOR_ITEM.M_CHAR = (int)CHAR_editor_ud.Value;
+            IEDITOR_ITEM.M_DEX = (int)DEX_editor_ud.Value;
+            IEDITOR_ITEM.M_STR = (int)STR_editor_ud.Value;
+            IEDITOR_ITEM.M_INT = (int)INT_editor_ud.Value;
+            IEDITOR_ITEM.M_PERC = (int)PERC_editor_ud.Value;
+            IEDITOR_ITEM.Satiety = (int)SAT_editor_ud.Value;
+            IEDITOR_ITEM.Equipped = false;
+            IEDITOR_ITEM.Turns = (int)TURNS_editor_ud.Value;
+            IEDITOR_ITEM.Quantity = (int)QTY_editor_ud.Value;
+            IEDITOR_ITEM.Enhance = (int)ENH_editor_ud.Value;
+            IEDITOR_ITEM.Durability = (int)DUR_editor_ud.Value;
+            IEDITOR_ITEM.MaxDurability = (int)MDUR_editor_ud.Value;
+            IEDITOR_ITEM.Tier = (int)TIER_editor_ud.Value;
+            IEDITOR_ITEM.Grade = (int)GRADE_editor_ud.Value;
+            IEDITOR_ITEM.EType = EType_editor_tbox.Text;
+            IEDITOR_ITEM.ELevel = (int)ELevel_editor_ud.Value;
+            IEDITOR_ITEM.Oracalcite = Oracalcite_editor_checkb.Checked;
 
-                }
-                string sql = "UPDATE items SET" +
-                    " Name = '" + Item_name_editor_tbox.Text.Replace("'", "\\'") + "'," +
-                    " Description = '" + item_desc_editor_tbox.Text.Replace("'", "\\'") + "'," +
-                    " Dice = '" + DICE_editor_ud.Value + "', " +
-                    " M_HP = '" + HP_editor_ud.Value + "'," +
-                    " M_MP = '" + MP_editor_ud.Value + "'," +
-                    " M_ATK = '" + ATK_editor_ud.Value + "'," +
-                    " M_SATK = '" + SATK_editor_ud.Value + "'," +
-                    " M_DEF = '" + DEF_editor_ud.Value + "'," +
-                    " M_SDEF = '" + SDEF_editor_ud.Value + "'," +
-                    " M_CHAR = '" + CHAR_editor_ud.Value + "'," +
-                    " M_DEX = '" + DEX_editor_ud.Value + "'," +
-                    " M_STR = '" + STR_editor_ud.Value + "'," +
-                    " M_INT = '" + INT_editor_ud.Value + "'," +
-                    " M_PERC = '" + PERC_editor_ud.Value + "'," +
-                    " Weapon = '" + NItem_Weapon + "'," +
-                    " Consumable = '" + NItem_Consumable + "'," +
-                    " HELM = '" + NItem_Helmet + "'," +
-                    " Maille = '" + NItem_Maille + "'," +
-                    " Gloves = '" + NItem_Gloves + "'," +
-                    " Pants = '" + NItem_Pants + "'," +
-                    " boot = '" + NItem_Boots + "'," +
-                    " Artifact = '" + NItem_Artifact + "'," +
-                    " Healing = '" + NItem_Healing + "'," +
-                    " Satiety = '" + SAT_editor_ud.Value + "'," +
-                    " Turns = '" + TURNS_editor_ud.Value + "'," +
-                    " Quantity = '" + QTY_editor_ud.Value + "'," +
-                    " Enhance = '" + ENH_editor_ud.Value + "'," +
-                    " Durability = '" + DUR_editor_ud.Value + "'," +
-                    " MaxDurability = '" + MDUR_editor_ud.Value + "'," +
-                    " Tier = '" + TIER_editor_ud.Value + "'," +
-                    " Grade = '" + GRADE_editor_ud.Value + "'," +
-                    " EType = '" + EType_editor_tbox.Text.Replace("'", "\\'") + "'," +
-                    " ELevel = '" + ELevel_editor_ud.Value + "'," +
-                    " Oracalcite = '" + Convert.ToInt32(Oracalcite_editor_checkb.Checked) + "'" +
-                    " WHERE idItems='" + ID_editor_up.Value + "'";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            Update_Item_Pool();
+            IEDITOR_ITEM.Type_To_Prop(Item_type_editor_cbox.SelectedItem.ToString());
+
+            IEDITOR_ITEM.PostData();
+            UItem_editor_btn.PerformClick();
         }
 
         private void EItem_editor_btn_Click(object sender, EventArgs e)
@@ -712,13 +468,19 @@ namespace Dungons_And_Dargons
                 MessageBox.Show("Enhanced");
             } else
             {
-                MessageBox.Show("Not Enhancable ");
+                MessageBox.Show("Not Enhanceable ");
             }
         }
 
         private void UItem_editor_btn_Click(object sender, EventArgs e)
         {
-            Update_Item_Pool();
+            List<ITEM> GM_ITEMS = GM_ITEM_LIST.GetITEM("ALL", "1");
+            EditorItems_lbox.Items.Clear();
+            foreach (ITEM GM_ITEM in GM_ITEMS)
+            {
+                GM_ITEM.GetData();
+                EditorItems_lbox.Items.Add(GM_ITEM.Name + " (ID: <" + GM_ITEM.ItemID + ">)");
+            }
         }
 
         //STATS 
@@ -1028,37 +790,39 @@ namespace Dungons_And_Dargons
 
         private void CM_UPDATE_BTN_Click(object sender, EventArgs e)
         {
-            try
+            string WHERE = "ALL";
+            string Property = "1";
+            switch (Filter_Relation.SelectedItem)
             {
-                string sql = "SELECT PName, idPlayer FROM player";
-                switch (Filter_Relation.SelectedItem)
-                {
-                    case "Player":
-                        sql = "SELECT PName, idPlayer FROM player WHERE PLAYER='1'";
-                        break;
-                    case "Enemy":
-                        sql = "SELECT PName, idPlayer FROM player WHERE ENEMY='1'";
-                        break;
-                    case "NPC":
-                        sql = "SELECT PName, idPlayer FROM player WHERE NPC='1'";
-                        break;
-                    case "ALL":
-                        break;
-                }
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                NPCS_lbox.Items.Clear();
-                while (rdr.Read())
-                {
-                    NPCS_lbox.Items.Add(Convert.ToString(rdr[0]) + " (ID: <" + Convert.ToString(rdr[1]) + ">)");
-                }
-                rdr.Close();
+                case "Player":
+                    WHERE = "PLAYER";
+                    Property = "1";
+                    break;
+                case "Enemy":
+                    WHERE = "ENEMY";
+                    Property = "1";
+                    break;
+                case "NPC":
+                    WHERE = "NPC";
+                    Property = "1";
+                    break;
+                case "All":
+                    WHERE = "ALL";
+                    Property = "1";
+                    break;
             }
-            catch (Exception ex)
+            List<NPC> GM_NPCS = GM_NPC_LIST.GetNPCS(WHERE, Property);
+            NPCS_lbox.Items.Clear();
+            foreach (NPC Player in GM_NPCS)
             {
-                MessageBox.Show(ex.ToString());
+                Player.GetData();
+                NPCS_lbox.Items.Add(Player.PName + " (ID: <" + Player.PlayerID + ">)");
             }
         }
 
+        private void Equipment_tab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

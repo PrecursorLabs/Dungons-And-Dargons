@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-
 namespace Dungons_And_Dargons
 {
-    class ITEM
+    class SPELL
     {
         MySqlConnection conn;
         public int ItemID { get; set; }
@@ -54,7 +53,7 @@ namespace Dungons_And_Dargons
         public bool Oracalcite { get; set; }
 
 
-        public ITEM(MySqlConnection inconn)
+        public SPELL(MySqlConnection inconn)
         {
             conn = inconn;
         }
@@ -293,40 +292,6 @@ namespace Dungons_And_Dargons
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-    }
-    class ITEMS
-    {
-        MySqlConnection conn;
-        public ITEMS(MySqlConnection inconn)
-        {
-            conn = inconn;
-        }
-
-        public List<ITEM> GetITEM(string WHERE, string Propety)
-        {
-            List<ITEM> GotITEMS = new List<ITEM>();
-            try
-            {
-                
-                string sql = "SELECT `idItems` FROM `items` WHERE `" + WHERE + "`='" + Propety + "'";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                List<int> al = new List<int>();
-                while (rdr.Read())
-                {
-                    ITEM GotITEM = new ITEM(conn);
-                    GotITEM.ItemID = Convert.ToInt32(rdr[0]);
-                    GotITEMS.Add(GotITEM);
-                }
-                rdr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            return GotITEMS;
         }
     }
 }

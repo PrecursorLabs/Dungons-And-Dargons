@@ -42,7 +42,7 @@ namespace Dungons_And_Dargons
                     Log_lbox.Items.Add("Login Succesful Your id is " + rdr[0]);
                     MessageBox.Show("Login Succesful Your id is " + rdr[0]);
                     this.Hide();
-                    User UserForm = new User(Name_tbox.Text, ip_tbox.Text, dbpassword_tbox.Text);
+                    User UserForm = new User(Convert.ToInt32(rdr[0]), ip_tbox.Text, dbpassword_tbox.Text);
                     UserForm.ShowDialog();
                     Application.UserAppDataRegistry.SetValue("IPString", ip_tbox.Text);
                     Application.UserAppDataRegistry.SetValue("DBPassString", dbpassword_tbox.Text);

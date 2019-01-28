@@ -1,6 +1,6 @@
 ﻿namespace Dungons_And_Dargons
 {
-    partial class Player
+    partial class PlayerView
     {
         /// <summary>
         /// Required designer variable.

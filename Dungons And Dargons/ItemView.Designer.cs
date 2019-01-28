@@ -1,6 +1,6 @@
 ﻿namespace Dungons_And_Dargons
 {
-    partial class Item
+    partial class ItemView
     {
         /// <summary>
         /// Required designer variable.
