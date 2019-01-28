@@ -153,8 +153,8 @@ namespace Dungons_And_Dargons
             }
 
             STATS_LBL.Text = "STATS: " + MyPlayer.STATS.ToString();
-            HP_lbl.Text = "HP: " + MyPlayer.HP.ToString() + "/" + MyPlayer.HPMax.ToString();
-            MP_lbl.Text = "MP: " + MyPlayer.MP.ToString() + "/" + MyPlayer.MPMax.ToString();
+            HP_lbl.Text = "HP: " + MyPlayer.HP.ToString() + "/" + (MyPlayer.HPMax + MyPlayer.M_HP).ToString();
+            MP_lbl.Text = "MP: " + MyPlayer.MP.ToString() + "/" + (MyPlayer.MPMax + MyPlayer.M_MP).ToString();
             ATK_tbox.Text = MyPlayer.ATK.ToString();
             SATK_tbox.Text = MyPlayer.SATK.ToString();
             DEF_tbox.Text = MyPlayer.DEF.ToString();
@@ -167,11 +167,73 @@ namespace Dungons_And_Dargons
             Satiety_tbox.Text = MyPlayer.SATIE.ToString();
             Gold_tbox.Text = MyPlayer.Gold.ToString();
 
-            HP_pbar.Maximum = MyPlayer.HPMax;
-            HP_pbar.Value = MyPlayer.HP;
+            M_ATK_tbox.Text = MyPlayer.M_ATK.ToString();
+            M_SATK_tbox.Text = MyPlayer.M_SATK.ToString();
+            M_DEF_tbox.Text = MyPlayer.M_DEF.ToString();
+            M_SDEF_tbox.Text = MyPlayer.M_SDEF.ToString();
+            M_CHAR_tbox.Text = MyPlayer.M_CHAR.ToString();
+            M_DEX_tbox.Text = MyPlayer.M_DEX.ToString();
+            M_STR_tbox.Text = MyPlayer.M_STR.ToString();
+            M_INT_tbox.Text = MyPlayer.M_INT.ToString();
+            M_PERC_tbox.Text = MyPlayer.M_PERC.ToString();
 
-            MP_pbar.Maximum = MyPlayer.MPMax;
-            MP_pbar.Value = MyPlayer.MP;
+            Equipment_lbox.Items.Clear();
+            if (MyPlayer.Helmet.Name != null)
+            {
+                Equipment_lbox.Items.Add("Helmet: " + MyPlayer.Helmet.ITEM_DATA());
+            }
+
+            if (MyPlayer.Maille.Name != null)
+            {
+                Equipment_lbox.Items.Add("Maille: " + MyPlayer.Maille.ITEM_DATA());
+            }
+
+            if (MyPlayer.Pants.Name != null)
+            {
+                Equipment_lbox.Items.Add("Pants: " + MyPlayer.Pants.ITEM_DATA());
+            }
+
+            if (MyPlayer.Boots.Name != null)
+            {
+                Equipment_lbox.Items.Add("Boots: " + MyPlayer.Boots.ITEM_DATA());
+            }
+
+            if (MyPlayer.Gloves.Name != null)
+            {
+                Equipment_lbox.Items.Add("Gloves: " + MyPlayer.Gloves.ITEM_DATA());
+            }
+
+            if (MyPlayer.Weapon.Name != null)
+            {
+                Equipment_lbox.Items.Add("Weapon: " + MyPlayer.Weapon.ITEM_DATA());
+            }
+
+            if (MyPlayer.Artifact.Name != null)
+            {
+                Equipment_lbox.Items.Add("Artifact: " + MyPlayer.Artifact.ITEM_DATA());
+            }
+
+
+            HP_pbar.Maximum = MyPlayer.HPMax + MyPlayer.M_HP;
+            if (MyPlayer.HP > MyPlayer.HPMax + MyPlayer.M_HP)
+            {
+                HP_pbar.Value = MyPlayer.HPMax + MyPlayer.M_HP;
+            }
+            else
+            {
+                HP_pbar.Value = MyPlayer.HP;
+            }
+
+            MP_pbar.Maximum = MyPlayer.MPMax + MyPlayer.M_MP;
+            if (MyPlayer.MP > MyPlayer.MPMax + MyPlayer.M_MP)
+            {
+                MP_pbar.Value = MyPlayer.HPMax + MyPlayer.M_HP;
+            }
+            else
+            {
+                MP_pbar.Value = MyPlayer.MP;
+            }
+
             if (MyPlayer.XPREQ >= MyPlayer.XP)
             {
                 XP_pbar.Maximum = MyPlayer.XPREQ;
@@ -206,6 +268,11 @@ namespace Dungons_And_Dargons
                 OLD_INVENTORY.Clear();
                 foreach (ITEM item in MyPlayer.Inventory)
                 {
+                    item.GetData();
+                    if (item.Equipable())
+                    {
+                        Equipable_lbox.Items.Add(item.Prop_To_Type() + ": " + item.ITEM_DATA());
+                    }
                     Inventory_lbox.Items.Add(item.ITEM_DATA());
                     OLD_INVENTORY.Add(item);
                 }
@@ -974,6 +1041,37 @@ namespace Dungons_And_Dargons
                 MSlots_Spell_editor_ud.Value = SEDITOR_SPELL.MaxSlots;
                 Slots_Spell_editor_ud.Value = SEDITOR_SPELL.Slots;
             }
+
+        }
+
+        private void Equipment_lbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Equipment_lbox.SelectedItem != null)
+            {
+                string IID = Equipment_lbox.SelectedItem.ToString().Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
+                Iview.Show();
+            }
+        }
+
+        private void Equipable_lbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Equipable_lbox.SelectedItem != null)
+            {
+                string IID = Equipable_lbox.SelectedItem.ToString().Split('<', '>')[1];
+                ITEM TO_Equip = new ITEM(conn);
+                TO_Equip.ItemID = Convert.ToInt32(IID);
+                TO_Equip.GetData();
+                MyPlayer.DeEquip(TO_Equip.Prop_To_Type());
+                MyPlayer.Equip(TO_Equip);
+                UPDATE_btn.PerformClick();
+            }
+        }
+
+        private void DeEquipAll_btn_Click(object sender, EventArgs e)
+        {
+            MyPlayer.DeEquip("ALL");
+            UPDATE_btn.PerformClick();
 
         }
     }

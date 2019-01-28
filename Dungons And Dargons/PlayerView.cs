@@ -61,6 +61,51 @@ namespace Dungons_And_Dargons
             Satiety_tbox.Text = SELNPC.SATIE.ToString();
             Gold_tbox.Text = SELNPC.Gold.ToString();
 
+            M_ATK_tbox.Text = SELNPC.M_ATK.ToString();
+            M_SATK_tbox.Text = SELNPC.M_SATK.ToString();
+            M_DEF_tbox.Text = SELNPC.M_DEF.ToString();
+            M_SDEF_tbox.Text = SELNPC.M_SDEF.ToString();
+            M_CHAR_tbox.Text = SELNPC.M_CHAR.ToString();
+            M_DEX_tbox.Text = SELNPC.M_DEX.ToString();
+            M_STR_tbox.Text = SELNPC.M_STR.ToString();
+            M_INT_tbox.Text = SELNPC.M_INT.ToString();
+            M_PERC_tbox.Text = SELNPC.M_PERC.ToString();
+
+            if (SELNPC.Helmet.Name != null)
+            {
+                Equipment_lbox.Items.Add("Helmet: " + SELNPC.Helmet.ITEM_DATA());
+            }
+
+            if (SELNPC.Maille.Name != null)
+            {
+                Equipment_lbox.Items.Add("Maille: " + SELNPC.Maille.ITEM_DATA());
+            }
+
+            if (SELNPC.Pants.Name != null)
+            {
+                Equipment_lbox.Items.Add("Pants: " + SELNPC.Pants.ITEM_DATA());
+            }
+
+            if (SELNPC.Boots.Name != null)
+            {
+                Equipment_lbox.Items.Add("Boots: " + SELNPC.Boots.ITEM_DATA());
+            }
+
+            if (SELNPC.Gloves.Name != null)
+            {
+                Equipment_lbox.Items.Add("Gloves: " + SELNPC.Gloves.ITEM_DATA());
+            }
+
+            if (SELNPC.Weapon.Name != null)
+            {
+                Equipment_lbox.Items.Add("Weapon: " + SELNPC.Weapon.ITEM_DATA());
+            }
+
+            if (SELNPC.Artifact.Name != null)
+            {
+                Equipment_lbox.Items.Add("Artifact: " + SELNPC.Artifact.ITEM_DATA());
+            }
+
             HP_pbar.Maximum = SELNPC.HPMax;
             HP_pbar.Value = SELNPC.HP;
 
@@ -166,6 +211,16 @@ namespace Dungons_And_Dargons
                 string IID = Spells_lbox.SelectedItem.ToString().Split('<', '>')[1];
                 SpellView Sview = new SpellView(Convert.ToInt32(IID), Pconn);
                 Sview.Show();
+            }
+        }
+
+        private void Equipment_lbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Equipment_lbox.SelectedItem != null)
+            {
+                string IID = Equipment_lbox.SelectedItem.ToString().Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), Pconn, -1);
+                Iview.Show();
             }
         }
     }

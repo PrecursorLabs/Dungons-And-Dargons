@@ -41,6 +41,18 @@ namespace Dungons_And_Dargons
         public int SATIE { get; set; }
         public int STATS { get; set; }
 
+        public int M_HP { get; set; }
+        public int M_MP { get; set; }
+        public int M_ATK { get; set; }
+        public int M_SATK { get; set; }
+        public int M_DEF { get; set; }
+        public int M_SDEF { get; set; }
+        public int M_CHAR { get; set; }
+        public int M_DEX { get; set; }
+        public int M_STR { get; set; }
+        public int M_INT { get; set; }
+        public int M_PERC { get; set; }
+
         public string PlayerOwner { get; set; }
 
         public Boolean GAMEMASTER { get; set; }
@@ -50,6 +62,14 @@ namespace Dungons_And_Dargons
 
         public List<ITEM> Inventory { get; }
         public List<SPELL> Spells { get; }
+
+        public ITEM Helmet { get; private set; }
+        public ITEM Maille { get; private set; }
+        public ITEM Pants { get; private set; }
+        public ITEM Boots { get; private set; }
+        public ITEM Gloves { get; private set; }
+        public ITEM Weapon { get; private set; }
+        public ITEM Artifact { get; private set; }
 
         public int NHPMax { get; set; }
         public int NMPMax { get; set; }
@@ -70,12 +90,179 @@ namespace Dungons_And_Dargons
             conn = inconn;
             Inventory = new List<ITEM>();
             Spells = new List<SPELL>();
+
+            Helmet = new ITEM(conn);
+            Maille = new ITEM(conn);
+            Pants = new ITEM(conn);
+            Boots = new ITEM(conn);
+            Gloves = new ITEM(conn);
+            Weapon = new ITEM(conn);
+            Artifact = new ITEM(conn);
         }
 
 
         public string PLAYER_DATA()
         {
             return PName + " (ID: <" + PlayerID + ">)";
+        }
+
+
+        public void DeEquip(string EquipType)
+        {
+            try
+            {
+                if (EquipType == "Helmet")
+                {
+                    string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `Helm`=1 AND `OWNER_ID` = '" + PlayerID + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    Helmet = new ITEM(conn);
+                }
+
+                if (EquipType == "Maille")
+                {
+                    string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `Maille`=1 AND `OWNER_ID` = '" + PlayerID + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    Maille = new ITEM(conn);
+                }
+
+                if (EquipType == "Pants")
+                {
+                    string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `Pants`=1 AND `OWNER_ID` = '" + PlayerID + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    Pants = new ITEM(conn);
+                }
+
+                if (EquipType == "Boots")
+                {
+                    string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `Boots`=1 AND `OWNER_ID` = '" + PlayerID + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    Boots = new ITEM(conn);
+                }
+
+                if (EquipType == "Gloves")
+                {
+                    string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `Gloves`=1 AND `OWNER_ID` = '" + PlayerID + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    Gloves = new ITEM(conn);
+                }
+
+                if (EquipType == "Weapon")
+                {
+                    string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `Weapon`=1 AND `OWNER_ID` = '" + PlayerID + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    Weapon = new ITEM(conn);
+                }
+
+                if (EquipType == "Artifact")
+                {
+                    string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `Artifact`=1 AND `OWNER_ID` = '" + PlayerID + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    Artifact = new ITEM(conn);
+                }
+
+                if (EquipType == "ALL")
+                {
+                    string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `OWNER_ID` = '" + PlayerID + "'";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+
+                    Helmet = new ITEM(conn);
+                    Maille = new ITEM(conn);
+                    Pants = new ITEM(conn);
+                    Boots = new ITEM(conn);
+                    Gloves = new ITEM(conn);
+                    Weapon = new ITEM(conn);
+                    Artifact = new ITEM(conn);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public bool Equip(ITEM DC_ITEM)
+        {
+            bool success = false;
+            DC_ITEM.GetData();
+            if (DC_ITEM.Prop_To_Type() == "Helmet")
+            {
+                success = true;
+                DC_ITEM.Equipped = true;
+                DC_ITEM.PostData();
+                Helmet.ItemID = DC_ITEM.ItemID;
+                Helmet.Name = DC_ITEM.Name;
+                Helmet.GetData();
+            }
+
+            if (DC_ITEM.Prop_To_Type() == "Maille")
+            {
+                success = true;
+                DC_ITEM.Equipped = true;
+                DC_ITEM.PostData();
+                Maille.ItemID = DC_ITEM.ItemID;
+                Maille.Name = DC_ITEM.Name;
+                Maille.GetData();
+            }
+
+            if (DC_ITEM.Prop_To_Type() == "Pants")
+            {
+                success = true;
+                DC_ITEM.Equipped = true;
+                DC_ITEM.PostData();
+                Pants.ItemID = DC_ITEM.ItemID;
+                Pants.Name = DC_ITEM.Name;
+                Pants.GetData();
+            }
+
+            if (DC_ITEM.Prop_To_Type() == "Boots")
+            {
+                success = true;
+                DC_ITEM.Equipped = true;
+                DC_ITEM.PostData();
+                Boots.ItemID = DC_ITEM.ItemID;
+                Boots.Name = DC_ITEM.Name;
+                Boots.GetData();
+            }
+
+            if (DC_ITEM.Prop_To_Type() == "Gloves")
+            {
+                success = true;
+                DC_ITEM.Equipped = true;
+                DC_ITEM.PostData();
+                Gloves.ItemID = DC_ITEM.ItemID;
+                Gloves.Name = DC_ITEM.Name;
+                Gloves.GetData();
+            }
+
+            if (DC_ITEM.Prop_To_Type() == "Weapon")
+            {
+                success = true;
+                DC_ITEM.Equipped = true;
+                DC_ITEM.PostData();
+                Weapon.ItemID = DC_ITEM.ItemID;
+                Weapon.Name = DC_ITEM.Name;
+                Weapon.GetData();
+            }
+
+            if (DC_ITEM.Prop_To_Type() == "Artifact")
+            {
+                success = true;
+                DC_ITEM.Equipped = true;
+                DC_ITEM.PostData();
+                Artifact.ItemID = DC_ITEM.ItemID;
+                Artifact.Name = DC_ITEM.Name;
+                Artifact.GetData();
+            }
+            return success;
         }
 
         public void GetData()
@@ -208,18 +395,42 @@ namespace Dungons_And_Dargons
         {
             try
             {
-                string sql = "SELECT `idItems`, `Name` FROM `items` WHERE `OWNER_ID` = '" + PlayerID + "'";
+                string sql = "SELECT `idItems`, `Name`, `Equipped` FROM `items` WHERE `OWNER_ID` = '" + PlayerID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 Inventory.Clear();
+                List<ITEM> Equiped = new List<ITEM>();
                 while (rdr.Read())
                 {
                     ITEM GotITEM = new ITEM(conn);
                     GotITEM.ItemID = Convert.ToInt32(rdr[0]);
                     GotITEM.Name = Convert.ToString(rdr[1]);
+                    if (Convert.ToBoolean(rdr[2]))
+                    {
+                        Equiped.Add(GotITEM);
+                    }
                     Inventory.Add(GotITEM);
                 }
                 rdr.Close();
+
+                DeEquip("ALL");
+
+                foreach (ITEM equipable in Equiped)
+                {
+                    Equip(equipable);
+                }
+
+                M_HP = Helmet.M_HP + Maille.M_HP + Pants.M_HP + Boots.M_HP + Weapon.M_HP + Artifact.M_HP;
+                M_MP = Helmet.M_MP + Maille.M_MP + Pants.M_MP + Boots.M_MP + Weapon.M_MP + Artifact.M_MP;
+                M_ATK = Helmet.M_ATK + Maille.M_ATK + Pants.M_ATK + Boots.M_ATK + Weapon.M_ATK + Artifact.M_ATK;
+                M_SATK = Helmet.M_SATK + Maille.M_SATK + Pants.M_SATK + Boots.M_SATK + Weapon.M_SATK + Artifact.M_SATK;
+                M_DEF = Helmet.M_DEF + Maille.M_DEF + Pants.M_DEF + Boots.M_DEF + Weapon.M_DEF + Artifact.M_DEF;
+                M_SDEF = Helmet.M_SDEF + Maille.M_SDEF + Pants.M_SDEF + Boots.M_SDEF + Weapon.M_SDEF + Artifact.M_SDEF;
+                M_CHAR = Helmet.M_CHAR + Maille.M_CHAR + Pants.M_CHAR + Boots.M_CHAR + Weapon.M_CHAR + Artifact.M_CHAR;
+                M_DEX = Helmet.M_DEX + Maille.M_DEX + Pants.M_DEX + Boots.M_DEX + Weapon.M_DEX + Artifact.M_DEX;
+                M_STR = Helmet.M_STR + Maille.M_STR + Pants.M_STR + Boots.M_STR + Weapon.M_STR + Artifact.M_STR;
+                M_INT = Helmet.M_INT + Maille.M_INT + Pants.M_INT + Boots.M_INT + Weapon.M_INT + Artifact.M_INT;
+                M_PERC = Helmet.M_PERC + Maille.M_PERC + Pants.M_PERC + Boots.M_PERC + Weapon.M_PERC + Artifact.M_PERC;
             }
             catch (Exception ex)
             {

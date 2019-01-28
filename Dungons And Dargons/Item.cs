@@ -57,12 +57,53 @@ namespace Dungons_And_Dargons
 
         public ITEM(MySqlConnection inconn)
         {
+            ItemID = 0;
             conn = inconn;
         }
 
         public string ITEM_DATA()
         {
             return Name + " (ID: <" + ItemID + ">)";
+        }
+
+        public bool Equipable()
+        {
+            bool success = false;
+            if (Prop_To_Type() == "Helmet")
+            {
+                success = true;
+            }
+
+            if (Prop_To_Type() == "Maille")
+            {
+                success = true;
+            }
+
+            if (Prop_To_Type() == "Pants")
+            {
+                success = true;
+            }
+
+            if (Prop_To_Type() == "Boots")
+            {
+                success = true;
+            }
+
+            if (Prop_To_Type() == "Gloves")
+            {
+                success = true;
+            }
+
+            if (Prop_To_Type() == "Weapon")
+            {
+                success = true;
+            }
+
+            if (Prop_To_Type() == "Artifact")
+            {
+                success = true;
+            }
+            return success;
         }
 
         public void Type_To_Prop(string ITEM_TYPE)
@@ -194,6 +235,7 @@ namespace Dungons_And_Dargons
 
         public void GetData()
         {
+            if (ItemID == 0) return;
             try
             {
                 string sql = "SELECT `idItems`, `Name`, `Description`, `Dice`, `M_HP`, `M_MP`, `M_ATK`, `M_SATK`, `M_DEF`, `M_SDEF`, `M_CHAR`," +
@@ -255,6 +297,7 @@ namespace Dungons_And_Dargons
 
         public void PostData()
         {
+            if (ItemID == 0) return;
             try
             {
                 string sql = "UPDATE `items` SET" +

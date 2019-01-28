@@ -48,6 +48,7 @@ namespace Dungons_And_Dargons
                 MessageBox.Show("Giving " + Name_tbox.Text + " to " + GPlayers_lbox.SelectedItem);
                 ITEMVIEW.GetData();
                 ITEMVIEW.OWNER_ID = Convert.ToInt32(GPlayers_lbox.SelectedItem.ToString().Split('<', '>')[1]);
+                ITEMVIEW.Equipped = false;
                 ITEMVIEW.PostData();
                 MessageBox.Show("You No Longer Own This Item");
                 this.Close();
