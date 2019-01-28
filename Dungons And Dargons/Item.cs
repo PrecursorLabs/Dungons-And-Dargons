@@ -12,10 +12,11 @@ using MySql.Data.MySqlClient;
 
 namespace Dungons_And_Dargons
 {
-    class ITEM
+    public class ITEM
     {
         MySqlConnection conn;
         public int ItemID { get; set; }
+        public int OWNER_ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
@@ -57,6 +58,11 @@ namespace Dungons_And_Dargons
         public ITEM(MySqlConnection inconn)
         {
             conn = inconn;
+        }
+
+        public string ITEM_DATA()
+        {
+            return Name + " (ID: <" + ItemID + ">)";
         }
 
         public void Type_To_Prop(string ITEM_TYPE)
@@ -139,7 +145,7 @@ namespace Dungons_And_Dargons
 
                 string sql = "INSERT INTO `items`" +
                     " (`Name`, `Description`, `Dice`, `M_HP`, `M_MP`, `M_ATK`, `M_SATK`, `M_DEF`, `M_SDEF`, `M_CHAR`, `M_DEX`, `M_STR`, `M_INT`, `M_PERC`" +
-                    ", `Weapon`, `Consumable`, `Helm`, `Maille`, `Gloves`, `Pants`, `Boots`, `Artifact`, `Healing`, `Satiety`, `Equipped`, `Turns`, `Quantity`, `Enhance`, `Durability`, `MaxDurability`, `Tier`, `Grade`, `EType`, `ELevel`, `Oracalcite`)" +
+                    ", `Weapon`, `Consumable`, `Helm`, `Maille`, `Gloves`, `Pants`, `Boots`, `Artifact`, `Healing`, `Satiety`, `Equipped`, `Turns`, `Quantity`, `Enhance`, `Durability`, `MaxDurability`, `Tier`, `Grade`, `EType`, `ELevel`, `Oracalcite`, `OWNER_ID`)" +
                     " VALUES" +
                     " ('" + Name.Replace("'", "\\'") + "'," +
                     " '" + Description.Replace("'", "\\'") + "'," +
@@ -175,7 +181,8 @@ namespace Dungons_And_Dargons
                     " '" + Grade + "'," +
                     " '" + EType + "'," +
                     " '" + ELevel + "'," +
-                    " '" + Convert.ToInt32(Oracalcite) + "');";
+                    " '" + Convert.ToInt32(Oracalcite) + "'," +
+                    " '" + OWNER_ID + "');";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
@@ -191,7 +198,7 @@ namespace Dungons_And_Dargons
             {
                 string sql = "SELECT `idItems`, `Name`, `Description`, `Dice`, `M_HP`, `M_MP`, `M_ATK`, `M_SATK`, `M_DEF`, `M_SDEF`, `M_CHAR`," +
                     " `M_DEX`, `M_STR`, `M_INT`, `M_PERC`, `Weapon`, `Consumable`, `Helm`, `Maille`, `Gloves`, `Pants`, `Boots`, `Artifact`, `Healing`," +
-                    " `Satiety`, `Turns`, `Quantity`, `Enhance`, `Durability`, `MaxDurability`, `Tier`, `Grade`, `EType`, `ELevel`, `Oracalcite`" +
+                    " `Satiety`, `Turns`, `Quantity`, `Enhance`, `Durability`, `MaxDurability`, `Tier`, `Grade`, `EType`, `ELevel`, `Oracalcite`, `OWNER_ID`" +
                     " FROM `items` WHERE `idItems`=" + ItemID;
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
@@ -234,6 +241,7 @@ namespace Dungons_And_Dargons
                     EType = Convert.ToString(rdr[32]);
                     ELevel = Convert.ToInt32(rdr[33]);
                     Oracalcite = Convert.ToBoolean(rdr[34]);
+                    OWNER_ID = Convert.ToInt32(rdr[35]);
                     count++;
                 }
                 rdr.Close();
@@ -284,7 +292,8 @@ namespace Dungons_And_Dargons
                     " `Grade` = '" + Grade + "'," +
                     " `EType` = '" + EType + "'," +
                     " `ELevel` = '" + ELevel + "'," +
-                    " `Oracalcite` = '" + Convert.ToInt32(Oracalcite) + "'" +
+                    " `Oracalcite` = '" + Convert.ToInt32(Oracalcite) + "'," +
+                    " `OWNER_ID` = '" + OWNER_ID + "'" +
                     " WHERE `idItems`='" + ItemID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
@@ -296,7 +305,7 @@ namespace Dungons_And_Dargons
         }
 
     }
-    class ITEMS
+    public class ITEMS
     {
         MySqlConnection conn;
         public ITEMS(MySqlConnection inconn)
@@ -304,13 +313,13 @@ namespace Dungons_And_Dargons
             conn = inconn;
         }
 
-        public List<ITEM> GetITEM(string WHERE, string Propety)
+        public List<ITEM> GetITEM(string WHERE, string Property)
         {
             List<ITEM> GotITEMS = new List<ITEM>();
             try
             {
                 
-                string sql = "SELECT `idItems` FROM `items` WHERE `" + WHERE + "`='" + Propety + "'";
+                string sql = "SELECT `idItems`, `Name` FROM `items` WHERE `" + WHERE + "`='" + Property + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 List<int> al = new List<int>();
@@ -318,6 +327,7 @@ namespace Dungons_And_Dargons
                 {
                     ITEM GotITEM = new ITEM(conn);
                     GotITEM.ItemID = Convert.ToInt32(rdr[0]);
+                    GotITEM.Name = Convert.ToString(rdr[1]);
                     GotITEMS.Add(GotITEM);
                 }
                 rdr.Close();

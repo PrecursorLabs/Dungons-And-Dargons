@@ -35,6 +35,7 @@
             this.Inventory_tab = new System.Windows.Forms.TabPage();
             this.Inventory_lbox = new System.Windows.Forms.ListBox();
             this.Spells_tab = new System.Windows.Forms.TabPage();
+            this.Spells_lbox = new System.Windows.Forms.ListBox();
             this.GameMaster_tab = new System.Windows.Forms.TabPage();
             this.GameMaster_stabs = new System.Windows.Forms.TabControl();
             this.NPCM_tab = new System.Windows.Forms.TabPage();
@@ -347,8 +348,41 @@
             this.MP_M_BTN = new System.Windows.Forms.Button();
             this.MP_P_BTN = new System.Windows.Forms.Button();
             this.Stats_Apply_BTN = new System.Windows.Forms.Button();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Spells_Edititor_lbox = new System.Windows.Forms.ListView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.Refresh_Spell_editor_BTN = new System.Windows.Forms.Button();
+            this.Delete_Spell_editor_BTN = new System.Windows.Forms.Button();
+            this.label88 = new System.Windows.Forms.Label();
+            this.Spell_Character_Cbox = new System.Windows.Forms.ComboBox();
+            this.Modify_Spell_editor_BTN = new System.Windows.Forms.Button();
+            this.New_Spell_editor_BTN = new System.Windows.Forms.Button();
+            this.ID_spell_editor_up = new System.Windows.Forms.NumericUpDown();
+            this.label92 = new System.Windows.Forms.Label();
+            this.MSlots_Spell_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.label99 = new System.Windows.Forms.Label();
+            this.Rank_Spell_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.label104 = new System.Windows.Forms.Label();
+            this.Tier_Spell_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.label105 = new System.Windows.Forms.Label();
+            this.spell_desc_editor_tbox = new System.Windows.Forms.TextBox();
+            this.label107 = new System.Windows.Forms.Label();
+            this.Spell_name_editor_tbox = new System.Windows.Forms.TextBox();
+            this.label108 = new System.Windows.Forms.Label();
+            this.Slots_Spell_editor_ud = new System.Windows.Forms.NumericUpDown();
+            this.label55 = new System.Windows.Forms.Label();
             this.Main_tabs.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
+            this.Spells_tab.SuspendLayout();
             this.GameMaster_tab.SuspendLayout();
             this.GameMaster_stabs.SuspendLayout();
             this.NPCM_tab.SuspendLayout();
@@ -406,6 +440,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.SATK_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MP_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HP_editor_ud)).BeginInit();
+            this.SpellsManager_tab.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_spell_editor_up)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MSlots_Spell_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rank_Spell_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tier_Spell_editor_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slots_Spell_editor_ud)).BeginInit();
             this.SuspendLayout();
             // 
             // Update_timer
@@ -465,6 +507,7 @@
             // 
             // Spells_tab
             // 
+            this.Spells_tab.Controls.Add(this.Spells_lbox);
             this.Spells_tab.Location = new System.Drawing.Point(4, 22);
             this.Spells_tab.Name = "Spells_tab";
             this.Spells_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -472,6 +515,17 @@
             this.Spells_tab.TabIndex = 3;
             this.Spells_tab.Text = "Spells";
             this.Spells_tab.UseVisualStyleBackColor = true;
+            this.Spells_tab.Click += new System.EventHandler(this.Spells_tab_Click);
+            // 
+            // Spells_lbox
+            // 
+            this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Spells_lbox.FormattingEnabled = true;
+            this.Spells_lbox.Location = new System.Drawing.Point(3, 3);
+            this.Spells_lbox.Name = "Spells_lbox";
+            this.Spells_lbox.Size = new System.Drawing.Size(821, 498);
+            this.Spells_lbox.TabIndex = 1;
+            this.Spells_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_lbox_SelectedIndexChanged);
             // 
             // GameMaster_tab
             // 
@@ -2823,7 +2877,7 @@
             this.UItem_editor_btn.Name = "UItem_editor_btn";
             this.UItem_editor_btn.Size = new System.Drawing.Size(75, 23);
             this.UItem_editor_btn.TabIndex = 65;
-            this.UItem_editor_btn.Text = "Update";
+            this.UItem_editor_btn.Text = "Refresh";
             this.UItem_editor_btn.UseVisualStyleBackColor = true;
             this.UItem_editor_btn.Click += new System.EventHandler(this.UItem_editor_btn_Click);
             // 
@@ -3442,6 +3496,8 @@
             // 
             // SpellsManager_tab
             // 
+            this.SpellsManager_tab.Controls.Add(this.groupBox4);
+            this.SpellsManager_tab.Controls.Add(this.groupBox5);
             this.SpellsManager_tab.Location = new System.Drawing.Point(4, 22);
             this.SpellsManager_tab.Name = "SpellsManager_tab";
             this.SpellsManager_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -3560,7 +3616,7 @@
             this.PERC_tbox.ForeColor = System.Drawing.Color.Black;
             this.PERC_tbox.Location = new System.Drawing.Point(50, 457);
             this.PERC_tbox.Name = "PERC_tbox";
-            this.PERC_tbox.Size = new System.Drawing.Size(122, 22);
+            this.PERC_tbox.Size = new System.Drawing.Size(61, 22);
             this.PERC_tbox.TabIndex = 152;
             // 
             // INT_tbox
@@ -3571,7 +3627,7 @@
             this.INT_tbox.ForeColor = System.Drawing.Color.Black;
             this.INT_tbox.Location = new System.Drawing.Point(50, 429);
             this.INT_tbox.Name = "INT_tbox";
-            this.INT_tbox.Size = new System.Drawing.Size(122, 22);
+            this.INT_tbox.Size = new System.Drawing.Size(61, 22);
             this.INT_tbox.TabIndex = 151;
             // 
             // STR_tbox
@@ -3582,7 +3638,7 @@
             this.STR_tbox.ForeColor = System.Drawing.Color.Black;
             this.STR_tbox.Location = new System.Drawing.Point(50, 401);
             this.STR_tbox.Name = "STR_tbox";
-            this.STR_tbox.Size = new System.Drawing.Size(122, 22);
+            this.STR_tbox.Size = new System.Drawing.Size(61, 22);
             this.STR_tbox.TabIndex = 150;
             // 
             // DEX_tbox
@@ -3593,7 +3649,7 @@
             this.DEX_tbox.ForeColor = System.Drawing.Color.Black;
             this.DEX_tbox.Location = new System.Drawing.Point(50, 373);
             this.DEX_tbox.Name = "DEX_tbox";
-            this.DEX_tbox.Size = new System.Drawing.Size(122, 22);
+            this.DEX_tbox.Size = new System.Drawing.Size(61, 22);
             this.DEX_tbox.TabIndex = 149;
             // 
             // CHAR_tbox
@@ -3604,7 +3660,7 @@
             this.CHAR_tbox.ForeColor = System.Drawing.Color.Black;
             this.CHAR_tbox.Location = new System.Drawing.Point(50, 345);
             this.CHAR_tbox.Name = "CHAR_tbox";
-            this.CHAR_tbox.Size = new System.Drawing.Size(122, 22);
+            this.CHAR_tbox.Size = new System.Drawing.Size(61, 22);
             this.CHAR_tbox.TabIndex = 148;
             // 
             // SDEF_tbox
@@ -3615,7 +3671,7 @@
             this.SDEF_tbox.ForeColor = System.Drawing.Color.Black;
             this.SDEF_tbox.Location = new System.Drawing.Point(50, 317);
             this.SDEF_tbox.Name = "SDEF_tbox";
-            this.SDEF_tbox.Size = new System.Drawing.Size(122, 22);
+            this.SDEF_tbox.Size = new System.Drawing.Size(61, 22);
             this.SDEF_tbox.TabIndex = 147;
             // 
             // DEF_tbox
@@ -3626,7 +3682,7 @@
             this.DEF_tbox.ForeColor = System.Drawing.Color.Black;
             this.DEF_tbox.Location = new System.Drawing.Point(50, 289);
             this.DEF_tbox.Name = "DEF_tbox";
-            this.DEF_tbox.Size = new System.Drawing.Size(122, 22);
+            this.DEF_tbox.Size = new System.Drawing.Size(61, 22);
             this.DEF_tbox.TabIndex = 146;
             // 
             // SATK_tbox
@@ -3637,7 +3693,7 @@
             this.SATK_tbox.ForeColor = System.Drawing.Color.Black;
             this.SATK_tbox.Location = new System.Drawing.Point(50, 261);
             this.SATK_tbox.Name = "SATK_tbox";
-            this.SATK_tbox.Size = new System.Drawing.Size(122, 22);
+            this.SATK_tbox.Size = new System.Drawing.Size(61, 22);
             this.SATK_tbox.TabIndex = 145;
             // 
             // ATK_tbox
@@ -3648,7 +3704,7 @@
             this.ATK_tbox.ForeColor = System.Drawing.Color.Black;
             this.ATK_tbox.Location = new System.Drawing.Point(50, 233);
             this.ATK_tbox.Name = "ATK_tbox";
-            this.ATK_tbox.Size = new System.Drawing.Size(122, 22);
+            this.ATK_tbox.Size = new System.Drawing.Size(61, 22);
             this.ATK_tbox.TabIndex = 144;
             // 
             // LVL_tbox
@@ -4056,12 +4112,374 @@
             this.Stats_Apply_BTN.Visible = false;
             this.Stats_Apply_BTN.Click += new System.EventHandler(this.Stats_Apply_BTN_Click);
             // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox10.Enabled = false;
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.ForeColor = System.Drawing.Color.Black;
+            this.textBox10.Location = new System.Drawing.Point(117, 233);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(55, 22);
+            this.textBox10.TabIndex = 208;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox11.Enabled = false;
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.ForeColor = System.Drawing.Color.Black;
+            this.textBox11.Location = new System.Drawing.Point(117, 261);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(55, 22);
+            this.textBox11.TabIndex = 209;
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox12.Enabled = false;
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.ForeColor = System.Drawing.Color.Black;
+            this.textBox12.Location = new System.Drawing.Point(117, 289);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(55, 22);
+            this.textBox12.TabIndex = 210;
+            // 
+            // textBox13
+            // 
+            this.textBox13.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox13.Enabled = false;
+            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.ForeColor = System.Drawing.Color.Black;
+            this.textBox13.Location = new System.Drawing.Point(117, 317);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(55, 22);
+            this.textBox13.TabIndex = 211;
+            // 
+            // textBox14
+            // 
+            this.textBox14.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox14.Enabled = false;
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.ForeColor = System.Drawing.Color.Black;
+            this.textBox14.Location = new System.Drawing.Point(117, 345);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(55, 22);
+            this.textBox14.TabIndex = 212;
+            // 
+            // textBox15
+            // 
+            this.textBox15.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox15.Enabled = false;
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.ForeColor = System.Drawing.Color.Black;
+            this.textBox15.Location = new System.Drawing.Point(117, 373);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(55, 22);
+            this.textBox15.TabIndex = 213;
+            // 
+            // textBox16
+            // 
+            this.textBox16.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox16.Enabled = false;
+            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.ForeColor = System.Drawing.Color.Black;
+            this.textBox16.Location = new System.Drawing.Point(117, 401);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(55, 22);
+            this.textBox16.TabIndex = 214;
+            // 
+            // textBox17
+            // 
+            this.textBox17.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox17.Enabled = false;
+            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox17.ForeColor = System.Drawing.Color.Black;
+            this.textBox17.Location = new System.Drawing.Point(117, 429);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(55, 22);
+            this.textBox17.TabIndex = 215;
+            // 
+            // textBox18
+            // 
+            this.textBox18.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox18.Enabled = false;
+            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox18.ForeColor = System.Drawing.Color.Black;
+            this.textBox18.Location = new System.Drawing.Point(117, 457);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(55, 22);
+            this.textBox18.TabIndex = 216;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.Spells_Edititor_lbox);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Location = new System.Drawing.Point(427, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(383, 466);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Spells";
+            // 
+            // Spells_Edititor_lbox
+            // 
+            this.Spells_Edititor_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Spells_Edititor_lbox.Location = new System.Drawing.Point(3, 16);
+            this.Spells_Edititor_lbox.Name = "Spells_Edititor_lbox";
+            this.Spells_Edititor_lbox.Size = new System.Drawing.Size(377, 447);
+            this.Spells_Edititor_lbox.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.Spells_Edititor_lbox.TabIndex = 0;
+            this.Spells_Edititor_lbox.TileSize = new System.Drawing.Size(200, 60);
+            this.Spells_Edititor_lbox.UseCompatibleStateImageBehavior = false;
+            this.Spells_Edititor_lbox.View = System.Windows.Forms.View.List;
+            this.Spells_Edititor_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_Edititor_lbox_SelectedIndexChanged);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.Slots_Spell_editor_ud);
+            this.groupBox5.Controls.Add(this.label55);
+            this.groupBox5.Controls.Add(this.Refresh_Spell_editor_BTN);
+            this.groupBox5.Controls.Add(this.Delete_Spell_editor_BTN);
+            this.groupBox5.Controls.Add(this.label88);
+            this.groupBox5.Controls.Add(this.Spell_Character_Cbox);
+            this.groupBox5.Controls.Add(this.Modify_Spell_editor_BTN);
+            this.groupBox5.Controls.Add(this.New_Spell_editor_BTN);
+            this.groupBox5.Controls.Add(this.ID_spell_editor_up);
+            this.groupBox5.Controls.Add(this.label92);
+            this.groupBox5.Controls.Add(this.MSlots_Spell_editor_ud);
+            this.groupBox5.Controls.Add(this.label99);
+            this.groupBox5.Controls.Add(this.Rank_Spell_editor_ud);
+            this.groupBox5.Controls.Add(this.label104);
+            this.groupBox5.Controls.Add(this.Tier_Spell_editor_ud);
+            this.groupBox5.Controls.Add(this.label105);
+            this.groupBox5.Controls.Add(this.spell_desc_editor_tbox);
+            this.groupBox5.Controls.Add(this.label107);
+            this.groupBox5.Controls.Add(this.Spell_name_editor_tbox);
+            this.groupBox5.Controls.Add(this.label108);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox5.Location = new System.Drawing.Point(3, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(424, 466);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Editor/Creator";
+            // 
+            // Refresh_Spell_editor_BTN
+            // 
+            this.Refresh_Spell_editor_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Refresh_Spell_editor_BTN.Location = new System.Drawing.Point(249, 437);
+            this.Refresh_Spell_editor_BTN.Name = "Refresh_Spell_editor_BTN";
+            this.Refresh_Spell_editor_BTN.Size = new System.Drawing.Size(75, 23);
+            this.Refresh_Spell_editor_BTN.TabIndex = 65;
+            this.Refresh_Spell_editor_BTN.Text = "Refresh";
+            this.Refresh_Spell_editor_BTN.UseVisualStyleBackColor = true;
+            this.Refresh_Spell_editor_BTN.Click += new System.EventHandler(this.Refresh_Spell_editor_BTN_Click);
+            // 
+            // Delete_Spell_editor_BTN
+            // 
+            this.Delete_Spell_editor_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Delete_Spell_editor_BTN.Location = new System.Drawing.Point(168, 437);
+            this.Delete_Spell_editor_BTN.Name = "Delete_Spell_editor_BTN";
+            this.Delete_Spell_editor_BTN.Size = new System.Drawing.Size(75, 23);
+            this.Delete_Spell_editor_BTN.TabIndex = 60;
+            this.Delete_Spell_editor_BTN.Text = "Delete Spell";
+            this.Delete_Spell_editor_BTN.UseVisualStyleBackColor = true;
+            this.Delete_Spell_editor_BTN.Click += new System.EventHandler(this.Delete_Spell_editor_BTN_Click);
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(6, 22);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(56, 13);
+            this.label88.TabIndex = 49;
+            this.label88.Text = "Character:";
+            // 
+            // Spell_Character_Cbox
+            // 
+            this.Spell_Character_Cbox.FormattingEnabled = true;
+            this.Spell_Character_Cbox.Location = new System.Drawing.Point(68, 19);
+            this.Spell_Character_Cbox.Name = "Spell_Character_Cbox";
+            this.Spell_Character_Cbox.Size = new System.Drawing.Size(176, 21);
+            this.Spell_Character_Cbox.TabIndex = 48;
+            // 
+            // Modify_Spell_editor_BTN
+            // 
+            this.Modify_Spell_editor_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Modify_Spell_editor_BTN.Location = new System.Drawing.Point(87, 437);
+            this.Modify_Spell_editor_BTN.Name = "Modify_Spell_editor_BTN";
+            this.Modify_Spell_editor_BTN.Size = new System.Drawing.Size(75, 23);
+            this.Modify_Spell_editor_BTN.TabIndex = 47;
+            this.Modify_Spell_editor_BTN.Text = "Modify  Spell";
+            this.Modify_Spell_editor_BTN.UseVisualStyleBackColor = true;
+            this.Modify_Spell_editor_BTN.Click += new System.EventHandler(this.Modify_Spell_editor_BTN_Click);
+            // 
+            // New_Spell_editor_BTN
+            // 
+            this.New_Spell_editor_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.New_Spell_editor_BTN.Location = new System.Drawing.Point(6, 437);
+            this.New_Spell_editor_BTN.Name = "New_Spell_editor_BTN";
+            this.New_Spell_editor_BTN.Size = new System.Drawing.Size(75, 23);
+            this.New_Spell_editor_BTN.TabIndex = 45;
+            this.New_Spell_editor_BTN.Text = "New Spell";
+            this.New_Spell_editor_BTN.UseVisualStyleBackColor = true;
+            this.New_Spell_editor_BTN.Click += new System.EventHandler(this.New_Spell_editor_BTN_Click);
+            // 
+            // ID_spell_editor_up
+            // 
+            this.ID_spell_editor_up.Enabled = false;
+            this.ID_spell_editor_up.Location = new System.Drawing.Point(364, 47);
+            this.ID_spell_editor_up.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.ID_spell_editor_up.Name = "ID_spell_editor_up";
+            this.ID_spell_editor_up.Size = new System.Drawing.Size(50, 20);
+            this.ID_spell_editor_up.TabIndex = 37;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(337, 49);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(21, 13);
+            this.label92.TabIndex = 36;
+            this.label92.Text = "ID:";
+            // 
+            // MSlots_Spell_editor_ud
+            // 
+            this.MSlots_Spell_editor_ud.Location = new System.Drawing.Point(75, 271);
+            this.MSlots_Spell_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.MSlots_Spell_editor_ud.Name = "MSlots_Spell_editor_ud";
+            this.MSlots_Spell_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.MSlots_Spell_editor_ud.TabIndex = 19;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Location = new System.Drawing.Point(72, 255);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(54, 13);
+            this.label99.TabIndex = 18;
+            this.label99.Text = "MSLOTS:";
+            // 
+            // Rank_Spell_editor_ud
+            // 
+            this.Rank_Spell_editor_ud.Location = new System.Drawing.Point(75, 234);
+            this.Rank_Spell_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Rank_Spell_editor_ud.Name = "Rank_Spell_editor_ud";
+            this.Rank_Spell_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.Rank_Spell_editor_ud.TabIndex = 9;
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(72, 218);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(36, 13);
+            this.label104.TabIndex = 8;
+            this.label104.Text = "Rank:";
+            // 
+            // Tier_Spell_editor_ud
+            // 
+            this.Tier_Spell_editor_ud.Location = new System.Drawing.Point(10, 234);
+            this.Tier_Spell_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Tier_Spell_editor_ud.Name = "Tier_Spell_editor_ud";
+            this.Tier_Spell_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.Tier_Spell_editor_ud.TabIndex = 7;
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Location = new System.Drawing.Point(7, 218);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(28, 13);
+            this.label105.TabIndex = 6;
+            this.label105.Text = "Tier:";
+            // 
+            // spell_desc_editor_tbox
+            // 
+            this.spell_desc_editor_tbox.Location = new System.Drawing.Point(9, 92);
+            this.spell_desc_editor_tbox.Multiline = true;
+            this.spell_desc_editor_tbox.Name = "spell_desc_editor_tbox";
+            this.spell_desc_editor_tbox.Size = new System.Drawing.Size(325, 122);
+            this.spell_desc_editor_tbox.TabIndex = 3;
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Location = new System.Drawing.Point(6, 76);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(63, 13);
+            this.label107.TabIndex = 2;
+            this.label107.Text = "Description:";
+            // 
+            // Spell_name_editor_tbox
+            // 
+            this.Spell_name_editor_tbox.Location = new System.Drawing.Point(50, 47);
+            this.Spell_name_editor_tbox.Name = "Spell_name_editor_tbox";
+            this.Spell_name_editor_tbox.Size = new System.Drawing.Size(284, 20);
+            this.Spell_name_editor_tbox.TabIndex = 1;
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Location = new System.Drawing.Point(6, 50);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(38, 13);
+            this.label108.TabIndex = 0;
+            this.label108.Text = "Name:";
+            // 
+            // Slots_Spell_editor_ud
+            // 
+            this.Slots_Spell_editor_ud.Location = new System.Drawing.Point(10, 271);
+            this.Slots_Spell_editor_ud.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Slots_Spell_editor_ud.Name = "Slots_Spell_editor_ud";
+            this.Slots_Spell_editor_ud.Size = new System.Drawing.Size(59, 20);
+            this.Slots_Spell_editor_ud.TabIndex = 67;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(7, 255);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(45, 13);
+            this.label55.TabIndex = 66;
+            this.label55.Text = "SLOTS:";
+            // 
             // User
             // 
             this.AccessibleName = "UserForm";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 544);
+            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox10);
             this.Controls.Add(this.Stats_Apply_BTN);
             this.Controls.Add(this.MP_M_BTN);
             this.Controls.Add(this.MP_P_BTN);
@@ -4125,6 +4543,7 @@
             this.Load += new System.EventHandler(this.User_Load);
             this.Main_tabs.ResumeLayout(false);
             this.Inventory_tab.ResumeLayout(false);
+            this.Spells_tab.ResumeLayout(false);
             this.GameMaster_tab.ResumeLayout(false);
             this.GameMaster_stabs.ResumeLayout(false);
             this.NPCM_tab.ResumeLayout(false);
@@ -4188,6 +4607,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.SATK_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MP_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HP_editor_ud)).EndInit();
+            this.SpellsManager_tab.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ID_spell_editor_up)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MSlots_Spell_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rank_Spell_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tier_Spell_editor_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slots_Spell_editor_ud)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4512,5 +4940,38 @@
         private System.Windows.Forms.Button MP_P_BTN;
         private System.Windows.Forms.Button Stats_Apply_BTN;
         private System.Windows.Forms.Button CM_UPDATE_BTN;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.ListBox Spells_lbox;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ListView Spells_Edititor_lbox;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.NumericUpDown Slots_Spell_editor_ud;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Button Refresh_Spell_editor_BTN;
+        private System.Windows.Forms.Button Delete_Spell_editor_BTN;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.ComboBox Spell_Character_Cbox;
+        private System.Windows.Forms.Button Modify_Spell_editor_BTN;
+        private System.Windows.Forms.Button New_Spell_editor_BTN;
+        private System.Windows.Forms.NumericUpDown ID_spell_editor_up;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.NumericUpDown MSlots_Spell_editor_ud;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.NumericUpDown Rank_Spell_editor_ud;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.NumericUpDown Tier_Spell_editor_ud;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.TextBox spell_desc_editor_tbox;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.TextBox Spell_name_editor_tbox;
+        private System.Windows.Forms.Label label108;
     }
 }

@@ -16,153 +16,24 @@ namespace Dungons_And_Dargons
     {
         MySqlConnection Iconn;
         public int IID;
-        public string IName;
-        public string Type;
-        public string IPOwner;
-        public string Description;
-        public string[] Buffs = new string[17];
-        public string[] Players = new string[32];
+        public ITEM ITEMVIEW;
+        private NPCS GM_NPC_LIST;
+        public int PLAYERID;
 
-        private bool Weapon = false;
-        private bool Consumable = false;
-        private bool Helm = false;
-        private bool Maille = false;
-        private bool Gloves = false;
-        private bool Pants = false;
-        private bool Boot = false;
-        private bool Artifact = false;
-        private bool Healing = false;
-
-        public ItemView(int ID, MySqlConnection conn, string POwner = null)
+        public ItemView(int ID, MySqlConnection conn, int PlayerId = -1)
         {
             InitializeComponent();
             IID = ID;
             Iconn = conn;
-            IPOwner = POwner;
+            ITEMVIEW = new ITEM(Iconn);
+            ITEMVIEW.ItemID = IID;
+            GM_NPC_LIST = new NPCS(Iconn);
+            PLAYERID = PlayerId;
         }
 
         private void Item_Load(object sender, EventArgs e)
         {
-            try
-            {
-                string sql = "SELECT idItems, Name, Description, Weapon, Consumable, Helm, Maille, Gloves, Pants, Boots, Artifact, Healing, M_HP, M_MP, M_ATK, M_SATK, M_DEF, M_SDEF, M_CHAR, M_DEX, M_STR, M_INT, M_PERC, Tier, Grade, Enhance, Durability, MaxDurability, Dice FROM items WHERE idItems=" + IID;
-                MySqlCommand cmd = new MySqlCommand(sql, Iconn);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                int count = 0;
-                while (rdr.Read())
-                {
-                    IName = Convert.ToString(rdr[1]);
-                    Description = Convert.ToString(rdr[2]);
-
-                    Weapon = Convert.ToBoolean(rdr[3]);
-                    Consumable = Convert.ToBoolean(rdr[4]);
-                    Helm = Convert.ToBoolean(rdr[5]);
-                    Maille = Convert.ToBoolean(rdr[6]);
-                    Gloves = Convert.ToBoolean(rdr[7]);
-                    Pants = Convert.ToBoolean(rdr[8]);
-                    Boot = Convert.ToBoolean(rdr[9]);
-                    Artifact = Convert.ToBoolean(rdr[10]);
-                    Healing = Convert.ToBoolean(rdr[11]);
-
-                    Buffs[0] = "HP +" + rdr[12];
-                    Buffs[1] = "MP +" + rdr[13];
-                    Buffs[2] = "ATK +" + rdr[14];
-                    Buffs[3] = "SATK +" + rdr[15];
-                    Buffs[4] = "DEF +" + rdr[16];
-                    Buffs[5] = "SDEF +" + rdr[17];
-                    Buffs[6] = "CHAR +" + rdr[18];
-                    Buffs[7] = "DEX +" + rdr[19];
-                    Buffs[8] = "STR +" + rdr[20];
-                    Buffs[9] = "INT +" + rdr[21];
-                    Buffs[10] = "PERC +" + rdr[22];
-
-                    if (Convert.ToInt16(rdr[23]) > 0 || Convert.ToInt16(rdr[24]) > 0)
-                    {
-                        Buffs[11] = "Tier +" + rdr[23];
-                        Buffs[12] = "Grade +" + rdr[24];
-                    }
-                    if (Convert.ToInt16(rdr[25]) > 0)
-                    {
-                        Buffs[13] = "Enhance +" + rdr[25];
-                    }
-                    if (rdr[27].GetType() != typeof(DBNull))
-                    {
-                        Buffs[14] = "Durability +" + rdr[26];
-                        Buffs[15] = "Max Durability +" + rdr[27];
-                    }
-                    if (Convert.ToInt16(rdr[28]) > 0)
-                    {
-                        Buffs[16] = "Dice D" + rdr[28];
-                    }
-
-                    count++;
-                }
-
-                rdr.Close();
-
-                if (Weapon)
-                {
-                    Type = "Weapon";
-                }
-                if (Consumable) {
-                    Type = "Consumable";
-                }
-                if (Healing)
-                {
-                    Type = "Healing";
-                }
-                if (Healing && Consumable)
-                {
-                    Type = "Healing Consumable";
-                }
-                if (Helm)
-                {
-                    Type = "Helm";
-                }
-                if (Maille)
-                {
-                    Type = "Maille";
-                }
-                if (Gloves)
-                {
-                    Type = "Gloves";
-                }
-                if (Pants)
-                {
-                    Type = "Pants";
-                }
-                if (Boot)
-                {
-                    Type = "Boots";
-                }
-                if (Artifact)
-                {
-                    Type += "Artifact";
-                }
-
-                this.Text = IName;
-                Name_tbox.Text = IName;
-                Type_tbox.Text = Type;
-                Description_tbox.Text = Description;
-
-                foreach (string buff in Buffs)
-                {
-                    if(buff != null)
-                    {
-                        int buffdig = Convert.ToInt32(new String(buff.Where(Char.IsDigit).ToArray()));
-                        if (buffdig > 0)
-                        {
-                            Buffs_lbox.Items.Add(buff);
-                        }
-                    }
-                    
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            Refresh_BTN.PerformClick();
         }
 
         private void Item_FormClosing(object sender, FormClosingEventArgs e)
@@ -172,7 +43,64 @@ namespace Dungons_And_Dargons
 
         private void Give_btn_Click(object sender, EventArgs e)
         {
+            if (GPlayers_lbox.SelectedItem != null)
+            {
+                MessageBox.Show("Giving " + Name_tbox.Text + " to " + GPlayers_lbox.SelectedItem);
+                ITEMVIEW.GetData();
+                ITEMVIEW.OWNER_ID = Convert.ToInt32(GPlayers_lbox.SelectedItem.ToString().Split('<', '>')[1]);
+                ITEMVIEW.PostData();
+                MessageBox.Show("You No Longer Own This Item");
+                this.Close();
+            }
+        }
 
+        private void Refresh_BTN_Click(object sender, EventArgs e)
+        {
+            ITEMVIEW.GetData();
+
+            if (PLAYERID != -1)
+            {
+                if (PLAYERID != ITEMVIEW.OWNER_ID)
+                {
+                    MessageBox.Show("You Don't Own This Item");
+                    Give_BTN.Enabled = false;
+                    GPlayers_lbox.Enabled = false;
+                }
+            }
+            else
+            {
+                Give_BTN.Enabled = false;
+                GPlayers_lbox.Enabled = false;
+            }
+
+            Text = ITEMVIEW.Name;
+            Name_tbox.Text = ITEMVIEW.Name;
+            Description_tbox.Text = ITEMVIEW.Description;
+            Type_tbox.Text = ITEMVIEW.Prop_To_Type();
+
+            if (ITEMVIEW.M_HP > 0) Buffs_lbox.Items.Add("HP +" + ITEMVIEW.M_HP);
+            if (ITEMVIEW.M_MP > 0) Buffs_lbox.Items.Add("MP +" + ITEMVIEW.M_HP);
+            if (ITEMVIEW.M_ATK > 0) Buffs_lbox.Items.Add("ATK +" + ITEMVIEW.M_ATK);
+            if (ITEMVIEW.M_SATK > 0) Buffs_lbox.Items.Add("SATK +" + ITEMVIEW.M_SATK);
+            if (ITEMVIEW.M_DEF > 0) Buffs_lbox.Items.Add("DEF +" + ITEMVIEW.M_DEF);
+            if (ITEMVIEW.M_SDEF > 0) Buffs_lbox.Items.Add("SDEF +" + ITEMVIEW.M_SDEF);
+            if (ITEMVIEW.M_CHAR > 0) Buffs_lbox.Items.Add("CHAR +" + ITEMVIEW.M_CHAR);
+            if (ITEMVIEW.M_DEX > 0) Buffs_lbox.Items.Add("DEX +" + ITEMVIEW.M_DEX);
+            if (ITEMVIEW.M_STR > 0) Buffs_lbox.Items.Add("STR +" + ITEMVIEW.M_STR);
+            if (ITEMVIEW.M_INT > 0) Buffs_lbox.Items.Add("INT +" + ITEMVIEW.M_INT);
+            if (ITEMVIEW.M_PERC > 0) Buffs_lbox.Items.Add("PERC +" + ITEMVIEW.M_PERC);
+            if (ITEMVIEW.Tier > 0) Buffs_lbox.Items.Add("TIER " + ITEMVIEW.Tier);
+            if (ITEMVIEW.Grade > 0) Buffs_lbox.Items.Add("GRADE " + ITEMVIEW.Grade);
+            if (ITEMVIEW.Enhance > 0) Buffs_lbox.Items.Add("ENH " + ITEMVIEW.Enhance);
+            if (ITEMVIEW.ELevel > 0) Buffs_lbox.Items.Add("Enchants: (" + ITEMVIEW.EType + ") LVL: " + ITEMVIEW.ELevel);
+
+            List<NPC> GM_NPCS = GM_NPC_LIST.GetNPCS("PLAYER", "1");
+            GPlayers_lbox.Items.Clear();
+            foreach (NPC GM_NPC in GM_NPCS)
+            {
+                if (GM_NPC.PlayerID != PLAYERID)
+                    GPlayers_lbox.Items.Add(GM_NPC.PLAYER_DATA());
+            }
         }
     }
 }

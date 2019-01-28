@@ -48,7 +48,8 @@ namespace Dungons_And_Dargons
         public Boolean isEnemy { get; set; }
         public Boolean isNPC { get; set; }
 
-        public List<string> Inventory { get; set; }
+        public List<ITEM> Inventory { get; }
+        public List<SPELL> Spells { get; }
 
         public int NHPMax { get; set; }
         public int NMPMax { get; set; }
@@ -67,7 +68,14 @@ namespace Dungons_And_Dargons
         public NPC(MySqlConnection inconn)
         {
             conn = inconn;
-            Inventory = new List<String>();
+            Inventory = new List<ITEM>();
+            Spells = new List<SPELL>();
+        }
+
+
+        public string PLAYER_DATA()
+        {
+            return PName + " (ID: <" + PlayerID + ">)";
         }
 
         public void GetData()
@@ -200,27 +208,18 @@ namespace Dungons_And_Dargons
         {
             try
             {
-                Inventory.Clear();
-                string sql = "SELECT `Items_idItems` FROM `player_has_items` WHERE `Player_idPlayer`=" + PlayerID.ToString();
+                string sql = "SELECT `idItems`, `Name` FROM `items` WHERE `OWNER_ID` = '" + PlayerID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
-                List<int> al = new List<int>();
+                Inventory.Clear();
                 while (rdr.Read())
                 {
-                    al.Add(Convert.ToInt32(rdr[0]));
+                    ITEM GotITEM = new ITEM(conn);
+                    GotITEM.ItemID = Convert.ToInt32(rdr[0]);
+                    GotITEM.Name = Convert.ToString(rdr[1]);
+                    Inventory.Add(GotITEM);
                 }
                 rdr.Close();
-                foreach (int ItemID in al)
-                {
-                    string sql2 = "SELECT `Name` FROM `items` WHERE `idItems`=" + ItemID.ToString();
-                    MySqlCommand cmd2 = new MySqlCommand(sql2, conn);
-                    MySqlDataReader rdr2 = cmd2.ExecuteReader();
-                    while (rdr2.Read())
-                    {
-                        Inventory.Add(Convert.ToString(rdr2[0]) + " (ID: <" + ItemID.ToString() + ">)");
-                    }
-                    rdr2.Close();
-                }
             }
             catch (Exception ex)
             {
@@ -228,41 +227,32 @@ namespace Dungons_And_Dargons
             }
         }
 
-        public void SetInventory()
+        public void GetSpells()
         {
             try
             {
-                string sql = "DELETE FROM `player_has_items` WHERE `Player_idPlayer` = '" + PlayerID + "'";
+                string sql = "SELECT `idSpells`, `Name` FROM `spells` WHERE `OWNER_ID` = '" + PlayerID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                Spells.Clear();
+                while (rdr.Read())
+                {
+                    SPELL GotSPELL = new SPELL(conn);
+                    GotSPELL.SpellID = Convert.ToInt32(rdr[0]);
+                    GotSPELL.Name = Convert.ToString(rdr[1]);
+                    Spells.Add(GotSPELL);
+                }
+                rdr.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-
-            foreach (string item in Inventory)
-            {
-
-                string IID = item.Split('<', '>')[1];
-                try
-                {
-                    string sql = "INSERT INTO `player_has_items` (`Player_idPlayer`, `Items_idItems`) " +
-                        "VALUES (" + PlayerID + "," + IID + ")";
-                    MySqlCommand cmd = new MySqlCommand(sql, conn);
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-            }
-
         }
 
     }
 
-    class NPCS
+    public class NPCS
     {
         MySqlConnection conn;
         public NPCS(MySqlConnection inconn)
@@ -270,12 +260,12 @@ namespace Dungons_And_Dargons
             conn = inconn;
         }
 
-        public List<NPC> GetNPCS(string WHERE, string Propety)
+        public List<NPC> GetNPCS(string WHERE, string Property)
         {
             List<NPC> GotNPCS = new List<NPC>();
             try
             {
-                string sql = "SELECT `idPlayer` FROM `player` WHERE `" + WHERE + "`='" + Propety + "'";
+                string sql = "SELECT `idPlayer`, `PName` FROM `player` WHERE `" + WHERE + "`='" + Property + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 List<int> al = new List<int>();
@@ -283,6 +273,7 @@ namespace Dungons_And_Dargons
                 {
                     NPC GotNPC = new NPC(conn);
                     GotNPC.PlayerID = Convert.ToInt32(rdr[0]);
+                    GotNPC.PName = Convert.ToString(rdr[1]);
                     GotNPCS.Add(GotNPC);
                 }
                 rdr.Close();

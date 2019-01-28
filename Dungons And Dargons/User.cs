@@ -19,10 +19,13 @@ namespace Dungons_And_Dargons
         private string DBip;
         private string DBpassword;
         NPC MyPlayer;
+        private List<ITEM> OLD_INVENTORY;
+        private List<SPELL> OLD_SPELLS;
         Random rnd = new Random();
 
         NPCS GM_NPC_LIST;
         ITEMS GM_ITEM_LIST;
+        SPELLS GM_SPELLS_LIST;
 
         public User(int PlayerID, string ip, string password)
         {
@@ -36,6 +39,10 @@ namespace Dungons_And_Dargons
 
             GM_NPC_LIST = new NPCS(conn);
             GM_ITEM_LIST = new ITEMS(conn);
+            GM_SPELLS_LIST = new SPELLS(conn);
+
+            OLD_INVENTORY = new List<ITEM>();
+            OLD_SPELLS = new List<SPELL>();
 
             MyPlayer.PlayerID = PlayerID;
             MyPlayer.GetData();
@@ -56,6 +63,7 @@ namespace Dungons_And_Dargons
 
             MyPlayer.GetData();
             MyPlayer.GetInventory();
+            MyPlayer.GetSpells();
             Name_tbox.Text = MyPlayer.PName;
             LVL_tbox.Text = MyPlayer.Level.ToString();
             XP_lbl.Text = "XP: " + MyPlayer.XP.ToString() + "/" + MyPlayer.XPREQ.ToString();
@@ -175,9 +183,6 @@ namespace Dungons_And_Dargons
 
             }
 
-
-            Inventory_lbox.Items.Clear();
-
             HP_pbar.ForeColor = Color.LawnGreen;
 
             if (MyPlayer.HP < MyPlayer.HPMax / 2)
@@ -190,11 +195,38 @@ namespace Dungons_And_Dargons
                 HP_pbar.ForeColor = Color.Red;
             }
 
-            foreach (string item in MyPlayer.Inventory)
+            string NINVTOT = "";
+            string OINVTOT = "";
+            foreach(ITEM item in MyPlayer.Inventory) NINVTOT = string.Format("{0}{1}", NINVTOT, item.ItemID);
+            foreach(ITEM item in OLD_INVENTORY) OINVTOT = string.Format("{0}{1}", OINVTOT, item.ItemID);
+
+            if (NINVTOT != OINVTOT)
             {
-                Inventory_lbox.Items.Add(item);
+                Inventory_lbox.Items.Clear();
+                OLD_INVENTORY.Clear();
+                foreach (ITEM item in MyPlayer.Inventory)
+                {
+                    Inventory_lbox.Items.Add(item.ITEM_DATA());
+                    OLD_INVENTORY.Add(item);
+                }
             }
-            
+
+            string NSPLTOT = "";
+            string OSPLTOT = "";
+            foreach (SPELL spell in MyPlayer.Spells) NSPLTOT = string.Format("{0}{1}", NSPLTOT, spell.SpellID);
+            foreach (SPELL spell in OLD_SPELLS) OSPLTOT = string.Format("{0}{1}", OSPLTOT, spell.SpellID);
+
+            if (NSPLTOT != OSPLTOT)
+            {
+                Spells_lbox.Items.Clear();
+                OLD_SPELLS.Clear();
+                foreach (SPELL spell in MyPlayer.Spells)
+                {
+                    Spells_lbox.Items.Add(spell.SPELL_DATA());
+                    OLD_SPELLS.Add(spell);
+                }
+            }
+
             //Display Gamemaster Content
             if (MyPlayer.GAMEMASTER == true)
             {
@@ -208,10 +240,6 @@ namespace Dungons_And_Dargons
             UpdateDisplay();
         }
 
-        private void Log_lbox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         private void User_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             this.FormClosing -= new FormClosingEventHandler(User_Closing);
@@ -222,9 +250,19 @@ namespace Dungons_And_Dargons
         {
             if (Inventory_lbox.SelectedItem != null)
             {
-                string IID = Inventory_lbox.Items[Inventory_lbox.SelectedIndex].ToString().Split('<', '>')[1];
-                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PName);
+                string IID = Inventory_lbox.SelectedItem.ToString().Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
                 Iview.Show();
+            }
+        }
+
+        private void Spells_lbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Spells_lbox.SelectedItem != null)
+            {
+                string IID = Spells_lbox.SelectedItem.ToString().Split('<', '>')[1];
+                SpellView Sview = new SpellView(Convert.ToInt32(IID), conn);
+                Sview.Show();
             }
         }
 
@@ -273,11 +311,17 @@ namespace Dungons_And_Dargons
             IEDITOR_ITEM.ELevel = (int)ELevel_editor_ud.Value;
             IEDITOR_ITEM.Oracalcite = Oracalcite_editor_checkb.Checked;
 
+            if (Item_Character_Cbox.SelectedItem != null)
+            {
+                string IID = Item_Character_Cbox.Items[Item_Character_Cbox.SelectedIndex].ToString().Split('<', '>')[1];
+                IEDITOR_ITEM.OWNER_ID = Convert.ToInt32(IID);
+            }
+
             IEDITOR_ITEM.Type_To_Prop(Item_type_editor_cbox.SelectedItem.ToString());
 
             IEDITOR_ITEM.CreateData();
             UItem_editor_btn.PerformClick();
-    }
+        }
 
         private void EditorItems_lbox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -320,6 +364,7 @@ namespace Dungons_And_Dargons
                 EType_editor_tbox.Text = IEDITOR_ITEM.EType;
                 ELevel_editor_ud.Value = IEDITOR_ITEM.ELevel;
                 Oracalcite_editor_checkb.Checked = IEDITOR_ITEM.Oracalcite;
+                Item_Character_Cbox.SelectedIndex = IEDITOR_ITEM.OWNER_ID;
             }
 
         }
@@ -364,6 +409,12 @@ namespace Dungons_And_Dargons
             IEDITOR_ITEM.EType = EType_editor_tbox.Text;
             IEDITOR_ITEM.ELevel = (int)ELevel_editor_ud.Value;
             IEDITOR_ITEM.Oracalcite = Oracalcite_editor_checkb.Checked;
+
+            if (Item_Character_Cbox.SelectedItem != null)
+            {
+                string IID = Item_Character_Cbox.Items[Item_Character_Cbox.SelectedIndex].ToString().Split('<', '>')[1];
+                IEDITOR_ITEM.OWNER_ID = Convert.ToInt32(IID);
+            }
 
             IEDITOR_ITEM.Type_To_Prop(Item_type_editor_cbox.SelectedItem.ToString());
 
@@ -478,8 +529,14 @@ namespace Dungons_And_Dargons
             EditorItems_lbox.Items.Clear();
             foreach (ITEM GM_ITEM in GM_ITEMS)
             {
-                GM_ITEM.GetData();
-                EditorItems_lbox.Items.Add(GM_ITEM.Name + " (ID: <" + GM_ITEM.ItemID + ">)");
+                EditorItems_lbox.Items.Add(GM_ITEM.ITEM_DATA());
+            }
+
+            List<NPC> GM_NPCS= GM_NPC_LIST.GetNPCS("ALL", "1");
+            Item_Character_Cbox.Items.Clear();
+            foreach (NPC GM_NPC in GM_NPCS)
+            {
+                Item_Character_Cbox.Items.Add(GM_NPC.PLAYER_DATA());
             }
         }
 
@@ -816,12 +873,107 @@ namespace Dungons_And_Dargons
             foreach (NPC Player in GM_NPCS)
             {
                 Player.GetData();
-                NPCS_lbox.Items.Add(Player.PName + " (ID: <" + Player.PlayerID + ">)");
+                NPCS_lbox.Items.Add(Player.PLAYER_DATA());
             }
         }
 
         private void Equipment_tab_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Spells_tab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void New_Spell_editor_BTN_Click(object sender, EventArgs e)
+        {
+            SPELL SEDITOR_SPELL = new SPELL(conn);
+            SEDITOR_SPELL.Name = Spell_name_editor_tbox.Text;
+            SEDITOR_SPELL.Description = spell_desc_editor_tbox.Text;
+            SEDITOR_SPELL.Tier = (int)Tier_Spell_editor_ud.Value;
+            SEDITOR_SPELL.Rank = (int)Rank_Spell_editor_ud.Value;
+            SEDITOR_SPELL.MaxSlots = (int)MSlots_Spell_editor_ud.Value;
+            SEDITOR_SPELL.Slots = (int)Slots_Spell_editor_ud.Value;
+
+            if (Spell_Character_Cbox.SelectedItem != null)
+            {
+                string IID = Spell_Character_Cbox.SelectedItem.ToString().Split('<', '>')[1];
+                SEDITOR_SPELL.OWNER_ID = Convert.ToInt32(IID);
+            }
+            SEDITOR_SPELL.CreateData();
+            Refresh_Spell_editor_BTN.PerformClick();
+        }
+
+        private void Refresh_Spell_editor_BTN_Click(object sender, EventArgs e)
+        {
+            List<SPELL> GM_SPELLS = GM_SPELLS_LIST.GetSPELLS("ALL", "1");
+            Spells_Edititor_lbox.Items.Clear();
+            foreach (SPELL GM_SPELL in GM_SPELLS)
+            {
+                Spells_Edititor_lbox.Items.Add(GM_SPELL.SPELL_DATA());
+            }
+
+            List<NPC> GM_NPCS = GM_NPC_LIST.GetNPCS("ALL", "1");
+            Spell_Character_Cbox.Items.Clear();
+            foreach (NPC GM_NPC in GM_NPCS)
+            {
+                Spell_Character_Cbox.Items.Add(GM_NPC.PLAYER_DATA());
+            }
+        }
+
+        private void Modify_Spell_editor_BTN_Click(object sender, EventArgs e)
+        {
+            SPELL SEDITOR_SPELL = new SPELL(conn);
+            SEDITOR_SPELL.SpellID = (int)ID_spell_editor_up.Value;
+            SEDITOR_SPELL.Name = Spell_name_editor_tbox.Text;
+            SEDITOR_SPELL.Description = spell_desc_editor_tbox.Text;
+            SEDITOR_SPELL.Tier = (int)Tier_Spell_editor_ud.Value;
+            SEDITOR_SPELL.Rank = (int)Rank_Spell_editor_ud.Value;
+            SEDITOR_SPELL.MaxSlots = (int)MSlots_Spell_editor_ud.Value;
+            SEDITOR_SPELL.Slots = (int)Slots_Spell_editor_ud.Value;
+
+            if (Spell_Character_Cbox.SelectedItem != null)
+            {
+                string IID = Spell_Character_Cbox.SelectedItem.ToString().Split('<', '>')[1];
+                SEDITOR_SPELL.OWNER_ID = Convert.ToInt32(IID);
+            }
+            SEDITOR_SPELL.PostData();
+            Refresh_Spell_editor_BTN.PerformClick();
+        }
+
+        private void Delete_Spell_editor_BTN_Click(object sender, EventArgs e)
+        {
+            SPELL SEDITOR_SPELL= new SPELL(conn);
+            SEDITOR_SPELL.SpellID = (int)ID_editor_up.Value;
+            SEDITOR_SPELL.GetData();
+            SEDITOR_SPELL.Delete();
+            Refresh_Spell_editor_BTN.PerformClick();
+        }
+
+        private void Spells_Edititor_lbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string IID = "Dead";
+            foreach (ListViewItem spell in Spells_Edititor_lbox.SelectedItems)
+            {
+                IID = spell.Text.Split('<', '>')[1];
+            }
+
+            if (IID != "Dead")
+            {
+                SPELL SEDITOR_SPELL = new SPELL(conn);
+                SEDITOR_SPELL.SpellID = Convert.ToInt32(IID);
+                SEDITOR_SPELL.GetData();
+
+                ID_spell_editor_up.Value = SEDITOR_SPELL.SpellID;
+                Spell_name_editor_tbox.Text = SEDITOR_SPELL.Name;
+                spell_desc_editor_tbox.Text = SEDITOR_SPELL.Description;
+                Tier_Spell_editor_ud.Value = SEDITOR_SPELL.Tier;
+                Rank_Spell_editor_ud.Value = SEDITOR_SPELL.Rank;
+                MSlots_Spell_editor_ud.Value = SEDITOR_SPELL.MaxSlots;
+                Slots_Spell_editor_ud.Value = SEDITOR_SPELL.Slots;
+            }
 
         }
     }
