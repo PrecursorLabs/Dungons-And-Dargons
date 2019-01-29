@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data;
@@ -29,12 +30,40 @@ namespace Dungons_And_Dargons
 
         public User(int PlayerID, string ip, string password)
         {
+            String version = "1.0.6.0";
+            string LatestVersion = "";
             DBip = ip;
             DBpassword = password;
             connStr = "server=" + DBip + ";user=DBUser;database=dungonsdargons;port=3306;password=" + DBpassword;
             conn = new MySqlConnection(connStr);
+
             InitializeComponent();
             conn.Open();
+            try
+            {
+                string sql = "SELECT `APP VERSION` FROM `global_info` WHERE `idGlobal_Info` = '0'";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    LatestVersion = Convert.ToString(rdr[0]);
+                }
+                rdr.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            if (version != LatestVersion)
+            {
+                MessageBox.Show("YOU MUST UPDATE!!");
+                MessageBox.Show("BYE BYE!");
+                conn.Close();
+                Application.Exit();
+                this.Close();
+            }
             MyPlayer = new NPC(conn);
 
             GM_NPC_LIST = new NPCS(conn);
