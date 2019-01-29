@@ -49,6 +49,7 @@
             // 
             // Name_tbox
             // 
+            this.Name_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Name_tbox.Location = new System.Drawing.Point(52, 6);
             this.Name_tbox.Name = "Name_tbox";
             this.Name_tbox.ReadOnly = true;
@@ -75,6 +76,7 @@
             // 
             // Description_tbox
             // 
+            this.Description_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Description_tbox.Location = new System.Drawing.Point(12, 45);
             this.Description_tbox.Multiline = true;
             this.Description_tbox.Name = "Description_tbox";
@@ -85,6 +87,7 @@
             // 
             // Buffs_lbox
             // 
+            this.Buffs_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Buffs_lbox.FormattingEnabled = true;
             this.Buffs_lbox.Location = new System.Drawing.Point(12, 202);
             this.Buffs_lbox.Name = "Buffs_lbox";
@@ -96,6 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(265, 384);
             this.Controls.Add(this.Buffs_lbox);
             this.Controls.Add(this.Refresh_BTN);

@@ -23,6 +23,7 @@ namespace Dungons_And_Dargons
         public int Rank { get; set; }
         public int MaxSlots { get; set; }
         public int Slots { get; set; }
+        public int C_MP { get; set; }
 
         public int Dice { get; set; }
 
@@ -58,7 +59,7 @@ namespace Dungons_And_Dargons
             {
 
                 string sql = "INSERT INTO `spells`" +
-                    " (`Name`, `Description`, `Tier`, `Rank`, `MaxSlots`, `Slots`, `OWNER_ID`)" +
+                    " (`Name`, `Description`, `Tier`, `Rank`, `MaxSlots`, `Slots`, `OWNER_ID`, `C_MP`)" +
                     " VALUES" +
                     " ('" + Name.Replace("'", "\\'") + "'," +
                     " '" + Description.Replace("'", "\\'") + "'," +
@@ -66,7 +67,8 @@ namespace Dungons_And_Dargons
                     " '" + Rank + "'," +
                     " '" + MaxSlots + "'," +
                     " '" + Slots + "'," +
-                    " '" + OWNER_ID + "');";
+                    " '" + OWNER_ID + "'," +
+                    " '" + C_MP + "');";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
@@ -80,7 +82,7 @@ namespace Dungons_And_Dargons
         {
             try
             {
-                string sql = "SELECT `idSpells`, `Name`, `Description`, `Tier`, `Rank`, `MaxSlots`, `Slots`, `OWNER_ID`" +
+                string sql = "SELECT `idSpells`, `Name`, `Description`, `Tier`, `Rank`, `MaxSlots`, `Slots`, `OWNER_ID`, `C_MP`" +
                     " FROM `spells` WHERE `idSpells`=" + SpellID;
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
@@ -94,6 +96,7 @@ namespace Dungons_And_Dargons
                     MaxSlots = Convert.ToInt32(rdr[5]);
                     Slots = Convert.ToInt32(rdr[6]);
                     OWNER_ID = Convert.ToInt32(rdr[7]);
+                    C_MP = Convert.ToInt32(rdr[8]);
                 }
                 rdr.Close();
 
@@ -122,7 +125,8 @@ namespace Dungons_And_Dargons
                     " `Rank` = '" + Rank + "', " +
                     " `MaxSlots` = '" + MaxSlots + "', " +
                     " `Slots` = '" + Slots + "', " +
-                    " `OWNER_ID` = '" + OWNER_ID + "'" +
+                    " `OWNER_ID` = '" + OWNER_ID + "'," +
+                    " `C_MP` = '" + C_MP + "'" +
                     " WHERE `idSpells`='" + SpellID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();

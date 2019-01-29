@@ -30,7 +30,7 @@ namespace Dungons_And_Dargons
 
         public User(int PlayerID, string ip, string password)
         {
-            String version = "1.0.6.1";
+            String version = "1.0.7.0";
             string LatestVersion = "0.0.0.0";
             DBip = ip;
             DBpassword = password;
@@ -60,6 +60,7 @@ namespace Dungons_And_Dargons
             {
                 MessageBox.Show("YOU MUST UPDATE!!");
                 MessageBox.Show("BYE BYE!");
+                System.Diagnostics.Process.Start("https://github.com/PrecursorLabs/Dungons-And-Dargons/releases/");
                 conn.Close();
                 Application.Exit();
                 this.Close();
@@ -206,6 +207,23 @@ namespace Dungons_And_Dargons
             M_INT_tbox.Text = MyPlayer.M_INT.ToString();
             M_PERC_tbox.Text = MyPlayer.M_PERC.ToString();
 
+            T_ATK_tbox.Text = Convert.ToString(MyPlayer.M_ATK + MyPlayer.ATK);
+            T_SATK_tbox.Text = Convert.ToString(MyPlayer.M_SATK + MyPlayer.SATK);
+            T_DEF_tbox.Text = Convert.ToString(MyPlayer.M_DEF + MyPlayer.DEF);
+            T_SDEF_tbox.Text = Convert.ToString(MyPlayer.M_SDEF + MyPlayer.SDEF);
+            T_CHAR_tbox.Text = Convert.ToString(MyPlayer.M_CHAR + MyPlayer.CHARIS);
+            T_DEX_tbox.Text = Convert.ToString(MyPlayer.M_DEX + MyPlayer.DEX);
+            T_STR_tbox.Text = Convert.ToString(MyPlayer.M_STR + MyPlayer.STR);
+            T_INT_tbox.Text = Convert.ToString(MyPlayer.M_INT + MyPlayer.INTEL);
+            T_PERC_tbox.Text = Convert.ToString(MyPlayer.M_PERC + MyPlayer.PERC);
+
+            Power_Level_tbox.Text = Convert.ToString(MyPlayer.HP + MyPlayer.MP + MyPlayer.M_ATK + MyPlayer.ATK + MyPlayer.M_SATK + MyPlayer.SATK
+                + MyPlayer.M_DEF + MyPlayer.DEF + MyPlayer.M_SDEF + MyPlayer.SDEF + MyPlayer.M_CHAR + MyPlayer.CHARIS + MyPlayer.M_DEX
+                + MyPlayer.DEX + MyPlayer.M_STR + MyPlayer.STR + MyPlayer.M_INT + MyPlayer.INTEL + MyPlayer.M_PERC + MyPlayer.PERC)
+                + "/" + Convert.ToString(MyPlayer.HPMax + MyPlayer.MPMax + MyPlayer.M_ATK + MyPlayer.ATK + MyPlayer.M_SATK + MyPlayer.SATK
+                + MyPlayer.M_DEF + MyPlayer.DEF + MyPlayer.M_SDEF + MyPlayer.SDEF + MyPlayer.M_CHAR + MyPlayer.CHARIS + MyPlayer.M_DEX
+                + MyPlayer.DEX + MyPlayer.M_STR + MyPlayer.STR + MyPlayer.M_INT + MyPlayer.INTEL + MyPlayer.M_PERC + MyPlayer.PERC); ; 
+           
             Knowledge_lbox.Items.Clear();
             if (MyPlayer.Earth > 0)
             {
@@ -1054,6 +1072,7 @@ namespace Dungons_And_Dargons
             SEDITOR_SPELL.Rank = (int)Rank_Spell_editor_ud.Value;
             SEDITOR_SPELL.MaxSlots = (int)MSlots_Spell_editor_ud.Value;
             SEDITOR_SPELL.Slots = (int)Slots_Spell_editor_ud.Value;
+            SEDITOR_SPELL.C_MP = (int)C_MP_UD.Value;
 
             if (Spell_Character_Cbox.SelectedItem != null)
             {
@@ -1091,6 +1110,7 @@ namespace Dungons_And_Dargons
             SEDITOR_SPELL.Rank = (int)Rank_Spell_editor_ud.Value;
             SEDITOR_SPELL.MaxSlots = (int)MSlots_Spell_editor_ud.Value;
             SEDITOR_SPELL.Slots = (int)Slots_Spell_editor_ud.Value;
+            SEDITOR_SPELL.C_MP = (int)C_MP_UD.Value;
 
             if (Spell_Character_Cbox.SelectedItem != null)
             {

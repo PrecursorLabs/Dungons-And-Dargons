@@ -212,7 +212,6 @@
   <ItemGroup>
     <Content Include="Dargon.ico" />
     <Content Include="FodyWeavers.xml" />
-    <Content Include="unnamed.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

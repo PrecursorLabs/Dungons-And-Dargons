@@ -46,6 +46,7 @@
             this.Name_tbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Name_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Name_tbox.Location = new System.Drawing.Point(89, 64);
             this.Name_tbox.Name = "Name_tbox";
             this.Name_tbox.Size = new System.Drawing.Size(107, 20);
@@ -57,6 +58,7 @@
             this.Pass_tbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pass_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Pass_tbox.Location = new System.Drawing.Point(89, 90);
             this.Pass_tbox.Name = "Pass_tbox";
             this.Pass_tbox.Size = new System.Drawing.Size(107, 20);
@@ -103,10 +105,11 @@
             // 
             // Log_lbox
             // 
+            this.Log_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Log_lbox.FormattingEnabled = true;
             this.Log_lbox.Location = new System.Drawing.Point(202, 5);
             this.Log_lbox.Name = "Log_lbox";
-            this.Log_lbox.Size = new System.Drawing.Size(232, 134);
+            this.Log_lbox.Size = new System.Drawing.Size(232, 121);
             this.Log_lbox.TabIndex = 5;
             // 
             // label3
@@ -126,6 +129,7 @@
             this.dbpassword_tbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dbpassword_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.dbpassword_tbox.Location = new System.Drawing.Point(89, 38);
             this.dbpassword_tbox.Name = "dbpassword_tbox";
             this.dbpassword_tbox.Size = new System.Drawing.Size(107, 20);
@@ -149,6 +153,7 @@
             this.ip_tbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ip_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ip_tbox.Location = new System.Drawing.Point(89, 12);
             this.ip_tbox.Name = "ip_tbox";
             this.ip_tbox.Size = new System.Drawing.Size(107, 20);

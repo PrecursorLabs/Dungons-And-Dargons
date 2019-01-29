@@ -44,6 +44,7 @@ namespace Dungons_And_Dargons
             if (SPELLVIEW.MaxSlots > 0) Buffs_lbox.Items.Add("Slots: " + SPELLVIEW.Slots + "/" + SPELLVIEW.MaxSlots);
             if (SPELLVIEW.Tier > 0) Buffs_lbox.Items.Add("TIER: " + ToRoman(SPELLVIEW.Tier));
             if (SPELLVIEW.Rank > 0) Buffs_lbox.Items.Add("Rank: " + SPELLVIEW.Rank);
+            if (SPELLVIEW.C_MP > 0) Buffs_lbox.Items.Add("MP Consumed: " + SPELLVIEW.C_MP);
             if (SPELLVIEW.Dice > 0) Buffs_lbox.Items.Add("Dice: D" + SPELLVIEW.Dice);
         }
 
