@@ -181,35 +181,63 @@ namespace Dungons_And_Dargons
             {
                 Helmet_tbox.Text = MyPlayer.Helmet.ITEM_DATA();
             }
+            else
+            {
+                Helmet_tbox.Text = "";
+            }
 
             if (MyPlayer.Maille.Name != null)
             {
                 Maille_tbox.Text = MyPlayer.Maille.ITEM_DATA();
+            }
+            else
+            {
+                Maille_tbox.Text = "";
             }
 
             if (MyPlayer.Pants.Name != null)
             {
                 Pants__tbox.Text = MyPlayer.Pants.ITEM_DATA();
             }
+            else
+            {
+                Pants__tbox.Text = "";
+            }
 
             if (MyPlayer.Boots.Name != null)
             {
                 Boots_tbox.Text = MyPlayer.Boots.ITEM_DATA();
+            }
+            else
+            {
+                Boots_tbox.Text = "";
             }
 
             if (MyPlayer.Gloves.Name != null)
             {
                 Gloves_tbox.Text = MyPlayer.Gloves.ITEM_DATA();
             }
+            else
+            {
+                Gloves_tbox.Text = "";
+            }
 
             if (MyPlayer.Weapon.Name != null)
             {
                 Weapon_tbox.Text = MyPlayer.Weapon.ITEM_DATA();
             }
+            else
+            {
+                Weapon_tbox.Text = "";
+            }
 
             if (MyPlayer.Artifact.Name != null)
             {
                 Artifact_tbox.Text = MyPlayer.Artifact.ITEM_DATA();
+            }
+            else
+            {
+                Artifact_tbox.Text = "";
             }
 
 
@@ -1061,7 +1089,6 @@ namespace Dungons_And_Dargons
         {
             MyPlayer.DeEquip("ALL");
             UPDATE_btn.PerformClick();
-
         }
 
         private void DeEquip_Helmet_btn_Click(object sender, EventArgs e)
@@ -1175,6 +1202,10 @@ namespace Dungons_And_Dargons
                 Iview.Show();
             }
         }
-    }
+
+        private void Filter_Relation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CM_UPDATE_BTN.PerformClick();
+        }
     }
 }
