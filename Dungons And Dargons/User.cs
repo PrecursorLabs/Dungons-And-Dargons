@@ -220,7 +220,7 @@ namespace Dungons_And_Dargons
             Power_Level_tbox.Text = Convert.ToString(MyPlayer.HP + MyPlayer.MP + MyPlayer.M_ATK + MyPlayer.ATK + MyPlayer.M_SATK + MyPlayer.SATK
                 + MyPlayer.M_DEF + MyPlayer.DEF + MyPlayer.M_SDEF + MyPlayer.SDEF + MyPlayer.M_CHAR + MyPlayer.CHARIS + MyPlayer.M_DEX
                 + MyPlayer.DEX + MyPlayer.M_STR + MyPlayer.STR + MyPlayer.M_INT + MyPlayer.INTEL + MyPlayer.M_PERC + MyPlayer.PERC)
-                + "/" + Convert.ToString(MyPlayer.HPMax + MyPlayer.MPMax + MyPlayer.M_ATK + MyPlayer.ATK + MyPlayer.M_SATK + MyPlayer.SATK
+                + "/" + Convert.ToString(MyPlayer.HPMax + MyPlayer.M_HP + MyPlayer.MPMax + MyPlayer.M_MP + MyPlayer.M_ATK + MyPlayer.ATK + MyPlayer.M_SATK + MyPlayer.SATK
                 + MyPlayer.M_DEF + MyPlayer.DEF + MyPlayer.M_SDEF + MyPlayer.SDEF + MyPlayer.M_CHAR + MyPlayer.CHARIS + MyPlayer.M_DEX
                 + MyPlayer.DEX + MyPlayer.M_STR + MyPlayer.STR + MyPlayer.M_INT + MyPlayer.INTEL + MyPlayer.M_PERC + MyPlayer.PERC); ; 
            
