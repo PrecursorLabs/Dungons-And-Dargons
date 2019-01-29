@@ -38,6 +38,7 @@
             this.Give_BTN = new System.Windows.Forms.Button();
             this.GPlayers_lbox = new System.Windows.Forms.ComboBox();
             this.Refresh_BTN = new System.Windows.Forms.Button();
+            this.Equip_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Buffs_lbox
@@ -48,7 +49,7 @@
             this.Buffs_lbox.Location = new System.Drawing.Point(12, 228);
             this.Buffs_lbox.Name = "Buffs_lbox";
             this.Buffs_lbox.ScrollAlwaysVisible = true;
-            this.Buffs_lbox.Size = new System.Drawing.Size(240, 147);
+            this.Buffs_lbox.Size = new System.Drawing.Size(240, 134);
             this.Buffs_lbox.TabIndex = 0;
             // 
             // Description_tbox
@@ -111,7 +112,7 @@
             // 
             this.Give_BTN.Location = new System.Drawing.Point(157, 397);
             this.Give_BTN.Name = "Give_BTN";
-            this.Give_BTN.Size = new System.Drawing.Size(75, 23);
+            this.Give_BTN.Size = new System.Drawing.Size(95, 23);
             this.Give_BTN.TabIndex = 9;
             this.Give_BTN.Text = "Give";
             this.Give_BTN.UseVisualStyleBackColor = true;
@@ -130,17 +131,28 @@
             // 
             this.Refresh_BTN.Location = new System.Drawing.Point(12, 426);
             this.Refresh_BTN.Name = "Refresh_BTN";
-            this.Refresh_BTN.Size = new System.Drawing.Size(220, 23);
+            this.Refresh_BTN.Size = new System.Drawing.Size(240, 23);
             this.Refresh_BTN.TabIndex = 11;
             this.Refresh_BTN.Text = "Refresh";
             this.Refresh_BTN.UseVisualStyleBackColor = true;
             this.Refresh_BTN.Click += new System.EventHandler(this.Refresh_BTN_Click);
+            // 
+            // Equip_btn
+            // 
+            this.Equip_btn.Location = new System.Drawing.Point(12, 370);
+            this.Equip_btn.Name = "Equip_btn";
+            this.Equip_btn.Size = new System.Drawing.Size(240, 23);
+            this.Equip_btn.TabIndex = 12;
+            this.Equip_btn.Text = "Equip";
+            this.Equip_btn.UseVisualStyleBackColor = true;
+            this.Equip_btn.Click += new System.EventHandler(this.Equip_btn_Click);
             // 
             // ItemView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(264, 461);
+            this.Controls.Add(this.Equip_btn);
             this.Controls.Add(this.Refresh_BTN);
             this.Controls.Add(this.GPlayers_lbox);
             this.Controls.Add(this.Give_BTN);
@@ -177,5 +189,6 @@
         private System.Windows.Forms.Button Give_BTN;
         private System.Windows.Forms.ComboBox GPlayers_lbox;
         private System.Windows.Forms.Button Refresh_BTN;
+        private System.Windows.Forms.Button Equip_btn;
     }
 }

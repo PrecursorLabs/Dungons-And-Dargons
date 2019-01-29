@@ -459,7 +459,15 @@ namespace Dungons_And_Dargons
                 EType_editor_tbox.Text = IEDITOR_ITEM.EType;
                 ELevel_editor_ud.Value = IEDITOR_ITEM.ELevel;
                 Oracalcite_editor_checkb.Checked = IEDITOR_ITEM.Oracalcite;
-                Item_Character_Cbox.SelectedIndex = IEDITOR_ITEM.OWNER_ID;
+
+                foreach (object option in Item_Character_Cbox.Items)
+                {
+                    string CID = option.ToString().Split('<', '>')[1];
+                    if (Convert.ToInt32(CID) == IEDITOR_ITEM.OWNER_ID)
+                    {
+                        Item_Character_Cbox.SelectedItem = option.ToString();
+                    }
+                }
             }
 
         }
@@ -1068,6 +1076,15 @@ namespace Dungons_And_Dargons
                 Rank_Spell_editor_ud.Value = SEDITOR_SPELL.Rank;
                 MSlots_Spell_editor_ud.Value = SEDITOR_SPELL.MaxSlots;
                 Slots_Spell_editor_ud.Value = SEDITOR_SPELL.Slots;
+
+                foreach (object option in Spell_Character_Cbox.Items)
+                {
+                    string CID = option.ToString().Split('<', '>')[1];
+                    if (Convert.ToInt32(CID) == SEDITOR_SPELL.OWNER_ID)
+                    {
+                        Spell_Character_Cbox.SelectedItem = option.ToString();
+                    }
+                }
             }
 
         }
@@ -1077,12 +1094,8 @@ namespace Dungons_And_Dargons
             if (Equipable_lbox.SelectedItem != null)
             {
                 string IID = Equipable_lbox.SelectedItem.ToString().Split('<', '>')[1];
-                ITEM TO_Equip = new ITEM(conn);
-                TO_Equip.ItemID = Convert.ToInt32(IID);
-                TO_Equip.GetData();
-                MyPlayer.DeEquip(TO_Equip.Prop_To_Type());
-                MyPlayer.Equip(TO_Equip);
-                UPDATE_btn.PerformClick();
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
+                Iview.Show();
             }
         }
 

@@ -18,6 +18,7 @@ namespace Dungons_And_Dargons
         public int IID;
         public ITEM ITEMVIEW;
         private NPCS GM_NPC_LIST;
+        private NPC MyPlayer;
         public int PLAYERID;
 
         public ItemView(int ID, MySqlConnection conn, int PlayerId = -1)
@@ -28,7 +29,9 @@ namespace Dungons_And_Dargons
             ITEMVIEW = new ITEM(Iconn);
             ITEMVIEW.ItemID = IID;
             GM_NPC_LIST = new NPCS(Iconn);
+            MyPlayer = new NPC(Iconn);
             PLAYERID = PlayerId;
+            MyPlayer.PlayerID = PLAYERID;
         }
 
         private void Item_Load(object sender, EventArgs e)
@@ -72,6 +75,7 @@ namespace Dungons_And_Dargons
             {
                 Give_BTN.Enabled = false;
                 GPlayers_lbox.Enabled = false;
+                Equip_btn.Enabled = false;
             }
 
             Text = ITEMVIEW.Name;
@@ -102,6 +106,19 @@ namespace Dungons_And_Dargons
                 if (GM_NPC.PlayerID != PLAYERID)
                     GPlayers_lbox.Items.Add(GM_NPC.PLAYER_DATA());
             }
+        }
+
+        private void Equip_btn_Click(object sender, EventArgs e)
+        {
+            ITEM TO_Equip = new ITEM(Iconn);
+            TO_Equip.ItemID = Convert.ToInt32(IID);
+            TO_Equip.GetData();
+            MyPlayer.GetData();
+            MyPlayer.GetInventory();
+            MyPlayer.DeEquip(TO_Equip.Prop_To_Type());
+            MyPlayer.Equip(TO_Equip);
+            MessageBox.Show("Equipped");
+            this.Close();
         }
     }
 }
