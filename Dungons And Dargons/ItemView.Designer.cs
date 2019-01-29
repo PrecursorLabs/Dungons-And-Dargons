@@ -46,6 +46,7 @@
             // 
             this.Buffs_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Buffs_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Buffs_lbox.FormattingEnabled = true;
             this.Buffs_lbox.Location = new System.Drawing.Point(12, 228);
             this.Buffs_lbox.Name = "Buffs_lbox";
@@ -57,6 +58,7 @@
             // 
             this.Description_tbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Description_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Description_tbox.Location = new System.Drawing.Point(12, 71);
             this.Description_tbox.Multiline = true;
             this.Description_tbox.Name = "Description_tbox";
@@ -86,6 +88,7 @@
             // 
             // Name_tbox
             // 
+            this.Name_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Name_tbox.Location = new System.Drawing.Point(52, 6);
             this.Name_tbox.Name = "Name_tbox";
             this.Name_tbox.ReadOnly = true;
@@ -94,6 +97,7 @@
             // 
             // Type_tbox
             // 
+            this.Type_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Type_tbox.Location = new System.Drawing.Point(52, 32);
             this.Type_tbox.Name = "Type_tbox";
             this.Type_tbox.ReadOnly = true;
@@ -152,6 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(264, 461);
             this.Controls.Add(this.Equip_btn);
             this.Controls.Add(this.Refresh_BTN);

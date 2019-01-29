@@ -4215,7 +4215,7 @@
             // XP_lbl
             // 
             this.XP_lbl.AutoSize = true;
-            this.XP_lbl.BackColor = System.Drawing.SystemColors.Control;
+            this.XP_lbl.BackColor = System.Drawing.Color.Transparent;
             this.XP_lbl.Location = new System.Drawing.Point(6, 91);
             this.XP_lbl.Name = "XP_lbl";
             this.XP_lbl.Size = new System.Drawing.Size(24, 13);

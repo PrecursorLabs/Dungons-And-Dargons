@@ -143,6 +143,7 @@
             // 
             // Inventory_lbox
             // 
+            this.Inventory_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Inventory_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Inventory_lbox.FormattingEnabled = true;
             this.Inventory_lbox.Location = new System.Drawing.Point(3, 16);
@@ -167,6 +168,7 @@
             // 
             // Equipment_lbox
             // 
+            this.Equipment_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Equipment_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Equipment_lbox.FormattingEnabled = true;
             this.Equipment_lbox.Location = new System.Drawing.Point(3, 16);
@@ -192,6 +194,7 @@
             // 
             // Spells_lbox
             // 
+            this.Spells_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Spells_lbox.FormattingEnabled = true;
             this.Spells_lbox.Location = new System.Drawing.Point(3, 16);
@@ -526,6 +529,7 @@
             // 
             // Gold_UD
             // 
+            this.Gold_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Gold_UD.Location = new System.Drawing.Point(178, 66);
             this.Gold_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -538,6 +542,7 @@
             // 
             // XP_UD
             // 
+            this.XP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.XP_UD.Location = new System.Drawing.Point(178, 107);
             this.XP_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -550,6 +555,7 @@
             // 
             // HP_UD
             // 
+            this.HP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.HP_UD.Location = new System.Drawing.Point(178, 146);
             this.HP_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -562,6 +568,7 @@
             // 
             // MP_UD
             // 
+            this.MP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.MP_UD.Location = new System.Drawing.Point(178, 188);
             this.MP_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -825,6 +832,7 @@
             // 
             // Earth_UD
             // 
+            this.Earth_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Earth_UD.Location = new System.Drawing.Point(632, 345);
             this.Earth_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -837,6 +845,7 @@
             // 
             // Lightning_UD
             // 
+            this.Lightning_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Lightning_UD.Location = new System.Drawing.Point(632, 373);
             this.Lightning_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -849,6 +858,7 @@
             // 
             // Ice_UD
             // 
+            this.Ice_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Ice_UD.Location = new System.Drawing.Point(632, 401);
             this.Ice_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -861,6 +871,7 @@
             // 
             // Fire_UD
             // 
+            this.Fire_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Fire_UD.Location = new System.Drawing.Point(632, 429);
             this.Fire_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -873,6 +884,7 @@
             // 
             // Unholy_UD
             // 
+            this.Unholy_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Unholy_UD.Location = new System.Drawing.Point(632, 457);
             this.Unholy_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -885,6 +897,7 @@
             // 
             // Holy_UD
             // 
+            this.Holy_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Holy_UD.Location = new System.Drawing.Point(632, 484);
             this.Holy_UD.Maximum = new decimal(new int[] {
             -1593835520,
@@ -899,6 +912,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(751, 551);
             this.Controls.Add(this.Holy_UD);
             this.Controls.Add(this.Unholy_UD);
