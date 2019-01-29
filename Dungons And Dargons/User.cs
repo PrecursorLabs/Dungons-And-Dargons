@@ -177,40 +177,39 @@ namespace Dungons_And_Dargons
             M_INT_tbox.Text = MyPlayer.M_INT.ToString();
             M_PERC_tbox.Text = MyPlayer.M_PERC.ToString();
 
-            Equipment_lbox.Items.Clear();
             if (MyPlayer.Helmet.Name != null)
             {
-                Equipment_lbox.Items.Add("Helmet: " + MyPlayer.Helmet.ITEM_DATA());
+                Helmet_tbox.Text = MyPlayer.Helmet.ITEM_DATA();
             }
 
             if (MyPlayer.Maille.Name != null)
             {
-                Equipment_lbox.Items.Add("Maille: " + MyPlayer.Maille.ITEM_DATA());
+                Maille_tbox.Text = MyPlayer.Maille.ITEM_DATA();
             }
 
             if (MyPlayer.Pants.Name != null)
             {
-                Equipment_lbox.Items.Add("Pants: " + MyPlayer.Pants.ITEM_DATA());
+                Pants__tbox.Text = MyPlayer.Pants.ITEM_DATA();
             }
 
             if (MyPlayer.Boots.Name != null)
             {
-                Equipment_lbox.Items.Add("Boots: " + MyPlayer.Boots.ITEM_DATA());
+                Boots_tbox.Text = MyPlayer.Boots.ITEM_DATA();
             }
 
             if (MyPlayer.Gloves.Name != null)
             {
-                Equipment_lbox.Items.Add("Gloves: " + MyPlayer.Gloves.ITEM_DATA());
+                Gloves_tbox.Text = MyPlayer.Gloves.ITEM_DATA();
             }
 
             if (MyPlayer.Weapon.Name != null)
             {
-                Equipment_lbox.Items.Add("Weapon: " + MyPlayer.Weapon.ITEM_DATA());
+                Weapon_tbox.Text = MyPlayer.Weapon.ITEM_DATA();
             }
 
             if (MyPlayer.Artifact.Name != null)
             {
-                Equipment_lbox.Items.Add("Artifact: " + MyPlayer.Artifact.ITEM_DATA());
+                Artifact_tbox.Text = MyPlayer.Artifact.ITEM_DATA();
             }
 
 
@@ -1044,16 +1043,6 @@ namespace Dungons_And_Dargons
 
         }
 
-        private void Equipment_lbox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Equipment_lbox.SelectedItem != null)
-            {
-                string IID = Equipment_lbox.SelectedItem.ToString().Split('<', '>')[1];
-                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
-            }
-        }
-
         private void Equipable_lbox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Equipable_lbox.SelectedItem != null)
@@ -1074,5 +1063,118 @@ namespace Dungons_And_Dargons
             UPDATE_btn.PerformClick();
 
         }
+
+        private void DeEquip_Helmet_btn_Click(object sender, EventArgs e)
+        {
+            MyPlayer.DeEquip("Helmet");
+            UPDATE_btn.PerformClick();
+        }
+
+        private void DeEquip_Maille_btn_Click(object sender, EventArgs e)
+        {
+            MyPlayer.DeEquip("Maille");
+            UPDATE_btn.PerformClick();
+        }
+
+        private void DeEquip_Pants_btn_Click(object sender, EventArgs e)
+        {
+            MyPlayer.DeEquip("Pants");
+            UPDATE_btn.PerformClick();
+        }
+
+        private void DeEquip_Boots_btn_Click(object sender, EventArgs e)
+        {
+            MyPlayer.DeEquip("Boots");
+            UPDATE_btn.PerformClick();
+        }
+
+        private void DeEquip_Gloves_btn_Click(object sender, EventArgs e)
+        {
+            MyPlayer.DeEquip("Gloves");
+            UPDATE_btn.PerformClick();
+        }
+
+        private void DeEquip_Weapon_btn_Click(object sender, EventArgs e)
+        {
+            MyPlayer.DeEquip("Weapon");
+            UPDATE_btn.PerformClick();
+        }
+
+        private void DeEquip_Artifact_btn_Click(object sender, EventArgs e)
+        {
+            MyPlayer.DeEquip("Artifact");
+            UPDATE_btn.PerformClick();
+        }
+
+        private void Helmet_tbox_Click(object sender, EventArgs e)
+        {
+            if (Helmet_tbox.Text != "")
+            {
+                string IID = Helmet_tbox.Text.Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
+                Iview.Show();
+            }
+        }
+
+        private void Maille_tbox_Click(object sender, EventArgs e)
+        {
+            if (Maille_tbox.Text != "")
+            {
+                string IID = Maille_tbox.Text.Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
+                Iview.Show();
+            }
+        }
+
+        private void Pants__tbox_Click(object sender, EventArgs e)
+        {
+            if (Pants__tbox.Text != "")
+            {
+                string IID = Pants__tbox.Text.Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
+                Iview.Show();
+            }
+        }
+
+        private void Boots_tbox_Click(object sender, EventArgs e)
+        {
+            if (Boots_tbox.Text != "")
+            {
+                string IID = Boots_tbox.Text.Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
+                Iview.Show();
+            }
+        }
+
+        private void Gloves_tbox_Click(object sender, EventArgs e)
+        {
+            if (Gloves_tbox.Text != "")
+            {
+                string IID = Gloves_tbox.Text.Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
+                Iview.Show();
+            }
+        }
+
+        private void Weapon_tbox_Click(object sender, EventArgs e)
+        {
+            if (Weapon_tbox.Text != "")
+            {
+                string IID = Weapon_tbox.Text.Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
+                Iview.Show();
+            }
+        }
+
+        private void Artifact_tbox_Click(object sender, EventArgs e)
+        {
+            if (Artifact_tbox.Text != "")
+            {
+                string IID = Artifact_tbox.Text.Split('<', '>')[1];
+                ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
+                Iview.Show();
+            }
+        }
+    }
     }
 }

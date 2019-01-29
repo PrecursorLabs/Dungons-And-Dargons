@@ -380,11 +380,31 @@
             this.M_STR_tbox = new System.Windows.Forms.TextBox();
             this.M_INT_tbox = new System.Windows.Forms.TextBox();
             this.M_PERC_tbox = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.Equipment_lbox = new System.Windows.Forms.ListBox();
+            this.EGROUP = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.Equipable_lbox = new System.Windows.Forms.ListBox();
             this.DeEquipAll_btn = new System.Windows.Forms.Button();
+            this.label83 = new System.Windows.Forms.Label();
+            this.Helmet_tbox = new System.Windows.Forms.TextBox();
+            this.DeEquip_Helmet_btn = new System.Windows.Forms.Button();
+            this.DeEquip_Maille_btn = new System.Windows.Forms.Button();
+            this.Maille_tbox = new System.Windows.Forms.TextBox();
+            this.label84 = new System.Windows.Forms.Label();
+            this.DeEquip_Pants_btn = new System.Windows.Forms.Button();
+            this.Pants__tbox = new System.Windows.Forms.TextBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.DeEquip_Boots_btn = new System.Windows.Forms.Button();
+            this.Boots_tbox = new System.Windows.Forms.TextBox();
+            this.label86 = new System.Windows.Forms.Label();
+            this.DeEquip_Gloves_btn = new System.Windows.Forms.Button();
+            this.Gloves_tbox = new System.Windows.Forms.TextBox();
+            this.label87 = new System.Windows.Forms.Label();
+            this.DeEquip_Weapon_btn = new System.Windows.Forms.Button();
+            this.Weapon_tbox = new System.Windows.Forms.TextBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.DeEquip_Artifact_btn = new System.Windows.Forms.Button();
+            this.Artifact_tbox = new System.Windows.Forms.TextBox();
+            this.label90 = new System.Windows.Forms.Label();
             this.Main_tabs.SuspendLayout();
             this.Equipment_tab.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
@@ -454,7 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MSlots_Spell_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank_Spell_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tier_Spell_editor_ud)).BeginInit();
-            this.groupBox6.SuspendLayout();
+            this.EGROUP.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -483,11 +503,11 @@
             // 
             this.Equipment_tab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Equipment_tab.Controls.Add(this.groupBox7);
-            this.Equipment_tab.Controls.Add(this.groupBox6);
+            this.Equipment_tab.Controls.Add(this.EGROUP);
             this.Equipment_tab.Location = new System.Drawing.Point(4, 22);
             this.Equipment_tab.Name = "Equipment_tab";
             this.Equipment_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Equipment_tab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Equipment_tab.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Equipment_tab.Size = new System.Drawing.Size(827, 504);
             this.Equipment_tab.TabIndex = 1;
             this.Equipment_tab.Text = "Equipment";
@@ -4475,29 +4495,38 @@
             this.M_PERC_tbox.Size = new System.Drawing.Size(55, 22);
             this.M_PERC_tbox.TabIndex = 216;
             // 
-            // groupBox6
+            // EGROUP
             // 
-            this.groupBox6.Controls.Add(this.DeEquipAll_btn);
-            this.groupBox6.Controls.Add(this.Equipment_lbox);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox6.Location = new System.Drawing.Point(416, 3);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(404, 494);
-            this.groupBox6.TabIndex = 196;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Equiped";
-            // 
-            // Equipment_lbox
-            // 
-            this.Equipment_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Equipment_lbox.FormattingEnabled = true;
-            this.Equipment_lbox.Location = new System.Drawing.Point(3, 16);
-            this.Equipment_lbox.Name = "Equipment_lbox";
-            this.Equipment_lbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Equipment_lbox.Size = new System.Drawing.Size(398, 475);
-            this.Equipment_lbox.Sorted = true;
-            this.Equipment_lbox.TabIndex = 2;
-            this.Equipment_lbox.SelectedIndexChanged += new System.EventHandler(this.Equipment_lbox_SelectedIndexChanged);
+            this.EGROUP.Controls.Add(this.DeEquip_Artifact_btn);
+            this.EGROUP.Controls.Add(this.Artifact_tbox);
+            this.EGROUP.Controls.Add(this.label90);
+            this.EGROUP.Controls.Add(this.DeEquip_Weapon_btn);
+            this.EGROUP.Controls.Add(this.Weapon_tbox);
+            this.EGROUP.Controls.Add(this.label89);
+            this.EGROUP.Controls.Add(this.DeEquip_Gloves_btn);
+            this.EGROUP.Controls.Add(this.Gloves_tbox);
+            this.EGROUP.Controls.Add(this.label87);
+            this.EGROUP.Controls.Add(this.DeEquip_Boots_btn);
+            this.EGROUP.Controls.Add(this.Boots_tbox);
+            this.EGROUP.Controls.Add(this.label86);
+            this.EGROUP.Controls.Add(this.DeEquip_Pants_btn);
+            this.EGROUP.Controls.Add(this.Pants__tbox);
+            this.EGROUP.Controls.Add(this.label85);
+            this.EGROUP.Controls.Add(this.DeEquip_Maille_btn);
+            this.EGROUP.Controls.Add(this.Maille_tbox);
+            this.EGROUP.Controls.Add(this.label84);
+            this.EGROUP.Controls.Add(this.DeEquip_Helmet_btn);
+            this.EGROUP.Controls.Add(this.Helmet_tbox);
+            this.EGROUP.Controls.Add(this.label83);
+            this.EGROUP.Controls.Add(this.DeEquipAll_btn);
+            this.EGROUP.Dock = System.Windows.Forms.DockStyle.Right;
+            this.EGROUP.Location = new System.Drawing.Point(416, 3);
+            this.EGROUP.Name = "EGROUP";
+            this.EGROUP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.EGROUP.Size = new System.Drawing.Size(404, 494);
+            this.EGROUP.TabIndex = 196;
+            this.EGROUP.TabStop = false;
+            this.EGROUP.Text = "Equiped";
             // 
             // groupBox7
             // 
@@ -4505,6 +4534,7 @@
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox7.Location = new System.Drawing.Point(3, 3);
             this.groupBox7.Name = "groupBox7";
+            this.groupBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox7.Size = new System.Drawing.Size(401, 494);
             this.groupBox7.TabIndex = 197;
             this.groupBox7.TabStop = false;
@@ -4524,13 +4554,216 @@
             // 
             // DeEquipAll_btn
             // 
-            this.DeEquipAll_btn.Location = new System.Drawing.Point(323, 465);
+            this.DeEquipAll_btn.Location = new System.Drawing.Point(12, 201);
             this.DeEquipAll_btn.Name = "DeEquipAll_btn";
-            this.DeEquipAll_btn.Size = new System.Drawing.Size(75, 23);
+            this.DeEquipAll_btn.Size = new System.Drawing.Size(292, 23);
             this.DeEquipAll_btn.TabIndex = 3;
             this.DeEquipAll_btn.Text = "DeEquip All";
             this.DeEquipAll_btn.UseVisualStyleBackColor = true;
             this.DeEquipAll_btn.Click += new System.EventHandler(this.DeEquipAll_btn_Click);
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(9, 22);
+            this.label83.Name = "label83";
+            this.label83.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label83.Size = new System.Drawing.Size(43, 13);
+            this.label83.TabIndex = 4;
+            this.label83.Text = "Helmet:";
+            // 
+            // Helmet_tbox
+            // 
+            this.Helmet_tbox.Location = new System.Drawing.Point(58, 19);
+            this.Helmet_tbox.Name = "Helmet_tbox";
+            this.Helmet_tbox.ReadOnly = true;
+            this.Helmet_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Helmet_tbox.TabIndex = 5;
+            this.Helmet_tbox.Click += new System.EventHandler(this.Helmet_tbox_Click);
+            // 
+            // DeEquip_Helmet_btn
+            // 
+            this.DeEquip_Helmet_btn.Location = new System.Drawing.Point(229, 17);
+            this.DeEquip_Helmet_btn.Name = "DeEquip_Helmet_btn";
+            this.DeEquip_Helmet_btn.Size = new System.Drawing.Size(75, 23);
+            this.DeEquip_Helmet_btn.TabIndex = 6;
+            this.DeEquip_Helmet_btn.Text = "DeEquip";
+            this.DeEquip_Helmet_btn.UseVisualStyleBackColor = true;
+            this.DeEquip_Helmet_btn.Click += new System.EventHandler(this.DeEquip_Helmet_btn_Click);
+            // 
+            // DeEquip_Maille_btn
+            // 
+            this.DeEquip_Maille_btn.Location = new System.Drawing.Point(229, 43);
+            this.DeEquip_Maille_btn.Name = "DeEquip_Maille_btn";
+            this.DeEquip_Maille_btn.Size = new System.Drawing.Size(75, 23);
+            this.DeEquip_Maille_btn.TabIndex = 9;
+            this.DeEquip_Maille_btn.Text = "DeEquip";
+            this.DeEquip_Maille_btn.UseVisualStyleBackColor = true;
+            this.DeEquip_Maille_btn.Click += new System.EventHandler(this.DeEquip_Maille_btn_Click);
+            // 
+            // Maille_tbox
+            // 
+            this.Maille_tbox.Location = new System.Drawing.Point(58, 45);
+            this.Maille_tbox.Name = "Maille_tbox";
+            this.Maille_tbox.ReadOnly = true;
+            this.Maille_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Maille_tbox.TabIndex = 8;
+            this.Maille_tbox.Click += new System.EventHandler(this.Maille_tbox_Click);
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Location = new System.Drawing.Point(9, 48);
+            this.label84.Name = "label84";
+            this.label84.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label84.Size = new System.Drawing.Size(37, 13);
+            this.label84.TabIndex = 7;
+            this.label84.Text = "Maille:";
+            // 
+            // DeEquip_Pants_btn
+            // 
+            this.DeEquip_Pants_btn.Location = new System.Drawing.Point(229, 69);
+            this.DeEquip_Pants_btn.Name = "DeEquip_Pants_btn";
+            this.DeEquip_Pants_btn.Size = new System.Drawing.Size(75, 23);
+            this.DeEquip_Pants_btn.TabIndex = 12;
+            this.DeEquip_Pants_btn.Text = "DeEquip";
+            this.DeEquip_Pants_btn.UseVisualStyleBackColor = true;
+            this.DeEquip_Pants_btn.Click += new System.EventHandler(this.DeEquip_Pants_btn_Click);
+            // 
+            // Pants__tbox
+            // 
+            this.Pants__tbox.Location = new System.Drawing.Point(58, 71);
+            this.Pants__tbox.Name = "Pants__tbox";
+            this.Pants__tbox.ReadOnly = true;
+            this.Pants__tbox.Size = new System.Drawing.Size(165, 20);
+            this.Pants__tbox.TabIndex = 11;
+            this.Pants__tbox.Click += new System.EventHandler(this.Pants__tbox_Click);
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(9, 74);
+            this.label85.Name = "label85";
+            this.label85.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label85.Size = new System.Drawing.Size(37, 13);
+            this.label85.TabIndex = 10;
+            this.label85.Text = "Pants:";
+            // 
+            // DeEquip_Boots_btn
+            // 
+            this.DeEquip_Boots_btn.Location = new System.Drawing.Point(229, 95);
+            this.DeEquip_Boots_btn.Name = "DeEquip_Boots_btn";
+            this.DeEquip_Boots_btn.Size = new System.Drawing.Size(75, 23);
+            this.DeEquip_Boots_btn.TabIndex = 15;
+            this.DeEquip_Boots_btn.Text = "DeEquip";
+            this.DeEquip_Boots_btn.UseVisualStyleBackColor = true;
+            this.DeEquip_Boots_btn.Click += new System.EventHandler(this.DeEquip_Boots_btn_Click);
+            // 
+            // Boots_tbox
+            // 
+            this.Boots_tbox.Location = new System.Drawing.Point(58, 97);
+            this.Boots_tbox.Name = "Boots_tbox";
+            this.Boots_tbox.ReadOnly = true;
+            this.Boots_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Boots_tbox.TabIndex = 14;
+            this.Boots_tbox.Click += new System.EventHandler(this.Boots_tbox_Click);
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(9, 100);
+            this.label86.Name = "label86";
+            this.label86.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label86.Size = new System.Drawing.Size(37, 13);
+            this.label86.TabIndex = 13;
+            this.label86.Text = "Boots:";
+            // 
+            // DeEquip_Gloves_btn
+            // 
+            this.DeEquip_Gloves_btn.Location = new System.Drawing.Point(229, 121);
+            this.DeEquip_Gloves_btn.Name = "DeEquip_Gloves_btn";
+            this.DeEquip_Gloves_btn.Size = new System.Drawing.Size(75, 23);
+            this.DeEquip_Gloves_btn.TabIndex = 18;
+            this.DeEquip_Gloves_btn.Text = "DeEquip";
+            this.DeEquip_Gloves_btn.UseVisualStyleBackColor = true;
+            this.DeEquip_Gloves_btn.Click += new System.EventHandler(this.DeEquip_Gloves_btn_Click);
+            // 
+            // Gloves_tbox
+            // 
+            this.Gloves_tbox.Location = new System.Drawing.Point(58, 123);
+            this.Gloves_tbox.Name = "Gloves_tbox";
+            this.Gloves_tbox.ReadOnly = true;
+            this.Gloves_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Gloves_tbox.TabIndex = 17;
+            this.Gloves_tbox.Click += new System.EventHandler(this.Gloves_tbox_Click);
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(9, 126);
+            this.label87.Name = "label87";
+            this.label87.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label87.Size = new System.Drawing.Size(43, 13);
+            this.label87.TabIndex = 16;
+            this.label87.Text = "Gloves:";
+            // 
+            // DeEquip_Weapon_btn
+            // 
+            this.DeEquip_Weapon_btn.Location = new System.Drawing.Point(229, 147);
+            this.DeEquip_Weapon_btn.Name = "DeEquip_Weapon_btn";
+            this.DeEquip_Weapon_btn.Size = new System.Drawing.Size(75, 23);
+            this.DeEquip_Weapon_btn.TabIndex = 21;
+            this.DeEquip_Weapon_btn.Text = "DeEquip";
+            this.DeEquip_Weapon_btn.UseVisualStyleBackColor = true;
+            this.DeEquip_Weapon_btn.Click += new System.EventHandler(this.DeEquip_Weapon_btn_Click);
+            // 
+            // Weapon_tbox
+            // 
+            this.Weapon_tbox.Location = new System.Drawing.Point(58, 149);
+            this.Weapon_tbox.Name = "Weapon_tbox";
+            this.Weapon_tbox.ReadOnly = true;
+            this.Weapon_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Weapon_tbox.TabIndex = 20;
+            this.Weapon_tbox.Click += new System.EventHandler(this.Weapon_tbox_Click);
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(9, 152);
+            this.label89.Name = "label89";
+            this.label89.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label89.Size = new System.Drawing.Size(51, 13);
+            this.label89.TabIndex = 19;
+            this.label89.Text = "Weapon:";
+            // 
+            // DeEquip_Artifact_btn
+            // 
+            this.DeEquip_Artifact_btn.Location = new System.Drawing.Point(229, 173);
+            this.DeEquip_Artifact_btn.Name = "DeEquip_Artifact_btn";
+            this.DeEquip_Artifact_btn.Size = new System.Drawing.Size(75, 23);
+            this.DeEquip_Artifact_btn.TabIndex = 24;
+            this.DeEquip_Artifact_btn.Text = "DeEquip";
+            this.DeEquip_Artifact_btn.UseVisualStyleBackColor = true;
+            this.DeEquip_Artifact_btn.Click += new System.EventHandler(this.DeEquip_Artifact_btn_Click);
+            // 
+            // Artifact_tbox
+            // 
+            this.Artifact_tbox.Location = new System.Drawing.Point(58, 175);
+            this.Artifact_tbox.Name = "Artifact_tbox";
+            this.Artifact_tbox.ReadOnly = true;
+            this.Artifact_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Artifact_tbox.TabIndex = 23;
+            this.Artifact_tbox.Click += new System.EventHandler(this.Artifact_tbox_Click);
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(9, 178);
+            this.label90.Name = "label90";
+            this.label90.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label90.Size = new System.Drawing.Size(43, 13);
+            this.label90.TabIndex = 22;
+            this.label90.Text = "Artifact:";
             // 
             // User
             // 
@@ -4684,7 +4917,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MSlots_Spell_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank_Spell_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tier_Spell_editor_ud)).EndInit();
-            this.groupBox6.ResumeLayout(false);
+            this.EGROUP.ResumeLayout(false);
+            this.EGROUP.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -5043,10 +5277,30 @@
         private System.Windows.Forms.Label label107;
         private System.Windows.Forms.TextBox Spell_name_editor_tbox;
         private System.Windows.Forms.Label label108;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ListBox Equipment_lbox;
+        private System.Windows.Forms.GroupBox EGROUP;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.ListBox Equipable_lbox;
         private System.Windows.Forms.Button DeEquipAll_btn;
+        private System.Windows.Forms.Button DeEquip_Artifact_btn;
+        private System.Windows.Forms.TextBox Artifact_tbox;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Button DeEquip_Weapon_btn;
+        private System.Windows.Forms.TextBox Weapon_tbox;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Button DeEquip_Gloves_btn;
+        private System.Windows.Forms.TextBox Gloves_tbox;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Button DeEquip_Boots_btn;
+        private System.Windows.Forms.TextBox Boots_tbox;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Button DeEquip_Pants_btn;
+        private System.Windows.Forms.TextBox Pants__tbox;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Button DeEquip_Maille_btn;
+        private System.Windows.Forms.TextBox Maille_tbox;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Button DeEquip_Helmet_btn;
+        private System.Windows.Forms.TextBox Helmet_tbox;
+        private System.Windows.Forms.Label label83;
     }
 }
