@@ -73,7 +73,6 @@
             this.MP_UD = new System.Windows.Forms.NumericUpDown();
             this.Plus_BTN = new System.Windows.Forms.Button();
             this.Minus_BTN = new System.Windows.Forms.Button();
-            this.SET_BTN = new System.Windows.Forms.Button();
             this.M_PERC_tbox = new System.Windows.Forms.TextBox();
             this.M_INT_tbox = new System.Windows.Forms.TextBox();
             this.M_STR_tbox = new System.Windows.Forms.TextBox();
@@ -83,6 +82,25 @@
             this.M_DEF_tbox = new System.Windows.Forms.TextBox();
             this.M_SATK_tbox = new System.Windows.Forms.TextBox();
             this.M_ATK_tbox = new System.Windows.Forms.TextBox();
+            this.SAT_UD = new System.Windows.Forms.NumericUpDown();
+            this.Holy_tbox = new System.Windows.Forms.TextBox();
+            this.Unholy_tbox = new System.Windows.Forms.TextBox();
+            this.Fire_tbox = new System.Windows.Forms.TextBox();
+            this.Ice_tbox = new System.Windows.Forms.TextBox();
+            this.Lightning_tbox = new System.Windows.Forms.TextBox();
+            this.Earth_tbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Earth_UD = new System.Windows.Forms.NumericUpDown();
+            this.Lightning_UD = new System.Windows.Forms.NumericUpDown();
+            this.Ice_UD = new System.Windows.Forms.NumericUpDown();
+            this.Fire_UD = new System.Windows.Forms.NumericUpDown();
+            this.Unholy_UD = new System.Windows.Forms.NumericUpDown();
+            this.Holy_UD = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -90,6 +108,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.XP_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HP_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MP_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SAT_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Earth_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lightning_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ice_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fire_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Unholy_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Holy_UD)).BeginInit();
             this.SuspendLayout();
             // 
             // Refresh_btn
@@ -110,7 +135,7 @@
             this.groupBox1.Controls.Add(this.Inventory_lbox);
             this.groupBox1.Location = new System.Drawing.Point(287, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(222, 338);
+            this.groupBox1.Size = new System.Drawing.Size(222, 324);
             this.groupBox1.TabIndex = 194;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inventory";
@@ -121,7 +146,8 @@
             this.Inventory_lbox.FormattingEnabled = true;
             this.Inventory_lbox.Location = new System.Drawing.Point(3, 16);
             this.Inventory_lbox.Name = "Inventory_lbox";
-            this.Inventory_lbox.Size = new System.Drawing.Size(216, 319);
+            this.Inventory_lbox.ScrollAlwaysVisible = true;
+            this.Inventory_lbox.Size = new System.Drawing.Size(216, 305);
             this.Inventory_lbox.Sorted = true;
             this.Inventory_lbox.TabIndex = 1;
             this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
@@ -133,7 +159,7 @@
             this.groupBox2.Controls.Add(this.Equipment_lbox);
             this.groupBox2.Location = new System.Drawing.Point(515, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(224, 338);
+            this.groupBox2.Size = new System.Drawing.Size(224, 324);
             this.groupBox2.TabIndex = 195;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Equiped";
@@ -144,7 +170,8 @@
             this.Equipment_lbox.FormattingEnabled = true;
             this.Equipment_lbox.Location = new System.Drawing.Point(3, 16);
             this.Equipment_lbox.Name = "Equipment_lbox";
-            this.Equipment_lbox.Size = new System.Drawing.Size(218, 319);
+            this.Equipment_lbox.ScrollAlwaysVisible = true;
+            this.Equipment_lbox.Size = new System.Drawing.Size(218, 305);
             this.Equipment_lbox.Sorted = true;
             this.Equipment_lbox.TabIndex = 2;
             this.Equipment_lbox.SelectedIndexChanged += new System.EventHandler(this.Equipment_lbox_SelectedIndexChanged);
@@ -155,9 +182,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.Spells_lbox);
-            this.groupBox3.Location = new System.Drawing.Point(287, 356);
+            this.groupBox3.Location = new System.Drawing.Point(287, 342);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(452, 183);
+            this.groupBox3.Size = new System.Drawing.Size(222, 197);
             this.groupBox3.TabIndex = 195;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Spells";
@@ -168,7 +195,8 @@
             this.Spells_lbox.FormattingEnabled = true;
             this.Spells_lbox.Location = new System.Drawing.Point(3, 16);
             this.Spells_lbox.Name = "Spells_lbox";
-            this.Spells_lbox.Size = new System.Drawing.Size(446, 164);
+            this.Spells_lbox.ScrollAlwaysVisible = true;
+            this.Spells_lbox.Size = new System.Drawing.Size(216, 178);
             this.Spells_lbox.Sorted = true;
             this.Spells_lbox.TabIndex = 2;
             this.Spells_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_lbox_SelectedIndexChanged);
@@ -545,7 +573,7 @@
             // 
             // Plus_BTN
             // 
-            this.Plus_BTN.Location = new System.Drawing.Point(178, 214);
+            this.Plus_BTN.Location = new System.Drawing.Point(178, 510);
             this.Plus_BTN.Name = "Plus_BTN";
             this.Plus_BTN.Size = new System.Drawing.Size(25, 23);
             this.Plus_BTN.TabIndex = 263;
@@ -555,23 +583,13 @@
             // 
             // Minus_BTN
             // 
-            this.Minus_BTN.Location = new System.Drawing.Point(209, 214);
+            this.Minus_BTN.Location = new System.Drawing.Point(209, 510);
             this.Minus_BTN.Name = "Minus_BTN";
             this.Minus_BTN.Size = new System.Drawing.Size(25, 23);
             this.Minus_BTN.TabIndex = 264;
             this.Minus_BTN.Text = "-";
             this.Minus_BTN.UseVisualStyleBackColor = true;
             this.Minus_BTN.Click += new System.EventHandler(this.Minus_BTN_Click);
-            // 
-            // SET_BTN
-            // 
-            this.SET_BTN.Location = new System.Drawing.Point(240, 214);
-            this.SET_BTN.Name = "SET_BTN";
-            this.SET_BTN.Size = new System.Drawing.Size(25, 23);
-            this.SET_BTN.TabIndex = 265;
-            this.SET_BTN.Text = "S";
-            this.SET_BTN.UseVisualStyleBackColor = true;
-            this.SET_BTN.Click += new System.EventHandler(this.SET_BTN_Click);
             // 
             // M_PERC_tbox
             // 
@@ -672,11 +690,234 @@
             this.M_ATK_tbox.Size = new System.Drawing.Size(55, 22);
             this.M_ATK_tbox.TabIndex = 266;
             // 
+            // SAT_UD
+            // 
+            this.SAT_UD.Location = new System.Drawing.Point(178, 484);
+            this.SAT_UD.Maximum = new decimal(new int[] {
+            -1593835520,
+            466537709,
+            54210,
+            0});
+            this.SAT_UD.Name = "SAT_UD";
+            this.SAT_UD.Size = new System.Drawing.Size(100, 20);
+            this.SAT_UD.TabIndex = 275;
+            // 
+            // Holy_tbox
+            // 
+            this.Holy_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Holy_tbox.Enabled = false;
+            this.Holy_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Holy_tbox.ForeColor = System.Drawing.Color.Black;
+            this.Holy_tbox.Location = new System.Drawing.Point(565, 482);
+            this.Holy_tbox.Name = "Holy_tbox";
+            this.Holy_tbox.Size = new System.Drawing.Size(61, 22);
+            this.Holy_tbox.TabIndex = 287;
+            // 
+            // Unholy_tbox
+            // 
+            this.Unholy_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Unholy_tbox.Enabled = false;
+            this.Unholy_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Unholy_tbox.ForeColor = System.Drawing.Color.Black;
+            this.Unholy_tbox.Location = new System.Drawing.Point(565, 454);
+            this.Unholy_tbox.Name = "Unholy_tbox";
+            this.Unholy_tbox.Size = new System.Drawing.Size(61, 22);
+            this.Unholy_tbox.TabIndex = 286;
+            // 
+            // Fire_tbox
+            // 
+            this.Fire_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Fire_tbox.Enabled = false;
+            this.Fire_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fire_tbox.ForeColor = System.Drawing.Color.Black;
+            this.Fire_tbox.Location = new System.Drawing.Point(565, 426);
+            this.Fire_tbox.Name = "Fire_tbox";
+            this.Fire_tbox.Size = new System.Drawing.Size(61, 22);
+            this.Fire_tbox.TabIndex = 285;
+            // 
+            // Ice_tbox
+            // 
+            this.Ice_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Ice_tbox.Enabled = false;
+            this.Ice_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ice_tbox.ForeColor = System.Drawing.Color.Black;
+            this.Ice_tbox.Location = new System.Drawing.Point(565, 398);
+            this.Ice_tbox.Name = "Ice_tbox";
+            this.Ice_tbox.Size = new System.Drawing.Size(61, 22);
+            this.Ice_tbox.TabIndex = 284;
+            // 
+            // Lightning_tbox
+            // 
+            this.Lightning_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Lightning_tbox.Enabled = false;
+            this.Lightning_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lightning_tbox.ForeColor = System.Drawing.Color.Black;
+            this.Lightning_tbox.Location = new System.Drawing.Point(565, 370);
+            this.Lightning_tbox.Name = "Lightning_tbox";
+            this.Lightning_tbox.Size = new System.Drawing.Size(61, 22);
+            this.Lightning_tbox.TabIndex = 283;
+            // 
+            // Earth_tbox
+            // 
+            this.Earth_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Earth_tbox.Enabled = false;
+            this.Earth_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Earth_tbox.ForeColor = System.Drawing.Color.Black;
+            this.Earth_tbox.Location = new System.Drawing.Point(565, 342);
+            this.Earth_tbox.Name = "Earth_tbox";
+            this.Earth_tbox.Size = new System.Drawing.Size(61, 22);
+            this.Earth_tbox.TabIndex = 282;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(532, 487);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 281;
+            this.label1.Text = "Holy:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(522, 458);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 280;
+            this.label2.Text = "Unholy:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(538, 431);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 279;
+            this.label3.Text = "Fire:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(538, 403);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.TabIndex = 278;
+            this.label4.Text = "Ice:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(510, 375);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 277;
+            this.label5.Text = "Lightning:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(528, 347);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 276;
+            this.label6.Text = "Earth:";
+            // 
+            // Earth_UD
+            // 
+            this.Earth_UD.Location = new System.Drawing.Point(632, 345);
+            this.Earth_UD.Maximum = new decimal(new int[] {
+            -1593835520,
+            466537709,
+            54210,
+            0});
+            this.Earth_UD.Name = "Earth_UD";
+            this.Earth_UD.Size = new System.Drawing.Size(103, 20);
+            this.Earth_UD.TabIndex = 290;
+            // 
+            // Lightning_UD
+            // 
+            this.Lightning_UD.Location = new System.Drawing.Point(632, 373);
+            this.Lightning_UD.Maximum = new decimal(new int[] {
+            -1593835520,
+            466537709,
+            54210,
+            0});
+            this.Lightning_UD.Name = "Lightning_UD";
+            this.Lightning_UD.Size = new System.Drawing.Size(103, 20);
+            this.Lightning_UD.TabIndex = 291;
+            // 
+            // Ice_UD
+            // 
+            this.Ice_UD.Location = new System.Drawing.Point(632, 401);
+            this.Ice_UD.Maximum = new decimal(new int[] {
+            -1593835520,
+            466537709,
+            54210,
+            0});
+            this.Ice_UD.Name = "Ice_UD";
+            this.Ice_UD.Size = new System.Drawing.Size(103, 20);
+            this.Ice_UD.TabIndex = 292;
+            // 
+            // Fire_UD
+            // 
+            this.Fire_UD.Location = new System.Drawing.Point(632, 429);
+            this.Fire_UD.Maximum = new decimal(new int[] {
+            -1593835520,
+            466537709,
+            54210,
+            0});
+            this.Fire_UD.Name = "Fire_UD";
+            this.Fire_UD.Size = new System.Drawing.Size(103, 20);
+            this.Fire_UD.TabIndex = 293;
+            // 
+            // Unholy_UD
+            // 
+            this.Unholy_UD.Location = new System.Drawing.Point(632, 457);
+            this.Unholy_UD.Maximum = new decimal(new int[] {
+            -1593835520,
+            466537709,
+            54210,
+            0});
+            this.Unholy_UD.Name = "Unholy_UD";
+            this.Unholy_UD.Size = new System.Drawing.Size(103, 20);
+            this.Unholy_UD.TabIndex = 294;
+            // 
+            // Holy_UD
+            // 
+            this.Holy_UD.Location = new System.Drawing.Point(632, 484);
+            this.Holy_UD.Maximum = new decimal(new int[] {
+            -1593835520,
+            466537709,
+            54210,
+            0});
+            this.Holy_UD.Name = "Holy_UD";
+            this.Holy_UD.Size = new System.Drawing.Size(103, 20);
+            this.Holy_UD.TabIndex = 295;
+            // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 551);
+            this.Controls.Add(this.Holy_UD);
+            this.Controls.Add(this.Unholy_UD);
+            this.Controls.Add(this.Fire_UD);
+            this.Controls.Add(this.Ice_UD);
+            this.Controls.Add(this.Lightning_UD);
+            this.Controls.Add(this.Earth_UD);
+            this.Controls.Add(this.Holy_tbox);
+            this.Controls.Add(this.Unholy_tbox);
+            this.Controls.Add(this.Fire_tbox);
+            this.Controls.Add(this.Ice_tbox);
+            this.Controls.Add(this.Lightning_tbox);
+            this.Controls.Add(this.Earth_tbox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.SAT_UD);
             this.Controls.Add(this.M_PERC_tbox);
             this.Controls.Add(this.M_INT_tbox);
             this.Controls.Add(this.M_STR_tbox);
@@ -686,7 +927,6 @@
             this.Controls.Add(this.M_DEF_tbox);
             this.Controls.Add(this.M_SATK_tbox);
             this.Controls.Add(this.M_ATK_tbox);
-            this.Controls.Add(this.SET_BTN);
             this.Controls.Add(this.Minus_BTN);
             this.Controls.Add(this.Plus_BTN);
             this.Controls.Add(this.MP_UD);
@@ -742,6 +982,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.XP_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HP_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MP_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SAT_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Earth_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lightning_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ice_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fire_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Unholy_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Holy_UD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -793,7 +1040,6 @@
         private System.Windows.Forms.NumericUpDown MP_UD;
         private System.Windows.Forms.Button Plus_BTN;
         private System.Windows.Forms.Button Minus_BTN;
-        private System.Windows.Forms.Button SET_BTN;
         private System.Windows.Forms.TextBox M_PERC_tbox;
         private System.Windows.Forms.TextBox M_INT_tbox;
         private System.Windows.Forms.TextBox M_STR_tbox;
@@ -803,5 +1049,24 @@
         private System.Windows.Forms.TextBox M_DEF_tbox;
         private System.Windows.Forms.TextBox M_SATK_tbox;
         private System.Windows.Forms.TextBox M_ATK_tbox;
+        private System.Windows.Forms.NumericUpDown SAT_UD;
+        private System.Windows.Forms.TextBox Holy_tbox;
+        private System.Windows.Forms.TextBox Unholy_tbox;
+        private System.Windows.Forms.TextBox Fire_tbox;
+        private System.Windows.Forms.TextBox Ice_tbox;
+        private System.Windows.Forms.TextBox Lightning_tbox;
+        private System.Windows.Forms.TextBox Earth_tbox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown Earth_UD;
+        private System.Windows.Forms.NumericUpDown Lightning_UD;
+        private System.Windows.Forms.NumericUpDown Ice_UD;
+        private System.Windows.Forms.NumericUpDown Fire_UD;
+        private System.Windows.Forms.NumericUpDown Unholy_UD;
+        private System.Windows.Forms.NumericUpDown Holy_UD;
     }
 }

@@ -82,10 +82,10 @@ namespace Dungons_And_Dargons
             Name_tbox.Text = ITEMVIEW.Name;
             Description_tbox.Text = ITEMVIEW.Description;
             Type_tbox.Text = ITEMVIEW.Prop_To_Type();
-
+            Buffs_lbox.Items.Clear();
             if (ITEMVIEW.Quantity > 1) Buffs_lbox.Items.Add("Quantity: " + ITEMVIEW.Quantity);
             if (ITEMVIEW.M_HP > 0) Buffs_lbox.Items.Add("HP +" + ITEMVIEW.M_HP);
-            if (ITEMVIEW.M_MP > 0) Buffs_lbox.Items.Add("MP +" + ITEMVIEW.M_HP);
+            if (ITEMVIEW.M_MP > 0) Buffs_lbox.Items.Add("MP +" + ITEMVIEW.M_MP);
             if (ITEMVIEW.M_ATK > 0) Buffs_lbox.Items.Add("ATK +" + ITEMVIEW.M_ATK);
             if (ITEMVIEW.M_SATK > 0) Buffs_lbox.Items.Add("SATK +" + ITEMVIEW.M_SATK);
             if (ITEMVIEW.M_DEF > 0) Buffs_lbox.Items.Add("DEF +" + ITEMVIEW.M_DEF);

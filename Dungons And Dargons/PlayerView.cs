@@ -71,6 +71,13 @@ namespace Dungons_And_Dargons
             M_INT_tbox.Text = SELNPC.M_INT.ToString();
             M_PERC_tbox.Text = SELNPC.M_PERC.ToString();
 
+            Earth_tbox.Text = SELNPC.Earth.ToString();
+            Fire_tbox.Text = SELNPC.Fire.ToString();
+            Lightning_tbox.Text = SELNPC.Lightning.ToString();
+            Ice_tbox.Text = SELNPC.Ice.ToString();
+            Holy_tbox.Text = SELNPC.Holy.ToString();
+            Unholy_tbox.Text = SELNPC.Unholy.ToString();
+
             if (SELNPC.Helmet.Name != null)
             {
                 Equipment_lbox.Items.Add("Helmet: " + SELNPC.Helmet.ITEM_DATA());
@@ -152,11 +159,28 @@ namespace Dungons_And_Dargons
             SELNPC.XP += (int)XP_UD.Value;
             SELNPC.HP += (int)HP_UD.Value;
             SELNPC.MP += (int)MP_UD.Value;
+            SELNPC.SATIE += (int) SAT_UD.Value;
+
+            SELNPC.Earth += (int) Earth_UD.Value;
+            SELNPC.Lightning += (int) Lightning_UD.Value;
+            SELNPC.Fire += (int) Fire_UD.Value;
+            SELNPC.Ice += (int) Ice_UD.Value;
+            SELNPC.Holy += (int) Holy_UD.Value;
+            SELNPC.Unholy += (int) Unholy_UD.Value;
+
 
             Gold_UD.Value = 0;
             XP_UD.Value = 0;
             HP_UD.Value = 0;
             MP_UD.Value = 0;
+            SAT_UD.Value = 0;
+
+            Earth_UD.Value = 0;
+            Lightning_UD.Value = 0;
+            Fire_UD.Value = 0;
+            Ice_UD.Value = 0;
+            Holy_UD.Value = 0;
+            Unholy_UD.Value = 0;
 
             SELNPC.PostData();
             Refresh_btn.PerformClick();
@@ -168,27 +192,27 @@ namespace Dungons_And_Dargons
             SELNPC.XP -= (int)XP_UD.Value;
             SELNPC.HP -= (int)HP_UD.Value;
             SELNPC.MP -= (int)MP_UD.Value;
+            SELNPC.SATIE -= (int)SAT_UD.Value;
+
+            SELNPC.Earth -= (int)Earth_UD.Value;
+            SELNPC.Lightning -= (int)Lightning_UD.Value;
+            SELNPC.Fire -= (int)Fire_UD.Value;
+            SELNPC.Ice -= (int)Ice_UD.Value;
+            SELNPC.Holy -= (int)Holy_UD.Value;
+            SELNPC.Unholy -= (int)Unholy_UD.Value;
 
             Gold_UD.Value = 0;
             XP_UD.Value = 0;
             HP_UD.Value = 0;
             MP_UD.Value = 0;
+            SAT_UD.Value = 0;
 
-            SELNPC.PostData();
-            Refresh_btn.PerformClick();
-        }
-
-        private void SET_BTN_Click(object sender, EventArgs e)
-        {
-            SELNPC.Gold = (int)Gold_UD.Value;
-            SELNPC.XP = (int)XP_UD.Value;
-            SELNPC.HP = (int)HP_UD.Value;
-            SELNPC.MP = (int)MP_UD.Value;
-
-            Gold_UD.Value = 0;
-            XP_UD.Value = 0;
-            HP_UD.Value = 0;
-            MP_UD.Value = 0;
+            Earth_UD.Value = 0;
+            Lightning_UD.Value = 0;
+            Fire_UD.Value = 0;
+            Ice_UD.Value = 0;
+            Holy_UD.Value = 0;
+            Unholy_UD.Value = 0;
 
             SELNPC.PostData();
             Refresh_btn.PerformClick();
