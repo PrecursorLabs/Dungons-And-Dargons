@@ -30,7 +30,7 @@ namespace Dungons_And_Dargons
 
         public User(int PlayerID, string ip, string password)
         {
-            String version = "1.0.7.1";
+            String version = "1.0.7.2";
             string LatestVersion = "0.0.0.0";
             DBip = ip;
             DBpassword = password;
@@ -1151,6 +1151,7 @@ namespace Dungons_And_Dargons
                 Rank_Spell_editor_ud.Value = SEDITOR_SPELL.Rank;
                 MSlots_Spell_editor_ud.Value = SEDITOR_SPELL.MaxSlots;
                 Slots_Spell_editor_ud.Value = SEDITOR_SPELL.Slots;
+                C_MP_UD.Value = SEDITOR_SPELL.C_MP;
 
                 foreach (object option in Spell_Character_Cbox.Items)
                 {
