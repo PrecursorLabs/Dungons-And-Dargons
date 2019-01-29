@@ -102,6 +102,13 @@ namespace Dungons_And_Dargons
             {
                 MessageBox.Show(ex.ToString());
             }
+
+            Dice = (Tier * 2) + 2;
+
+            if (Tier >= 6)
+            {
+                Dice = 20;
+            } 
         }
 
         public void PostData()

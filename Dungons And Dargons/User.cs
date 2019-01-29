@@ -177,6 +177,32 @@ namespace Dungons_And_Dargons
             M_INT_tbox.Text = MyPlayer.M_INT.ToString();
             M_PERC_tbox.Text = MyPlayer.M_PERC.ToString();
 
+            Knowledge_lbox.Items.Clear();
+            if (MyPlayer.Earth > 0)
+            {
+                Knowledge_lbox.Items.Add("Earth Knowledge: " + MyPlayer.Earth);
+            }
+            if (MyPlayer.Fire > 0)
+            {
+                Knowledge_lbox.Items.Add("Fire Knowledge: " + MyPlayer.Fire);
+            }
+            if (MyPlayer.Lightning > 0)
+            {
+                Knowledge_lbox.Items.Add("Lightning Knowledge: " + MyPlayer.Lightning);
+            }
+            if (MyPlayer.Ice > 0)
+            {
+                Knowledge_lbox.Items.Add("Ice Knowledge: " + MyPlayer.Ice);
+            }
+            if (MyPlayer.Holy > 0)
+            {
+                Knowledge_lbox.Items.Add("Holy Knowledge: " + MyPlayer.Holy);
+            }
+            if (MyPlayer.Unholy > 0)
+            {
+                Knowledge_lbox.Items.Add("Unholy Knowledge: " + MyPlayer.Unholy);
+            }
+
             if (MyPlayer.Helmet.Name != null)
             {
                 Helmet_tbox.Text = MyPlayer.Helmet.ITEM_DATA();

@@ -122,6 +122,7 @@
             this.Inventory_lbox.Location = new System.Drawing.Point(3, 16);
             this.Inventory_lbox.Name = "Inventory_lbox";
             this.Inventory_lbox.Size = new System.Drawing.Size(216, 319);
+            this.Inventory_lbox.Sorted = true;
             this.Inventory_lbox.TabIndex = 1;
             this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
             // 
@@ -144,6 +145,7 @@
             this.Equipment_lbox.Location = new System.Drawing.Point(3, 16);
             this.Equipment_lbox.Name = "Equipment_lbox";
             this.Equipment_lbox.Size = new System.Drawing.Size(218, 319);
+            this.Equipment_lbox.Sorted = true;
             this.Equipment_lbox.TabIndex = 2;
             this.Equipment_lbox.SelectedIndexChanged += new System.EventHandler(this.Equipment_lbox_SelectedIndexChanged);
             // 
@@ -167,6 +169,7 @@
             this.Spells_lbox.Location = new System.Drawing.Point(3, 16);
             this.Spells_lbox.Name = "Spells_lbox";
             this.Spells_lbox.Size = new System.Drawing.Size(446, 164);
+            this.Spells_lbox.Sorted = true;
             this.Spells_lbox.TabIndex = 2;
             this.Spells_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_lbox_SelectedIndexChanged);
             // 

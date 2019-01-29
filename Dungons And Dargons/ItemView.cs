@@ -83,6 +83,7 @@ namespace Dungons_And_Dargons
             Description_tbox.Text = ITEMVIEW.Description;
             Type_tbox.Text = ITEMVIEW.Prop_To_Type();
 
+            if (ITEMVIEW.Quantity > 1) Buffs_lbox.Items.Add("Quantity: " + ITEMVIEW.Quantity);
             if (ITEMVIEW.M_HP > 0) Buffs_lbox.Items.Add("HP +" + ITEMVIEW.M_HP);
             if (ITEMVIEW.M_MP > 0) Buffs_lbox.Items.Add("MP +" + ITEMVIEW.M_HP);
             if (ITEMVIEW.M_ATK > 0) Buffs_lbox.Items.Add("ATK +" + ITEMVIEW.M_ATK);
@@ -98,6 +99,7 @@ namespace Dungons_And_Dargons
             if (ITEMVIEW.Grade > 0) Buffs_lbox.Items.Add("GRADE " + ITEMVIEW.Grade);
             if (ITEMVIEW.Enhance > 0) Buffs_lbox.Items.Add("ENH " + ITEMVIEW.Enhance);
             if (ITEMVIEW.ELevel > 0) Buffs_lbox.Items.Add("Enchants: (" + ITEMVIEW.EType + ") LVL: " + ITEMVIEW.ELevel);
+            if (ITEMVIEW.MaxDurability > 0) Buffs_lbox.Items.Add("Durability: " + ITEMVIEW.Durability + "/" + ITEMVIEW.MaxDurability);
 
             List<NPC> GM_NPCS = GM_NPC_LIST.GetNPCS("PLAYER", "1");
             GPlayers_lbox.Items.Clear();

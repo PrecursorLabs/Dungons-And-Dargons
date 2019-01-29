@@ -405,6 +405,7 @@
             this.M_STR_tbox = new System.Windows.Forms.TextBox();
             this.M_INT_tbox = new System.Windows.Forms.TextBox();
             this.M_PERC_tbox = new System.Windows.Forms.TextBox();
+            this.Knowledge_lbox = new System.Windows.Forms.ListBox();
             this.Main_tabs.SuspendLayout();
             this.Equipment_tab.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -569,7 +570,7 @@
             this.EGROUP.Size = new System.Drawing.Size(404, 494);
             this.EGROUP.TabIndex = 196;
             this.EGROUP.TabStop = false;
-            this.EGROUP.Text = "Equiped";
+            this.EGROUP.Text = "Equipped";
             // 
             // DeEquip_Artifact_btn
             // 
@@ -808,6 +809,7 @@
             // 
             // Spells_tab
             // 
+            this.Spells_tab.Controls.Add(this.Knowledge_lbox);
             this.Spells_tab.Controls.Add(this.Spells_lbox);
             this.Spells_tab.Location = new System.Drawing.Point(4, 22);
             this.Spells_tab.Name = "Spells_tab";
@@ -820,11 +822,11 @@
             // 
             // Spells_lbox
             // 
-            this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Left;
             this.Spells_lbox.FormattingEnabled = true;
             this.Spells_lbox.Location = new System.Drawing.Point(3, 3);
             this.Spells_lbox.Name = "Spells_lbox";
-            this.Spells_lbox.Size = new System.Drawing.Size(821, 498);
+            this.Spells_lbox.Size = new System.Drawing.Size(265, 498);
             this.Spells_lbox.TabIndex = 1;
             this.Spells_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_lbox_SelectedIndexChanged);
             // 
@@ -4767,6 +4769,15 @@
             this.M_PERC_tbox.Size = new System.Drawing.Size(55, 21);
             this.M_PERC_tbox.TabIndex = 216;
             // 
+            // Knowledge_lbox
+            // 
+            this.Knowledge_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Knowledge_lbox.FormattingEnabled = true;
+            this.Knowledge_lbox.Location = new System.Drawing.Point(268, 3);
+            this.Knowledge_lbox.Name = "Knowledge_lbox";
+            this.Knowledge_lbox.Size = new System.Drawing.Size(556, 498);
+            this.Knowledge_lbox.TabIndex = 2;
+            // 
             // User
             // 
             this.AccessibleName = "UserForm";
@@ -5304,5 +5315,6 @@
         private System.Windows.Forms.Button DeEquip_Helmet_btn;
         private System.Windows.Forms.TextBox Helmet_tbox;
         private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.ListBox Knowledge_lbox;
     }
 }

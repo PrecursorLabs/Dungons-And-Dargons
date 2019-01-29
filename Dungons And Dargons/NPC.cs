@@ -53,6 +53,13 @@ namespace Dungons_And_Dargons
         public int M_INT { get; set; }
         public int M_PERC { get; set; }
 
+        public int Earth { get; set; }
+        public int Lightning { get; set; }
+        public int Fire { get; set; }
+        public int Ice { get; set; }
+        public int Unholy { get; set; }
+        public int Holy { get; set; }
+
         public string PlayerOwner { get; set; }
 
         public Boolean GAMEMASTER { get; set; }
@@ -296,7 +303,13 @@ namespace Dungons_And_Dargons
                     " `NPC`," +
                     " `ENEMY`," +
                     " `XPREQ`," +
-                    " `STATS`" +
+                    " `STATS`," +
+                    " `Earth`," +
+                    " `Lightning`," +
+                    " `Fire`," +
+                    " `Ice`," +
+                    " `Unholy`," +
+                    " `Holy`" +
                     " FROM `player` WHERE `idPlayer`='" + PlayerID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
@@ -330,6 +343,12 @@ namespace Dungons_And_Dargons
                     isEnemy = Convert.ToBoolean(rdr[25]);
                     XPREQ = Convert.ToInt32(rdr[26]);
                     STATS = Convert.ToInt32(rdr[27]);
+                    Earth = Convert.ToInt32(rdr[28]);
+                    Lightning = Convert.ToInt32(rdr[29]);
+                    Fire = Convert.ToInt32(rdr[30]);
+                    Ice = Convert.ToInt32(rdr[31]);
+                    Unholy = Convert.ToInt32(rdr[32]);
+                    Holy = Convert.ToInt32(rdr[33]);
                 }
 
                 rdr.Close();
@@ -380,7 +399,13 @@ namespace Dungons_And_Dargons
                     " NPC = '" + Convert.ToInt32(isNPC) + "'," +
                     " ENEMY = '" + Convert.ToInt32(isEnemy) + "'," +
                     " XPREQ = '" + XPREQC + "'," +
-                    " STATS = '" + STATS + "'" +
+                    " STATS = '" + STATS + "'," +
+                    " Earth = '" + Earth + "'," +
+                    " Lightning = '" + Lightning + "'," +
+                    " Fire = '" + Fire + "'," +
+                    " Ice = '" + Ice + "'," +
+                    " Unholy = '" + Unholy + "'," +
+                    " Holy = '" + Holy + "'" +
                     " WHERE idPlayer='" + PlayerID + "'";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
