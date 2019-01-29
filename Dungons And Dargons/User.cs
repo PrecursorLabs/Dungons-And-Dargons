@@ -292,6 +292,7 @@ namespace Dungons_And_Dargons
             if (NINVTOT != OINVTOT)
             {
                 Inventory_lbox.Items.Clear();
+                Equipable_lbox.Items.Clear();
                 OLD_INVENTORY.Clear();
                 foreach (ITEM item in MyPlayer.Inventory)
                 {
