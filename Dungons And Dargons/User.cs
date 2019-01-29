@@ -31,7 +31,7 @@ namespace Dungons_And_Dargons
         public User(int PlayerID, string ip, string password)
         {
             String version = "1.0.6.0";
-            string LatestVersion = "";
+            string LatestVersion = "0.0.0.0";
             DBip = ip;
             DBpassword = password;
             connStr = "server=" + DBip + ";user=DBUser;database=dungonsdargons;port=3306;password=" + DBpassword;
