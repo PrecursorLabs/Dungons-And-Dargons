@@ -72,7 +72,7 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>unnamed.ico</ApplicationIcon>
+    <ApplicationIcon>Dargon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -210,6 +210,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dargon.ico" />
     <Content Include="FodyWeavers.xml" />
     <Content Include="unnamed.ico" />
   </ItemGroup>
