@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User));
             this.Update_timer = new System.Windows.Forms.Timer(this.components);
             this.Main_tabs = new System.Windows.Forms.TabControl();
             this.Equipment_tab = new System.Windows.Forms.TabPage();
@@ -502,6 +503,7 @@
             // 
             // Equipment_tab
             // 
+            this.Equipment_tab.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Equipment_tab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Equipment_tab.Controls.Add(this.groupBox7);
             this.Equipment_tab.Controls.Add(this.EGROUP);
@@ -512,7 +514,6 @@
             this.Equipment_tab.Size = new System.Drawing.Size(827, 504);
             this.Equipment_tab.TabIndex = 1;
             this.Equipment_tab.Text = "Equipment";
-            this.Equipment_tab.UseVisualStyleBackColor = true;
             this.Equipment_tab.Click += new System.EventHandler(this.Equipment_tab_Click);
             // 
             // groupBox7
@@ -529,6 +530,7 @@
             // 
             // Equipable_lbox
             // 
+            this.Equipable_lbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Equipable_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Equipable_lbox.FormattingEnabled = true;
             this.Equipable_lbox.Location = new System.Drawing.Point(3, 16);
@@ -541,6 +543,7 @@
             // 
             // EGROUP
             // 
+            this.EGROUP.BackColor = System.Drawing.Color.Transparent;
             this.EGROUP.Controls.Add(this.DeEquip_Artifact_btn);
             this.EGROUP.Controls.Add(this.Artifact_tbox);
             this.EGROUP.Controls.Add(this.label90);
@@ -798,6 +801,7 @@
             // 
             // Inventory_lbox
             // 
+            this.Inventory_lbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Inventory_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Inventory_lbox.FormattingEnabled = true;
             this.Inventory_lbox.Location = new System.Drawing.Point(3, 3);
@@ -822,6 +826,7 @@
             // 
             // Spells_lbox
             // 
+            this.Spells_lbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Left;
             this.Spells_lbox.FormattingEnabled = true;
             this.Spells_lbox.Location = new System.Drawing.Point(3, 3);
@@ -832,6 +837,7 @@
             // 
             // GameMaster_tab
             // 
+            this.GameMaster_tab.BackColor = System.Drawing.SystemColors.ControlDark;
             this.GameMaster_tab.Controls.Add(this.GameMaster_stabs);
             this.GameMaster_tab.Location = new System.Drawing.Point(4, 22);
             this.GameMaster_tab.Name = "GameMaster_tab";
@@ -839,7 +845,6 @@
             this.GameMaster_tab.Size = new System.Drawing.Size(827, 504);
             this.GameMaster_tab.TabIndex = 4;
             this.GameMaster_tab.Text = "GameMaster";
-            this.GameMaster_tab.UseVisualStyleBackColor = true;
             // 
             // GameMaster_stabs
             // 
@@ -857,6 +862,7 @@
             // 
             // NPCM_tab
             // 
+            this.NPCM_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.NPCM_tab.Controls.Add(this.groupBox1);
             this.NPCM_tab.Controls.Add(this.NPCS_lbox);
             this.NPCM_tab.Location = new System.Drawing.Point(4, 22);
@@ -865,7 +871,6 @@
             this.NPCM_tab.Size = new System.Drawing.Size(813, 472);
             this.NPCM_tab.TabIndex = 1;
             this.NPCM_tab.Text = "Character Manager";
-            this.NPCM_tab.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -902,6 +907,7 @@
             // 
             // Filter_Relation
             // 
+            this.Filter_Relation.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Filter_Relation.FormattingEnabled = true;
             this.Filter_Relation.Items.AddRange(new object[] {
             "Player",
@@ -919,6 +925,7 @@
             this.NPCS_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.NPCS_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.NPCS_lbox.FormattingEnabled = true;
             this.NPCS_lbox.Location = new System.Drawing.Point(194, 6);
             this.NPCS_lbox.Name = "NPCS_lbox";
@@ -929,6 +936,7 @@
             // NPCC_tab
             // 
             this.NPCC_tab.AutoScroll = true;
+            this.NPCC_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.NPCC_tab.Controls.Add(this.UPLOAD_btn);
             this.NPCC_tab.Controls.Add(this.Roll_btn);
             this.NPCC_tab.Controls.Add(this.label8);
@@ -941,7 +949,6 @@
             this.NPCC_tab.Size = new System.Drawing.Size(813, 472);
             this.NPCC_tab.TabIndex = 2;
             this.NPCC_tab.Text = "NPC Creator";
-            this.NPCC_tab.UseVisualStyleBackColor = true;
             // 
             // UPLOAD_btn
             // 
@@ -2046,6 +2053,7 @@
             // 
             // CCOXPMOD_tbox
             // 
+            this.CCOXPMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOXPMOD_tbox.DecimalPlaces = 5;
             this.CCOXPMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2079,6 +2087,7 @@
             // 
             // CCOPERCMOD_tbox
             // 
+            this.CCOPERCMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOPERCMOD_tbox.DecimalPlaces = 5;
             this.CCOPERCMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2103,6 +2112,7 @@
             // 
             // CCOINTMOD_tbox
             // 
+            this.CCOINTMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOINTMOD_tbox.DecimalPlaces = 5;
             this.CCOINTMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2127,6 +2137,7 @@
             // 
             // CCOSTRMOD_tbox
             // 
+            this.CCOSTRMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOSTRMOD_tbox.DecimalPlaces = 5;
             this.CCOSTRMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2151,6 +2162,7 @@
             // 
             // CCODEXMOD_tbox
             // 
+            this.CCODEXMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCODEXMOD_tbox.DecimalPlaces = 5;
             this.CCODEXMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2175,6 +2187,7 @@
             // 
             // CCOCHARMOD_tbox
             // 
+            this.CCOCHARMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOCHARMOD_tbox.DecimalPlaces = 5;
             this.CCOCHARMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2199,6 +2212,7 @@
             // 
             // CCOSDEFMOD_tbox
             // 
+            this.CCOSDEFMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOSDEFMOD_tbox.DecimalPlaces = 5;
             this.CCOSDEFMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2223,6 +2237,7 @@
             // 
             // CCODEFMOD_tbox
             // 
+            this.CCODEFMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCODEFMOD_tbox.DecimalPlaces = 5;
             this.CCODEFMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2247,6 +2262,7 @@
             // 
             // CCOSATKMOD_tbox
             // 
+            this.CCOSATKMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOSATKMOD_tbox.DecimalPlaces = 5;
             this.CCOSATKMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2271,6 +2287,7 @@
             // 
             // CCOATKMOD_tbox
             // 
+            this.CCOATKMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOATKMOD_tbox.DecimalPlaces = 5;
             this.CCOATKMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2295,6 +2312,7 @@
             // 
             // CCOMPMOD_tbox
             // 
+            this.CCOMPMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOMPMOD_tbox.DecimalPlaces = 5;
             this.CCOMPMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -2319,6 +2337,7 @@
             // 
             // CCOHPMOD_tbox
             // 
+            this.CCOHPMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCOHPMOD_tbox.DecimalPlaces = 5;
             this.CCOHPMOD_tbox.Increment = new decimal(new int[] {
             1,
@@ -3070,6 +3089,7 @@
             // 
             // GMItemc_tab
             // 
+            this.GMItemc_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.GMItemc_tab.Controls.Add(this.groupBox3);
             this.GMItemc_tab.Controls.Add(this.groupBox2);
             this.GMItemc_tab.Location = new System.Drawing.Point(4, 22);
@@ -3078,25 +3098,25 @@
             this.GMItemc_tab.Size = new System.Drawing.Size(813, 472);
             this.GMItemc_tab.TabIndex = 3;
             this.GMItemc_tab.Text = "Items";
-            this.GMItemc_tab.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.EditorItems_lbox);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(427, 3);
+            this.groupBox3.Location = new System.Drawing.Point(424, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(383, 466);
+            this.groupBox3.Size = new System.Drawing.Size(386, 466);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Items";
             // 
             // EditorItems_lbox
             // 
+            this.EditorItems_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.EditorItems_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EditorItems_lbox.Location = new System.Drawing.Point(3, 16);
             this.EditorItems_lbox.Name = "EditorItems_lbox";
-            this.EditorItems_lbox.Size = new System.Drawing.Size(377, 447);
+            this.EditorItems_lbox.Size = new System.Drawing.Size(380, 447);
             this.EditorItems_lbox.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.EditorItems_lbox.TabIndex = 0;
             this.EditorItems_lbox.TileSize = new System.Drawing.Size(200, 60);
@@ -3169,7 +3189,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(424, 466);
+            this.groupBox2.Size = new System.Drawing.Size(421, 466);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor/Creator";
@@ -3196,6 +3216,7 @@
             // 
             // ELevel_editor_ud
             // 
+            this.ELevel_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ELevel_editor_ud.Location = new System.Drawing.Point(280, 405);
             this.ELevel_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3208,6 +3229,7 @@
             // 
             // EType_editor_tbox
             // 
+            this.EType_editor_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.EType_editor_tbox.Location = new System.Drawing.Point(143, 405);
             this.EType_editor_tbox.Name = "EType_editor_tbox";
             this.EType_editor_tbox.Size = new System.Drawing.Size(67, 20);
@@ -3246,6 +3268,7 @@
             // 
             // TURNS_editor_ud
             // 
+            this.TURNS_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.TURNS_editor_ud.Location = new System.Drawing.Point(46, 376);
             this.TURNS_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3267,6 +3290,7 @@
             // 
             // QTY_editor_ud
             // 
+            this.QTY_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.QTY_editor_ud.Location = new System.Drawing.Point(194, 192);
             this.QTY_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3288,6 +3312,7 @@
             // 
             // GRADE_editor_ud
             // 
+            this.GRADE_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.GRADE_editor_ud.Location = new System.Drawing.Point(265, 350);
             this.GRADE_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3300,6 +3325,7 @@
             // 
             // TIER_editor_ud
             // 
+            this.TIER_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.TIER_editor_ud.Location = new System.Drawing.Point(156, 350);
             this.TIER_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3330,6 +3356,7 @@
             // 
             // MDUR_editor_ud
             // 
+            this.MDUR_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.MDUR_editor_ud.Location = new System.Drawing.Point(46, 350);
             this.MDUR_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3351,6 +3378,7 @@
             // 
             // Item_Character_Cbox
             // 
+            this.Item_Character_Cbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Item_Character_Cbox.FormattingEnabled = true;
             this.Item_Character_Cbox.Location = new System.Drawing.Point(68, 19);
             this.Item_Character_Cbox.Name = "Item_Character_Cbox";
@@ -3371,12 +3399,13 @@
             // Oracalcite_editor_checkb
             // 
             this.Oracalcite_editor_checkb.AutoSize = true;
+            this.Oracalcite_editor_checkb.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Oracalcite_editor_checkb.Location = new System.Drawing.Point(8, 407);
             this.Oracalcite_editor_checkb.Name = "Oracalcite_editor_checkb";
             this.Oracalcite_editor_checkb.Size = new System.Drawing.Size(74, 17);
             this.Oracalcite_editor_checkb.TabIndex = 46;
             this.Oracalcite_editor_checkb.Text = "Oracalcite";
-            this.Oracalcite_editor_checkb.UseVisualStyleBackColor = true;
+            this.Oracalcite_editor_checkb.UseVisualStyleBackColor = false;
             // 
             // NItem_editor_btn
             // 
@@ -3400,6 +3429,7 @@
             // 
             // DUR_editor_ud
             // 
+            this.DUR_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.DUR_editor_ud.Location = new System.Drawing.Point(265, 324);
             this.DUR_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3421,6 +3451,7 @@
             // 
             // ENH_editor_ud
             // 
+            this.ENH_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ENH_editor_ud.Location = new System.Drawing.Point(156, 324);
             this.ENH_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3442,6 +3473,7 @@
             // 
             // ID_editor_up
             // 
+            this.ID_editor_up.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ID_editor_up.Enabled = false;
             this.ID_editor_up.Location = new System.Drawing.Point(364, 47);
             this.ID_editor_up.Maximum = new decimal(new int[] {
@@ -3464,6 +3496,7 @@
             // 
             // DICE_editor_ud
             // 
+            this.DICE_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.DICE_editor_ud.Location = new System.Drawing.Point(46, 324);
             this.DICE_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3485,6 +3518,7 @@
             // 
             // SAT_editor_ud
             // 
+            this.SAT_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.SAT_editor_ud.Location = new System.Drawing.Point(265, 298);
             this.SAT_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3506,6 +3540,7 @@
             // 
             // PERC_editor_ud
             // 
+            this.PERC_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.PERC_editor_ud.Location = new System.Drawing.Point(156, 298);
             this.PERC_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3527,6 +3562,7 @@
             // 
             // INT_editor_ud
             // 
+            this.INT_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.INT_editor_ud.Location = new System.Drawing.Point(46, 298);
             this.INT_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3548,6 +3584,7 @@
             // 
             // STR_editor_ud
             // 
+            this.STR_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.STR_editor_ud.Location = new System.Drawing.Point(265, 272);
             this.STR_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3569,6 +3606,7 @@
             // 
             // SDEF_editor_ud
             // 
+            this.SDEF_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.SDEF_editor_ud.Location = new System.Drawing.Point(265, 246);
             this.SDEF_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3590,6 +3628,7 @@
             // 
             // ATK_editor_ud
             // 
+            this.ATK_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ATK_editor_ud.Location = new System.Drawing.Point(265, 220);
             this.ATK_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3611,6 +3650,7 @@
             // 
             // DEX_editor_ud
             // 
+            this.DEX_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.DEX_editor_ud.Location = new System.Drawing.Point(156, 272);
             this.DEX_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3632,6 +3672,7 @@
             // 
             // CHAR_editor_ud
             // 
+            this.CHAR_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CHAR_editor_ud.Location = new System.Drawing.Point(46, 272);
             this.CHAR_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3653,6 +3694,7 @@
             // 
             // DEF_editor_ud
             // 
+            this.DEF_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.DEF_editor_ud.Location = new System.Drawing.Point(156, 246);
             this.DEF_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3674,6 +3716,7 @@
             // 
             // SATK_editor_ud
             // 
+            this.SATK_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.SATK_editor_ud.Location = new System.Drawing.Point(46, 246);
             this.SATK_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3695,6 +3738,7 @@
             // 
             // MP_editor_ud
             // 
+            this.MP_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.MP_editor_ud.Location = new System.Drawing.Point(156, 220);
             this.MP_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3716,6 +3760,7 @@
             // 
             // HP_editor_ud
             // 
+            this.HP_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.HP_editor_ud.Location = new System.Drawing.Point(46, 220);
             this.HP_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3737,6 +3782,7 @@
             // 
             // Item_type_editor_cbox
             // 
+            this.Item_type_editor_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Item_type_editor_cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Item_type_editor_cbox.FormattingEnabled = true;
             this.Item_type_editor_cbox.Items.AddRange(new object[] {
@@ -3767,6 +3813,7 @@
             // 
             // item_desc_editor_tbox
             // 
+            this.item_desc_editor_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.item_desc_editor_tbox.Location = new System.Drawing.Point(9, 92);
             this.item_desc_editor_tbox.Multiline = true;
             this.item_desc_editor_tbox.Name = "item_desc_editor_tbox";
@@ -3784,6 +3831,7 @@
             // 
             // Item_name_editor_tbox
             // 
+            this.Item_name_editor_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Item_name_editor_tbox.Location = new System.Drawing.Point(50, 47);
             this.Item_name_editor_tbox.Name = "Item_name_editor_tbox";
             this.Item_name_editor_tbox.Size = new System.Drawing.Size(284, 20);
@@ -3800,6 +3848,7 @@
             // 
             // SpellsManager_tab
             // 
+            this.SpellsManager_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.SpellsManager_tab.Controls.Add(this.groupBox4);
             this.SpellsManager_tab.Controls.Add(this.groupBox5);
             this.SpellsManager_tab.Location = new System.Drawing.Point(4, 22);
@@ -3808,7 +3857,6 @@
             this.SpellsManager_tab.Size = new System.Drawing.Size(813, 472);
             this.SpellsManager_tab.TabIndex = 5;
             this.SpellsManager_tab.Text = "Spells";
-            this.SpellsManager_tab.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -3823,6 +3871,7 @@
             // 
             // Spells_Edititor_lbox
             // 
+            this.Spells_Edititor_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Spells_Edititor_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Spells_Edititor_lbox.Location = new System.Drawing.Point(3, 16);
             this.Spells_Edititor_lbox.Name = "Spells_Edititor_lbox";
@@ -3866,6 +3915,7 @@
             // 
             // Slots_Spell_editor_ud
             // 
+            this.Slots_Spell_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Slots_Spell_editor_ud.Location = new System.Drawing.Point(10, 271);
             this.Slots_Spell_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3918,6 +3968,7 @@
             // 
             // Spell_Character_Cbox
             // 
+            this.Spell_Character_Cbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Spell_Character_Cbox.FormattingEnabled = true;
             this.Spell_Character_Cbox.Location = new System.Drawing.Point(68, 19);
             this.Spell_Character_Cbox.Name = "Spell_Character_Cbox";
@@ -3948,6 +3999,7 @@
             // 
             // ID_spell_editor_up
             // 
+            this.ID_spell_editor_up.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ID_spell_editor_up.Enabled = false;
             this.ID_spell_editor_up.Location = new System.Drawing.Point(364, 47);
             this.ID_spell_editor_up.Maximum = new decimal(new int[] {
@@ -3970,6 +4022,7 @@
             // 
             // MSlots_Spell_editor_ud
             // 
+            this.MSlots_Spell_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.MSlots_Spell_editor_ud.Location = new System.Drawing.Point(75, 271);
             this.MSlots_Spell_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -3991,6 +4044,7 @@
             // 
             // Rank_Spell_editor_ud
             // 
+            this.Rank_Spell_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Rank_Spell_editor_ud.Location = new System.Drawing.Point(75, 234);
             this.Rank_Spell_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -4012,6 +4066,7 @@
             // 
             // Tier_Spell_editor_ud
             // 
+            this.Tier_Spell_editor_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Tier_Spell_editor_ud.Location = new System.Drawing.Point(10, 234);
             this.Tier_Spell_editor_ud.Maximum = new decimal(new int[] {
             1000,
@@ -4033,6 +4088,7 @@
             // 
             // spell_desc_editor_tbox
             // 
+            this.spell_desc_editor_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.spell_desc_editor_tbox.Location = new System.Drawing.Point(9, 92);
             this.spell_desc_editor_tbox.Multiline = true;
             this.spell_desc_editor_tbox.Name = "spell_desc_editor_tbox";
@@ -4050,6 +4106,7 @@
             // 
             // Spell_name_editor_tbox
             // 
+            this.Spell_name_editor_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Spell_name_editor_tbox.Location = new System.Drawing.Point(50, 47);
             this.Spell_name_editor_tbox.Name = "Spell_name_editor_tbox";
             this.Spell_name_editor_tbox.Size = new System.Drawing.Size(284, 20);
@@ -4066,13 +4123,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(813, 472);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "Combat Tools";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // MP_pbar
             // 
@@ -4771,6 +4828,7 @@
             // 
             // Knowledge_lbox
             // 
+            this.Knowledge_lbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Knowledge_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Knowledge_lbox.FormattingEnabled = true;
             this.Knowledge_lbox.Location = new System.Drawing.Point(268, 3);
@@ -4783,6 +4841,7 @@
             this.AccessibleName = "UserForm";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1060, 544);
             this.Controls.Add(this.M_PERC_tbox);
             this.Controls.Add(this.M_INT_tbox);
@@ -4851,6 +4910,7 @@
             this.Controls.Add(this.HP_lbl);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.Main_tabs);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "User";
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);

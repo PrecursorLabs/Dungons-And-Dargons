@@ -52,7 +52,7 @@ namespace Dungons_And_Dargons
         private void User_Load(object sender, EventArgs e)
         {
             this.FormClosing += new FormClosingEventHandler(User_Closing);
-            this.Text = MyPlayer.UserName;
+            this.Text = MyPlayer.PName;
             UpdateDisplay();
             if (!MyPlayer.GAMEMASTER) Main_tabs.TabPages.Remove(GameMaster_tab);
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemView));
             this.Buffs_lbox = new System.Windows.Forms.ListBox();
             this.Description_tbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -163,6 +164,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Description_tbox);
             this.Controls.Add(this.Buffs_lbox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(280, 500);
             this.MinimizeBox = false;
