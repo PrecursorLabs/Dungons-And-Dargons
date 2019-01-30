@@ -5172,6 +5172,7 @@
             this.Controls.Add(this.label28);
             this.Controls.Add(this.Main_tabs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1148, 651);
             this.Name = "User";
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);
