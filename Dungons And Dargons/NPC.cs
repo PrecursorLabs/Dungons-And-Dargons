@@ -430,6 +430,7 @@ namespace Dungons_And_Dargons
                     ITEM GotITEM = new ITEM(conn);
                     GotITEM.ItemID = Convert.ToInt32(rdr[0]);
                     GotITEM.Name = Convert.ToString(rdr[1]);
+                    GotITEM.Equipped = Convert.ToBoolean(rdr[2]);
                     if (Convert.ToBoolean(rdr[2]))
                     {
                         Equiped.Add(GotITEM);

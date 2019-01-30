@@ -36,6 +36,7 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.Equipable_lbox = new System.Windows.Forms.ListBox();
             this.EGROUP = new System.Windows.Forms.GroupBox();
+            this.Equipment_info_CTRL = new System.Windows.Forms.GroupBox();
             this.DeEquip_Artifact_btn = new System.Windows.Forms.Button();
             this.Artifact_tbox = new System.Windows.Forms.TextBox();
             this.label90 = new System.Windows.Forms.Label();
@@ -59,8 +60,10 @@
             this.label83 = new System.Windows.Forms.Label();
             this.DeEquipAll_btn = new System.Windows.Forms.Button();
             this.Inventory_tab = new System.Windows.Forms.TabPage();
+            this.itemInfo_CNTRL = new System.Windows.Forms.GroupBox();
             this.Inventory_lbox = new System.Windows.Forms.ListBox();
             this.Spells_tab = new System.Windows.Forms.TabPage();
+            this.SpellInfo_CNTRL = new System.Windows.Forms.GroupBox();
             this.Knowledge_lbox = new System.Windows.Forms.ListBox();
             this.Spells_lbox = new System.Windows.Forms.ListBox();
             this.GameMaster_tab = new System.Windows.Forms.TabPage();
@@ -256,6 +259,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.EditorItems_lbox = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.item_desc_editor_tbox = new System.Windows.Forms.RichTextBox();
             this.UItem_editor_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ELevel_editor_ud = new System.Windows.Forms.NumericUpDown();
@@ -319,6 +323,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Spells_Edititor_lbox = new System.Windows.Forms.ListView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.spell_desc_editor_tbox = new System.Windows.Forms.RichTextBox();
             this.C_MP_UD = new System.Windows.Forms.NumericUpDown();
             this.C_MP = new System.Windows.Forms.Label();
             this.Slots_Spell_editor_ud = new System.Windows.Forms.NumericUpDown();
@@ -421,8 +426,7 @@
             this.label94 = new System.Windows.Forms.Label();
             this.Power_Level_tbox = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
-            this.spell_desc_editor_tbox = new System.Windows.Forms.RichTextBox();
-            this.item_desc_editor_tbox = new System.Windows.Forms.RichTextBox();
+            this.MAINUPDATE = new System.ComponentModel.BackgroundWorker();
             this.Main_tabs.SuspendLayout();
             this.Equipment_tab.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -515,7 +519,7 @@
             this.Main_tabs.Location = new System.Drawing.Point(285, -1);
             this.Main_tabs.Name = "Main_tabs";
             this.Main_tabs.SelectedIndex = 0;
-            this.Main_tabs.Size = new System.Drawing.Size(852, 567);
+            this.Main_tabs.Size = new System.Drawing.Size(852, 618);
             this.Main_tabs.TabIndex = 107;
             // 
             // Equipment_tab
@@ -528,7 +532,7 @@
             this.Equipment_tab.Name = "Equipment_tab";
             this.Equipment_tab.Padding = new System.Windows.Forms.Padding(3);
             this.Equipment_tab.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Equipment_tab.Size = new System.Drawing.Size(844, 541);
+            this.Equipment_tab.Size = new System.Drawing.Size(844, 592);
             this.Equipment_tab.TabIndex = 1;
             this.Equipment_tab.Text = "Equipment";
             this.Equipment_tab.Click += new System.EventHandler(this.Equipment_tab_Click);
@@ -540,7 +544,7 @@
             this.groupBox7.Location = new System.Drawing.Point(3, 3);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox7.Size = new System.Drawing.Size(401, 531);
+            this.groupBox7.Size = new System.Drawing.Size(401, 582);
             this.groupBox7.TabIndex = 197;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Equipable";
@@ -553,7 +557,7 @@
             this.Equipable_lbox.Location = new System.Drawing.Point(3, 16);
             this.Equipable_lbox.Name = "Equipable_lbox";
             this.Equipable_lbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Equipable_lbox.Size = new System.Drawing.Size(395, 512);
+            this.Equipable_lbox.Size = new System.Drawing.Size(395, 563);
             this.Equipable_lbox.Sorted = true;
             this.Equipable_lbox.TabIndex = 2;
             this.Equipable_lbox.SelectedIndexChanged += new System.EventHandler(this.Equipable_lbox_SelectedIndexChanged);
@@ -561,6 +565,7 @@
             // EGROUP
             // 
             this.EGROUP.BackColor = System.Drawing.Color.Transparent;
+            this.EGROUP.Controls.Add(this.Equipment_info_CTRL);
             this.EGROUP.Controls.Add(this.DeEquip_Artifact_btn);
             this.EGROUP.Controls.Add(this.Artifact_tbox);
             this.EGROUP.Controls.Add(this.label90);
@@ -587,10 +592,22 @@
             this.EGROUP.Location = new System.Drawing.Point(433, 3);
             this.EGROUP.Name = "EGROUP";
             this.EGROUP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.EGROUP.Size = new System.Drawing.Size(404, 531);
+            this.EGROUP.Size = new System.Drawing.Size(404, 582);
             this.EGROUP.TabIndex = 196;
             this.EGROUP.TabStop = false;
             this.EGROUP.Text = "Equipped";
+            // 
+            // Equipment_info_CTRL
+            // 
+            this.Equipment_info_CTRL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Equipment_info_CTRL.Location = new System.Drawing.Point(12, 230);
+            this.Equipment_info_CTRL.Name = "Equipment_info_CTRL";
+            this.Equipment_info_CTRL.Size = new System.Drawing.Size(292, 344);
+            this.Equipment_info_CTRL.TabIndex = 25;
+            this.Equipment_info_CTRL.TabStop = false;
+            this.Equipment_info_CTRL.Text = "Item Info";
             // 
             // DeEquip_Artifact_btn
             // 
@@ -821,14 +838,25 @@
             // 
             // Inventory_tab
             // 
+            this.Inventory_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Inventory_tab.Controls.Add(this.itemInfo_CNTRL);
             this.Inventory_tab.Controls.Add(this.Inventory_lbox);
             this.Inventory_tab.Location = new System.Drawing.Point(4, 22);
             this.Inventory_tab.Name = "Inventory_tab";
             this.Inventory_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Inventory_tab.Size = new System.Drawing.Size(827, 504);
+            this.Inventory_tab.Size = new System.Drawing.Size(844, 592);
             this.Inventory_tab.TabIndex = 2;
             this.Inventory_tab.Text = "Inventory";
-            this.Inventory_tab.UseVisualStyleBackColor = true;
+            // 
+            // itemInfo_CNTRL
+            // 
+            this.itemInfo_CNTRL.Dock = System.Windows.Forms.DockStyle.Right;
+            this.itemInfo_CNTRL.Location = new System.Drawing.Point(542, 3);
+            this.itemInfo_CNTRL.Name = "itemInfo_CNTRL";
+            this.itemInfo_CNTRL.Size = new System.Drawing.Size(299, 586);
+            this.itemInfo_CNTRL.TabIndex = 1;
+            this.itemInfo_CNTRL.TabStop = false;
+            this.itemInfo_CNTRL.Text = "Item Info";
             // 
             // Inventory_lbox
             // 
@@ -837,42 +865,54 @@
             this.Inventory_lbox.FormattingEnabled = true;
             this.Inventory_lbox.Location = new System.Drawing.Point(3, 3);
             this.Inventory_lbox.Name = "Inventory_lbox";
-            this.Inventory_lbox.Size = new System.Drawing.Size(821, 498);
+            this.Inventory_lbox.Size = new System.Drawing.Size(838, 586);
             this.Inventory_lbox.Sorted = true;
             this.Inventory_lbox.TabIndex = 0;
             this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
             // 
             // Spells_tab
             // 
+            this.Spells_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Spells_tab.Controls.Add(this.SpellInfo_CNTRL);
             this.Spells_tab.Controls.Add(this.Knowledge_lbox);
             this.Spells_tab.Controls.Add(this.Spells_lbox);
             this.Spells_tab.Location = new System.Drawing.Point(4, 22);
             this.Spells_tab.Name = "Spells_tab";
             this.Spells_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Spells_tab.Size = new System.Drawing.Size(827, 504);
+            this.Spells_tab.Size = new System.Drawing.Size(844, 592);
             this.Spells_tab.TabIndex = 3;
             this.Spells_tab.Text = "Spells";
-            this.Spells_tab.UseVisualStyleBackColor = true;
             this.Spells_tab.Click += new System.EventHandler(this.Spells_tab_Click);
+            // 
+            // SpellInfo_CNTRL
+            // 
+            this.SpellInfo_CNTRL.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SpellInfo_CNTRL.Dock = System.Windows.Forms.DockStyle.Right;
+            this.SpellInfo_CNTRL.Location = new System.Drawing.Point(280, 3);
+            this.SpellInfo_CNTRL.Name = "SpellInfo_CNTRL";
+            this.SpellInfo_CNTRL.Size = new System.Drawing.Size(269, 586);
+            this.SpellInfo_CNTRL.TabIndex = 3;
+            this.SpellInfo_CNTRL.TabStop = false;
+            this.SpellInfo_CNTRL.Text = "Spell Info";
             // 
             // Knowledge_lbox
             // 
             this.Knowledge_lbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Knowledge_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Knowledge_lbox.Dock = System.Windows.Forms.DockStyle.Right;
             this.Knowledge_lbox.FormattingEnabled = true;
-            this.Knowledge_lbox.Location = new System.Drawing.Point(268, 3);
+            this.Knowledge_lbox.Location = new System.Drawing.Point(549, 3);
             this.Knowledge_lbox.Name = "Knowledge_lbox";
-            this.Knowledge_lbox.Size = new System.Drawing.Size(556, 498);
+            this.Knowledge_lbox.Size = new System.Drawing.Size(292, 586);
             this.Knowledge_lbox.TabIndex = 2;
             // 
             // Spells_lbox
             // 
             this.Spells_lbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Spells_lbox.FormattingEnabled = true;
             this.Spells_lbox.Location = new System.Drawing.Point(3, 3);
             this.Spells_lbox.Name = "Spells_lbox";
-            this.Spells_lbox.Size = new System.Drawing.Size(265, 498);
+            this.Spells_lbox.Size = new System.Drawing.Size(838, 586);
             this.Spells_lbox.TabIndex = 1;
             this.Spells_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_lbox_SelectedIndexChanged);
             // 
@@ -883,7 +923,7 @@
             this.GameMaster_tab.Location = new System.Drawing.Point(4, 22);
             this.GameMaster_tab.Name = "GameMaster_tab";
             this.GameMaster_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.GameMaster_tab.Size = new System.Drawing.Size(844, 541);
+            this.GameMaster_tab.Size = new System.Drawing.Size(844, 592);
             this.GameMaster_tab.TabIndex = 4;
             this.GameMaster_tab.Text = "GameMaster";
             // 
@@ -898,7 +938,7 @@
             this.GameMaster_stabs.Location = new System.Drawing.Point(3, 3);
             this.GameMaster_stabs.Name = "GameMaster_stabs";
             this.GameMaster_stabs.SelectedIndex = 0;
-            this.GameMaster_stabs.Size = new System.Drawing.Size(838, 535);
+            this.GameMaster_stabs.Size = new System.Drawing.Size(838, 586);
             this.GameMaster_stabs.TabIndex = 0;
             // 
             // NPCM_tab
@@ -909,7 +949,7 @@
             this.NPCM_tab.Location = new System.Drawing.Point(4, 22);
             this.NPCM_tab.Name = "NPCM_tab";
             this.NPCM_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.NPCM_tab.Size = new System.Drawing.Size(813, 472);
+            this.NPCM_tab.Size = new System.Drawing.Size(830, 560);
             this.NPCM_tab.TabIndex = 1;
             this.NPCM_tab.Text = "Character Manager";
             // 
@@ -921,7 +961,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(185, 466);
+            this.groupBox1.Size = new System.Drawing.Size(185, 554);
             this.groupBox1.TabIndex = 115;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
@@ -929,7 +969,7 @@
             // CM_UPDATE_BTN
             // 
             this.CM_UPDATE_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CM_UPDATE_BTN.Location = new System.Drawing.Point(6, 437);
+            this.CM_UPDATE_BTN.Location = new System.Drawing.Point(6, 525);
             this.CM_UPDATE_BTN.Name = "CM_UPDATE_BTN";
             this.CM_UPDATE_BTN.Size = new System.Drawing.Size(75, 23);
             this.CM_UPDATE_BTN.TabIndex = 66;
@@ -970,7 +1010,7 @@
             this.NPCS_lbox.FormattingEnabled = true;
             this.NPCS_lbox.Location = new System.Drawing.Point(194, 6);
             this.NPCS_lbox.Name = "NPCS_lbox";
-            this.NPCS_lbox.Size = new System.Drawing.Size(613, 446);
+            this.NPCS_lbox.Size = new System.Drawing.Size(630, 511);
             this.NPCS_lbox.TabIndex = 114;
             this.NPCS_lbox.SelectedIndexChanged += new System.EventHandler(this.NPCS_lbox_SelectedIndexChanged);
             // 
@@ -3235,6 +3275,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor/Creator";
             // 
+            // item_desc_editor_tbox
+            // 
+            this.item_desc_editor_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.item_desc_editor_tbox.Location = new System.Drawing.Point(6, 92);
+            this.item_desc_editor_tbox.Name = "item_desc_editor_tbox";
+            this.item_desc_editor_tbox.Size = new System.Drawing.Size(408, 138);
+            this.item_desc_editor_tbox.TabIndex = 66;
+            this.item_desc_editor_tbox.Text = "";
+            // 
             // UItem_editor_btn
             // 
             this.UItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -3947,6 +3996,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Editor/Creator";
             // 
+            // spell_desc_editor_tbox
+            // 
+            this.spell_desc_editor_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.spell_desc_editor_tbox.Location = new System.Drawing.Point(3, 92);
+            this.spell_desc_editor_tbox.Name = "spell_desc_editor_tbox";
+            this.spell_desc_editor_tbox.Size = new System.Drawing.Size(411, 123);
+            this.spell_desc_editor_tbox.TabIndex = 70;
+            this.spell_desc_editor_tbox.Text = "";
+            // 
             // C_MP_UD
             // 
             this.C_MP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -4251,7 +4309,7 @@
             // UPDATE_btn
             // 
             this.UPDATE_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UPDATE_btn.Location = new System.Drawing.Point(6, 532);
+            this.UPDATE_btn.Location = new System.Drawing.Point(6, 583);
             this.UPDATE_btn.Name = "UPDATE_btn";
             this.UPDATE_btn.Size = new System.Drawing.Size(227, 23);
             this.UPDATE_btn.TabIndex = 128;
@@ -4765,7 +4823,8 @@
             // 
             // Stats_Apply_BTN
             // 
-            this.Stats_Apply_BTN.Location = new System.Drawing.Point(233, 532);
+            this.Stats_Apply_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Stats_Apply_BTN.Location = new System.Drawing.Point(234, 583);
             this.Stats_Apply_BTN.Name = "Stats_Apply_BTN";
             this.Stats_Apply_BTN.Size = new System.Drawing.Size(46, 23);
             this.Stats_Apply_BTN.TabIndex = 207;
@@ -5019,23 +5078,10 @@
             this.label95.TabIndex = 229;
             this.label95.Text = "Power Level:";
             // 
-            // spell_desc_editor_tbox
+            // MAINUPDATE
             // 
-            this.spell_desc_editor_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.spell_desc_editor_tbox.Location = new System.Drawing.Point(3, 92);
-            this.spell_desc_editor_tbox.Name = "spell_desc_editor_tbox";
-            this.spell_desc_editor_tbox.Size = new System.Drawing.Size(411, 123);
-            this.spell_desc_editor_tbox.TabIndex = 70;
-            this.spell_desc_editor_tbox.Text = "";
-            // 
-            // item_desc_editor_tbox
-            // 
-            this.item_desc_editor_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.item_desc_editor_tbox.Location = new System.Drawing.Point(6, 92);
-            this.item_desc_editor_tbox.Name = "item_desc_editor_tbox";
-            this.item_desc_editor_tbox.Size = new System.Drawing.Size(408, 138);
-            this.item_desc_editor_tbox.TabIndex = 66;
-            this.item_desc_editor_tbox.Text = "";
+            this.MAINUPDATE.DoWork += new System.ComponentModel.DoWorkEventHandler(this.MAINUPDATE_DoWork);
+            this.MAINUPDATE.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.MAINUPDATE_RunWorkerCompleted);
             // 
             // User
             // 
@@ -5043,7 +5089,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1132, 561);
+            this.ClientSize = new System.Drawing.Size(1132, 612);
             this.Controls.Add(this.Power_Level_tbox);
             this.Controls.Add(this.label95);
             this.Controls.Add(this.label94);
@@ -5608,5 +5654,9 @@
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.RichTextBox spell_desc_editor_tbox;
         private System.Windows.Forms.RichTextBox item_desc_editor_tbox;
+        private System.Windows.Forms.GroupBox SpellInfo_CNTRL;
+        private System.Windows.Forms.GroupBox itemInfo_CNTRL;
+        private System.Windows.Forms.GroupBox Equipment_info_CTRL;
+        private System.ComponentModel.BackgroundWorker MAINUPDATE;
     }
 }

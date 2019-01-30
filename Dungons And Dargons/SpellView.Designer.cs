@@ -113,6 +113,7 @@
             this.MinimizeBox = false;
             this.Name = "SpellView";
             this.Text = "SpellView";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.SpellView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

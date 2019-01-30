@@ -83,329 +83,13 @@ namespace Dungons_And_Dargons
         {
             this.FormClosing += new FormClosingEventHandler(User_Closing);
             this.Text = MyPlayer.PName;
-            UpdateDisplay();
+            MAINUPDATE.RunWorkerAsync(MyPlayer);
             if (!MyPlayer.GAMEMASTER) Main_tabs.TabPages.Remove(GameMaster_tab);
-        }
-
-
-        public void UpdateDisplay()
-        {
-
-            MyPlayer.GetData();
-            MyPlayer.GetInventory();
-            MyPlayer.GetSpells();
-            Name_tbox.Text = MyPlayer.PName;
-            LVL_tbox.Text = MyPlayer.Level.ToString();
-            XP_lbl.Text = "XP: " + MyPlayer.XP.ToString() + "/" + MyPlayer.XPREQ.ToString();
-
-            if (MyPlayer.XP >= MyPlayer.XPREQ)
-            {
-                MyPlayer.XP -= MyPlayer.XPREQ;
-                MyPlayer.STATS = MyPlayer.Level;
-                STATS_LBL.Text = "STATS: " + MyPlayer.STATS.ToString();
-                MyPlayer.Level += 1;
-                MyPlayer.PostData();
-                LVL_tbox.Text = MyPlayer.Level.ToString();
-                XP_lbl.Text = "XP: " + MyPlayer.XP.ToString() + "/" + MyPlayer.XPREQ.ToString();
-
-                MessageBox.Show("Congrats You Leveled Up");
-            }
-
-            if (MyPlayer.STATS > 0) {
-                HP_P_BTN.Visible = true;
-                MP_P_BTN.Visible = true;
-                ATK_P_BTN.Visible = true;
-                SATK_P_BTN.Visible = true;
-                DEF_P_BTN.Visible = true;
-                SDEF_P_BTN.Visible = true;
-                CHAR_P_BTN.Visible = true;
-                DEX_P_BTN.Visible = true;
-                STR_P_BTN.Visible = true;
-                INT_P_BTN.Visible = true;
-                PERC_P_BTN.Visible = true;
-
-                HP_M_BTN.Visible = true;
-                MP_M_BTN.Visible = true;
-                ATK_M_BTN.Visible = true;
-                SATK_M_BTN.Visible = true;
-                DEF_M_BTN.Visible = true;
-                SDEF_M_BTN.Visible = true;
-                CHAR_M_BTN.Visible = true;
-                DEX_M_BTN.Visible = true;
-                STR_M_BTN.Visible = true;
-                INT_M_BTN.Visible = true;
-                PERC_M_BTN.Visible = true;
-                Stats_Apply_BTN.Visible = true;
-
-                UPDATE_btn.Visible = false;
-
-                MyPlayer.NSTAT = MyPlayer.STATS;
-                MyPlayer.NHPMax = MyPlayer.HPMax;
-                MyPlayer.NMPMax = MyPlayer.MPMax;
-                MyPlayer.NATK = MyPlayer.ATK;
-                MyPlayer.NSATK = MyPlayer.SATK;
-                MyPlayer.NDEF = MyPlayer.DEF;
-                MyPlayer.NSDEF = MyPlayer.SDEF;
-                MyPlayer.NCHARIS = MyPlayer.CHARIS;
-                MyPlayer.NDEX = MyPlayer.DEX;
-                MyPlayer.NSTR = MyPlayer.STR;
-                MyPlayer.NINTEL = MyPlayer.INTEL;
-                MyPlayer.NPERC = MyPlayer.PERC;
-
-                Update_timer.Stop();
-            } else {
-                HP_P_BTN.Visible = false;
-                MP_P_BTN.Visible = false;
-                ATK_P_BTN.Visible = false;
-                SATK_P_BTN.Visible = false;
-                DEF_P_BTN.Visible = false;
-                SDEF_P_BTN.Visible = false;
-                CHAR_P_BTN.Visible = false;
-                DEX_P_BTN.Visible = false;
-                STR_P_BTN.Visible = false;
-                INT_P_BTN.Visible = false;
-                PERC_P_BTN.Visible = false;
-
-                HP_M_BTN.Visible = false;
-                MP_M_BTN.Visible = false;
-                ATK_M_BTN.Visible = false;
-                SATK_M_BTN.Visible = false;
-                DEF_M_BTN.Visible = false;
-                SDEF_M_BTN.Visible = false;
-                CHAR_M_BTN.Visible = false;
-                DEX_M_BTN.Visible = false;
-                STR_M_BTN.Visible = false;
-                INT_M_BTN.Visible = false;
-                PERC_M_BTN.Visible = false;
-                Stats_Apply_BTN.Visible = false;
-
-                UPDATE_btn.Visible = true;
-            }
-
-            STATS_LBL.Text = "STATS: " + MyPlayer.STATS.ToString();
-            HP_lbl.Text = "HP: " + MyPlayer.HP.ToString() + "/" + (MyPlayer.HPMax + MyPlayer.M_HP).ToString();
-            MP_lbl.Text = "MP: " + MyPlayer.MP.ToString() + "/" + (MyPlayer.MPMax + MyPlayer.M_MP).ToString();
-            ATK_tbox.Text = MyPlayer.ATK.ToString();
-            SATK_tbox.Text = MyPlayer.SATK.ToString();
-            DEF_tbox.Text = MyPlayer.DEF.ToString();
-            SDEF_tbox.Text = MyPlayer.SDEF.ToString();
-            CHAR_tbox.Text = MyPlayer.CHARIS.ToString();
-            DEX_tbox.Text = MyPlayer.DEX.ToString();
-            STR_tbox.Text = MyPlayer.STR.ToString();
-            INT_tbox.Text = MyPlayer.INTEL.ToString();
-            PERC_tbox.Text = MyPlayer.PERC.ToString();
-            Satiety_tbox.Text = MyPlayer.SATIE.ToString();
-            Gold_tbox.Text = MyPlayer.Gold.ToString();
-
-            M_ATK_tbox.Text = MyPlayer.M_ATK.ToString();
-            M_SATK_tbox.Text = MyPlayer.M_SATK.ToString();
-            M_DEF_tbox.Text = MyPlayer.M_DEF.ToString();
-            M_SDEF_tbox.Text = MyPlayer.M_SDEF.ToString();
-            M_CHAR_tbox.Text = MyPlayer.M_CHAR.ToString();
-            M_DEX_tbox.Text = MyPlayer.M_DEX.ToString();
-            M_STR_tbox.Text = MyPlayer.M_STR.ToString();
-            M_INT_tbox.Text = MyPlayer.M_INT.ToString();
-            M_PERC_tbox.Text = MyPlayer.M_PERC.ToString();
-
-            T_ATK_tbox.Text = Convert.ToString(MyPlayer.M_ATK + MyPlayer.ATK);
-            T_SATK_tbox.Text = Convert.ToString(MyPlayer.M_SATK + MyPlayer.SATK);
-            T_DEF_tbox.Text = Convert.ToString(MyPlayer.M_DEF + MyPlayer.DEF);
-            T_SDEF_tbox.Text = Convert.ToString(MyPlayer.M_SDEF + MyPlayer.SDEF);
-            T_CHAR_tbox.Text = Convert.ToString(MyPlayer.M_CHAR + MyPlayer.CHARIS);
-            T_DEX_tbox.Text = Convert.ToString(MyPlayer.M_DEX + MyPlayer.DEX);
-            T_STR_tbox.Text = Convert.ToString(MyPlayer.M_STR + MyPlayer.STR);
-            T_INT_tbox.Text = Convert.ToString(MyPlayer.M_INT + MyPlayer.INTEL);
-            T_PERC_tbox.Text = Convert.ToString(MyPlayer.M_PERC + MyPlayer.PERC);
-
-            Power_Level_tbox.Text = Convert.ToString(MyPlayer.HP + MyPlayer.MP + MyPlayer.M_ATK + MyPlayer.ATK + MyPlayer.M_SATK + MyPlayer.SATK
-                + MyPlayer.M_DEF + MyPlayer.DEF + MyPlayer.M_SDEF + MyPlayer.SDEF + MyPlayer.M_CHAR + MyPlayer.CHARIS + MyPlayer.M_DEX
-                + MyPlayer.DEX + MyPlayer.M_STR + MyPlayer.STR + MyPlayer.M_INT + MyPlayer.INTEL + MyPlayer.M_PERC + MyPlayer.PERC)
-                + "/" + Convert.ToString(MyPlayer.HPMax + MyPlayer.M_HP + MyPlayer.MPMax + MyPlayer.M_MP + MyPlayer.M_ATK + MyPlayer.ATK + MyPlayer.M_SATK + MyPlayer.SATK
-                + MyPlayer.M_DEF + MyPlayer.DEF + MyPlayer.M_SDEF + MyPlayer.SDEF + MyPlayer.M_CHAR + MyPlayer.CHARIS + MyPlayer.M_DEX
-                + MyPlayer.DEX + MyPlayer.M_STR + MyPlayer.STR + MyPlayer.M_INT + MyPlayer.INTEL + MyPlayer.M_PERC + MyPlayer.PERC); ; 
-           
-            Knowledge_lbox.Items.Clear();
-            if (MyPlayer.Earth > 0)
-            {
-                Knowledge_lbox.Items.Add("Earth Knowledge: " + MyPlayer.Earth);
-            }
-            if (MyPlayer.Fire > 0)
-            {
-                Knowledge_lbox.Items.Add("Fire Knowledge: " + MyPlayer.Fire);
-            }
-            if (MyPlayer.Lightning > 0)
-            {
-                Knowledge_lbox.Items.Add("Lightning Knowledge: " + MyPlayer.Lightning);
-            }
-            if (MyPlayer.Ice > 0)
-            {
-                Knowledge_lbox.Items.Add("Ice Knowledge: " + MyPlayer.Ice);
-            }
-            if (MyPlayer.Holy > 0)
-            {
-                Knowledge_lbox.Items.Add("Holy Knowledge: " + MyPlayer.Holy);
-            }
-            if (MyPlayer.Unholy > 0)
-            {
-                Knowledge_lbox.Items.Add("Unholy Knowledge: " + MyPlayer.Unholy);
-            }
-
-            if (MyPlayer.Helmet.Name != null)
-            {
-                Helmet_tbox.Text = MyPlayer.Helmet.ITEM_DATA();
-            }
-            else
-            {
-                Helmet_tbox.Text = "";
-            }
-
-            if (MyPlayer.Maille.Name != null)
-            {
-                Maille_tbox.Text = MyPlayer.Maille.ITEM_DATA();
-            }
-            else
-            {
-                Maille_tbox.Text = "";
-            }
-
-            if (MyPlayer.Pants.Name != null)
-            {
-                Pants__tbox.Text = MyPlayer.Pants.ITEM_DATA();
-            }
-            else
-            {
-                Pants__tbox.Text = "";
-            }
-
-            if (MyPlayer.Boots.Name != null)
-            {
-                Boots_tbox.Text = MyPlayer.Boots.ITEM_DATA();
-            }
-            else
-            {
-                Boots_tbox.Text = "";
-            }
-
-            if (MyPlayer.Gloves.Name != null)
-            {
-                Gloves_tbox.Text = MyPlayer.Gloves.ITEM_DATA();
-            }
-            else
-            {
-                Gloves_tbox.Text = "";
-            }
-
-            if (MyPlayer.Weapon.Name != null)
-            {
-                Weapon_tbox.Text = MyPlayer.Weapon.ITEM_DATA();
-            }
-            else
-            {
-                Weapon_tbox.Text = "";
-            }
-
-            if (MyPlayer.Artifact.Name != null)
-            {
-                Artifact_tbox.Text = MyPlayer.Artifact.ITEM_DATA();
-            }
-            else
-            {
-                Artifact_tbox.Text = "";
-            }
-
-
-            HP_pbar.Maximum = MyPlayer.HPMax + MyPlayer.M_HP;
-            if (MyPlayer.HP > MyPlayer.HPMax + MyPlayer.M_HP)
-            {
-                HP_pbar.Value = MyPlayer.HPMax + MyPlayer.M_HP;
-            }
-            else
-            {
-                HP_pbar.Value = MyPlayer.HP;
-            }
-
-            MP_pbar.Maximum = MyPlayer.MPMax + MyPlayer.M_MP;
-            if (MyPlayer.MP > MyPlayer.MPMax + MyPlayer.M_MP)
-            {
-                MP_pbar.Value = MyPlayer.HPMax + MyPlayer.M_HP;
-            }
-            else
-            {
-                MP_pbar.Value = MyPlayer.MP;
-            }
-
-            if (MyPlayer.XPREQ >= MyPlayer.XP)
-            {
-                XP_pbar.Maximum = MyPlayer.XPREQ;
-                XP_pbar.Value = MyPlayer.XP;
-            } else
-            {
-                XP_pbar.Maximum = MyPlayer.XPREQ;
-                XP_pbar.Value = MyPlayer.XPREQ;
-
-            }
-
-            HP_pbar.ForeColor = Color.LawnGreen;
-
-            if (MyPlayer.HP < MyPlayer.HPMax / 2)
-            {
-                HP_pbar.ForeColor = Color.Yellow;
-            }
-
-            if (MyPlayer.HP < MyPlayer.HPMax / 4)
-            {
-                HP_pbar.ForeColor = Color.Red;
-            }
-
-            string NINVTOT = "";
-            string OINVTOT = "";
-            foreach(ITEM item in MyPlayer.Inventory) NINVTOT = string.Format("{0}{1}", NINVTOT, item.ItemID);
-            foreach(ITEM item in OLD_INVENTORY) OINVTOT = string.Format("{0}{1}", OINVTOT, item.ItemID);
-
-            if (NINVTOT != OINVTOT)
-            {
-                Inventory_lbox.Items.Clear();
-                Equipable_lbox.Items.Clear();
-                OLD_INVENTORY.Clear();
-                foreach (ITEM item in MyPlayer.Inventory)
-                {
-                    item.GetData();
-                    if (item.Equipable())
-                    {
-                        Equipable_lbox.Items.Add(item.Prop_To_Type() + ": " + item.ITEM_DATA());
-                    }
-                    Inventory_lbox.Items.Add(item.ITEM_DATA());
-                    OLD_INVENTORY.Add(item);
-                }
-            }
-
-            string NSPLTOT = "";
-            string OSPLTOT = "";
-            foreach (SPELL spell in MyPlayer.Spells) NSPLTOT = string.Format("{0}{1}", NSPLTOT, spell.SpellID);
-            foreach (SPELL spell in OLD_SPELLS) OSPLTOT = string.Format("{0}{1}", OSPLTOT, spell.SpellID);
-
-            if (NSPLTOT != OSPLTOT)
-            {
-                Spells_lbox.Items.Clear();
-                OLD_SPELLS.Clear();
-                foreach (SPELL spell in MyPlayer.Spells)
-                {
-                    Spells_lbox.Items.Add(spell.SPELL_DATA());
-                    OLD_SPELLS.Add(spell);
-                }
-            }
-
-            //Display Gamemaster Content
-            if (MyPlayer.GAMEMASTER == true)
-            {
-
-            }
-
         }
 
         private void UPDATE_btn_Click(object sender, EventArgs e)
         {
-            UpdateDisplay();
+            MAINUPDATE.RunWorkerAsync(MyPlayer);
         }
 
         private void User_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -420,7 +104,14 @@ namespace Dungons_And_Dargons
             {
                 string IID = Inventory_lbox.SelectedItem.ToString().Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
+                //Iview.Show();
+                itemInfo_CNTRL.Controls.Clear();
+                Iview.TopLevel = false;
+                Iview.TopMost = false;
+                Iview.FormBorderStyle = FormBorderStyle.None;
+                Iview.Dock = DockStyle.Fill;
+                Iview.Visible = true;
+                itemInfo_CNTRL.Controls.Add(Iview);
             }
         }
 
@@ -430,8 +121,16 @@ namespace Dungons_And_Dargons
             {
                 string IID = Spells_lbox.SelectedItem.ToString().Split('<', '>')[1];
                 SpellView Sview = new SpellView(Convert.ToInt32(IID), conn);
-                Sview.Show();
+                //Sview.Show();
+                SpellInfo_CNTRL.Controls.Clear();
+                Sview.TopLevel = false;
+                Sview.TopMost = false;
+                Sview.FormBorderStyle = FormBorderStyle.None;
+                Sview.Dock = DockStyle.Fill;
+                Sview.Visible = true;
+                SpellInfo_CNTRL.Controls.Add(Sview);
             }
+
         }
 
         private void NPCS_lbox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1171,7 +870,14 @@ namespace Dungons_And_Dargons
             {
                 string IID = Equipable_lbox.SelectedItem.ToString().Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
+                //Iview.Show();
+                Equipment_info_CTRL.Controls.Clear();
+                Iview.TopLevel = false;
+                Iview.TopMost = false;
+                Iview.FormBorderStyle = FormBorderStyle.None;
+                Iview.Dock = DockStyle.Fill;
+                Iview.Visible = true;
+                Equipment_info_CTRL.Controls.Add(Iview);
             }
         }
 
@@ -1229,7 +935,14 @@ namespace Dungons_And_Dargons
             {
                 string IID = Helmet_tbox.Text.Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
+                //Iview.Show();
+                Equipment_info_CTRL.Controls.Clear();
+                Iview.TopLevel = false;
+                Iview.TopMost = false;
+                Iview.FormBorderStyle = FormBorderStyle.None;
+                Iview.Dock = DockStyle.Fill;
+                Iview.Visible = true;
+                Equipment_info_CTRL.Controls.Add(Iview);
             }
         }
 
@@ -1239,7 +952,14 @@ namespace Dungons_And_Dargons
             {
                 string IID = Maille_tbox.Text.Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
+                //Iview.Show();
+                Equipment_info_CTRL.Controls.Clear();
+                Iview.TopLevel = false;
+                Iview.TopMost = false;
+                Iview.FormBorderStyle = FormBorderStyle.None;
+                Iview.Dock = DockStyle.Fill;
+                Iview.Visible = true;
+                Equipment_info_CTRL.Controls.Add(Iview);
             }
         }
 
@@ -1249,7 +969,14 @@ namespace Dungons_And_Dargons
             {
                 string IID = Pants__tbox.Text.Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
+                //Iview.Show();
+                Equipment_info_CTRL.Controls.Clear();
+                Iview.TopLevel = false;
+                Iview.TopMost = false;
+                Iview.FormBorderStyle = FormBorderStyle.None;
+                Iview.Dock = DockStyle.Fill;
+                Iview.Visible = true;
+                Equipment_info_CTRL.Controls.Add(Iview);
             }
         }
 
@@ -1259,7 +986,14 @@ namespace Dungons_And_Dargons
             {
                 string IID = Boots_tbox.Text.Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
+                //Iview.Show();
+                Equipment_info_CTRL.Controls.Clear();
+                Iview.TopLevel = false;
+                Iview.TopMost = false;
+                Iview.FormBorderStyle = FormBorderStyle.None;
+                Iview.Dock = DockStyle.Fill;
+                Iview.Visible = true;
+                Equipment_info_CTRL.Controls.Add(Iview);
             }
         }
 
@@ -1269,7 +1003,14 @@ namespace Dungons_And_Dargons
             {
                 string IID = Gloves_tbox.Text.Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
+                //Iview.Show();
+                Equipment_info_CTRL.Controls.Clear();
+                Iview.TopLevel = false;
+                Iview.TopMost = false;
+                Iview.FormBorderStyle = FormBorderStyle.None;
+                Iview.Dock = DockStyle.Fill;
+                Iview.Visible = true;
+                Equipment_info_CTRL.Controls.Add(Iview);
             }
         }
 
@@ -1279,7 +1020,14 @@ namespace Dungons_And_Dargons
             {
                 string IID = Weapon_tbox.Text.Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
+                //Iview.Show();
+                Equipment_info_CTRL.Controls.Clear();
+                Iview.TopLevel = false;
+                Iview.TopMost = false;
+                Iview.FormBorderStyle = FormBorderStyle.None;
+                Iview.Dock = DockStyle.Fill;
+                Iview.Visible = true;
+                Equipment_info_CTRL.Controls.Add(Iview);
             }
         }
 
@@ -1289,13 +1037,350 @@ namespace Dungons_And_Dargons
             {
                 string IID = Artifact_tbox.Text.Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
-                Iview.Show();
+                //Iview.Show();
+                Equipment_info_CTRL.Controls.Clear();
+                Iview.TopLevel = false;
+                Iview.TopMost = false;
+                Iview.FormBorderStyle = FormBorderStyle.None;
+                Iview.Dock = DockStyle.Fill;
+                Iview.Visible = true;
+                Equipment_info_CTRL.Controls.Add(Iview);
             }
         }
 
         private void Filter_Relation_SelectedIndexChanged(object sender, EventArgs e)
         {
             CM_UPDATE_BTN.PerformClick();
+        }
+
+        private void MAINUPDATE_DoWork(object sender, DoWorkEventArgs e)
+        {
+            NPC NewPlayer = (NPC)e.Argument;
+            NewPlayer.GetData();
+            NewPlayer.GetInventory();
+            NewPlayer.GetSpells();
+            e.Result = NewPlayer;
+        }
+
+        private void MAINUPDATE_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            MyPlayer = (NPC)e.Result;
+            Name_tbox.Text = MyPlayer.PName;
+            LVL_tbox.Text = MyPlayer.Level.ToString();
+            XP_lbl.Text = "XP: " + MyPlayer.XP.ToString() + "/" + MyPlayer.XPREQ.ToString();
+
+            if (MyPlayer.XP >= MyPlayer.XPREQ)
+            {
+                MyPlayer.XP -= MyPlayer.XPREQ;
+                MyPlayer.STATS = MyPlayer.Level;
+                STATS_LBL.Text = "STATS: " + MyPlayer.STATS.ToString();
+                MyPlayer.Level += 1;
+                MyPlayer.PostData();
+                LVL_tbox.Text = MyPlayer.Level.ToString();
+                XP_lbl.Text = "XP: " + MyPlayer.XP.ToString() + "/" + MyPlayer.XPREQ.ToString();
+
+                MessageBox.Show("Congrats You Leveled Up");
+            }
+
+            if (MyPlayer.STATS > 0)
+            {
+                HP_P_BTN.Visible = true;
+                MP_P_BTN.Visible = true;
+                ATK_P_BTN.Visible = true;
+                SATK_P_BTN.Visible = true;
+                DEF_P_BTN.Visible = true;
+                SDEF_P_BTN.Visible = true;
+                CHAR_P_BTN.Visible = true;
+                DEX_P_BTN.Visible = true;
+                STR_P_BTN.Visible = true;
+                INT_P_BTN.Visible = true;
+                PERC_P_BTN.Visible = true;
+
+                HP_M_BTN.Visible = true;
+                MP_M_BTN.Visible = true;
+                ATK_M_BTN.Visible = true;
+                SATK_M_BTN.Visible = true;
+                DEF_M_BTN.Visible = true;
+                SDEF_M_BTN.Visible = true;
+                CHAR_M_BTN.Visible = true;
+                DEX_M_BTN.Visible = true;
+                STR_M_BTN.Visible = true;
+                INT_M_BTN.Visible = true;
+                PERC_M_BTN.Visible = true;
+                Stats_Apply_BTN.Visible = true;
+
+                UPDATE_btn.Visible = false;
+
+                MyPlayer.NSTAT = MyPlayer.STATS;
+                MyPlayer.NHPMax = MyPlayer.HPMax;
+                MyPlayer.NMPMax = MyPlayer.MPMax;
+                MyPlayer.NATK = MyPlayer.ATK;
+                MyPlayer.NSATK = MyPlayer.SATK;
+                MyPlayer.NDEF = MyPlayer.DEF;
+                MyPlayer.NSDEF = MyPlayer.SDEF;
+                MyPlayer.NCHARIS = MyPlayer.CHARIS;
+                MyPlayer.NDEX = MyPlayer.DEX;
+                MyPlayer.NSTR = MyPlayer.STR;
+                MyPlayer.NINTEL = MyPlayer.INTEL;
+                MyPlayer.NPERC = MyPlayer.PERC;
+
+                Update_timer.Stop();
+            }
+            else
+            {
+                HP_P_BTN.Visible = false;
+                MP_P_BTN.Visible = false;
+                ATK_P_BTN.Visible = false;
+                SATK_P_BTN.Visible = false;
+                DEF_P_BTN.Visible = false;
+                SDEF_P_BTN.Visible = false;
+                CHAR_P_BTN.Visible = false;
+                DEX_P_BTN.Visible = false;
+                STR_P_BTN.Visible = false;
+                INT_P_BTN.Visible = false;
+                PERC_P_BTN.Visible = false;
+
+                HP_M_BTN.Visible = false;
+                MP_M_BTN.Visible = false;
+                ATK_M_BTN.Visible = false;
+                SATK_M_BTN.Visible = false;
+                DEF_M_BTN.Visible = false;
+                SDEF_M_BTN.Visible = false;
+                CHAR_M_BTN.Visible = false;
+                DEX_M_BTN.Visible = false;
+                STR_M_BTN.Visible = false;
+                INT_M_BTN.Visible = false;
+                PERC_M_BTN.Visible = false;
+                Stats_Apply_BTN.Visible = false;
+
+                UPDATE_btn.Visible = true;
+            }
+
+            STATS_LBL.Text = "STATS: " + MyPlayer.STATS.ToString();
+            HP_lbl.Text = "HP: " + MyPlayer.HP.ToString() + "/" + (MyPlayer.HPMax + MyPlayer.M_HP).ToString();
+            MP_lbl.Text = "MP: " + MyPlayer.MP.ToString() + "/" + (MyPlayer.MPMax + MyPlayer.M_MP).ToString();
+            ATK_tbox.Text = MyPlayer.ATK.ToString();
+            SATK_tbox.Text = MyPlayer.SATK.ToString();
+            DEF_tbox.Text = MyPlayer.DEF.ToString();
+            SDEF_tbox.Text = MyPlayer.SDEF.ToString();
+            CHAR_tbox.Text = MyPlayer.CHARIS.ToString();
+            DEX_tbox.Text = MyPlayer.DEX.ToString();
+            STR_tbox.Text = MyPlayer.STR.ToString();
+            INT_tbox.Text = MyPlayer.INTEL.ToString();
+            PERC_tbox.Text = MyPlayer.PERC.ToString();
+            Satiety_tbox.Text = MyPlayer.SATIE.ToString();
+            Gold_tbox.Text = MyPlayer.Gold.ToString();
+
+            M_ATK_tbox.Text = MyPlayer.M_ATK.ToString();
+            M_SATK_tbox.Text = MyPlayer.M_SATK.ToString();
+            M_DEF_tbox.Text = MyPlayer.M_DEF.ToString();
+            M_SDEF_tbox.Text = MyPlayer.M_SDEF.ToString();
+            M_CHAR_tbox.Text = MyPlayer.M_CHAR.ToString();
+            M_DEX_tbox.Text = MyPlayer.M_DEX.ToString();
+            M_STR_tbox.Text = MyPlayer.M_STR.ToString();
+            M_INT_tbox.Text = MyPlayer.M_INT.ToString();
+            M_PERC_tbox.Text = MyPlayer.M_PERC.ToString();
+
+            T_ATK_tbox.Text = Convert.ToString(MyPlayer.M_ATK + MyPlayer.ATK);
+            T_SATK_tbox.Text = Convert.ToString(MyPlayer.M_SATK + MyPlayer.SATK);
+            T_DEF_tbox.Text = Convert.ToString(MyPlayer.M_DEF + MyPlayer.DEF);
+            T_SDEF_tbox.Text = Convert.ToString(MyPlayer.M_SDEF + MyPlayer.SDEF);
+            T_CHAR_tbox.Text = Convert.ToString(MyPlayer.M_CHAR + MyPlayer.CHARIS);
+            T_DEX_tbox.Text = Convert.ToString(MyPlayer.M_DEX + MyPlayer.DEX);
+            T_STR_tbox.Text = Convert.ToString(MyPlayer.M_STR + MyPlayer.STR);
+            T_INT_tbox.Text = Convert.ToString(MyPlayer.M_INT + MyPlayer.INTEL);
+            T_PERC_tbox.Text = Convert.ToString(MyPlayer.M_PERC + MyPlayer.PERC);
+
+            Power_Level_tbox.Text = Convert.ToString(MyPlayer.HP + MyPlayer.MP + MyPlayer.M_ATK + MyPlayer.ATK + MyPlayer.M_SATK + MyPlayer.SATK
+                + MyPlayer.M_DEF + MyPlayer.DEF + MyPlayer.M_SDEF + MyPlayer.SDEF + MyPlayer.M_CHAR + MyPlayer.CHARIS + MyPlayer.M_DEX
+                + MyPlayer.DEX + MyPlayer.M_STR + MyPlayer.STR + MyPlayer.M_INT + MyPlayer.INTEL + MyPlayer.M_PERC + MyPlayer.PERC)
+                + "/" + Convert.ToString(MyPlayer.HPMax + MyPlayer.M_HP + MyPlayer.MPMax + MyPlayer.M_MP + MyPlayer.M_ATK + MyPlayer.ATK + MyPlayer.M_SATK + MyPlayer.SATK
+                + MyPlayer.M_DEF + MyPlayer.DEF + MyPlayer.M_SDEF + MyPlayer.SDEF + MyPlayer.M_CHAR + MyPlayer.CHARIS + MyPlayer.M_DEX
+                + MyPlayer.DEX + MyPlayer.M_STR + MyPlayer.STR + MyPlayer.M_INT + MyPlayer.INTEL + MyPlayer.M_PERC + MyPlayer.PERC); ;
+
+            Knowledge_lbox.Items.Clear();
+            if (MyPlayer.Earth > 0)
+            {
+                Knowledge_lbox.Items.Add("Earth Knowledge: " + MyPlayer.Earth);
+            }
+            if (MyPlayer.Fire > 0)
+            {
+                Knowledge_lbox.Items.Add("Fire Knowledge: " + MyPlayer.Fire);
+            }
+            if (MyPlayer.Lightning > 0)
+            {
+                Knowledge_lbox.Items.Add("Lightning Knowledge: " + MyPlayer.Lightning);
+            }
+            if (MyPlayer.Ice > 0)
+            {
+                Knowledge_lbox.Items.Add("Ice Knowledge: " + MyPlayer.Ice);
+            }
+            if (MyPlayer.Holy > 0)
+            {
+                Knowledge_lbox.Items.Add("Holy Knowledge: " + MyPlayer.Holy);
+            }
+            if (MyPlayer.Unholy > 0)
+            {
+                Knowledge_lbox.Items.Add("Unholy Knowledge: " + MyPlayer.Unholy);
+            }
+
+            if (MyPlayer.Helmet.Name != null)
+            {
+                Helmet_tbox.Text = MyPlayer.Helmet.ITEM_DATA();
+            }
+            else
+            {
+                Helmet_tbox.Text = "";
+            }
+
+            if (MyPlayer.Maille.Name != null)
+            {
+                Maille_tbox.Text = MyPlayer.Maille.ITEM_DATA();
+            }
+            else
+            {
+                Maille_tbox.Text = "";
+            }
+
+            if (MyPlayer.Pants.Name != null)
+            {
+                Pants__tbox.Text = MyPlayer.Pants.ITEM_DATA();
+            }
+            else
+            {
+                Pants__tbox.Text = "";
+            }
+
+            if (MyPlayer.Boots.Name != null)
+            {
+                Boots_tbox.Text = MyPlayer.Boots.ITEM_DATA();
+            }
+            else
+            {
+                Boots_tbox.Text = "";
+            }
+
+            if (MyPlayer.Gloves.Name != null)
+            {
+                Gloves_tbox.Text = MyPlayer.Gloves.ITEM_DATA();
+            }
+            else
+            {
+                Gloves_tbox.Text = "";
+            }
+
+            if (MyPlayer.Weapon.Name != null)
+            {
+                Weapon_tbox.Text = MyPlayer.Weapon.ITEM_DATA();
+            }
+            else
+            {
+                Weapon_tbox.Text = "";
+            }
+
+            if (MyPlayer.Artifact.Name != null)
+            {
+                Artifact_tbox.Text = MyPlayer.Artifact.ITEM_DATA();
+            }
+            else
+            {
+                Artifact_tbox.Text = "";
+            }
+
+
+            HP_pbar.Maximum = MyPlayer.HPMax + MyPlayer.M_HP;
+            if (MyPlayer.HP > MyPlayer.HPMax + MyPlayer.M_HP)
+            {
+                HP_pbar.Value = MyPlayer.HPMax + MyPlayer.M_HP;
+            }
+            else
+            {
+                HP_pbar.Value = MyPlayer.HP;
+            }
+
+            MP_pbar.Maximum = MyPlayer.MPMax + MyPlayer.M_MP;
+            if (MyPlayer.MP > MyPlayer.MPMax + MyPlayer.M_MP)
+            {
+                MP_pbar.Value = MyPlayer.HPMax + MyPlayer.M_HP;
+            }
+            else
+            {
+                MP_pbar.Value = MyPlayer.MP;
+            }
+
+            if (MyPlayer.XPREQ >= MyPlayer.XP)
+            {
+                XP_pbar.Maximum = MyPlayer.XPREQ;
+                XP_pbar.Value = MyPlayer.XP;
+            }
+            else
+            {
+                XP_pbar.Maximum = MyPlayer.XPREQ;
+                XP_pbar.Value = MyPlayer.XPREQ;
+
+            }
+
+            HP_pbar.ForeColor = Color.LawnGreen;
+
+            if (MyPlayer.HP < MyPlayer.HPMax / 2)
+            {
+                HP_pbar.ForeColor = Color.Yellow;
+            }
+
+            if (MyPlayer.HP < MyPlayer.HPMax / 4)
+            {
+                HP_pbar.ForeColor = Color.Red;
+            }
+
+            string NINVTOT = "";
+            string OINVTOT = "";
+            foreach (ITEM item in MyPlayer.Inventory) NINVTOT = string.Format("{0}{1}", NINVTOT, item.ItemID + Convert.ToInt32(item.Equipped));
+            foreach (ITEM item in OLD_INVENTORY) OINVTOT = string.Format("{0}{1}", OINVTOT, item.ItemID + Convert.ToInt32(item.Equipped));
+
+            if (NINVTOT != OINVTOT)
+            {
+                Inventory_lbox.Items.Clear();
+                Equipable_lbox.Items.Clear();
+                OLD_INVENTORY.Clear();
+                foreach (ITEM item in MyPlayer.Inventory)
+                {
+                    item.GetData();
+                    if (item.Equipable())
+                    {
+                        if (item.Equipped == false)
+                        {
+                            Equipable_lbox.Items.Add(item.Prop_To_Type() + ": " + item.ITEM_DATA());
+                        }
+
+
+                    }
+                    Inventory_lbox.Items.Add(item.ITEM_DATA());
+                    OLD_INVENTORY.Add(item);
+                }
+            }
+
+            string NSPLTOT = "";
+            string OSPLTOT = "";
+            foreach (SPELL spell in MyPlayer.Spells) NSPLTOT = string.Format("{0}{1}", NSPLTOT, spell.SpellID);
+            foreach (SPELL spell in OLD_SPELLS) OSPLTOT = string.Format("{0}{1}", OSPLTOT, spell.SpellID);
+
+            if (NSPLTOT != OSPLTOT)
+            {
+                Spells_lbox.Items.Clear();
+                OLD_SPELLS.Clear();
+                foreach (SPELL spell in MyPlayer.Spells)
+                {
+                    Spells_lbox.Items.Add(spell.SPELL_DATA());
+                    OLD_SPELLS.Add(spell);
+                }
+            }
+
+            //Display Gamemaster Content
+            if (MyPlayer.GAMEMASTER == true)
+            {
+
+            }
+
         }
     }
 }
