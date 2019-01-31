@@ -47,8 +47,8 @@ namespace Dungons_And_Dargons
             Name_tbox.Text = SELNPC.PName;
             LVL_tbox.Text = SELNPC.Level.ToString();
             XP_lbl.Text = "XP: " + SELNPC.XP.ToString() + "/" + SELNPC.XPREQ.ToString();
-            HP_lbl.Text = "HP: " + SELNPC.HP.ToString() + "/" + SELNPC.HPMax.ToString();
-            MP_lbl.Text = "MP: " + SELNPC.MP.ToString() + "/" + SELNPC.MPMax.ToString();
+            HP_lbl.Text = "HP: " + SELNPC.HP.ToString() + "/" + SELNPC.T_HP.ToString();
+            MP_lbl.Text = "MP: " + SELNPC.MP.ToString() + "/" + SELNPC.T_MP.ToString();
             ATK_tbox.Text = SELNPC.ATK.ToString();
             SATK_tbox.Text = SELNPC.SATK.ToString();
             DEF_tbox.Text = SELNPC.DEF.ToString();
@@ -70,6 +70,16 @@ namespace Dungons_And_Dargons
             M_STR_tbox.Text = SELNPC.M_STR.ToString();
             M_INT_tbox.Text = SELNPC.M_INT.ToString();
             M_PERC_tbox.Text = SELNPC.M_PERC.ToString();
+
+            T_ATK_tbox.Text = SELNPC.T_ATK.ToString();
+            T_SATK_tbox.Text = SELNPC.T_SATK.ToString();
+            T_DEF_tbox.Text = SELNPC.T_DEF.ToString();
+            T_SDEF_tbox.Text = SELNPC.T_SDEF.ToString();
+            T_CHAR_tbox.Text = SELNPC.T_CHAR.ToString();
+            T_DEX_tbox.Text = SELNPC.T_DEX.ToString();
+            T_STR_tbox.Text = SELNPC.T_STR.ToString();
+            T_INT_tbox.Text = SELNPC.T_INT.ToString();
+            T_PERC_tbox.Text = SELNPC.T_PERC.ToString();
 
             Earth_tbox.Text = SELNPC.Earth.ToString();
             Fire_tbox.Text = SELNPC.Fire.ToString();
@@ -103,9 +113,14 @@ namespace Dungons_And_Dargons
                 Equipment_lbox.Items.Add("Gloves: " + SELNPC.Gloves.ITEM_DATA());
             }
 
-            if (SELNPC.Weapon.Name != null)
+            if (SELNPC.WeaponLeft.Name != null)
             {
-                Equipment_lbox.Items.Add("Weapon: " + SELNPC.Weapon.ITEM_DATA());
+                Equipment_lbox.Items.Add("LWeapon: " + SELNPC.WeaponLeft.ITEM_DATA());
+            }
+
+            if (SELNPC.WeaponRight.Name != null)
+            {
+                Equipment_lbox.Items.Add("RWeapon: " + SELNPC.WeaponRight.ITEM_DATA());
             }
 
             if (SELNPC.Artifact.Name != null)
@@ -113,10 +128,10 @@ namespace Dungons_And_Dargons
                 Equipment_lbox.Items.Add("Artifact: " + SELNPC.Artifact.ITEM_DATA());
             }
 
-            HP_pbar.Maximum = SELNPC.HPMax;
+            HP_pbar.Maximum = SELNPC.T_HP;
             HP_pbar.Value = SELNPC.HP;
 
-            MP_pbar.Maximum = SELNPC.MPMax;
+            MP_pbar.Maximum = SELNPC.T_MP;
             MP_pbar.Value = SELNPC.MP;
             if (SELNPC.XPREQ >= SELNPC.XP)
             {

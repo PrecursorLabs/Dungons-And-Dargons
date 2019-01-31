@@ -59,5 +59,15 @@ namespace Dungons_And_Dargons.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Magnosh_territories {
+            get {
+                object obj = ResourceManager.GetObject("Magnosh_territories", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

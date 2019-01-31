@@ -36,12 +36,13 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.Equipable_lbox = new System.Windows.Forms.ListBox();
             this.EGROUP = new System.Windows.Forms.GroupBox();
+            this.WeaponRight_tbox = new System.Windows.Forms.TextBox();
             this.Equipment_info_CTRL = new System.Windows.Forms.GroupBox();
             this.DeEquip_Artifact_btn = new System.Windows.Forms.Button();
             this.Artifact_tbox = new System.Windows.Forms.TextBox();
             this.label90 = new System.Windows.Forms.Label();
             this.DeEquip_Weapon_btn = new System.Windows.Forms.Button();
-            this.Weapon_tbox = new System.Windows.Forms.TextBox();
+            this.WeaponLeft_tbox = new System.Windows.Forms.TextBox();
             this.label89 = new System.Windows.Forms.Label();
             this.DeEquip_Gloves_btn = new System.Windows.Forms.Button();
             this.Gloves_tbox = new System.Windows.Forms.TextBox();
@@ -77,184 +78,53 @@
             this.NPCC_tab = new System.Windows.Forms.TabPage();
             this.UPLOAD_btn = new System.Windows.Forms.Button();
             this.Roll_btn = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Artifact_INT = new System.Windows.Forms.CheckBox();
-            this.Weapon_INT = new System.Windows.Forms.CheckBox();
-            this.Boots_INT = new System.Windows.Forms.CheckBox();
-            this.Pants_INT = new System.Windows.Forms.CheckBox();
-            this.Gloves_INT = new System.Windows.Forms.CheckBox();
-            this.Maille_INT = new System.Windows.Forms.CheckBox();
-            this.Helm_INT = new System.Windows.Forms.CheckBox();
-            this.Artifact_STR = new System.Windows.Forms.CheckBox();
-            this.Weapon_STR = new System.Windows.Forms.CheckBox();
-            this.Boots_STR = new System.Windows.Forms.CheckBox();
-            this.Pants_STR = new System.Windows.Forms.CheckBox();
-            this.Gloves_STR = new System.Windows.Forms.CheckBox();
-            this.Maille_STR = new System.Windows.Forms.CheckBox();
-            this.Helm_STR = new System.Windows.Forms.CheckBox();
-            this.Artifact_DEX = new System.Windows.Forms.CheckBox();
-            this.Weapon_DEX = new System.Windows.Forms.CheckBox();
-            this.Boots_DEX = new System.Windows.Forms.CheckBox();
-            this.DEX = new System.Windows.Forms.CheckBox();
-            this.Gloves_DEX = new System.Windows.Forms.CheckBox();
-            this.Maille_DEX = new System.Windows.Forms.CheckBox();
-            this.Helm_DEX = new System.Windows.Forms.CheckBox();
-            this.Artifact_CHAR = new System.Windows.Forms.CheckBox();
-            this.Weapon_CHAR = new System.Windows.Forms.CheckBox();
-            this.Boots_CHAR = new System.Windows.Forms.CheckBox();
-            this.Pants_CHAR = new System.Windows.Forms.CheckBox();
-            this.Gloves_CHAR = new System.Windows.Forms.CheckBox();
-            this.Maille_CHAR = new System.Windows.Forms.CheckBox();
-            this.Helm_CHAR = new System.Windows.Forms.CheckBox();
-            this.Artifact_SDEF = new System.Windows.Forms.CheckBox();
-            this.Weapon_SDEF = new System.Windows.Forms.CheckBox();
-            this.Boots_SDEF = new System.Windows.Forms.CheckBox();
-            this.SDEF = new System.Windows.Forms.CheckBox();
-            this.Gloves_SDEF = new System.Windows.Forms.CheckBox();
-            this.Maille_SDEF = new System.Windows.Forms.CheckBox();
-            this.Helm_SDEF = new System.Windows.Forms.CheckBox();
-            this.Artifact_DEF = new System.Windows.Forms.CheckBox();
-            this.Weapon_DEF = new System.Windows.Forms.CheckBox();
-            this.Boots_DEF = new System.Windows.Forms.CheckBox();
-            this.Pants_DEF = new System.Windows.Forms.CheckBox();
-            this.Gloves_DEF = new System.Windows.Forms.CheckBox();
-            this.Helm_DEF = new System.Windows.Forms.CheckBox();
-            this.Maille_DEF = new System.Windows.Forms.CheckBox();
-            this.Artifact_SATK = new System.Windows.Forms.CheckBox();
-            this.Weapon_SATK = new System.Windows.Forms.CheckBox();
-            this.Boots_SATK = new System.Windows.Forms.CheckBox();
-            this.Pants_SATK = new System.Windows.Forms.CheckBox();
-            this.Gloves_SATK = new System.Windows.Forms.CheckBox();
-            this.Maille_SATK = new System.Windows.Forms.CheckBox();
-            this.Helm_SATK = new System.Windows.Forms.CheckBox();
-            this.Artifact_ATK = new System.Windows.Forms.CheckBox();
-            this.Weapon_ATK = new System.Windows.Forms.CheckBox();
-            this.Boots_ATK = new System.Windows.Forms.CheckBox();
-            this.Pants_ATK = new System.Windows.Forms.CheckBox();
-            this.Gloves_ATK = new System.Windows.Forms.CheckBox();
-            this.Maille_ATK = new System.Windows.Forms.CheckBox();
-            this.Helm_ATK = new System.Windows.Forms.CheckBox();
-            this.Artifact_MP = new System.Windows.Forms.CheckBox();
-            this.Weapon_MP = new System.Windows.Forms.CheckBox();
-            this.Boots_MP = new System.Windows.Forms.CheckBox();
-            this.Pants_MP = new System.Windows.Forms.CheckBox();
-            this.Gloves_MP = new System.Windows.Forms.CheckBox();
-            this.Maille_MP = new System.Windows.Forms.CheckBox();
-            this.Artifact_HP = new System.Windows.Forms.CheckBox();
-            this.Weapon_HP = new System.Windows.Forms.CheckBox();
-            this.Boots_HP = new System.Windows.Forms.CheckBox();
-            this.Pants_HP = new System.Windows.Forms.CheckBox();
-            this.Gloves_HP = new System.Windows.Forms.CheckBox();
-            this.Maille_HP = new System.Windows.Forms.CheckBox();
-            this.Helm_HP = new System.Windows.Forms.CheckBox();
-            this.Helm_MP = new System.Windows.Forms.CheckBox();
-            this.Helm_PERC = new System.Windows.Forms.CheckBox();
-            this.Maille_PERC = new System.Windows.Forms.CheckBox();
-            this.Gloves_PERC = new System.Windows.Forms.CheckBox();
-            this.Pants_PERC = new System.Windows.Forms.CheckBox();
-            this.Boots_PERC = new System.Windows.Forms.CheckBox();
-            this.Weapon_PERC = new System.Windows.Forms.CheckBox();
-            this.Artifact_PERC = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.CCOMMP_tbox = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.CCOMHP_tbox = new System.Windows.Forms.TextBox();
-            this.CCOXPMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCOAPPLYMOD_btn = new System.Windows.Forms.Button();
-            this.CCOPERCMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCOINTMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCOSTRMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCODEXMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCOCHARMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCOSDEFMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCODEFMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCOSATKMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCOATKMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCOMPMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.CCOHPMOD_tbox = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.CCOXP_tbox = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.CCOTYPE_tbox = new System.Windows.Forms.TextBox();
-            this.CCOPERC_tbox = new System.Windows.Forms.TextBox();
-            this.CCOINT_tbox = new System.Windows.Forms.TextBox();
-            this.CCOSTR_tbox = new System.Windows.Forms.TextBox();
-            this.CCODEX_tbox = new System.Windows.Forms.TextBox();
-            this.CCOCHAR_tbox = new System.Windows.Forms.TextBox();
-            this.CCOSDEF_tbox = new System.Windows.Forms.TextBox();
-            this.CCODEF_tbox = new System.Windows.Forms.TextBox();
-            this.CCOSATK_tbox = new System.Windows.Forms.TextBox();
-            this.CCOATK_tbox = new System.Windows.Forms.TextBox();
-            this.CCOMP_tbox = new System.Windows.Forms.TextBox();
-            this.CCOHP_tbox = new System.Windows.Forms.TextBox();
-            this.CCOLVL_tbox = new System.Windows.Forms.TextBox();
-            this.CCOName_tbox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CCmbase_chbox = new System.Windows.Forms.CheckBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.CCTYPE_cbox = new System.Windows.Forms.ComboBox();
-            this.CCGolem__chbox = new System.Windows.Forms.CheckBox();
-            this.CCCustom__chbox = new System.Windows.Forms.CheckBox();
-            this.CCCUSLVL_UD = new System.Windows.Forms.NumericUpDown();
-            this.CCLEVELSEL_CBOX = new System.Windows.Forms.ComboBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.CCBos_chbox = new System.Windows.Forms.CheckBox();
-            this.CCPERC_UD = new System.Windows.Forms.NumericUpDown();
-            this.label43 = new System.Windows.Forms.Label();
-            this.CCINT_UD = new System.Windows.Forms.NumericUpDown();
-            this.label44 = new System.Windows.Forms.Label();
-            this.CCSTR_UD = new System.Windows.Forms.NumericUpDown();
-            this.label45 = new System.Windows.Forms.Label();
-            this.CCDEX_UD = new System.Windows.Forms.NumericUpDown();
-            this.label46 = new System.Windows.Forms.Label();
-            this.CCCHAR_UD = new System.Windows.Forms.NumericUpDown();
-            this.label47 = new System.Windows.Forms.Label();
-            this.CCSDEF_UD = new System.Windows.Forms.NumericUpDown();
-            this.label48 = new System.Windows.Forms.Label();
-            this.CCDEF__UD = new System.Windows.Forms.NumericUpDown();
-            this.label49 = new System.Windows.Forms.Label();
-            this.CCSATK_UD = new System.Windows.Forms.NumericUpDown();
-            this.label50 = new System.Windows.Forms.Label();
-            this.CCATK_UD = new System.Windows.Forms.NumericUpDown();
-            this.label51 = new System.Windows.Forms.Label();
-            this.CCMP_UD = new System.Windows.Forms.NumericUpDown();
-            this.label52 = new System.Windows.Forms.Label();
-            this.CCHP_UD = new System.Windows.Forms.NumericUpDown();
-            this.label53 = new System.Windows.Forms.Label();
-            this.CCName_tbox = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
+            this.CCName_tbox = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.CCHP_UD = new System.Windows.Forms.NumericUpDown();
+            this.label52 = new System.Windows.Forms.Label();
+            this.CCMP_UD = new System.Windows.Forms.NumericUpDown();
+            this.label51 = new System.Windows.Forms.Label();
+            this.CCATK_UD = new System.Windows.Forms.NumericUpDown();
+            this.label50 = new System.Windows.Forms.Label();
+            this.CCSATK_UD = new System.Windows.Forms.NumericUpDown();
+            this.CCmbase_chbox = new System.Windows.Forms.CheckBox();
+            this.CCOATKMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.CCTYPE_cbox = new System.Windows.Forms.ComboBox();
+            this.CCOSATKMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.CCGolem__chbox = new System.Windows.Forms.CheckBox();
+            this.CCDEF_UD = new System.Windows.Forms.NumericUpDown();
+            this.CCCustom__chbox = new System.Windows.Forms.CheckBox();
+            this.CCODEFMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.CCCUSLVL_UD = new System.Windows.Forms.NumericUpDown();
+            this.label48 = new System.Windows.Forms.Label();
+            this.CCLEVELSEL_CBOX = new System.Windows.Forms.ComboBox();
+            this.CCOSDEFMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.label42 = new System.Windows.Forms.Label();
+            this.CCSDEF_UD = new System.Windows.Forms.NumericUpDown();
+            this.CCBos_chbox = new System.Windows.Forms.CheckBox();
+            this.CCOCHARMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.CCPERC_UD = new System.Windows.Forms.NumericUpDown();
+            this.label47 = new System.Windows.Forms.Label();
+            this.CCOXPMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.CCODEXMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.label43 = new System.Windows.Forms.Label();
+            this.CCCHAR_UD = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.CCOSTRMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.CCINT_UD = new System.Windows.Forms.NumericUpDown();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.CCOINTMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.CCSTR_UD = new System.Windows.Forms.NumericUpDown();
+            this.CCOPERCMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.label45 = new System.Windows.Forms.Label();
+            this.CCOMPMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.CCDEX_UD = new System.Windows.Forms.NumericUpDown();
+            this.CCOHPMOD_tbox = new System.Windows.Forms.NumericUpDown();
             this.GMItemc_tab = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.EditorItems_lbox = new System.Windows.Forms.ListView();
@@ -426,7 +296,110 @@
             this.label94 = new System.Windows.Forms.Label();
             this.Power_Level_tbox = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
-            this.MAINUPDATE = new System.ComponentModel.BackgroundWorker();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Helm_HP = new System.Windows.Forms.CheckBox();
+            this.Maille_HP = new System.Windows.Forms.CheckBox();
+            this.Gloves_HP = new System.Windows.Forms.CheckBox();
+            this.Pants_HP = new System.Windows.Forms.CheckBox();
+            this.Boots_HP = new System.Windows.Forms.CheckBox();
+            this.LWeapon_HP = new System.Windows.Forms.CheckBox();
+            this.RWeapon_HP = new System.Windows.Forms.CheckBox();
+            this.Artifact_HP = new System.Windows.Forms.CheckBox();
+            this.Helm_MP = new System.Windows.Forms.CheckBox();
+            this.Maille_MP = new System.Windows.Forms.CheckBox();
+            this.Gloves_MP = new System.Windows.Forms.CheckBox();
+            this.Pants_MP = new System.Windows.Forms.CheckBox();
+            this.Boots_MP = new System.Windows.Forms.CheckBox();
+            this.LWeapon_MP = new System.Windows.Forms.CheckBox();
+            this.RWeapon_MP = new System.Windows.Forms.CheckBox();
+            this.Artifact_MP = new System.Windows.Forms.CheckBox();
+            this.Helm_ATK = new System.Windows.Forms.CheckBox();
+            this.Maille_ATK = new System.Windows.Forms.CheckBox();
+            this.Gloves_ATK = new System.Windows.Forms.CheckBox();
+            this.Pants_ATK = new System.Windows.Forms.CheckBox();
+            this.Boots_ATK = new System.Windows.Forms.CheckBox();
+            this.LWeapon_ATK = new System.Windows.Forms.CheckBox();
+            this.RWeapon_ATK = new System.Windows.Forms.CheckBox();
+            this.Artifact_ATK = new System.Windows.Forms.CheckBox();
+            this.Helm_SATK = new System.Windows.Forms.CheckBox();
+            this.Maille_SATK = new System.Windows.Forms.CheckBox();
+            this.Gloves_SATK = new System.Windows.Forms.CheckBox();
+            this.Pants_SATK = new System.Windows.Forms.CheckBox();
+            this.Boots_SATK = new System.Windows.Forms.CheckBox();
+            this.LWeapon_SATK = new System.Windows.Forms.CheckBox();
+            this.RWeapon_SATK = new System.Windows.Forms.CheckBox();
+            this.Artifact_SATK = new System.Windows.Forms.CheckBox();
+            this.Helm_DEF = new System.Windows.Forms.CheckBox();
+            this.Maille_DEF = new System.Windows.Forms.CheckBox();
+            this.Gloves_DEF = new System.Windows.Forms.CheckBox();
+            this.Pants_DEF = new System.Windows.Forms.CheckBox();
+            this.Boots_DEF = new System.Windows.Forms.CheckBox();
+            this.LWeapon_DEF = new System.Windows.Forms.CheckBox();
+            this.RWeapon_DEF = new System.Windows.Forms.CheckBox();
+            this.Artifact_DEF = new System.Windows.Forms.CheckBox();
+            this.Helm_SDEF = new System.Windows.Forms.CheckBox();
+            this.Maille_SDEF = new System.Windows.Forms.CheckBox();
+            this.Gloves_SDEF = new System.Windows.Forms.CheckBox();
+            this.Pants_SDEF = new System.Windows.Forms.CheckBox();
+            this.Boots_SDEF = new System.Windows.Forms.CheckBox();
+            this.LWeapon_SDEF = new System.Windows.Forms.CheckBox();
+            this.RWeapon_SDEF = new System.Windows.Forms.CheckBox();
+            this.Artifact_SDEF = new System.Windows.Forms.CheckBox();
+            this.Helm_CHAR = new System.Windows.Forms.CheckBox();
+            this.Maille_CHAR = new System.Windows.Forms.CheckBox();
+            this.Gloves_CHAR = new System.Windows.Forms.CheckBox();
+            this.Pants_CHAR = new System.Windows.Forms.CheckBox();
+            this.Boots_CHAR = new System.Windows.Forms.CheckBox();
+            this.LWeapon_CHAR = new System.Windows.Forms.CheckBox();
+            this.RWeapon_CHAR = new System.Windows.Forms.CheckBox();
+            this.Artifact_CHAR = new System.Windows.Forms.CheckBox();
+            this.Helm_DEX = new System.Windows.Forms.CheckBox();
+            this.Maille_DEX = new System.Windows.Forms.CheckBox();
+            this.Gloves_DEX = new System.Windows.Forms.CheckBox();
+            this.Pants_DEX = new System.Windows.Forms.CheckBox();
+            this.Boots_DEX = new System.Windows.Forms.CheckBox();
+            this.LWeapon_DEX = new System.Windows.Forms.CheckBox();
+            this.RWeapon_DEX = new System.Windows.Forms.CheckBox();
+            this.Artifact_DEX = new System.Windows.Forms.CheckBox();
+            this.Helm_STR = new System.Windows.Forms.CheckBox();
+            this.Maille_STR = new System.Windows.Forms.CheckBox();
+            this.Gloves_STR = new System.Windows.Forms.CheckBox();
+            this.Pants_STR = new System.Windows.Forms.CheckBox();
+            this.Boots_STR = new System.Windows.Forms.CheckBox();
+            this.LWeapon_STR = new System.Windows.Forms.CheckBox();
+            this.RWeapon_STR = new System.Windows.Forms.CheckBox();
+            this.Artifact_STR = new System.Windows.Forms.CheckBox();
+            this.Helm_INT = new System.Windows.Forms.CheckBox();
+            this.Maille_INT = new System.Windows.Forms.CheckBox();
+            this.Gloves_INT = new System.Windows.Forms.CheckBox();
+            this.Pants_INT = new System.Windows.Forms.CheckBox();
+            this.Boots_INT = new System.Windows.Forms.CheckBox();
+            this.LWeapon_INT = new System.Windows.Forms.CheckBox();
+            this.RWeapon_INT = new System.Windows.Forms.CheckBox();
+            this.Artifact_INT = new System.Windows.Forms.CheckBox();
+            this.Helm_PERC = new System.Windows.Forms.CheckBox();
+            this.Maille_PERC = new System.Windows.Forms.CheckBox();
+            this.Gloves_PERC = new System.Windows.Forms.CheckBox();
+            this.Pants_PERC = new System.Windows.Forms.CheckBox();
+            this.Boots_PERC = new System.Windows.Forms.CheckBox();
+            this.LWeapon_PERC = new System.Windows.Forms.CheckBox();
+            this.RWeapon_PERC = new System.Windows.Forms.CheckBox();
+            this.Artifact_PERC = new System.Windows.Forms.CheckBox();
+            this.Enemy_cbox = new System.Windows.Forms.CheckBox();
+            this.CCCUSLCK_UD = new System.Windows.Forms.NumericUpDown();
+            this.CCCUSMSP_UD = new System.Windows.Forms.NumericUpDown();
+            this.GITEMS_cbox = new System.Windows.Forms.CheckBox();
+            this.NPC_Create_btn = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Main_tabs.SuspendLayout();
             this.Equipment_tab.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -438,33 +411,30 @@
             this.NPCM_tab.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.NPCC_tab.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOXPMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOPERCMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOINTMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOSTRMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCODEXMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOCHARMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOSDEFMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCODEFMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOSATKMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOATKMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOMPMOD_tbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOHPMOD_tbox)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLVL_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCPERC_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCINT_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCSTR_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCDEX_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCCHAR_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCSDEF_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCDEF__UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCSATK_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCHP_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCSATK_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOATKMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOSATKMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCDEF_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCODEFMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLVL_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOSDEFMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCSDEF_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOCHARMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCPERC_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOXPMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCODEXMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCHAR_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOSTRMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCINT_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOINTMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCSTR_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOPERCMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOMPMOD_tbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCDEX_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOHPMOD_tbox)).BeginInit();
             this.GMItemc_tab.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -499,12 +469,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.MSlots_Spell_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank_Spell_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tier_Spell_editor_ud)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLCK_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSMSP_UD)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Update_timer
             // 
             this.Update_timer.Enabled = true;
-            this.Update_timer.Interval = 5000;
+            this.Update_timer.Interval = 6000;
             this.Update_timer.Tick += new System.EventHandler(this.Update_timer_Tick);
             // 
             // Main_tabs
@@ -515,6 +490,7 @@
             this.Main_tabs.Controls.Add(this.Equipment_tab);
             this.Main_tabs.Controls.Add(this.Inventory_tab);
             this.Main_tabs.Controls.Add(this.Spells_tab);
+            this.Main_tabs.Controls.Add(this.tabPage2);
             this.Main_tabs.Controls.Add(this.GameMaster_tab);
             this.Main_tabs.Location = new System.Drawing.Point(285, -1);
             this.Main_tabs.Name = "Main_tabs";
@@ -565,12 +541,13 @@
             // EGROUP
             // 
             this.EGROUP.BackColor = System.Drawing.Color.Transparent;
+            this.EGROUP.Controls.Add(this.WeaponRight_tbox);
             this.EGROUP.Controls.Add(this.Equipment_info_CTRL);
             this.EGROUP.Controls.Add(this.DeEquip_Artifact_btn);
             this.EGROUP.Controls.Add(this.Artifact_tbox);
             this.EGROUP.Controls.Add(this.label90);
             this.EGROUP.Controls.Add(this.DeEquip_Weapon_btn);
-            this.EGROUP.Controls.Add(this.Weapon_tbox);
+            this.EGROUP.Controls.Add(this.WeaponLeft_tbox);
             this.EGROUP.Controls.Add(this.label89);
             this.EGROUP.Controls.Add(this.DeEquip_Gloves_btn);
             this.EGROUP.Controls.Add(this.Gloves_tbox);
@@ -596,6 +573,16 @@
             this.EGROUP.TabIndex = 196;
             this.EGROUP.TabStop = false;
             this.EGROUP.Text = "Equipped";
+            // 
+            // WeaponRight_tbox
+            // 
+            this.WeaponRight_tbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.WeaponRight_tbox.Location = new System.Drawing.Point(143, 149);
+            this.WeaponRight_tbox.Name = "WeaponRight_tbox";
+            this.WeaponRight_tbox.ReadOnly = true;
+            this.WeaponRight_tbox.Size = new System.Drawing.Size(80, 20);
+            this.WeaponRight_tbox.TabIndex = 26;
+            this.WeaponRight_tbox.Click += new System.EventHandler(this.WeaponRight_tbox_Click);
             // 
             // Equipment_info_CTRL
             // 
@@ -651,15 +638,15 @@
             this.DeEquip_Weapon_btn.UseVisualStyleBackColor = true;
             this.DeEquip_Weapon_btn.Click += new System.EventHandler(this.DeEquip_Weapon_btn_Click);
             // 
-            // Weapon_tbox
+            // WeaponLeft_tbox
             // 
-            this.Weapon_tbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Weapon_tbox.Location = new System.Drawing.Point(58, 149);
-            this.Weapon_tbox.Name = "Weapon_tbox";
-            this.Weapon_tbox.ReadOnly = true;
-            this.Weapon_tbox.Size = new System.Drawing.Size(165, 20);
-            this.Weapon_tbox.TabIndex = 20;
-            this.Weapon_tbox.Click += new System.EventHandler(this.Weapon_tbox_Click);
+            this.WeaponLeft_tbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.WeaponLeft_tbox.Location = new System.Drawing.Point(58, 149);
+            this.WeaponLeft_tbox.Name = "WeaponLeft_tbox";
+            this.WeaponLeft_tbox.ReadOnly = true;
+            this.WeaponLeft_tbox.Size = new System.Drawing.Size(80, 20);
+            this.WeaponLeft_tbox.TabIndex = 20;
+            this.WeaponLeft_tbox.Click += new System.EventHandler(this.Weapon_tbox_Click);
             // 
             // label89
             // 
@@ -1018,23 +1005,72 @@
             // 
             this.NPCC_tab.AutoScroll = true;
             this.NPCC_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.NPCC_tab.Controls.Add(this.NPC_Create_btn);
+            this.NPCC_tab.Controls.Add(this.GITEMS_cbox);
+            this.NPCC_tab.Controls.Add(this.CCCUSMSP_UD);
+            this.NPCC_tab.Controls.Add(this.CCCUSLCK_UD);
+            this.NPCC_tab.Controls.Add(this.Enemy_cbox);
+            this.NPCC_tab.Controls.Add(this.tableLayoutPanel1);
             this.NPCC_tab.Controls.Add(this.UPLOAD_btn);
             this.NPCC_tab.Controls.Add(this.Roll_btn);
-            this.NPCC_tab.Controls.Add(this.label8);
-            this.NPCC_tab.Controls.Add(this.label9);
-            this.NPCC_tab.Controls.Add(this.panel2);
             this.NPCC_tab.Controls.Add(this.panel1);
+            this.NPCC_tab.Controls.Add(this.label54);
+            this.NPCC_tab.Controls.Add(this.CCName_tbox);
+            this.NPCC_tab.Controls.Add(this.label53);
+            this.NPCC_tab.Controls.Add(this.CCHP_UD);
+            this.NPCC_tab.Controls.Add(this.label52);
+            this.NPCC_tab.Controls.Add(this.CCMP_UD);
+            this.NPCC_tab.Controls.Add(this.label51);
+            this.NPCC_tab.Controls.Add(this.CCATK_UD);
+            this.NPCC_tab.Controls.Add(this.label50);
+            this.NPCC_tab.Controls.Add(this.CCSATK_UD);
+            this.NPCC_tab.Controls.Add(this.CCmbase_chbox);
+            this.NPCC_tab.Controls.Add(this.CCOATKMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.label41);
+            this.NPCC_tab.Controls.Add(this.label49);
+            this.NPCC_tab.Controls.Add(this.CCTYPE_cbox);
+            this.NPCC_tab.Controls.Add(this.CCOSATKMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.CCGolem__chbox);
+            this.NPCC_tab.Controls.Add(this.CCDEF_UD);
+            this.NPCC_tab.Controls.Add(this.CCCustom__chbox);
+            this.NPCC_tab.Controls.Add(this.CCODEFMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.CCCUSLVL_UD);
+            this.NPCC_tab.Controls.Add(this.label48);
+            this.NPCC_tab.Controls.Add(this.CCLEVELSEL_CBOX);
+            this.NPCC_tab.Controls.Add(this.CCOSDEFMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.label42);
+            this.NPCC_tab.Controls.Add(this.CCSDEF_UD);
+            this.NPCC_tab.Controls.Add(this.CCBos_chbox);
+            this.NPCC_tab.Controls.Add(this.CCOCHARMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.CCPERC_UD);
+            this.NPCC_tab.Controls.Add(this.label47);
+            this.NPCC_tab.Controls.Add(this.CCOXPMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.CCODEXMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.label43);
+            this.NPCC_tab.Controls.Add(this.CCCHAR_UD);
+            this.NPCC_tab.Controls.Add(this.label10);
+            this.NPCC_tab.Controls.Add(this.CCOSTRMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.CCINT_UD);
+            this.NPCC_tab.Controls.Add(this.label46);
+            this.NPCC_tab.Controls.Add(this.label44);
+            this.NPCC_tab.Controls.Add(this.CCOINTMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.CCSTR_UD);
+            this.NPCC_tab.Controls.Add(this.CCOPERCMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.label45);
+            this.NPCC_tab.Controls.Add(this.CCOMPMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.CCDEX_UD);
+            this.NPCC_tab.Controls.Add(this.CCOHPMOD_tbox);
             this.NPCC_tab.Location = new System.Drawing.Point(4, 22);
             this.NPCC_tab.Name = "NPCC_tab";
             this.NPCC_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.NPCC_tab.Size = new System.Drawing.Size(830, 509);
+            this.NPCC_tab.Size = new System.Drawing.Size(830, 560);
             this.NPCC_tab.TabIndex = 2;
             this.NPCC_tab.Text = "NPC Creator";
             // 
             // UPLOAD_btn
             // 
             this.UPLOAD_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UPLOAD_btn.Location = new System.Drawing.Point(87, 746);
+            this.UPLOAD_btn.Location = new System.Drawing.Point(87, 797);
             this.UPLOAD_btn.Name = "UPLOAD_btn";
             this.UPLOAD_btn.Size = new System.Drawing.Size(75, 23);
             this.UPLOAD_btn.TabIndex = 16;
@@ -1044,1327 +1080,149 @@
             // Roll_btn
             // 
             this.Roll_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Roll_btn.Location = new System.Drawing.Point(6, 746);
+            this.Roll_btn.Location = new System.Drawing.Point(6, 797);
             this.Roll_btn.Name = "Roll_btn";
             this.Roll_btn.Size = new System.Drawing.Size(75, 23);
             this.Roll_btn.TabIndex = 15;
             this.Roll_btn.Text = "ROLL";
             this.Roll_btn.UseVisualStyleBackColor = true;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(362, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Output:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 3);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Inputs:";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Controls.Add(this.tableLayoutPanel1);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.CCOMMP_tbox);
-            this.panel2.Controls.Add(this.label33);
-            this.panel2.Controls.Add(this.label32);
-            this.panel2.Controls.Add(this.CCOMHP_tbox);
-            this.panel2.Controls.Add(this.CCOXPMOD_tbox);
-            this.panel2.Controls.Add(this.CCOAPPLYMOD_btn);
-            this.panel2.Controls.Add(this.CCOPERCMOD_tbox);
-            this.panel2.Controls.Add(this.CCOINTMOD_tbox);
-            this.panel2.Controls.Add(this.CCOSTRMOD_tbox);
-            this.panel2.Controls.Add(this.CCODEXMOD_tbox);
-            this.panel2.Controls.Add(this.CCOCHARMOD_tbox);
-            this.panel2.Controls.Add(this.CCOSDEFMOD_tbox);
-            this.panel2.Controls.Add(this.CCODEFMOD_tbox);
-            this.panel2.Controls.Add(this.CCOSATKMOD_tbox);
-            this.panel2.Controls.Add(this.CCOATKMOD_tbox);
-            this.panel2.Controls.Add(this.CCOMPMOD_tbox);
-            this.panel2.Controls.Add(this.CCOHPMOD_tbox);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.CCOXP_tbox);
-            this.panel2.Controls.Add(this.label31);
-            this.panel2.Controls.Add(this.CCOTYPE_tbox);
-            this.panel2.Controls.Add(this.CCOPERC_tbox);
-            this.panel2.Controls.Add(this.CCOINT_tbox);
-            this.panel2.Controls.Add(this.CCOSTR_tbox);
-            this.panel2.Controls.Add(this.CCODEX_tbox);
-            this.panel2.Controls.Add(this.CCOCHAR_tbox);
-            this.panel2.Controls.Add(this.CCOSDEF_tbox);
-            this.panel2.Controls.Add(this.CCODEF_tbox);
-            this.panel2.Controls.Add(this.CCOSATK_tbox);
-            this.panel2.Controls.Add(this.CCOATK_tbox);
-            this.panel2.Controls.Add(this.CCOMP_tbox);
-            this.panel2.Controls.Add(this.CCOHP_tbox);
-            this.panel2.Controls.Add(this.CCOLVL_tbox);
-            this.panel2.Controls.Add(this.CCOName_tbox);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.label29);
-            this.panel2.Controls.Add(this.label34);
-            this.panel2.Controls.Add(this.label35);
-            this.panel2.Controls.Add(this.label36);
-            this.panel2.Controls.Add(this.label37);
-            this.panel2.Controls.Add(this.label38);
-            this.panel2.Controls.Add(this.label39);
-            this.panel2.Controls.Add(this.label40);
-            this.panel2.Location = new System.Drawing.Point(347, 19);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(477, 364);
-            this.panel2.TabIndex = 11;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.Controls.Add(this.label82, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label79, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_INT, 6, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_INT, 5, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_INT, 4, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_INT, 3, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_INT, 2, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_INT, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_INT, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_STR, 6, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_STR, 5, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_STR, 4, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_STR, 3, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_STR, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_STR, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_STR, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEX, 6, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_DEX, 5, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_DEX, 4, 8);
-            this.tableLayoutPanel1.Controls.Add(this.DEX, 3, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEX, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_DEX, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_DEX, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_CHAR, 6, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_CHAR, 5, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_CHAR, 4, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_CHAR, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_CHAR, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_CHAR, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_CHAR, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_SDEF, 6, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_SDEF, 5, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_SDEF, 4, 6);
-            this.tableLayoutPanel1.Controls.Add(this.SDEF, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_SDEF, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_SDEF, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_SDEF, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEF, 6, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_DEF, 5, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_DEF, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_DEF, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEF, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_DEF, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_DEF, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_SATK, 6, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_SATK, 5, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_SATK, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_SATK, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_SATK, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_SATK, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_SATK, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_ATK, 6, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_ATK, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_ATK, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_ATK, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_ATK, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_ATK, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_ATK, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_MP, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_MP, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_MP, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_MP, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_MP, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_MP, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_HP, 6, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_HP, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_HP, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_HP, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_HP, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_HP, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_HP, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_MP, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_PERC, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_PERC, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_PERC, 2, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_PERC, 3, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_PERC, 4, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Weapon_PERC, 5, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_PERC, 6, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(299, 29);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 12;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(175, 318);
-            this.tableLayoutPanel1.TabIndex = 89;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(147, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(15, 15);
-            this.label82.TabIndex = 171;
-            this.label82.Text = "A";
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(123, 0);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(18, 15);
-            this.label79.TabIndex = 170;
-            this.label79.Text = "W";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(99, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 15);
-            this.label6.TabIndex = 169;
-            this.label6.Text = "B";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(75, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 15);
-            this.label5.TabIndex = 168;
-            this.label5.Text = "P";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 15);
-            this.label4.TabIndex = 167;
-            this.label4.Text = "G";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 15);
-            this.label3.TabIndex = 166;
-            this.label3.Text = "M";
-            // 
-            // Artifact_INT
-            // 
-            this.Artifact_INT.AutoSize = true;
-            this.Artifact_INT.Location = new System.Drawing.Point(147, 263);
-            this.Artifact_INT.Name = "Artifact_INT";
-            this.Artifact_INT.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_INT.TabIndex = 164;
-            this.Artifact_INT.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_INT
-            // 
-            this.Weapon_INT.AutoSize = true;
-            this.Weapon_INT.Location = new System.Drawing.Point(123, 263);
-            this.Weapon_INT.Name = "Weapon_INT";
-            this.Weapon_INT.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_INT.TabIndex = 163;
-            this.Weapon_INT.UseVisualStyleBackColor = true;
-            // 
-            // Boots_INT
-            // 
-            this.Boots_INT.AutoSize = true;
-            this.Boots_INT.Location = new System.Drawing.Point(99, 263);
-            this.Boots_INT.Name = "Boots_INT";
-            this.Boots_INT.Size = new System.Drawing.Size(15, 14);
-            this.Boots_INT.TabIndex = 162;
-            this.Boots_INT.UseVisualStyleBackColor = true;
-            // 
-            // Pants_INT
-            // 
-            this.Pants_INT.AutoSize = true;
-            this.Pants_INT.Location = new System.Drawing.Point(75, 263);
-            this.Pants_INT.Name = "Pants_INT";
-            this.Pants_INT.Size = new System.Drawing.Size(15, 14);
-            this.Pants_INT.TabIndex = 161;
-            this.Pants_INT.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_INT
-            // 
-            this.Gloves_INT.AutoSize = true;
-            this.Gloves_INT.Location = new System.Drawing.Point(51, 263);
-            this.Gloves_INT.Name = "Gloves_INT";
-            this.Gloves_INT.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_INT.TabIndex = 160;
-            this.Gloves_INT.UseVisualStyleBackColor = true;
-            // 
-            // Maille_INT
-            // 
-            this.Maille_INT.AutoSize = true;
-            this.Maille_INT.Location = new System.Drawing.Point(27, 263);
-            this.Maille_INT.Name = "Maille_INT";
-            this.Maille_INT.Size = new System.Drawing.Size(15, 14);
-            this.Maille_INT.TabIndex = 159;
-            this.Maille_INT.UseVisualStyleBackColor = true;
-            // 
-            // Helm_INT
-            // 
-            this.Helm_INT.AutoSize = true;
-            this.Helm_INT.Location = new System.Drawing.Point(3, 263);
-            this.Helm_INT.Name = "Helm_INT";
-            this.Helm_INT.Size = new System.Drawing.Size(15, 14);
-            this.Helm_INT.TabIndex = 158;
-            this.Helm_INT.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_STR
-            // 
-            this.Artifact_STR.AutoSize = true;
-            this.Artifact_STR.Location = new System.Drawing.Point(147, 237);
-            this.Artifact_STR.Name = "Artifact_STR";
-            this.Artifact_STR.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_STR.TabIndex = 157;
-            this.Artifact_STR.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_STR
-            // 
-            this.Weapon_STR.AutoSize = true;
-            this.Weapon_STR.Location = new System.Drawing.Point(123, 237);
-            this.Weapon_STR.Name = "Weapon_STR";
-            this.Weapon_STR.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_STR.TabIndex = 156;
-            this.Weapon_STR.UseVisualStyleBackColor = true;
-            // 
-            // Boots_STR
-            // 
-            this.Boots_STR.AutoSize = true;
-            this.Boots_STR.Location = new System.Drawing.Point(99, 237);
-            this.Boots_STR.Name = "Boots_STR";
-            this.Boots_STR.Size = new System.Drawing.Size(15, 14);
-            this.Boots_STR.TabIndex = 155;
-            this.Boots_STR.UseVisualStyleBackColor = true;
-            // 
-            // Pants_STR
-            // 
-            this.Pants_STR.AutoSize = true;
-            this.Pants_STR.Location = new System.Drawing.Point(75, 237);
-            this.Pants_STR.Name = "Pants_STR";
-            this.Pants_STR.Size = new System.Drawing.Size(15, 14);
-            this.Pants_STR.TabIndex = 154;
-            this.Pants_STR.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_STR
-            // 
-            this.Gloves_STR.AutoSize = true;
-            this.Gloves_STR.Location = new System.Drawing.Point(51, 237);
-            this.Gloves_STR.Name = "Gloves_STR";
-            this.Gloves_STR.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_STR.TabIndex = 153;
-            this.Gloves_STR.UseVisualStyleBackColor = true;
-            // 
-            // Maille_STR
-            // 
-            this.Maille_STR.AutoSize = true;
-            this.Maille_STR.Location = new System.Drawing.Point(27, 237);
-            this.Maille_STR.Name = "Maille_STR";
-            this.Maille_STR.Size = new System.Drawing.Size(15, 14);
-            this.Maille_STR.TabIndex = 152;
-            this.Maille_STR.UseVisualStyleBackColor = true;
-            // 
-            // Helm_STR
-            // 
-            this.Helm_STR.AutoSize = true;
-            this.Helm_STR.Location = new System.Drawing.Point(3, 237);
-            this.Helm_STR.Name = "Helm_STR";
-            this.Helm_STR.Size = new System.Drawing.Size(15, 14);
-            this.Helm_STR.TabIndex = 151;
-            this.Helm_STR.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_DEX
-            // 
-            this.Artifact_DEX.AutoSize = true;
-            this.Artifact_DEX.Location = new System.Drawing.Point(147, 211);
-            this.Artifact_DEX.Name = "Artifact_DEX";
-            this.Artifact_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_DEX.TabIndex = 150;
-            this.Artifact_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_DEX
-            // 
-            this.Weapon_DEX.AutoSize = true;
-            this.Weapon_DEX.Location = new System.Drawing.Point(123, 211);
-            this.Weapon_DEX.Name = "Weapon_DEX";
-            this.Weapon_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_DEX.TabIndex = 149;
-            this.Weapon_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Boots_DEX
-            // 
-            this.Boots_DEX.AutoSize = true;
-            this.Boots_DEX.Location = new System.Drawing.Point(99, 211);
-            this.Boots_DEX.Name = "Boots_DEX";
-            this.Boots_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Boots_DEX.TabIndex = 148;
-            this.Boots_DEX.UseVisualStyleBackColor = true;
-            // 
-            // DEX
-            // 
-            this.DEX.AutoSize = true;
-            this.DEX.Location = new System.Drawing.Point(75, 211);
-            this.DEX.Name = "DEX";
-            this.DEX.Size = new System.Drawing.Size(15, 14);
-            this.DEX.TabIndex = 147;
-            this.DEX.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_DEX
-            // 
-            this.Gloves_DEX.AutoSize = true;
-            this.Gloves_DEX.Location = new System.Drawing.Point(51, 211);
-            this.Gloves_DEX.Name = "Gloves_DEX";
-            this.Gloves_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_DEX.TabIndex = 146;
-            this.Gloves_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Maille_DEX
-            // 
-            this.Maille_DEX.AutoSize = true;
-            this.Maille_DEX.Location = new System.Drawing.Point(27, 211);
-            this.Maille_DEX.Name = "Maille_DEX";
-            this.Maille_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Maille_DEX.TabIndex = 145;
-            this.Maille_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Helm_DEX
-            // 
-            this.Helm_DEX.AutoSize = true;
-            this.Helm_DEX.Location = new System.Drawing.Point(3, 211);
-            this.Helm_DEX.Name = "Helm_DEX";
-            this.Helm_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Helm_DEX.TabIndex = 144;
-            this.Helm_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_CHAR
-            // 
-            this.Artifact_CHAR.AutoSize = true;
-            this.Artifact_CHAR.Location = new System.Drawing.Point(147, 185);
-            this.Artifact_CHAR.Name = "Artifact_CHAR";
-            this.Artifact_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_CHAR.TabIndex = 143;
-            this.Artifact_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_CHAR
-            // 
-            this.Weapon_CHAR.AutoSize = true;
-            this.Weapon_CHAR.Location = new System.Drawing.Point(123, 185);
-            this.Weapon_CHAR.Name = "Weapon_CHAR";
-            this.Weapon_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_CHAR.TabIndex = 142;
-            this.Weapon_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Boots_CHAR
-            // 
-            this.Boots_CHAR.AutoSize = true;
-            this.Boots_CHAR.Location = new System.Drawing.Point(99, 185);
-            this.Boots_CHAR.Name = "Boots_CHAR";
-            this.Boots_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Boots_CHAR.TabIndex = 141;
-            this.Boots_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Pants_CHAR
-            // 
-            this.Pants_CHAR.AutoSize = true;
-            this.Pants_CHAR.Location = new System.Drawing.Point(75, 185);
-            this.Pants_CHAR.Name = "Pants_CHAR";
-            this.Pants_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Pants_CHAR.TabIndex = 140;
-            this.Pants_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_CHAR
-            // 
-            this.Gloves_CHAR.AutoSize = true;
-            this.Gloves_CHAR.Location = new System.Drawing.Point(51, 185);
-            this.Gloves_CHAR.Name = "Gloves_CHAR";
-            this.Gloves_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_CHAR.TabIndex = 139;
-            this.Gloves_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Maille_CHAR
-            // 
-            this.Maille_CHAR.AutoSize = true;
-            this.Maille_CHAR.Location = new System.Drawing.Point(27, 185);
-            this.Maille_CHAR.Name = "Maille_CHAR";
-            this.Maille_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Maille_CHAR.TabIndex = 138;
-            this.Maille_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Helm_CHAR
-            // 
-            this.Helm_CHAR.AutoSize = true;
-            this.Helm_CHAR.Location = new System.Drawing.Point(3, 185);
-            this.Helm_CHAR.Name = "Helm_CHAR";
-            this.Helm_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Helm_CHAR.TabIndex = 137;
-            this.Helm_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_SDEF
-            // 
-            this.Artifact_SDEF.AutoSize = true;
-            this.Artifact_SDEF.Location = new System.Drawing.Point(147, 159);
-            this.Artifact_SDEF.Name = "Artifact_SDEF";
-            this.Artifact_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_SDEF.TabIndex = 136;
-            this.Artifact_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_SDEF
-            // 
-            this.Weapon_SDEF.AutoSize = true;
-            this.Weapon_SDEF.Location = new System.Drawing.Point(123, 159);
-            this.Weapon_SDEF.Name = "Weapon_SDEF";
-            this.Weapon_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_SDEF.TabIndex = 135;
-            this.Weapon_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Boots_SDEF
-            // 
-            this.Boots_SDEF.AutoSize = true;
-            this.Boots_SDEF.Location = new System.Drawing.Point(99, 159);
-            this.Boots_SDEF.Name = "Boots_SDEF";
-            this.Boots_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Boots_SDEF.TabIndex = 134;
-            this.Boots_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // SDEF
-            // 
-            this.SDEF.AutoSize = true;
-            this.SDEF.Location = new System.Drawing.Point(75, 159);
-            this.SDEF.Name = "SDEF";
-            this.SDEF.Size = new System.Drawing.Size(15, 14);
-            this.SDEF.TabIndex = 133;
-            this.SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_SDEF
-            // 
-            this.Gloves_SDEF.AutoSize = true;
-            this.Gloves_SDEF.Location = new System.Drawing.Point(51, 159);
-            this.Gloves_SDEF.Name = "Gloves_SDEF";
-            this.Gloves_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_SDEF.TabIndex = 132;
-            this.Gloves_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Maille_SDEF
-            // 
-            this.Maille_SDEF.AutoSize = true;
-            this.Maille_SDEF.Location = new System.Drawing.Point(27, 159);
-            this.Maille_SDEF.Name = "Maille_SDEF";
-            this.Maille_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Maille_SDEF.TabIndex = 131;
-            this.Maille_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Helm_SDEF
-            // 
-            this.Helm_SDEF.AutoSize = true;
-            this.Helm_SDEF.Location = new System.Drawing.Point(3, 159);
-            this.Helm_SDEF.Name = "Helm_SDEF";
-            this.Helm_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Helm_SDEF.TabIndex = 130;
-            this.Helm_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_DEF
-            // 
-            this.Artifact_DEF.AutoSize = true;
-            this.Artifact_DEF.Location = new System.Drawing.Point(147, 133);
-            this.Artifact_DEF.Name = "Artifact_DEF";
-            this.Artifact_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_DEF.TabIndex = 129;
-            this.Artifact_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_DEF
-            // 
-            this.Weapon_DEF.AutoSize = true;
-            this.Weapon_DEF.Location = new System.Drawing.Point(123, 133);
-            this.Weapon_DEF.Name = "Weapon_DEF";
-            this.Weapon_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_DEF.TabIndex = 128;
-            this.Weapon_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Boots_DEF
-            // 
-            this.Boots_DEF.AutoSize = true;
-            this.Boots_DEF.Location = new System.Drawing.Point(99, 133);
-            this.Boots_DEF.Name = "Boots_DEF";
-            this.Boots_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Boots_DEF.TabIndex = 127;
-            this.Boots_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Pants_DEF
-            // 
-            this.Pants_DEF.AutoSize = true;
-            this.Pants_DEF.Location = new System.Drawing.Point(75, 133);
-            this.Pants_DEF.Name = "Pants_DEF";
-            this.Pants_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Pants_DEF.TabIndex = 126;
-            this.Pants_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_DEF
-            // 
-            this.Gloves_DEF.AutoSize = true;
-            this.Gloves_DEF.Location = new System.Drawing.Point(51, 133);
-            this.Gloves_DEF.Name = "Gloves_DEF";
-            this.Gloves_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_DEF.TabIndex = 125;
-            this.Gloves_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Helm_DEF
-            // 
-            this.Helm_DEF.AutoSize = true;
-            this.Helm_DEF.Location = new System.Drawing.Point(3, 133);
-            this.Helm_DEF.Name = "Helm_DEF";
-            this.Helm_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Helm_DEF.TabIndex = 124;
-            this.Helm_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Maille_DEF
-            // 
-            this.Maille_DEF.AutoSize = true;
-            this.Maille_DEF.Location = new System.Drawing.Point(27, 133);
-            this.Maille_DEF.Name = "Maille_DEF";
-            this.Maille_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Maille_DEF.TabIndex = 87;
-            this.Maille_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_SATK
-            // 
-            this.Artifact_SATK.AutoSize = true;
-            this.Artifact_SATK.Location = new System.Drawing.Point(147, 107);
-            this.Artifact_SATK.Name = "Artifact_SATK";
-            this.Artifact_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_SATK.TabIndex = 123;
-            this.Artifact_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_SATK
-            // 
-            this.Weapon_SATK.AutoSize = true;
-            this.Weapon_SATK.Location = new System.Drawing.Point(123, 107);
-            this.Weapon_SATK.Name = "Weapon_SATK";
-            this.Weapon_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_SATK.TabIndex = 122;
-            this.Weapon_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Boots_SATK
-            // 
-            this.Boots_SATK.AutoSize = true;
-            this.Boots_SATK.Location = new System.Drawing.Point(99, 107);
-            this.Boots_SATK.Name = "Boots_SATK";
-            this.Boots_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Boots_SATK.TabIndex = 121;
-            this.Boots_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Pants_SATK
-            // 
-            this.Pants_SATK.AutoSize = true;
-            this.Pants_SATK.Location = new System.Drawing.Point(75, 107);
-            this.Pants_SATK.Name = "Pants_SATK";
-            this.Pants_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Pants_SATK.TabIndex = 120;
-            this.Pants_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_SATK
-            // 
-            this.Gloves_SATK.AutoSize = true;
-            this.Gloves_SATK.Location = new System.Drawing.Point(51, 107);
-            this.Gloves_SATK.Name = "Gloves_SATK";
-            this.Gloves_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_SATK.TabIndex = 119;
-            this.Gloves_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Maille_SATK
-            // 
-            this.Maille_SATK.AutoSize = true;
-            this.Maille_SATK.Location = new System.Drawing.Point(27, 107);
-            this.Maille_SATK.Name = "Maille_SATK";
-            this.Maille_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Maille_SATK.TabIndex = 118;
-            this.Maille_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Helm_SATK
-            // 
-            this.Helm_SATK.AutoSize = true;
-            this.Helm_SATK.Location = new System.Drawing.Point(3, 107);
-            this.Helm_SATK.Name = "Helm_SATK";
-            this.Helm_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Helm_SATK.TabIndex = 117;
-            this.Helm_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_ATK
-            // 
-            this.Artifact_ATK.AutoSize = true;
-            this.Artifact_ATK.Location = new System.Drawing.Point(147, 81);
-            this.Artifact_ATK.Name = "Artifact_ATK";
-            this.Artifact_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_ATK.TabIndex = 116;
-            this.Artifact_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_ATK
-            // 
-            this.Weapon_ATK.AutoSize = true;
-            this.Weapon_ATK.Location = new System.Drawing.Point(123, 81);
-            this.Weapon_ATK.Name = "Weapon_ATK";
-            this.Weapon_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_ATK.TabIndex = 115;
-            this.Weapon_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Boots_ATK
-            // 
-            this.Boots_ATK.AutoSize = true;
-            this.Boots_ATK.Location = new System.Drawing.Point(99, 81);
-            this.Boots_ATK.Name = "Boots_ATK";
-            this.Boots_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Boots_ATK.TabIndex = 114;
-            this.Boots_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Pants_ATK
-            // 
-            this.Pants_ATK.AutoSize = true;
-            this.Pants_ATK.Location = new System.Drawing.Point(75, 81);
-            this.Pants_ATK.Name = "Pants_ATK";
-            this.Pants_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Pants_ATK.TabIndex = 113;
-            this.Pants_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_ATK
-            // 
-            this.Gloves_ATK.AutoSize = true;
-            this.Gloves_ATK.Location = new System.Drawing.Point(51, 81);
-            this.Gloves_ATK.Name = "Gloves_ATK";
-            this.Gloves_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_ATK.TabIndex = 112;
-            this.Gloves_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Maille_ATK
-            // 
-            this.Maille_ATK.AutoSize = true;
-            this.Maille_ATK.Location = new System.Drawing.Point(27, 81);
-            this.Maille_ATK.Name = "Maille_ATK";
-            this.Maille_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Maille_ATK.TabIndex = 111;
-            this.Maille_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Helm_ATK
-            // 
-            this.Helm_ATK.AutoSize = true;
-            this.Helm_ATK.Location = new System.Drawing.Point(3, 81);
-            this.Helm_ATK.Name = "Helm_ATK";
-            this.Helm_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Helm_ATK.TabIndex = 110;
-            this.Helm_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_MP
-            // 
-            this.Artifact_MP.AutoSize = true;
-            this.Artifact_MP.Location = new System.Drawing.Point(147, 55);
-            this.Artifact_MP.Name = "Artifact_MP";
-            this.Artifact_MP.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_MP.TabIndex = 109;
-            this.Artifact_MP.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_MP
-            // 
-            this.Weapon_MP.AutoSize = true;
-            this.Weapon_MP.Location = new System.Drawing.Point(123, 55);
-            this.Weapon_MP.Name = "Weapon_MP";
-            this.Weapon_MP.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_MP.TabIndex = 108;
-            this.Weapon_MP.UseVisualStyleBackColor = true;
-            // 
-            // Boots_MP
-            // 
-            this.Boots_MP.AutoSize = true;
-            this.Boots_MP.Location = new System.Drawing.Point(99, 55);
-            this.Boots_MP.Name = "Boots_MP";
-            this.Boots_MP.Size = new System.Drawing.Size(15, 14);
-            this.Boots_MP.TabIndex = 107;
-            this.Boots_MP.UseVisualStyleBackColor = true;
-            // 
-            // Pants_MP
-            // 
-            this.Pants_MP.AutoSize = true;
-            this.Pants_MP.Location = new System.Drawing.Point(75, 55);
-            this.Pants_MP.Name = "Pants_MP";
-            this.Pants_MP.Size = new System.Drawing.Size(15, 14);
-            this.Pants_MP.TabIndex = 106;
-            this.Pants_MP.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_MP
-            // 
-            this.Gloves_MP.AutoSize = true;
-            this.Gloves_MP.Location = new System.Drawing.Point(51, 55);
-            this.Gloves_MP.Name = "Gloves_MP";
-            this.Gloves_MP.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_MP.TabIndex = 105;
-            this.Gloves_MP.UseVisualStyleBackColor = true;
-            // 
-            // Maille_MP
-            // 
-            this.Maille_MP.AutoSize = true;
-            this.Maille_MP.Location = new System.Drawing.Point(27, 55);
-            this.Maille_MP.Name = "Maille_MP";
-            this.Maille_MP.Size = new System.Drawing.Size(15, 14);
-            this.Maille_MP.TabIndex = 104;
-            this.Maille_MP.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_HP
-            // 
-            this.Artifact_HP.AutoSize = true;
-            this.Artifact_HP.Location = new System.Drawing.Point(147, 29);
-            this.Artifact_HP.Name = "Artifact_HP";
-            this.Artifact_HP.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_HP.TabIndex = 103;
-            this.Artifact_HP.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_HP
-            // 
-            this.Weapon_HP.AutoSize = true;
-            this.Weapon_HP.Location = new System.Drawing.Point(123, 29);
-            this.Weapon_HP.Name = "Weapon_HP";
-            this.Weapon_HP.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_HP.TabIndex = 102;
-            this.Weapon_HP.UseVisualStyleBackColor = true;
-            // 
-            // Boots_HP
-            // 
-            this.Boots_HP.AutoSize = true;
-            this.Boots_HP.Location = new System.Drawing.Point(99, 29);
-            this.Boots_HP.Name = "Boots_HP";
-            this.Boots_HP.Size = new System.Drawing.Size(15, 14);
-            this.Boots_HP.TabIndex = 101;
-            this.Boots_HP.UseVisualStyleBackColor = true;
-            // 
-            // Pants_HP
-            // 
-            this.Pants_HP.AutoSize = true;
-            this.Pants_HP.Location = new System.Drawing.Point(75, 29);
-            this.Pants_HP.Name = "Pants_HP";
-            this.Pants_HP.Size = new System.Drawing.Size(15, 14);
-            this.Pants_HP.TabIndex = 100;
-            this.Pants_HP.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_HP
-            // 
-            this.Gloves_HP.AutoSize = true;
-            this.Gloves_HP.Location = new System.Drawing.Point(51, 29);
-            this.Gloves_HP.Name = "Gloves_HP";
-            this.Gloves_HP.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_HP.TabIndex = 99;
-            this.Gloves_HP.UseVisualStyleBackColor = true;
-            // 
-            // Maille_HP
-            // 
-            this.Maille_HP.AutoSize = true;
-            this.Maille_HP.Location = new System.Drawing.Point(27, 29);
-            this.Maille_HP.Name = "Maille_HP";
-            this.Maille_HP.Size = new System.Drawing.Size(15, 14);
-            this.Maille_HP.TabIndex = 98;
-            this.Maille_HP.UseVisualStyleBackColor = true;
-            // 
-            // Helm_HP
-            // 
-            this.Helm_HP.AutoSize = true;
-            this.Helm_HP.Location = new System.Drawing.Point(3, 29);
-            this.Helm_HP.Name = "Helm_HP";
-            this.Helm_HP.Size = new System.Drawing.Size(15, 14);
-            this.Helm_HP.TabIndex = 90;
-            this.Helm_HP.UseVisualStyleBackColor = true;
-            // 
-            // Helm_MP
-            // 
-            this.Helm_MP.AutoSize = true;
-            this.Helm_MP.Location = new System.Drawing.Point(3, 55);
-            this.Helm_MP.Name = "Helm_MP";
-            this.Helm_MP.Size = new System.Drawing.Size(15, 14);
-            this.Helm_MP.TabIndex = 91;
-            this.Helm_MP.UseVisualStyleBackColor = true;
-            // 
-            // Helm_PERC
-            // 
-            this.Helm_PERC.AutoSize = true;
-            this.Helm_PERC.Location = new System.Drawing.Point(3, 289);
-            this.Helm_PERC.Name = "Helm_PERC";
-            this.Helm_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Helm_PERC.TabIndex = 88;
-            this.Helm_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Maille_PERC
-            // 
-            this.Maille_PERC.AutoSize = true;
-            this.Maille_PERC.Location = new System.Drawing.Point(27, 289);
-            this.Maille_PERC.Name = "Maille_PERC";
-            this.Maille_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Maille_PERC.TabIndex = 92;
-            this.Maille_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_PERC
-            // 
-            this.Gloves_PERC.AutoSize = true;
-            this.Gloves_PERC.Location = new System.Drawing.Point(51, 289);
-            this.Gloves_PERC.Name = "Gloves_PERC";
-            this.Gloves_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_PERC.TabIndex = 93;
-            this.Gloves_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Pants_PERC
-            // 
-            this.Pants_PERC.AutoSize = true;
-            this.Pants_PERC.Location = new System.Drawing.Point(75, 289);
-            this.Pants_PERC.Name = "Pants_PERC";
-            this.Pants_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Pants_PERC.TabIndex = 94;
-            this.Pants_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Boots_PERC
-            // 
-            this.Boots_PERC.AutoSize = true;
-            this.Boots_PERC.Location = new System.Drawing.Point(99, 289);
-            this.Boots_PERC.Name = "Boots_PERC";
-            this.Boots_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Boots_PERC.TabIndex = 95;
-            this.Boots_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Weapon_PERC
-            // 
-            this.Weapon_PERC.AutoSize = true;
-            this.Weapon_PERC.Location = new System.Drawing.Point(123, 289);
-            this.Weapon_PERC.Name = "Weapon_PERC";
-            this.Weapon_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Weapon_PERC.TabIndex = 96;
-            this.Weapon_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_PERC
-            // 
-            this.Artifact_PERC.AutoSize = true;
-            this.Artifact_PERC.Location = new System.Drawing.Point(147, 289);
-            this.Artifact_PERC.Name = "Artifact_PERC";
-            this.Artifact_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_PERC.TabIndex = 97;
-            this.Artifact_PERC.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 15);
-            this.label2.TabIndex = 165;
-            this.label2.Text = "H";
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(231, 314);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(62, 20);
-            this.textBox9.TabIndex = 86;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(231, 287);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(62, 20);
-            this.textBox8.TabIndex = 85;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(231, 261);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(62, 20);
-            this.textBox7.TabIndex = 84;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(231, 236);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(62, 20);
-            this.textBox6.TabIndex = 83;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(231, 210);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(62, 20);
-            this.textBox5.TabIndex = 82;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(231, 184);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(62, 20);
-            this.textBox4.TabIndex = 81;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(231, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(62, 20);
-            this.textBox3.TabIndex = 80;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(231, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(62, 20);
-            this.textBox2.TabIndex = 79;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(231, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 20);
-            this.textBox1.TabIndex = 78;
-            // 
-            // CCOMMP_tbox
-            // 
-            this.CCOMMP_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOMMP_tbox.Enabled = false;
-            this.CCOMMP_tbox.Location = new System.Drawing.Point(142, 78);
-            this.CCOMMP_tbox.Name = "CCOMMP_tbox";
-            this.CCOMMP_tbox.Size = new System.Drawing.Size(58, 20);
-            this.CCOMMP_tbox.TabIndex = 77;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(124, 81);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(12, 13);
-            this.label33.TabIndex = 76;
-            this.label33.Text = "/";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(124, 55);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(12, 13);
-            this.label32.TabIndex = 75;
-            this.label32.Text = "/";
-            // 
-            // CCOMHP_tbox
-            // 
-            this.CCOMHP_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOMHP_tbox.Enabled = false;
-            this.CCOMHP_tbox.Location = new System.Drawing.Point(142, 52);
-            this.CCOMHP_tbox.Name = "CCOMHP_tbox";
-            this.CCOMHP_tbox.Size = new System.Drawing.Size(58, 20);
-            this.CCOMHP_tbox.TabIndex = 74;
-            // 
-            // CCOXPMOD_tbox
-            // 
-            this.CCOXPMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOXPMOD_tbox.DecimalPlaces = 5;
-            this.CCOXPMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCOXPMOD_tbox.Location = new System.Drawing.Point(271, 2);
-            this.CCOXPMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(0, 0);
+            this.panel1.TabIndex = 10;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(12, 10);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(38, 13);
+            this.label54.TabIndex = 2;
+            this.label54.Text = "Name:";
+            // 
+            // CCName_tbox
+            // 
+            this.CCName_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCName_tbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCName_tbox.Location = new System.Drawing.Point(56, 6);
+            this.CCName_tbox.Name = "CCName_tbox";
+            this.CCName_tbox.Size = new System.Drawing.Size(100, 20);
+            this.CCName_tbox.TabIndex = 0;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(25, 87);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(25, 13);
+            this.label53.TabIndex = 3;
+            this.label53.Text = "HP:";
+            // 
+            // CCHP_UD
+            // 
+            this.CCHP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCHP_UD.Enabled = false;
+            this.CCHP_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCHP_UD.Location = new System.Drawing.Point(56, 85);
+            this.CCHP_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
             0,
             0});
-            this.CCOXPMOD_tbox.Name = "CCOXPMOD_tbox";
-            this.CCOXPMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCOXPMOD_tbox.TabIndex = 73;
-            this.CCOXPMOD_tbox.ThousandsSeparator = true;
-            this.CCOXPMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
+            this.CCHP_UD.Name = "CCHP_UD";
+            this.CCHP_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCHP_UD.TabIndex = 4;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(24, 113);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(26, 13);
+            this.label52.TabIndex = 5;
+            this.label52.Text = "MP:";
+            // 
+            // CCMP_UD
+            // 
+            this.CCMP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCMP_UD.Enabled = false;
+            this.CCMP_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCMP_UD.Location = new System.Drawing.Point(56, 111);
+            this.CCMP_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
             0,
             0});
+            this.CCMP_UD.Name = "CCMP_UD";
+            this.CCMP_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCMP_UD.TabIndex = 6;
             // 
-            // CCOAPPLYMOD_btn
+            // label51
             // 
-            this.CCOAPPLYMOD_btn.Location = new System.Drawing.Point(166, 338);
-            this.CCOAPPLYMOD_btn.Name = "CCOAPPLYMOD_btn";
-            this.CCOAPPLYMOD_btn.Size = new System.Drawing.Size(60, 23);
-            this.CCOAPPLYMOD_btn.TabIndex = 72;
-            this.CCOAPPLYMOD_btn.Text = "Apply";
-            this.CCOAPPLYMOD_btn.UseVisualStyleBackColor = true;
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(21, 139);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(31, 13);
+            this.label51.TabIndex = 7;
+            this.label51.Text = "ATK:";
             // 
-            // CCOPERCMOD_tbox
+            // CCATK_UD
             // 
-            this.CCOPERCMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOPERCMOD_tbox.DecimalPlaces = 5;
-            this.CCOPERCMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCOPERCMOD_tbox.Location = new System.Drawing.Point(166, 313);
-            this.CCOPERCMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
+            this.CCATK_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCATK_UD.Enabled = false;
+            this.CCATK_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCATK_UD.Location = new System.Drawing.Point(56, 137);
+            this.CCATK_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
             0,
             0});
-            this.CCOPERCMOD_tbox.Name = "CCOPERCMOD_tbox";
-            this.CCOPERCMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCOPERCMOD_tbox.TabIndex = 71;
-            this.CCOPERCMOD_tbox.ThousandsSeparator = true;
-            this.CCOPERCMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.CCATK_UD.Name = "CCATK_UD";
+            this.CCATK_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCATK_UD.TabIndex = 8;
             // 
-            // CCOINTMOD_tbox
+            // label50
             // 
-            this.CCOINTMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOINTMOD_tbox.DecimalPlaces = 5;
-            this.CCOINTMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCOINTMOD_tbox.Location = new System.Drawing.Point(166, 286);
-            this.CCOINTMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.CCOINTMOD_tbox.Name = "CCOINTMOD_tbox";
-            this.CCOINTMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCOINTMOD_tbox.TabIndex = 70;
-            this.CCOINTMOD_tbox.ThousandsSeparator = true;
-            this.CCOINTMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(8, 166);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(41, 13);
+            this.label50.TabIndex = 9;
+            this.label50.Text = "S-ATK:";
             // 
-            // CCOSTRMOD_tbox
+            // CCSATK_UD
             // 
-            this.CCOSTRMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOSTRMOD_tbox.DecimalPlaces = 5;
-            this.CCOSTRMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCOSTRMOD_tbox.Location = new System.Drawing.Point(166, 260);
-            this.CCOSTRMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
+            this.CCSATK_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCSATK_UD.Enabled = false;
+            this.CCSATK_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCSATK_UD.Location = new System.Drawing.Point(56, 163);
+            this.CCSATK_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
             0,
             0});
-            this.CCOSTRMOD_tbox.Name = "CCOSTRMOD_tbox";
-            this.CCOSTRMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCOSTRMOD_tbox.TabIndex = 69;
-            this.CCOSTRMOD_tbox.ThousandsSeparator = true;
-            this.CCOSTRMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.CCSATK_UD.Name = "CCSATK_UD";
+            this.CCSATK_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCSATK_UD.TabIndex = 10;
             // 
-            // CCODEXMOD_tbox
+            // CCmbase_chbox
             // 
-            this.CCODEXMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCODEXMOD_tbox.DecimalPlaces = 5;
-            this.CCODEXMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCODEXMOD_tbox.Location = new System.Drawing.Point(166, 235);
-            this.CCODEXMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.CCODEXMOD_tbox.Name = "CCODEXMOD_tbox";
-            this.CCODEXMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCODEXMOD_tbox.TabIndex = 68;
-            this.CCODEXMOD_tbox.ThousandsSeparator = true;
-            this.CCODEXMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // CCOCHARMOD_tbox
-            // 
-            this.CCOCHARMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOCHARMOD_tbox.DecimalPlaces = 5;
-            this.CCOCHARMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCOCHARMOD_tbox.Location = new System.Drawing.Point(166, 209);
-            this.CCOCHARMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.CCOCHARMOD_tbox.Name = "CCOCHARMOD_tbox";
-            this.CCOCHARMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCOCHARMOD_tbox.TabIndex = 67;
-            this.CCOCHARMOD_tbox.ThousandsSeparator = true;
-            this.CCOCHARMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // CCOSDEFMOD_tbox
-            // 
-            this.CCOSDEFMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOSDEFMOD_tbox.DecimalPlaces = 5;
-            this.CCOSDEFMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCOSDEFMOD_tbox.Location = new System.Drawing.Point(166, 183);
-            this.CCOSDEFMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.CCOSDEFMOD_tbox.Name = "CCOSDEFMOD_tbox";
-            this.CCOSDEFMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCOSDEFMOD_tbox.TabIndex = 66;
-            this.CCOSDEFMOD_tbox.ThousandsSeparator = true;
-            this.CCOSDEFMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // CCODEFMOD_tbox
-            // 
-            this.CCODEFMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCODEFMOD_tbox.DecimalPlaces = 5;
-            this.CCODEFMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCODEFMOD_tbox.Location = new System.Drawing.Point(166, 158);
-            this.CCODEFMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.CCODEFMOD_tbox.Name = "CCODEFMOD_tbox";
-            this.CCODEFMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCODEFMOD_tbox.TabIndex = 65;
-            this.CCODEFMOD_tbox.ThousandsSeparator = true;
-            this.CCODEFMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // CCOSATKMOD_tbox
-            // 
-            this.CCOSATKMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOSATKMOD_tbox.DecimalPlaces = 5;
-            this.CCOSATKMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCOSATKMOD_tbox.Location = new System.Drawing.Point(166, 130);
-            this.CCOSATKMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.CCOSATKMOD_tbox.Name = "CCOSATKMOD_tbox";
-            this.CCOSATKMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCOSATKMOD_tbox.TabIndex = 64;
-            this.CCOSATKMOD_tbox.ThousandsSeparator = true;
-            this.CCOSATKMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.CCmbase_chbox.AutoSize = true;
+            this.CCmbase_chbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCmbase_chbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCmbase_chbox.Location = new System.Drawing.Point(347, 31);
+            this.CCmbase_chbox.Name = "CCmbase_chbox";
+            this.CCmbase_chbox.Size = new System.Drawing.Size(58, 17);
+            this.CCmbase_chbox.TabIndex = 37;
+            this.CCmbase_chbox.Text = "Mbase";
+            this.CCmbase_chbox.UseVisualStyleBackColor = false;
+            this.CCmbase_chbox.CheckedChanged += new System.EventHandler(this.CCmbase_chbox_CheckedChanged);
             // 
             // CCOATKMOD_tbox
             // 
@@ -2375,7 +1233,7 @@
             0,
             0,
             196608});
-            this.CCOATKMOD_tbox.Location = new System.Drawing.Point(166, 105);
+            this.CCOATKMOD_tbox.Location = new System.Drawing.Point(162, 137);
             this.CCOATKMOD_tbox.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -2391,389 +1249,23 @@
             0,
             0});
             // 
-            // CCOMPMOD_tbox
-            // 
-            this.CCOMPMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOMPMOD_tbox.DecimalPlaces = 5;
-            this.CCOMPMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCOMPMOD_tbox.Location = new System.Drawing.Point(206, 79);
-            this.CCOMPMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.CCOMPMOD_tbox.Name = "CCOMPMOD_tbox";
-            this.CCOMPMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCOMPMOD_tbox.TabIndex = 62;
-            this.CCOMPMOD_tbox.ThousandsSeparator = true;
-            this.CCOMPMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // CCOHPMOD_tbox
-            // 
-            this.CCOHPMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOHPMOD_tbox.DecimalPlaces = 5;
-            this.CCOHPMOD_tbox.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.CCOHPMOD_tbox.Location = new System.Drawing.Point(206, 53);
-            this.CCOHPMOD_tbox.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.CCOHPMOD_tbox.Name = "CCOHPMOD_tbox";
-            this.CCOHPMOD_tbox.Size = new System.Drawing.Size(60, 20);
-            this.CCOHPMOD_tbox.TabIndex = 61;
-            this.CCOHPMOD_tbox.ThousandsSeparator = true;
-            this.CCOHPMOD_tbox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(166, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 13);
-            this.label10.TabIndex = 59;
-            this.label10.Text = "XP:";
-            // 
-            // CCOXP_tbox
-            // 
-            this.CCOXP_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOXP_tbox.Enabled = false;
-            this.CCOXP_tbox.Location = new System.Drawing.Point(196, 1);
-            this.CCOXP_tbox.Name = "CCOXP_tbox";
-            this.CCOXP_tbox.Size = new System.Drawing.Size(70, 20);
-            this.CCOXP_tbox.TabIndex = 58;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(16, 341);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(38, 13);
-            this.label31.TabIndex = 38;
-            this.label31.Text = "TYPE:";
-            // 
-            // CCOTYPE_tbox
-            // 
-            this.CCOTYPE_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOTYPE_tbox.Enabled = false;
-            this.CCOTYPE_tbox.Location = new System.Drawing.Point(60, 338);
-            this.CCOTYPE_tbox.Name = "CCOTYPE_tbox";
-            this.CCOTYPE_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOTYPE_tbox.TabIndex = 57;
-            // 
-            // CCOPERC_tbox
-            // 
-            this.CCOPERC_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOPERC_tbox.Enabled = false;
-            this.CCOPERC_tbox.Location = new System.Drawing.Point(60, 312);
-            this.CCOPERC_tbox.Name = "CCOPERC_tbox";
-            this.CCOPERC_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOPERC_tbox.TabIndex = 52;
-            // 
-            // CCOINT_tbox
-            // 
-            this.CCOINT_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOINT_tbox.Enabled = false;
-            this.CCOINT_tbox.Location = new System.Drawing.Point(60, 286);
-            this.CCOINT_tbox.Name = "CCOINT_tbox";
-            this.CCOINT_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOINT_tbox.TabIndex = 51;
-            // 
-            // CCOSTR_tbox
-            // 
-            this.CCOSTR_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOSTR_tbox.Enabled = false;
-            this.CCOSTR_tbox.Location = new System.Drawing.Point(60, 260);
-            this.CCOSTR_tbox.Name = "CCOSTR_tbox";
-            this.CCOSTR_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOSTR_tbox.TabIndex = 50;
-            // 
-            // CCODEX_tbox
-            // 
-            this.CCODEX_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCODEX_tbox.Enabled = false;
-            this.CCODEX_tbox.Location = new System.Drawing.Point(60, 234);
-            this.CCODEX_tbox.Name = "CCODEX_tbox";
-            this.CCODEX_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCODEX_tbox.TabIndex = 49;
-            // 
-            // CCOCHAR_tbox
-            // 
-            this.CCOCHAR_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOCHAR_tbox.Enabled = false;
-            this.CCOCHAR_tbox.Location = new System.Drawing.Point(60, 208);
-            this.CCOCHAR_tbox.Name = "CCOCHAR_tbox";
-            this.CCOCHAR_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOCHAR_tbox.TabIndex = 48;
-            // 
-            // CCOSDEF_tbox
-            // 
-            this.CCOSDEF_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOSDEF_tbox.Enabled = false;
-            this.CCOSDEF_tbox.Location = new System.Drawing.Point(60, 182);
-            this.CCOSDEF_tbox.Name = "CCOSDEF_tbox";
-            this.CCOSDEF_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOSDEF_tbox.TabIndex = 47;
-            // 
-            // CCODEF_tbox
-            // 
-            this.CCODEF_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCODEF_tbox.Enabled = false;
-            this.CCODEF_tbox.Location = new System.Drawing.Point(60, 156);
-            this.CCODEF_tbox.Name = "CCODEF_tbox";
-            this.CCODEF_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCODEF_tbox.TabIndex = 46;
-            // 
-            // CCOSATK_tbox
-            // 
-            this.CCOSATK_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOSATK_tbox.Enabled = false;
-            this.CCOSATK_tbox.Location = new System.Drawing.Point(60, 130);
-            this.CCOSATK_tbox.Name = "CCOSATK_tbox";
-            this.CCOSATK_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOSATK_tbox.TabIndex = 45;
-            // 
-            // CCOATK_tbox
-            // 
-            this.CCOATK_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOATK_tbox.Enabled = false;
-            this.CCOATK_tbox.Location = new System.Drawing.Point(60, 105);
-            this.CCOATK_tbox.Name = "CCOATK_tbox";
-            this.CCOATK_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOATK_tbox.TabIndex = 44;
-            // 
-            // CCOMP_tbox
-            // 
-            this.CCOMP_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOMP_tbox.Enabled = false;
-            this.CCOMP_tbox.Location = new System.Drawing.Point(60, 78);
-            this.CCOMP_tbox.Name = "CCOMP_tbox";
-            this.CCOMP_tbox.Size = new System.Drawing.Size(58, 20);
-            this.CCOMP_tbox.TabIndex = 43;
-            // 
-            // CCOHP_tbox
-            // 
-            this.CCOHP_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOHP_tbox.Enabled = false;
-            this.CCOHP_tbox.Location = new System.Drawing.Point(60, 52);
-            this.CCOHP_tbox.Name = "CCOHP_tbox";
-            this.CCOHP_tbox.Size = new System.Drawing.Size(58, 20);
-            this.CCOHP_tbox.TabIndex = 42;
-            // 
-            // CCOLVL_tbox
-            // 
-            this.CCOLVL_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOLVL_tbox.Enabled = false;
-            this.CCOLVL_tbox.Location = new System.Drawing.Point(60, 26);
-            this.CCOLVL_tbox.Name = "CCOLVL_tbox";
-            this.CCOLVL_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOLVL_tbox.TabIndex = 41;
-            // 
-            // CCOName_tbox
-            // 
-            this.CCOName_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCOName_tbox.Enabled = false;
-            this.CCOName_tbox.Location = new System.Drawing.Point(60, 2);
-            this.CCOName_tbox.Name = "CCOName_tbox";
-            this.CCOName_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCOName_tbox.TabIndex = 40;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(25, 29);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 13);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "LVL:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(16, 315);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 13);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "PERC:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(26, 289);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(28, 13);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "INT:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(22, 263);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(32, 13);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "STR:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(22, 237);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(32, 13);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "DEX:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(14, 211);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(40, 13);
-            this.label29.TabIndex = 34;
-            this.label29.Text = "CHAR:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(13, 185);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(41, 13);
-            this.label34.TabIndex = 33;
-            this.label34.Text = "S-DEF:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(23, 159);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(31, 13);
-            this.label35.TabIndex = 32;
-            this.label35.Text = "DEF:";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(13, 133);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(41, 13);
-            this.label36.TabIndex = 31;
-            this.label36.Text = "S-ATK:";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(23, 107);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(31, 13);
-            this.label37.TabIndex = 30;
-            this.label37.Text = "ATK:";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(28, 81);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(26, 13);
-            this.label38.TabIndex = 29;
-            this.label38.Text = "MP:";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(29, 55);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(25, 13);
-            this.label39.TabIndex = 28;
-            this.label39.Text = "HP:";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(16, 5);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(38, 13);
-            this.label40.TabIndex = 27;
-            this.label40.Text = "Name:";
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Controls.Add(this.CCmbase_chbox);
-            this.panel1.Controls.Add(this.label41);
-            this.panel1.Controls.Add(this.CCTYPE_cbox);
-            this.panel1.Controls.Add(this.CCGolem__chbox);
-            this.panel1.Controls.Add(this.CCCustom__chbox);
-            this.panel1.Controls.Add(this.CCCUSLVL_UD);
-            this.panel1.Controls.Add(this.CCLEVELSEL_CBOX);
-            this.panel1.Controls.Add(this.label42);
-            this.panel1.Controls.Add(this.CCBos_chbox);
-            this.panel1.Controls.Add(this.CCPERC_UD);
-            this.panel1.Controls.Add(this.label43);
-            this.panel1.Controls.Add(this.CCINT_UD);
-            this.panel1.Controls.Add(this.label44);
-            this.panel1.Controls.Add(this.CCSTR_UD);
-            this.panel1.Controls.Add(this.label45);
-            this.panel1.Controls.Add(this.CCDEX_UD);
-            this.panel1.Controls.Add(this.label46);
-            this.panel1.Controls.Add(this.CCCHAR_UD);
-            this.panel1.Controls.Add(this.label47);
-            this.panel1.Controls.Add(this.CCSDEF_UD);
-            this.panel1.Controls.Add(this.label48);
-            this.panel1.Controls.Add(this.CCDEF__UD);
-            this.panel1.Controls.Add(this.label49);
-            this.panel1.Controls.Add(this.CCSATK_UD);
-            this.panel1.Controls.Add(this.label50);
-            this.panel1.Controls.Add(this.CCATK_UD);
-            this.panel1.Controls.Add(this.label51);
-            this.panel1.Controls.Add(this.CCMP_UD);
-            this.panel1.Controls.Add(this.label52);
-            this.panel1.Controls.Add(this.CCHP_UD);
-            this.panel1.Controls.Add(this.label53);
-            this.panel1.Controls.Add(this.CCName_tbox);
-            this.panel1.Controls.Add(this.label54);
-            this.panel1.Location = new System.Drawing.Point(4, 19);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 364);
-            this.panel1.TabIndex = 10;
-            // 
-            // CCmbase_chbox
-            // 
-            this.CCmbase_chbox.AutoSize = true;
-            this.CCmbase_chbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCmbase_chbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCmbase_chbox.Location = new System.Drawing.Point(276, 29);
-            this.CCmbase_chbox.Name = "CCmbase_chbox";
-            this.CCmbase_chbox.Size = new System.Drawing.Size(58, 17);
-            this.CCmbase_chbox.TabIndex = 37;
-            this.CCmbase_chbox.Text = "Mbase";
-            this.CCmbase_chbox.UseVisualStyleBackColor = false;
-            // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(3, 345);
+            this.label41.Location = new System.Drawing.Point(11, 377);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(38, 13);
             this.label41.TabIndex = 36;
             this.label41.Text = "TYPE:";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(18, 192);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(31, 13);
+            this.label49.TabIndex = 11;
+            this.label49.Text = "DEF:";
             // 
             // CCTYPE_cbox
             // 
@@ -2786,51 +1278,126 @@
             "Ice",
             "Earth",
             "Lightning",
-            "Light",
-            "Dark"});
-            this.CCTYPE_cbox.Location = new System.Drawing.Point(47, 340);
+            "Holy",
+            "Unholy",
+            "Oracalcite"});
+            this.CCTYPE_cbox.Location = new System.Drawing.Point(55, 372);
             this.CCTYPE_cbox.Name = "CCTYPE_cbox";
             this.CCTYPE_cbox.Size = new System.Drawing.Size(100, 21);
             this.CCTYPE_cbox.TabIndex = 35;
+            // 
+            // CCOSATKMOD_tbox
+            // 
+            this.CCOSATKMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCOSATKMOD_tbox.DecimalPlaces = 5;
+            this.CCOSATKMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCOSATKMOD_tbox.Location = new System.Drawing.Point(161, 163);
+            this.CCOSATKMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCOSATKMOD_tbox.Name = "CCOSATKMOD_tbox";
+            this.CCOSATKMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCOSATKMOD_tbox.TabIndex = 64;
+            this.CCOSATKMOD_tbox.ThousandsSeparator = true;
+            this.CCOSATKMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // CCGolem__chbox
             // 
             this.CCGolem__chbox.AutoSize = true;
             this.CCGolem__chbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCGolem__chbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCGolem__chbox.Location = new System.Drawing.Point(276, 5);
+            this.CCGolem__chbox.Location = new System.Drawing.Point(285, 9);
             this.CCGolem__chbox.Name = "CCGolem__chbox";
             this.CCGolem__chbox.Size = new System.Drawing.Size(56, 17);
             this.CCGolem__chbox.TabIndex = 34;
             this.CCGolem__chbox.Text = "Golem";
             this.CCGolem__chbox.UseVisualStyleBackColor = false;
             // 
+            // CCDEF_UD
+            // 
+            this.CCDEF_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCDEF_UD.Enabled = false;
+            this.CCDEF_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCDEF_UD.Location = new System.Drawing.Point(55, 190);
+            this.CCDEF_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.CCDEF_UD.Name = "CCDEF_UD";
+            this.CCDEF_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCDEF_UD.TabIndex = 12;
+            // 
             // CCCustom__chbox
             // 
             this.CCCustom__chbox.AutoSize = true;
             this.CCCustom__chbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCCustom__chbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCCustom__chbox.Location = new System.Drawing.Point(209, 5);
+            this.CCCustom__chbox.Location = new System.Drawing.Point(218, 9);
             this.CCCustom__chbox.Name = "CCCustom__chbox";
             this.CCCustom__chbox.Size = new System.Drawing.Size(61, 17);
             this.CCCustom__chbox.TabIndex = 33;
             this.CCCustom__chbox.Text = "Custom";
             this.CCCustom__chbox.UseVisualStyleBackColor = false;
             // 
+            // CCODEFMOD_tbox
+            // 
+            this.CCODEFMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCODEFMOD_tbox.DecimalPlaces = 5;
+            this.CCODEFMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCODEFMOD_tbox.Location = new System.Drawing.Point(161, 191);
+            this.CCODEFMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCODEFMOD_tbox.Name = "CCODEFMOD_tbox";
+            this.CCODEFMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCODEFMOD_tbox.TabIndex = 65;
+            this.CCODEFMOD_tbox.ThousandsSeparator = true;
+            this.CCODEFMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // CCCUSLVL_UD
             // 
             this.CCCUSLVL_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCCUSLVL_UD.Enabled = false;
             this.CCCUSLVL_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCCUSLVL_UD.Location = new System.Drawing.Point(153, 28);
+            this.CCCUSLVL_UD.Location = new System.Drawing.Point(162, 32);
             this.CCCUSLVL_UD.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
             this.CCCUSLVL_UD.Name = "CCCUSLVL_UD";
-            this.CCCUSLVL_UD.Size = new System.Drawing.Size(117, 20);
+            this.CCCUSLVL_UD.Size = new System.Drawing.Size(50, 20);
             this.CCCUSLVL_UD.TabIndex = 31;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(8, 218);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(41, 13);
+            this.label48.TabIndex = 13;
+            this.label48.Text = "S-DEF:";
             // 
             // CCLEVELSEL_CBOX
             // 
@@ -2860,158 +1427,52 @@
             "Gaelidia",
             "Angiel",
             "Custom"});
-            this.CCLEVELSEL_CBOX.Location = new System.Drawing.Point(47, 28);
+            this.CCLEVELSEL_CBOX.Location = new System.Drawing.Point(56, 32);
             this.CCLEVELSEL_CBOX.Name = "CCLEVELSEL_CBOX";
             this.CCLEVELSEL_CBOX.Size = new System.Drawing.Size(100, 21);
             this.CCLEVELSEL_CBOX.TabIndex = 30;
+            this.CCLEVELSEL_CBOX.SelectedIndexChanged += new System.EventHandler(this.CCLEVELSEL_CBOX_SelectedIndexChanged);
+            // 
+            // CCOSDEFMOD_tbox
+            // 
+            this.CCOSDEFMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCOSDEFMOD_tbox.DecimalPlaces = 5;
+            this.CCOSDEFMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCOSDEFMOD_tbox.Location = new System.Drawing.Point(161, 216);
+            this.CCOSDEFMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCOSDEFMOD_tbox.Name = "CCOSDEFMOD_tbox";
+            this.CCOSDEFMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCOSDEFMOD_tbox.TabIndex = 66;
+            this.CCOSDEFMOD_tbox.ThousandsSeparator = true;
+            this.CCOSDEFMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(12, 30);
+            this.label42.Location = new System.Drawing.Point(21, 34);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(29, 13);
             this.label42.TabIndex = 26;
             this.label42.Text = "LVL:";
-            // 
-            // CCBos_chbox
-            // 
-            this.CCBos_chbox.AutoSize = true;
-            this.CCBos_chbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCBos_chbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCBos_chbox.Location = new System.Drawing.Point(154, 4);
-            this.CCBos_chbox.Name = "CCBos_chbox";
-            this.CCBos_chbox.Size = new System.Drawing.Size(49, 17);
-            this.CCBos_chbox.TabIndex = 25;
-            this.CCBos_chbox.Text = "Boss";
-            this.CCBos_chbox.UseVisualStyleBackColor = false;
-            // 
-            // CCPERC_UD
-            // 
-            this.CCPERC_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCPERC_UD.Enabled = false;
-            this.CCPERC_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCPERC_UD.Location = new System.Drawing.Point(47, 314);
-            this.CCPERC_UD.Maximum = new decimal(new int[] {
-            1316134911,
-            2328,
-            0,
-            0});
-            this.CCPERC_UD.Name = "CCPERC_UD";
-            this.CCPERC_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCPERC_UD.TabIndex = 24;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(3, 316);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(39, 13);
-            this.label43.TabIndex = 23;
-            this.label43.Text = "PERC:";
-            // 
-            // CCINT_UD
-            // 
-            this.CCINT_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCINT_UD.Enabled = false;
-            this.CCINT_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCINT_UD.Location = new System.Drawing.Point(48, 288);
-            this.CCINT_UD.Maximum = new decimal(new int[] {
-            1316134911,
-            2328,
-            0,
-            0});
-            this.CCINT_UD.Name = "CCINT_UD";
-            this.CCINT_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCINT_UD.TabIndex = 22;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(13, 290);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(28, 13);
-            this.label44.TabIndex = 21;
-            this.label44.Text = "INT:";
-            // 
-            // CCSTR_UD
-            // 
-            this.CCSTR_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCSTR_UD.Enabled = false;
-            this.CCSTR_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCSTR_UD.Location = new System.Drawing.Point(48, 262);
-            this.CCSTR_UD.Maximum = new decimal(new int[] {
-            1316134911,
-            2328,
-            0,
-            0});
-            this.CCSTR_UD.Name = "CCSTR_UD";
-            this.CCSTR_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCSTR_UD.TabIndex = 20;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(9, 264);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(32, 13);
-            this.label45.TabIndex = 19;
-            this.label45.Text = "STR:";
-            // 
-            // CCDEX_UD
-            // 
-            this.CCDEX_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCDEX_UD.Enabled = false;
-            this.CCDEX_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCDEX_UD.Location = new System.Drawing.Point(47, 236);
-            this.CCDEX_UD.Maximum = new decimal(new int[] {
-            1316134911,
-            2328,
-            0,
-            0});
-            this.CCDEX_UD.Name = "CCDEX_UD";
-            this.CCDEX_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCDEX_UD.TabIndex = 18;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(9, 238);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(32, 13);
-            this.label46.TabIndex = 17;
-            this.label46.Text = "DEX:";
-            // 
-            // CCCHAR_UD
-            // 
-            this.CCCHAR_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCCHAR_UD.Enabled = false;
-            this.CCCHAR_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCCHAR_UD.Location = new System.Drawing.Point(47, 210);
-            this.CCCHAR_UD.Maximum = new decimal(new int[] {
-            1316134911,
-            2328,
-            0,
-            0});
-            this.CCCHAR_UD.Name = "CCCHAR_UD";
-            this.CCCHAR_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCCHAR_UD.TabIndex = 16;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(1, 212);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(40, 13);
-            this.label47.TabIndex = 15;
-            this.label47.Text = "CHAR:";
             // 
             // CCSDEF_UD
             // 
             this.CCSDEF_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCSDEF_UD.Enabled = false;
             this.CCSDEF_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCSDEF_UD.Location = new System.Drawing.Point(47, 184);
+            this.CCSDEF_UD.Location = new System.Drawing.Point(55, 216);
             this.CCSDEF_UD.Maximum = new decimal(new int[] {
             1316134911,
             2328,
@@ -3021,152 +1482,346 @@
             this.CCSDEF_UD.Size = new System.Drawing.Size(100, 20);
             this.CCSDEF_UD.TabIndex = 14;
             // 
-            // label48
+            // CCBos_chbox
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(0, 186);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(41, 13);
-            this.label48.TabIndex = 13;
-            this.label48.Text = "S-DEF:";
+            this.CCBos_chbox.AutoSize = true;
+            this.CCBos_chbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCBos_chbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCBos_chbox.Location = new System.Drawing.Point(163, 8);
+            this.CCBos_chbox.Name = "CCBos_chbox";
+            this.CCBos_chbox.Size = new System.Drawing.Size(49, 17);
+            this.CCBos_chbox.TabIndex = 25;
+            this.CCBos_chbox.Text = "Boss";
+            this.CCBos_chbox.UseVisualStyleBackColor = false;
             // 
-            // CCDEF__UD
+            // CCOCHARMOD_tbox
             // 
-            this.CCDEF__UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCDEF__UD.Enabled = false;
-            this.CCDEF__UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCDEF__UD.Location = new System.Drawing.Point(47, 158);
-            this.CCDEF__UD.Maximum = new decimal(new int[] {
+            this.CCOCHARMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCOCHARMOD_tbox.DecimalPlaces = 5;
+            this.CCOCHARMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCOCHARMOD_tbox.Location = new System.Drawing.Point(161, 242);
+            this.CCOCHARMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCOCHARMOD_tbox.Name = "CCOCHARMOD_tbox";
+            this.CCOCHARMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCOCHARMOD_tbox.TabIndex = 67;
+            this.CCOCHARMOD_tbox.ThousandsSeparator = true;
+            this.CCOCHARMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // CCPERC_UD
+            // 
+            this.CCPERC_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCPERC_UD.Enabled = false;
+            this.CCPERC_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCPERC_UD.Location = new System.Drawing.Point(55, 346);
+            this.CCPERC_UD.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
-            this.CCDEF__UD.Name = "CCDEF__UD";
-            this.CCDEF__UD.Size = new System.Drawing.Size(100, 20);
-            this.CCDEF__UD.TabIndex = 12;
+            this.CCPERC_UD.Name = "CCPERC_UD";
+            this.CCPERC_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCPERC_UD.TabIndex = 24;
             // 
-            // label49
+            // label47
             // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(10, 160);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(31, 13);
-            this.label49.TabIndex = 11;
-            this.label49.Text = "DEF:";
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(9, 244);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(40, 13);
+            this.label47.TabIndex = 15;
+            this.label47.Text = "CHAR:";
             // 
-            // CCSATK_UD
+            // CCOXPMOD_tbox
             // 
-            this.CCSATK_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCSATK_UD.Enabled = false;
-            this.CCSATK_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCSATK_UD.Location = new System.Drawing.Point(47, 132);
-            this.CCSATK_UD.Maximum = new decimal(new int[] {
+            this.CCOXPMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCOXPMOD_tbox.DecimalPlaces = 5;
+            this.CCOXPMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCOXPMOD_tbox.Location = new System.Drawing.Point(55, 59);
+            this.CCOXPMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCOXPMOD_tbox.Name = "CCOXPMOD_tbox";
+            this.CCOXPMOD_tbox.Size = new System.Drawing.Size(167, 20);
+            this.CCOXPMOD_tbox.TabIndex = 73;
+            this.CCOXPMOD_tbox.ThousandsSeparator = true;
+            this.CCOXPMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // CCODEXMOD_tbox
+            // 
+            this.CCODEXMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCODEXMOD_tbox.DecimalPlaces = 5;
+            this.CCODEXMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCODEXMOD_tbox.Location = new System.Drawing.Point(161, 268);
+            this.CCODEXMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCODEXMOD_tbox.Name = "CCODEXMOD_tbox";
+            this.CCODEXMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCODEXMOD_tbox.TabIndex = 68;
+            this.CCODEXMOD_tbox.ThousandsSeparator = true;
+            this.CCODEXMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(11, 348);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(39, 13);
+            this.label43.TabIndex = 23;
+            this.label43.Text = "PERC:";
+            // 
+            // CCCHAR_UD
+            // 
+            this.CCCHAR_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCCHAR_UD.Enabled = false;
+            this.CCCHAR_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCCHAR_UD.Location = new System.Drawing.Point(55, 242);
+            this.CCCHAR_UD.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
-            this.CCSATK_UD.Name = "CCSATK_UD";
-            this.CCSATK_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCSATK_UD.TabIndex = 10;
+            this.CCCHAR_UD.Name = "CCCHAR_UD";
+            this.CCCHAR_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCCHAR_UD.TabIndex = 16;
             // 
-            // label50
+            // label10
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(0, 134);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(41, 13);
-            this.label50.TabIndex = 9;
-            this.label50.Text = "S-ATK:";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(26, 61);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(24, 13);
+            this.label10.TabIndex = 59;
+            this.label10.Text = "XP:";
             // 
-            // CCATK_UD
+            // CCOSTRMOD_tbox
             // 
-            this.CCATK_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCATK_UD.Enabled = false;
-            this.CCATK_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCATK_UD.Location = new System.Drawing.Point(47, 106);
-            this.CCATK_UD.Maximum = new decimal(new int[] {
+            this.CCOSTRMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCOSTRMOD_tbox.DecimalPlaces = 5;
+            this.CCOSTRMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCOSTRMOD_tbox.Location = new System.Drawing.Point(161, 294);
+            this.CCOSTRMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCOSTRMOD_tbox.Name = "CCOSTRMOD_tbox";
+            this.CCOSTRMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCOSTRMOD_tbox.TabIndex = 69;
+            this.CCOSTRMOD_tbox.ThousandsSeparator = true;
+            this.CCOSTRMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // CCINT_UD
+            // 
+            this.CCINT_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCINT_UD.Enabled = false;
+            this.CCINT_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCINT_UD.Location = new System.Drawing.Point(56, 320);
+            this.CCINT_UD.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
-            this.CCATK_UD.Name = "CCATK_UD";
-            this.CCATK_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCATK_UD.TabIndex = 8;
+            this.CCINT_UD.Name = "CCINT_UD";
+            this.CCINT_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCINT_UD.TabIndex = 22;
             // 
-            // label51
+            // label46
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(10, 108);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(31, 13);
-            this.label51.TabIndex = 7;
-            this.label51.Text = "ATK:";
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(17, 270);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(32, 13);
+            this.label46.TabIndex = 17;
+            this.label46.Text = "DEX:";
             // 
-            // CCMP_UD
+            // label44
             // 
-            this.CCMP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCMP_UD.Enabled = false;
-            this.CCMP_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCMP_UD.Location = new System.Drawing.Point(47, 80);
-            this.CCMP_UD.Maximum = new decimal(new int[] {
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(21, 322);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(28, 13);
+            this.label44.TabIndex = 21;
+            this.label44.Text = "INT:";
+            // 
+            // CCOINTMOD_tbox
+            // 
+            this.CCOINTMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCOINTMOD_tbox.DecimalPlaces = 5;
+            this.CCOINTMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCOINTMOD_tbox.Location = new System.Drawing.Point(161, 320);
+            this.CCOINTMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCOINTMOD_tbox.Name = "CCOINTMOD_tbox";
+            this.CCOINTMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCOINTMOD_tbox.TabIndex = 70;
+            this.CCOINTMOD_tbox.ThousandsSeparator = true;
+            this.CCOINTMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // CCSTR_UD
+            // 
+            this.CCSTR_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCSTR_UD.Enabled = false;
+            this.CCSTR_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCSTR_UD.Location = new System.Drawing.Point(56, 294);
+            this.CCSTR_UD.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
-            this.CCMP_UD.Name = "CCMP_UD";
-            this.CCMP_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCMP_UD.TabIndex = 6;
+            this.CCSTR_UD.Name = "CCSTR_UD";
+            this.CCSTR_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCSTR_UD.TabIndex = 20;
             // 
-            // label52
+            // CCOPERCMOD_tbox
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(15, 82);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(26, 13);
-            this.label52.TabIndex = 5;
-            this.label52.Text = "MP:";
+            this.CCOPERCMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCOPERCMOD_tbox.DecimalPlaces = 5;
+            this.CCOPERCMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCOPERCMOD_tbox.Location = new System.Drawing.Point(161, 346);
+            this.CCOPERCMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCOPERCMOD_tbox.Name = "CCOPERCMOD_tbox";
+            this.CCOPERCMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCOPERCMOD_tbox.TabIndex = 71;
+            this.CCOPERCMOD_tbox.ThousandsSeparator = true;
+            this.CCOPERCMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // CCHP_UD
+            // label45
             // 
-            this.CCHP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCHP_UD.Enabled = false;
-            this.CCHP_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCHP_UD.Location = new System.Drawing.Point(47, 54);
-            this.CCHP_UD.Maximum = new decimal(new int[] {
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(17, 296);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(32, 13);
+            this.label45.TabIndex = 19;
+            this.label45.Text = "STR:";
+            // 
+            // CCOMPMOD_tbox
+            // 
+            this.CCOMPMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCOMPMOD_tbox.DecimalPlaces = 5;
+            this.CCOMPMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCOMPMOD_tbox.Location = new System.Drawing.Point(162, 111);
+            this.CCOMPMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCOMPMOD_tbox.Name = "CCOMPMOD_tbox";
+            this.CCOMPMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCOMPMOD_tbox.TabIndex = 62;
+            this.CCOMPMOD_tbox.ThousandsSeparator = true;
+            this.CCOMPMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // CCDEX_UD
+            // 
+            this.CCDEX_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCDEX_UD.Enabled = false;
+            this.CCDEX_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCDEX_UD.Location = new System.Drawing.Point(55, 268);
+            this.CCDEX_UD.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
-            this.CCHP_UD.Name = "CCHP_UD";
-            this.CCHP_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCHP_UD.TabIndex = 4;
+            this.CCDEX_UD.Name = "CCDEX_UD";
+            this.CCDEX_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCDEX_UD.TabIndex = 18;
             // 
-            // label53
+            // CCOHPMOD_tbox
             // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(16, 56);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(25, 13);
-            this.label53.TabIndex = 3;
-            this.label53.Text = "HP:";
-            // 
-            // CCName_tbox
-            // 
-            this.CCName_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCName_tbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCName_tbox.Location = new System.Drawing.Point(47, 2);
-            this.CCName_tbox.Name = "CCName_tbox";
-            this.CCName_tbox.Size = new System.Drawing.Size(100, 20);
-            this.CCName_tbox.TabIndex = 0;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(3, 6);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(38, 13);
-            this.label54.TabIndex = 2;
-            this.label54.Text = "Name:";
+            this.CCOHPMOD_tbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCOHPMOD_tbox.DecimalPlaces = 5;
+            this.CCOHPMOD_tbox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.CCOHPMOD_tbox.Location = new System.Drawing.Point(162, 85);
+            this.CCOHPMOD_tbox.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.CCOHPMOD_tbox.Name = "CCOHPMOD_tbox";
+            this.CCOHPMOD_tbox.Size = new System.Drawing.Size(60, 20);
+            this.CCOHPMOD_tbox.TabIndex = 61;
+            this.CCOHPMOD_tbox.ThousandsSeparator = true;
+            this.CCOHPMOD_tbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // GMItemc_tab
             // 
@@ -3176,7 +1831,7 @@
             this.GMItemc_tab.Location = new System.Drawing.Point(4, 22);
             this.GMItemc_tab.Name = "GMItemc_tab";
             this.GMItemc_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.GMItemc_tab.Size = new System.Drawing.Size(830, 509);
+            this.GMItemc_tab.Size = new System.Drawing.Size(830, 560);
             this.GMItemc_tab.TabIndex = 3;
             this.GMItemc_tab.Text = "Items";
             // 
@@ -3186,7 +1841,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(424, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(403, 503);
+            this.groupBox3.Size = new System.Drawing.Size(403, 554);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Items";
@@ -3197,7 +1852,7 @@
             this.EditorItems_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EditorItems_lbox.Location = new System.Drawing.Point(3, 16);
             this.EditorItems_lbox.Name = "EditorItems_lbox";
-            this.EditorItems_lbox.Size = new System.Drawing.Size(397, 484);
+            this.EditorItems_lbox.Size = new System.Drawing.Size(397, 535);
             this.EditorItems_lbox.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.EditorItems_lbox.TabIndex = 0;
             this.EditorItems_lbox.TileSize = new System.Drawing.Size(200, 60);
@@ -3270,7 +1925,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(421, 503);
+            this.groupBox2.Size = new System.Drawing.Size(421, 554);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor/Creator";
@@ -3287,7 +1942,7 @@
             // UItem_editor_btn
             // 
             this.UItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UItem_editor_btn.Location = new System.Drawing.Point(222, 474);
+            this.UItem_editor_btn.Location = new System.Drawing.Point(222, 525);
             this.UItem_editor_btn.Name = "UItem_editor_btn";
             this.UItem_editor_btn.Size = new System.Drawing.Size(115, 23);
             this.UItem_editor_btn.TabIndex = 65;
@@ -3328,7 +1983,7 @@
             // EItem_editor_btn
             // 
             this.EItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.EItem_editor_btn.Location = new System.Drawing.Point(343, 474);
+            this.EItem_editor_btn.Location = new System.Drawing.Point(343, 525);
             this.EItem_editor_btn.Name = "EItem_editor_btn";
             this.EItem_editor_btn.Size = new System.Drawing.Size(75, 23);
             this.EItem_editor_btn.TabIndex = 61;
@@ -3339,7 +1994,7 @@
             // DItem_editor_btn
             // 
             this.DItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DItem_editor_btn.Location = new System.Drawing.Point(171, 474);
+            this.DItem_editor_btn.Location = new System.Drawing.Point(171, 525);
             this.DItem_editor_btn.Name = "DItem_editor_btn";
             this.DItem_editor_btn.Size = new System.Drawing.Size(47, 23);
             this.DItem_editor_btn.TabIndex = 60;
@@ -3478,7 +2133,7 @@
             // MItem_editor_btn
             // 
             this.MItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.MItem_editor_btn.Location = new System.Drawing.Point(90, 474);
+            this.MItem_editor_btn.Location = new System.Drawing.Point(90, 525);
             this.MItem_editor_btn.Name = "MItem_editor_btn";
             this.MItem_editor_btn.Size = new System.Drawing.Size(75, 23);
             this.MItem_editor_btn.TabIndex = 47;
@@ -3500,7 +2155,7 @@
             // NItem_editor_btn
             // 
             this.NItem_editor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.NItem_editor_btn.Location = new System.Drawing.Point(9, 474);
+            this.NItem_editor_btn.Location = new System.Drawing.Point(9, 525);
             this.NItem_editor_btn.Name = "NItem_editor_btn";
             this.NItem_editor_btn.Size = new System.Drawing.Size(75, 23);
             this.NItem_editor_btn.TabIndex = 45;
@@ -3935,7 +2590,7 @@
             this.SpellsManager_tab.Location = new System.Drawing.Point(4, 22);
             this.SpellsManager_tab.Name = "SpellsManager_tab";
             this.SpellsManager_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.SpellsManager_tab.Size = new System.Drawing.Size(830, 509);
+            this.SpellsManager_tab.Size = new System.Drawing.Size(830, 560);
             this.SpellsManager_tab.TabIndex = 5;
             this.SpellsManager_tab.Text = "Spells";
             // 
@@ -3945,7 +2600,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(427, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(400, 503);
+            this.groupBox4.Size = new System.Drawing.Size(400, 554);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Spells";
@@ -3956,7 +2611,7 @@
             this.Spells_Edititor_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Spells_Edititor_lbox.Location = new System.Drawing.Point(3, 16);
             this.Spells_Edititor_lbox.Name = "Spells_Edititor_lbox";
-            this.Spells_Edititor_lbox.Size = new System.Drawing.Size(394, 484);
+            this.Spells_Edititor_lbox.Size = new System.Drawing.Size(394, 535);
             this.Spells_Edititor_lbox.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.Spells_Edititor_lbox.TabIndex = 0;
             this.Spells_Edititor_lbox.TileSize = new System.Drawing.Size(200, 60);
@@ -3991,7 +2646,7 @@
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(424, 503);
+            this.groupBox5.Size = new System.Drawing.Size(424, 554);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Editor/Creator";
@@ -4052,7 +2707,7 @@
             // Refresh_Spell_editor_BTN
             // 
             this.Refresh_Spell_editor_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Refresh_Spell_editor_BTN.Location = new System.Drawing.Point(229, 474);
+            this.Refresh_Spell_editor_BTN.Location = new System.Drawing.Point(229, 525);
             this.Refresh_Spell_editor_BTN.Name = "Refresh_Spell_editor_BTN";
             this.Refresh_Spell_editor_BTN.Size = new System.Drawing.Size(95, 23);
             this.Refresh_Spell_editor_BTN.TabIndex = 65;
@@ -4063,7 +2718,7 @@
             // Delete_Spell_editor_BTN
             // 
             this.Delete_Spell_editor_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Delete_Spell_editor_BTN.Location = new System.Drawing.Point(168, 474);
+            this.Delete_Spell_editor_BTN.Location = new System.Drawing.Point(168, 525);
             this.Delete_Spell_editor_BTN.Name = "Delete_Spell_editor_BTN";
             this.Delete_Spell_editor_BTN.Size = new System.Drawing.Size(55, 23);
             this.Delete_Spell_editor_BTN.TabIndex = 60;
@@ -4092,7 +2747,7 @@
             // Modify_Spell_editor_BTN
             // 
             this.Modify_Spell_editor_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Modify_Spell_editor_BTN.Location = new System.Drawing.Point(87, 474);
+            this.Modify_Spell_editor_BTN.Location = new System.Drawing.Point(87, 525);
             this.Modify_Spell_editor_BTN.Name = "Modify_Spell_editor_BTN";
             this.Modify_Spell_editor_BTN.Size = new System.Drawing.Size(75, 23);
             this.Modify_Spell_editor_BTN.TabIndex = 47;
@@ -4103,7 +2758,7 @@
             // New_Spell_editor_BTN
             // 
             this.New_Spell_editor_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.New_Spell_editor_BTN.Location = new System.Drawing.Point(6, 474);
+            this.New_Spell_editor_BTN.Location = new System.Drawing.Point(6, 525);
             this.New_Spell_editor_BTN.Name = "New_Spell_editor_BTN";
             this.New_Spell_editor_BTN.Size = new System.Drawing.Size(75, 23);
             this.New_Spell_editor_BTN.TabIndex = 45;
@@ -4232,7 +2887,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(830, 509);
+            this.tabPage1.Size = new System.Drawing.Size(830, 560);
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "Combat Tools";
             // 
@@ -5078,10 +3733,1089 @@
             this.label95.TabIndex = 229;
             this.label95.Text = "Power Level:";
             // 
-            // MAINUPDATE
+            // tableLayoutPanel1
             // 
-            this.MAINUPDATE.DoWork += new System.ComponentModel.DoWorkEventHandler(this.MAINUPDATE_DoWork);
-            this.MAINUPDATE.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.MAINUPDATE_RunWorkerCompleted);
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_PERC, 7, 11);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_PERC, 6, 11);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_PERC, 5, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_PERC, 4, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_PERC, 3, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_PERC, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_PERC, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_PERC, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_INT, 7, 10);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_INT, 6, 10);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_INT, 5, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_INT, 4, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_INT, 3, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_INT, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_INT, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_INT, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_STR, 7, 9);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_STR, 6, 9);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_STR, 5, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_STR, 4, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_STR, 3, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_STR, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_STR, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_STR, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEX, 7, 8);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_DEX, 6, 8);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_DEX, 5, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_DEX, 4, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_DEX, 3, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEX, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_DEX, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_DEX, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_CHAR, 7, 7);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_CHAR, 6, 7);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_CHAR, 5, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_CHAR, 4, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_CHAR, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_CHAR, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_CHAR, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_CHAR, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_SDEF, 7, 6);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_SDEF, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_SDEF, 5, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_SDEF, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_SDEF, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_SDEF, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_SDEF, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_SDEF, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEF, 7, 5);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_DEF, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_DEF, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_DEF, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_DEF, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEF, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_DEF, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_DEF, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_SATK, 7, 4);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_SATK, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_SATK, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_SATK, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_SATK, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_SATK, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_SATK, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_SATK, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_ATK, 7, 3);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_ATK, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_ATK, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_ATK, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_ATK, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_ATK, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_ATK, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_ATK, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_MP, 7, 2);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_MP, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_MP, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_MP, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_MP, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_MP, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_MP, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_MP, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_HP, 7, 1);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_HP, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_HP, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_HP, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_HP, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_HP, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_HP, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_HP, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(228, 59);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 12;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(177, 324);
+            this.tableLayoutPanel1.TabIndex = 74;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "H";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "M";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(47, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 18);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "G";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(69, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 18);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "P";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(91, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(16, 18);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "B";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(113, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 18);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "W";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(135, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(16, 18);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "W";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(157, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(17, 18);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "A";
+            // 
+            // Helm_HP
+            // 
+            this.Helm_HP.AutoSize = true;
+            this.Helm_HP.Location = new System.Drawing.Point(3, 29);
+            this.Helm_HP.Name = "Helm_HP";
+            this.Helm_HP.Size = new System.Drawing.Size(15, 14);
+            this.Helm_HP.TabIndex = 8;
+            this.Helm_HP.UseVisualStyleBackColor = true;
+            // 
+            // Maille_HP
+            // 
+            this.Maille_HP.AutoSize = true;
+            this.Maille_HP.Location = new System.Drawing.Point(25, 29);
+            this.Maille_HP.Name = "Maille_HP";
+            this.Maille_HP.Size = new System.Drawing.Size(15, 14);
+            this.Maille_HP.TabIndex = 9;
+            this.Maille_HP.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_HP
+            // 
+            this.Gloves_HP.AutoSize = true;
+            this.Gloves_HP.Location = new System.Drawing.Point(47, 29);
+            this.Gloves_HP.Name = "Gloves_HP";
+            this.Gloves_HP.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_HP.TabIndex = 10;
+            this.Gloves_HP.UseVisualStyleBackColor = true;
+            // 
+            // Pants_HP
+            // 
+            this.Pants_HP.AutoSize = true;
+            this.Pants_HP.Location = new System.Drawing.Point(69, 29);
+            this.Pants_HP.Name = "Pants_HP";
+            this.Pants_HP.Size = new System.Drawing.Size(15, 14);
+            this.Pants_HP.TabIndex = 11;
+            this.Pants_HP.UseVisualStyleBackColor = true;
+            // 
+            // Boots_HP
+            // 
+            this.Boots_HP.AutoSize = true;
+            this.Boots_HP.Location = new System.Drawing.Point(91, 29);
+            this.Boots_HP.Name = "Boots_HP";
+            this.Boots_HP.Size = new System.Drawing.Size(15, 14);
+            this.Boots_HP.TabIndex = 12;
+            this.Boots_HP.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_HP
+            // 
+            this.LWeapon_HP.AutoSize = true;
+            this.LWeapon_HP.Location = new System.Drawing.Point(113, 29);
+            this.LWeapon_HP.Name = "LWeapon_HP";
+            this.LWeapon_HP.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_HP.TabIndex = 13;
+            this.LWeapon_HP.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_HP
+            // 
+            this.RWeapon_HP.AutoSize = true;
+            this.RWeapon_HP.Location = new System.Drawing.Point(135, 29);
+            this.RWeapon_HP.Name = "RWeapon_HP";
+            this.RWeapon_HP.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_HP.TabIndex = 14;
+            this.RWeapon_HP.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_HP
+            // 
+            this.Artifact_HP.AutoSize = true;
+            this.Artifact_HP.Location = new System.Drawing.Point(157, 29);
+            this.Artifact_HP.Name = "Artifact_HP";
+            this.Artifact_HP.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_HP.TabIndex = 15;
+            this.Artifact_HP.UseVisualStyleBackColor = true;
+            // 
+            // Helm_MP
+            // 
+            this.Helm_MP.AutoSize = true;
+            this.Helm_MP.Location = new System.Drawing.Point(3, 55);
+            this.Helm_MP.Name = "Helm_MP";
+            this.Helm_MP.Size = new System.Drawing.Size(15, 14);
+            this.Helm_MP.TabIndex = 16;
+            this.Helm_MP.UseVisualStyleBackColor = true;
+            // 
+            // Maille_MP
+            // 
+            this.Maille_MP.AutoSize = true;
+            this.Maille_MP.Location = new System.Drawing.Point(25, 55);
+            this.Maille_MP.Name = "Maille_MP";
+            this.Maille_MP.Size = new System.Drawing.Size(15, 14);
+            this.Maille_MP.TabIndex = 17;
+            this.Maille_MP.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_MP
+            // 
+            this.Gloves_MP.AutoSize = true;
+            this.Gloves_MP.Location = new System.Drawing.Point(47, 55);
+            this.Gloves_MP.Name = "Gloves_MP";
+            this.Gloves_MP.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_MP.TabIndex = 18;
+            this.Gloves_MP.UseVisualStyleBackColor = true;
+            // 
+            // Pants_MP
+            // 
+            this.Pants_MP.AutoSize = true;
+            this.Pants_MP.Location = new System.Drawing.Point(69, 55);
+            this.Pants_MP.Name = "Pants_MP";
+            this.Pants_MP.Size = new System.Drawing.Size(15, 14);
+            this.Pants_MP.TabIndex = 19;
+            this.Pants_MP.UseVisualStyleBackColor = true;
+            // 
+            // Boots_MP
+            // 
+            this.Boots_MP.AutoSize = true;
+            this.Boots_MP.Location = new System.Drawing.Point(91, 55);
+            this.Boots_MP.Name = "Boots_MP";
+            this.Boots_MP.Size = new System.Drawing.Size(15, 14);
+            this.Boots_MP.TabIndex = 20;
+            this.Boots_MP.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_MP
+            // 
+            this.LWeapon_MP.AutoSize = true;
+            this.LWeapon_MP.Location = new System.Drawing.Point(113, 55);
+            this.LWeapon_MP.Name = "LWeapon_MP";
+            this.LWeapon_MP.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_MP.TabIndex = 21;
+            this.LWeapon_MP.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_MP
+            // 
+            this.RWeapon_MP.AutoSize = true;
+            this.RWeapon_MP.Location = new System.Drawing.Point(135, 55);
+            this.RWeapon_MP.Name = "RWeapon_MP";
+            this.RWeapon_MP.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_MP.TabIndex = 22;
+            this.RWeapon_MP.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_MP
+            // 
+            this.Artifact_MP.AutoSize = true;
+            this.Artifact_MP.Location = new System.Drawing.Point(157, 55);
+            this.Artifact_MP.Name = "Artifact_MP";
+            this.Artifact_MP.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_MP.TabIndex = 23;
+            this.Artifact_MP.UseVisualStyleBackColor = true;
+            // 
+            // Helm_ATK
+            // 
+            this.Helm_ATK.AutoSize = true;
+            this.Helm_ATK.Location = new System.Drawing.Point(3, 81);
+            this.Helm_ATK.Name = "Helm_ATK";
+            this.Helm_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Helm_ATK.TabIndex = 24;
+            this.Helm_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Maille_ATK
+            // 
+            this.Maille_ATK.AutoSize = true;
+            this.Maille_ATK.Location = new System.Drawing.Point(25, 81);
+            this.Maille_ATK.Name = "Maille_ATK";
+            this.Maille_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Maille_ATK.TabIndex = 25;
+            this.Maille_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_ATK
+            // 
+            this.Gloves_ATK.AutoSize = true;
+            this.Gloves_ATK.Location = new System.Drawing.Point(47, 81);
+            this.Gloves_ATK.Name = "Gloves_ATK";
+            this.Gloves_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_ATK.TabIndex = 26;
+            this.Gloves_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Pants_ATK
+            // 
+            this.Pants_ATK.AutoSize = true;
+            this.Pants_ATK.Location = new System.Drawing.Point(69, 81);
+            this.Pants_ATK.Name = "Pants_ATK";
+            this.Pants_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Pants_ATK.TabIndex = 27;
+            this.Pants_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Boots_ATK
+            // 
+            this.Boots_ATK.AutoSize = true;
+            this.Boots_ATK.Location = new System.Drawing.Point(91, 81);
+            this.Boots_ATK.Name = "Boots_ATK";
+            this.Boots_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Boots_ATK.TabIndex = 28;
+            this.Boots_ATK.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_ATK
+            // 
+            this.LWeapon_ATK.AutoSize = true;
+            this.LWeapon_ATK.Location = new System.Drawing.Point(113, 81);
+            this.LWeapon_ATK.Name = "LWeapon_ATK";
+            this.LWeapon_ATK.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_ATK.TabIndex = 29;
+            this.LWeapon_ATK.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_ATK
+            // 
+            this.RWeapon_ATK.AutoSize = true;
+            this.RWeapon_ATK.Location = new System.Drawing.Point(135, 81);
+            this.RWeapon_ATK.Name = "RWeapon_ATK";
+            this.RWeapon_ATK.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_ATK.TabIndex = 30;
+            this.RWeapon_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_ATK
+            // 
+            this.Artifact_ATK.AutoSize = true;
+            this.Artifact_ATK.Location = new System.Drawing.Point(157, 81);
+            this.Artifact_ATK.Name = "Artifact_ATK";
+            this.Artifact_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_ATK.TabIndex = 31;
+            this.Artifact_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Helm_SATK
+            // 
+            this.Helm_SATK.AutoSize = true;
+            this.Helm_SATK.Location = new System.Drawing.Point(3, 107);
+            this.Helm_SATK.Name = "Helm_SATK";
+            this.Helm_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Helm_SATK.TabIndex = 32;
+            this.Helm_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Maille_SATK
+            // 
+            this.Maille_SATK.AutoSize = true;
+            this.Maille_SATK.Location = new System.Drawing.Point(25, 107);
+            this.Maille_SATK.Name = "Maille_SATK";
+            this.Maille_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Maille_SATK.TabIndex = 33;
+            this.Maille_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_SATK
+            // 
+            this.Gloves_SATK.AutoSize = true;
+            this.Gloves_SATK.Location = new System.Drawing.Point(47, 107);
+            this.Gloves_SATK.Name = "Gloves_SATK";
+            this.Gloves_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_SATK.TabIndex = 34;
+            this.Gloves_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Pants_SATK
+            // 
+            this.Pants_SATK.AutoSize = true;
+            this.Pants_SATK.Location = new System.Drawing.Point(69, 107);
+            this.Pants_SATK.Name = "Pants_SATK";
+            this.Pants_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Pants_SATK.TabIndex = 35;
+            this.Pants_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Boots_SATK
+            // 
+            this.Boots_SATK.AutoSize = true;
+            this.Boots_SATK.Location = new System.Drawing.Point(91, 107);
+            this.Boots_SATK.Name = "Boots_SATK";
+            this.Boots_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Boots_SATK.TabIndex = 36;
+            this.Boots_SATK.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_SATK
+            // 
+            this.LWeapon_SATK.AutoSize = true;
+            this.LWeapon_SATK.Location = new System.Drawing.Point(113, 107);
+            this.LWeapon_SATK.Name = "LWeapon_SATK";
+            this.LWeapon_SATK.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_SATK.TabIndex = 37;
+            this.LWeapon_SATK.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_SATK
+            // 
+            this.RWeapon_SATK.AutoSize = true;
+            this.RWeapon_SATK.Location = new System.Drawing.Point(135, 107);
+            this.RWeapon_SATK.Name = "RWeapon_SATK";
+            this.RWeapon_SATK.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_SATK.TabIndex = 38;
+            this.RWeapon_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_SATK
+            // 
+            this.Artifact_SATK.AutoSize = true;
+            this.Artifact_SATK.Location = new System.Drawing.Point(157, 107);
+            this.Artifact_SATK.Name = "Artifact_SATK";
+            this.Artifact_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_SATK.TabIndex = 39;
+            this.Artifact_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Helm_DEF
+            // 
+            this.Helm_DEF.AutoSize = true;
+            this.Helm_DEF.Location = new System.Drawing.Point(3, 133);
+            this.Helm_DEF.Name = "Helm_DEF";
+            this.Helm_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Helm_DEF.TabIndex = 40;
+            this.Helm_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Maille_DEF
+            // 
+            this.Maille_DEF.AutoSize = true;
+            this.Maille_DEF.Location = new System.Drawing.Point(25, 133);
+            this.Maille_DEF.Name = "Maille_DEF";
+            this.Maille_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Maille_DEF.TabIndex = 41;
+            this.Maille_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_DEF
+            // 
+            this.Gloves_DEF.AutoSize = true;
+            this.Gloves_DEF.Location = new System.Drawing.Point(47, 133);
+            this.Gloves_DEF.Name = "Gloves_DEF";
+            this.Gloves_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_DEF.TabIndex = 42;
+            this.Gloves_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Pants_DEF
+            // 
+            this.Pants_DEF.AutoSize = true;
+            this.Pants_DEF.Location = new System.Drawing.Point(69, 133);
+            this.Pants_DEF.Name = "Pants_DEF";
+            this.Pants_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Pants_DEF.TabIndex = 43;
+            this.Pants_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Boots_DEF
+            // 
+            this.Boots_DEF.AutoSize = true;
+            this.Boots_DEF.Location = new System.Drawing.Point(91, 133);
+            this.Boots_DEF.Name = "Boots_DEF";
+            this.Boots_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Boots_DEF.TabIndex = 44;
+            this.Boots_DEF.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_DEF
+            // 
+            this.LWeapon_DEF.AutoSize = true;
+            this.LWeapon_DEF.Location = new System.Drawing.Point(113, 133);
+            this.LWeapon_DEF.Name = "LWeapon_DEF";
+            this.LWeapon_DEF.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_DEF.TabIndex = 45;
+            this.LWeapon_DEF.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_DEF
+            // 
+            this.RWeapon_DEF.AutoSize = true;
+            this.RWeapon_DEF.Location = new System.Drawing.Point(135, 133);
+            this.RWeapon_DEF.Name = "RWeapon_DEF";
+            this.RWeapon_DEF.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_DEF.TabIndex = 46;
+            this.RWeapon_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_DEF
+            // 
+            this.Artifact_DEF.AutoSize = true;
+            this.Artifact_DEF.Location = new System.Drawing.Point(157, 133);
+            this.Artifact_DEF.Name = "Artifact_DEF";
+            this.Artifact_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_DEF.TabIndex = 47;
+            this.Artifact_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Helm_SDEF
+            // 
+            this.Helm_SDEF.AutoSize = true;
+            this.Helm_SDEF.Location = new System.Drawing.Point(3, 159);
+            this.Helm_SDEF.Name = "Helm_SDEF";
+            this.Helm_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Helm_SDEF.TabIndex = 48;
+            this.Helm_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Maille_SDEF
+            // 
+            this.Maille_SDEF.AutoSize = true;
+            this.Maille_SDEF.Location = new System.Drawing.Point(25, 159);
+            this.Maille_SDEF.Name = "Maille_SDEF";
+            this.Maille_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Maille_SDEF.TabIndex = 49;
+            this.Maille_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_SDEF
+            // 
+            this.Gloves_SDEF.AutoSize = true;
+            this.Gloves_SDEF.Location = new System.Drawing.Point(47, 159);
+            this.Gloves_SDEF.Name = "Gloves_SDEF";
+            this.Gloves_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_SDEF.TabIndex = 50;
+            this.Gloves_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Pants_SDEF
+            // 
+            this.Pants_SDEF.AutoSize = true;
+            this.Pants_SDEF.Location = new System.Drawing.Point(69, 159);
+            this.Pants_SDEF.Name = "Pants_SDEF";
+            this.Pants_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Pants_SDEF.TabIndex = 51;
+            this.Pants_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Boots_SDEF
+            // 
+            this.Boots_SDEF.AutoSize = true;
+            this.Boots_SDEF.Location = new System.Drawing.Point(91, 159);
+            this.Boots_SDEF.Name = "Boots_SDEF";
+            this.Boots_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Boots_SDEF.TabIndex = 52;
+            this.Boots_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_SDEF
+            // 
+            this.LWeapon_SDEF.AutoSize = true;
+            this.LWeapon_SDEF.Location = new System.Drawing.Point(113, 159);
+            this.LWeapon_SDEF.Name = "LWeapon_SDEF";
+            this.LWeapon_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_SDEF.TabIndex = 53;
+            this.LWeapon_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_SDEF
+            // 
+            this.RWeapon_SDEF.AutoSize = true;
+            this.RWeapon_SDEF.Location = new System.Drawing.Point(135, 159);
+            this.RWeapon_SDEF.Name = "RWeapon_SDEF";
+            this.RWeapon_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_SDEF.TabIndex = 54;
+            this.RWeapon_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_SDEF
+            // 
+            this.Artifact_SDEF.AutoSize = true;
+            this.Artifact_SDEF.Location = new System.Drawing.Point(157, 159);
+            this.Artifact_SDEF.Name = "Artifact_SDEF";
+            this.Artifact_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_SDEF.TabIndex = 55;
+            this.Artifact_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Helm_CHAR
+            // 
+            this.Helm_CHAR.AutoSize = true;
+            this.Helm_CHAR.Location = new System.Drawing.Point(3, 185);
+            this.Helm_CHAR.Name = "Helm_CHAR";
+            this.Helm_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Helm_CHAR.TabIndex = 56;
+            this.Helm_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Maille_CHAR
+            // 
+            this.Maille_CHAR.AutoSize = true;
+            this.Maille_CHAR.Location = new System.Drawing.Point(25, 185);
+            this.Maille_CHAR.Name = "Maille_CHAR";
+            this.Maille_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Maille_CHAR.TabIndex = 57;
+            this.Maille_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_CHAR
+            // 
+            this.Gloves_CHAR.AutoSize = true;
+            this.Gloves_CHAR.Location = new System.Drawing.Point(47, 185);
+            this.Gloves_CHAR.Name = "Gloves_CHAR";
+            this.Gloves_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_CHAR.TabIndex = 58;
+            this.Gloves_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Pants_CHAR
+            // 
+            this.Pants_CHAR.AutoSize = true;
+            this.Pants_CHAR.Location = new System.Drawing.Point(69, 185);
+            this.Pants_CHAR.Name = "Pants_CHAR";
+            this.Pants_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Pants_CHAR.TabIndex = 59;
+            this.Pants_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Boots_CHAR
+            // 
+            this.Boots_CHAR.AutoSize = true;
+            this.Boots_CHAR.Location = new System.Drawing.Point(91, 185);
+            this.Boots_CHAR.Name = "Boots_CHAR";
+            this.Boots_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Boots_CHAR.TabIndex = 60;
+            this.Boots_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_CHAR
+            // 
+            this.LWeapon_CHAR.AutoSize = true;
+            this.LWeapon_CHAR.Location = new System.Drawing.Point(113, 185);
+            this.LWeapon_CHAR.Name = "LWeapon_CHAR";
+            this.LWeapon_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_CHAR.TabIndex = 61;
+            this.LWeapon_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_CHAR
+            // 
+            this.RWeapon_CHAR.AutoSize = true;
+            this.RWeapon_CHAR.Location = new System.Drawing.Point(135, 185);
+            this.RWeapon_CHAR.Name = "RWeapon_CHAR";
+            this.RWeapon_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_CHAR.TabIndex = 62;
+            this.RWeapon_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_CHAR
+            // 
+            this.Artifact_CHAR.AutoSize = true;
+            this.Artifact_CHAR.Location = new System.Drawing.Point(157, 185);
+            this.Artifact_CHAR.Name = "Artifact_CHAR";
+            this.Artifact_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_CHAR.TabIndex = 63;
+            this.Artifact_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Helm_DEX
+            // 
+            this.Helm_DEX.AutoSize = true;
+            this.Helm_DEX.Location = new System.Drawing.Point(3, 211);
+            this.Helm_DEX.Name = "Helm_DEX";
+            this.Helm_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Helm_DEX.TabIndex = 64;
+            this.Helm_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Maille_DEX
+            // 
+            this.Maille_DEX.AutoSize = true;
+            this.Maille_DEX.Location = new System.Drawing.Point(25, 211);
+            this.Maille_DEX.Name = "Maille_DEX";
+            this.Maille_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Maille_DEX.TabIndex = 65;
+            this.Maille_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_DEX
+            // 
+            this.Gloves_DEX.AutoSize = true;
+            this.Gloves_DEX.Location = new System.Drawing.Point(47, 211);
+            this.Gloves_DEX.Name = "Gloves_DEX";
+            this.Gloves_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_DEX.TabIndex = 66;
+            this.Gloves_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Pants_DEX
+            // 
+            this.Pants_DEX.AutoSize = true;
+            this.Pants_DEX.Location = new System.Drawing.Point(69, 211);
+            this.Pants_DEX.Name = "Pants_DEX";
+            this.Pants_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Pants_DEX.TabIndex = 67;
+            this.Pants_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Boots_DEX
+            // 
+            this.Boots_DEX.AutoSize = true;
+            this.Boots_DEX.Location = new System.Drawing.Point(91, 211);
+            this.Boots_DEX.Name = "Boots_DEX";
+            this.Boots_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Boots_DEX.TabIndex = 68;
+            this.Boots_DEX.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_DEX
+            // 
+            this.LWeapon_DEX.AutoSize = true;
+            this.LWeapon_DEX.Location = new System.Drawing.Point(113, 211);
+            this.LWeapon_DEX.Name = "LWeapon_DEX";
+            this.LWeapon_DEX.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_DEX.TabIndex = 69;
+            this.LWeapon_DEX.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_DEX
+            // 
+            this.RWeapon_DEX.AutoSize = true;
+            this.RWeapon_DEX.Location = new System.Drawing.Point(135, 211);
+            this.RWeapon_DEX.Name = "RWeapon_DEX";
+            this.RWeapon_DEX.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_DEX.TabIndex = 70;
+            this.RWeapon_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_DEX
+            // 
+            this.Artifact_DEX.AutoSize = true;
+            this.Artifact_DEX.Location = new System.Drawing.Point(157, 211);
+            this.Artifact_DEX.Name = "Artifact_DEX";
+            this.Artifact_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_DEX.TabIndex = 71;
+            this.Artifact_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Helm_STR
+            // 
+            this.Helm_STR.AutoSize = true;
+            this.Helm_STR.Location = new System.Drawing.Point(3, 237);
+            this.Helm_STR.Name = "Helm_STR";
+            this.Helm_STR.Size = new System.Drawing.Size(15, 14);
+            this.Helm_STR.TabIndex = 72;
+            this.Helm_STR.UseVisualStyleBackColor = true;
+            // 
+            // Maille_STR
+            // 
+            this.Maille_STR.AutoSize = true;
+            this.Maille_STR.Location = new System.Drawing.Point(25, 237);
+            this.Maille_STR.Name = "Maille_STR";
+            this.Maille_STR.Size = new System.Drawing.Size(15, 14);
+            this.Maille_STR.TabIndex = 73;
+            this.Maille_STR.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_STR
+            // 
+            this.Gloves_STR.AutoSize = true;
+            this.Gloves_STR.Location = new System.Drawing.Point(47, 237);
+            this.Gloves_STR.Name = "Gloves_STR";
+            this.Gloves_STR.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_STR.TabIndex = 74;
+            this.Gloves_STR.UseVisualStyleBackColor = true;
+            // 
+            // Pants_STR
+            // 
+            this.Pants_STR.AutoSize = true;
+            this.Pants_STR.Location = new System.Drawing.Point(69, 237);
+            this.Pants_STR.Name = "Pants_STR";
+            this.Pants_STR.Size = new System.Drawing.Size(15, 14);
+            this.Pants_STR.TabIndex = 75;
+            this.Pants_STR.UseVisualStyleBackColor = true;
+            // 
+            // Boots_STR
+            // 
+            this.Boots_STR.AutoSize = true;
+            this.Boots_STR.Location = new System.Drawing.Point(91, 237);
+            this.Boots_STR.Name = "Boots_STR";
+            this.Boots_STR.Size = new System.Drawing.Size(15, 14);
+            this.Boots_STR.TabIndex = 76;
+            this.Boots_STR.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_STR
+            // 
+            this.LWeapon_STR.AutoSize = true;
+            this.LWeapon_STR.Location = new System.Drawing.Point(113, 237);
+            this.LWeapon_STR.Name = "LWeapon_STR";
+            this.LWeapon_STR.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_STR.TabIndex = 77;
+            this.LWeapon_STR.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_STR
+            // 
+            this.RWeapon_STR.AutoSize = true;
+            this.RWeapon_STR.Location = new System.Drawing.Point(135, 237);
+            this.RWeapon_STR.Name = "RWeapon_STR";
+            this.RWeapon_STR.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_STR.TabIndex = 78;
+            this.RWeapon_STR.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_STR
+            // 
+            this.Artifact_STR.AutoSize = true;
+            this.Artifact_STR.Location = new System.Drawing.Point(157, 237);
+            this.Artifact_STR.Name = "Artifact_STR";
+            this.Artifact_STR.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_STR.TabIndex = 79;
+            this.Artifact_STR.UseVisualStyleBackColor = true;
+            // 
+            // Helm_INT
+            // 
+            this.Helm_INT.AutoSize = true;
+            this.Helm_INT.Location = new System.Drawing.Point(3, 263);
+            this.Helm_INT.Name = "Helm_INT";
+            this.Helm_INT.Size = new System.Drawing.Size(15, 14);
+            this.Helm_INT.TabIndex = 80;
+            this.Helm_INT.UseVisualStyleBackColor = true;
+            // 
+            // Maille_INT
+            // 
+            this.Maille_INT.AutoSize = true;
+            this.Maille_INT.Location = new System.Drawing.Point(25, 263);
+            this.Maille_INT.Name = "Maille_INT";
+            this.Maille_INT.Size = new System.Drawing.Size(15, 14);
+            this.Maille_INT.TabIndex = 81;
+            this.Maille_INT.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_INT
+            // 
+            this.Gloves_INT.AutoSize = true;
+            this.Gloves_INT.Location = new System.Drawing.Point(47, 263);
+            this.Gloves_INT.Name = "Gloves_INT";
+            this.Gloves_INT.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_INT.TabIndex = 82;
+            this.Gloves_INT.UseVisualStyleBackColor = true;
+            // 
+            // Pants_INT
+            // 
+            this.Pants_INT.AutoSize = true;
+            this.Pants_INT.Location = new System.Drawing.Point(69, 263);
+            this.Pants_INT.Name = "Pants_INT";
+            this.Pants_INT.Size = new System.Drawing.Size(15, 14);
+            this.Pants_INT.TabIndex = 83;
+            this.Pants_INT.UseVisualStyleBackColor = true;
+            // 
+            // Boots_INT
+            // 
+            this.Boots_INT.AutoSize = true;
+            this.Boots_INT.Location = new System.Drawing.Point(91, 263);
+            this.Boots_INT.Name = "Boots_INT";
+            this.Boots_INT.Size = new System.Drawing.Size(15, 14);
+            this.Boots_INT.TabIndex = 84;
+            this.Boots_INT.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_INT
+            // 
+            this.LWeapon_INT.AutoSize = true;
+            this.LWeapon_INT.Location = new System.Drawing.Point(113, 263);
+            this.LWeapon_INT.Name = "LWeapon_INT";
+            this.LWeapon_INT.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_INT.TabIndex = 85;
+            this.LWeapon_INT.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_INT
+            // 
+            this.RWeapon_INT.AutoSize = true;
+            this.RWeapon_INT.Location = new System.Drawing.Point(135, 263);
+            this.RWeapon_INT.Name = "RWeapon_INT";
+            this.RWeapon_INT.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_INT.TabIndex = 86;
+            this.RWeapon_INT.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_INT
+            // 
+            this.Artifact_INT.AutoSize = true;
+            this.Artifact_INT.Location = new System.Drawing.Point(157, 263);
+            this.Artifact_INT.Name = "Artifact_INT";
+            this.Artifact_INT.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_INT.TabIndex = 87;
+            this.Artifact_INT.UseVisualStyleBackColor = true;
+            // 
+            // Helm_PERC
+            // 
+            this.Helm_PERC.AutoSize = true;
+            this.Helm_PERC.Location = new System.Drawing.Point(3, 289);
+            this.Helm_PERC.Name = "Helm_PERC";
+            this.Helm_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Helm_PERC.TabIndex = 88;
+            this.Helm_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Maille_PERC
+            // 
+            this.Maille_PERC.AutoSize = true;
+            this.Maille_PERC.Location = new System.Drawing.Point(25, 289);
+            this.Maille_PERC.Name = "Maille_PERC";
+            this.Maille_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Maille_PERC.TabIndex = 89;
+            this.Maille_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_PERC
+            // 
+            this.Gloves_PERC.AutoSize = true;
+            this.Gloves_PERC.Location = new System.Drawing.Point(47, 289);
+            this.Gloves_PERC.Name = "Gloves_PERC";
+            this.Gloves_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_PERC.TabIndex = 90;
+            this.Gloves_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Pants_PERC
+            // 
+            this.Pants_PERC.AutoSize = true;
+            this.Pants_PERC.Location = new System.Drawing.Point(69, 289);
+            this.Pants_PERC.Name = "Pants_PERC";
+            this.Pants_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Pants_PERC.TabIndex = 91;
+            this.Pants_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Boots_PERC
+            // 
+            this.Boots_PERC.AutoSize = true;
+            this.Boots_PERC.Location = new System.Drawing.Point(91, 289);
+            this.Boots_PERC.Name = "Boots_PERC";
+            this.Boots_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Boots_PERC.TabIndex = 92;
+            this.Boots_PERC.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_PERC
+            // 
+            this.LWeapon_PERC.AutoSize = true;
+            this.LWeapon_PERC.Location = new System.Drawing.Point(113, 289);
+            this.LWeapon_PERC.Name = "LWeapon_PERC";
+            this.LWeapon_PERC.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_PERC.TabIndex = 93;
+            this.LWeapon_PERC.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_PERC
+            // 
+            this.RWeapon_PERC.AutoSize = true;
+            this.RWeapon_PERC.Location = new System.Drawing.Point(135, 289);
+            this.RWeapon_PERC.Name = "RWeapon_PERC";
+            this.RWeapon_PERC.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_PERC.TabIndex = 94;
+            this.RWeapon_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_PERC
+            // 
+            this.Artifact_PERC.AutoSize = true;
+            this.Artifact_PERC.Location = new System.Drawing.Point(157, 289);
+            this.Artifact_PERC.Name = "Artifact_PERC";
+            this.Artifact_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_PERC.TabIndex = 95;
+            this.Artifact_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Enemy_cbox
+            // 
+            this.Enemy_cbox.AutoSize = true;
+            this.Enemy_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Enemy_cbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.Enemy_cbox.Location = new System.Drawing.Point(347, 8);
+            this.Enemy_cbox.Name = "Enemy_cbox";
+            this.Enemy_cbox.Size = new System.Drawing.Size(58, 17);
+            this.Enemy_cbox.TabIndex = 75;
+            this.Enemy_cbox.Text = "Enemy";
+            this.Enemy_cbox.UseVisualStyleBackColor = false;
+            // 
+            // CCCUSLCK_UD
+            // 
+            this.CCCUSLCK_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCCUSLCK_UD.Enabled = false;
+            this.CCCUSLCK_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCCUSLCK_UD.Location = new System.Drawing.Point(218, 32);
+            this.CCCUSLCK_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.CCCUSLCK_UD.Name = "CCCUSLCK_UD";
+            this.CCCUSLCK_UD.Size = new System.Drawing.Size(50, 20);
+            this.CCCUSLCK_UD.TabIndex = 76;
+            // 
+            // CCCUSMSP_UD
+            // 
+            this.CCCUSMSP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCCUSMSP_UD.Enabled = false;
+            this.CCCUSMSP_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCCUSMSP_UD.Location = new System.Drawing.Point(274, 32);
+            this.CCCUSMSP_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.CCCUSMSP_UD.Name = "CCCUSMSP_UD";
+            this.CCCUSMSP_UD.Size = new System.Drawing.Size(50, 20);
+            this.CCCUSMSP_UD.TabIndex = 77;
+            // 
+            // GITEMS_cbox
+            // 
+            this.GITEMS_cbox.AutoSize = true;
+            this.GITEMS_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.GITEMS_cbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.GITEMS_cbox.Location = new System.Drawing.Point(411, 8);
+            this.GITEMS_cbox.Name = "GITEMS_cbox";
+            this.GITEMS_cbox.Size = new System.Drawing.Size(77, 17);
+            this.GITEMS_cbox.TabIndex = 78;
+            this.GITEMS_cbox.Text = "GEN Items";
+            this.GITEMS_cbox.UseVisualStyleBackColor = false;
+            // 
+            // NPC_Create_btn
+            // 
+            this.NPC_Create_btn.Location = new System.Drawing.Point(3, 399);
+            this.NPC_Create_btn.Name = "NPC_Create_btn";
+            this.NPC_Create_btn.Size = new System.Drawing.Size(75, 23);
+            this.NPC_Create_btn.TabIndex = 79;
+            this.NPC_Create_btn.Text = "Generate";
+            this.NPC_Create_btn.UseVisualStyleBackColor = true;
+            this.NPC_Create_btn.Click += new System.EventHandler(this.NPC_Create_btn_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.pictureBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(844, 592);
+            this.tabPage2.TabIndex = 5;
+            this.tabPage2.Text = "Map";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Dungons_And_Dargons.Properties.Resources.Magnosh_territories;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(838, 586);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // User
             // 
@@ -5190,36 +4924,30 @@
             this.groupBox1.PerformLayout();
             this.NPCC_tab.ResumeLayout(false);
             this.NPCC_tab.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOXPMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOPERCMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOINTMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOSTRMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCODEXMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOCHARMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOSDEFMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCODEFMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOSATKMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOATKMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOMPMOD_tbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCOHPMOD_tbox)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLVL_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCPERC_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCINT_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCSTR_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCDEX_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCCHAR_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCSDEF_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCDEF__UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCSATK_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCHP_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCSATK_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOATKMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOSATKMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCDEF_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCODEFMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLVL_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOSDEFMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCSDEF_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOCHARMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCPERC_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOXPMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCODEXMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCHAR_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOSTRMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCINT_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOINTMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCSTR_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOPERCMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOMPMOD_tbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCDEX_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCOHPMOD_tbox)).EndInit();
             this.GMItemc_tab.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -5256,6 +4984,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.MSlots_Spell_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank_Spell_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tier_Spell_editor_ud)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLCK_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSMSP_UD)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5275,90 +5009,6 @@
         private System.Windows.Forms.TabPage GMItemc_tab;
         private System.Windows.Forms.Button UPLOAD_btn;
         private System.Windows.Forms.Button Roll_btn;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox CCOMMP_tbox;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox CCOMHP_tbox;
-        private System.Windows.Forms.NumericUpDown CCOXPMOD_tbox;
-        private System.Windows.Forms.Button CCOAPPLYMOD_btn;
-        private System.Windows.Forms.NumericUpDown CCOPERCMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCOINTMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCOSTRMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCODEXMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCOCHARMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCOSDEFMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCODEFMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCOSATKMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCOATKMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCOMPMOD_tbox;
-        private System.Windows.Forms.NumericUpDown CCOHPMOD_tbox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox CCOXP_tbox;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox CCOTYPE_tbox;
-        private System.Windows.Forms.TextBox CCOPERC_tbox;
-        private System.Windows.Forms.TextBox CCOINT_tbox;
-        private System.Windows.Forms.TextBox CCOSTR_tbox;
-        private System.Windows.Forms.TextBox CCODEX_tbox;
-        private System.Windows.Forms.TextBox CCOCHAR_tbox;
-        private System.Windows.Forms.TextBox CCOSDEF_tbox;
-        private System.Windows.Forms.TextBox CCODEF_tbox;
-        private System.Windows.Forms.TextBox CCOSATK_tbox;
-        private System.Windows.Forms.TextBox CCOATK_tbox;
-        private System.Windows.Forms.TextBox CCOMP_tbox;
-        private System.Windows.Forms.TextBox CCOHP_tbox;
-        private System.Windows.Forms.TextBox CCOLVL_tbox;
-        private System.Windows.Forms.TextBox CCOName_tbox;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox CCmbase_chbox;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.ComboBox CCTYPE_cbox;
-        private System.Windows.Forms.CheckBox CCGolem__chbox;
-        private System.Windows.Forms.CheckBox CCCustom__chbox;
-        private System.Windows.Forms.NumericUpDown CCCUSLVL_UD;
-        private System.Windows.Forms.ComboBox CCLEVELSEL_CBOX;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.CheckBox CCBos_chbox;
-        private System.Windows.Forms.NumericUpDown CCPERC_UD;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.NumericUpDown CCINT_UD;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.NumericUpDown CCSTR_UD;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.NumericUpDown CCDEX_UD;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.NumericUpDown CCCHAR_UD;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.NumericUpDown CCSDEF_UD;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.NumericUpDown CCDEF__UD;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.NumericUpDown CCSATK_UD;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.NumericUpDown CCATK_UD;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.NumericUpDown CCMP_UD;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.NumericUpDown CCHP_UD;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.TextBox CCName_tbox;
-        private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.ComboBox Filter_Relation;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -5459,100 +5109,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown ELevel_editor_ud;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox Artifact_INT;
-        private System.Windows.Forms.CheckBox Weapon_INT;
-        private System.Windows.Forms.CheckBox Boots_INT;
-        private System.Windows.Forms.CheckBox Pants_INT;
-        private System.Windows.Forms.CheckBox Gloves_INT;
-        private System.Windows.Forms.CheckBox Maille_INT;
-        private System.Windows.Forms.CheckBox Helm_INT;
-        private System.Windows.Forms.CheckBox Artifact_STR;
-        private System.Windows.Forms.CheckBox Weapon_STR;
-        private System.Windows.Forms.CheckBox Boots_STR;
-        private System.Windows.Forms.CheckBox Pants_STR;
-        private System.Windows.Forms.CheckBox Gloves_STR;
-        private System.Windows.Forms.CheckBox Maille_STR;
-        private System.Windows.Forms.CheckBox Helm_STR;
-        private System.Windows.Forms.CheckBox Artifact_DEX;
-        private System.Windows.Forms.CheckBox Weapon_DEX;
-        private System.Windows.Forms.CheckBox Boots_DEX;
-        private System.Windows.Forms.CheckBox DEX;
-        private System.Windows.Forms.CheckBox Gloves_DEX;
-        private System.Windows.Forms.CheckBox Maille_DEX;
-        private System.Windows.Forms.CheckBox Helm_DEX;
-        private System.Windows.Forms.CheckBox Artifact_CHAR;
-        private System.Windows.Forms.CheckBox Weapon_CHAR;
-        private System.Windows.Forms.CheckBox Boots_CHAR;
-        private System.Windows.Forms.CheckBox Pants_CHAR;
-        private System.Windows.Forms.CheckBox Gloves_CHAR;
-        private System.Windows.Forms.CheckBox Maille_CHAR;
-        private System.Windows.Forms.CheckBox Helm_CHAR;
-        private System.Windows.Forms.CheckBox Artifact_SDEF;
-        private System.Windows.Forms.CheckBox Weapon_SDEF;
-        private System.Windows.Forms.CheckBox Boots_SDEF;
-        private System.Windows.Forms.CheckBox SDEF;
-        private System.Windows.Forms.CheckBox Gloves_SDEF;
-        private System.Windows.Forms.CheckBox Maille_SDEF;
-        private System.Windows.Forms.CheckBox Helm_SDEF;
-        private System.Windows.Forms.CheckBox Artifact_DEF;
-        private System.Windows.Forms.CheckBox Weapon_DEF;
-        private System.Windows.Forms.CheckBox Boots_DEF;
-        private System.Windows.Forms.CheckBox Pants_DEF;
-        private System.Windows.Forms.CheckBox Gloves_DEF;
-        private System.Windows.Forms.CheckBox Helm_DEF;
-        private System.Windows.Forms.CheckBox Maille_DEF;
-        private System.Windows.Forms.CheckBox Artifact_SATK;
-        private System.Windows.Forms.CheckBox Weapon_SATK;
-        private System.Windows.Forms.CheckBox Boots_SATK;
-        private System.Windows.Forms.CheckBox Pants_SATK;
-        private System.Windows.Forms.CheckBox Gloves_SATK;
-        private System.Windows.Forms.CheckBox Maille_SATK;
-        private System.Windows.Forms.CheckBox Helm_SATK;
-        private System.Windows.Forms.CheckBox Artifact_ATK;
-        private System.Windows.Forms.CheckBox Weapon_ATK;
-        private System.Windows.Forms.CheckBox Boots_ATK;
-        private System.Windows.Forms.CheckBox Pants_ATK;
-        private System.Windows.Forms.CheckBox Gloves_ATK;
-        private System.Windows.Forms.CheckBox Maille_ATK;
-        private System.Windows.Forms.CheckBox Helm_ATK;
-        private System.Windows.Forms.CheckBox Artifact_MP;
-        private System.Windows.Forms.CheckBox Weapon_MP;
-        private System.Windows.Forms.CheckBox Boots_MP;
-        private System.Windows.Forms.CheckBox Pants_MP;
-        private System.Windows.Forms.CheckBox Gloves_MP;
-        private System.Windows.Forms.CheckBox Maille_MP;
-        private System.Windows.Forms.CheckBox Artifact_HP;
-        private System.Windows.Forms.CheckBox Weapon_HP;
-        private System.Windows.Forms.CheckBox Boots_HP;
-        private System.Windows.Forms.CheckBox Pants_HP;
-        private System.Windows.Forms.CheckBox Gloves_HP;
-        private System.Windows.Forms.CheckBox Maille_HP;
-        private System.Windows.Forms.CheckBox Helm_HP;
-        private System.Windows.Forms.CheckBox Helm_MP;
-        private System.Windows.Forms.CheckBox Helm_PERC;
-        private System.Windows.Forms.CheckBox Maille_PERC;
-        private System.Windows.Forms.CheckBox Gloves_PERC;
-        private System.Windows.Forms.CheckBox Pants_PERC;
-        private System.Windows.Forms.CheckBox Boots_PERC;
-        private System.Windows.Forms.CheckBox Weapon_PERC;
-        private System.Windows.Forms.CheckBox Artifact_PERC;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button UItem_editor_btn;
         private System.Windows.Forms.Label STATS_LBL;
         private System.Windows.Forms.Button ATK_P_BTN;
@@ -5619,7 +5175,7 @@
         private System.Windows.Forms.TextBox Artifact_tbox;
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.Button DeEquip_Weapon_btn;
-        private System.Windows.Forms.TextBox Weapon_tbox;
+        private System.Windows.Forms.TextBox WeaponLeft_tbox;
         private System.Windows.Forms.Label label89;
         private System.Windows.Forms.Button DeEquip_Gloves_btn;
         private System.Windows.Forms.TextBox Gloves_tbox;
@@ -5658,6 +5214,157 @@
         private System.Windows.Forms.GroupBox SpellInfo_CNTRL;
         private System.Windows.Forms.GroupBox itemInfo_CNTRL;
         private System.Windows.Forms.GroupBox Equipment_info_CTRL;
-        private System.ComponentModel.BackgroundWorker MAINUPDATE;
+        private System.Windows.Forms.TextBox WeaponRight_tbox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox CCName_tbox;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.NumericUpDown CCHP_UD;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.NumericUpDown CCMP_UD;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.NumericUpDown CCATK_UD;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.NumericUpDown CCSATK_UD;
+        private System.Windows.Forms.CheckBox CCmbase_chbox;
+        private System.Windows.Forms.NumericUpDown CCOATKMOD_tbox;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.ComboBox CCTYPE_cbox;
+        private System.Windows.Forms.NumericUpDown CCOSATKMOD_tbox;
+        private System.Windows.Forms.CheckBox CCGolem__chbox;
+        private System.Windows.Forms.NumericUpDown CCDEF_UD;
+        private System.Windows.Forms.CheckBox CCCustom__chbox;
+        private System.Windows.Forms.NumericUpDown CCODEFMOD_tbox;
+        private System.Windows.Forms.NumericUpDown CCCUSLVL_UD;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.ComboBox CCLEVELSEL_CBOX;
+        private System.Windows.Forms.NumericUpDown CCOSDEFMOD_tbox;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.NumericUpDown CCSDEF_UD;
+        private System.Windows.Forms.CheckBox CCBos_chbox;
+        private System.Windows.Forms.NumericUpDown CCOCHARMOD_tbox;
+        private System.Windows.Forms.NumericUpDown CCPERC_UD;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.NumericUpDown CCOXPMOD_tbox;
+        private System.Windows.Forms.NumericUpDown CCODEXMOD_tbox;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.NumericUpDown CCCHAR_UD;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown CCOSTRMOD_tbox;
+        private System.Windows.Forms.NumericUpDown CCINT_UD;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.NumericUpDown CCOINTMOD_tbox;
+        private System.Windows.Forms.NumericUpDown CCSTR_UD;
+        private System.Windows.Forms.NumericUpDown CCOPERCMOD_tbox;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.NumericUpDown CCOMPMOD_tbox;
+        private System.Windows.Forms.NumericUpDown CCDEX_UD;
+        private System.Windows.Forms.NumericUpDown CCOHPMOD_tbox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox Artifact_PERC;
+        private System.Windows.Forms.CheckBox RWeapon_PERC;
+        private System.Windows.Forms.CheckBox LWeapon_PERC;
+        private System.Windows.Forms.CheckBox Boots_PERC;
+        private System.Windows.Forms.CheckBox Pants_PERC;
+        private System.Windows.Forms.CheckBox Gloves_PERC;
+        private System.Windows.Forms.CheckBox Maille_PERC;
+        private System.Windows.Forms.CheckBox Helm_PERC;
+        private System.Windows.Forms.CheckBox Artifact_INT;
+        private System.Windows.Forms.CheckBox RWeapon_INT;
+        private System.Windows.Forms.CheckBox LWeapon_INT;
+        private System.Windows.Forms.CheckBox Boots_INT;
+        private System.Windows.Forms.CheckBox Pants_INT;
+        private System.Windows.Forms.CheckBox Gloves_INT;
+        private System.Windows.Forms.CheckBox Maille_INT;
+        private System.Windows.Forms.CheckBox Helm_INT;
+        private System.Windows.Forms.CheckBox Artifact_STR;
+        private System.Windows.Forms.CheckBox RWeapon_STR;
+        private System.Windows.Forms.CheckBox LWeapon_STR;
+        private System.Windows.Forms.CheckBox Boots_STR;
+        private System.Windows.Forms.CheckBox Pants_STR;
+        private System.Windows.Forms.CheckBox Gloves_STR;
+        private System.Windows.Forms.CheckBox Maille_STR;
+        private System.Windows.Forms.CheckBox Helm_STR;
+        private System.Windows.Forms.CheckBox Artifact_DEX;
+        private System.Windows.Forms.CheckBox RWeapon_DEX;
+        private System.Windows.Forms.CheckBox LWeapon_DEX;
+        private System.Windows.Forms.CheckBox Boots_DEX;
+        private System.Windows.Forms.CheckBox Pants_DEX;
+        private System.Windows.Forms.CheckBox Gloves_DEX;
+        private System.Windows.Forms.CheckBox Maille_DEX;
+        private System.Windows.Forms.CheckBox Helm_DEX;
+        private System.Windows.Forms.CheckBox Artifact_CHAR;
+        private System.Windows.Forms.CheckBox RWeapon_CHAR;
+        private System.Windows.Forms.CheckBox LWeapon_CHAR;
+        private System.Windows.Forms.CheckBox Boots_CHAR;
+        private System.Windows.Forms.CheckBox Pants_CHAR;
+        private System.Windows.Forms.CheckBox Gloves_CHAR;
+        private System.Windows.Forms.CheckBox Maille_CHAR;
+        private System.Windows.Forms.CheckBox Helm_CHAR;
+        private System.Windows.Forms.CheckBox Artifact_SDEF;
+        private System.Windows.Forms.CheckBox RWeapon_SDEF;
+        private System.Windows.Forms.CheckBox LWeapon_SDEF;
+        private System.Windows.Forms.CheckBox Boots_SDEF;
+        private System.Windows.Forms.CheckBox Pants_SDEF;
+        private System.Windows.Forms.CheckBox Gloves_SDEF;
+        private System.Windows.Forms.CheckBox Maille_SDEF;
+        private System.Windows.Forms.CheckBox Helm_SDEF;
+        private System.Windows.Forms.CheckBox Artifact_DEF;
+        private System.Windows.Forms.CheckBox RWeapon_DEF;
+        private System.Windows.Forms.CheckBox LWeapon_DEF;
+        private System.Windows.Forms.CheckBox Boots_DEF;
+        private System.Windows.Forms.CheckBox Pants_DEF;
+        private System.Windows.Forms.CheckBox Gloves_DEF;
+        private System.Windows.Forms.CheckBox Maille_DEF;
+        private System.Windows.Forms.CheckBox Helm_DEF;
+        private System.Windows.Forms.CheckBox Artifact_SATK;
+        private System.Windows.Forms.CheckBox RWeapon_SATK;
+        private System.Windows.Forms.CheckBox LWeapon_SATK;
+        private System.Windows.Forms.CheckBox Boots_SATK;
+        private System.Windows.Forms.CheckBox Pants_SATK;
+        private System.Windows.Forms.CheckBox Gloves_SATK;
+        private System.Windows.Forms.CheckBox Maille_SATK;
+        private System.Windows.Forms.CheckBox Helm_SATK;
+        private System.Windows.Forms.CheckBox Artifact_ATK;
+        private System.Windows.Forms.CheckBox RWeapon_ATK;
+        private System.Windows.Forms.CheckBox LWeapon_ATK;
+        private System.Windows.Forms.CheckBox Boots_ATK;
+        private System.Windows.Forms.CheckBox Pants_ATK;
+        private System.Windows.Forms.CheckBox Gloves_ATK;
+        private System.Windows.Forms.CheckBox Maille_ATK;
+        private System.Windows.Forms.CheckBox Helm_ATK;
+        private System.Windows.Forms.CheckBox Artifact_MP;
+        private System.Windows.Forms.CheckBox RWeapon_MP;
+        private System.Windows.Forms.CheckBox LWeapon_MP;
+        private System.Windows.Forms.CheckBox Boots_MP;
+        private System.Windows.Forms.CheckBox Pants_MP;
+        private System.Windows.Forms.CheckBox Gloves_MP;
+        private System.Windows.Forms.CheckBox Maille_MP;
+        private System.Windows.Forms.CheckBox Helm_MP;
+        private System.Windows.Forms.CheckBox Artifact_HP;
+        private System.Windows.Forms.CheckBox RWeapon_HP;
+        private System.Windows.Forms.CheckBox LWeapon_HP;
+        private System.Windows.Forms.CheckBox Boots_HP;
+        private System.Windows.Forms.CheckBox Pants_HP;
+        private System.Windows.Forms.CheckBox Gloves_HP;
+        private System.Windows.Forms.CheckBox Maille_HP;
+        private System.Windows.Forms.CheckBox Helm_HP;
+        private System.Windows.Forms.CheckBox Enemy_cbox;
+        private System.Windows.Forms.NumericUpDown CCCUSMSP_UD;
+        private System.Windows.Forms.NumericUpDown CCCUSLCK_UD;
+        private System.Windows.Forms.CheckBox GITEMS_cbox;
+        private System.Windows.Forms.Button NPC_Create_btn;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -14,7 +14,7 @@ namespace Dungons_And_Dargons
 {
     public class NPC
     {
-        MySqlConnection conn;
+        public MySqlConnection conn;
         public int PlayerID { get; set; }
         public string UserName { get; set; }
         public string PName { get; set; }
@@ -53,6 +53,18 @@ namespace Dungons_And_Dargons
         public int M_INT { get; set; }
         public int M_PERC { get; set; }
 
+        public int T_HP { get; set; }
+        public int T_MP { get; set; }
+        public int T_ATK { get; set; }
+        public int T_SATK { get; set; }
+        public int T_DEF { get; set; }
+        public int T_SDEF { get; set; }
+        public int T_CHAR { get; set; }
+        public int T_DEX { get; set; }
+        public int T_STR { get; set; }
+        public int T_INT { get; set; }
+        public int T_PERC { get; set; }
+
         public int Earth { get; set; }
         public int Lightning { get; set; }
         public int Fire { get; set; }
@@ -75,7 +87,8 @@ namespace Dungons_And_Dargons
         public ITEM Pants { get; private set; }
         public ITEM Boots { get; private set; }
         public ITEM Gloves { get; private set; }
-        public ITEM Weapon { get; private set; }
+        public ITEM WeaponLeft { get; private set; }
+        public ITEM WeaponRight { get; private set; }
         public ITEM Artifact { get; private set; }
 
         public int NHPMax { get; set; }
@@ -103,7 +116,8 @@ namespace Dungons_And_Dargons
             Pants = new ITEM(conn);
             Boots = new ITEM(conn);
             Gloves = new ITEM(conn);
-            Weapon = new ITEM(conn);
+            WeaponLeft = new ITEM(conn);
+            WeaponRight = new ITEM(conn);
             Artifact = new ITEM(conn);
         }
 
@@ -160,10 +174,23 @@ namespace Dungons_And_Dargons
 
                 if (EquipType == "Weapon")
                 {
+                    if (WeaponRight.Name != null && WeaponLeft.Name != null)
+                    {
+                        string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `Weapon`=1 AND `OWNER_ID` = '" + PlayerID + "'";
+                        MySqlCommand cmd = new MySqlCommand(sql, conn);
+                        cmd.ExecuteNonQuery();
+                        WeaponLeft = new ITEM(conn);
+                        WeaponRight = new ITEM(conn);
+                    }
+                }
+
+                if (EquipType == "WeaponALL")
+                {
                     string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `Weapon`=1 AND `OWNER_ID` = '" + PlayerID + "'";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
-                    Weapon = new ITEM(conn);
+                    WeaponLeft = new ITEM(conn);
+                    WeaponRight = new ITEM(conn);
                 }
 
                 if (EquipType == "Artifact")
@@ -185,7 +212,8 @@ namespace Dungons_And_Dargons
                     Pants = new ITEM(conn);
                     Boots = new ITEM(conn);
                     Gloves = new ITEM(conn);
-                    Weapon = new ITEM(conn);
+                    WeaponLeft = new ITEM(conn);
+                    WeaponRight = new ITEM(conn);
                     Artifact = new ITEM(conn);
 
                 }
@@ -255,9 +283,16 @@ namespace Dungons_And_Dargons
                 success = true;
                 DC_ITEM.Equipped = true;
                 DC_ITEM.PostData();
-                Weapon.ItemID = DC_ITEM.ItemID;
-                Weapon.Name = DC_ITEM.Name;
-                Weapon.GetData();
+                if (WeaponLeft.Name != null)
+                {
+                    WeaponRight.ItemID = DC_ITEM.ItemID;
+                    WeaponRight.Name = DC_ITEM.Name;
+                    WeaponRight.GetData();
+                } else {
+                    WeaponLeft.ItemID = DC_ITEM.ItemID;
+                    WeaponLeft.Name = DC_ITEM.Name;
+                    WeaponLeft.GetData();
+                }
             }
 
             if (DC_ITEM.Prop_To_Type() == "Artifact")
@@ -270,6 +305,70 @@ namespace Dungons_And_Dargons
                 Artifact.GetData();
             }
             return success;
+        }
+
+        public void CreateData()
+        {
+            try
+            {
+
+                string sql = "INSERT INTO `player` (`PName`, `PDescription`, `PLevel`, `XPREQ`, `XP`, `Age`, `Gold`, `HPCur`, `HPMax`, `MPCur`, `MPMax`" +
+                    ", `ATK`, `SATK`, `DEF`, `SDEF`, `CHARIS`, `DEX`, `STR`, `INTEL`, `PERC`, `Satiety`, `POwner`, `USERNAME`, `PASSWORD`" +
+                    ", `GAMEMASTER`, `PLAYER`, `NPC`, `ENEMY`, `STATS`, `ALL`, `Earth`, `Lightning`, `Fire`, `Ice`, `Unholy`, `Holy`) " +
+                    "VALUES (" +
+                    "'" + PName + "'," +
+                    "'" + Description + "'," +
+                    "'" + Level + "'," +
+                    "'" + XPREQ + "'," +
+                    "'" + XP + "'," +
+                    "'" + Age + "'," +
+                    "'" + Gold + "'," +
+                    "'" + HP + "'," +
+                    "'" + HPMax + "'," +
+                    "'" + MP + "'," +
+                    "'" + MPMax + "'," +
+                    "'" + ATK + "'," +
+                    "'" + SATK + "'," +
+                    "'" + DEF + "'," +
+                    "'" + SDEF + "'," +
+                    "'" + CHARIS + "'," +
+                    "'" + DEX + "'," +
+                    "'" + STR + "'," +
+                    "'" + INTEL + "'," +
+                    "'" + PERC + "'," +
+                    "'" + SATIE + "'," +
+                    "'" + PlayerOwner + "'," +
+                    "'" + UserName + "'," +
+                    "'" + "PASSWORD" + "'," +
+                    "'" + Convert.ToInt32(GAMEMASTER) + "'," +
+                    "'" + Convert.ToInt32(isPlayer) + "'," +
+                    "'" + Convert.ToInt32(isNPC) + "'," +
+                    "'" + Convert.ToInt32(isEnemy) + "'," +
+                    "'" + STATS + "'," +
+                    "'" + "1" + "'," +
+                    "'" + Earth + "'," +
+                    "'" + Lightning + "'," +
+                    "'" + Fire + "'," +
+                    "'" + Ice + "'," +
+                    "'" + Unholy + "'," +
+                    "'" + Holy + "'"
+                    + ");";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+
+                MySqlCommand cmd2 = new MySqlCommand("SELECT `idPlayer` FROM `player` WHERE UserName = '" + UserName + "'", conn);
+                MySqlDataReader rdr2 = cmd2.ExecuteReader();
+                while (rdr2.Read())
+                {
+                    PlayerID = Convert.ToInt32(rdr2[0]);
+                }
+                rdr2.Close();
+                MessageBox.Show(PlayerID.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         public void GetData()
@@ -349,6 +448,18 @@ namespace Dungons_And_Dargons
                     Ice = Convert.ToInt32(rdr[31]);
                     Unholy = Convert.ToInt32(rdr[32]);
                     Holy = Convert.ToInt32(rdr[33]);
+
+                    T_HP = HPMax + M_HP;
+                    T_MP = MPMax + M_MP;
+                    T_ATK = ATK + M_ATK;
+                    T_SATK = SATK + M_SATK;
+                    T_DEF = DEF + M_DEF;
+                    T_SDEF = SDEF + M_SDEF;
+                    T_CHAR = CHARIS + M_CHAR;
+                    T_DEX = DEX + M_DEX;
+                    T_STR = STR + M_STR;
+                    T_INT = INTEL + M_INT;
+                    T_PERC = PERC + M_PERC;
                 }
 
                 rdr.Close();
@@ -446,17 +557,45 @@ namespace Dungons_And_Dargons
                     Equip(equipable);
                 }
 
-                M_HP = Helmet.M_HP + Maille.M_HP + Pants.M_HP + Boots.M_HP + Weapon.M_HP + Artifact.M_HP;
-                M_MP = Helmet.M_MP + Maille.M_MP + Pants.M_MP + Boots.M_MP + Weapon.M_MP + Artifact.M_MP;
-                M_ATK = Helmet.M_ATK + Maille.M_ATK + Pants.M_ATK + Boots.M_ATK + Weapon.M_ATK + Artifact.M_ATK;
-                M_SATK = Helmet.M_SATK + Maille.M_SATK + Pants.M_SATK + Boots.M_SATK + Weapon.M_SATK + Artifact.M_SATK;
-                M_DEF = Helmet.M_DEF + Maille.M_DEF + Pants.M_DEF + Boots.M_DEF + Weapon.M_DEF + Artifact.M_DEF;
-                M_SDEF = Helmet.M_SDEF + Maille.M_SDEF + Pants.M_SDEF + Boots.M_SDEF + Weapon.M_SDEF + Artifact.M_SDEF;
-                M_CHAR = Helmet.M_CHAR + Maille.M_CHAR + Pants.M_CHAR + Boots.M_CHAR + Weapon.M_CHAR + Artifact.M_CHAR;
-                M_DEX = Helmet.M_DEX + Maille.M_DEX + Pants.M_DEX + Boots.M_DEX + Weapon.M_DEX + Artifact.M_DEX;
-                M_STR = Helmet.M_STR + Maille.M_STR + Pants.M_STR + Boots.M_STR + Weapon.M_STR + Artifact.M_STR;
-                M_INT = Helmet.M_INT + Maille.M_INT + Pants.M_INT + Boots.M_INT + Weapon.M_INT + Artifact.M_INT;
-                M_PERC = Helmet.M_PERC + Maille.M_PERC + Pants.M_PERC + Boots.M_PERC + Weapon.M_PERC + Artifact.M_PERC;
+                M_HP = Helmet.M_HP + Maille.M_HP + Pants.M_HP + Boots.M_HP + WeaponLeft.M_HP + WeaponRight.M_HP + Artifact.M_HP;
+                M_MP = Helmet.M_MP + Maille.M_MP + Pants.M_MP + Boots.M_MP + WeaponLeft.M_MP + WeaponRight.M_MP + Artifact.M_MP;
+                M_ATK = Helmet.M_ATK + Maille.M_ATK + Pants.M_ATK + Boots.M_ATK + WeaponLeft.M_ATK + WeaponRight.M_ATK + Artifact.M_ATK;
+                M_SATK = Helmet.M_SATK + Maille.M_SATK + Pants.M_SATK + Boots.M_SATK + WeaponLeft.M_SATK + WeaponRight.M_SATK + Artifact.M_SATK;
+                M_DEF = Helmet.M_DEF + Maille.M_DEF + Pants.M_DEF + Boots.M_DEF + WeaponLeft.M_DEF + WeaponRight.M_DEF + Artifact.M_DEF;
+                M_SDEF = Helmet.M_SDEF + Maille.M_SDEF + Pants.M_SDEF + Boots.M_SDEF + WeaponLeft.M_SDEF + WeaponRight.M_SDEF + Artifact.M_SDEF;
+                M_CHAR = Helmet.M_CHAR + Maille.M_CHAR + Pants.M_CHAR + Boots.M_CHAR + WeaponLeft.M_CHAR + WeaponRight.M_CHAR + Artifact.M_CHAR;
+                M_DEX = Helmet.M_DEX + Maille.M_DEX + Pants.M_DEX + Boots.M_DEX + WeaponLeft.M_DEX + WeaponRight.M_DEX + Artifact.M_DEX;
+                M_STR = Helmet.M_STR + Maille.M_STR + Pants.M_STR + Boots.M_STR + WeaponLeft.M_STR + WeaponRight.M_STR + Artifact.M_STR;
+                M_INT = Helmet.M_INT + Maille.M_INT + Pants.M_INT + Boots.M_INT + WeaponLeft.M_INT + WeaponRight.M_INT + Artifact.M_INT;
+                M_PERC = Helmet.M_PERC + Maille.M_PERC + Pants.M_PERC + Boots.M_PERC + WeaponLeft.M_PERC + WeaponRight.M_PERC + Artifact.M_PERC;
+
+                if (WeaponLeft.Name != null || WeaponRight.Name != null)
+                {
+                    decimal Lweight;
+                    decimal Rweight;
+                    if (WeaponLeft.Dice == 20)
+                    {
+                        Lweight = 1;
+                    } else
+                    {
+                        Lweight = WeaponLeft.Dice / 10;
+                    }
+
+                    if (WeaponRight.Dice == 20)
+                    {
+                        Rweight = 1;
+                    }
+                    else
+                    {
+                        Rweight = WeaponRight.Dice / 10;
+                    }
+
+                    decimal Weight = Lweight + Rweight;
+
+                    decimal DEXMod = 1 / Weight;
+                
+                    T_DEX = (int)(Math.Round(T_DEX * DEXMod));
+                }
             }
             catch (Exception ex)
             {

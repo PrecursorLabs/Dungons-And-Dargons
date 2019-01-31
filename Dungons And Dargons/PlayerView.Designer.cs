@@ -44,15 +44,6 @@
             this.Satiety_tbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.XP_lbl = new System.Windows.Forms.Label();
-            this.PERC_tbox = new System.Windows.Forms.TextBox();
-            this.INT_tbox = new System.Windows.Forms.TextBox();
-            this.STR_tbox = new System.Windows.Forms.TextBox();
-            this.DEX_tbox = new System.Windows.Forms.TextBox();
-            this.CHAR_tbox = new System.Windows.Forms.TextBox();
-            this.SDEF_tbox = new System.Windows.Forms.TextBox();
-            this.DEF_tbox = new System.Windows.Forms.TextBox();
-            this.SATK_tbox = new System.Windows.Forms.TextBox();
-            this.ATK_tbox = new System.Windows.Forms.TextBox();
             this.LVL_tbox = new System.Windows.Forms.TextBox();
             this.Name_tbox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -74,15 +65,6 @@
             this.MP_UD = new System.Windows.Forms.NumericUpDown();
             this.Plus_BTN = new System.Windows.Forms.Button();
             this.Minus_BTN = new System.Windows.Forms.Button();
-            this.M_PERC_tbox = new System.Windows.Forms.TextBox();
-            this.M_INT_tbox = new System.Windows.Forms.TextBox();
-            this.M_STR_tbox = new System.Windows.Forms.TextBox();
-            this.M_DEX_tbox = new System.Windows.Forms.TextBox();
-            this.M_CHAR_tbox = new System.Windows.Forms.TextBox();
-            this.M_SDEF_tbox = new System.Windows.Forms.TextBox();
-            this.M_DEF_tbox = new System.Windows.Forms.TextBox();
-            this.M_SATK_tbox = new System.Windows.Forms.TextBox();
-            this.M_ATK_tbox = new System.Windows.Forms.TextBox();
             this.SAT_UD = new System.Windows.Forms.NumericUpDown();
             this.Holy_tbox = new System.Windows.Forms.TextBox();
             this.Unholy_tbox = new System.Windows.Forms.TextBox();
@@ -102,6 +84,36 @@
             this.Fire_UD = new System.Windows.Forms.NumericUpDown();
             this.Unholy_UD = new System.Windows.Forms.NumericUpDown();
             this.Holy_UD = new System.Windows.Forms.NumericUpDown();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.T_PERC_tbox = new System.Windows.Forms.TextBox();
+            this.T_INT_tbox = new System.Windows.Forms.TextBox();
+            this.T_STR_tbox = new System.Windows.Forms.TextBox();
+            this.T_DEX_tbox = new System.Windows.Forms.TextBox();
+            this.T_CHAR_tbox = new System.Windows.Forms.TextBox();
+            this.T_SDEF_tbox = new System.Windows.Forms.TextBox();
+            this.T_DEF_tbox = new System.Windows.Forms.TextBox();
+            this.T_SATK_tbox = new System.Windows.Forms.TextBox();
+            this.T_ATK_tbox = new System.Windows.Forms.TextBox();
+            this.M_PERC_tbox = new System.Windows.Forms.TextBox();
+            this.M_INT_tbox = new System.Windows.Forms.TextBox();
+            this.M_STR_tbox = new System.Windows.Forms.TextBox();
+            this.M_DEX_tbox = new System.Windows.Forms.TextBox();
+            this.M_CHAR_tbox = new System.Windows.Forms.TextBox();
+            this.M_SDEF_tbox = new System.Windows.Forms.TextBox();
+            this.M_DEF_tbox = new System.Windows.Forms.TextBox();
+            this.M_SATK_tbox = new System.Windows.Forms.TextBox();
+            this.M_ATK_tbox = new System.Windows.Forms.TextBox();
+            this.PERC_tbox = new System.Windows.Forms.TextBox();
+            this.INT_tbox = new System.Windows.Forms.TextBox();
+            this.STR_tbox = new System.Windows.Forms.TextBox();
+            this.DEX_tbox = new System.Windows.Forms.TextBox();
+            this.CHAR_tbox = new System.Windows.Forms.TextBox();
+            this.SDEF_tbox = new System.Windows.Forms.TextBox();
+            this.DEF_tbox = new System.Windows.Forms.TextBox();
+            this.SATK_tbox = new System.Windows.Forms.TextBox();
+            this.ATK_tbox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -164,7 +176,7 @@
             this.groupBox2.Size = new System.Drawing.Size(224, 324);
             this.groupBox2.TabIndex = 195;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Equiped";
+            this.groupBox2.Text = "Equipped";
             // 
             // Equipment_lbox
             // 
@@ -278,112 +290,13 @@
             // XP_lbl
             // 
             this.XP_lbl.AutoSize = true;
-            this.XP_lbl.BackColor = System.Drawing.SystemColors.Control;
+            this.XP_lbl.BackColor = System.Drawing.Color.Transparent;
             this.XP_lbl.Location = new System.Drawing.Point(6, 88);
             this.XP_lbl.Name = "XP_lbl";
             this.XP_lbl.Size = new System.Drawing.Size(24, 13);
             this.XP_lbl.TabIndex = 241;
             this.XP_lbl.Text = "XP:";
             this.XP_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PERC_tbox
-            // 
-            this.PERC_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PERC_tbox.Enabled = false;
-            this.PERC_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PERC_tbox.ForeColor = System.Drawing.Color.Black;
-            this.PERC_tbox.Location = new System.Drawing.Point(50, 454);
-            this.PERC_tbox.Name = "PERC_tbox";
-            this.PERC_tbox.Size = new System.Drawing.Size(61, 22);
-            this.PERC_tbox.TabIndex = 240;
-            // 
-            // INT_tbox
-            // 
-            this.INT_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.INT_tbox.Enabled = false;
-            this.INT_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.INT_tbox.ForeColor = System.Drawing.Color.Black;
-            this.INT_tbox.Location = new System.Drawing.Point(50, 426);
-            this.INT_tbox.Name = "INT_tbox";
-            this.INT_tbox.Size = new System.Drawing.Size(61, 22);
-            this.INT_tbox.TabIndex = 239;
-            // 
-            // STR_tbox
-            // 
-            this.STR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.STR_tbox.Enabled = false;
-            this.STR_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STR_tbox.ForeColor = System.Drawing.Color.Black;
-            this.STR_tbox.Location = new System.Drawing.Point(50, 398);
-            this.STR_tbox.Name = "STR_tbox";
-            this.STR_tbox.Size = new System.Drawing.Size(61, 22);
-            this.STR_tbox.TabIndex = 238;
-            // 
-            // DEX_tbox
-            // 
-            this.DEX_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.DEX_tbox.Enabled = false;
-            this.DEX_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DEX_tbox.ForeColor = System.Drawing.Color.Black;
-            this.DEX_tbox.Location = new System.Drawing.Point(50, 370);
-            this.DEX_tbox.Name = "DEX_tbox";
-            this.DEX_tbox.Size = new System.Drawing.Size(61, 22);
-            this.DEX_tbox.TabIndex = 237;
-            // 
-            // CHAR_tbox
-            // 
-            this.CHAR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.CHAR_tbox.Enabled = false;
-            this.CHAR_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHAR_tbox.ForeColor = System.Drawing.Color.Black;
-            this.CHAR_tbox.Location = new System.Drawing.Point(50, 342);
-            this.CHAR_tbox.Name = "CHAR_tbox";
-            this.CHAR_tbox.Size = new System.Drawing.Size(61, 22);
-            this.CHAR_tbox.TabIndex = 236;
-            // 
-            // SDEF_tbox
-            // 
-            this.SDEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.SDEF_tbox.Enabled = false;
-            this.SDEF_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SDEF_tbox.ForeColor = System.Drawing.Color.Black;
-            this.SDEF_tbox.Location = new System.Drawing.Point(50, 314);
-            this.SDEF_tbox.Name = "SDEF_tbox";
-            this.SDEF_tbox.Size = new System.Drawing.Size(61, 22);
-            this.SDEF_tbox.TabIndex = 235;
-            // 
-            // DEF_tbox
-            // 
-            this.DEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.DEF_tbox.Enabled = false;
-            this.DEF_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DEF_tbox.ForeColor = System.Drawing.Color.Black;
-            this.DEF_tbox.Location = new System.Drawing.Point(50, 286);
-            this.DEF_tbox.Name = "DEF_tbox";
-            this.DEF_tbox.Size = new System.Drawing.Size(61, 22);
-            this.DEF_tbox.TabIndex = 234;
-            // 
-            // SATK_tbox
-            // 
-            this.SATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.SATK_tbox.Enabled = false;
-            this.SATK_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SATK_tbox.ForeColor = System.Drawing.Color.Black;
-            this.SATK_tbox.Location = new System.Drawing.Point(50, 258);
-            this.SATK_tbox.Name = "SATK_tbox";
-            this.SATK_tbox.Size = new System.Drawing.Size(61, 22);
-            this.SATK_tbox.TabIndex = 233;
-            // 
-            // ATK_tbox
-            // 
-            this.ATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ATK_tbox.Enabled = false;
-            this.ATK_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ATK_tbox.ForeColor = System.Drawing.Color.Black;
-            this.ATK_tbox.Location = new System.Drawing.Point(50, 230);
-            this.ATK_tbox.Name = "ATK_tbox";
-            this.ATK_tbox.Size = new System.Drawing.Size(61, 22);
-            this.ATK_tbox.TabIndex = 232;
             // 
             // LVL_tbox
             // 
@@ -599,105 +512,6 @@
             this.Minus_BTN.UseVisualStyleBackColor = true;
             this.Minus_BTN.Click += new System.EventHandler(this.Minus_BTN_Click);
             // 
-            // M_PERC_tbox
-            // 
-            this.M_PERC_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.M_PERC_tbox.Enabled = false;
-            this.M_PERC_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M_PERC_tbox.ForeColor = System.Drawing.Color.Black;
-            this.M_PERC_tbox.Location = new System.Drawing.Point(117, 454);
-            this.M_PERC_tbox.Name = "M_PERC_tbox";
-            this.M_PERC_tbox.Size = new System.Drawing.Size(55, 22);
-            this.M_PERC_tbox.TabIndex = 274;
-            // 
-            // M_INT_tbox
-            // 
-            this.M_INT_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.M_INT_tbox.Enabled = false;
-            this.M_INT_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M_INT_tbox.ForeColor = System.Drawing.Color.Black;
-            this.M_INT_tbox.Location = new System.Drawing.Point(117, 426);
-            this.M_INT_tbox.Name = "M_INT_tbox";
-            this.M_INT_tbox.Size = new System.Drawing.Size(55, 22);
-            this.M_INT_tbox.TabIndex = 273;
-            // 
-            // M_STR_tbox
-            // 
-            this.M_STR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.M_STR_tbox.Enabled = false;
-            this.M_STR_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M_STR_tbox.ForeColor = System.Drawing.Color.Black;
-            this.M_STR_tbox.Location = new System.Drawing.Point(117, 398);
-            this.M_STR_tbox.Name = "M_STR_tbox";
-            this.M_STR_tbox.Size = new System.Drawing.Size(55, 22);
-            this.M_STR_tbox.TabIndex = 272;
-            // 
-            // M_DEX_tbox
-            // 
-            this.M_DEX_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.M_DEX_tbox.Enabled = false;
-            this.M_DEX_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M_DEX_tbox.ForeColor = System.Drawing.Color.Black;
-            this.M_DEX_tbox.Location = new System.Drawing.Point(117, 370);
-            this.M_DEX_tbox.Name = "M_DEX_tbox";
-            this.M_DEX_tbox.Size = new System.Drawing.Size(55, 22);
-            this.M_DEX_tbox.TabIndex = 271;
-            // 
-            // M_CHAR_tbox
-            // 
-            this.M_CHAR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.M_CHAR_tbox.Enabled = false;
-            this.M_CHAR_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M_CHAR_tbox.ForeColor = System.Drawing.Color.Black;
-            this.M_CHAR_tbox.Location = new System.Drawing.Point(117, 342);
-            this.M_CHAR_tbox.Name = "M_CHAR_tbox";
-            this.M_CHAR_tbox.Size = new System.Drawing.Size(55, 22);
-            this.M_CHAR_tbox.TabIndex = 270;
-            // 
-            // M_SDEF_tbox
-            // 
-            this.M_SDEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.M_SDEF_tbox.Enabled = false;
-            this.M_SDEF_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M_SDEF_tbox.ForeColor = System.Drawing.Color.Black;
-            this.M_SDEF_tbox.Location = new System.Drawing.Point(117, 314);
-            this.M_SDEF_tbox.Name = "M_SDEF_tbox";
-            this.M_SDEF_tbox.Size = new System.Drawing.Size(55, 22);
-            this.M_SDEF_tbox.TabIndex = 269;
-            // 
-            // M_DEF_tbox
-            // 
-            this.M_DEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.M_DEF_tbox.Enabled = false;
-            this.M_DEF_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M_DEF_tbox.ForeColor = System.Drawing.Color.Black;
-            this.M_DEF_tbox.Location = new System.Drawing.Point(117, 286);
-            this.M_DEF_tbox.Name = "M_DEF_tbox";
-            this.M_DEF_tbox.Size = new System.Drawing.Size(55, 22);
-            this.M_DEF_tbox.TabIndex = 268;
-            // 
-            // M_SATK_tbox
-            // 
-            this.M_SATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.M_SATK_tbox.Enabled = false;
-            this.M_SATK_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M_SATK_tbox.ForeColor = System.Drawing.Color.Black;
-            this.M_SATK_tbox.Location = new System.Drawing.Point(117, 258);
-            this.M_SATK_tbox.Name = "M_SATK_tbox";
-            this.M_SATK_tbox.Size = new System.Drawing.Size(55, 22);
-            this.M_SATK_tbox.TabIndex = 267;
-            // 
-            // M_ATK_tbox
-            // 
-            this.M_ATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.M_ATK_tbox.Enabled = false;
-            this.M_ATK_tbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M_ATK_tbox.ForeColor = System.Drawing.Color.Black;
-            this.M_ATK_tbox.Location = new System.Drawing.Point(117, 230);
-            this.M_ATK_tbox.Name = "M_ATK_tbox";
-            this.M_ATK_tbox.Size = new System.Drawing.Size(55, 22);
-            this.M_ATK_tbox.TabIndex = 266;
-            // 
             // SAT_UD
             // 
             this.SAT_UD.Location = new System.Drawing.Point(178, 484);
@@ -908,12 +722,366 @@
             this.Holy_UD.Size = new System.Drawing.Size(103, 20);
             this.Holy_UD.TabIndex = 295;
             // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Location = new System.Drawing.Point(175, 215);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(31, 13);
+            this.label94.TabIndex = 325;
+            this.label94.Text = "Total";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(114, 215);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(57, 13);
+            this.label93.TabIndex = 324;
+            this.label93.Text = "Equipment";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(47, 215);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(31, 13);
+            this.label91.TabIndex = 323;
+            this.label91.Text = "Base";
+            // 
+            // T_PERC_tbox
+            // 
+            this.T_PERC_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.T_PERC_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_PERC_tbox.ForeColor = System.Drawing.Color.Black;
+            this.T_PERC_tbox.Location = new System.Drawing.Point(178, 455);
+            this.T_PERC_tbox.Name = "T_PERC_tbox";
+            this.T_PERC_tbox.ReadOnly = true;
+            this.T_PERC_tbox.Size = new System.Drawing.Size(55, 21);
+            this.T_PERC_tbox.TabIndex = 322;
+            // 
+            // T_INT_tbox
+            // 
+            this.T_INT_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.T_INT_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_INT_tbox.ForeColor = System.Drawing.Color.Black;
+            this.T_INT_tbox.Location = new System.Drawing.Point(178, 426);
+            this.T_INT_tbox.Name = "T_INT_tbox";
+            this.T_INT_tbox.ReadOnly = true;
+            this.T_INT_tbox.Size = new System.Drawing.Size(55, 21);
+            this.T_INT_tbox.TabIndex = 321;
+            // 
+            // T_STR_tbox
+            // 
+            this.T_STR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.T_STR_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_STR_tbox.ForeColor = System.Drawing.Color.Black;
+            this.T_STR_tbox.Location = new System.Drawing.Point(178, 398);
+            this.T_STR_tbox.Name = "T_STR_tbox";
+            this.T_STR_tbox.ReadOnly = true;
+            this.T_STR_tbox.Size = new System.Drawing.Size(55, 21);
+            this.T_STR_tbox.TabIndex = 320;
+            // 
+            // T_DEX_tbox
+            // 
+            this.T_DEX_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.T_DEX_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_DEX_tbox.ForeColor = System.Drawing.Color.Black;
+            this.T_DEX_tbox.Location = new System.Drawing.Point(178, 371);
+            this.T_DEX_tbox.Name = "T_DEX_tbox";
+            this.T_DEX_tbox.ReadOnly = true;
+            this.T_DEX_tbox.Size = new System.Drawing.Size(55, 21);
+            this.T_DEX_tbox.TabIndex = 319;
+            // 
+            // T_CHAR_tbox
+            // 
+            this.T_CHAR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.T_CHAR_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_CHAR_tbox.ForeColor = System.Drawing.Color.Black;
+            this.T_CHAR_tbox.Location = new System.Drawing.Point(178, 343);
+            this.T_CHAR_tbox.Name = "T_CHAR_tbox";
+            this.T_CHAR_tbox.ReadOnly = true;
+            this.T_CHAR_tbox.Size = new System.Drawing.Size(55, 21);
+            this.T_CHAR_tbox.TabIndex = 318;
+            // 
+            // T_SDEF_tbox
+            // 
+            this.T_SDEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.T_SDEF_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_SDEF_tbox.ForeColor = System.Drawing.Color.Black;
+            this.T_SDEF_tbox.Location = new System.Drawing.Point(178, 315);
+            this.T_SDEF_tbox.Name = "T_SDEF_tbox";
+            this.T_SDEF_tbox.ReadOnly = true;
+            this.T_SDEF_tbox.Size = new System.Drawing.Size(55, 21);
+            this.T_SDEF_tbox.TabIndex = 317;
+            // 
+            // T_DEF_tbox
+            // 
+            this.T_DEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.T_DEF_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_DEF_tbox.ForeColor = System.Drawing.Color.Black;
+            this.T_DEF_tbox.Location = new System.Drawing.Point(178, 288);
+            this.T_DEF_tbox.Name = "T_DEF_tbox";
+            this.T_DEF_tbox.ReadOnly = true;
+            this.T_DEF_tbox.Size = new System.Drawing.Size(55, 21);
+            this.T_DEF_tbox.TabIndex = 316;
+            // 
+            // T_SATK_tbox
+            // 
+            this.T_SATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.T_SATK_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_SATK_tbox.ForeColor = System.Drawing.Color.Black;
+            this.T_SATK_tbox.Location = new System.Drawing.Point(178, 259);
+            this.T_SATK_tbox.Name = "T_SATK_tbox";
+            this.T_SATK_tbox.ReadOnly = true;
+            this.T_SATK_tbox.Size = new System.Drawing.Size(55, 21);
+            this.T_SATK_tbox.TabIndex = 315;
+            // 
+            // T_ATK_tbox
+            // 
+            this.T_ATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.T_ATK_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T_ATK_tbox.ForeColor = System.Drawing.Color.Black;
+            this.T_ATK_tbox.Location = new System.Drawing.Point(178, 231);
+            this.T_ATK_tbox.Name = "T_ATK_tbox";
+            this.T_ATK_tbox.ReadOnly = true;
+            this.T_ATK_tbox.Size = new System.Drawing.Size(55, 21);
+            this.T_ATK_tbox.TabIndex = 314;
+            // 
+            // M_PERC_tbox
+            // 
+            this.M_PERC_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.M_PERC_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M_PERC_tbox.ForeColor = System.Drawing.Color.Black;
+            this.M_PERC_tbox.Location = new System.Drawing.Point(117, 455);
+            this.M_PERC_tbox.Name = "M_PERC_tbox";
+            this.M_PERC_tbox.ReadOnly = true;
+            this.M_PERC_tbox.Size = new System.Drawing.Size(55, 21);
+            this.M_PERC_tbox.TabIndex = 313;
+            // 
+            // M_INT_tbox
+            // 
+            this.M_INT_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.M_INT_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M_INT_tbox.ForeColor = System.Drawing.Color.Black;
+            this.M_INT_tbox.Location = new System.Drawing.Point(117, 427);
+            this.M_INT_tbox.Name = "M_INT_tbox";
+            this.M_INT_tbox.ReadOnly = true;
+            this.M_INT_tbox.Size = new System.Drawing.Size(55, 21);
+            this.M_INT_tbox.TabIndex = 312;
+            // 
+            // M_STR_tbox
+            // 
+            this.M_STR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.M_STR_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M_STR_tbox.ForeColor = System.Drawing.Color.Black;
+            this.M_STR_tbox.Location = new System.Drawing.Point(117, 399);
+            this.M_STR_tbox.Name = "M_STR_tbox";
+            this.M_STR_tbox.ReadOnly = true;
+            this.M_STR_tbox.Size = new System.Drawing.Size(55, 21);
+            this.M_STR_tbox.TabIndex = 311;
+            // 
+            // M_DEX_tbox
+            // 
+            this.M_DEX_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.M_DEX_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M_DEX_tbox.ForeColor = System.Drawing.Color.Black;
+            this.M_DEX_tbox.Location = new System.Drawing.Point(117, 371);
+            this.M_DEX_tbox.Name = "M_DEX_tbox";
+            this.M_DEX_tbox.ReadOnly = true;
+            this.M_DEX_tbox.Size = new System.Drawing.Size(55, 21);
+            this.M_DEX_tbox.TabIndex = 310;
+            // 
+            // M_CHAR_tbox
+            // 
+            this.M_CHAR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.M_CHAR_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M_CHAR_tbox.ForeColor = System.Drawing.Color.Black;
+            this.M_CHAR_tbox.Location = new System.Drawing.Point(117, 343);
+            this.M_CHAR_tbox.Name = "M_CHAR_tbox";
+            this.M_CHAR_tbox.ReadOnly = true;
+            this.M_CHAR_tbox.Size = new System.Drawing.Size(55, 21);
+            this.M_CHAR_tbox.TabIndex = 309;
+            // 
+            // M_SDEF_tbox
+            // 
+            this.M_SDEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.M_SDEF_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M_SDEF_tbox.ForeColor = System.Drawing.Color.Black;
+            this.M_SDEF_tbox.Location = new System.Drawing.Point(117, 315);
+            this.M_SDEF_tbox.Name = "M_SDEF_tbox";
+            this.M_SDEF_tbox.ReadOnly = true;
+            this.M_SDEF_tbox.Size = new System.Drawing.Size(55, 21);
+            this.M_SDEF_tbox.TabIndex = 308;
+            // 
+            // M_DEF_tbox
+            // 
+            this.M_DEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.M_DEF_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M_DEF_tbox.ForeColor = System.Drawing.Color.Black;
+            this.M_DEF_tbox.Location = new System.Drawing.Point(117, 287);
+            this.M_DEF_tbox.Name = "M_DEF_tbox";
+            this.M_DEF_tbox.ReadOnly = true;
+            this.M_DEF_tbox.Size = new System.Drawing.Size(55, 21);
+            this.M_DEF_tbox.TabIndex = 307;
+            // 
+            // M_SATK_tbox
+            // 
+            this.M_SATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.M_SATK_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M_SATK_tbox.ForeColor = System.Drawing.Color.Black;
+            this.M_SATK_tbox.Location = new System.Drawing.Point(117, 259);
+            this.M_SATK_tbox.Name = "M_SATK_tbox";
+            this.M_SATK_tbox.ReadOnly = true;
+            this.M_SATK_tbox.Size = new System.Drawing.Size(55, 21);
+            this.M_SATK_tbox.TabIndex = 306;
+            // 
+            // M_ATK_tbox
+            // 
+            this.M_ATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.M_ATK_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M_ATK_tbox.ForeColor = System.Drawing.Color.Black;
+            this.M_ATK_tbox.Location = new System.Drawing.Point(117, 231);
+            this.M_ATK_tbox.Name = "M_ATK_tbox";
+            this.M_ATK_tbox.ReadOnly = true;
+            this.M_ATK_tbox.Size = new System.Drawing.Size(55, 21);
+            this.M_ATK_tbox.TabIndex = 305;
+            // 
+            // PERC_tbox
+            // 
+            this.PERC_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PERC_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PERC_tbox.ForeColor = System.Drawing.Color.Black;
+            this.PERC_tbox.Location = new System.Drawing.Point(50, 455);
+            this.PERC_tbox.Name = "PERC_tbox";
+            this.PERC_tbox.ReadOnly = true;
+            this.PERC_tbox.Size = new System.Drawing.Size(61, 21);
+            this.PERC_tbox.TabIndex = 304;
+            // 
+            // INT_tbox
+            // 
+            this.INT_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.INT_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INT_tbox.ForeColor = System.Drawing.Color.Black;
+            this.INT_tbox.Location = new System.Drawing.Point(50, 427);
+            this.INT_tbox.Name = "INT_tbox";
+            this.INT_tbox.ReadOnly = true;
+            this.INT_tbox.Size = new System.Drawing.Size(61, 21);
+            this.INT_tbox.TabIndex = 303;
+            // 
+            // STR_tbox
+            // 
+            this.STR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.STR_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STR_tbox.ForeColor = System.Drawing.Color.Black;
+            this.STR_tbox.Location = new System.Drawing.Point(50, 399);
+            this.STR_tbox.Name = "STR_tbox";
+            this.STR_tbox.ReadOnly = true;
+            this.STR_tbox.Size = new System.Drawing.Size(61, 21);
+            this.STR_tbox.TabIndex = 302;
+            // 
+            // DEX_tbox
+            // 
+            this.DEX_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.DEX_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DEX_tbox.ForeColor = System.Drawing.Color.Black;
+            this.DEX_tbox.Location = new System.Drawing.Point(50, 371);
+            this.DEX_tbox.Name = "DEX_tbox";
+            this.DEX_tbox.ReadOnly = true;
+            this.DEX_tbox.Size = new System.Drawing.Size(61, 21);
+            this.DEX_tbox.TabIndex = 301;
+            // 
+            // CHAR_tbox
+            // 
+            this.CHAR_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CHAR_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHAR_tbox.ForeColor = System.Drawing.Color.Black;
+            this.CHAR_tbox.Location = new System.Drawing.Point(50, 343);
+            this.CHAR_tbox.Name = "CHAR_tbox";
+            this.CHAR_tbox.ReadOnly = true;
+            this.CHAR_tbox.Size = new System.Drawing.Size(61, 21);
+            this.CHAR_tbox.TabIndex = 300;
+            // 
+            // SDEF_tbox
+            // 
+            this.SDEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.SDEF_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SDEF_tbox.ForeColor = System.Drawing.Color.Black;
+            this.SDEF_tbox.Location = new System.Drawing.Point(50, 315);
+            this.SDEF_tbox.Name = "SDEF_tbox";
+            this.SDEF_tbox.ReadOnly = true;
+            this.SDEF_tbox.Size = new System.Drawing.Size(61, 21);
+            this.SDEF_tbox.TabIndex = 299;
+            // 
+            // DEF_tbox
+            // 
+            this.DEF_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.DEF_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DEF_tbox.ForeColor = System.Drawing.Color.Black;
+            this.DEF_tbox.Location = new System.Drawing.Point(50, 287);
+            this.DEF_tbox.Name = "DEF_tbox";
+            this.DEF_tbox.ReadOnly = true;
+            this.DEF_tbox.Size = new System.Drawing.Size(61, 21);
+            this.DEF_tbox.TabIndex = 298;
+            // 
+            // SATK_tbox
+            // 
+            this.SATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.SATK_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SATK_tbox.ForeColor = System.Drawing.Color.Black;
+            this.SATK_tbox.Location = new System.Drawing.Point(50, 259);
+            this.SATK_tbox.Name = "SATK_tbox";
+            this.SATK_tbox.ReadOnly = true;
+            this.SATK_tbox.Size = new System.Drawing.Size(61, 21);
+            this.SATK_tbox.TabIndex = 297;
+            // 
+            // ATK_tbox
+            // 
+            this.ATK_tbox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ATK_tbox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ATK_tbox.ForeColor = System.Drawing.Color.Black;
+            this.ATK_tbox.Location = new System.Drawing.Point(50, 231);
+            this.ATK_tbox.Name = "ATK_tbox";
+            this.ATK_tbox.ReadOnly = true;
+            this.ATK_tbox.Size = new System.Drawing.Size(61, 21);
+            this.ATK_tbox.TabIndex = 296;
+            // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(751, 551);
+            this.Controls.Add(this.label94);
+            this.Controls.Add(this.label93);
+            this.Controls.Add(this.label91);
+            this.Controls.Add(this.T_PERC_tbox);
+            this.Controls.Add(this.T_INT_tbox);
+            this.Controls.Add(this.T_STR_tbox);
+            this.Controls.Add(this.T_DEX_tbox);
+            this.Controls.Add(this.T_CHAR_tbox);
+            this.Controls.Add(this.T_SDEF_tbox);
+            this.Controls.Add(this.T_DEF_tbox);
+            this.Controls.Add(this.T_SATK_tbox);
+            this.Controls.Add(this.T_ATK_tbox);
+            this.Controls.Add(this.M_PERC_tbox);
+            this.Controls.Add(this.M_INT_tbox);
+            this.Controls.Add(this.M_STR_tbox);
+            this.Controls.Add(this.M_DEX_tbox);
+            this.Controls.Add(this.M_CHAR_tbox);
+            this.Controls.Add(this.M_SDEF_tbox);
+            this.Controls.Add(this.M_DEF_tbox);
+            this.Controls.Add(this.M_SATK_tbox);
+            this.Controls.Add(this.M_ATK_tbox);
+            this.Controls.Add(this.PERC_tbox);
+            this.Controls.Add(this.INT_tbox);
+            this.Controls.Add(this.STR_tbox);
+            this.Controls.Add(this.DEX_tbox);
+            this.Controls.Add(this.CHAR_tbox);
+            this.Controls.Add(this.SDEF_tbox);
+            this.Controls.Add(this.DEF_tbox);
+            this.Controls.Add(this.SATK_tbox);
+            this.Controls.Add(this.ATK_tbox);
             this.Controls.Add(this.Holy_UD);
             this.Controls.Add(this.Unholy_UD);
             this.Controls.Add(this.Fire_UD);
@@ -933,15 +1101,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.SAT_UD);
-            this.Controls.Add(this.M_PERC_tbox);
-            this.Controls.Add(this.M_INT_tbox);
-            this.Controls.Add(this.M_STR_tbox);
-            this.Controls.Add(this.M_DEX_tbox);
-            this.Controls.Add(this.M_CHAR_tbox);
-            this.Controls.Add(this.M_SDEF_tbox);
-            this.Controls.Add(this.M_DEF_tbox);
-            this.Controls.Add(this.M_SATK_tbox);
-            this.Controls.Add(this.M_ATK_tbox);
             this.Controls.Add(this.Minus_BTN);
             this.Controls.Add(this.Plus_BTN);
             this.Controls.Add(this.MP_UD);
@@ -956,15 +1115,6 @@
             this.Controls.Add(this.Satiety_tbox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.XP_lbl);
-            this.Controls.Add(this.PERC_tbox);
-            this.Controls.Add(this.INT_tbox);
-            this.Controls.Add(this.STR_tbox);
-            this.Controls.Add(this.DEX_tbox);
-            this.Controls.Add(this.CHAR_tbox);
-            this.Controls.Add(this.SDEF_tbox);
-            this.Controls.Add(this.DEF_tbox);
-            this.Controls.Add(this.SATK_tbox);
-            this.Controls.Add(this.ATK_tbox);
             this.Controls.Add(this.LVL_tbox);
             this.Controls.Add(this.Name_tbox);
             this.Controls.Add(this.label16);
@@ -1026,15 +1176,6 @@
         private System.Windows.Forms.TextBox Satiety_tbox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label XP_lbl;
-        private System.Windows.Forms.TextBox PERC_tbox;
-        private System.Windows.Forms.TextBox INT_tbox;
-        private System.Windows.Forms.TextBox STR_tbox;
-        private System.Windows.Forms.TextBox DEX_tbox;
-        private System.Windows.Forms.TextBox CHAR_tbox;
-        private System.Windows.Forms.TextBox SDEF_tbox;
-        private System.Windows.Forms.TextBox DEF_tbox;
-        private System.Windows.Forms.TextBox SATK_tbox;
-        private System.Windows.Forms.TextBox ATK_tbox;
         private System.Windows.Forms.TextBox LVL_tbox;
         private System.Windows.Forms.TextBox Name_tbox;
         private System.Windows.Forms.Label label16;
@@ -1056,15 +1197,6 @@
         private System.Windows.Forms.NumericUpDown MP_UD;
         private System.Windows.Forms.Button Plus_BTN;
         private System.Windows.Forms.Button Minus_BTN;
-        private System.Windows.Forms.TextBox M_PERC_tbox;
-        private System.Windows.Forms.TextBox M_INT_tbox;
-        private System.Windows.Forms.TextBox M_STR_tbox;
-        private System.Windows.Forms.TextBox M_DEX_tbox;
-        private System.Windows.Forms.TextBox M_CHAR_tbox;
-        private System.Windows.Forms.TextBox M_SDEF_tbox;
-        private System.Windows.Forms.TextBox M_DEF_tbox;
-        private System.Windows.Forms.TextBox M_SATK_tbox;
-        private System.Windows.Forms.TextBox M_ATK_tbox;
         private System.Windows.Forms.NumericUpDown SAT_UD;
         private System.Windows.Forms.TextBox Holy_tbox;
         private System.Windows.Forms.TextBox Unholy_tbox;
@@ -1084,5 +1216,35 @@
         private System.Windows.Forms.NumericUpDown Fire_UD;
         private System.Windows.Forms.NumericUpDown Unholy_UD;
         private System.Windows.Forms.NumericUpDown Holy_UD;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.TextBox T_PERC_tbox;
+        private System.Windows.Forms.TextBox T_INT_tbox;
+        private System.Windows.Forms.TextBox T_STR_tbox;
+        private System.Windows.Forms.TextBox T_DEX_tbox;
+        private System.Windows.Forms.TextBox T_CHAR_tbox;
+        private System.Windows.Forms.TextBox T_SDEF_tbox;
+        private System.Windows.Forms.TextBox T_DEF_tbox;
+        private System.Windows.Forms.TextBox T_SATK_tbox;
+        private System.Windows.Forms.TextBox T_ATK_tbox;
+        private System.Windows.Forms.TextBox M_PERC_tbox;
+        private System.Windows.Forms.TextBox M_INT_tbox;
+        private System.Windows.Forms.TextBox M_STR_tbox;
+        private System.Windows.Forms.TextBox M_DEX_tbox;
+        private System.Windows.Forms.TextBox M_CHAR_tbox;
+        private System.Windows.Forms.TextBox M_SDEF_tbox;
+        private System.Windows.Forms.TextBox M_DEF_tbox;
+        private System.Windows.Forms.TextBox M_SATK_tbox;
+        private System.Windows.Forms.TextBox M_ATK_tbox;
+        private System.Windows.Forms.TextBox PERC_tbox;
+        private System.Windows.Forms.TextBox INT_tbox;
+        private System.Windows.Forms.TextBox STR_tbox;
+        private System.Windows.Forms.TextBox DEX_tbox;
+        private System.Windows.Forms.TextBox CHAR_tbox;
+        private System.Windows.Forms.TextBox SDEF_tbox;
+        private System.Windows.Forms.TextBox DEF_tbox;
+        private System.Windows.Forms.TextBox SATK_tbox;
+        private System.Windows.Forms.TextBox ATK_tbox;
     }
 }

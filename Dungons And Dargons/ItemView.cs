@@ -83,6 +83,7 @@ namespace Dungons_And_Dargons
             Description_tbox.Text = ITEMVIEW.Description;
             Type_tbox.Text = ITEMVIEW.Prop_To_Type();
             Buffs_lbox.Items.Clear();
+            if (ITEMVIEW.Enhance > 0) Buffs_lbox.Items.Add("ENH +" + ITEMVIEW.Enhance);
             if (ITEMVIEW.Quantity > 1) Buffs_lbox.Items.Add("Quantity: " + ITEMVIEW.Quantity);
             if (ITEMVIEW.M_HP > 0) Buffs_lbox.Items.Add("HP +" + ITEMVIEW.M_HP);
             if (ITEMVIEW.M_MP > 0) Buffs_lbox.Items.Add("MP +" + ITEMVIEW.M_MP);
@@ -95,9 +96,9 @@ namespace Dungons_And_Dargons
             if (ITEMVIEW.M_STR > 0) Buffs_lbox.Items.Add("STR +" + ITEMVIEW.M_STR);
             if (ITEMVIEW.M_INT > 0) Buffs_lbox.Items.Add("INT +" + ITEMVIEW.M_INT);
             if (ITEMVIEW.M_PERC > 0) Buffs_lbox.Items.Add("PERC +" + ITEMVIEW.M_PERC);
-            if (ITEMVIEW.Tier > 0) Buffs_lbox.Items.Add("TIER " + ITEMVIEW.Tier);
-            if (ITEMVIEW.Grade > 0) Buffs_lbox.Items.Add("GRADE " + ITEMVIEW.Grade);
-            if (ITEMVIEW.Enhance > 0) Buffs_lbox.Items.Add("ENH " + ITEMVIEW.Enhance);
+            if (ITEMVIEW.Tier > 0) Buffs_lbox.Items.Add("TIER: " + ITEMVIEW.Tier);
+            if (ITEMVIEW.Grade > 0) Buffs_lbox.Items.Add("GRADE: " + ITEMVIEW.Grade);
+            if (ITEMVIEW.Dice > 0) Buffs_lbox.Items.Add("Dice: d" + ITEMVIEW.Dice);
             if (ITEMVIEW.ELevel > 0) Buffs_lbox.Items.Add("Enchants: (" + ITEMVIEW.EType + ") LVL: " + ITEMVIEW.ELevel);
             if (ITEMVIEW.MaxDurability > 0) Buffs_lbox.Items.Add("Durability: " + ITEMVIEW.Durability + "/" + ITEMVIEW.MaxDurability);
 
