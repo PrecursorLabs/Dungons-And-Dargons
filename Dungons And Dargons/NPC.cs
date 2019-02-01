@@ -78,6 +78,7 @@ namespace Dungons_And_Dargons
         public Boolean isPlayer { get; set; }
         public Boolean isEnemy { get; set; }
         public Boolean isNPC { get; set; }
+        public Boolean isALL { get; set; }
 
         public List<ITEM> Inventory { get; }
         public List<SPELL> Spells { get; }
@@ -370,6 +371,26 @@ namespace Dungons_And_Dargons
             }
         }
 
+        public void Delete(bool INV)
+        {
+            try
+            {
+                if (INV)
+                {
+                    string sql = "DELETE FROM `items` WHERE `OWNER_ID`='" + PlayerID + "';";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                }
+                string sql2 = "DELETE FROM `player` WHERE `idPlayer`='" + PlayerID + "';";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, conn);
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         public void GetData()
         {
             try
@@ -400,6 +421,7 @@ namespace Dungons_And_Dargons
                     " `PLAYER`," +
                     " `NPC`," +
                     " `ENEMY`," +
+                    " `ALL`," +
                     " `XPREQ`," +
                     " `STATS`," +
                     " `Earth`," +
@@ -439,14 +461,15 @@ namespace Dungons_And_Dargons
                     isPlayer = Convert.ToBoolean(rdr[23]);
                     isNPC = Convert.ToBoolean(rdr[24]);
                     isEnemy = Convert.ToBoolean(rdr[25]);
-                    XPREQ = Convert.ToInt32(rdr[26]);
-                    STATS = Convert.ToInt32(rdr[27]);
-                    Earth = Convert.ToInt32(rdr[28]);
-                    Lightning = Convert.ToInt32(rdr[29]);
-                    Fire = Convert.ToInt32(rdr[30]);
-                    Ice = Convert.ToInt32(rdr[31]);
-                    Unholy = Convert.ToInt32(rdr[32]);
-                    Holy = Convert.ToInt32(rdr[33]);
+                    isALL = Convert.ToBoolean(rdr[26]);
+                    XPREQ = Convert.ToInt32(rdr[27]);
+                    STATS = Convert.ToInt32(rdr[28]);
+                    Earth = Convert.ToInt32(rdr[29]);
+                    Lightning = Convert.ToInt32(rdr[30]);
+                    Fire = Convert.ToInt32(rdr[31]);
+                    Ice = Convert.ToInt32(rdr[32]);
+                    Unholy = Convert.ToInt32(rdr[33]);
+                    Holy = Convert.ToInt32(rdr[34]);
 
                     T_HP = HPMax + M_HP;
                     T_MP = MPMax + M_MP;
@@ -483,40 +506,42 @@ namespace Dungons_And_Dargons
             XPREQ = (int)XPREQC;
             try
             {
-                string sql = "UPDATE player SET" +
-                    " GAMEMASTER = '" + Convert.ToInt32(GAMEMASTER) + "'," +
-                    " PLevel = '" + Level + "'," +
-                    " XP = '" + XP + "'," +
-                    " Age = '" + Age + "'," +
-                    " Gold = '" + Gold + "'," +
-                    " PName = '" + PName + "'," +
-                    " PDescription = '" + Description + "'," +
-                    " HPMax = '" + HPMax + "'," +
-                    " HPCur = '" + HP + "'," +
-                    " MPMax = '" + MPMax + "'," +
-                    " MPCur = '" + MP + "'," +
-                    " ATK = '" + ATK + "'," +
-                    " SATK = '" + SATK + "'," +
-                    " DEF = '" + DEF + "'," +
-                    " SDEF = '" + SDEF + "'," +
-                    " CHARIS = '" + CHARIS + "'," +
-                    " DEX = '" + DEX + "'," +
-                    " STR = '" + STR + "'," +
-                    " INTEL = '" + INTEL + "'," +
-                    " PERC = '" + PERC + "'," +
-                    " Satiety = '" + SATIE + "'," +
-                    " PLAYER = '" + Convert.ToInt32(isPlayer) + "'," +
-                    " NPC = '" + Convert.ToInt32(isNPC) + "'," +
-                    " ENEMY = '" + Convert.ToInt32(isEnemy) + "'," +
-                    " XPREQ = '" + XPREQC + "'," +
-                    " STATS = '" + STATS + "'," +
-                    " Earth = '" + Earth + "'," +
-                    " Lightning = '" + Lightning + "'," +
-                    " Fire = '" + Fire + "'," +
-                    " Ice = '" + Ice + "'," +
-                    " Unholy = '" + Unholy + "'," +
-                    " Holy = '" + Holy + "'" +
-                    " WHERE idPlayer='" + PlayerID + "'";
+                string sql = "UPDATE `player` SET" +
+                    " `GAMEMASTER` = '" + Convert.ToInt32(GAMEMASTER) + "'," +
+                    " `PLevel` = '" + Level + "'," +
+                    " `XP` = '" + XP + "'," +
+                    " `Age` = '" + Age + "'," +
+                    " `Gold` = '" + Gold + "'," +
+                    " `PName` = '" + PName + "'," +
+                    " `PDescription` = '" + Description + "'," +
+                    " `HPMax` = '" + HPMax + "'," +
+                    " `HPCur` = '" + HP + "'," +
+                    " `MPMax` = '" + MPMax + "'," +
+                    " `MPCur` = '" + MP + "'," +
+                    " `ATK` = '" + ATK + "'," +
+                    " `SATK` = '" + SATK + "'," +
+                    " `DEF` = '" + DEF + "'," +
+                    " `SDEF` = '" + SDEF + "'," +
+                    " `CHARIS` = '" + CHARIS + "'," +
+                    " `DEX` = '" + DEX + "'," +
+                    " `STR` = '" + STR + "'," +
+                    " `INTEL` = '" + INTEL + "'," +
+                    " `PERC` = '" + PERC + "'," +
+                    " `Satiety` = '" + SATIE + "'," +
+                    " `PLAYER` = '" + Convert.ToInt32(isPlayer) + "'," +
+                    " `NPC` = '" + Convert.ToInt32(isNPC) + "'," +
+                    " `ENEMY` = '" + Convert.ToInt32(isEnemy) + "'," +
+                    " `ALL` = '" + Convert.ToInt32(isALL) + "'," +
+                    " `XPREQ` = '" + XPREQC + "'," +
+                    " `STATS` = '" + STATS + "'," +
+                    " `Earth` = '" + Earth + "'," +
+                    " `Lightning` = '" + Lightning + "'," +
+                    " `Fire` = '" + Fire + "'," +
+                    " `Ice` = '" + Ice + "'," +
+                    " `Unholy` = '" + Unholy + "'," +
+                    " `Holy` = '" + Holy + "'" +
+                    " WHERE `idPlayer`='" + PlayerID + "'";
+                MessageBox.Show(sql);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }

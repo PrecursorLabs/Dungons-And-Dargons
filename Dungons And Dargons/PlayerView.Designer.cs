@@ -114,6 +114,24 @@
             this.DEF_tbox = new System.Windows.Forms.TextBox();
             this.SATK_tbox = new System.Windows.Forms.TextBox();
             this.ATK_tbox = new System.Windows.Forms.TextBox();
+            this.Sleep_btn = new System.Windows.Forms.Button();
+            this.Delete_btn = new System.Windows.Forms.Button();
+            this.DINV_cbox = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.DROLL_ud = new System.Windows.Forms.NumericUpDown();
+            this.ADEX_ud = new System.Windows.Forms.NumericUpDown();
+            this.AROLL_ud = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.Accuracy_lbl = new System.Windows.Forms.Label();
+            this.HitMiss_lbl = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ACC_Submit_btn = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -128,6 +146,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Fire_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Unholy_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Holy_UD)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DROLL_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ADEX_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AROLL_ud)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // Refresh_btn
@@ -142,9 +166,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.Inventory_lbox);
             this.groupBox1.Location = new System.Drawing.Point(287, 12);
             this.groupBox1.Name = "groupBox1";
@@ -168,8 +189,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.Equipment_lbox);
             this.groupBox2.Location = new System.Drawing.Point(515, 12);
             this.groupBox2.Name = "groupBox2";
@@ -193,9 +212,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.Spells_lbox);
             this.groupBox3.Location = new System.Drawing.Point(287, 342);
             this.groupBox3.Name = "groupBox3";
@@ -1046,12 +1062,214 @@
             this.ATK_tbox.Size = new System.Drawing.Size(61, 21);
             this.ATK_tbox.TabIndex = 296;
             // 
+            // Sleep_btn
+            // 
+            this.Sleep_btn.Location = new System.Drawing.Point(664, 516);
+            this.Sleep_btn.Name = "Sleep_btn";
+            this.Sleep_btn.Size = new System.Drawing.Size(75, 23);
+            this.Sleep_btn.TabIndex = 326;
+            this.Sleep_btn.Text = "Sleep";
+            this.Sleep_btn.UseVisualStyleBackColor = true;
+            this.Sleep_btn.Click += new System.EventHandler(this.Sleep_btn_Click);
+            // 
+            // Delete_btn
+            // 
+            this.Delete_btn.Location = new System.Drawing.Point(588, 516);
+            this.Delete_btn.Name = "Delete_btn";
+            this.Delete_btn.Size = new System.Drawing.Size(75, 23);
+            this.Delete_btn.TabIndex = 327;
+            this.Delete_btn.Text = "Delete";
+            this.Delete_btn.UseVisualStyleBackColor = true;
+            this.Delete_btn.Click += new System.EventHandler(this.Delete_btn_Click);
+            // 
+            // DINV_cbox
+            // 
+            this.DINV_cbox.AutoSize = true;
+            this.DINV_cbox.Location = new System.Drawing.Point(516, 519);
+            this.DINV_cbox.Name = "DINV_cbox";
+            this.DINV_cbox.Size = new System.Drawing.Size(70, 17);
+            this.DINV_cbox.TabIndex = 328;
+            this.DINV_cbox.Text = "Inventory";
+            this.DINV_cbox.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.ACC_Submit_btn);
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.DROLL_ud);
+            this.groupBox4.Controls.Add(this.ADEX_ud);
+            this.groupBox4.Controls.Add(this.AROLL_ud);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Location = new System.Drawing.Point(745, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(202, 216);
+            this.groupBox4.TabIndex = 196;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Accuracy";
+            // 
+            // DROLL_ud
+            // 
+            this.DROLL_ud.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.DROLL_ud.Location = new System.Drawing.Point(74, 73);
+            this.DROLL_ud.Maximum = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.DROLL_ud.Name = "DROLL_ud";
+            this.DROLL_ud.Size = new System.Drawing.Size(107, 20);
+            this.DROLL_ud.TabIndex = 13;
+            // 
+            // ADEX_ud
+            // 
+            this.ADEX_ud.Location = new System.Drawing.Point(74, 21);
+            this.ADEX_ud.Maximum = new decimal(new int[] {
+            900000000,
+            0,
+            0,
+            0});
+            this.ADEX_ud.Name = "ADEX_ud";
+            this.ADEX_ud.Size = new System.Drawing.Size(107, 20);
+            this.ADEX_ud.TabIndex = 11;
+            // 
+            // AROLL_ud
+            // 
+            this.AROLL_ud.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.AROLL_ud.Location = new System.Drawing.Point(74, 47);
+            this.AROLL_ud.Maximum = new decimal(new int[] {
+            19,
+            0,
+            0,
+            0});
+            this.AROLL_ud.Name = "AROLL_ud";
+            this.AROLL_ud.Size = new System.Drawing.Size(107, 20);
+            this.AROLL_ud.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(29, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "ADEX:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(23, 49);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "AROLL:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(23, 75);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "DROLL:";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.Accuracy_lbl);
+            this.groupBox5.Controls.Add(this.HitMiss_lbl);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Location = new System.Drawing.Point(17, 99);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(179, 74);
+            this.groupBox5.TabIndex = 329;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Output";
+            // 
+            // Accuracy_lbl
+            // 
+            this.Accuracy_lbl.AutoSize = true;
+            this.Accuracy_lbl.Location = new System.Drawing.Point(63, 21);
+            this.Accuracy_lbl.Name = "Accuracy_lbl";
+            this.Accuracy_lbl.Size = new System.Drawing.Size(53, 13);
+            this.Accuracy_lbl.TabIndex = 11;
+            this.Accuracy_lbl.Text = "Unknown";
+            // 
+            // HitMiss_lbl
+            // 
+            this.HitMiss_lbl.AutoSize = true;
+            this.HitMiss_lbl.Location = new System.Drawing.Point(63, 42);
+            this.HitMiss_lbl.Name = "HitMiss_lbl";
+            this.HitMiss_lbl.Size = new System.Drawing.Size(53, 13);
+            this.HitMiss_lbl.TabIndex = 10;
+            this.HitMiss_lbl.Text = "Unknown";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(20, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Result:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(5, 21);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Accuracy:";
+            // 
+            // ACC_Submit_btn
+            // 
+            this.ACC_Submit_btn.Location = new System.Drawing.Point(6, 179);
+            this.ACC_Submit_btn.Name = "ACC_Submit_btn";
+            this.ACC_Submit_btn.Size = new System.Drawing.Size(190, 23);
+            this.ACC_Submit_btn.TabIndex = 12;
+            this.ACC_Submit_btn.Text = "Submit";
+            this.ACC_Submit_btn.UseVisualStyleBackColor = true;
+            this.ACC_Submit_btn.Click += new System.EventHandler(this.ACC_Submit_btn_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.richTextBox1);
+            this.groupBox6.Location = new System.Drawing.Point(745, 235);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(202, 304);
+            this.groupBox6.TabIndex = 330;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Notes:";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(6, 19);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(190, 279);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
             // PlayerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(751, 551);
+            this.ClientSize = new System.Drawing.Size(959, 551);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.DINV_cbox);
+            this.Controls.Add(this.Delete_btn);
+            this.Controls.Add(this.Sleep_btn);
             this.Controls.Add(this.label94);
             this.Controls.Add(this.label93);
             this.Controls.Add(this.label91);
@@ -1155,6 +1373,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Fire_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Unholy_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Holy_UD)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DROLL_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ADEX_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AROLL_ud)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1246,5 +1472,23 @@
         private System.Windows.Forms.TextBox DEF_tbox;
         private System.Windows.Forms.TextBox SATK_tbox;
         private System.Windows.Forms.TextBox ATK_tbox;
+        private System.Windows.Forms.Button Sleep_btn;
+        private System.Windows.Forms.Button Delete_btn;
+        private System.Windows.Forms.CheckBox DINV_cbox;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label Accuracy_lbl;
+        private System.Windows.Forms.Label HitMiss_lbl;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown DROLL_ud;
+        private System.Windows.Forms.NumericUpDown ADEX_ud;
+        private System.Windows.Forms.NumericUpDown AROLL_ud;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button ACC_Submit_btn;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

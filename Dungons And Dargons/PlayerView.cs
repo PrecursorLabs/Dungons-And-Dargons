@@ -17,6 +17,14 @@ namespace Dungons_And_Dargons
         MySqlConnection Pconn;
         public int PID;
         NPC SELNPC;
+        private static readonly Random random = new Random();
+
+        private static double RandomNumberBetween(double minValue, double maxValue)
+        {
+            var next = random.NextDouble();
+
+            return minValue + (next * (maxValue - minValue));
+        }
 
         public PlayerView(int ID, MySqlConnection conn)
         {
@@ -260,6 +268,44 @@ namespace Dungons_And_Dargons
                 string IID = Equipment_lbox.SelectedItem.ToString().Split('<', '>')[1];
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), Pconn, -1);
                 Iview.Show();
+            }
+        }
+
+        private void Sleep_btn_Click(object sender, EventArgs e)
+        {
+            SELNPC.isALL = false;
+            SELNPC.isEnemy = false;
+            SELNPC.isPlayer = false;
+            SELNPC.isNPC = false;
+            SELNPC.PostData();
+            MessageBox.Show("Character In Hibernation and will not show up in any lists");
+        }
+
+        private void Delete_btn_Click(object sender, EventArgs e)
+        {
+            SELNPC.Delete(DINV_cbox.Checked);
+            MessageBox.Show("Character Not Found Exiting");
+            this.Close();
+        }
+
+        private void ACC_Submit_btn_Click(object sender, EventArgs e)
+        {
+            decimal ADEX = ADEX_ud.Value;
+            decimal DDEX = SELNPC.T_DEX;
+            decimal AROLL = AROLL_ud.Value;
+            decimal DROLL = DROLL_ud.Value;
+            float Accuracy = (float)(ADEX * AROLL) / (float)(DDEX * DROLL);
+            if (Accuracy > 1) Accuracy = 1;
+            Accuracy *= 100;
+            Accuracy_lbl.Text = Convert.ToString(Math.Round(Accuracy, 2, MidpointRounding.AwayFromZero));
+            Double RND = RandomNumberBetween(0.00000000000000000000, 100.00000000000000000000);
+            if (RND <= Accuracy)
+            {
+                HitMiss_lbl.Text = "HIT";
+            }
+            else
+            {
+                HitMiss_lbl.Text = "MISS";
             }
         }
     }

@@ -215,7 +215,6 @@
             this.label107 = new System.Windows.Forms.Label();
             this.Spell_name_editor_tbox = new System.Windows.Forms.TextBox();
             this.label108 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.MP_pbar = new System.Windows.Forms.ProgressBar();
             this.HP_pbar = new System.Windows.Forms.ProgressBar();
             this.XP_pbar = new System.Windows.Forms.ProgressBar();
@@ -928,7 +927,6 @@
             this.GameMaster_stabs.Controls.Add(this.NPCC_tab);
             this.GameMaster_stabs.Controls.Add(this.GMItemc_tab);
             this.GameMaster_stabs.Controls.Add(this.SpellsManager_tab);
-            this.GameMaster_stabs.Controls.Add(this.tabPage1);
             this.GameMaster_stabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GameMaster_stabs.Location = new System.Drawing.Point(3, 3);
             this.GameMaster_stabs.Name = "GameMaster_stabs";
@@ -2895,16 +2893,6 @@
             this.label108.Size = new System.Drawing.Size(38, 13);
             this.label108.TabIndex = 0;
             this.label108.Text = "Name:";
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(830, 560);
-            this.tabPage1.TabIndex = 6;
-            this.tabPage1.Text = "Combat Tools";
             // 
             // MP_pbar
             // 
@@ -5156,7 +5144,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListView EditorItems_lbox;
         private System.Windows.Forms.TabPage SpellsManager_tab;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox EType_editor_tbox;
         private System.Windows.Forms.Button EItem_editor_btn;
