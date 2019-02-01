@@ -400,6 +400,12 @@
             this.NPC_Create_btn = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AutoRefresh_cbox = new System.Windows.Forms.CheckBox();
+            this.CCXP_UD = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.GenEnchants_cbox = new System.Windows.Forms.CheckBox();
+            this.Creature_Ammount_UD = new System.Windows.Forms.NumericUpDown();
             this.Main_tabs.SuspendLayout();
             this.Equipment_tab.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -474,6 +480,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.CCCUSMSP_UD)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCXP_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Creature_Ammount_UD)).BeginInit();
             this.SuspendLayout();
             // 
             // Update_timer
@@ -998,6 +1006,7 @@
             this.NPCS_lbox.Location = new System.Drawing.Point(194, 6);
             this.NPCS_lbox.Name = "NPCS_lbox";
             this.NPCS_lbox.Size = new System.Drawing.Size(630, 511);
+            this.NPCS_lbox.Sorted = true;
             this.NPCS_lbox.TabIndex = 114;
             this.NPCS_lbox.SelectedIndexChanged += new System.EventHandler(this.NPCS_lbox_SelectedIndexChanged);
             // 
@@ -1005,6 +1014,9 @@
             // 
             this.NPCC_tab.AutoScroll = true;
             this.NPCC_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.NPCC_tab.Controls.Add(this.Creature_Ammount_UD);
+            this.NPCC_tab.Controls.Add(this.GenEnchants_cbox);
+            this.NPCC_tab.Controls.Add(this.CCXP_UD);
             this.NPCC_tab.Controls.Add(this.NPC_Create_btn);
             this.NPCC_tab.Controls.Add(this.GITEMS_cbox);
             this.NPCC_tab.Controls.Add(this.CCCUSMSP_UD);
@@ -1060,6 +1072,8 @@
             this.NPCC_tab.Controls.Add(this.CCOMPMOD_tbox);
             this.NPCC_tab.Controls.Add(this.CCDEX_UD);
             this.NPCC_tab.Controls.Add(this.CCOHPMOD_tbox);
+            this.NPCC_tab.Controls.Add(this.label13);
+            this.NPCC_tab.Controls.Add(this.label12);
             this.NPCC_tab.Location = new System.Drawing.Point(4, 22);
             this.NPCC_tab.Name = "NPCC_tab";
             this.NPCC_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -1216,7 +1230,7 @@
             this.CCmbase_chbox.AutoSize = true;
             this.CCmbase_chbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCmbase_chbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCmbase_chbox.Location = new System.Drawing.Point(347, 31);
+            this.CCmbase_chbox.Location = new System.Drawing.Point(349, 31);
             this.CCmbase_chbox.Name = "CCmbase_chbox";
             this.CCmbase_chbox.Size = new System.Drawing.Size(58, 17);
             this.CCmbase_chbox.TabIndex = 37;
@@ -1349,6 +1363,7 @@
             this.CCCustom__chbox.TabIndex = 33;
             this.CCCustom__chbox.Text = "Custom";
             this.CCCustom__chbox.UseVisualStyleBackColor = false;
+            this.CCCustom__chbox.CheckedChanged += new System.EventHandler(this.CCCustom__chbox_CheckedChanged);
             // 
             // CCODEFMOD_tbox
             // 
@@ -1552,14 +1567,14 @@
             0,
             0,
             196608});
-            this.CCOXPMOD_tbox.Location = new System.Drawing.Point(55, 59);
+            this.CCOXPMOD_tbox.Location = new System.Drawing.Point(161, 59);
             this.CCOXPMOD_tbox.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
             this.CCOXPMOD_tbox.Name = "CCOXPMOD_tbox";
-            this.CCOXPMOD_tbox.Size = new System.Drawing.Size(167, 20);
+            this.CCOXPMOD_tbox.Size = new System.Drawing.Size(61, 20);
             this.CCOXPMOD_tbox.TabIndex = 73;
             this.CCOXPMOD_tbox.ThousandsSeparator = true;
             this.CCOXPMOD_tbox.Value = new decimal(new int[] {
@@ -3856,7 +3871,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(177, 324);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(224, 315);
             this.tableLayoutPanel1.TabIndex = 74;
             // 
             // label2
@@ -3865,7 +3880,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 18);
+            this.label2.Size = new System.Drawing.Size(20, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "H";
             // 
@@ -3873,9 +3888,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 0);
+            this.label3.Location = new System.Drawing.Point(31, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 18);
+            this.label3.Size = new System.Drawing.Size(22, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "M";
             // 
@@ -3883,9 +3898,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 0);
+            this.label4.Location = new System.Drawing.Point(59, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 18);
+            this.label4.Size = new System.Drawing.Size(21, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "G";
             // 
@@ -3893,9 +3908,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(69, 0);
+            this.label5.Location = new System.Drawing.Point(87, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 18);
+            this.label5.Size = new System.Drawing.Size(19, 18);
             this.label5.TabIndex = 3;
             this.label5.Text = "P";
             // 
@@ -3903,9 +3918,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(91, 0);
+            this.label6.Location = new System.Drawing.Point(115, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 18);
+            this.label6.Size = new System.Drawing.Size(19, 18);
             this.label6.TabIndex = 4;
             this.label6.Text = "B";
             // 
@@ -3913,9 +3928,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(113, 0);
+            this.label8.Location = new System.Drawing.Point(143, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 18);
+            this.label8.Size = new System.Drawing.Size(22, 18);
             this.label8.TabIndex = 5;
             this.label8.Text = "W";
             // 
@@ -3923,9 +3938,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(135, 0);
+            this.label9.Location = new System.Drawing.Point(171, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 18);
+            this.label9.Size = new System.Drawing.Size(22, 18);
             this.label9.TabIndex = 6;
             this.label9.Text = "W";
             // 
@@ -3933,9 +3948,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(157, 0);
+            this.label11.Location = new System.Drawing.Point(199, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(17, 18);
+            this.label11.Size = new System.Drawing.Size(18, 18);
             this.label11.TabIndex = 7;
             this.label11.Text = "A";
             // 
@@ -3951,7 +3966,7 @@
             // Maille_HP
             // 
             this.Maille_HP.AutoSize = true;
-            this.Maille_HP.Location = new System.Drawing.Point(25, 29);
+            this.Maille_HP.Location = new System.Drawing.Point(31, 29);
             this.Maille_HP.Name = "Maille_HP";
             this.Maille_HP.Size = new System.Drawing.Size(15, 14);
             this.Maille_HP.TabIndex = 9;
@@ -3960,7 +3975,7 @@
             // Gloves_HP
             // 
             this.Gloves_HP.AutoSize = true;
-            this.Gloves_HP.Location = new System.Drawing.Point(47, 29);
+            this.Gloves_HP.Location = new System.Drawing.Point(59, 29);
             this.Gloves_HP.Name = "Gloves_HP";
             this.Gloves_HP.Size = new System.Drawing.Size(15, 14);
             this.Gloves_HP.TabIndex = 10;
@@ -3969,7 +3984,7 @@
             // Pants_HP
             // 
             this.Pants_HP.AutoSize = true;
-            this.Pants_HP.Location = new System.Drawing.Point(69, 29);
+            this.Pants_HP.Location = new System.Drawing.Point(87, 29);
             this.Pants_HP.Name = "Pants_HP";
             this.Pants_HP.Size = new System.Drawing.Size(15, 14);
             this.Pants_HP.TabIndex = 11;
@@ -3978,7 +3993,7 @@
             // Boots_HP
             // 
             this.Boots_HP.AutoSize = true;
-            this.Boots_HP.Location = new System.Drawing.Point(91, 29);
+            this.Boots_HP.Location = new System.Drawing.Point(115, 29);
             this.Boots_HP.Name = "Boots_HP";
             this.Boots_HP.Size = new System.Drawing.Size(15, 14);
             this.Boots_HP.TabIndex = 12;
@@ -3987,7 +4002,7 @@
             // LWeapon_HP
             // 
             this.LWeapon_HP.AutoSize = true;
-            this.LWeapon_HP.Location = new System.Drawing.Point(113, 29);
+            this.LWeapon_HP.Location = new System.Drawing.Point(143, 29);
             this.LWeapon_HP.Name = "LWeapon_HP";
             this.LWeapon_HP.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_HP.TabIndex = 13;
@@ -3996,7 +4011,7 @@
             // RWeapon_HP
             // 
             this.RWeapon_HP.AutoSize = true;
-            this.RWeapon_HP.Location = new System.Drawing.Point(135, 29);
+            this.RWeapon_HP.Location = new System.Drawing.Point(171, 29);
             this.RWeapon_HP.Name = "RWeapon_HP";
             this.RWeapon_HP.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_HP.TabIndex = 14;
@@ -4005,7 +4020,7 @@
             // Artifact_HP
             // 
             this.Artifact_HP.AutoSize = true;
-            this.Artifact_HP.Location = new System.Drawing.Point(157, 29);
+            this.Artifact_HP.Location = new System.Drawing.Point(199, 29);
             this.Artifact_HP.Name = "Artifact_HP";
             this.Artifact_HP.Size = new System.Drawing.Size(15, 14);
             this.Artifact_HP.TabIndex = 15;
@@ -4023,7 +4038,7 @@
             // Maille_MP
             // 
             this.Maille_MP.AutoSize = true;
-            this.Maille_MP.Location = new System.Drawing.Point(25, 55);
+            this.Maille_MP.Location = new System.Drawing.Point(31, 55);
             this.Maille_MP.Name = "Maille_MP";
             this.Maille_MP.Size = new System.Drawing.Size(15, 14);
             this.Maille_MP.TabIndex = 17;
@@ -4032,7 +4047,7 @@
             // Gloves_MP
             // 
             this.Gloves_MP.AutoSize = true;
-            this.Gloves_MP.Location = new System.Drawing.Point(47, 55);
+            this.Gloves_MP.Location = new System.Drawing.Point(59, 55);
             this.Gloves_MP.Name = "Gloves_MP";
             this.Gloves_MP.Size = new System.Drawing.Size(15, 14);
             this.Gloves_MP.TabIndex = 18;
@@ -4041,7 +4056,7 @@
             // Pants_MP
             // 
             this.Pants_MP.AutoSize = true;
-            this.Pants_MP.Location = new System.Drawing.Point(69, 55);
+            this.Pants_MP.Location = new System.Drawing.Point(87, 55);
             this.Pants_MP.Name = "Pants_MP";
             this.Pants_MP.Size = new System.Drawing.Size(15, 14);
             this.Pants_MP.TabIndex = 19;
@@ -4050,7 +4065,7 @@
             // Boots_MP
             // 
             this.Boots_MP.AutoSize = true;
-            this.Boots_MP.Location = new System.Drawing.Point(91, 55);
+            this.Boots_MP.Location = new System.Drawing.Point(115, 55);
             this.Boots_MP.Name = "Boots_MP";
             this.Boots_MP.Size = new System.Drawing.Size(15, 14);
             this.Boots_MP.TabIndex = 20;
@@ -4059,7 +4074,7 @@
             // LWeapon_MP
             // 
             this.LWeapon_MP.AutoSize = true;
-            this.LWeapon_MP.Location = new System.Drawing.Point(113, 55);
+            this.LWeapon_MP.Location = new System.Drawing.Point(143, 55);
             this.LWeapon_MP.Name = "LWeapon_MP";
             this.LWeapon_MP.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_MP.TabIndex = 21;
@@ -4068,7 +4083,7 @@
             // RWeapon_MP
             // 
             this.RWeapon_MP.AutoSize = true;
-            this.RWeapon_MP.Location = new System.Drawing.Point(135, 55);
+            this.RWeapon_MP.Location = new System.Drawing.Point(171, 55);
             this.RWeapon_MP.Name = "RWeapon_MP";
             this.RWeapon_MP.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_MP.TabIndex = 22;
@@ -4077,7 +4092,7 @@
             // Artifact_MP
             // 
             this.Artifact_MP.AutoSize = true;
-            this.Artifact_MP.Location = new System.Drawing.Point(157, 55);
+            this.Artifact_MP.Location = new System.Drawing.Point(199, 55);
             this.Artifact_MP.Name = "Artifact_MP";
             this.Artifact_MP.Size = new System.Drawing.Size(15, 14);
             this.Artifact_MP.TabIndex = 23;
@@ -4095,7 +4110,7 @@
             // Maille_ATK
             // 
             this.Maille_ATK.AutoSize = true;
-            this.Maille_ATK.Location = new System.Drawing.Point(25, 81);
+            this.Maille_ATK.Location = new System.Drawing.Point(31, 81);
             this.Maille_ATK.Name = "Maille_ATK";
             this.Maille_ATK.Size = new System.Drawing.Size(15, 14);
             this.Maille_ATK.TabIndex = 25;
@@ -4104,7 +4119,7 @@
             // Gloves_ATK
             // 
             this.Gloves_ATK.AutoSize = true;
-            this.Gloves_ATK.Location = new System.Drawing.Point(47, 81);
+            this.Gloves_ATK.Location = new System.Drawing.Point(59, 81);
             this.Gloves_ATK.Name = "Gloves_ATK";
             this.Gloves_ATK.Size = new System.Drawing.Size(15, 14);
             this.Gloves_ATK.TabIndex = 26;
@@ -4113,7 +4128,7 @@
             // Pants_ATK
             // 
             this.Pants_ATK.AutoSize = true;
-            this.Pants_ATK.Location = new System.Drawing.Point(69, 81);
+            this.Pants_ATK.Location = new System.Drawing.Point(87, 81);
             this.Pants_ATK.Name = "Pants_ATK";
             this.Pants_ATK.Size = new System.Drawing.Size(15, 14);
             this.Pants_ATK.TabIndex = 27;
@@ -4122,7 +4137,7 @@
             // Boots_ATK
             // 
             this.Boots_ATK.AutoSize = true;
-            this.Boots_ATK.Location = new System.Drawing.Point(91, 81);
+            this.Boots_ATK.Location = new System.Drawing.Point(115, 81);
             this.Boots_ATK.Name = "Boots_ATK";
             this.Boots_ATK.Size = new System.Drawing.Size(15, 14);
             this.Boots_ATK.TabIndex = 28;
@@ -4131,7 +4146,7 @@
             // LWeapon_ATK
             // 
             this.LWeapon_ATK.AutoSize = true;
-            this.LWeapon_ATK.Location = new System.Drawing.Point(113, 81);
+            this.LWeapon_ATK.Location = new System.Drawing.Point(143, 81);
             this.LWeapon_ATK.Name = "LWeapon_ATK";
             this.LWeapon_ATK.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_ATK.TabIndex = 29;
@@ -4140,7 +4155,7 @@
             // RWeapon_ATK
             // 
             this.RWeapon_ATK.AutoSize = true;
-            this.RWeapon_ATK.Location = new System.Drawing.Point(135, 81);
+            this.RWeapon_ATK.Location = new System.Drawing.Point(171, 81);
             this.RWeapon_ATK.Name = "RWeapon_ATK";
             this.RWeapon_ATK.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_ATK.TabIndex = 30;
@@ -4149,7 +4164,7 @@
             // Artifact_ATK
             // 
             this.Artifact_ATK.AutoSize = true;
-            this.Artifact_ATK.Location = new System.Drawing.Point(157, 81);
+            this.Artifact_ATK.Location = new System.Drawing.Point(199, 81);
             this.Artifact_ATK.Name = "Artifact_ATK";
             this.Artifact_ATK.Size = new System.Drawing.Size(15, 14);
             this.Artifact_ATK.TabIndex = 31;
@@ -4167,7 +4182,7 @@
             // Maille_SATK
             // 
             this.Maille_SATK.AutoSize = true;
-            this.Maille_SATK.Location = new System.Drawing.Point(25, 107);
+            this.Maille_SATK.Location = new System.Drawing.Point(31, 107);
             this.Maille_SATK.Name = "Maille_SATK";
             this.Maille_SATK.Size = new System.Drawing.Size(15, 14);
             this.Maille_SATK.TabIndex = 33;
@@ -4176,7 +4191,7 @@
             // Gloves_SATK
             // 
             this.Gloves_SATK.AutoSize = true;
-            this.Gloves_SATK.Location = new System.Drawing.Point(47, 107);
+            this.Gloves_SATK.Location = new System.Drawing.Point(59, 107);
             this.Gloves_SATK.Name = "Gloves_SATK";
             this.Gloves_SATK.Size = new System.Drawing.Size(15, 14);
             this.Gloves_SATK.TabIndex = 34;
@@ -4185,7 +4200,7 @@
             // Pants_SATK
             // 
             this.Pants_SATK.AutoSize = true;
-            this.Pants_SATK.Location = new System.Drawing.Point(69, 107);
+            this.Pants_SATK.Location = new System.Drawing.Point(87, 107);
             this.Pants_SATK.Name = "Pants_SATK";
             this.Pants_SATK.Size = new System.Drawing.Size(15, 14);
             this.Pants_SATK.TabIndex = 35;
@@ -4194,7 +4209,7 @@
             // Boots_SATK
             // 
             this.Boots_SATK.AutoSize = true;
-            this.Boots_SATK.Location = new System.Drawing.Point(91, 107);
+            this.Boots_SATK.Location = new System.Drawing.Point(115, 107);
             this.Boots_SATK.Name = "Boots_SATK";
             this.Boots_SATK.Size = new System.Drawing.Size(15, 14);
             this.Boots_SATK.TabIndex = 36;
@@ -4203,7 +4218,7 @@
             // LWeapon_SATK
             // 
             this.LWeapon_SATK.AutoSize = true;
-            this.LWeapon_SATK.Location = new System.Drawing.Point(113, 107);
+            this.LWeapon_SATK.Location = new System.Drawing.Point(143, 107);
             this.LWeapon_SATK.Name = "LWeapon_SATK";
             this.LWeapon_SATK.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_SATK.TabIndex = 37;
@@ -4212,7 +4227,7 @@
             // RWeapon_SATK
             // 
             this.RWeapon_SATK.AutoSize = true;
-            this.RWeapon_SATK.Location = new System.Drawing.Point(135, 107);
+            this.RWeapon_SATK.Location = new System.Drawing.Point(171, 107);
             this.RWeapon_SATK.Name = "RWeapon_SATK";
             this.RWeapon_SATK.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_SATK.TabIndex = 38;
@@ -4221,7 +4236,7 @@
             // Artifact_SATK
             // 
             this.Artifact_SATK.AutoSize = true;
-            this.Artifact_SATK.Location = new System.Drawing.Point(157, 107);
+            this.Artifact_SATK.Location = new System.Drawing.Point(199, 107);
             this.Artifact_SATK.Name = "Artifact_SATK";
             this.Artifact_SATK.Size = new System.Drawing.Size(15, 14);
             this.Artifact_SATK.TabIndex = 39;
@@ -4239,7 +4254,7 @@
             // Maille_DEF
             // 
             this.Maille_DEF.AutoSize = true;
-            this.Maille_DEF.Location = new System.Drawing.Point(25, 133);
+            this.Maille_DEF.Location = new System.Drawing.Point(31, 133);
             this.Maille_DEF.Name = "Maille_DEF";
             this.Maille_DEF.Size = new System.Drawing.Size(15, 14);
             this.Maille_DEF.TabIndex = 41;
@@ -4248,7 +4263,7 @@
             // Gloves_DEF
             // 
             this.Gloves_DEF.AutoSize = true;
-            this.Gloves_DEF.Location = new System.Drawing.Point(47, 133);
+            this.Gloves_DEF.Location = new System.Drawing.Point(59, 133);
             this.Gloves_DEF.Name = "Gloves_DEF";
             this.Gloves_DEF.Size = new System.Drawing.Size(15, 14);
             this.Gloves_DEF.TabIndex = 42;
@@ -4257,7 +4272,7 @@
             // Pants_DEF
             // 
             this.Pants_DEF.AutoSize = true;
-            this.Pants_DEF.Location = new System.Drawing.Point(69, 133);
+            this.Pants_DEF.Location = new System.Drawing.Point(87, 133);
             this.Pants_DEF.Name = "Pants_DEF";
             this.Pants_DEF.Size = new System.Drawing.Size(15, 14);
             this.Pants_DEF.TabIndex = 43;
@@ -4266,7 +4281,7 @@
             // Boots_DEF
             // 
             this.Boots_DEF.AutoSize = true;
-            this.Boots_DEF.Location = new System.Drawing.Point(91, 133);
+            this.Boots_DEF.Location = new System.Drawing.Point(115, 133);
             this.Boots_DEF.Name = "Boots_DEF";
             this.Boots_DEF.Size = new System.Drawing.Size(15, 14);
             this.Boots_DEF.TabIndex = 44;
@@ -4275,7 +4290,7 @@
             // LWeapon_DEF
             // 
             this.LWeapon_DEF.AutoSize = true;
-            this.LWeapon_DEF.Location = new System.Drawing.Point(113, 133);
+            this.LWeapon_DEF.Location = new System.Drawing.Point(143, 133);
             this.LWeapon_DEF.Name = "LWeapon_DEF";
             this.LWeapon_DEF.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_DEF.TabIndex = 45;
@@ -4284,7 +4299,7 @@
             // RWeapon_DEF
             // 
             this.RWeapon_DEF.AutoSize = true;
-            this.RWeapon_DEF.Location = new System.Drawing.Point(135, 133);
+            this.RWeapon_DEF.Location = new System.Drawing.Point(171, 133);
             this.RWeapon_DEF.Name = "RWeapon_DEF";
             this.RWeapon_DEF.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_DEF.TabIndex = 46;
@@ -4293,7 +4308,7 @@
             // Artifact_DEF
             // 
             this.Artifact_DEF.AutoSize = true;
-            this.Artifact_DEF.Location = new System.Drawing.Point(157, 133);
+            this.Artifact_DEF.Location = new System.Drawing.Point(199, 133);
             this.Artifact_DEF.Name = "Artifact_DEF";
             this.Artifact_DEF.Size = new System.Drawing.Size(15, 14);
             this.Artifact_DEF.TabIndex = 47;
@@ -4311,7 +4326,7 @@
             // Maille_SDEF
             // 
             this.Maille_SDEF.AutoSize = true;
-            this.Maille_SDEF.Location = new System.Drawing.Point(25, 159);
+            this.Maille_SDEF.Location = new System.Drawing.Point(31, 159);
             this.Maille_SDEF.Name = "Maille_SDEF";
             this.Maille_SDEF.Size = new System.Drawing.Size(15, 14);
             this.Maille_SDEF.TabIndex = 49;
@@ -4320,7 +4335,7 @@
             // Gloves_SDEF
             // 
             this.Gloves_SDEF.AutoSize = true;
-            this.Gloves_SDEF.Location = new System.Drawing.Point(47, 159);
+            this.Gloves_SDEF.Location = new System.Drawing.Point(59, 159);
             this.Gloves_SDEF.Name = "Gloves_SDEF";
             this.Gloves_SDEF.Size = new System.Drawing.Size(15, 14);
             this.Gloves_SDEF.TabIndex = 50;
@@ -4329,7 +4344,7 @@
             // Pants_SDEF
             // 
             this.Pants_SDEF.AutoSize = true;
-            this.Pants_SDEF.Location = new System.Drawing.Point(69, 159);
+            this.Pants_SDEF.Location = new System.Drawing.Point(87, 159);
             this.Pants_SDEF.Name = "Pants_SDEF";
             this.Pants_SDEF.Size = new System.Drawing.Size(15, 14);
             this.Pants_SDEF.TabIndex = 51;
@@ -4338,7 +4353,7 @@
             // Boots_SDEF
             // 
             this.Boots_SDEF.AutoSize = true;
-            this.Boots_SDEF.Location = new System.Drawing.Point(91, 159);
+            this.Boots_SDEF.Location = new System.Drawing.Point(115, 159);
             this.Boots_SDEF.Name = "Boots_SDEF";
             this.Boots_SDEF.Size = new System.Drawing.Size(15, 14);
             this.Boots_SDEF.TabIndex = 52;
@@ -4347,7 +4362,7 @@
             // LWeapon_SDEF
             // 
             this.LWeapon_SDEF.AutoSize = true;
-            this.LWeapon_SDEF.Location = new System.Drawing.Point(113, 159);
+            this.LWeapon_SDEF.Location = new System.Drawing.Point(143, 159);
             this.LWeapon_SDEF.Name = "LWeapon_SDEF";
             this.LWeapon_SDEF.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_SDEF.TabIndex = 53;
@@ -4356,7 +4371,7 @@
             // RWeapon_SDEF
             // 
             this.RWeapon_SDEF.AutoSize = true;
-            this.RWeapon_SDEF.Location = new System.Drawing.Point(135, 159);
+            this.RWeapon_SDEF.Location = new System.Drawing.Point(171, 159);
             this.RWeapon_SDEF.Name = "RWeapon_SDEF";
             this.RWeapon_SDEF.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_SDEF.TabIndex = 54;
@@ -4365,7 +4380,7 @@
             // Artifact_SDEF
             // 
             this.Artifact_SDEF.AutoSize = true;
-            this.Artifact_SDEF.Location = new System.Drawing.Point(157, 159);
+            this.Artifact_SDEF.Location = new System.Drawing.Point(199, 159);
             this.Artifact_SDEF.Name = "Artifact_SDEF";
             this.Artifact_SDEF.Size = new System.Drawing.Size(15, 14);
             this.Artifact_SDEF.TabIndex = 55;
@@ -4383,7 +4398,7 @@
             // Maille_CHAR
             // 
             this.Maille_CHAR.AutoSize = true;
-            this.Maille_CHAR.Location = new System.Drawing.Point(25, 185);
+            this.Maille_CHAR.Location = new System.Drawing.Point(31, 185);
             this.Maille_CHAR.Name = "Maille_CHAR";
             this.Maille_CHAR.Size = new System.Drawing.Size(15, 14);
             this.Maille_CHAR.TabIndex = 57;
@@ -4392,7 +4407,7 @@
             // Gloves_CHAR
             // 
             this.Gloves_CHAR.AutoSize = true;
-            this.Gloves_CHAR.Location = new System.Drawing.Point(47, 185);
+            this.Gloves_CHAR.Location = new System.Drawing.Point(59, 185);
             this.Gloves_CHAR.Name = "Gloves_CHAR";
             this.Gloves_CHAR.Size = new System.Drawing.Size(15, 14);
             this.Gloves_CHAR.TabIndex = 58;
@@ -4401,7 +4416,7 @@
             // Pants_CHAR
             // 
             this.Pants_CHAR.AutoSize = true;
-            this.Pants_CHAR.Location = new System.Drawing.Point(69, 185);
+            this.Pants_CHAR.Location = new System.Drawing.Point(87, 185);
             this.Pants_CHAR.Name = "Pants_CHAR";
             this.Pants_CHAR.Size = new System.Drawing.Size(15, 14);
             this.Pants_CHAR.TabIndex = 59;
@@ -4410,7 +4425,7 @@
             // Boots_CHAR
             // 
             this.Boots_CHAR.AutoSize = true;
-            this.Boots_CHAR.Location = new System.Drawing.Point(91, 185);
+            this.Boots_CHAR.Location = new System.Drawing.Point(115, 185);
             this.Boots_CHAR.Name = "Boots_CHAR";
             this.Boots_CHAR.Size = new System.Drawing.Size(15, 14);
             this.Boots_CHAR.TabIndex = 60;
@@ -4419,7 +4434,7 @@
             // LWeapon_CHAR
             // 
             this.LWeapon_CHAR.AutoSize = true;
-            this.LWeapon_CHAR.Location = new System.Drawing.Point(113, 185);
+            this.LWeapon_CHAR.Location = new System.Drawing.Point(143, 185);
             this.LWeapon_CHAR.Name = "LWeapon_CHAR";
             this.LWeapon_CHAR.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_CHAR.TabIndex = 61;
@@ -4428,7 +4443,7 @@
             // RWeapon_CHAR
             // 
             this.RWeapon_CHAR.AutoSize = true;
-            this.RWeapon_CHAR.Location = new System.Drawing.Point(135, 185);
+            this.RWeapon_CHAR.Location = new System.Drawing.Point(171, 185);
             this.RWeapon_CHAR.Name = "RWeapon_CHAR";
             this.RWeapon_CHAR.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_CHAR.TabIndex = 62;
@@ -4437,7 +4452,7 @@
             // Artifact_CHAR
             // 
             this.Artifact_CHAR.AutoSize = true;
-            this.Artifact_CHAR.Location = new System.Drawing.Point(157, 185);
+            this.Artifact_CHAR.Location = new System.Drawing.Point(199, 185);
             this.Artifact_CHAR.Name = "Artifact_CHAR";
             this.Artifact_CHAR.Size = new System.Drawing.Size(15, 14);
             this.Artifact_CHAR.TabIndex = 63;
@@ -4455,7 +4470,7 @@
             // Maille_DEX
             // 
             this.Maille_DEX.AutoSize = true;
-            this.Maille_DEX.Location = new System.Drawing.Point(25, 211);
+            this.Maille_DEX.Location = new System.Drawing.Point(31, 211);
             this.Maille_DEX.Name = "Maille_DEX";
             this.Maille_DEX.Size = new System.Drawing.Size(15, 14);
             this.Maille_DEX.TabIndex = 65;
@@ -4464,7 +4479,7 @@
             // Gloves_DEX
             // 
             this.Gloves_DEX.AutoSize = true;
-            this.Gloves_DEX.Location = new System.Drawing.Point(47, 211);
+            this.Gloves_DEX.Location = new System.Drawing.Point(59, 211);
             this.Gloves_DEX.Name = "Gloves_DEX";
             this.Gloves_DEX.Size = new System.Drawing.Size(15, 14);
             this.Gloves_DEX.TabIndex = 66;
@@ -4473,7 +4488,7 @@
             // Pants_DEX
             // 
             this.Pants_DEX.AutoSize = true;
-            this.Pants_DEX.Location = new System.Drawing.Point(69, 211);
+            this.Pants_DEX.Location = new System.Drawing.Point(87, 211);
             this.Pants_DEX.Name = "Pants_DEX";
             this.Pants_DEX.Size = new System.Drawing.Size(15, 14);
             this.Pants_DEX.TabIndex = 67;
@@ -4482,7 +4497,7 @@
             // Boots_DEX
             // 
             this.Boots_DEX.AutoSize = true;
-            this.Boots_DEX.Location = new System.Drawing.Point(91, 211);
+            this.Boots_DEX.Location = new System.Drawing.Point(115, 211);
             this.Boots_DEX.Name = "Boots_DEX";
             this.Boots_DEX.Size = new System.Drawing.Size(15, 14);
             this.Boots_DEX.TabIndex = 68;
@@ -4491,7 +4506,7 @@
             // LWeapon_DEX
             // 
             this.LWeapon_DEX.AutoSize = true;
-            this.LWeapon_DEX.Location = new System.Drawing.Point(113, 211);
+            this.LWeapon_DEX.Location = new System.Drawing.Point(143, 211);
             this.LWeapon_DEX.Name = "LWeapon_DEX";
             this.LWeapon_DEX.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_DEX.TabIndex = 69;
@@ -4500,7 +4515,7 @@
             // RWeapon_DEX
             // 
             this.RWeapon_DEX.AutoSize = true;
-            this.RWeapon_DEX.Location = new System.Drawing.Point(135, 211);
+            this.RWeapon_DEX.Location = new System.Drawing.Point(171, 211);
             this.RWeapon_DEX.Name = "RWeapon_DEX";
             this.RWeapon_DEX.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_DEX.TabIndex = 70;
@@ -4509,7 +4524,7 @@
             // Artifact_DEX
             // 
             this.Artifact_DEX.AutoSize = true;
-            this.Artifact_DEX.Location = new System.Drawing.Point(157, 211);
+            this.Artifact_DEX.Location = new System.Drawing.Point(199, 211);
             this.Artifact_DEX.Name = "Artifact_DEX";
             this.Artifact_DEX.Size = new System.Drawing.Size(15, 14);
             this.Artifact_DEX.TabIndex = 71;
@@ -4527,7 +4542,7 @@
             // Maille_STR
             // 
             this.Maille_STR.AutoSize = true;
-            this.Maille_STR.Location = new System.Drawing.Point(25, 237);
+            this.Maille_STR.Location = new System.Drawing.Point(31, 237);
             this.Maille_STR.Name = "Maille_STR";
             this.Maille_STR.Size = new System.Drawing.Size(15, 14);
             this.Maille_STR.TabIndex = 73;
@@ -4536,7 +4551,7 @@
             // Gloves_STR
             // 
             this.Gloves_STR.AutoSize = true;
-            this.Gloves_STR.Location = new System.Drawing.Point(47, 237);
+            this.Gloves_STR.Location = new System.Drawing.Point(59, 237);
             this.Gloves_STR.Name = "Gloves_STR";
             this.Gloves_STR.Size = new System.Drawing.Size(15, 14);
             this.Gloves_STR.TabIndex = 74;
@@ -4545,7 +4560,7 @@
             // Pants_STR
             // 
             this.Pants_STR.AutoSize = true;
-            this.Pants_STR.Location = new System.Drawing.Point(69, 237);
+            this.Pants_STR.Location = new System.Drawing.Point(87, 237);
             this.Pants_STR.Name = "Pants_STR";
             this.Pants_STR.Size = new System.Drawing.Size(15, 14);
             this.Pants_STR.TabIndex = 75;
@@ -4554,7 +4569,7 @@
             // Boots_STR
             // 
             this.Boots_STR.AutoSize = true;
-            this.Boots_STR.Location = new System.Drawing.Point(91, 237);
+            this.Boots_STR.Location = new System.Drawing.Point(115, 237);
             this.Boots_STR.Name = "Boots_STR";
             this.Boots_STR.Size = new System.Drawing.Size(15, 14);
             this.Boots_STR.TabIndex = 76;
@@ -4563,7 +4578,7 @@
             // LWeapon_STR
             // 
             this.LWeapon_STR.AutoSize = true;
-            this.LWeapon_STR.Location = new System.Drawing.Point(113, 237);
+            this.LWeapon_STR.Location = new System.Drawing.Point(143, 237);
             this.LWeapon_STR.Name = "LWeapon_STR";
             this.LWeapon_STR.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_STR.TabIndex = 77;
@@ -4572,7 +4587,7 @@
             // RWeapon_STR
             // 
             this.RWeapon_STR.AutoSize = true;
-            this.RWeapon_STR.Location = new System.Drawing.Point(135, 237);
+            this.RWeapon_STR.Location = new System.Drawing.Point(171, 237);
             this.RWeapon_STR.Name = "RWeapon_STR";
             this.RWeapon_STR.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_STR.TabIndex = 78;
@@ -4581,7 +4596,7 @@
             // Artifact_STR
             // 
             this.Artifact_STR.AutoSize = true;
-            this.Artifact_STR.Location = new System.Drawing.Point(157, 237);
+            this.Artifact_STR.Location = new System.Drawing.Point(199, 237);
             this.Artifact_STR.Name = "Artifact_STR";
             this.Artifact_STR.Size = new System.Drawing.Size(15, 14);
             this.Artifact_STR.TabIndex = 79;
@@ -4599,7 +4614,7 @@
             // Maille_INT
             // 
             this.Maille_INT.AutoSize = true;
-            this.Maille_INT.Location = new System.Drawing.Point(25, 263);
+            this.Maille_INT.Location = new System.Drawing.Point(31, 263);
             this.Maille_INT.Name = "Maille_INT";
             this.Maille_INT.Size = new System.Drawing.Size(15, 14);
             this.Maille_INT.TabIndex = 81;
@@ -4608,7 +4623,7 @@
             // Gloves_INT
             // 
             this.Gloves_INT.AutoSize = true;
-            this.Gloves_INT.Location = new System.Drawing.Point(47, 263);
+            this.Gloves_INT.Location = new System.Drawing.Point(59, 263);
             this.Gloves_INT.Name = "Gloves_INT";
             this.Gloves_INT.Size = new System.Drawing.Size(15, 14);
             this.Gloves_INT.TabIndex = 82;
@@ -4617,7 +4632,7 @@
             // Pants_INT
             // 
             this.Pants_INT.AutoSize = true;
-            this.Pants_INT.Location = new System.Drawing.Point(69, 263);
+            this.Pants_INT.Location = new System.Drawing.Point(87, 263);
             this.Pants_INT.Name = "Pants_INT";
             this.Pants_INT.Size = new System.Drawing.Size(15, 14);
             this.Pants_INT.TabIndex = 83;
@@ -4626,7 +4641,7 @@
             // Boots_INT
             // 
             this.Boots_INT.AutoSize = true;
-            this.Boots_INT.Location = new System.Drawing.Point(91, 263);
+            this.Boots_INT.Location = new System.Drawing.Point(115, 263);
             this.Boots_INT.Name = "Boots_INT";
             this.Boots_INT.Size = new System.Drawing.Size(15, 14);
             this.Boots_INT.TabIndex = 84;
@@ -4635,7 +4650,7 @@
             // LWeapon_INT
             // 
             this.LWeapon_INT.AutoSize = true;
-            this.LWeapon_INT.Location = new System.Drawing.Point(113, 263);
+            this.LWeapon_INT.Location = new System.Drawing.Point(143, 263);
             this.LWeapon_INT.Name = "LWeapon_INT";
             this.LWeapon_INT.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_INT.TabIndex = 85;
@@ -4644,7 +4659,7 @@
             // RWeapon_INT
             // 
             this.RWeapon_INT.AutoSize = true;
-            this.RWeapon_INT.Location = new System.Drawing.Point(135, 263);
+            this.RWeapon_INT.Location = new System.Drawing.Point(171, 263);
             this.RWeapon_INT.Name = "RWeapon_INT";
             this.RWeapon_INT.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_INT.TabIndex = 86;
@@ -4653,7 +4668,7 @@
             // Artifact_INT
             // 
             this.Artifact_INT.AutoSize = true;
-            this.Artifact_INT.Location = new System.Drawing.Point(157, 263);
+            this.Artifact_INT.Location = new System.Drawing.Point(199, 263);
             this.Artifact_INT.Name = "Artifact_INT";
             this.Artifact_INT.Size = new System.Drawing.Size(15, 14);
             this.Artifact_INT.TabIndex = 87;
@@ -4671,7 +4686,7 @@
             // Maille_PERC
             // 
             this.Maille_PERC.AutoSize = true;
-            this.Maille_PERC.Location = new System.Drawing.Point(25, 289);
+            this.Maille_PERC.Location = new System.Drawing.Point(31, 289);
             this.Maille_PERC.Name = "Maille_PERC";
             this.Maille_PERC.Size = new System.Drawing.Size(15, 14);
             this.Maille_PERC.TabIndex = 89;
@@ -4680,7 +4695,7 @@
             // Gloves_PERC
             // 
             this.Gloves_PERC.AutoSize = true;
-            this.Gloves_PERC.Location = new System.Drawing.Point(47, 289);
+            this.Gloves_PERC.Location = new System.Drawing.Point(59, 289);
             this.Gloves_PERC.Name = "Gloves_PERC";
             this.Gloves_PERC.Size = new System.Drawing.Size(15, 14);
             this.Gloves_PERC.TabIndex = 90;
@@ -4689,7 +4704,7 @@
             // Pants_PERC
             // 
             this.Pants_PERC.AutoSize = true;
-            this.Pants_PERC.Location = new System.Drawing.Point(69, 289);
+            this.Pants_PERC.Location = new System.Drawing.Point(87, 289);
             this.Pants_PERC.Name = "Pants_PERC";
             this.Pants_PERC.Size = new System.Drawing.Size(15, 14);
             this.Pants_PERC.TabIndex = 91;
@@ -4698,7 +4713,7 @@
             // Boots_PERC
             // 
             this.Boots_PERC.AutoSize = true;
-            this.Boots_PERC.Location = new System.Drawing.Point(91, 289);
+            this.Boots_PERC.Location = new System.Drawing.Point(115, 289);
             this.Boots_PERC.Name = "Boots_PERC";
             this.Boots_PERC.Size = new System.Drawing.Size(15, 14);
             this.Boots_PERC.TabIndex = 92;
@@ -4707,7 +4722,7 @@
             // LWeapon_PERC
             // 
             this.LWeapon_PERC.AutoSize = true;
-            this.LWeapon_PERC.Location = new System.Drawing.Point(113, 289);
+            this.LWeapon_PERC.Location = new System.Drawing.Point(143, 289);
             this.LWeapon_PERC.Name = "LWeapon_PERC";
             this.LWeapon_PERC.Size = new System.Drawing.Size(15, 14);
             this.LWeapon_PERC.TabIndex = 93;
@@ -4716,7 +4731,7 @@
             // RWeapon_PERC
             // 
             this.RWeapon_PERC.AutoSize = true;
-            this.RWeapon_PERC.Location = new System.Drawing.Point(135, 289);
+            this.RWeapon_PERC.Location = new System.Drawing.Point(171, 289);
             this.RWeapon_PERC.Name = "RWeapon_PERC";
             this.RWeapon_PERC.Size = new System.Drawing.Size(15, 14);
             this.RWeapon_PERC.TabIndex = 94;
@@ -4725,7 +4740,7 @@
             // Artifact_PERC
             // 
             this.Artifact_PERC.AutoSize = true;
-            this.Artifact_PERC.Location = new System.Drawing.Point(157, 289);
+            this.Artifact_PERC.Location = new System.Drawing.Point(199, 289);
             this.Artifact_PERC.Name = "Artifact_PERC";
             this.Artifact_PERC.Size = new System.Drawing.Size(15, 14);
             this.Artifact_PERC.TabIndex = 95;
@@ -4735,6 +4750,8 @@
             // 
             this.Enemy_cbox.AutoSize = true;
             this.Enemy_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Enemy_cbox.Checked = true;
+            this.Enemy_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Enemy_cbox.ForeColor = System.Drawing.SystemColors.Control;
             this.Enemy_cbox.Location = new System.Drawing.Point(347, 8);
             this.Enemy_cbox.Name = "Enemy_cbox";
@@ -4748,7 +4765,7 @@
             this.CCCUSLCK_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCCUSLCK_UD.Enabled = false;
             this.CCCUSLCK_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCCUSLCK_UD.Location = new System.Drawing.Point(218, 32);
+            this.CCCUSLCK_UD.Location = new System.Drawing.Point(230, 32);
             this.CCCUSLCK_UD.Maximum = new decimal(new int[] {
             1316134911,
             2328,
@@ -4763,20 +4780,22 @@
             this.CCCUSMSP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCCUSMSP_UD.Enabled = false;
             this.CCCUSMSP_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCCUSMSP_UD.Location = new System.Drawing.Point(274, 32);
+            this.CCCUSMSP_UD.Location = new System.Drawing.Point(297, 32);
             this.CCCUSMSP_UD.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
             this.CCCUSMSP_UD.Name = "CCCUSMSP_UD";
-            this.CCCUSMSP_UD.Size = new System.Drawing.Size(50, 20);
+            this.CCCUSMSP_UD.Size = new System.Drawing.Size(49, 20);
             this.CCCUSMSP_UD.TabIndex = 77;
             // 
             // GITEMS_cbox
             // 
             this.GITEMS_cbox.AutoSize = true;
             this.GITEMS_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.GITEMS_cbox.Checked = true;
+            this.GITEMS_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.GITEMS_cbox.ForeColor = System.Drawing.SystemColors.Control;
             this.GITEMS_cbox.Location = new System.Drawing.Point(411, 8);
             this.GITEMS_cbox.Name = "GITEMS_cbox";
@@ -4787,7 +4806,7 @@
             // 
             // NPC_Create_btn
             // 
-            this.NPC_Create_btn.Location = new System.Drawing.Point(3, 399);
+            this.NPC_Create_btn.Location = new System.Drawing.Point(81, 399);
             this.NPC_Create_btn.Name = "NPC_Create_btn";
             this.NPC_Create_btn.Size = new System.Drawing.Size(75, 23);
             this.NPC_Create_btn.TabIndex = 79;
@@ -4817,6 +4836,91 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // AutoRefresh_cbox
+            // 
+            this.AutoRefresh_cbox.AutoSize = true;
+            this.AutoRefresh_cbox.Checked = true;
+            this.AutoRefresh_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AutoRefresh_cbox.Location = new System.Drawing.Point(6, 560);
+            this.AutoRefresh_cbox.Name = "AutoRefresh_cbox";
+            this.AutoRefresh_cbox.Size = new System.Drawing.Size(88, 17);
+            this.AutoRefresh_cbox.TabIndex = 231;
+            this.AutoRefresh_cbox.Text = "Auto Refresh";
+            this.AutoRefresh_cbox.UseVisualStyleBackColor = true;
+            this.AutoRefresh_cbox.CheckedChanged += new System.EventHandler(this.AutoRefresh_cbox_CheckedChanged);
+            // 
+            // CCXP_UD
+            // 
+            this.CCXP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCXP_UD.Enabled = false;
+            this.CCXP_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCXP_UD.Location = new System.Drawing.Point(56, 61);
+            this.CCXP_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.CCXP_UD.Name = "CCXP_UD";
+            this.CCXP_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCXP_UD.TabIndex = 80;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(213, 35);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(16, 13);
+            this.label12.TabIndex = 81;
+            this.label12.Text = "L:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Location = new System.Drawing.Point(280, 35);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(19, 13);
+            this.label13.TabIndex = 82;
+            this.label13.Text = "M:";
+            // 
+            // GenEnchants_cbox
+            // 
+            this.GenEnchants_cbox.AutoSize = true;
+            this.GenEnchants_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.GenEnchants_cbox.Checked = true;
+            this.GenEnchants_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.GenEnchants_cbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.GenEnchants_cbox.Location = new System.Drawing.Point(411, 31);
+            this.GenEnchants_cbox.Name = "GenEnchants_cbox";
+            this.GenEnchants_cbox.Size = new System.Drawing.Size(97, 17);
+            this.GenEnchants_cbox.TabIndex = 83;
+            this.GenEnchants_cbox.Text = "GEN Enchants";
+            this.GenEnchants_cbox.UseVisualStyleBackColor = false;
+            // 
+            // Creature_Ammount_UD
+            // 
+            this.Creature_Ammount_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Creature_Ammount_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.Creature_Ammount_UD.Location = new System.Drawing.Point(3, 400);
+            this.Creature_Ammount_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.Creature_Ammount_UD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Creature_Ammount_UD.Name = "Creature_Ammount_UD";
+            this.Creature_Ammount_UD.Size = new System.Drawing.Size(72, 20);
+            this.Creature_Ammount_UD.TabIndex = 84;
+            this.Creature_Ammount_UD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // User
             // 
             this.AccessibleName = "UserForm";
@@ -4824,6 +4928,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1132, 612);
+            this.Controls.Add(this.AutoRefresh_cbox);
             this.Controls.Add(this.Power_Level_tbox);
             this.Controls.Add(this.label95);
             this.Controls.Add(this.label94);
@@ -4990,6 +5095,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.CCCUSMSP_UD)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCXP_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Creature_Ammount_UD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5366,5 +5473,11 @@
         private System.Windows.Forms.Button NPC_Create_btn;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox AutoRefresh_cbox;
+        private System.Windows.Forms.NumericUpDown CCXP_UD;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox GenEnchants_cbox;
+        private System.Windows.Forms.NumericUpDown Creature_Ammount_UD;
     }
 }

@@ -30,7 +30,7 @@ namespace Dungons_And_Dargons
 
         public User(int PlayerID, string ip, string password)
         {
-            String version = "1.0.8.0";
+            String version = "1.1.0.0";
             string LatestVersion = "0.0.0.0";
             DBip = ip;
             DBpassword = password;
@@ -85,6 +85,7 @@ namespace Dungons_And_Dargons
             this.Text = MyPlayer.PName;
             if (!MyPlayer.GAMEMASTER) Main_tabs.TabPages.Remove(GameMaster_tab);
             UPDATE_btn.PerformClick();
+            CCLEVELSEL_CBOX.SelectedIndex = 0;
         }
 
         private void UPDATE_btn_Click(object sender, EventArgs e)
@@ -1407,410 +1408,411 @@ namespace Dungons_And_Dargons
 
         private void GenerateEnemy()
         {
-            //Random rnd = new Random();
-            NPC Creature = new NPC(conn);
-            int ITERATION =  1;
-            Creature.PName = CCName_tbox.Text + ITERATION.ToString();
-            Creature.isNPC = !Enemy_cbox.Checked;
-            Creature.isEnemy = Enemy_cbox.Checked;
-            Creature.isPlayer = false;
-            Creature.PlayerOwner = "1";
-            Creature.UserName = Creature.PName + " " + rnd.Next(0, 999999).ToString();
-            Creature.Age = rnd.Next(15, 71);
-
-            if (!CCmbase_chbox.Checked)
+            for (int it = 0; it < Creature_Ammount_UD.Value; it++)
             {
-                Creature.HPMax = rnd.Next(0,11);
-                Creature.MPMax = rnd.Next(0,11);
-                Creature.ATK = rnd.Next(0,5);
-                Creature.SATK = rnd.Next(0,5);
-                Creature.DEF = rnd.Next(0,5);
-                Creature.SDEF = rnd.Next(0,5);
-                Creature.CHARIS = rnd.Next(0,5);
-                Creature.DEX = rnd.Next(0,5);
-                Creature.STR = rnd.Next(0,5);
-                Creature.INTEL = rnd.Next(0,5);
-                Creature.PERC = rnd.Next(0,5);
-            } else
-            {
-                Creature.HPMax = (int)CCHP_UD.Value;
-                Creature.MPMax = (int)CCMP_UD.Value;
-                Creature.ATK = (int)CCATK_UD.Value;
-                Creature.SATK = (int)CCSATK_UD.Value;
-                Creature.DEF = (int)CCDEF_UD.Value;
-                Creature.SDEF = (int)CCSDEF_UD.Value;
-                Creature.CHARIS = (int)CCCHAR_UD.Value;
-                Creature.DEX = (int)CCDEX_UD.Value;
-                Creature.STR = (int)CCSTR_UD.Value;
-                Creature.INTEL = (int)CCINT_UD.Value;
-                Creature.PERC = (int)CCPERC_UD.Value;
-            }
+                NPC Creature = new NPC(conn);
+                int ITERATION = it + 1;
+                Creature.PName = CCName_tbox.Text + ITERATION.ToString();
+                Creature.isNPC = !Enemy_cbox.Checked;
+                Creature.isEnemy = Enemy_cbox.Checked;
+                Creature.isPlayer = false;
+                Creature.PlayerOwner = "1";
+                Creature.UserName = Creature.PName + " " + rnd.Next(0, 999999).ToString();
+                Creature.Age = rnd.Next(15, 71);
+                Creature.XPREQ = 999999999;
 
-
-            switch (CCLEVELSEL_CBOX.SelectedItem)
-            {
-                case "Sanim":
-                    Creature.Level = rnd.Next(1, 6);
-                    break;
-                case "Twilith":
-                    Creature.Level = rnd.Next(6, 11);
-                    break;
-                case "Salvian":
-                    Creature.Level = rnd.Next(11, 16);
-                    break;
-                case "Forlorn":
-                    Creature.Level = rnd.Next(16, 21);
-                    break;
-                case "Shutat":
-                    Creature.Level = rnd.Next(21, 26);
-                    break;
-                case "Twixes":
-                    Creature.Level = rnd.Next(26, 31);
-                    break;
-                case "Grawlith":
-                    Creature.Level = rnd.Next(31, 36);
-                    break;
-                case "Xerxiar":
-                    Creature.Level = rnd.Next(36, 41);
-                    break;
-                case "Azimat":
-                    Creature.Level = rnd.Next(41, 46);
-                    break;
-                case "Xerxes":
-                    Creature.Level = rnd.Next(46, 51);
-                    break;
-                case "Flittigan":
-                    Creature.Level = rnd.Next(51, 56);
-                    break;
-                case "Partavial":
-                    Creature.Level = rnd.Next(56, 61);
-                    break;
-                case "Pheonoe":
-                    Creature.Level = rnd.Next(61, 66);
-                    break;
-                case "Grawmat":
-                    Creature.Level = rnd.Next(66, 71);
-                    break;
-                case "Bardum":
-                    Creature.Level = rnd.Next(71, 76);
-                    break;
-                case "Valethor":
-                    Creature.Level = rnd.Next(76, 81);
-                    break;
-                case "Rigis":
-                    Creature.Level = rnd.Next(81, 86);
-                    break;
-                case "Aziar":
-                    Creature.Level = rnd.Next(86, 91);
-                    break;
-                case "Akinawa":
-                    Creature.Level = rnd.Next(91, 96);
-                    break;
-                case "Gaelidia":
-                    Creature.Level = rnd.Next(96, 101);
-                    break;
-                case "Angiel":
-                    Creature.Level = rnd.Next(101, 106);
-                    break;
-                case "Custom":
-                    Creature.Level = (int)CCCUSLVL_UD.Value;
-                    break;
-            }
-
-            for (int i = 0; i < (((Creature.Level * (Creature.Level - 1)) / 2))*(Convert.ToInt32(CCBos_chbox.Checked)+1); i++)
-            {
-                switch (rnd.Next(1, 12))
+                if (!CCmbase_chbox.Checked)
                 {
-                    case 1:
-                        Creature.HPMax++;
+                    Creature.HPMax = rnd.Next(0, 11) + 10;
+                    Creature.MPMax = rnd.Next(0, 11) + 10;
+                    Creature.ATK = rnd.Next(0, 5);
+                    Creature.SATK = rnd.Next(0, 5);
+                    Creature.DEF = rnd.Next(0, 5);
+                    Creature.SDEF = rnd.Next(0, 5);
+                    Creature.CHARIS = rnd.Next(0, 5);
+                    Creature.DEX = rnd.Next(0, 5);
+                    Creature.STR = rnd.Next(0, 5);
+                    Creature.INTEL = rnd.Next(0, 5);
+                    Creature.PERC = rnd.Next(0, 5);
+                }
+                else
+                {
+                    Creature.HPMax = (int)CCHP_UD.Value;
+                    Creature.MPMax = (int)CCMP_UD.Value;
+                    Creature.ATK = (int)CCATK_UD.Value;
+                    Creature.SATK = (int)CCSATK_UD.Value;
+                    Creature.DEF = (int)CCDEF_UD.Value;
+                    Creature.SDEF = (int)CCSDEF_UD.Value;
+                    Creature.CHARIS = (int)CCCHAR_UD.Value;
+                    Creature.DEX = (int)CCDEX_UD.Value;
+                    Creature.STR = (int)CCSTR_UD.Value;
+                    Creature.INTEL = (int)CCINT_UD.Value;
+                    Creature.PERC = (int)CCPERC_UD.Value;
+                }
+
+
+                switch (CCLEVELSEL_CBOX.SelectedItem)
+                {
+                    case "Sanim":
+                        Creature.Level = rnd.Next(1, 6);
                         break;
-                    case 2:
-                        Creature.MPMax++;
+                    case "Twilith":
+                        Creature.Level = rnd.Next(6, 11);
                         break;
-                    case 3:
-                        Creature.ATK++;
+                    case "Salvian":
+                        Creature.Level = rnd.Next(11, 16);
                         break;
-                    case 4:
-                        Creature.SATK++;
+                    case "Forlorn":
+                        Creature.Level = rnd.Next(16, 21);
                         break;
-                    case 5:
-                        Creature.DEF++;
+                    case "Shutat":
+                        Creature.Level = rnd.Next(21, 26);
                         break;
-                    case 6:
-                        Creature.SDEF++;
+                    case "Twixes":
+                        Creature.Level = rnd.Next(26, 31);
                         break;
-                    case 7:
-                        Creature.CHARIS++;
+                    case "Grawlith":
+                        Creature.Level = rnd.Next(31, 36);
                         break;
-                    case 8:
-                        Creature.DEX++;
+                    case "Xerxiar":
+                        Creature.Level = rnd.Next(36, 41);
                         break;
-                    case 9:
-                        Creature.STR++;
+                    case "Azimat":
+                        Creature.Level = rnd.Next(41, 46);
                         break;
-                    case 10:
-                        Creature.INTEL++;
+                    case "Xerxes":
+                        Creature.Level = rnd.Next(46, 51);
                         break;
-                    case 11:
-                        Creature.PERC++;
+                    case "Flittigan":
+                        Creature.Level = rnd.Next(51, 56);
+                        break;
+                    case "Partavial":
+                        Creature.Level = rnd.Next(56, 61);
+                        break;
+                    case "Pheonoe":
+                        Creature.Level = rnd.Next(61, 66);
+                        break;
+                    case "Grawmat":
+                        Creature.Level = rnd.Next(66, 71);
+                        break;
+                    case "Bardum":
+                        Creature.Level = rnd.Next(71, 76);
+                        break;
+                    case "Valethor":
+                        Creature.Level = rnd.Next(76, 81);
+                        break;
+                    case "Rigis":
+                        Creature.Level = rnd.Next(81, 86);
+                        break;
+                    case "Aziar":
+                        Creature.Level = rnd.Next(86, 91);
+                        break;
+                    case "Akinawa":
+                        Creature.Level = rnd.Next(91, 96);
+                        break;
+                    case "Gaelidia":
+                        Creature.Level = rnd.Next(96, 101);
+                        break;
+                    case "Angiel":
+                        Creature.Level = rnd.Next(101, 106);
+                        break;
+                    case "Custom":
+                        Creature.Level = (int)CCCUSLVL_UD.Value;
                         break;
                 }
+
+                for (int i = 0; i < (((Creature.Level * (Creature.Level - 1)) / 2)) * (Convert.ToInt32(CCBos_chbox.Checked) + 1); i++)
+                {
+                    switch (rnd.Next(1, 12))
+                    {
+                        case 1:
+                            Creature.HPMax++;
+                            break;
+                        case 2:
+                            Creature.MPMax++;
+                            break;
+                        case 3:
+                            Creature.ATK++;
+                            break;
+                        case 4:
+                            Creature.SATK++;
+                            break;
+                        case 5:
+                            Creature.DEF++;
+                            break;
+                        case 6:
+                            Creature.SDEF++;
+                            break;
+                        case 7:
+                            Creature.CHARIS++;
+                            break;
+                        case 8:
+                            Creature.DEX++;
+                            break;
+                        case 9:
+                            Creature.STR++;
+                            break;
+                        case 10:
+                            Creature.INTEL++;
+                            break;
+                        case 11:
+                            Creature.PERC++;
+                            break;
+                    }
+                }
+
+                double XP = 0;
+                for (int i = 1; i < (Creature.Level + 1); i++)
+                {
+                    XP += Math.Pow(i, 3);
+                }
+                XP /= (double)Creature.Level;
+                XP = Math.Round(XP, MidpointRounding.AwayFromZero);
+                if (XP < 0)
+                {
+                    MessageBox.Show("XP Error");
+                    return;
+                }
+                Creature.XP = (int)XP;
+
+
+
+                Creature.XP = (int)Math.Ceiling(Creature.XP * CCOXPMOD_tbox.Value);
+                Creature.HPMax = (int)Math.Ceiling(Creature.HPMax * CCOXPMOD_tbox.Value);
+                Creature.MPMax = (int)Math.Ceiling(Creature.MPMax * CCOXPMOD_tbox.Value);
+                Creature.ATK = (int)Math.Ceiling(Creature.ATK * CCOXPMOD_tbox.Value);
+                Creature.SATK = (int)Math.Ceiling(Creature.SATK * CCOXPMOD_tbox.Value);
+                Creature.DEF = (int)Math.Ceiling(Creature.DEF * CCOXPMOD_tbox.Value);
+                Creature.SDEF = (int)Math.Ceiling(Creature.SDEF * CCOXPMOD_tbox.Value);
+                Creature.CHARIS = (int)Math.Ceiling(Creature.CHARIS * CCOXPMOD_tbox.Value);
+                Creature.DEX = (int)Math.Ceiling(Creature.DEX * CCOXPMOD_tbox.Value);
+                Creature.STR = (int)Math.Ceiling(Creature.STR * CCOXPMOD_tbox.Value);
+                Creature.INTEL = (int)Math.Ceiling(Creature.INTEL * CCOXPMOD_tbox.Value);
+                Creature.PERC = (int)Math.Ceiling(Creature.PERC * CCOXPMOD_tbox.Value);
+
+                if (CCCustom__chbox.Checked)
+                {
+                    Creature.XP = (int)CCXP_UD.Value;
+                    Creature.HPMax = (int)CCHP_UD.Value;
+                    Creature.MPMax = (int)CCMP_UD.Value;
+                    Creature.ATK = (int)CCATK_UD.Value;
+                    Creature.SATK = (int)CCSATK_UD.Value;
+                    Creature.DEF = (int)CCDEF_UD.Value;
+                    Creature.SDEF = (int)CCSDEF_UD.Value;
+                    Creature.CHARIS = (int)CCCHAR_UD.Value;
+                    Creature.DEX = (int)CCDEX_UD.Value;
+                    Creature.STR = (int)CCSTR_UD.Value;
+                    Creature.INTEL = (int)CCINT_UD.Value;
+                    Creature.PERC = (int)CCPERC_UD.Value;
+                }
+
+                switch (CCTYPE_cbox.SelectedItem)
+                {
+                    case "None":
+                        break;
+                    case "Fire":
+                        Creature.Fire = 1;
+                        break;
+                    case "Ice":
+                        Creature.Ice = 1;
+                        break;
+                    case "Earth":
+                        Creature.Earth = 1;
+                        break;
+                    case "Lightning":
+                        Creature.Lightning = 1;
+                        break;
+                    case "Holy":
+                        Creature.Holy = 1;
+                        break;
+                    case "Unholy":
+                        Creature.Unholy = 1;
+                        break;
+                    case "Oracalcite":
+                        Creature.Fire = 1;
+                        Creature.Ice = 1;
+                        Creature.Earth = 1;
+                        Creature.Lightning = 1;
+                        Creature.Holy = 1;
+                        Creature.Unholy = 1;
+                        break;
+                }
+
+                if (CCGolem__chbox.Checked)
+                {
+                    Creature.MPMax += Creature.HPMax;
+                    Creature.HPMax = 0;
+                }
+
+                Creature.HP = Creature.HPMax;
+                Creature.MP = Creature.MPMax;
+                Creature.CreateData();
+
+                int luck = 0;
+                int MaxSTAT = 0;
+                int MaxENCH = 0;
+                switch (CCLEVELSEL_CBOX.SelectedItem)
+                {
+                    case "Sanim":
+                        MaxSTAT = 10;
+                        luck = rnd.Next(0, 26);
+                        MaxENCH = 4;
+                        break;
+                    case "Twilith":
+                        MaxSTAT = 10;
+                        luck = rnd.Next(25, 51);
+                        MaxENCH = 4;
+                        break;
+                    case "Salvian":
+                        MaxSTAT = 10;
+                        luck = rnd.Next(50, 76);
+                        MaxENCH = 4;
+                        break;
+                    case "Forlorn":
+                        MaxSTAT = 10;
+                        luck = rnd.Next(75, 101);
+                        MaxENCH = 4;
+                        break;
+                    case "Shutat":
+                        MaxSTAT = 20;
+                        luck = rnd.Next(0, 21);
+                        MaxENCH = 8;
+                        break;
+                    case "Twixes":
+                        MaxSTAT = 20;
+                        luck = rnd.Next(20, 41);
+                        MaxENCH = 8;
+                        break;
+                    case "Grawlith":
+                        MaxSTAT = 20;
+                        luck = rnd.Next(40, 61);
+                        MaxENCH = 8;
+                        break;
+                    case "Xerxiar":
+                        MaxSTAT = 20;
+                        luck = rnd.Next(60, 81);
+                        MaxENCH = 8;
+                        break;
+                    case "Azimat":
+                        MaxSTAT = 20;
+                        luck = rnd.Next(80, 101);
+                        MaxENCH = 8;
+                        break;
+                    case "Xerxes":
+                        MaxSTAT = 30;
+                        luck = rnd.Next(0, 26);
+                        MaxENCH = 12;
+                        break;
+                    case "Flittigan":
+                        MaxSTAT = 30;
+                        luck = rnd.Next(25, 51);
+                        MaxENCH = 12;
+                        break;
+                    case "Partavial":
+                        MaxSTAT = 30;
+                        luck = rnd.Next(50, 76);
+                        MaxENCH = 12;
+                        break;
+                    case "Pheonoe":
+                        MaxSTAT = 30;
+                        luck = rnd.Next(75, 101);
+                        MaxENCH = 12;
+                        break;
+                    case "Grawmat":
+                        MaxSTAT = 40;
+                        luck = rnd.Next(0, 26);
+                        MaxENCH = 16;
+                        break;
+                    case "Bardum":
+                        MaxSTAT = 40;
+                        luck = rnd.Next(25, 51);
+                        MaxENCH = 16;
+                        break;
+                    case "Valethor":
+                        MaxSTAT = 40;
+                        luck = rnd.Next(50, 76);
+                        MaxENCH = 16;
+                        break;
+                    case "Rigis":
+                        MaxSTAT = 40;
+                        luck = rnd.Next(75, 101);
+                        MaxENCH = 16;
+                        break;
+                    case "Aziar":
+                        MaxSTAT = 50;
+                        luck = rnd.Next(0, 26);
+                        MaxENCH = 20;
+                        break;
+                    case "Akinawa":
+                        MaxSTAT = 50;
+                        luck = rnd.Next(25, 51);
+                        MaxENCH = 20;
+                        break;
+                    case "Gaelidia":
+                        MaxSTAT = 50;
+                        luck = rnd.Next(50, 76);
+                        MaxENCH = 20;
+                        break;
+                    case "Angiel":
+                        MaxSTAT = 50;
+                        luck = rnd.Next(75, 101);
+                        MaxENCH = 20;
+                        break;
+                    case "Custom":
+                        MaxSTAT = (int)CCCUSMSP_UD.Value;
+                        luck = (int)CCCUSLCK_UD.Value;
+                        MaxENCH = 20;
+                        break;
+                }
+
+
+                if (GITEMS_cbox.Checked)
+                {
+                    Generate_item(Creature.PlayerID, Creature.PName, "Helmet", luck, MaxSTAT, MaxENCH, Helm_HP.Checked, Helm_MP.Checked, Helm_ATK.Checked,
+                        Helm_SATK.Checked, Helm_DEF.Checked, Helm_SDEF.Checked, Helm_CHAR.Checked, Helm_DEX.Checked, Helm_STR.Checked, Helm_INT.Checked, Helm_PERC.Checked);
+
+                    Generate_item(Creature.PlayerID, Creature.PName, "Maille", luck, MaxSTAT, MaxENCH, Maille_HP.Checked, Maille_MP.Checked, Maille_ATK.Checked,
+                        Maille_SATK.Checked, Maille_DEF.Checked, Maille_SDEF.Checked, Maille_CHAR.Checked, Maille_DEX.Checked, Maille_STR.Checked, Maille_INT.Checked, Maille_PERC.Checked);
+
+                    Generate_item(Creature.PlayerID, Creature.PName, "Gloves", luck, MaxSTAT, MaxENCH, Gloves_HP.Checked, Gloves_MP.Checked, Gloves_ATK.Checked,
+                        Gloves_SATK.Checked, Gloves_DEF.Checked, Gloves_SDEF.Checked, Gloves_CHAR.Checked, Gloves_DEX.Checked, Gloves_STR.Checked, Gloves_INT.Checked, Gloves_PERC.Checked);
+
+                    Generate_item(Creature.PlayerID, Creature.PName, "Pants", luck, MaxSTAT, MaxENCH, Pants_HP.Checked, Pants_MP.Checked, Pants_ATK.Checked,
+                        Pants_SATK.Checked, Pants_DEF.Checked, Pants_SDEF.Checked, Pants_CHAR.Checked, Pants_DEX.Checked, Pants_STR.Checked, Pants_INT.Checked, Pants_PERC.Checked);
+
+                    Generate_item(Creature.PlayerID, Creature.PName, "Boots", luck, MaxSTAT, MaxENCH, Boots_HP.Checked, Boots_MP.Checked, Boots_ATK.Checked,
+                        Boots_SATK.Checked, Boots_DEF.Checked, Boots_SDEF.Checked, Boots_CHAR.Checked, Boots_DEX.Checked, Boots_STR.Checked, Boots_INT.Checked, Boots_PERC.Checked);
+
+
+                    Generate_item(Creature.PlayerID, Creature.PName, "Artifact", luck, MaxSTAT, MaxENCH, Artifact_HP.Checked, Artifact_MP.Checked, Artifact_ATK.Checked,
+                        Artifact_SATK.Checked, Artifact_DEF.Checked, Artifact_SDEF.Checked, Artifact_CHAR.Checked, Artifact_DEX.Checked, Artifact_STR.Checked, Artifact_INT.Checked, Artifact_PERC.Checked);
+
+                    if (rnd.Next(0, 101) >= 50)
+                    {
+
+                        Generate_item(Creature.PlayerID, Creature.PName, "Weapon", luck, MaxSTAT, MaxENCH, LWeapon_HP.Checked, LWeapon_MP.Checked, LWeapon_ATK.Checked,
+                            LWeapon_SATK.Checked, LWeapon_DEF.Checked, LWeapon_SDEF.Checked, LWeapon_CHAR.Checked, LWeapon_DEX.Checked, LWeapon_STR.Checked, LWeapon_INT.Checked, LWeapon_PERC.Checked);
+
+                        Generate_item(Creature.PlayerID, Creature.PName, "Weapon", luck, MaxSTAT, MaxENCH, RWeapon_HP.Checked, RWeapon_MP.Checked, RWeapon_ATK.Checked,
+                            RWeapon_SATK.Checked, RWeapon_DEF.Checked, RWeapon_SDEF.Checked, RWeapon_CHAR.Checked, RWeapon_DEX.Checked, RWeapon_STR.Checked, RWeapon_INT.Checked, RWeapon_PERC.Checked);
+
+                    }
+                    else
+                    {
+
+                        Generate_item(Creature.PlayerID, Creature.PName, "Weapon", luck, MaxSTAT, MaxENCH, LWeapon_HP.Checked, LWeapon_MP.Checked, LWeapon_ATK.Checked,
+                            LWeapon_SATK.Checked, LWeapon_DEF.Checked, LWeapon_SDEF.Checked, LWeapon_CHAR.Checked, LWeapon_DEX.Checked, LWeapon_STR.Checked, LWeapon_INT.Checked, LWeapon_PERC.Checked);
+
+                    }
+                }
+
+
+
             }
-
-            double XP = 0;
-            for (int i = 1; i < (Creature.Level + 1); i++)
-            {
-                XP += Math.Pow(i, 3);
-            }
-            XP /= (double)Creature.Level;
-            XP = Math.Round(XP, MidpointRounding.AwayFromZero);
-            if (XP < 0)
-            {
-                MessageBox.Show("XP Error");
-                return;
-            }
-            Creature.XP = (int)XP;
-
-
-            Creature.XP = (int) Math.Ceiling(Creature.XP * CCOXPMOD_tbox.Value);
-            Creature.HPMax = (int) Math.Ceiling(Creature.HPMax * CCOXPMOD_tbox.Value);
-            Creature.MPMax = (int) Math.Ceiling(Creature.MPMax * CCOXPMOD_tbox.Value);
-            Creature.ATK = (int) Math.Ceiling(Creature.ATK * CCOXPMOD_tbox.Value);
-            Creature.SATK = (int) Math.Ceiling(Creature.SATK * CCOXPMOD_tbox.Value);
-            Creature.DEF = (int) Math.Ceiling(Creature.DEF * CCOXPMOD_tbox.Value);
-            Creature.SDEF = (int) Math.Ceiling(Creature.SDEF * CCOXPMOD_tbox.Value);
-            Creature.CHARIS = (int) Math.Ceiling(Creature.CHARIS * CCOXPMOD_tbox.Value);
-            Creature.DEX = (int) Math.Ceiling(Creature.DEX * CCOXPMOD_tbox.Value);
-            Creature.STR = (int) Math.Ceiling(Creature.STR * CCOXPMOD_tbox.Value);
-            Creature.INTEL = (int) Math.Ceiling(Creature.INTEL * CCOXPMOD_tbox.Value);
-            Creature.PERC = (int) Math.Ceiling(Creature.PERC * CCOXPMOD_tbox.Value);
-
-            switch (CCTYPE_cbox.SelectedItem)
-            {
-                case "None":
-                    break;
-                case "Fire":
-                    Creature.Fire = 1;
-                    break;
-                case "Ice":
-                    Creature.Ice = 1;
-                    break;
-                case "Earth":
-                    Creature.Earth = 1;
-                    break;
-                case "Lightning":
-                    Creature.Lightning = 1;
-                    break;
-                case "Holy":
-                    Creature.Holy = 1;
-                    break;
-                case "Unholy":
-                    Creature.Unholy = 1;
-                    break;
-                case "Oracalcite":
-                    Creature.Fire = 1;
-                    Creature.Ice = 1;
-                    Creature.Earth = 1;
-                    Creature.Lightning = 1;
-                    Creature.Holy = 1;
-                    Creature.Unholy = 1;
-                    break;
-            }
-            
-            if (CCGolem__chbox.Checked)
-            {
-                Creature.MPMax += Creature.HPMax;
-                Creature.HPMax = 0;
-            }
-
-            Creature.HP = Creature.HPMax;
-            Creature.MP = Creature.MPMax;
-            Creature.CreateData();
-
-            int luck = 0; 
-            switch (CCLEVELSEL_CBOX.SelectedItem)
-            {
-                case "Sanim":
-                    luck = rnd.Next(0, 26);
-                    break;
-                case "Twilith":
-                    luck = rnd.Next(25, 51);
-                    break;
-                case "Salvian":
-                    luck = rnd.Next(50, 76);
-                    break;
-                case "Forlorn":
-                    luck = rnd.Next(75, 101);
-                    break;
-                case "Shutat":
-                    luck = rnd.Next(0, 21);
-                    break;
-                case "Twixes":
-                    luck = rnd.Next(20, 41);
-                    break;
-                case "Grawlith":
-                    luck = rnd.Next(40, 61);
-                    break;
-                case "Xerxiar":
-                    luck = rnd.Next(60, 81);
-                    break;
-                case "Azimat":
-                    luck = rnd.Next(80, 101);
-                    break;
-                case "Xerxes":
-                    luck = rnd.Next(0, 26);
-                    break;
-                case "Flittigan":
-                    luck = rnd.Next(25, 51);
-                    break;
-                case "Partavial":
-                    luck = rnd.Next(50, 76);
-                    break;
-                case "Pheonoe":
-                    luck = rnd.Next(75, 101);
-                    break;
-                case "Grawmat":
-                    luck = rnd.Next(0, 26);
-                    break;
-                case "Bardum":
-                    luck = rnd.Next(25, 51);
-                    break;
-                case "Valethor":
-                    luck = rnd.Next(50, 76);
-                    break;
-                case "Rigis":
-                    luck = rnd.Next(75, 101);
-                    break;
-                case "Aziar":
-                    luck = rnd.Next(0, 26);
-                    break;
-                case "Akinawa":
-                    luck = rnd.Next(25, 51);
-                    break;
-                case "Gaelidia":
-                    luck = rnd.Next(50, 76);
-                    break;
-                case "Angiel":
-                    luck = rnd.Next(75, 101);
-                    break;
-                case "Custom":
-                    luck = (int)CCCUSLCK_UD.Value;
-                    break;
-            }
-
-            int MaxSTAT = 0;
-            switch (CCLEVELSEL_CBOX.SelectedItem)
-            {
-                case "Sanim":
-                    MaxSTAT = 10;
-                    break;
-                case "Twilith":
-                    MaxSTAT = 10;
-                    break;
-                case "Salvian":
-                    MaxSTAT = 10;
-                    break;
-                case "Forlorn":
-                    MaxSTAT = 10;
-                    break;
-                case "Shutat":
-                    MaxSTAT = 20;
-                    break;
-                case "Twixes":
-                    MaxSTAT = 20;
-                    break;
-                case "Grawlith":
-                    MaxSTAT = 20;
-                    break;
-                case "Xerxiar":
-                    MaxSTAT = 20;
-                    break;
-                case "Azimat":
-                    MaxSTAT = 20;
-                    break;
-                case "Xerxes":
-                    MaxSTAT = 30;
-                    break;
-                case "Flittigan":
-                    MaxSTAT = 30;
-                    break;
-                case "Partavial":
-                    MaxSTAT = 30;
-                    break;
-                case "Pheonoe":
-                    MaxSTAT = 30;
-                    break;
-                case "Grawmat":
-                    MaxSTAT = 40;
-                    break;
-                case "Bardum":
-                    MaxSTAT = 40;
-                    break;
-                case "Valethor":
-                    MaxSTAT = 40;
-                    break;
-                case "Rigis":
-                    MaxSTAT = 40;
-                    break;
-                case "Aziar":
-                    MaxSTAT = 50;
-                    break;
-                case "Akinawa":
-                    MaxSTAT = 50;
-                    break;
-                case "Gaelidia":
-                    MaxSTAT = 50;
-                    break;
-                case "Angiel":
-                    MaxSTAT = 50;
-                    break;
-                case "Custom":
-                    MaxSTAT = (int)CCCUSMSP_UD.Value;
-                    break;
-            }
-
-            Generate_item(Creature.PlayerID, Creature.PName, "Helmet", luck, MaxSTAT, Helm_HP.Checked, Helm_MP.Checked, Helm_ATK.Checked,
-                Helm_SATK.Checked, Helm_DEF.Checked, Helm_SDEF.Checked, Helm_CHAR.Checked, Helm_DEX.Checked, Helm_STR.Checked, Helm_INT.Checked, Helm_PERC.Checked);
-
-            Generate_item(Creature.PlayerID, Creature.PName, "Maille", luck, MaxSTAT, Maille_HP.Checked, Maille_MP.Checked, Maille_ATK.Checked,
-                Maille_SATK.Checked, Maille_DEF.Checked, Maille_SDEF.Checked, Maille_CHAR.Checked, Maille_DEX.Checked, Maille_STR.Checked, Maille_INT.Checked, Maille_PERC.Checked);
-
-            Generate_item(Creature.PlayerID, Creature.PName, "Gloves", luck, MaxSTAT, Gloves_HP.Checked, Gloves_MP.Checked, Gloves_ATK.Checked,
-                Gloves_SATK.Checked, Gloves_DEF.Checked, Gloves_SDEF.Checked, Gloves_CHAR.Checked, Gloves_DEX.Checked, Gloves_STR.Checked, Gloves_INT.Checked, Gloves_PERC.Checked);
-
-            Generate_item(Creature.PlayerID, Creature.PName, "Pants", luck, MaxSTAT, Pants_HP.Checked, Pants_MP.Checked, Pants_ATK.Checked,
-                Pants_SATK.Checked, Pants_DEF.Checked, Pants_SDEF.Checked, Pants_CHAR.Checked, Pants_DEX.Checked, Pants_STR.Checked, Pants_INT.Checked, Pants_PERC.Checked);
-
-            Generate_item(Creature.PlayerID, Creature.PName, "Boots", luck, MaxSTAT, Boots_HP.Checked, Boots_MP.Checked, Boots_ATK.Checked,
-                Boots_SATK.Checked, Boots_DEF.Checked, Boots_SDEF.Checked, Boots_CHAR.Checked, Boots_DEX.Checked, Boots_STR.Checked, Boots_INT.Checked, Boots_PERC.Checked);
-
-
-            Generate_item(Creature.PlayerID, Creature.PName, "Artifact", luck, MaxSTAT, Artifact_HP.Checked, Artifact_MP.Checked, Artifact_ATK.Checked,
-                Artifact_SATK.Checked, Artifact_DEF.Checked, Artifact_SDEF.Checked, Artifact_CHAR.Checked, Artifact_DEX.Checked, Artifact_STR.Checked, Artifact_INT.Checked, Artifact_PERC.Checked);
-
-
-            if (rnd.Next(0,101) >= 50)
-            {
-
-                Generate_item(Creature.PlayerID, Creature.PName, "Weapon", luck, MaxSTAT, LWeapon_HP.Checked, LWeapon_MP.Checked, LWeapon_ATK.Checked,
-                    LWeapon_SATK.Checked, LWeapon_DEF.Checked, LWeapon_SDEF.Checked, LWeapon_CHAR.Checked, LWeapon_DEX.Checked, LWeapon_STR.Checked, LWeapon_INT.Checked, LWeapon_PERC.Checked);
-
-                Generate_item(Creature.PlayerID, Creature.PName, "Weapon", luck, MaxSTAT, RWeapon_HP.Checked, RWeapon_MP.Checked, RWeapon_ATK.Checked,
-                    RWeapon_SATK.Checked, RWeapon_DEF.Checked, RWeapon_SDEF.Checked, RWeapon_CHAR.Checked, RWeapon_DEX.Checked, RWeapon_STR.Checked, RWeapon_INT.Checked, RWeapon_PERC.Checked);
-
-            }
-            else
-            {
-
-                Generate_item(Creature.PlayerID, Creature.PName, "Weapon", luck, MaxSTAT, LWeapon_HP.Checked, LWeapon_MP.Checked, LWeapon_ATK.Checked,
-                    LWeapon_SATK.Checked, LWeapon_DEF.Checked, LWeapon_SDEF.Checked, LWeapon_CHAR.Checked, LWeapon_DEX.Checked, LWeapon_STR.Checked, LWeapon_INT.Checked, LWeapon_PERC.Checked);
-
-            }
-
             MessageBox.Show("Creature Created");
         }
 
-        private void Generate_item(int PlayerID, string PName, string ITEMType, int luck, int MaxSTAT, bool C_HP, bool C_MP, bool C_ATK, bool C_SATK, bool C_DEF, bool C_SDEF, bool C_CHAR, bool C_DEX, bool C_STR, bool C_INT, bool C_PERC)
+        private void Generate_item(int PlayerID, string PName, string ITEMType, int luck, int MaxSTAT, int MaxENCH, bool C_HP, bool C_MP, bool C_ATK, bool C_SATK, bool C_DEF, bool C_SDEF, bool C_CHAR, bool C_DEX, bool C_STR, bool C_INT, bool C_PERC)
         {
 
             ITEM CITEM = new ITEM(conn);
@@ -1820,7 +1822,7 @@ namespace Dungons_And_Dargons
             CITEM.OWNER_ID = PlayerID;
             CITEM.Equipped = true;
 
-            //Base for Maille
+            //Base for Item
             bool notZero = true;
             while (notZero)
             {
@@ -1840,102 +1842,169 @@ namespace Dungons_And_Dargons
                     + CITEM.M_STR + CITEM.M_INT + CITEM.M_PERC != 0) notZero = false;
             }
 
-            //Enhance for Maille
-            bool enhancing = false;
-            if (rnd.Next(0, 101) <= luck) enhancing = true;
-            while (enhancing)
+            if (ITEMType != "Artifact")
             {
-                decimal TotalStatPoints = CITEM.M_HP + CITEM.M_MP + CITEM.M_ATK + CITEM.M_SATK + CITEM.M_DEF + CITEM.M_SDEF + CITEM.M_CHAR + CITEM.M_DEX
-                    + CITEM.M_STR + CITEM.M_INT + CITEM.M_PERC;
-
-                decimal TargetStatPoints = ((Math.Ceiling(((decimal)(CITEM.Enhance) + 1) / 10)) / 10) * TotalStatPoints;
-                CITEM.Enhance += 1;
-
-                while (TargetStatPoints > 0)
+                //Enhance for Item
+                bool enhancing = false;
+                if (rnd.Next(0, 101) <= luck) enhancing = true;
+                while (enhancing)
                 {
-                    switch (rnd.Next(0, 11))
+                    decimal TotalStatPoints = CITEM.M_HP + CITEM.M_MP + CITEM.M_ATK + CITEM.M_SATK + CITEM.M_DEF + CITEM.M_SDEF + CITEM.M_CHAR + CITEM.M_DEX
+                        + CITEM.M_STR + CITEM.M_INT + CITEM.M_PERC;
+
+                    decimal TargetStatPoints = ((Math.Ceiling(((decimal)(CITEM.Enhance) + 1) / 10)) / 10) * TotalStatPoints;
+                    CITEM.Enhance += 1;
+
+                    while (TargetStatPoints > 0)
                     {
-                        case 0:
-                            if (CITEM.M_HP > 0)
-                            {
-                                CITEM.M_HP += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 1:
-                            if (CITEM.M_MP > 0)
-                            {
-                                CITEM.M_MP += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 2:
-                            if (CITEM.M_ATK > 0)
-                            {
-                                CITEM.M_ATK += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 3:
-                            if (CITEM.M_SATK > 0)
-                            {
-                                CITEM.M_SATK += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 4:
-                            if (CITEM.M_DEF > 0)
-                            {
-                                CITEM.M_DEF += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 5:
-                            if (CITEM.M_SDEF > 0)
-                            {
-                                CITEM.M_SDEF += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 6:
-                            if (CITEM.M_CHAR > 0)
-                            {
-                                CITEM.M_CHAR += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 7:
-                            if (CITEM.M_DEX > 0)
-                            {
-                                CITEM.M_DEX += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 8:
-                            if (CITEM.M_STR > 0)
-                            {
-                                CITEM.M_STR += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 9:
-                            if (CITEM.M_INT > 0)
-                            {
-                                CITEM.M_INT += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
-                        case 10:
-                            if (CITEM.M_PERC > 0)
-                            {
-                                CITEM.M_PERC += 1;
-                                TargetStatPoints -= 1;
-                            }
-                            break;
+                        switch (rnd.Next(0, 11))
+                        {
+                            case 0:
+                                if (CITEM.M_HP > 0)
+                                {
+                                    CITEM.M_HP += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 1:
+                                if (CITEM.M_MP > 0)
+                                {
+                                    CITEM.M_MP += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 2:
+                                if (CITEM.M_ATK > 0)
+                                {
+                                    CITEM.M_ATK += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 3:
+                                if (CITEM.M_SATK > 0)
+                                {
+                                    CITEM.M_SATK += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 4:
+                                if (CITEM.M_DEF > 0)
+                                {
+                                    CITEM.M_DEF += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 5:
+                                if (CITEM.M_SDEF > 0)
+                                {
+                                    CITEM.M_SDEF += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 6:
+                                if (CITEM.M_CHAR > 0)
+                                {
+                                    CITEM.M_CHAR += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 7:
+                                if (CITEM.M_DEX > 0)
+                                {
+                                    CITEM.M_DEX += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 8:
+                                if (CITEM.M_STR > 0)
+                                {
+                                    CITEM.M_STR += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 9:
+                                if (CITEM.M_INT > 0)
+                                {
+                                    CITEM.M_INT += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                            case 10:
+                                if (CITEM.M_PERC > 0)
+                                {
+                                    CITEM.M_PERC += 1;
+                                    TargetStatPoints -= 1;
+                                }
+                                break;
+                        }
+                    }
+                    if (CITEM.Enhance > MaxSTAT) enhancing = false;
+                    if (rnd.Next(0, 101) > luck) enhancing = false;
+                }
+            }
+
+            if (ITEMType == "Weapon")
+            {
+                switch(rnd.Next(1,7))
+                {
+                    case 1:
+                        CITEM.Dice = 4;
+                        break;
+                    case 2:
+                        CITEM.Dice = 6;
+                        break;
+                    case 3:
+                        CITEM.Dice = 8;
+                        break;
+                    case 4:
+                        CITEM.Dice = 10;
+                        break;
+                    case 5:
+                        CITEM.Dice = 12;
+                        break;
+                    case 6:
+                        CITEM.Dice = 20;
+                        break;
+                }
+            }
+
+            if (ITEMType != "Artifact")
+            {
+                if (GenEnchants_cbox.Checked)
+                {
+                    if (rnd.Next(1, 6) == 5)
+                    {
+                        switch (rnd.Next(1, 7))
+                        {
+                            case 1:
+                                CITEM.EType = "F";
+                                break;
+                            case 2:
+                                CITEM.EType = "E";
+                                break;
+                            case 3:
+                                CITEM.EType = "L";
+                                break;
+                            case 4:
+                                CITEM.EType = "I";
+                                break;
+                            case 5:
+                                CITEM.EType = "H";
+                                break;
+                            case 6:
+                                CITEM.EType = "U";
+                                break;
+                        }
+                        bool ELeveling = true;
+                        while (ELeveling)
+                        {
+                            CITEM.ELevel += 1;
+                            if (rnd.Next(0, 101) > luck) ELeveling = false;
+                        }
                     }
                 }
-                if (rnd.Next(0, 101) > luck) enhancing = false;
             }
+
             CITEM.CreateData();
         }
 
@@ -1969,11 +2038,43 @@ namespace Dungons_And_Dargons
             CCSTR_UD.Enabled = CCmbase_chbox.Checked;
             CCINT_UD.Enabled = CCmbase_chbox.Checked;
             CCPERC_UD.Enabled = CCmbase_chbox.Checked;
+            CCCustom__chbox.Checked = false;
+            CCCustom__chbox.Enabled = !CCmbase_chbox.Checked;
         }
 
         private void NPC_Create_btn_Click(object sender, EventArgs e)
         {
             GenerateEnemy();
+        }
+
+        private void AutoRefresh_cbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!AutoRefresh_cbox.Checked)
+            {
+                Update_timer.Stop();
+            } else
+            {
+                Update_timer.Start();
+            }
+
+        }
+
+        private void CCCustom__chbox_CheckedChanged(object sender, EventArgs e)
+        {
+            CCHP_UD.Enabled = CCCustom__chbox.Checked;
+            CCMP_UD.Enabled = CCCustom__chbox.Checked;
+            CCATK_UD.Enabled = CCCustom__chbox.Checked;
+            CCSATK_UD.Enabled = CCCustom__chbox.Checked;
+            CCDEF_UD.Enabled = CCCustom__chbox.Checked;
+            CCSDEF_UD.Enabled = CCCustom__chbox.Checked;
+            CCCHAR_UD.Enabled = CCCustom__chbox.Checked;
+            CCDEX_UD.Enabled = CCCustom__chbox.Checked;
+            CCSTR_UD.Enabled = CCCustom__chbox.Checked;
+            CCINT_UD.Enabled = CCCustom__chbox.Checked;
+            CCPERC_UD.Enabled = CCCustom__chbox.Checked;
+            CCXP_UD.Enabled = CCCustom__chbox.Checked;
+            CCmbase_chbox.Checked = false;
+            CCmbase_chbox.Enabled = !CCCustom__chbox.Checked;
         }
     }
 }

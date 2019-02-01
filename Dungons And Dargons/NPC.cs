@@ -363,7 +363,6 @@ namespace Dungons_And_Dargons
                     PlayerID = Convert.ToInt32(rdr2[0]);
                 }
                 rdr2.Close();
-                MessageBox.Show(PlayerID.ToString());
             }
             catch (Exception ex)
             {
@@ -578,7 +577,7 @@ namespace Dungons_And_Dargons
                         Lweight = 1;
                     } else
                     {
-                        Lweight = WeaponLeft.Dice / 10;
+                        Lweight = (decimal)(WeaponLeft.Dice) / 10;
                     }
 
                     if (WeaponRight.Dice == 20)
@@ -587,14 +586,12 @@ namespace Dungons_And_Dargons
                     }
                     else
                     {
-                        Rweight = WeaponRight.Dice / 10;
+                        Rweight = (decimal)(WeaponRight.Dice) / 10;
                     }
 
                     decimal Weight = Lweight + Rweight;
-
                     decimal DEXMod = 1 / Weight;
-                
-                    T_DEX = (int)(Math.Round(T_DEX * DEXMod));
+                    T_DEX = (int)(Math.Ceiling(T_DEX * DEXMod));
                 }
             }
             catch (Exception ex)
