@@ -736,18 +736,39 @@ namespace Dungons_And_Dargons
 
         private void UItem_editor_btn_Click(object sender, EventArgs e)
         {
-            List<ITEM> GM_ITEMS = GM_ITEM_LIST.GetITEM("ALL", "1");
-            EditorItems_lbox.Items.Clear();
-            foreach (ITEM GM_ITEM in GM_ITEMS)
-            {
-                EditorItems_lbox.Items.Add(GM_ITEM.ITEM_DATA());
-            }
-
-            List<NPC> GM_NPCS= GM_NPC_LIST.GetNPCS("ALL", "1");
+            int CharID = 0;
+            int FiltID = 0;
+            List<NPC> GM_NPCS = GM_NPC_LIST.GetNPCS("ALL", "1");
+            CharID = Item_Character_Cbox.SelectedIndex;
+            FiltID = ItemFilter_sbox.SelectedIndex;
             Item_Character_Cbox.Items.Clear();
+            ItemFilter_sbox.Items.Clear();
+            ItemFilter_sbox.Items.Add("ALL");
             foreach (NPC GM_NPC in GM_NPCS)
             {
                 Item_Character_Cbox.Items.Add(GM_NPC.PLAYER_DATA());
+                ItemFilter_sbox.Items.Add(GM_NPC.PLAYER_DATA());
+            }
+            Item_Character_Cbox.SelectedIndex = CharID;
+            ItemFilter_sbox.SelectedIndex = FiltID;
+
+            if (ItemFilter_sbox.SelectedItem == null || ItemFilter_sbox.SelectedItem.ToString() == "ALL")
+            {
+                List<ITEM> GM_ITEMS = GM_ITEM_LIST.GetITEM("ALL", "1");
+                EditorItems_lbox.Items.Clear();
+                foreach (ITEM GM_ITEM in GM_ITEMS)
+                {
+                    EditorItems_lbox.Items.Add(GM_ITEM.ITEM_DATA());
+                }
+            }
+            else
+            {
+                List<ITEM> GM_ITEMS = GM_ITEM_LIST.GetITEM("OWNER_ID", ItemFilter_sbox.SelectedItem.ToString().Split('<', '>')[1]);
+                EditorItems_lbox.Items.Clear();
+                foreach (ITEM GM_ITEM in GM_ITEMS)
+                {
+                    EditorItems_lbox.Items.Add(GM_ITEM.ITEM_DATA());
+                }
             }
         }
 
@@ -1120,18 +1141,39 @@ namespace Dungons_And_Dargons
 
         private void Refresh_Spell_editor_BTN_Click(object sender, EventArgs e)
         {
-            List<SPELL> GM_SPELLS = GM_SPELLS_LIST.GetSPELLS("ALL", "1");
-            Spells_Edititor_lbox.Items.Clear();
-            foreach (SPELL GM_SPELL in GM_SPELLS)
-            {
-                Spells_Edititor_lbox.Items.Add(GM_SPELL.SPELL_DATA());
-            }
-
+            int CharID = 0;
+            int FiltID = 0;
             List<NPC> GM_NPCS = GM_NPC_LIST.GetNPCS("ALL", "1");
+            CharID = Spell_Character_Cbox.SelectedIndex;
+            FiltID = SpellFilter_sbox.SelectedIndex;
             Spell_Character_Cbox.Items.Clear();
+            SpellFilter_sbox.Items.Clear();
+            SpellFilter_sbox.Items.Add("ALL");
             foreach (NPC GM_NPC in GM_NPCS)
             {
                 Spell_Character_Cbox.Items.Add(GM_NPC.PLAYER_DATA());
+                SpellFilter_sbox.Items.Add(GM_NPC.PLAYER_DATA());
+            }
+            Spell_Character_Cbox.SelectedIndex = CharID;
+            SpellFilter_sbox.SelectedIndex = FiltID;
+
+            if (SpellFilter_sbox.SelectedItem == null || SpellFilter_sbox.SelectedItem.ToString() == "ALL")
+            {
+                List<SPELL> GM_SPELLS = GM_SPELLS_LIST.GetSPELLS("ALL", "1");
+                Spells_Edititor_lbox.Items.Clear();
+                foreach (SPELL GM_SPELL in GM_SPELLS)
+                {
+                    Spells_Edititor_lbox.Items.Add(GM_SPELL.SPELL_DATA());
+                }
+            }
+            else
+            {
+                List<SPELL> GM_SPELLS = GM_SPELLS_LIST.GetSPELLS("OWNER_ID", SpellFilter_sbox.SelectedItem.ToString().Split('<', '>')[1]);
+                Spells_Edititor_lbox.Items.Clear();
+                foreach (SPELL GM_SPELL in GM_SPELLS)
+                {
+                    Spells_Edititor_lbox.Items.Add(GM_SPELL.SPELL_DATA());
+                }
             }
         }
 
@@ -2075,6 +2117,50 @@ namespace Dungons_And_Dargons
             CCXP_UD.Enabled = CCCustom__chbox.Checked;
             CCmbase_chbox.Checked = false;
             CCmbase_chbox.Enabled = !CCCustom__chbox.Checked;
+        }
+
+        private void SpellFilter_sbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SpellFilter_sbox.SelectedItem == null || SpellFilter_sbox.SelectedItem.ToString() == "ALL")
+            {
+                List<SPELL> GM_SPELLS = GM_SPELLS_LIST.GetSPELLS("ALL", "1");
+                Spells_Edititor_lbox.Items.Clear();
+                foreach (SPELL GM_SPELL in GM_SPELLS)
+                {
+                    Spells_Edititor_lbox.Items.Add(GM_SPELL.SPELL_DATA());
+                }
+            }
+            else
+            {
+                List<SPELL> GM_SPELLS = GM_SPELLS_LIST.GetSPELLS("OWNER_ID", SpellFilter_sbox.SelectedItem.ToString().Split('<', '>')[1]);
+                Spells_Edititor_lbox.Items.Clear();
+                foreach (SPELL GM_SPELL in GM_SPELLS)
+                {
+                    Spells_Edititor_lbox.Items.Add(GM_SPELL.SPELL_DATA());
+                }
+            }
+        }
+
+        private void ItemFilter_sbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ItemFilter_sbox.SelectedItem == null || ItemFilter_sbox.SelectedItem.ToString() == "ALL")
+            {
+                List<ITEM> GM_ITEMS = GM_ITEM_LIST.GetITEM("ALL", "1");
+                EditorItems_lbox.Items.Clear();
+                foreach (ITEM GM_ITEM in GM_ITEMS)
+                {
+                    EditorItems_lbox.Items.Add(GM_ITEM.ITEM_DATA());
+                }
+            }
+            else
+            {
+                List<ITEM> GM_ITEMS = GM_ITEM_LIST.GetITEM("OWNER_ID", ItemFilter_sbox.SelectedItem.ToString().Split('<', '>')[1]);
+                EditorItems_lbox.Items.Clear();
+                foreach (ITEM GM_ITEM in GM_ITEMS)
+                {
+                    EditorItems_lbox.Items.Add(GM_ITEM.ITEM_DATA());
+                }
+            }
         }
     }
 }

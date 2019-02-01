@@ -1111,6 +1111,7 @@
             // 
             // DROLL_ud
             // 
+            this.DROLL_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.DROLL_ud.Increment = new decimal(new int[] {
             2,
             0,
@@ -1128,6 +1129,7 @@
             // 
             // ADEX_ud
             // 
+            this.ADEX_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ADEX_ud.Location = new System.Drawing.Point(74, 21);
             this.ADEX_ud.Maximum = new decimal(new int[] {
             900000000,
@@ -1140,6 +1142,7 @@
             // 
             // AROLL_ud
             // 
+            this.AROLL_ud.BackColor = System.Drawing.SystemColors.ControlDark;
             this.AROLL_ud.Increment = new decimal(new int[] {
             2,
             0,

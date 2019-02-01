@@ -405,6 +405,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.GenEnchants_cbox = new System.Windows.Forms.CheckBox();
             this.Creature_Ammount_UD = new System.Windows.Forms.NumericUpDown();
+            this.ItemFilter_sbox = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.SpellFilter_sbox = new System.Windows.Forms.ComboBox();
             this.Main_tabs.SuspendLayout();
             this.Equipment_tab.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -1875,6 +1879,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.ItemFilter_sbox);
             this.groupBox2.Controls.Add(this.item_desc_editor_tbox);
             this.groupBox2.Controls.Add(this.UItem_editor_btn);
             this.groupBox2.Controls.Add(this.label1);
@@ -2140,7 +2146,7 @@
             this.Item_Character_Cbox.FormattingEnabled = true;
             this.Item_Character_Cbox.Location = new System.Drawing.Point(68, 19);
             this.Item_Character_Cbox.Name = "Item_Character_Cbox";
-            this.Item_Character_Cbox.Size = new System.Drawing.Size(176, 21);
+            this.Item_Character_Cbox.Size = new System.Drawing.Size(153, 21);
             this.Item_Character_Cbox.TabIndex = 48;
             // 
             // MItem_editor_btn
@@ -2634,6 +2640,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.SpellFilter_sbox);
             this.groupBox5.Controls.Add(this.spell_desc_editor_tbox);
             this.groupBox5.Controls.Add(this.C_MP_UD);
             this.groupBox5.Controls.Add(this.C_MP);
@@ -2754,7 +2762,7 @@
             this.Spell_Character_Cbox.FormattingEnabled = true;
             this.Spell_Character_Cbox.Location = new System.Drawing.Point(68, 19);
             this.Spell_Character_Cbox.Name = "Spell_Character_Cbox";
-            this.Spell_Character_Cbox.Size = new System.Drawing.Size(176, 21);
+            this.Spell_Character_Cbox.Size = new System.Drawing.Size(164, 21);
             this.Spell_Character_Cbox.TabIndex = 48;
             // 
             // Modify_Spell_editor_BTN
@@ -4909,6 +4917,44 @@
             0,
             0});
             // 
+            // ItemFilter_sbox
+            // 
+            this.ItemFilter_sbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ItemFilter_sbox.FormattingEnabled = true;
+            this.ItemFilter_sbox.Location = new System.Drawing.Point(271, 19);
+            this.ItemFilter_sbox.Name = "ItemFilter_sbox";
+            this.ItemFilter_sbox.Size = new System.Drawing.Size(143, 21);
+            this.ItemFilter_sbox.TabIndex = 67;
+            this.ItemFilter_sbox.SelectedIndexChanged += new System.EventHandler(this.ItemFilter_sbox_SelectedIndexChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(238, 22);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(32, 13);
+            this.label14.TabIndex = 68;
+            this.label14.Text = "Filter:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(238, 22);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(32, 13);
+            this.label15.TabIndex = 72;
+            this.label15.Text = "Filter:";
+            // 
+            // SpellFilter_sbox
+            // 
+            this.SpellFilter_sbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.SpellFilter_sbox.FormattingEnabled = true;
+            this.SpellFilter_sbox.Location = new System.Drawing.Point(271, 19);
+            this.SpellFilter_sbox.Name = "SpellFilter_sbox";
+            this.SpellFilter_sbox.Size = new System.Drawing.Size(143, 21);
+            this.SpellFilter_sbox.TabIndex = 71;
+            this.SpellFilter_sbox.SelectedIndexChanged += new System.EventHandler(this.SpellFilter_sbox_SelectedIndexChanged);
+            // 
             // User
             // 
             this.AccessibleName = "UserForm";
@@ -5466,5 +5512,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckBox GenEnchants_cbox;
         private System.Windows.Forms.NumericUpDown Creature_Ammount_UD;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox ItemFilter_sbox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox SpellFilter_sbox;
     }
 }
