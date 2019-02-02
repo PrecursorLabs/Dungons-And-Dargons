@@ -129,7 +129,7 @@ namespace Dungons_And_Dargons
         }
 
 
-        public void DeEquip(string EquipType)
+        public void DeEquip(string EquipType, bool Networking=true)
         {
             try
             {
@@ -204,9 +204,12 @@ namespace Dungons_And_Dargons
 
                 if (EquipType == "ALL")
                 {
-                    string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `OWNER_ID` = '" + PlayerID + "'";
-                    MySqlCommand cmd = new MySqlCommand(sql, conn);
-                    cmd.ExecuteNonQuery();
+                    if (Networking)
+                    {
+                        string sql = "UPDATE `items` SET `Equipped` = 0 WHERE `OWNER_ID` = '" + PlayerID + "'";
+                        MySqlCommand cmd = new MySqlCommand(sql, conn);
+                        cmd.ExecuteNonQuery();
+                    }
 
                     Helmet = new ITEM(conn);
                     Maille = new ITEM(conn);
@@ -573,7 +576,7 @@ namespace Dungons_And_Dargons
                 }
                 rdr.Close();
 
-                DeEquip("ALL");
+                DeEquip("ALL", false);
 
                 foreach (ITEM equipable in Equiped)
                 {

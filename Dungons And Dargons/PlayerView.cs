@@ -137,10 +137,24 @@ namespace Dungons_And_Dargons
             }
 
             HP_pbar.Maximum = SELNPC.T_HP;
-            HP_pbar.Value = SELNPC.HP;
+            if (SELNPC.HP > SELNPC.HPMax + SELNPC.M_HP)
+            {
+                HP_pbar.Value = SELNPC.HPMax + SELNPC.M_HP;
+            }
+            else
+            {
+                HP_pbar.Value = SELNPC.HP;
+            }
 
             MP_pbar.Maximum = SELNPC.T_MP;
-            MP_pbar.Value = SELNPC.MP;
+            if (SELNPC.MP > SELNPC.MPMax + SELNPC.M_MP)
+            {
+                MP_pbar.Value = SELNPC.HPMax + SELNPC.M_HP;
+            }
+            else
+            {
+                MP_pbar.Value = SELNPC.MP;
+            }
             if (SELNPC.XPREQ >= SELNPC.XP)
             {
                 XP_pbar.Maximum = SELNPC.XPREQ;
