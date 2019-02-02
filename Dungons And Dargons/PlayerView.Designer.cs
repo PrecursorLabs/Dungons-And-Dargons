@@ -1085,6 +1085,8 @@
             // DINV_cbox
             // 
             this.DINV_cbox.AutoSize = true;
+            this.DINV_cbox.Checked = true;
+            this.DINV_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DINV_cbox.Location = new System.Drawing.Point(516, 519);
             this.DINV_cbox.Name = "DINV_cbox";
             this.DINV_cbox.Size = new System.Drawing.Size(70, 17);

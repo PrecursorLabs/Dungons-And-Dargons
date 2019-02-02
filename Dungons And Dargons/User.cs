@@ -28,9 +28,15 @@ namespace Dungons_And_Dargons
         ITEMS GM_ITEM_LIST;
         SPELLS GM_SPELLS_LIST;
 
+        private double RandomNumberBetween(double minValue, double maxValue)
+        {
+            var next = rnd.NextDouble();
+            return (Math.Floor((minValue + (next * (maxValue - minValue)))*10000000000))/10000000000;
+        }
+
         public User(int PlayerID, string ip, string password)
         {
-            String version = "1.1.2.0";
+            String version = "1.1.4.0";
             string LatestVersion = "0.0.0.0";
             DBip = ip;
             DBpassword = password;
@@ -436,9 +442,13 @@ namespace Dungons_And_Dargons
 
         private void Inventory_lbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Inventory_lbox.SelectedItem != null)
+            string IID = "Dead";
+            foreach (ListViewItem item in Inventory_lbox.SelectedItems)
             {
-                string IID = Inventory_lbox.SelectedItem.ToString().Split('<', '>')[1];
+                IID = item.Text.Split('<', '>')[1];
+            }
+            if (IID != "Dead")
+            {
                 ItemView Iview = new ItemView(Convert.ToInt32(IID), conn, MyPlayer.PlayerID);
                 //Iview.Show();
                 itemInfo_CNTRL.Controls.Clear();
@@ -453,9 +463,13 @@ namespace Dungons_And_Dargons
 
         private void Spells_lbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Spells_lbox.SelectedItem != null)
+            string IID = "Dead";
+            foreach (ListViewItem item in Spells_lbox.SelectedItems)
             {
-                string IID = Spells_lbox.SelectedItem.ToString().Split('<', '>')[1];
+                IID = item.Text.Split('<', '>')[1];
+            }
+            if (IID != "Dead")
+            {
                 SpellView Sview = new SpellView(Convert.ToInt32(IID), conn);
                 //Sview.Show();
                 SpellInfo_CNTRL.Controls.Clear();
@@ -1492,74 +1506,165 @@ namespace Dungons_And_Dargons
                     Creature.PERC = (int)CCPERC_UD.Value;
                 }
 
-
+                double ENH_luck = 0;
+                int MaxSTAT = 0;
+                int MaxENCH = 0;
+                double Ench_luck = 0;
                 switch (CCLEVELSEL_CBOX.SelectedItem)
                 {
                     case "Sanim":
                         Creature.Level = rnd.Next(1, 6);
+                        MaxSTAT = 10;
+                        ENH_luck = 0.7578582833;
+                        Ench_luck = 0;
+                        MaxENCH = 4;
                         break;
                     case "Twilith":
                         Creature.Level = rnd.Next(6, 11);
+                        MaxSTAT = 10;
+                        ENH_luck = 0.8705505633;
+                        Ench_luck = 0.5;
+                        MaxENCH = 4;
                         break;
                     case "Salvian":
                         Creature.Level = rnd.Next(11, 16);
+                        MaxSTAT = 10;
+                        ENH_luck = 0.9117224886;
+                        Ench_luck = 0.7071067812;
+                        MaxENCH = 4;
                         break;
                     case "Forlorn":
                         Creature.Level = rnd.Next(16, 21);
+                        MaxSTAT = 10;
+                        ENH_luck = 0.9330329915;
+                        Ench_luck = 0.793700526;
+                        MaxENCH = 4;
                         break;
                     case "Shutat":
                         Creature.Level = rnd.Next(21, 26);
+                        MaxSTAT = 20;
+                        ENH_luck = 0.9438743127;
+                        Ench_luck = 0.8332620064;
+                        MaxENCH = 8;
                         break;
                     case "Twixes":
                         Creature.Level = rnd.Next(26, 31);
+                        MaxSTAT = 20;
+                        ENH_luck = 0.951695153;
+                        Ench_luck = 0.8601193075;
+                        MaxENCH = 8;
                         break;
                     case "Grawlith":
                         Creature.Level = rnd.Next(31, 36);
+                        MaxSTAT = 20;
+                        ENH_luck = 0.9576032807;
+                        Ench_luck = 0.8795361709;
+                        MaxENCH = 8;
                         break;
                     case "Xerxiar":
                         Creature.Level = rnd.Next(36, 41);
+                        MaxSTAT = 20;
+                        ENH_luck = 0.9622238369;
+                        Ench_luck = 0.8942249332;
+                        MaxENCH = 8;
                         break;
                     case "Azimat":
                         Creature.Level = rnd.Next(41, 46);
+                        MaxSTAT = 20;
+                        ENH_luck = 0.9659363289;
+                        Ench_luck = 0.9057236643;
+                        MaxENCH = 8;
                         break;
                     case "Xerxes":
                         Creature.Level = rnd.Next(46, 51);
+                        MaxSTAT = 30;
+                        ENH_luck = 0.9696631446;
+                        Ench_luck = 0.9170040432;
+                        MaxENCH = 12;
                         break;
                     case "Flittigan":
                         Creature.Level = rnd.Next(51, 56);
+                        MaxSTAT = 30;
+                        ENH_luck = 0.9726549474;
+                        Ench_luck = 0.9258747123;
+                        MaxENCH = 12;
                         break;
                     case "Partavial":
                         Creature.Level = rnd.Next(56, 61);
+                        MaxSTAT = 30;
+                        ENH_luck = 0.9751096507;
+                        Ench_luck = 0.9330329915;
+                        MaxENCH = 12;
                         break;
                     case "Pheonoe":
                         Creature.Level = rnd.Next(61, 66);
+                        MaxSTAT = 30;
+                        ENH_luck = 0.9771599684;
+                        Ench_luck = 0.9389309107;
+                        MaxENCH = 12;
                         break;
                     case "Grawmat":
                         Creature.Level = rnd.Next(66, 71);
+                        MaxSTAT = 40;
+                        ENH_luck = 0.9788982195;
+                        Ench_luck = 0.9438743127;
+                        MaxENCH = 16;
                         break;
                     case "Bardum":
                         Creature.Level = rnd.Next(71, 76);
+                        MaxSTAT = 40;
+                        ENH_luck = 0.9803906099;
+                        Ench_luck = 0.9480775143;
+                        MaxENCH = 16;
                         break;
                     case "Valethor":
                         Creature.Level = rnd.Next(76, 81);
+                        MaxSTAT = 40;
+                        ENH_luck = 0.9816858552;
+                        Ench_luck = 0.951695153;
+                        MaxENCH = 16;
                         break;
                     case "Rigis":
                         Creature.Level = rnd.Next(81, 86);
+                        MaxSTAT = 40;
+                        ENH_luck = 0.9828205985;
+                        Ench_luck = 0.9548416039;
+                        MaxENCH = 16;
                         break;
                     case "Aziar":
                         Creature.Level = rnd.Next(86, 91);
+                        MaxSTAT = 50;
+                        ENH_luck = 0.9838229319;
+                        Ench_luck = 0.9576032807;
+                        MaxENCH = 20;
                         break;
                     case "Akinawa":
                         Creature.Level = rnd.Next(91, 96);
+                        MaxSTAT = 50;
+                        ENH_luck = 0.9847147529;
+                        Ench_luck = 0.9600466869;
+                        MaxENCH = 20;
                         break;
                     case "Gaelidia":
                         Creature.Level = rnd.Next(96, 101);
+                        MaxSTAT = 50;
+                        ENH_luck = 0.9855133833;
+                        Ench_luck = 0.9622238369;
+                        MaxENCH = 20;
                         break;
                     case "Angiel":
                         Creature.Level = rnd.Next(101, 106);
+                        MaxSTAT = 50;
+                        ENH_luck = 0.9862327045;
+                        Ench_luck = 0.9641759979;
+                        MaxENCH = 20;
                         break;
                     case "Custom":
                         Creature.Level = (int)CCCUSLVL_UD.Value;
+                        MaxSTAT = (int)CCCUSMSP_UD.Value;
+                        ENH_luck = (double)CCCUSLCK_UD.Value;
+                        Ench_luck = (double)CCCUSELCK_ud.Value;
+                        MaxENCH = (int)CCCUSMEL_UD.Value;
                         break;
                 }
 
@@ -1690,159 +1795,41 @@ namespace Dungons_And_Dargons
                 Creature.MP = Creature.MPMax;
                 Creature.CreateData();
 
-                int luck = 0;
-                int MaxSTAT = 0;
-                int MaxENCH = 0;
-                switch (CCLEVELSEL_CBOX.SelectedItem)
-                {
-                    case "Sanim":
-                        MaxSTAT = 10;
-                        luck = rnd.Next(0, 26);
-                        MaxENCH = 4;
-                        break;
-                    case "Twilith":
-                        MaxSTAT = 10;
-                        luck = rnd.Next(25, 51);
-                        MaxENCH = 4;
-                        break;
-                    case "Salvian":
-                        MaxSTAT = 10;
-                        luck = rnd.Next(50, 76);
-                        MaxENCH = 4;
-                        break;
-                    case "Forlorn":
-                        MaxSTAT = 10;
-                        luck = rnd.Next(75, 101);
-                        MaxENCH = 4;
-                        break;
-                    case "Shutat":
-                        MaxSTAT = 20;
-                        luck = rnd.Next(0, 21);
-                        MaxENCH = 8;
-                        break;
-                    case "Twixes":
-                        MaxSTAT = 20;
-                        luck = rnd.Next(20, 41);
-                        MaxENCH = 8;
-                        break;
-                    case "Grawlith":
-                        MaxSTAT = 20;
-                        luck = rnd.Next(40, 61);
-                        MaxENCH = 8;
-                        break;
-                    case "Xerxiar":
-                        MaxSTAT = 20;
-                        luck = rnd.Next(60, 81);
-                        MaxENCH = 8;
-                        break;
-                    case "Azimat":
-                        MaxSTAT = 20;
-                        luck = rnd.Next(80, 101);
-                        MaxENCH = 8;
-                        break;
-                    case "Xerxes":
-                        MaxSTAT = 30;
-                        luck = rnd.Next(0, 26);
-                        MaxENCH = 12;
-                        break;
-                    case "Flittigan":
-                        MaxSTAT = 30;
-                        luck = rnd.Next(25, 51);
-                        MaxENCH = 12;
-                        break;
-                    case "Partavial":
-                        MaxSTAT = 30;
-                        luck = rnd.Next(50, 76);
-                        MaxENCH = 12;
-                        break;
-                    case "Pheonoe":
-                        MaxSTAT = 30;
-                        luck = rnd.Next(75, 101);
-                        MaxENCH = 12;
-                        break;
-                    case "Grawmat":
-                        MaxSTAT = 40;
-                        luck = rnd.Next(0, 26);
-                        MaxENCH = 16;
-                        break;
-                    case "Bardum":
-                        MaxSTAT = 40;
-                        luck = rnd.Next(25, 51);
-                        MaxENCH = 16;
-                        break;
-                    case "Valethor":
-                        MaxSTAT = 40;
-                        luck = rnd.Next(50, 76);
-                        MaxENCH = 16;
-                        break;
-                    case "Rigis":
-                        MaxSTAT = 40;
-                        luck = rnd.Next(75, 101);
-                        MaxENCH = 16;
-                        break;
-                    case "Aziar":
-                        MaxSTAT = 50;
-                        luck = rnd.Next(0, 26);
-                        MaxENCH = 20;
-                        break;
-                    case "Akinawa":
-                        MaxSTAT = 50;
-                        luck = rnd.Next(25, 51);
-                        MaxENCH = 20;
-                        break;
-                    case "Gaelidia":
-                        MaxSTAT = 50;
-                        luck = rnd.Next(50, 76);
-                        MaxENCH = 20;
-                        break;
-                    case "Angiel":
-                        MaxSTAT = 50;
-                        luck = rnd.Next(75, 101);
-                        MaxENCH = 20;
-                        break;
-                    case "Custom":
-                        MaxSTAT = (int)CCCUSMSP_UD.Value;
-                        luck = (int)CCCUSLCK_UD.Value;
-                        MaxENCH = 20;
-                        break;
-                }
-
-
                 if (GITEMS_cbox.Checked)
                 {
-                    Generate_item(Creature.PlayerID, Creature.PName, "Helmet", luck, MaxSTAT, MaxENCH, Helm_HP.Checked, Helm_MP.Checked, Helm_ATK.Checked,
+                    Generate_item(Creature.PlayerID, Creature.PName, "Helmet", ENH_luck, Ench_luck, MaxSTAT, MaxENCH, Helm_HP.Checked, Helm_MP.Checked, Helm_ATK.Checked,
                         Helm_SATK.Checked, Helm_DEF.Checked, Helm_SDEF.Checked, Helm_CHAR.Checked, Helm_DEX.Checked, Helm_STR.Checked, Helm_INT.Checked, Helm_PERC.Checked);
 
-                    Generate_item(Creature.PlayerID, Creature.PName, "Maille", luck, MaxSTAT, MaxENCH, Maille_HP.Checked, Maille_MP.Checked, Maille_ATK.Checked,
+                    Generate_item(Creature.PlayerID, Creature.PName, "Maille", ENH_luck, Ench_luck, MaxSTAT, MaxENCH, Maille_HP.Checked, Maille_MP.Checked, Maille_ATK.Checked,
                         Maille_SATK.Checked, Maille_DEF.Checked, Maille_SDEF.Checked, Maille_CHAR.Checked, Maille_DEX.Checked, Maille_STR.Checked, Maille_INT.Checked, Maille_PERC.Checked);
 
-                    Generate_item(Creature.PlayerID, Creature.PName, "Gloves", luck, MaxSTAT, MaxENCH, Gloves_HP.Checked, Gloves_MP.Checked, Gloves_ATK.Checked,
+                    Generate_item(Creature.PlayerID, Creature.PName, "Gloves", ENH_luck, Ench_luck, MaxSTAT, MaxENCH, Gloves_HP.Checked, Gloves_MP.Checked, Gloves_ATK.Checked,
                         Gloves_SATK.Checked, Gloves_DEF.Checked, Gloves_SDEF.Checked, Gloves_CHAR.Checked, Gloves_DEX.Checked, Gloves_STR.Checked, Gloves_INT.Checked, Gloves_PERC.Checked);
 
-                    Generate_item(Creature.PlayerID, Creature.PName, "Pants", luck, MaxSTAT, MaxENCH, Pants_HP.Checked, Pants_MP.Checked, Pants_ATK.Checked,
+                    Generate_item(Creature.PlayerID, Creature.PName, "Pants", ENH_luck, Ench_luck, MaxSTAT, MaxENCH, Pants_HP.Checked, Pants_MP.Checked, Pants_ATK.Checked,
                         Pants_SATK.Checked, Pants_DEF.Checked, Pants_SDEF.Checked, Pants_CHAR.Checked, Pants_DEX.Checked, Pants_STR.Checked, Pants_INT.Checked, Pants_PERC.Checked);
 
-                    Generate_item(Creature.PlayerID, Creature.PName, "Boots", luck, MaxSTAT, MaxENCH, Boots_HP.Checked, Boots_MP.Checked, Boots_ATK.Checked,
+                    Generate_item(Creature.PlayerID, Creature.PName, "Boots", ENH_luck, Ench_luck, MaxSTAT, MaxENCH, Boots_HP.Checked, Boots_MP.Checked, Boots_ATK.Checked,
                         Boots_SATK.Checked, Boots_DEF.Checked, Boots_SDEF.Checked, Boots_CHAR.Checked, Boots_DEX.Checked, Boots_STR.Checked, Boots_INT.Checked, Boots_PERC.Checked);
 
 
-                    Generate_item(Creature.PlayerID, Creature.PName, "Artifact", luck, MaxSTAT, MaxENCH, Artifact_HP.Checked, Artifact_MP.Checked, Artifact_ATK.Checked,
+                    Generate_item(Creature.PlayerID, Creature.PName, "Artifact", ENH_luck, Ench_luck, MaxSTAT, MaxENCH, Artifact_HP.Checked, Artifact_MP.Checked, Artifact_ATK.Checked,
                         Artifact_SATK.Checked, Artifact_DEF.Checked, Artifact_SDEF.Checked, Artifact_CHAR.Checked, Artifact_DEX.Checked, Artifact_STR.Checked, Artifact_INT.Checked, Artifact_PERC.Checked);
 
                     if (rnd.Next(0, 101) >= 50)
                     {
 
-                        Generate_item(Creature.PlayerID, Creature.PName, "Weapon", luck, MaxSTAT, MaxENCH, LWeapon_HP.Checked, LWeapon_MP.Checked, LWeapon_ATK.Checked,
+                        Generate_item(Creature.PlayerID, Creature.PName, "Weapon", ENH_luck, Ench_luck, MaxSTAT, MaxENCH, LWeapon_HP.Checked, LWeapon_MP.Checked, LWeapon_ATK.Checked,
                             LWeapon_SATK.Checked, LWeapon_DEF.Checked, LWeapon_SDEF.Checked, LWeapon_CHAR.Checked, LWeapon_DEX.Checked, LWeapon_STR.Checked, LWeapon_INT.Checked, LWeapon_PERC.Checked);
 
-                        Generate_item(Creature.PlayerID, Creature.PName, "Weapon", luck, MaxSTAT, MaxENCH, RWeapon_HP.Checked, RWeapon_MP.Checked, RWeapon_ATK.Checked,
+                        Generate_item(Creature.PlayerID, Creature.PName, "Weapon", ENH_luck, Ench_luck, MaxSTAT, MaxENCH, RWeapon_HP.Checked, RWeapon_MP.Checked, RWeapon_ATK.Checked,
                             RWeapon_SATK.Checked, RWeapon_DEF.Checked, RWeapon_SDEF.Checked, RWeapon_CHAR.Checked, RWeapon_DEX.Checked, RWeapon_STR.Checked, RWeapon_INT.Checked, RWeapon_PERC.Checked);
 
                     }
                     else
                     {
 
-                        Generate_item(Creature.PlayerID, Creature.PName, "Weapon", luck, MaxSTAT, MaxENCH, LWeapon_HP.Checked, LWeapon_MP.Checked, LWeapon_ATK.Checked,
+                        Generate_item(Creature.PlayerID, Creature.PName, "Weapon", ENH_luck, Ench_luck, MaxSTAT, MaxENCH, LWeapon_HP.Checked, LWeapon_MP.Checked, LWeapon_ATK.Checked,
                             LWeapon_SATK.Checked, LWeapon_DEF.Checked, LWeapon_SDEF.Checked, LWeapon_CHAR.Checked, LWeapon_DEX.Checked, LWeapon_STR.Checked, LWeapon_INT.Checked, LWeapon_PERC.Checked);
 
                     }
@@ -1854,7 +1841,7 @@ namespace Dungons_And_Dargons
             MessageBox.Show("Creature Created");
         }
 
-        private void Generate_item(int PlayerID, string PName, string ITEMType, int luck, int MaxSTAT, int MaxENCH, bool C_HP, bool C_MP, bool C_ATK, bool C_SATK, bool C_DEF, bool C_SDEF, bool C_CHAR, bool C_DEX, bool C_STR, bool C_INT, bool C_PERC)
+        private void Generate_item(int PlayerID, string PName, string ITEMType, double ENH_luck, double Ench_luck, int MaxSTAT, int MaxENCH, bool C_HP, bool C_MP, bool C_ATK, bool C_SATK, bool C_DEF, bool C_SDEF, bool C_CHAR, bool C_DEX, bool C_STR, bool C_INT, bool C_PERC)
         {
 
             ITEM CITEM = new ITEM(conn);
@@ -1887,8 +1874,8 @@ namespace Dungons_And_Dargons
             if (ITEMType != "Artifact")
             {
                 //Enhance for Item
-                bool enhancing = false;
-                if (rnd.Next(0, 101) <= luck) enhancing = true;
+                bool enhancing = true;
+                if (RandomNumberBetween(0.0000000000, 1.0000000000) > ENH_luck) enhancing = false;
                 while (enhancing)
                 {
                     decimal TotalStatPoints = CITEM.M_HP + CITEM.M_MP + CITEM.M_ATK + CITEM.M_SATK + CITEM.M_DEF + CITEM.M_SDEF + CITEM.M_CHAR + CITEM.M_DEX
@@ -1980,8 +1967,8 @@ namespace Dungons_And_Dargons
                                 break;
                         }
                     }
-                    if (CITEM.Enhance > MaxSTAT) enhancing = false;
-                    if (rnd.Next(0, 101) > luck) enhancing = false;
+                    if (CITEM.Enhance >= MaxSTAT) enhancing = false;
+                    if (RandomNumberBetween(0.0000000000, 1.0000000000) > ENH_luck) enhancing = false;
                 }
             }
 
@@ -2041,7 +2028,7 @@ namespace Dungons_And_Dargons
                         while (ELeveling)
                         {
                             CITEM.ELevel += 1;
-                            if (rnd.Next(0, 101) > luck) ELeveling = false;
+                            if (RandomNumberBetween(0.00000000000, 1.00000000000) > Ench_luck) ELeveling = false;
                         }
                     }
                 }
@@ -2058,12 +2045,16 @@ namespace Dungons_And_Dargons
                 CCCUSLVL_UD.Enabled = true;
                 CCCUSLCK_UD.Enabled = true;
                 CCCUSMSP_UD.Enabled = true;
+                CCCUSELCK_ud.Enabled = true;
+                CCCUSMEL_UD.Enabled = true;
             }
             else
             {
                 CCCUSLVL_UD.Enabled = false;
                 CCCUSLCK_UD.Enabled = false;
                 CCCUSMSP_UD.Enabled = false;
+                CCCUSELCK_ud.Enabled = false;
+                CCCUSMEL_UD.Enabled = false;
             }
         }
 
@@ -2162,5 +2153,125 @@ namespace Dungons_And_Dargons
                 }
             }
         }
+
+        private void InvSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                bool swapped;
+                switch (InvSort.SelectedItem)
+                {
+                    case "A-Z":
+                        Inventory_lbox.Sorting = SortOrder.Ascending;
+                        break;
+                    case "Z-A":
+                        Inventory_lbox.Sorting = SortOrder.Descending;
+                        break;
+                    case "Old-New":
+                        Inventory_lbox.Sorting = SortOrder.None;
+                        do
+                        {
+                            int count = Inventory_lbox.Items.Count - 1;
+                            swapped = false;
+                            while (count > 0)
+                            {
+                                if (Convert.ToInt32(Inventory_lbox.Items[count].ToString().Split('<', '>')[1]) < Convert.ToInt32(Inventory_lbox.Items[count - 1].ToString().Split('<', '>')[1]))
+                                {
+                                    String temp = Inventory_lbox.Items[count].Text;
+                                    Inventory_lbox.Items[count].Text = Inventory_lbox.Items[count - 1].Text;
+                                    Inventory_lbox.Items[count - 1].Text = temp;
+                                    swapped = true;
+                                }
+                                count -= 1;
+                            }
+                        } while (swapped == true);
+                        break;
+                    case "New-Old":
+                        Inventory_lbox.Sorting = SortOrder.None;
+                        do
+                        {
+                            int count = Inventory_lbox.Items.Count - 1;
+                            swapped = false;
+                            while (count > 0)
+                            {
+                                if (Convert.ToInt32(Inventory_lbox.Items[count].ToString().Split('<', '>')[1]) > Convert.ToInt32(Inventory_lbox.Items[count - 1].ToString().Split('<', '>')[1]))
+                                {
+                                    String temp = Inventory_lbox.Items[count].Text;
+                                    Inventory_lbox.Items[count].Text = Inventory_lbox.Items[count - 1].Text;
+                                    Inventory_lbox.Items[count - 1].Text = temp;
+                                    swapped = true;
+                                }
+                                count -= 1;
+                            }
+                        } while (swapped == true);
+                        break;
+                }
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void SpellSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bool swapped;
+                switch (SpellSort.SelectedItem)
+                {
+                    case "A-Z":
+                        Spells_lbox.Sorting = SortOrder.Ascending;
+                        break;
+                    case "Z-A":
+                        Spells_lbox.Sorting = SortOrder.Descending;
+                        break;
+                    case "Old-New":
+                        Spells_lbox.Sorting = SortOrder.None;
+                        do
+                        {
+                            int count = Spells_lbox.Items.Count - 1;
+                            swapped = false;
+                            while (count > 0)
+                            {
+                                if (Convert.ToInt32(Spells_lbox.Items[count].ToString().Split('<', '>')[1]) < Convert.ToInt32(Spells_lbox.Items[count - 1].ToString().Split('<', '>')[1]))
+                                {
+                                    String temp = Spells_lbox.Items[count].Text;
+                                    Spells_lbox.Items[count].Text = Inventory_lbox.Items[count - 1].Text;
+                                    Spells_lbox.Items[count - 1].Text = temp;
+                                    swapped = true;
+                                }
+                                count -= 1;
+                            }
+                        } while (swapped == true);
+                        break;
+                    case "New-Old":
+                        Spells_lbox.Sorting = SortOrder.None;
+                        do
+                        {
+                            int count = Spells_lbox.Items.Count - 1;
+                            swapped = false;
+                            while (count > 0)
+                            {
+                                if (Convert.ToInt32(Spells_lbox.Items[count].ToString().Split('<', '>')[1]) > Convert.ToInt32(Spells_lbox.Items[count - 1].ToString().Split('<', '>')[1]))
+                                {
+                                    String temp = Spells_lbox.Items[count].Text;
+                                    Spells_lbox.Items[count].Text = Inventory_lbox.Items[count - 1].Text;
+                                    Spells_lbox.Items[count - 1].Text = temp;
+                                    swapped = true;
+                                }
+                                count -= 1;
+                            }
+                        } while (swapped == true);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
+
 }

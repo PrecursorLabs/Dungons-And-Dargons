@@ -174,6 +174,9 @@ namespace Dungons_And_Dargons
             {
                 Spells_lbox.Items.Add(spell.SPELL_DATA());
             }
+
+            Delete_btn.Enabled = !SELNPC.isPlayer;
+            Sleep_btn.Enabled = !SELNPC.isPlayer;
         }
 
         private void Plus_BTN_Click(object sender, EventArgs e)

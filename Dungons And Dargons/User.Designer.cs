@@ -61,12 +61,14 @@
             this.label83 = new System.Windows.Forms.Label();
             this.DeEquipAll_btn = new System.Windows.Forms.Button();
             this.Inventory_tab = new System.Windows.Forms.TabPage();
+            this.InvSort = new System.Windows.Forms.ComboBox();
             this.itemInfo_CNTRL = new System.Windows.Forms.GroupBox();
-            this.Inventory_lbox = new System.Windows.Forms.ListBox();
             this.Spells_tab = new System.Windows.Forms.TabPage();
+            this.SpellSort = new System.Windows.Forms.ComboBox();
             this.SpellInfo_CNTRL = new System.Windows.Forms.GroupBox();
             this.Knowledge_lbox = new System.Windows.Forms.ListBox();
-            this.Spells_lbox = new System.Windows.Forms.ListBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GameMaster_tab = new System.Windows.Forms.TabPage();
             this.GameMaster_stabs = new System.Windows.Forms.TabControl();
             this.NPCM_tab = new System.Windows.Forms.TabPage();
@@ -76,6 +78,115 @@
             this.Filter_Relation = new System.Windows.Forms.ComboBox();
             this.NPCS_lbox = new System.Windows.Forms.ListBox();
             this.NPCC_tab = new System.Windows.Forms.TabPage();
+            this.CCCUSMEL_UD = new System.Windows.Forms.NumericUpDown();
+            this.CCCUSELCK_ud = new System.Windows.Forms.NumericUpDown();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Creature_Ammount_UD = new System.Windows.Forms.NumericUpDown();
+            this.GenEnchants_cbox = new System.Windows.Forms.CheckBox();
+            this.CCXP_UD = new System.Windows.Forms.NumericUpDown();
+            this.NPC_Create_btn = new System.Windows.Forms.Button();
+            this.GITEMS_cbox = new System.Windows.Forms.CheckBox();
+            this.CCCUSMSP_UD = new System.Windows.Forms.NumericUpDown();
+            this.CCCUSLCK_UD = new System.Windows.Forms.NumericUpDown();
+            this.Enemy_cbox = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Artifact_PERC = new System.Windows.Forms.CheckBox();
+            this.RWeapon_PERC = new System.Windows.Forms.CheckBox();
+            this.LWeapon_PERC = new System.Windows.Forms.CheckBox();
+            this.Boots_PERC = new System.Windows.Forms.CheckBox();
+            this.Pants_PERC = new System.Windows.Forms.CheckBox();
+            this.Gloves_PERC = new System.Windows.Forms.CheckBox();
+            this.Maille_PERC = new System.Windows.Forms.CheckBox();
+            this.Helm_PERC = new System.Windows.Forms.CheckBox();
+            this.Artifact_INT = new System.Windows.Forms.CheckBox();
+            this.RWeapon_INT = new System.Windows.Forms.CheckBox();
+            this.LWeapon_INT = new System.Windows.Forms.CheckBox();
+            this.Boots_INT = new System.Windows.Forms.CheckBox();
+            this.Pants_INT = new System.Windows.Forms.CheckBox();
+            this.Gloves_INT = new System.Windows.Forms.CheckBox();
+            this.Maille_INT = new System.Windows.Forms.CheckBox();
+            this.Helm_INT = new System.Windows.Forms.CheckBox();
+            this.Artifact_STR = new System.Windows.Forms.CheckBox();
+            this.RWeapon_STR = new System.Windows.Forms.CheckBox();
+            this.LWeapon_STR = new System.Windows.Forms.CheckBox();
+            this.Boots_STR = new System.Windows.Forms.CheckBox();
+            this.Pants_STR = new System.Windows.Forms.CheckBox();
+            this.Gloves_STR = new System.Windows.Forms.CheckBox();
+            this.Maille_STR = new System.Windows.Forms.CheckBox();
+            this.Helm_STR = new System.Windows.Forms.CheckBox();
+            this.Artifact_DEX = new System.Windows.Forms.CheckBox();
+            this.RWeapon_DEX = new System.Windows.Forms.CheckBox();
+            this.LWeapon_DEX = new System.Windows.Forms.CheckBox();
+            this.Boots_DEX = new System.Windows.Forms.CheckBox();
+            this.Pants_DEX = new System.Windows.Forms.CheckBox();
+            this.Gloves_DEX = new System.Windows.Forms.CheckBox();
+            this.Maille_DEX = new System.Windows.Forms.CheckBox();
+            this.Helm_DEX = new System.Windows.Forms.CheckBox();
+            this.Artifact_CHAR = new System.Windows.Forms.CheckBox();
+            this.RWeapon_CHAR = new System.Windows.Forms.CheckBox();
+            this.LWeapon_CHAR = new System.Windows.Forms.CheckBox();
+            this.Boots_CHAR = new System.Windows.Forms.CheckBox();
+            this.Pants_CHAR = new System.Windows.Forms.CheckBox();
+            this.Gloves_CHAR = new System.Windows.Forms.CheckBox();
+            this.Maille_CHAR = new System.Windows.Forms.CheckBox();
+            this.Helm_CHAR = new System.Windows.Forms.CheckBox();
+            this.Artifact_SDEF = new System.Windows.Forms.CheckBox();
+            this.RWeapon_SDEF = new System.Windows.Forms.CheckBox();
+            this.LWeapon_SDEF = new System.Windows.Forms.CheckBox();
+            this.Boots_SDEF = new System.Windows.Forms.CheckBox();
+            this.Pants_SDEF = new System.Windows.Forms.CheckBox();
+            this.Gloves_SDEF = new System.Windows.Forms.CheckBox();
+            this.Maille_SDEF = new System.Windows.Forms.CheckBox();
+            this.Helm_SDEF = new System.Windows.Forms.CheckBox();
+            this.Artifact_DEF = new System.Windows.Forms.CheckBox();
+            this.RWeapon_DEF = new System.Windows.Forms.CheckBox();
+            this.LWeapon_DEF = new System.Windows.Forms.CheckBox();
+            this.Boots_DEF = new System.Windows.Forms.CheckBox();
+            this.Pants_DEF = new System.Windows.Forms.CheckBox();
+            this.Gloves_DEF = new System.Windows.Forms.CheckBox();
+            this.Maille_DEF = new System.Windows.Forms.CheckBox();
+            this.Helm_DEF = new System.Windows.Forms.CheckBox();
+            this.Artifact_SATK = new System.Windows.Forms.CheckBox();
+            this.RWeapon_SATK = new System.Windows.Forms.CheckBox();
+            this.LWeapon_SATK = new System.Windows.Forms.CheckBox();
+            this.Boots_SATK = new System.Windows.Forms.CheckBox();
+            this.Pants_SATK = new System.Windows.Forms.CheckBox();
+            this.Gloves_SATK = new System.Windows.Forms.CheckBox();
+            this.Maille_SATK = new System.Windows.Forms.CheckBox();
+            this.Helm_SATK = new System.Windows.Forms.CheckBox();
+            this.Artifact_ATK = new System.Windows.Forms.CheckBox();
+            this.RWeapon_ATK = new System.Windows.Forms.CheckBox();
+            this.LWeapon_ATK = new System.Windows.Forms.CheckBox();
+            this.Boots_ATK = new System.Windows.Forms.CheckBox();
+            this.Pants_ATK = new System.Windows.Forms.CheckBox();
+            this.Gloves_ATK = new System.Windows.Forms.CheckBox();
+            this.Maille_ATK = new System.Windows.Forms.CheckBox();
+            this.Helm_ATK = new System.Windows.Forms.CheckBox();
+            this.Artifact_MP = new System.Windows.Forms.CheckBox();
+            this.RWeapon_MP = new System.Windows.Forms.CheckBox();
+            this.LWeapon_MP = new System.Windows.Forms.CheckBox();
+            this.Boots_MP = new System.Windows.Forms.CheckBox();
+            this.Pants_MP = new System.Windows.Forms.CheckBox();
+            this.Gloves_MP = new System.Windows.Forms.CheckBox();
+            this.Maille_MP = new System.Windows.Forms.CheckBox();
+            this.Helm_MP = new System.Windows.Forms.CheckBox();
+            this.Artifact_HP = new System.Windows.Forms.CheckBox();
+            this.RWeapon_HP = new System.Windows.Forms.CheckBox();
+            this.LWeapon_HP = new System.Windows.Forms.CheckBox();
+            this.Boots_HP = new System.Windows.Forms.CheckBox();
+            this.Pants_HP = new System.Windows.Forms.CheckBox();
+            this.Gloves_HP = new System.Windows.Forms.CheckBox();
+            this.Maille_HP = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Helm_HP = new System.Windows.Forms.CheckBox();
             this.UPLOAD_btn = new System.Windows.Forms.Button();
             this.Roll_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -125,10 +236,14 @@
             this.CCOMPMOD_tbox = new System.Windows.Forms.NumericUpDown();
             this.CCDEX_UD = new System.Windows.Forms.NumericUpDown();
             this.CCOHPMOD_tbox = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.GMItemc_tab = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.EditorItems_lbox = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ItemFilter_sbox = new System.Windows.Forms.ComboBox();
             this.item_desc_editor_tbox = new System.Windows.Forms.RichTextBox();
             this.UItem_editor_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -193,6 +308,8 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Spells_Edititor_lbox = new System.Windows.Forms.ListView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.SpellFilter_sbox = new System.Windows.Forms.ComboBox();
             this.spell_desc_editor_tbox = new System.Windows.Forms.RichTextBox();
             this.C_MP_UD = new System.Windows.Forms.NumericUpDown();
             this.C_MP = new System.Windows.Forms.Label();
@@ -295,131 +412,29 @@
             this.label94 = new System.Windows.Forms.Label();
             this.Power_Level_tbox = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.Helm_HP = new System.Windows.Forms.CheckBox();
-            this.Maille_HP = new System.Windows.Forms.CheckBox();
-            this.Gloves_HP = new System.Windows.Forms.CheckBox();
-            this.Pants_HP = new System.Windows.Forms.CheckBox();
-            this.Boots_HP = new System.Windows.Forms.CheckBox();
-            this.LWeapon_HP = new System.Windows.Forms.CheckBox();
-            this.RWeapon_HP = new System.Windows.Forms.CheckBox();
-            this.Artifact_HP = new System.Windows.Forms.CheckBox();
-            this.Helm_MP = new System.Windows.Forms.CheckBox();
-            this.Maille_MP = new System.Windows.Forms.CheckBox();
-            this.Gloves_MP = new System.Windows.Forms.CheckBox();
-            this.Pants_MP = new System.Windows.Forms.CheckBox();
-            this.Boots_MP = new System.Windows.Forms.CheckBox();
-            this.LWeapon_MP = new System.Windows.Forms.CheckBox();
-            this.RWeapon_MP = new System.Windows.Forms.CheckBox();
-            this.Artifact_MP = new System.Windows.Forms.CheckBox();
-            this.Helm_ATK = new System.Windows.Forms.CheckBox();
-            this.Maille_ATK = new System.Windows.Forms.CheckBox();
-            this.Gloves_ATK = new System.Windows.Forms.CheckBox();
-            this.Pants_ATK = new System.Windows.Forms.CheckBox();
-            this.Boots_ATK = new System.Windows.Forms.CheckBox();
-            this.LWeapon_ATK = new System.Windows.Forms.CheckBox();
-            this.RWeapon_ATK = new System.Windows.Forms.CheckBox();
-            this.Artifact_ATK = new System.Windows.Forms.CheckBox();
-            this.Helm_SATK = new System.Windows.Forms.CheckBox();
-            this.Maille_SATK = new System.Windows.Forms.CheckBox();
-            this.Gloves_SATK = new System.Windows.Forms.CheckBox();
-            this.Pants_SATK = new System.Windows.Forms.CheckBox();
-            this.Boots_SATK = new System.Windows.Forms.CheckBox();
-            this.LWeapon_SATK = new System.Windows.Forms.CheckBox();
-            this.RWeapon_SATK = new System.Windows.Forms.CheckBox();
-            this.Artifact_SATK = new System.Windows.Forms.CheckBox();
-            this.Helm_DEF = new System.Windows.Forms.CheckBox();
-            this.Maille_DEF = new System.Windows.Forms.CheckBox();
-            this.Gloves_DEF = new System.Windows.Forms.CheckBox();
-            this.Pants_DEF = new System.Windows.Forms.CheckBox();
-            this.Boots_DEF = new System.Windows.Forms.CheckBox();
-            this.LWeapon_DEF = new System.Windows.Forms.CheckBox();
-            this.RWeapon_DEF = new System.Windows.Forms.CheckBox();
-            this.Artifact_DEF = new System.Windows.Forms.CheckBox();
-            this.Helm_SDEF = new System.Windows.Forms.CheckBox();
-            this.Maille_SDEF = new System.Windows.Forms.CheckBox();
-            this.Gloves_SDEF = new System.Windows.Forms.CheckBox();
-            this.Pants_SDEF = new System.Windows.Forms.CheckBox();
-            this.Boots_SDEF = new System.Windows.Forms.CheckBox();
-            this.LWeapon_SDEF = new System.Windows.Forms.CheckBox();
-            this.RWeapon_SDEF = new System.Windows.Forms.CheckBox();
-            this.Artifact_SDEF = new System.Windows.Forms.CheckBox();
-            this.Helm_CHAR = new System.Windows.Forms.CheckBox();
-            this.Maille_CHAR = new System.Windows.Forms.CheckBox();
-            this.Gloves_CHAR = new System.Windows.Forms.CheckBox();
-            this.Pants_CHAR = new System.Windows.Forms.CheckBox();
-            this.Boots_CHAR = new System.Windows.Forms.CheckBox();
-            this.LWeapon_CHAR = new System.Windows.Forms.CheckBox();
-            this.RWeapon_CHAR = new System.Windows.Forms.CheckBox();
-            this.Artifact_CHAR = new System.Windows.Forms.CheckBox();
-            this.Helm_DEX = new System.Windows.Forms.CheckBox();
-            this.Maille_DEX = new System.Windows.Forms.CheckBox();
-            this.Gloves_DEX = new System.Windows.Forms.CheckBox();
-            this.Pants_DEX = new System.Windows.Forms.CheckBox();
-            this.Boots_DEX = new System.Windows.Forms.CheckBox();
-            this.LWeapon_DEX = new System.Windows.Forms.CheckBox();
-            this.RWeapon_DEX = new System.Windows.Forms.CheckBox();
-            this.Artifact_DEX = new System.Windows.Forms.CheckBox();
-            this.Helm_STR = new System.Windows.Forms.CheckBox();
-            this.Maille_STR = new System.Windows.Forms.CheckBox();
-            this.Gloves_STR = new System.Windows.Forms.CheckBox();
-            this.Pants_STR = new System.Windows.Forms.CheckBox();
-            this.Boots_STR = new System.Windows.Forms.CheckBox();
-            this.LWeapon_STR = new System.Windows.Forms.CheckBox();
-            this.RWeapon_STR = new System.Windows.Forms.CheckBox();
-            this.Artifact_STR = new System.Windows.Forms.CheckBox();
-            this.Helm_INT = new System.Windows.Forms.CheckBox();
-            this.Maille_INT = new System.Windows.Forms.CheckBox();
-            this.Gloves_INT = new System.Windows.Forms.CheckBox();
-            this.Pants_INT = new System.Windows.Forms.CheckBox();
-            this.Boots_INT = new System.Windows.Forms.CheckBox();
-            this.LWeapon_INT = new System.Windows.Forms.CheckBox();
-            this.RWeapon_INT = new System.Windows.Forms.CheckBox();
-            this.Artifact_INT = new System.Windows.Forms.CheckBox();
-            this.Helm_PERC = new System.Windows.Forms.CheckBox();
-            this.Maille_PERC = new System.Windows.Forms.CheckBox();
-            this.Gloves_PERC = new System.Windows.Forms.CheckBox();
-            this.Pants_PERC = new System.Windows.Forms.CheckBox();
-            this.Boots_PERC = new System.Windows.Forms.CheckBox();
-            this.LWeapon_PERC = new System.Windows.Forms.CheckBox();
-            this.RWeapon_PERC = new System.Windows.Forms.CheckBox();
-            this.Artifact_PERC = new System.Windows.Forms.CheckBox();
-            this.Enemy_cbox = new System.Windows.Forms.CheckBox();
-            this.CCCUSLCK_UD = new System.Windows.Forms.NumericUpDown();
-            this.CCCUSMSP_UD = new System.Windows.Forms.NumericUpDown();
-            this.GITEMS_cbox = new System.Windows.Forms.CheckBox();
-            this.NPC_Create_btn = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AutoRefresh_cbox = new System.Windows.Forms.CheckBox();
-            this.CCXP_UD = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.GenEnchants_cbox = new System.Windows.Forms.CheckBox();
-            this.Creature_Ammount_UD = new System.Windows.Forms.NumericUpDown();
-            this.ItemFilter_sbox = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.SpellFilter_sbox = new System.Windows.Forms.ComboBox();
+            this.Inventory_lbox = new System.Windows.Forms.ListView();
+            this.Spells_lbox = new System.Windows.Forms.ListView();
             this.Main_tabs.SuspendLayout();
             this.Equipment_tab.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.EGROUP.SuspendLayout();
             this.Inventory_tab.SuspendLayout();
             this.Spells_tab.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GameMaster_tab.SuspendLayout();
             this.GameMaster_stabs.SuspendLayout();
             this.NPCM_tab.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.NPCC_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSMEL_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSELCK_ud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Creature_Ammount_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCXP_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSMSP_UD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLCK_UD)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCHP_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).BeginInit();
@@ -478,13 +493,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.MSlots_Spell_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank_Spell_editor_ud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tier_Spell_editor_ud)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLCK_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCCUSMSP_UD)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCXP_UD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Creature_Ammount_UD)).BeginInit();
             this.SuspendLayout();
             // 
             // Update_timer
@@ -837,6 +845,7 @@
             // Inventory_tab
             // 
             this.Inventory_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Inventory_tab.Controls.Add(this.InvSort);
             this.Inventory_tab.Controls.Add(this.itemInfo_CNTRL);
             this.Inventory_tab.Controls.Add(this.Inventory_lbox);
             this.Inventory_tab.Location = new System.Drawing.Point(4, 22);
@@ -846,6 +855,20 @@
             this.Inventory_tab.TabIndex = 2;
             this.Inventory_tab.Text = "Inventory";
             // 
+            // InvSort
+            // 
+            this.InvSort.FormattingEnabled = true;
+            this.InvSort.Items.AddRange(new object[] {
+            "A-Z",
+            "Z-A",
+            "Old-New",
+            "New-Old"});
+            this.InvSort.Location = new System.Drawing.Point(415, 11);
+            this.InvSort.Name = "InvSort";
+            this.InvSort.Size = new System.Drawing.Size(121, 21);
+            this.InvSort.TabIndex = 2;
+            this.InvSort.SelectedIndexChanged += new System.EventHandler(this.InvSort_SelectedIndexChanged);
+            // 
             // itemInfo_CNTRL
             // 
             this.itemInfo_CNTRL.Dock = System.Windows.Forms.DockStyle.Right;
@@ -854,23 +877,11 @@
             this.itemInfo_CNTRL.Size = new System.Drawing.Size(299, 586);
             this.itemInfo_CNTRL.TabIndex = 1;
             this.itemInfo_CNTRL.TabStop = false;
-            this.itemInfo_CNTRL.Text = "Item Info";
-            // 
-            // Inventory_lbox
-            // 
-            this.Inventory_lbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Inventory_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Inventory_lbox.FormattingEnabled = true;
-            this.Inventory_lbox.Location = new System.Drawing.Point(3, 3);
-            this.Inventory_lbox.Name = "Inventory_lbox";
-            this.Inventory_lbox.Size = new System.Drawing.Size(838, 586);
-            this.Inventory_lbox.Sorted = true;
-            this.Inventory_lbox.TabIndex = 0;
-            this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
             // 
             // Spells_tab
             // 
             this.Spells_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Spells_tab.Controls.Add(this.SpellSort);
             this.Spells_tab.Controls.Add(this.SpellInfo_CNTRL);
             this.Spells_tab.Controls.Add(this.Knowledge_lbox);
             this.Spells_tab.Controls.Add(this.Spells_lbox);
@@ -881,6 +892,20 @@
             this.Spells_tab.TabIndex = 3;
             this.Spells_tab.Text = "Spells";
             this.Spells_tab.Click += new System.EventHandler(this.Spells_tab_Click);
+            // 
+            // SpellSort
+            // 
+            this.SpellSort.FormattingEnabled = true;
+            this.SpellSort.Items.AddRange(new object[] {
+            "A-Z",
+            "Z-A",
+            "Old-New",
+            "New-Old"});
+            this.SpellSort.Location = new System.Drawing.Point(153, 11);
+            this.SpellSort.Name = "SpellSort";
+            this.SpellSort.Size = new System.Drawing.Size(121, 21);
+            this.SpellSort.TabIndex = 4;
+            this.SpellSort.SelectedIndexChanged += new System.EventHandler(this.SpellSort_SelectedIndexChanged);
             // 
             // SpellInfo_CNTRL
             // 
@@ -903,16 +928,27 @@
             this.Knowledge_lbox.Size = new System.Drawing.Size(292, 586);
             this.Knowledge_lbox.TabIndex = 2;
             // 
-            // Spells_lbox
+            // tabPage2
             // 
-            this.Spells_lbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Spells_lbox.FormattingEnabled = true;
-            this.Spells_lbox.Location = new System.Drawing.Point(3, 3);
-            this.Spells_lbox.Name = "Spells_lbox";
-            this.Spells_lbox.Size = new System.Drawing.Size(838, 586);
-            this.Spells_lbox.TabIndex = 1;
-            this.Spells_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_lbox_SelectedIndexChanged);
+            this.tabPage2.Controls.Add(this.pictureBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(844, 592);
+            this.tabPage2.TabIndex = 5;
+            this.tabPage2.Text = "Map";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Dungons_And_Dargons.Properties.Resources.Magnosh_territories;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(838, 586);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // GameMaster_tab
             // 
@@ -1016,6 +1052,10 @@
             // 
             this.NPCC_tab.AutoScroll = true;
             this.NPCC_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.NPCC_tab.Controls.Add(this.CCCUSMEL_UD);
+            this.NPCC_tab.Controls.Add(this.CCCUSELCK_ud);
+            this.NPCC_tab.Controls.Add(this.label29);
+            this.NPCC_tab.Controls.Add(this.label31);
             this.NPCC_tab.Controls.Add(this.Creature_Ammount_UD);
             this.NPCC_tab.Controls.Add(this.GenEnchants_cbox);
             this.NPCC_tab.Controls.Add(this.CCXP_UD);
@@ -1082,6 +1122,1186 @@
             this.NPCC_tab.Size = new System.Drawing.Size(830, 560);
             this.NPCC_tab.TabIndex = 2;
             this.NPCC_tab.Text = "NPC Creator";
+            // 
+            // CCCUSMEL_UD
+            // 
+            this.CCCUSMEL_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCCUSMEL_UD.Enabled = false;
+            this.CCCUSMEL_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCCUSMEL_UD.Location = new System.Drawing.Point(701, 34);
+            this.CCCUSMEL_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.CCCUSMEL_UD.Name = "CCCUSMEL_UD";
+            this.CCCUSMEL_UD.Size = new System.Drawing.Size(49, 20);
+            this.CCCUSMEL_UD.TabIndex = 86;
+            // 
+            // CCCUSELCK_ud
+            // 
+            this.CCCUSELCK_ud.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCCUSELCK_ud.DecimalPlaces = 10;
+            this.CCCUSELCK_ud.Enabled = false;
+            this.CCCUSELCK_ud.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCCUSELCK_ud.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.CCCUSELCK_ud.Location = new System.Drawing.Point(583, 33);
+            this.CCCUSELCK_ud.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.CCCUSELCK_ud.Name = "CCCUSELCK_ud";
+            this.CCCUSELCK_ud.Size = new System.Drawing.Size(50, 20);
+            this.CCCUSELCK_ud.TabIndex = 85;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Location = new System.Drawing.Point(632, 37);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(63, 13);
+            this.label29.TabIndex = 88;
+            this.label29.Text = "Max ENCH:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(510, 37);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(67, 13);
+            this.label31.TabIndex = 87;
+            this.label31.Text = "ENCH Luck:";
+            // 
+            // Creature_Ammount_UD
+            // 
+            this.Creature_Ammount_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Creature_Ammount_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.Creature_Ammount_UD.Location = new System.Drawing.Point(3, 400);
+            this.Creature_Ammount_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.Creature_Ammount_UD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Creature_Ammount_UD.Name = "Creature_Ammount_UD";
+            this.Creature_Ammount_UD.Size = new System.Drawing.Size(72, 20);
+            this.Creature_Ammount_UD.TabIndex = 84;
+            this.Creature_Ammount_UD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // GenEnchants_cbox
+            // 
+            this.GenEnchants_cbox.AutoSize = true;
+            this.GenEnchants_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.GenEnchants_cbox.Checked = true;
+            this.GenEnchants_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.GenEnchants_cbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.GenEnchants_cbox.Location = new System.Drawing.Point(345, 33);
+            this.GenEnchants_cbox.Name = "GenEnchants_cbox";
+            this.GenEnchants_cbox.Size = new System.Drawing.Size(97, 17);
+            this.GenEnchants_cbox.TabIndex = 83;
+            this.GenEnchants_cbox.Text = "GEN Enchants";
+            this.GenEnchants_cbox.UseVisualStyleBackColor = false;
+            // 
+            // CCXP_UD
+            // 
+            this.CCXP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCXP_UD.Enabled = false;
+            this.CCXP_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCXP_UD.Location = new System.Drawing.Point(56, 61);
+            this.CCXP_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.CCXP_UD.Name = "CCXP_UD";
+            this.CCXP_UD.Size = new System.Drawing.Size(100, 20);
+            this.CCXP_UD.TabIndex = 80;
+            // 
+            // NPC_Create_btn
+            // 
+            this.NPC_Create_btn.Location = new System.Drawing.Point(81, 399);
+            this.NPC_Create_btn.Name = "NPC_Create_btn";
+            this.NPC_Create_btn.Size = new System.Drawing.Size(75, 23);
+            this.NPC_Create_btn.TabIndex = 79;
+            this.NPC_Create_btn.Text = "Generate";
+            this.NPC_Create_btn.UseVisualStyleBackColor = true;
+            this.NPC_Create_btn.Click += new System.EventHandler(this.NPC_Create_btn_Click);
+            // 
+            // GITEMS_cbox
+            // 
+            this.GITEMS_cbox.AutoSize = true;
+            this.GITEMS_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.GITEMS_cbox.Checked = true;
+            this.GITEMS_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.GITEMS_cbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.GITEMS_cbox.Location = new System.Drawing.Point(411, 8);
+            this.GITEMS_cbox.Name = "GITEMS_cbox";
+            this.GITEMS_cbox.Size = new System.Drawing.Size(77, 17);
+            this.GITEMS_cbox.TabIndex = 78;
+            this.GITEMS_cbox.Text = "GEN Items";
+            this.GITEMS_cbox.UseVisualStyleBackColor = false;
+            // 
+            // CCCUSMSP_UD
+            // 
+            this.CCCUSMSP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCCUSMSP_UD.Enabled = false;
+            this.CCCUSMSP_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCCUSMSP_UD.Location = new System.Drawing.Point(701, 8);
+            this.CCCUSMSP_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.CCCUSMSP_UD.Name = "CCCUSMSP_UD";
+            this.CCCUSMSP_UD.Size = new System.Drawing.Size(49, 20);
+            this.CCCUSMSP_UD.TabIndex = 77;
+            // 
+            // CCCUSLCK_UD
+            // 
+            this.CCCUSLCK_UD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CCCUSLCK_UD.DecimalPlaces = 10;
+            this.CCCUSLCK_UD.Enabled = false;
+            this.CCCUSLCK_UD.ForeColor = System.Drawing.SystemColors.Control;
+            this.CCCUSLCK_UD.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.CCCUSLCK_UD.Location = new System.Drawing.Point(583, 7);
+            this.CCCUSLCK_UD.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.CCCUSLCK_UD.Name = "CCCUSLCK_UD";
+            this.CCCUSLCK_UD.Size = new System.Drawing.Size(50, 20);
+            this.CCCUSLCK_UD.TabIndex = 76;
+            // 
+            // Enemy_cbox
+            // 
+            this.Enemy_cbox.AutoSize = true;
+            this.Enemy_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Enemy_cbox.Checked = true;
+            this.Enemy_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Enemy_cbox.ForeColor = System.Drawing.SystemColors.Control;
+            this.Enemy_cbox.Location = new System.Drawing.Point(347, 8);
+            this.Enemy_cbox.Name = "Enemy_cbox";
+            this.Enemy_cbox.Size = new System.Drawing.Size(58, 17);
+            this.Enemy_cbox.TabIndex = 75;
+            this.Enemy_cbox.Text = "Enemy";
+            this.Enemy_cbox.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_PERC, 7, 11);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_PERC, 6, 11);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_PERC, 5, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_PERC, 4, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_PERC, 3, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_PERC, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_PERC, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_PERC, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_INT, 7, 10);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_INT, 6, 10);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_INT, 5, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_INT, 4, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_INT, 3, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_INT, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_INT, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_INT, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_STR, 7, 9);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_STR, 6, 9);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_STR, 5, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_STR, 4, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_STR, 3, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_STR, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_STR, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_STR, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEX, 7, 8);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_DEX, 6, 8);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_DEX, 5, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_DEX, 4, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_DEX, 3, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEX, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_DEX, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_DEX, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_CHAR, 7, 7);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_CHAR, 6, 7);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_CHAR, 5, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_CHAR, 4, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_CHAR, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_CHAR, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_CHAR, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_CHAR, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_SDEF, 7, 6);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_SDEF, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_SDEF, 5, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_SDEF, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_SDEF, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_SDEF, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_SDEF, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_SDEF, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEF, 7, 5);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_DEF, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_DEF, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_DEF, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_DEF, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEF, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_DEF, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_DEF, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_SATK, 7, 4);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_SATK, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_SATK, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_SATK, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_SATK, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_SATK, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_SATK, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_SATK, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_ATK, 7, 3);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_ATK, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_ATK, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_ATK, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_ATK, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_ATK, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_ATK, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_ATK, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_MP, 7, 2);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_MP, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_MP, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_MP, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_MP, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_MP, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_MP, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_MP, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Artifact_HP, 7, 1);
+            this.tableLayoutPanel1.Controls.Add(this.RWeapon_HP, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LWeapon_HP, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Boots_HP, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Pants_HP, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Gloves_HP, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Maille_HP, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Helm_HP, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(228, 59);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 12;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(224, 315);
+            this.tableLayoutPanel1.TabIndex = 74;
+            // 
+            // Artifact_PERC
+            // 
+            this.Artifact_PERC.AutoSize = true;
+            this.Artifact_PERC.Location = new System.Drawing.Point(199, 289);
+            this.Artifact_PERC.Name = "Artifact_PERC";
+            this.Artifact_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_PERC.TabIndex = 95;
+            this.Artifact_PERC.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_PERC
+            // 
+            this.RWeapon_PERC.AutoSize = true;
+            this.RWeapon_PERC.Location = new System.Drawing.Point(171, 289);
+            this.RWeapon_PERC.Name = "RWeapon_PERC";
+            this.RWeapon_PERC.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_PERC.TabIndex = 94;
+            this.RWeapon_PERC.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_PERC
+            // 
+            this.LWeapon_PERC.AutoSize = true;
+            this.LWeapon_PERC.Location = new System.Drawing.Point(143, 289);
+            this.LWeapon_PERC.Name = "LWeapon_PERC";
+            this.LWeapon_PERC.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_PERC.TabIndex = 93;
+            this.LWeapon_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Boots_PERC
+            // 
+            this.Boots_PERC.AutoSize = true;
+            this.Boots_PERC.Location = new System.Drawing.Point(115, 289);
+            this.Boots_PERC.Name = "Boots_PERC";
+            this.Boots_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Boots_PERC.TabIndex = 92;
+            this.Boots_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Pants_PERC
+            // 
+            this.Pants_PERC.AutoSize = true;
+            this.Pants_PERC.Location = new System.Drawing.Point(87, 289);
+            this.Pants_PERC.Name = "Pants_PERC";
+            this.Pants_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Pants_PERC.TabIndex = 91;
+            this.Pants_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_PERC
+            // 
+            this.Gloves_PERC.AutoSize = true;
+            this.Gloves_PERC.Location = new System.Drawing.Point(59, 289);
+            this.Gloves_PERC.Name = "Gloves_PERC";
+            this.Gloves_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_PERC.TabIndex = 90;
+            this.Gloves_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Maille_PERC
+            // 
+            this.Maille_PERC.AutoSize = true;
+            this.Maille_PERC.Location = new System.Drawing.Point(31, 289);
+            this.Maille_PERC.Name = "Maille_PERC";
+            this.Maille_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Maille_PERC.TabIndex = 89;
+            this.Maille_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Helm_PERC
+            // 
+            this.Helm_PERC.AutoSize = true;
+            this.Helm_PERC.Location = new System.Drawing.Point(3, 289);
+            this.Helm_PERC.Name = "Helm_PERC";
+            this.Helm_PERC.Size = new System.Drawing.Size(15, 14);
+            this.Helm_PERC.TabIndex = 88;
+            this.Helm_PERC.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_INT
+            // 
+            this.Artifact_INT.AutoSize = true;
+            this.Artifact_INT.Location = new System.Drawing.Point(199, 263);
+            this.Artifact_INT.Name = "Artifact_INT";
+            this.Artifact_INT.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_INT.TabIndex = 87;
+            this.Artifact_INT.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_INT
+            // 
+            this.RWeapon_INT.AutoSize = true;
+            this.RWeapon_INT.Location = new System.Drawing.Point(171, 263);
+            this.RWeapon_INT.Name = "RWeapon_INT";
+            this.RWeapon_INT.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_INT.TabIndex = 86;
+            this.RWeapon_INT.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_INT
+            // 
+            this.LWeapon_INT.AutoSize = true;
+            this.LWeapon_INT.Location = new System.Drawing.Point(143, 263);
+            this.LWeapon_INT.Name = "LWeapon_INT";
+            this.LWeapon_INT.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_INT.TabIndex = 85;
+            this.LWeapon_INT.UseVisualStyleBackColor = true;
+            // 
+            // Boots_INT
+            // 
+            this.Boots_INT.AutoSize = true;
+            this.Boots_INT.Location = new System.Drawing.Point(115, 263);
+            this.Boots_INT.Name = "Boots_INT";
+            this.Boots_INT.Size = new System.Drawing.Size(15, 14);
+            this.Boots_INT.TabIndex = 84;
+            this.Boots_INT.UseVisualStyleBackColor = true;
+            // 
+            // Pants_INT
+            // 
+            this.Pants_INT.AutoSize = true;
+            this.Pants_INT.Location = new System.Drawing.Point(87, 263);
+            this.Pants_INT.Name = "Pants_INT";
+            this.Pants_INT.Size = new System.Drawing.Size(15, 14);
+            this.Pants_INT.TabIndex = 83;
+            this.Pants_INT.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_INT
+            // 
+            this.Gloves_INT.AutoSize = true;
+            this.Gloves_INT.Location = new System.Drawing.Point(59, 263);
+            this.Gloves_INT.Name = "Gloves_INT";
+            this.Gloves_INT.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_INT.TabIndex = 82;
+            this.Gloves_INT.UseVisualStyleBackColor = true;
+            // 
+            // Maille_INT
+            // 
+            this.Maille_INT.AutoSize = true;
+            this.Maille_INT.Location = new System.Drawing.Point(31, 263);
+            this.Maille_INT.Name = "Maille_INT";
+            this.Maille_INT.Size = new System.Drawing.Size(15, 14);
+            this.Maille_INT.TabIndex = 81;
+            this.Maille_INT.UseVisualStyleBackColor = true;
+            // 
+            // Helm_INT
+            // 
+            this.Helm_INT.AutoSize = true;
+            this.Helm_INT.Location = new System.Drawing.Point(3, 263);
+            this.Helm_INT.Name = "Helm_INT";
+            this.Helm_INT.Size = new System.Drawing.Size(15, 14);
+            this.Helm_INT.TabIndex = 80;
+            this.Helm_INT.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_STR
+            // 
+            this.Artifact_STR.AutoSize = true;
+            this.Artifact_STR.Location = new System.Drawing.Point(199, 237);
+            this.Artifact_STR.Name = "Artifact_STR";
+            this.Artifact_STR.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_STR.TabIndex = 79;
+            this.Artifact_STR.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_STR
+            // 
+            this.RWeapon_STR.AutoSize = true;
+            this.RWeapon_STR.Location = new System.Drawing.Point(171, 237);
+            this.RWeapon_STR.Name = "RWeapon_STR";
+            this.RWeapon_STR.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_STR.TabIndex = 78;
+            this.RWeapon_STR.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_STR
+            // 
+            this.LWeapon_STR.AutoSize = true;
+            this.LWeapon_STR.Location = new System.Drawing.Point(143, 237);
+            this.LWeapon_STR.Name = "LWeapon_STR";
+            this.LWeapon_STR.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_STR.TabIndex = 77;
+            this.LWeapon_STR.UseVisualStyleBackColor = true;
+            // 
+            // Boots_STR
+            // 
+            this.Boots_STR.AutoSize = true;
+            this.Boots_STR.Location = new System.Drawing.Point(115, 237);
+            this.Boots_STR.Name = "Boots_STR";
+            this.Boots_STR.Size = new System.Drawing.Size(15, 14);
+            this.Boots_STR.TabIndex = 76;
+            this.Boots_STR.UseVisualStyleBackColor = true;
+            // 
+            // Pants_STR
+            // 
+            this.Pants_STR.AutoSize = true;
+            this.Pants_STR.Location = new System.Drawing.Point(87, 237);
+            this.Pants_STR.Name = "Pants_STR";
+            this.Pants_STR.Size = new System.Drawing.Size(15, 14);
+            this.Pants_STR.TabIndex = 75;
+            this.Pants_STR.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_STR
+            // 
+            this.Gloves_STR.AutoSize = true;
+            this.Gloves_STR.Location = new System.Drawing.Point(59, 237);
+            this.Gloves_STR.Name = "Gloves_STR";
+            this.Gloves_STR.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_STR.TabIndex = 74;
+            this.Gloves_STR.UseVisualStyleBackColor = true;
+            // 
+            // Maille_STR
+            // 
+            this.Maille_STR.AutoSize = true;
+            this.Maille_STR.Location = new System.Drawing.Point(31, 237);
+            this.Maille_STR.Name = "Maille_STR";
+            this.Maille_STR.Size = new System.Drawing.Size(15, 14);
+            this.Maille_STR.TabIndex = 73;
+            this.Maille_STR.UseVisualStyleBackColor = true;
+            // 
+            // Helm_STR
+            // 
+            this.Helm_STR.AutoSize = true;
+            this.Helm_STR.Location = new System.Drawing.Point(3, 237);
+            this.Helm_STR.Name = "Helm_STR";
+            this.Helm_STR.Size = new System.Drawing.Size(15, 14);
+            this.Helm_STR.TabIndex = 72;
+            this.Helm_STR.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_DEX
+            // 
+            this.Artifact_DEX.AutoSize = true;
+            this.Artifact_DEX.Location = new System.Drawing.Point(199, 211);
+            this.Artifact_DEX.Name = "Artifact_DEX";
+            this.Artifact_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_DEX.TabIndex = 71;
+            this.Artifact_DEX.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_DEX
+            // 
+            this.RWeapon_DEX.AutoSize = true;
+            this.RWeapon_DEX.Location = new System.Drawing.Point(171, 211);
+            this.RWeapon_DEX.Name = "RWeapon_DEX";
+            this.RWeapon_DEX.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_DEX.TabIndex = 70;
+            this.RWeapon_DEX.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_DEX
+            // 
+            this.LWeapon_DEX.AutoSize = true;
+            this.LWeapon_DEX.Location = new System.Drawing.Point(143, 211);
+            this.LWeapon_DEX.Name = "LWeapon_DEX";
+            this.LWeapon_DEX.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_DEX.TabIndex = 69;
+            this.LWeapon_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Boots_DEX
+            // 
+            this.Boots_DEX.AutoSize = true;
+            this.Boots_DEX.Location = new System.Drawing.Point(115, 211);
+            this.Boots_DEX.Name = "Boots_DEX";
+            this.Boots_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Boots_DEX.TabIndex = 68;
+            this.Boots_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Pants_DEX
+            // 
+            this.Pants_DEX.AutoSize = true;
+            this.Pants_DEX.Location = new System.Drawing.Point(87, 211);
+            this.Pants_DEX.Name = "Pants_DEX";
+            this.Pants_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Pants_DEX.TabIndex = 67;
+            this.Pants_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_DEX
+            // 
+            this.Gloves_DEX.AutoSize = true;
+            this.Gloves_DEX.Location = new System.Drawing.Point(59, 211);
+            this.Gloves_DEX.Name = "Gloves_DEX";
+            this.Gloves_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_DEX.TabIndex = 66;
+            this.Gloves_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Maille_DEX
+            // 
+            this.Maille_DEX.AutoSize = true;
+            this.Maille_DEX.Location = new System.Drawing.Point(31, 211);
+            this.Maille_DEX.Name = "Maille_DEX";
+            this.Maille_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Maille_DEX.TabIndex = 65;
+            this.Maille_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Helm_DEX
+            // 
+            this.Helm_DEX.AutoSize = true;
+            this.Helm_DEX.Location = new System.Drawing.Point(3, 211);
+            this.Helm_DEX.Name = "Helm_DEX";
+            this.Helm_DEX.Size = new System.Drawing.Size(15, 14);
+            this.Helm_DEX.TabIndex = 64;
+            this.Helm_DEX.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_CHAR
+            // 
+            this.Artifact_CHAR.AutoSize = true;
+            this.Artifact_CHAR.Location = new System.Drawing.Point(199, 185);
+            this.Artifact_CHAR.Name = "Artifact_CHAR";
+            this.Artifact_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_CHAR.TabIndex = 63;
+            this.Artifact_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_CHAR
+            // 
+            this.RWeapon_CHAR.AutoSize = true;
+            this.RWeapon_CHAR.Location = new System.Drawing.Point(171, 185);
+            this.RWeapon_CHAR.Name = "RWeapon_CHAR";
+            this.RWeapon_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_CHAR.TabIndex = 62;
+            this.RWeapon_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_CHAR
+            // 
+            this.LWeapon_CHAR.AutoSize = true;
+            this.LWeapon_CHAR.Location = new System.Drawing.Point(143, 185);
+            this.LWeapon_CHAR.Name = "LWeapon_CHAR";
+            this.LWeapon_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_CHAR.TabIndex = 61;
+            this.LWeapon_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Boots_CHAR
+            // 
+            this.Boots_CHAR.AutoSize = true;
+            this.Boots_CHAR.Location = new System.Drawing.Point(115, 185);
+            this.Boots_CHAR.Name = "Boots_CHAR";
+            this.Boots_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Boots_CHAR.TabIndex = 60;
+            this.Boots_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Pants_CHAR
+            // 
+            this.Pants_CHAR.AutoSize = true;
+            this.Pants_CHAR.Location = new System.Drawing.Point(87, 185);
+            this.Pants_CHAR.Name = "Pants_CHAR";
+            this.Pants_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Pants_CHAR.TabIndex = 59;
+            this.Pants_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_CHAR
+            // 
+            this.Gloves_CHAR.AutoSize = true;
+            this.Gloves_CHAR.Location = new System.Drawing.Point(59, 185);
+            this.Gloves_CHAR.Name = "Gloves_CHAR";
+            this.Gloves_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_CHAR.TabIndex = 58;
+            this.Gloves_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Maille_CHAR
+            // 
+            this.Maille_CHAR.AutoSize = true;
+            this.Maille_CHAR.Location = new System.Drawing.Point(31, 185);
+            this.Maille_CHAR.Name = "Maille_CHAR";
+            this.Maille_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Maille_CHAR.TabIndex = 57;
+            this.Maille_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Helm_CHAR
+            // 
+            this.Helm_CHAR.AutoSize = true;
+            this.Helm_CHAR.Location = new System.Drawing.Point(3, 185);
+            this.Helm_CHAR.Name = "Helm_CHAR";
+            this.Helm_CHAR.Size = new System.Drawing.Size(15, 14);
+            this.Helm_CHAR.TabIndex = 56;
+            this.Helm_CHAR.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_SDEF
+            // 
+            this.Artifact_SDEF.AutoSize = true;
+            this.Artifact_SDEF.Location = new System.Drawing.Point(199, 159);
+            this.Artifact_SDEF.Name = "Artifact_SDEF";
+            this.Artifact_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_SDEF.TabIndex = 55;
+            this.Artifact_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_SDEF
+            // 
+            this.RWeapon_SDEF.AutoSize = true;
+            this.RWeapon_SDEF.Location = new System.Drawing.Point(171, 159);
+            this.RWeapon_SDEF.Name = "RWeapon_SDEF";
+            this.RWeapon_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_SDEF.TabIndex = 54;
+            this.RWeapon_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_SDEF
+            // 
+            this.LWeapon_SDEF.AutoSize = true;
+            this.LWeapon_SDEF.Location = new System.Drawing.Point(143, 159);
+            this.LWeapon_SDEF.Name = "LWeapon_SDEF";
+            this.LWeapon_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_SDEF.TabIndex = 53;
+            this.LWeapon_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Boots_SDEF
+            // 
+            this.Boots_SDEF.AutoSize = true;
+            this.Boots_SDEF.Location = new System.Drawing.Point(115, 159);
+            this.Boots_SDEF.Name = "Boots_SDEF";
+            this.Boots_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Boots_SDEF.TabIndex = 52;
+            this.Boots_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Pants_SDEF
+            // 
+            this.Pants_SDEF.AutoSize = true;
+            this.Pants_SDEF.Location = new System.Drawing.Point(87, 159);
+            this.Pants_SDEF.Name = "Pants_SDEF";
+            this.Pants_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Pants_SDEF.TabIndex = 51;
+            this.Pants_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_SDEF
+            // 
+            this.Gloves_SDEF.AutoSize = true;
+            this.Gloves_SDEF.Location = new System.Drawing.Point(59, 159);
+            this.Gloves_SDEF.Name = "Gloves_SDEF";
+            this.Gloves_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_SDEF.TabIndex = 50;
+            this.Gloves_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Maille_SDEF
+            // 
+            this.Maille_SDEF.AutoSize = true;
+            this.Maille_SDEF.Location = new System.Drawing.Point(31, 159);
+            this.Maille_SDEF.Name = "Maille_SDEF";
+            this.Maille_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Maille_SDEF.TabIndex = 49;
+            this.Maille_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Helm_SDEF
+            // 
+            this.Helm_SDEF.AutoSize = true;
+            this.Helm_SDEF.Location = new System.Drawing.Point(3, 159);
+            this.Helm_SDEF.Name = "Helm_SDEF";
+            this.Helm_SDEF.Size = new System.Drawing.Size(15, 14);
+            this.Helm_SDEF.TabIndex = 48;
+            this.Helm_SDEF.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_DEF
+            // 
+            this.Artifact_DEF.AutoSize = true;
+            this.Artifact_DEF.Location = new System.Drawing.Point(199, 133);
+            this.Artifact_DEF.Name = "Artifact_DEF";
+            this.Artifact_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_DEF.TabIndex = 47;
+            this.Artifact_DEF.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_DEF
+            // 
+            this.RWeapon_DEF.AutoSize = true;
+            this.RWeapon_DEF.Location = new System.Drawing.Point(171, 133);
+            this.RWeapon_DEF.Name = "RWeapon_DEF";
+            this.RWeapon_DEF.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_DEF.TabIndex = 46;
+            this.RWeapon_DEF.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_DEF
+            // 
+            this.LWeapon_DEF.AutoSize = true;
+            this.LWeapon_DEF.Location = new System.Drawing.Point(143, 133);
+            this.LWeapon_DEF.Name = "LWeapon_DEF";
+            this.LWeapon_DEF.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_DEF.TabIndex = 45;
+            this.LWeapon_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Boots_DEF
+            // 
+            this.Boots_DEF.AutoSize = true;
+            this.Boots_DEF.Location = new System.Drawing.Point(115, 133);
+            this.Boots_DEF.Name = "Boots_DEF";
+            this.Boots_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Boots_DEF.TabIndex = 44;
+            this.Boots_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Pants_DEF
+            // 
+            this.Pants_DEF.AutoSize = true;
+            this.Pants_DEF.Location = new System.Drawing.Point(87, 133);
+            this.Pants_DEF.Name = "Pants_DEF";
+            this.Pants_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Pants_DEF.TabIndex = 43;
+            this.Pants_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_DEF
+            // 
+            this.Gloves_DEF.AutoSize = true;
+            this.Gloves_DEF.Location = new System.Drawing.Point(59, 133);
+            this.Gloves_DEF.Name = "Gloves_DEF";
+            this.Gloves_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_DEF.TabIndex = 42;
+            this.Gloves_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Maille_DEF
+            // 
+            this.Maille_DEF.AutoSize = true;
+            this.Maille_DEF.Location = new System.Drawing.Point(31, 133);
+            this.Maille_DEF.Name = "Maille_DEF";
+            this.Maille_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Maille_DEF.TabIndex = 41;
+            this.Maille_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Helm_DEF
+            // 
+            this.Helm_DEF.AutoSize = true;
+            this.Helm_DEF.Location = new System.Drawing.Point(3, 133);
+            this.Helm_DEF.Name = "Helm_DEF";
+            this.Helm_DEF.Size = new System.Drawing.Size(15, 14);
+            this.Helm_DEF.TabIndex = 40;
+            this.Helm_DEF.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_SATK
+            // 
+            this.Artifact_SATK.AutoSize = true;
+            this.Artifact_SATK.Location = new System.Drawing.Point(199, 107);
+            this.Artifact_SATK.Name = "Artifact_SATK";
+            this.Artifact_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_SATK.TabIndex = 39;
+            this.Artifact_SATK.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_SATK
+            // 
+            this.RWeapon_SATK.AutoSize = true;
+            this.RWeapon_SATK.Location = new System.Drawing.Point(171, 107);
+            this.RWeapon_SATK.Name = "RWeapon_SATK";
+            this.RWeapon_SATK.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_SATK.TabIndex = 38;
+            this.RWeapon_SATK.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_SATK
+            // 
+            this.LWeapon_SATK.AutoSize = true;
+            this.LWeapon_SATK.Location = new System.Drawing.Point(143, 107);
+            this.LWeapon_SATK.Name = "LWeapon_SATK";
+            this.LWeapon_SATK.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_SATK.TabIndex = 37;
+            this.LWeapon_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Boots_SATK
+            // 
+            this.Boots_SATK.AutoSize = true;
+            this.Boots_SATK.Location = new System.Drawing.Point(115, 107);
+            this.Boots_SATK.Name = "Boots_SATK";
+            this.Boots_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Boots_SATK.TabIndex = 36;
+            this.Boots_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Pants_SATK
+            // 
+            this.Pants_SATK.AutoSize = true;
+            this.Pants_SATK.Location = new System.Drawing.Point(87, 107);
+            this.Pants_SATK.Name = "Pants_SATK";
+            this.Pants_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Pants_SATK.TabIndex = 35;
+            this.Pants_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_SATK
+            // 
+            this.Gloves_SATK.AutoSize = true;
+            this.Gloves_SATK.Location = new System.Drawing.Point(59, 107);
+            this.Gloves_SATK.Name = "Gloves_SATK";
+            this.Gloves_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_SATK.TabIndex = 34;
+            this.Gloves_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Maille_SATK
+            // 
+            this.Maille_SATK.AutoSize = true;
+            this.Maille_SATK.Location = new System.Drawing.Point(31, 107);
+            this.Maille_SATK.Name = "Maille_SATK";
+            this.Maille_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Maille_SATK.TabIndex = 33;
+            this.Maille_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Helm_SATK
+            // 
+            this.Helm_SATK.AutoSize = true;
+            this.Helm_SATK.Location = new System.Drawing.Point(3, 107);
+            this.Helm_SATK.Name = "Helm_SATK";
+            this.Helm_SATK.Size = new System.Drawing.Size(15, 14);
+            this.Helm_SATK.TabIndex = 32;
+            this.Helm_SATK.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_ATK
+            // 
+            this.Artifact_ATK.AutoSize = true;
+            this.Artifact_ATK.Location = new System.Drawing.Point(199, 81);
+            this.Artifact_ATK.Name = "Artifact_ATK";
+            this.Artifact_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_ATK.TabIndex = 31;
+            this.Artifact_ATK.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_ATK
+            // 
+            this.RWeapon_ATK.AutoSize = true;
+            this.RWeapon_ATK.Location = new System.Drawing.Point(171, 81);
+            this.RWeapon_ATK.Name = "RWeapon_ATK";
+            this.RWeapon_ATK.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_ATK.TabIndex = 30;
+            this.RWeapon_ATK.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_ATK
+            // 
+            this.LWeapon_ATK.AutoSize = true;
+            this.LWeapon_ATK.Location = new System.Drawing.Point(143, 81);
+            this.LWeapon_ATK.Name = "LWeapon_ATK";
+            this.LWeapon_ATK.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_ATK.TabIndex = 29;
+            this.LWeapon_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Boots_ATK
+            // 
+            this.Boots_ATK.AutoSize = true;
+            this.Boots_ATK.Location = new System.Drawing.Point(115, 81);
+            this.Boots_ATK.Name = "Boots_ATK";
+            this.Boots_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Boots_ATK.TabIndex = 28;
+            this.Boots_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Pants_ATK
+            // 
+            this.Pants_ATK.AutoSize = true;
+            this.Pants_ATK.Location = new System.Drawing.Point(87, 81);
+            this.Pants_ATK.Name = "Pants_ATK";
+            this.Pants_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Pants_ATK.TabIndex = 27;
+            this.Pants_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_ATK
+            // 
+            this.Gloves_ATK.AutoSize = true;
+            this.Gloves_ATK.Location = new System.Drawing.Point(59, 81);
+            this.Gloves_ATK.Name = "Gloves_ATK";
+            this.Gloves_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_ATK.TabIndex = 26;
+            this.Gloves_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Maille_ATK
+            // 
+            this.Maille_ATK.AutoSize = true;
+            this.Maille_ATK.Location = new System.Drawing.Point(31, 81);
+            this.Maille_ATK.Name = "Maille_ATK";
+            this.Maille_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Maille_ATK.TabIndex = 25;
+            this.Maille_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Helm_ATK
+            // 
+            this.Helm_ATK.AutoSize = true;
+            this.Helm_ATK.Location = new System.Drawing.Point(3, 81);
+            this.Helm_ATK.Name = "Helm_ATK";
+            this.Helm_ATK.Size = new System.Drawing.Size(15, 14);
+            this.Helm_ATK.TabIndex = 24;
+            this.Helm_ATK.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_MP
+            // 
+            this.Artifact_MP.AutoSize = true;
+            this.Artifact_MP.Location = new System.Drawing.Point(199, 55);
+            this.Artifact_MP.Name = "Artifact_MP";
+            this.Artifact_MP.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_MP.TabIndex = 23;
+            this.Artifact_MP.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_MP
+            // 
+            this.RWeapon_MP.AutoSize = true;
+            this.RWeapon_MP.Location = new System.Drawing.Point(171, 55);
+            this.RWeapon_MP.Name = "RWeapon_MP";
+            this.RWeapon_MP.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_MP.TabIndex = 22;
+            this.RWeapon_MP.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_MP
+            // 
+            this.LWeapon_MP.AutoSize = true;
+            this.LWeapon_MP.Location = new System.Drawing.Point(143, 55);
+            this.LWeapon_MP.Name = "LWeapon_MP";
+            this.LWeapon_MP.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_MP.TabIndex = 21;
+            this.LWeapon_MP.UseVisualStyleBackColor = true;
+            // 
+            // Boots_MP
+            // 
+            this.Boots_MP.AutoSize = true;
+            this.Boots_MP.Location = new System.Drawing.Point(115, 55);
+            this.Boots_MP.Name = "Boots_MP";
+            this.Boots_MP.Size = new System.Drawing.Size(15, 14);
+            this.Boots_MP.TabIndex = 20;
+            this.Boots_MP.UseVisualStyleBackColor = true;
+            // 
+            // Pants_MP
+            // 
+            this.Pants_MP.AutoSize = true;
+            this.Pants_MP.Location = new System.Drawing.Point(87, 55);
+            this.Pants_MP.Name = "Pants_MP";
+            this.Pants_MP.Size = new System.Drawing.Size(15, 14);
+            this.Pants_MP.TabIndex = 19;
+            this.Pants_MP.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_MP
+            // 
+            this.Gloves_MP.AutoSize = true;
+            this.Gloves_MP.Location = new System.Drawing.Point(59, 55);
+            this.Gloves_MP.Name = "Gloves_MP";
+            this.Gloves_MP.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_MP.TabIndex = 18;
+            this.Gloves_MP.UseVisualStyleBackColor = true;
+            // 
+            // Maille_MP
+            // 
+            this.Maille_MP.AutoSize = true;
+            this.Maille_MP.Location = new System.Drawing.Point(31, 55);
+            this.Maille_MP.Name = "Maille_MP";
+            this.Maille_MP.Size = new System.Drawing.Size(15, 14);
+            this.Maille_MP.TabIndex = 17;
+            this.Maille_MP.UseVisualStyleBackColor = true;
+            // 
+            // Helm_MP
+            // 
+            this.Helm_MP.AutoSize = true;
+            this.Helm_MP.Location = new System.Drawing.Point(3, 55);
+            this.Helm_MP.Name = "Helm_MP";
+            this.Helm_MP.Size = new System.Drawing.Size(15, 14);
+            this.Helm_MP.TabIndex = 16;
+            this.Helm_MP.UseVisualStyleBackColor = true;
+            // 
+            // Artifact_HP
+            // 
+            this.Artifact_HP.AutoSize = true;
+            this.Artifact_HP.Location = new System.Drawing.Point(199, 29);
+            this.Artifact_HP.Name = "Artifact_HP";
+            this.Artifact_HP.Size = new System.Drawing.Size(15, 14);
+            this.Artifact_HP.TabIndex = 15;
+            this.Artifact_HP.UseVisualStyleBackColor = true;
+            // 
+            // RWeapon_HP
+            // 
+            this.RWeapon_HP.AutoSize = true;
+            this.RWeapon_HP.Location = new System.Drawing.Point(171, 29);
+            this.RWeapon_HP.Name = "RWeapon_HP";
+            this.RWeapon_HP.Size = new System.Drawing.Size(15, 14);
+            this.RWeapon_HP.TabIndex = 14;
+            this.RWeapon_HP.UseVisualStyleBackColor = true;
+            // 
+            // LWeapon_HP
+            // 
+            this.LWeapon_HP.AutoSize = true;
+            this.LWeapon_HP.Location = new System.Drawing.Point(143, 29);
+            this.LWeapon_HP.Name = "LWeapon_HP";
+            this.LWeapon_HP.Size = new System.Drawing.Size(15, 14);
+            this.LWeapon_HP.TabIndex = 13;
+            this.LWeapon_HP.UseVisualStyleBackColor = true;
+            // 
+            // Boots_HP
+            // 
+            this.Boots_HP.AutoSize = true;
+            this.Boots_HP.Location = new System.Drawing.Point(115, 29);
+            this.Boots_HP.Name = "Boots_HP";
+            this.Boots_HP.Size = new System.Drawing.Size(15, 14);
+            this.Boots_HP.TabIndex = 12;
+            this.Boots_HP.UseVisualStyleBackColor = true;
+            // 
+            // Pants_HP
+            // 
+            this.Pants_HP.AutoSize = true;
+            this.Pants_HP.Location = new System.Drawing.Point(87, 29);
+            this.Pants_HP.Name = "Pants_HP";
+            this.Pants_HP.Size = new System.Drawing.Size(15, 14);
+            this.Pants_HP.TabIndex = 11;
+            this.Pants_HP.UseVisualStyleBackColor = true;
+            // 
+            // Gloves_HP
+            // 
+            this.Gloves_HP.AutoSize = true;
+            this.Gloves_HP.Location = new System.Drawing.Point(59, 29);
+            this.Gloves_HP.Name = "Gloves_HP";
+            this.Gloves_HP.Size = new System.Drawing.Size(15, 14);
+            this.Gloves_HP.TabIndex = 10;
+            this.Gloves_HP.UseVisualStyleBackColor = true;
+            // 
+            // Maille_HP
+            // 
+            this.Maille_HP.AutoSize = true;
+            this.Maille_HP.Location = new System.Drawing.Point(31, 29);
+            this.Maille_HP.Name = "Maille_HP";
+            this.Maille_HP.Size = new System.Drawing.Size(15, 14);
+            this.Maille_HP.TabIndex = 9;
+            this.Maille_HP.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(199, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 18);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "A";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(171, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 18);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "W";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(143, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 18);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "W";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(115, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 18);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "B";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(87, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 18);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "P";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(59, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 18);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "G";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(31, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "M";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "H";
+            // 
+            // Helm_HP
+            // 
+            this.Helm_HP.AutoSize = true;
+            this.Helm_HP.Location = new System.Drawing.Point(3, 29);
+            this.Helm_HP.Name = "Helm_HP";
+            this.Helm_HP.Size = new System.Drawing.Size(15, 14);
+            this.Helm_HP.TabIndex = 8;
+            this.Helm_HP.UseVisualStyleBackColor = true;
             // 
             // UPLOAD_btn
             // 
@@ -1232,7 +2452,7 @@
             this.CCmbase_chbox.AutoSize = true;
             this.CCmbase_chbox.BackColor = System.Drawing.SystemColors.ControlDark;
             this.CCmbase_chbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCmbase_chbox.Location = new System.Drawing.Point(349, 31);
+            this.CCmbase_chbox.Location = new System.Drawing.Point(283, 33);
             this.CCmbase_chbox.Name = "CCmbase_chbox";
             this.CCmbase_chbox.Size = new System.Drawing.Size(58, 17);
             this.CCmbase_chbox.TabIndex = 37;
@@ -1404,7 +2624,7 @@
             0,
             0});
             this.CCCUSLVL_UD.Name = "CCCUSLVL_UD";
-            this.CCCUSLVL_UD.Size = new System.Drawing.Size(50, 20);
+            this.CCCUSLVL_UD.Size = new System.Drawing.Size(117, 20);
             this.CCCUSLVL_UD.TabIndex = 31;
             // 
             // label48
@@ -1840,6 +3060,25 @@
             0,
             0});
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Location = new System.Drawing.Point(643, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(52, 13);
+            this.label13.TabIndex = 82;
+            this.label13.Text = "Max Stat:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(517, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 13);
+            this.label12.TabIndex = 81;
+            this.label12.Text = "ENH Luck:";
+            // 
             // GMItemc_tab
             // 
             this.GMItemc_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -1948,6 +3187,25 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editor/Creator";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(238, 22);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(32, 13);
+            this.label14.TabIndex = 68;
+            this.label14.Text = "Filter:";
+            // 
+            // ItemFilter_sbox
+            // 
+            this.ItemFilter_sbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ItemFilter_sbox.FormattingEnabled = true;
+            this.ItemFilter_sbox.Location = new System.Drawing.Point(271, 19);
+            this.ItemFilter_sbox.Name = "ItemFilter_sbox";
+            this.ItemFilter_sbox.Size = new System.Drawing.Size(143, 21);
+            this.ItemFilter_sbox.TabIndex = 67;
+            this.ItemFilter_sbox.SelectedIndexChanged += new System.EventHandler(this.ItemFilter_sbox_SelectedIndexChanged);
             // 
             // item_desc_editor_tbox
             // 
@@ -2146,7 +3404,7 @@
             this.Item_Character_Cbox.FormattingEnabled = true;
             this.Item_Character_Cbox.Location = new System.Drawing.Point(68, 19);
             this.Item_Character_Cbox.Name = "Item_Character_Cbox";
-            this.Item_Character_Cbox.Size = new System.Drawing.Size(153, 21);
+            this.Item_Character_Cbox.Size = new System.Drawing.Size(164, 21);
             this.Item_Character_Cbox.TabIndex = 48;
             // 
             // MItem_editor_btn
@@ -2671,6 +3929,25 @@
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Editor/Creator";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(238, 22);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(32, 13);
+            this.label15.TabIndex = 72;
+            this.label15.Text = "Filter:";
+            // 
+            // SpellFilter_sbox
+            // 
+            this.SpellFilter_sbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.SpellFilter_sbox.FormattingEnabled = true;
+            this.SpellFilter_sbox.Location = new System.Drawing.Point(271, 19);
+            this.SpellFilter_sbox.Name = "SpellFilter_sbox";
+            this.SpellFilter_sbox.Size = new System.Drawing.Size(143, 21);
+            this.SpellFilter_sbox.TabIndex = 71;
+            this.SpellFilter_sbox.SelectedIndexChanged += new System.EventHandler(this.SpellFilter_sbox_SelectedIndexChanged);
             // 
             // spell_desc_editor_tbox
             // 
@@ -3744,1094 +5021,6 @@
             this.label95.TabIndex = 229;
             this.label95.Text = "Power Level:";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_PERC, 7, 11);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_PERC, 6, 11);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_PERC, 5, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_PERC, 4, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_PERC, 3, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_PERC, 2, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_PERC, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_PERC, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_INT, 7, 10);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_INT, 6, 10);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_INT, 5, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_INT, 4, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_INT, 3, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_INT, 2, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_INT, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_INT, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_STR, 7, 9);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_STR, 6, 9);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_STR, 5, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_STR, 4, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_STR, 3, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_STR, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_STR, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_STR, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEX, 7, 8);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_DEX, 6, 8);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_DEX, 5, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_DEX, 4, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_DEX, 3, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEX, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_DEX, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_DEX, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_CHAR, 7, 7);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_CHAR, 6, 7);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_CHAR, 5, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_CHAR, 4, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_CHAR, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_CHAR, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_CHAR, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_CHAR, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_SDEF, 7, 6);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_SDEF, 6, 6);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_SDEF, 5, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_SDEF, 4, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_SDEF, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_SDEF, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_SDEF, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_SDEF, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_DEF, 7, 5);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_DEF, 6, 5);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_DEF, 5, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_DEF, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_DEF, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_DEF, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_DEF, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_DEF, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_SATK, 7, 4);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_SATK, 6, 4);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_SATK, 5, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_SATK, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_SATK, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_SATK, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_SATK, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_SATK, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_ATK, 7, 3);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_ATK, 6, 3);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_ATK, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_ATK, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_ATK, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_ATK, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_ATK, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_ATK, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_MP, 7, 2);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_MP, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_MP, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_MP, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_MP, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_MP, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_MP, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_MP, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Artifact_HP, 7, 1);
-            this.tableLayoutPanel1.Controls.Add(this.RWeapon_HP, 6, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LWeapon_HP, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Boots_HP, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Pants_HP, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Gloves_HP, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Maille_HP, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 7, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Helm_HP, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(228, 59);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 12;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(224, 315);
-            this.tableLayoutPanel1.TabIndex = 74;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "H";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 18);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "M";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(59, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 18);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "G";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(87, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 18);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "P";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(115, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(19, 18);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "B";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(143, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 18);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "W";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(171, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(22, 18);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "W";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(199, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 18);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "A";
-            // 
-            // Helm_HP
-            // 
-            this.Helm_HP.AutoSize = true;
-            this.Helm_HP.Location = new System.Drawing.Point(3, 29);
-            this.Helm_HP.Name = "Helm_HP";
-            this.Helm_HP.Size = new System.Drawing.Size(15, 14);
-            this.Helm_HP.TabIndex = 8;
-            this.Helm_HP.UseVisualStyleBackColor = true;
-            // 
-            // Maille_HP
-            // 
-            this.Maille_HP.AutoSize = true;
-            this.Maille_HP.Location = new System.Drawing.Point(31, 29);
-            this.Maille_HP.Name = "Maille_HP";
-            this.Maille_HP.Size = new System.Drawing.Size(15, 14);
-            this.Maille_HP.TabIndex = 9;
-            this.Maille_HP.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_HP
-            // 
-            this.Gloves_HP.AutoSize = true;
-            this.Gloves_HP.Location = new System.Drawing.Point(59, 29);
-            this.Gloves_HP.Name = "Gloves_HP";
-            this.Gloves_HP.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_HP.TabIndex = 10;
-            this.Gloves_HP.UseVisualStyleBackColor = true;
-            // 
-            // Pants_HP
-            // 
-            this.Pants_HP.AutoSize = true;
-            this.Pants_HP.Location = new System.Drawing.Point(87, 29);
-            this.Pants_HP.Name = "Pants_HP";
-            this.Pants_HP.Size = new System.Drawing.Size(15, 14);
-            this.Pants_HP.TabIndex = 11;
-            this.Pants_HP.UseVisualStyleBackColor = true;
-            // 
-            // Boots_HP
-            // 
-            this.Boots_HP.AutoSize = true;
-            this.Boots_HP.Location = new System.Drawing.Point(115, 29);
-            this.Boots_HP.Name = "Boots_HP";
-            this.Boots_HP.Size = new System.Drawing.Size(15, 14);
-            this.Boots_HP.TabIndex = 12;
-            this.Boots_HP.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_HP
-            // 
-            this.LWeapon_HP.AutoSize = true;
-            this.LWeapon_HP.Location = new System.Drawing.Point(143, 29);
-            this.LWeapon_HP.Name = "LWeapon_HP";
-            this.LWeapon_HP.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_HP.TabIndex = 13;
-            this.LWeapon_HP.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_HP
-            // 
-            this.RWeapon_HP.AutoSize = true;
-            this.RWeapon_HP.Location = new System.Drawing.Point(171, 29);
-            this.RWeapon_HP.Name = "RWeapon_HP";
-            this.RWeapon_HP.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_HP.TabIndex = 14;
-            this.RWeapon_HP.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_HP
-            // 
-            this.Artifact_HP.AutoSize = true;
-            this.Artifact_HP.Location = new System.Drawing.Point(199, 29);
-            this.Artifact_HP.Name = "Artifact_HP";
-            this.Artifact_HP.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_HP.TabIndex = 15;
-            this.Artifact_HP.UseVisualStyleBackColor = true;
-            // 
-            // Helm_MP
-            // 
-            this.Helm_MP.AutoSize = true;
-            this.Helm_MP.Location = new System.Drawing.Point(3, 55);
-            this.Helm_MP.Name = "Helm_MP";
-            this.Helm_MP.Size = new System.Drawing.Size(15, 14);
-            this.Helm_MP.TabIndex = 16;
-            this.Helm_MP.UseVisualStyleBackColor = true;
-            // 
-            // Maille_MP
-            // 
-            this.Maille_MP.AutoSize = true;
-            this.Maille_MP.Location = new System.Drawing.Point(31, 55);
-            this.Maille_MP.Name = "Maille_MP";
-            this.Maille_MP.Size = new System.Drawing.Size(15, 14);
-            this.Maille_MP.TabIndex = 17;
-            this.Maille_MP.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_MP
-            // 
-            this.Gloves_MP.AutoSize = true;
-            this.Gloves_MP.Location = new System.Drawing.Point(59, 55);
-            this.Gloves_MP.Name = "Gloves_MP";
-            this.Gloves_MP.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_MP.TabIndex = 18;
-            this.Gloves_MP.UseVisualStyleBackColor = true;
-            // 
-            // Pants_MP
-            // 
-            this.Pants_MP.AutoSize = true;
-            this.Pants_MP.Location = new System.Drawing.Point(87, 55);
-            this.Pants_MP.Name = "Pants_MP";
-            this.Pants_MP.Size = new System.Drawing.Size(15, 14);
-            this.Pants_MP.TabIndex = 19;
-            this.Pants_MP.UseVisualStyleBackColor = true;
-            // 
-            // Boots_MP
-            // 
-            this.Boots_MP.AutoSize = true;
-            this.Boots_MP.Location = new System.Drawing.Point(115, 55);
-            this.Boots_MP.Name = "Boots_MP";
-            this.Boots_MP.Size = new System.Drawing.Size(15, 14);
-            this.Boots_MP.TabIndex = 20;
-            this.Boots_MP.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_MP
-            // 
-            this.LWeapon_MP.AutoSize = true;
-            this.LWeapon_MP.Location = new System.Drawing.Point(143, 55);
-            this.LWeapon_MP.Name = "LWeapon_MP";
-            this.LWeapon_MP.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_MP.TabIndex = 21;
-            this.LWeapon_MP.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_MP
-            // 
-            this.RWeapon_MP.AutoSize = true;
-            this.RWeapon_MP.Location = new System.Drawing.Point(171, 55);
-            this.RWeapon_MP.Name = "RWeapon_MP";
-            this.RWeapon_MP.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_MP.TabIndex = 22;
-            this.RWeapon_MP.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_MP
-            // 
-            this.Artifact_MP.AutoSize = true;
-            this.Artifact_MP.Location = new System.Drawing.Point(199, 55);
-            this.Artifact_MP.Name = "Artifact_MP";
-            this.Artifact_MP.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_MP.TabIndex = 23;
-            this.Artifact_MP.UseVisualStyleBackColor = true;
-            // 
-            // Helm_ATK
-            // 
-            this.Helm_ATK.AutoSize = true;
-            this.Helm_ATK.Location = new System.Drawing.Point(3, 81);
-            this.Helm_ATK.Name = "Helm_ATK";
-            this.Helm_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Helm_ATK.TabIndex = 24;
-            this.Helm_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Maille_ATK
-            // 
-            this.Maille_ATK.AutoSize = true;
-            this.Maille_ATK.Location = new System.Drawing.Point(31, 81);
-            this.Maille_ATK.Name = "Maille_ATK";
-            this.Maille_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Maille_ATK.TabIndex = 25;
-            this.Maille_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_ATK
-            // 
-            this.Gloves_ATK.AutoSize = true;
-            this.Gloves_ATK.Location = new System.Drawing.Point(59, 81);
-            this.Gloves_ATK.Name = "Gloves_ATK";
-            this.Gloves_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_ATK.TabIndex = 26;
-            this.Gloves_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Pants_ATK
-            // 
-            this.Pants_ATK.AutoSize = true;
-            this.Pants_ATK.Location = new System.Drawing.Point(87, 81);
-            this.Pants_ATK.Name = "Pants_ATK";
-            this.Pants_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Pants_ATK.TabIndex = 27;
-            this.Pants_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Boots_ATK
-            // 
-            this.Boots_ATK.AutoSize = true;
-            this.Boots_ATK.Location = new System.Drawing.Point(115, 81);
-            this.Boots_ATK.Name = "Boots_ATK";
-            this.Boots_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Boots_ATK.TabIndex = 28;
-            this.Boots_ATK.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_ATK
-            // 
-            this.LWeapon_ATK.AutoSize = true;
-            this.LWeapon_ATK.Location = new System.Drawing.Point(143, 81);
-            this.LWeapon_ATK.Name = "LWeapon_ATK";
-            this.LWeapon_ATK.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_ATK.TabIndex = 29;
-            this.LWeapon_ATK.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_ATK
-            // 
-            this.RWeapon_ATK.AutoSize = true;
-            this.RWeapon_ATK.Location = new System.Drawing.Point(171, 81);
-            this.RWeapon_ATK.Name = "RWeapon_ATK";
-            this.RWeapon_ATK.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_ATK.TabIndex = 30;
-            this.RWeapon_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_ATK
-            // 
-            this.Artifact_ATK.AutoSize = true;
-            this.Artifact_ATK.Location = new System.Drawing.Point(199, 81);
-            this.Artifact_ATK.Name = "Artifact_ATK";
-            this.Artifact_ATK.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_ATK.TabIndex = 31;
-            this.Artifact_ATK.UseVisualStyleBackColor = true;
-            // 
-            // Helm_SATK
-            // 
-            this.Helm_SATK.AutoSize = true;
-            this.Helm_SATK.Location = new System.Drawing.Point(3, 107);
-            this.Helm_SATK.Name = "Helm_SATK";
-            this.Helm_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Helm_SATK.TabIndex = 32;
-            this.Helm_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Maille_SATK
-            // 
-            this.Maille_SATK.AutoSize = true;
-            this.Maille_SATK.Location = new System.Drawing.Point(31, 107);
-            this.Maille_SATK.Name = "Maille_SATK";
-            this.Maille_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Maille_SATK.TabIndex = 33;
-            this.Maille_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_SATK
-            // 
-            this.Gloves_SATK.AutoSize = true;
-            this.Gloves_SATK.Location = new System.Drawing.Point(59, 107);
-            this.Gloves_SATK.Name = "Gloves_SATK";
-            this.Gloves_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_SATK.TabIndex = 34;
-            this.Gloves_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Pants_SATK
-            // 
-            this.Pants_SATK.AutoSize = true;
-            this.Pants_SATK.Location = new System.Drawing.Point(87, 107);
-            this.Pants_SATK.Name = "Pants_SATK";
-            this.Pants_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Pants_SATK.TabIndex = 35;
-            this.Pants_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Boots_SATK
-            // 
-            this.Boots_SATK.AutoSize = true;
-            this.Boots_SATK.Location = new System.Drawing.Point(115, 107);
-            this.Boots_SATK.Name = "Boots_SATK";
-            this.Boots_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Boots_SATK.TabIndex = 36;
-            this.Boots_SATK.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_SATK
-            // 
-            this.LWeapon_SATK.AutoSize = true;
-            this.LWeapon_SATK.Location = new System.Drawing.Point(143, 107);
-            this.LWeapon_SATK.Name = "LWeapon_SATK";
-            this.LWeapon_SATK.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_SATK.TabIndex = 37;
-            this.LWeapon_SATK.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_SATK
-            // 
-            this.RWeapon_SATK.AutoSize = true;
-            this.RWeapon_SATK.Location = new System.Drawing.Point(171, 107);
-            this.RWeapon_SATK.Name = "RWeapon_SATK";
-            this.RWeapon_SATK.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_SATK.TabIndex = 38;
-            this.RWeapon_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_SATK
-            // 
-            this.Artifact_SATK.AutoSize = true;
-            this.Artifact_SATK.Location = new System.Drawing.Point(199, 107);
-            this.Artifact_SATK.Name = "Artifact_SATK";
-            this.Artifact_SATK.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_SATK.TabIndex = 39;
-            this.Artifact_SATK.UseVisualStyleBackColor = true;
-            // 
-            // Helm_DEF
-            // 
-            this.Helm_DEF.AutoSize = true;
-            this.Helm_DEF.Location = new System.Drawing.Point(3, 133);
-            this.Helm_DEF.Name = "Helm_DEF";
-            this.Helm_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Helm_DEF.TabIndex = 40;
-            this.Helm_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Maille_DEF
-            // 
-            this.Maille_DEF.AutoSize = true;
-            this.Maille_DEF.Location = new System.Drawing.Point(31, 133);
-            this.Maille_DEF.Name = "Maille_DEF";
-            this.Maille_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Maille_DEF.TabIndex = 41;
-            this.Maille_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_DEF
-            // 
-            this.Gloves_DEF.AutoSize = true;
-            this.Gloves_DEF.Location = new System.Drawing.Point(59, 133);
-            this.Gloves_DEF.Name = "Gloves_DEF";
-            this.Gloves_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_DEF.TabIndex = 42;
-            this.Gloves_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Pants_DEF
-            // 
-            this.Pants_DEF.AutoSize = true;
-            this.Pants_DEF.Location = new System.Drawing.Point(87, 133);
-            this.Pants_DEF.Name = "Pants_DEF";
-            this.Pants_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Pants_DEF.TabIndex = 43;
-            this.Pants_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Boots_DEF
-            // 
-            this.Boots_DEF.AutoSize = true;
-            this.Boots_DEF.Location = new System.Drawing.Point(115, 133);
-            this.Boots_DEF.Name = "Boots_DEF";
-            this.Boots_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Boots_DEF.TabIndex = 44;
-            this.Boots_DEF.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_DEF
-            // 
-            this.LWeapon_DEF.AutoSize = true;
-            this.LWeapon_DEF.Location = new System.Drawing.Point(143, 133);
-            this.LWeapon_DEF.Name = "LWeapon_DEF";
-            this.LWeapon_DEF.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_DEF.TabIndex = 45;
-            this.LWeapon_DEF.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_DEF
-            // 
-            this.RWeapon_DEF.AutoSize = true;
-            this.RWeapon_DEF.Location = new System.Drawing.Point(171, 133);
-            this.RWeapon_DEF.Name = "RWeapon_DEF";
-            this.RWeapon_DEF.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_DEF.TabIndex = 46;
-            this.RWeapon_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_DEF
-            // 
-            this.Artifact_DEF.AutoSize = true;
-            this.Artifact_DEF.Location = new System.Drawing.Point(199, 133);
-            this.Artifact_DEF.Name = "Artifact_DEF";
-            this.Artifact_DEF.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_DEF.TabIndex = 47;
-            this.Artifact_DEF.UseVisualStyleBackColor = true;
-            // 
-            // Helm_SDEF
-            // 
-            this.Helm_SDEF.AutoSize = true;
-            this.Helm_SDEF.Location = new System.Drawing.Point(3, 159);
-            this.Helm_SDEF.Name = "Helm_SDEF";
-            this.Helm_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Helm_SDEF.TabIndex = 48;
-            this.Helm_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Maille_SDEF
-            // 
-            this.Maille_SDEF.AutoSize = true;
-            this.Maille_SDEF.Location = new System.Drawing.Point(31, 159);
-            this.Maille_SDEF.Name = "Maille_SDEF";
-            this.Maille_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Maille_SDEF.TabIndex = 49;
-            this.Maille_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_SDEF
-            // 
-            this.Gloves_SDEF.AutoSize = true;
-            this.Gloves_SDEF.Location = new System.Drawing.Point(59, 159);
-            this.Gloves_SDEF.Name = "Gloves_SDEF";
-            this.Gloves_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_SDEF.TabIndex = 50;
-            this.Gloves_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Pants_SDEF
-            // 
-            this.Pants_SDEF.AutoSize = true;
-            this.Pants_SDEF.Location = new System.Drawing.Point(87, 159);
-            this.Pants_SDEF.Name = "Pants_SDEF";
-            this.Pants_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Pants_SDEF.TabIndex = 51;
-            this.Pants_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Boots_SDEF
-            // 
-            this.Boots_SDEF.AutoSize = true;
-            this.Boots_SDEF.Location = new System.Drawing.Point(115, 159);
-            this.Boots_SDEF.Name = "Boots_SDEF";
-            this.Boots_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Boots_SDEF.TabIndex = 52;
-            this.Boots_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_SDEF
-            // 
-            this.LWeapon_SDEF.AutoSize = true;
-            this.LWeapon_SDEF.Location = new System.Drawing.Point(143, 159);
-            this.LWeapon_SDEF.Name = "LWeapon_SDEF";
-            this.LWeapon_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_SDEF.TabIndex = 53;
-            this.LWeapon_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_SDEF
-            // 
-            this.RWeapon_SDEF.AutoSize = true;
-            this.RWeapon_SDEF.Location = new System.Drawing.Point(171, 159);
-            this.RWeapon_SDEF.Name = "RWeapon_SDEF";
-            this.RWeapon_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_SDEF.TabIndex = 54;
-            this.RWeapon_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_SDEF
-            // 
-            this.Artifact_SDEF.AutoSize = true;
-            this.Artifact_SDEF.Location = new System.Drawing.Point(199, 159);
-            this.Artifact_SDEF.Name = "Artifact_SDEF";
-            this.Artifact_SDEF.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_SDEF.TabIndex = 55;
-            this.Artifact_SDEF.UseVisualStyleBackColor = true;
-            // 
-            // Helm_CHAR
-            // 
-            this.Helm_CHAR.AutoSize = true;
-            this.Helm_CHAR.Location = new System.Drawing.Point(3, 185);
-            this.Helm_CHAR.Name = "Helm_CHAR";
-            this.Helm_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Helm_CHAR.TabIndex = 56;
-            this.Helm_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Maille_CHAR
-            // 
-            this.Maille_CHAR.AutoSize = true;
-            this.Maille_CHAR.Location = new System.Drawing.Point(31, 185);
-            this.Maille_CHAR.Name = "Maille_CHAR";
-            this.Maille_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Maille_CHAR.TabIndex = 57;
-            this.Maille_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_CHAR
-            // 
-            this.Gloves_CHAR.AutoSize = true;
-            this.Gloves_CHAR.Location = new System.Drawing.Point(59, 185);
-            this.Gloves_CHAR.Name = "Gloves_CHAR";
-            this.Gloves_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_CHAR.TabIndex = 58;
-            this.Gloves_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Pants_CHAR
-            // 
-            this.Pants_CHAR.AutoSize = true;
-            this.Pants_CHAR.Location = new System.Drawing.Point(87, 185);
-            this.Pants_CHAR.Name = "Pants_CHAR";
-            this.Pants_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Pants_CHAR.TabIndex = 59;
-            this.Pants_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Boots_CHAR
-            // 
-            this.Boots_CHAR.AutoSize = true;
-            this.Boots_CHAR.Location = new System.Drawing.Point(115, 185);
-            this.Boots_CHAR.Name = "Boots_CHAR";
-            this.Boots_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Boots_CHAR.TabIndex = 60;
-            this.Boots_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_CHAR
-            // 
-            this.LWeapon_CHAR.AutoSize = true;
-            this.LWeapon_CHAR.Location = new System.Drawing.Point(143, 185);
-            this.LWeapon_CHAR.Name = "LWeapon_CHAR";
-            this.LWeapon_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_CHAR.TabIndex = 61;
-            this.LWeapon_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_CHAR
-            // 
-            this.RWeapon_CHAR.AutoSize = true;
-            this.RWeapon_CHAR.Location = new System.Drawing.Point(171, 185);
-            this.RWeapon_CHAR.Name = "RWeapon_CHAR";
-            this.RWeapon_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_CHAR.TabIndex = 62;
-            this.RWeapon_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_CHAR
-            // 
-            this.Artifact_CHAR.AutoSize = true;
-            this.Artifact_CHAR.Location = new System.Drawing.Point(199, 185);
-            this.Artifact_CHAR.Name = "Artifact_CHAR";
-            this.Artifact_CHAR.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_CHAR.TabIndex = 63;
-            this.Artifact_CHAR.UseVisualStyleBackColor = true;
-            // 
-            // Helm_DEX
-            // 
-            this.Helm_DEX.AutoSize = true;
-            this.Helm_DEX.Location = new System.Drawing.Point(3, 211);
-            this.Helm_DEX.Name = "Helm_DEX";
-            this.Helm_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Helm_DEX.TabIndex = 64;
-            this.Helm_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Maille_DEX
-            // 
-            this.Maille_DEX.AutoSize = true;
-            this.Maille_DEX.Location = new System.Drawing.Point(31, 211);
-            this.Maille_DEX.Name = "Maille_DEX";
-            this.Maille_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Maille_DEX.TabIndex = 65;
-            this.Maille_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_DEX
-            // 
-            this.Gloves_DEX.AutoSize = true;
-            this.Gloves_DEX.Location = new System.Drawing.Point(59, 211);
-            this.Gloves_DEX.Name = "Gloves_DEX";
-            this.Gloves_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_DEX.TabIndex = 66;
-            this.Gloves_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Pants_DEX
-            // 
-            this.Pants_DEX.AutoSize = true;
-            this.Pants_DEX.Location = new System.Drawing.Point(87, 211);
-            this.Pants_DEX.Name = "Pants_DEX";
-            this.Pants_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Pants_DEX.TabIndex = 67;
-            this.Pants_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Boots_DEX
-            // 
-            this.Boots_DEX.AutoSize = true;
-            this.Boots_DEX.Location = new System.Drawing.Point(115, 211);
-            this.Boots_DEX.Name = "Boots_DEX";
-            this.Boots_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Boots_DEX.TabIndex = 68;
-            this.Boots_DEX.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_DEX
-            // 
-            this.LWeapon_DEX.AutoSize = true;
-            this.LWeapon_DEX.Location = new System.Drawing.Point(143, 211);
-            this.LWeapon_DEX.Name = "LWeapon_DEX";
-            this.LWeapon_DEX.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_DEX.TabIndex = 69;
-            this.LWeapon_DEX.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_DEX
-            // 
-            this.RWeapon_DEX.AutoSize = true;
-            this.RWeapon_DEX.Location = new System.Drawing.Point(171, 211);
-            this.RWeapon_DEX.Name = "RWeapon_DEX";
-            this.RWeapon_DEX.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_DEX.TabIndex = 70;
-            this.RWeapon_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_DEX
-            // 
-            this.Artifact_DEX.AutoSize = true;
-            this.Artifact_DEX.Location = new System.Drawing.Point(199, 211);
-            this.Artifact_DEX.Name = "Artifact_DEX";
-            this.Artifact_DEX.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_DEX.TabIndex = 71;
-            this.Artifact_DEX.UseVisualStyleBackColor = true;
-            // 
-            // Helm_STR
-            // 
-            this.Helm_STR.AutoSize = true;
-            this.Helm_STR.Location = new System.Drawing.Point(3, 237);
-            this.Helm_STR.Name = "Helm_STR";
-            this.Helm_STR.Size = new System.Drawing.Size(15, 14);
-            this.Helm_STR.TabIndex = 72;
-            this.Helm_STR.UseVisualStyleBackColor = true;
-            // 
-            // Maille_STR
-            // 
-            this.Maille_STR.AutoSize = true;
-            this.Maille_STR.Location = new System.Drawing.Point(31, 237);
-            this.Maille_STR.Name = "Maille_STR";
-            this.Maille_STR.Size = new System.Drawing.Size(15, 14);
-            this.Maille_STR.TabIndex = 73;
-            this.Maille_STR.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_STR
-            // 
-            this.Gloves_STR.AutoSize = true;
-            this.Gloves_STR.Location = new System.Drawing.Point(59, 237);
-            this.Gloves_STR.Name = "Gloves_STR";
-            this.Gloves_STR.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_STR.TabIndex = 74;
-            this.Gloves_STR.UseVisualStyleBackColor = true;
-            // 
-            // Pants_STR
-            // 
-            this.Pants_STR.AutoSize = true;
-            this.Pants_STR.Location = new System.Drawing.Point(87, 237);
-            this.Pants_STR.Name = "Pants_STR";
-            this.Pants_STR.Size = new System.Drawing.Size(15, 14);
-            this.Pants_STR.TabIndex = 75;
-            this.Pants_STR.UseVisualStyleBackColor = true;
-            // 
-            // Boots_STR
-            // 
-            this.Boots_STR.AutoSize = true;
-            this.Boots_STR.Location = new System.Drawing.Point(115, 237);
-            this.Boots_STR.Name = "Boots_STR";
-            this.Boots_STR.Size = new System.Drawing.Size(15, 14);
-            this.Boots_STR.TabIndex = 76;
-            this.Boots_STR.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_STR
-            // 
-            this.LWeapon_STR.AutoSize = true;
-            this.LWeapon_STR.Location = new System.Drawing.Point(143, 237);
-            this.LWeapon_STR.Name = "LWeapon_STR";
-            this.LWeapon_STR.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_STR.TabIndex = 77;
-            this.LWeapon_STR.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_STR
-            // 
-            this.RWeapon_STR.AutoSize = true;
-            this.RWeapon_STR.Location = new System.Drawing.Point(171, 237);
-            this.RWeapon_STR.Name = "RWeapon_STR";
-            this.RWeapon_STR.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_STR.TabIndex = 78;
-            this.RWeapon_STR.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_STR
-            // 
-            this.Artifact_STR.AutoSize = true;
-            this.Artifact_STR.Location = new System.Drawing.Point(199, 237);
-            this.Artifact_STR.Name = "Artifact_STR";
-            this.Artifact_STR.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_STR.TabIndex = 79;
-            this.Artifact_STR.UseVisualStyleBackColor = true;
-            // 
-            // Helm_INT
-            // 
-            this.Helm_INT.AutoSize = true;
-            this.Helm_INT.Location = new System.Drawing.Point(3, 263);
-            this.Helm_INT.Name = "Helm_INT";
-            this.Helm_INT.Size = new System.Drawing.Size(15, 14);
-            this.Helm_INT.TabIndex = 80;
-            this.Helm_INT.UseVisualStyleBackColor = true;
-            // 
-            // Maille_INT
-            // 
-            this.Maille_INT.AutoSize = true;
-            this.Maille_INT.Location = new System.Drawing.Point(31, 263);
-            this.Maille_INT.Name = "Maille_INT";
-            this.Maille_INT.Size = new System.Drawing.Size(15, 14);
-            this.Maille_INT.TabIndex = 81;
-            this.Maille_INT.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_INT
-            // 
-            this.Gloves_INT.AutoSize = true;
-            this.Gloves_INT.Location = new System.Drawing.Point(59, 263);
-            this.Gloves_INT.Name = "Gloves_INT";
-            this.Gloves_INT.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_INT.TabIndex = 82;
-            this.Gloves_INT.UseVisualStyleBackColor = true;
-            // 
-            // Pants_INT
-            // 
-            this.Pants_INT.AutoSize = true;
-            this.Pants_INT.Location = new System.Drawing.Point(87, 263);
-            this.Pants_INT.Name = "Pants_INT";
-            this.Pants_INT.Size = new System.Drawing.Size(15, 14);
-            this.Pants_INT.TabIndex = 83;
-            this.Pants_INT.UseVisualStyleBackColor = true;
-            // 
-            // Boots_INT
-            // 
-            this.Boots_INT.AutoSize = true;
-            this.Boots_INT.Location = new System.Drawing.Point(115, 263);
-            this.Boots_INT.Name = "Boots_INT";
-            this.Boots_INT.Size = new System.Drawing.Size(15, 14);
-            this.Boots_INT.TabIndex = 84;
-            this.Boots_INT.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_INT
-            // 
-            this.LWeapon_INT.AutoSize = true;
-            this.LWeapon_INT.Location = new System.Drawing.Point(143, 263);
-            this.LWeapon_INT.Name = "LWeapon_INT";
-            this.LWeapon_INT.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_INT.TabIndex = 85;
-            this.LWeapon_INT.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_INT
-            // 
-            this.RWeapon_INT.AutoSize = true;
-            this.RWeapon_INT.Location = new System.Drawing.Point(171, 263);
-            this.RWeapon_INT.Name = "RWeapon_INT";
-            this.RWeapon_INT.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_INT.TabIndex = 86;
-            this.RWeapon_INT.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_INT
-            // 
-            this.Artifact_INT.AutoSize = true;
-            this.Artifact_INT.Location = new System.Drawing.Point(199, 263);
-            this.Artifact_INT.Name = "Artifact_INT";
-            this.Artifact_INT.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_INT.TabIndex = 87;
-            this.Artifact_INT.UseVisualStyleBackColor = true;
-            // 
-            // Helm_PERC
-            // 
-            this.Helm_PERC.AutoSize = true;
-            this.Helm_PERC.Location = new System.Drawing.Point(3, 289);
-            this.Helm_PERC.Name = "Helm_PERC";
-            this.Helm_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Helm_PERC.TabIndex = 88;
-            this.Helm_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Maille_PERC
-            // 
-            this.Maille_PERC.AutoSize = true;
-            this.Maille_PERC.Location = new System.Drawing.Point(31, 289);
-            this.Maille_PERC.Name = "Maille_PERC";
-            this.Maille_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Maille_PERC.TabIndex = 89;
-            this.Maille_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Gloves_PERC
-            // 
-            this.Gloves_PERC.AutoSize = true;
-            this.Gloves_PERC.Location = new System.Drawing.Point(59, 289);
-            this.Gloves_PERC.Name = "Gloves_PERC";
-            this.Gloves_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Gloves_PERC.TabIndex = 90;
-            this.Gloves_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Pants_PERC
-            // 
-            this.Pants_PERC.AutoSize = true;
-            this.Pants_PERC.Location = new System.Drawing.Point(87, 289);
-            this.Pants_PERC.Name = "Pants_PERC";
-            this.Pants_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Pants_PERC.TabIndex = 91;
-            this.Pants_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Boots_PERC
-            // 
-            this.Boots_PERC.AutoSize = true;
-            this.Boots_PERC.Location = new System.Drawing.Point(115, 289);
-            this.Boots_PERC.Name = "Boots_PERC";
-            this.Boots_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Boots_PERC.TabIndex = 92;
-            this.Boots_PERC.UseVisualStyleBackColor = true;
-            // 
-            // LWeapon_PERC
-            // 
-            this.LWeapon_PERC.AutoSize = true;
-            this.LWeapon_PERC.Location = new System.Drawing.Point(143, 289);
-            this.LWeapon_PERC.Name = "LWeapon_PERC";
-            this.LWeapon_PERC.Size = new System.Drawing.Size(15, 14);
-            this.LWeapon_PERC.TabIndex = 93;
-            this.LWeapon_PERC.UseVisualStyleBackColor = true;
-            // 
-            // RWeapon_PERC
-            // 
-            this.RWeapon_PERC.AutoSize = true;
-            this.RWeapon_PERC.Location = new System.Drawing.Point(171, 289);
-            this.RWeapon_PERC.Name = "RWeapon_PERC";
-            this.RWeapon_PERC.Size = new System.Drawing.Size(15, 14);
-            this.RWeapon_PERC.TabIndex = 94;
-            this.RWeapon_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Artifact_PERC
-            // 
-            this.Artifact_PERC.AutoSize = true;
-            this.Artifact_PERC.Location = new System.Drawing.Point(199, 289);
-            this.Artifact_PERC.Name = "Artifact_PERC";
-            this.Artifact_PERC.Size = new System.Drawing.Size(15, 14);
-            this.Artifact_PERC.TabIndex = 95;
-            this.Artifact_PERC.UseVisualStyleBackColor = true;
-            // 
-            // Enemy_cbox
-            // 
-            this.Enemy_cbox.AutoSize = true;
-            this.Enemy_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Enemy_cbox.Checked = true;
-            this.Enemy_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Enemy_cbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.Enemy_cbox.Location = new System.Drawing.Point(347, 8);
-            this.Enemy_cbox.Name = "Enemy_cbox";
-            this.Enemy_cbox.Size = new System.Drawing.Size(58, 17);
-            this.Enemy_cbox.TabIndex = 75;
-            this.Enemy_cbox.Text = "Enemy";
-            this.Enemy_cbox.UseVisualStyleBackColor = false;
-            // 
-            // CCCUSLCK_UD
-            // 
-            this.CCCUSLCK_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCCUSLCK_UD.Enabled = false;
-            this.CCCUSLCK_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCCUSLCK_UD.Location = new System.Drawing.Point(230, 32);
-            this.CCCUSLCK_UD.Maximum = new decimal(new int[] {
-            1316134911,
-            2328,
-            0,
-            0});
-            this.CCCUSLCK_UD.Name = "CCCUSLCK_UD";
-            this.CCCUSLCK_UD.Size = new System.Drawing.Size(50, 20);
-            this.CCCUSLCK_UD.TabIndex = 76;
-            // 
-            // CCCUSMSP_UD
-            // 
-            this.CCCUSMSP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCCUSMSP_UD.Enabled = false;
-            this.CCCUSMSP_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCCUSMSP_UD.Location = new System.Drawing.Point(297, 32);
-            this.CCCUSMSP_UD.Maximum = new decimal(new int[] {
-            1316134911,
-            2328,
-            0,
-            0});
-            this.CCCUSMSP_UD.Name = "CCCUSMSP_UD";
-            this.CCCUSMSP_UD.Size = new System.Drawing.Size(49, 20);
-            this.CCCUSMSP_UD.TabIndex = 77;
-            // 
-            // GITEMS_cbox
-            // 
-            this.GITEMS_cbox.AutoSize = true;
-            this.GITEMS_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.GITEMS_cbox.Checked = true;
-            this.GITEMS_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.GITEMS_cbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.GITEMS_cbox.Location = new System.Drawing.Point(411, 8);
-            this.GITEMS_cbox.Name = "GITEMS_cbox";
-            this.GITEMS_cbox.Size = new System.Drawing.Size(77, 17);
-            this.GITEMS_cbox.TabIndex = 78;
-            this.GITEMS_cbox.Text = "GEN Items";
-            this.GITEMS_cbox.UseVisualStyleBackColor = false;
-            // 
-            // NPC_Create_btn
-            // 
-            this.NPC_Create_btn.Location = new System.Drawing.Point(81, 399);
-            this.NPC_Create_btn.Name = "NPC_Create_btn";
-            this.NPC_Create_btn.Size = new System.Drawing.Size(75, 23);
-            this.NPC_Create_btn.TabIndex = 79;
-            this.NPC_Create_btn.Text = "Generate";
-            this.NPC_Create_btn.UseVisualStyleBackColor = true;
-            this.NPC_Create_btn.Click += new System.EventHandler(this.NPC_Create_btn_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(844, 592);
-            this.tabPage2.TabIndex = 5;
-            this.tabPage2.Text = "Map";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Dungons_And_Dargons.Properties.Resources.Magnosh_territories;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(838, 586);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // AutoRefresh_cbox
             // 
             this.AutoRefresh_cbox.AutoSize = true;
@@ -4845,115 +5034,29 @@
             this.AutoRefresh_cbox.UseVisualStyleBackColor = true;
             this.AutoRefresh_cbox.CheckedChanged += new System.EventHandler(this.AutoRefresh_cbox_CheckedChanged);
             // 
-            // CCXP_UD
+            // Inventory_lbox
             // 
-            this.CCXP_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CCXP_UD.Enabled = false;
-            this.CCXP_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.CCXP_UD.Location = new System.Drawing.Point(56, 61);
-            this.CCXP_UD.Maximum = new decimal(new int[] {
-            1316134911,
-            2328,
-            0,
-            0});
-            this.CCXP_UD.Name = "CCXP_UD";
-            this.CCXP_UD.Size = new System.Drawing.Size(100, 20);
-            this.CCXP_UD.TabIndex = 80;
+            this.Inventory_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Inventory_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Inventory_lbox.Location = new System.Drawing.Point(3, 3);
+            this.Inventory_lbox.Name = "Inventory_lbox";
+            this.Inventory_lbox.Size = new System.Drawing.Size(838, 586);
+            this.Inventory_lbox.TabIndex = 3;
+            this.Inventory_lbox.UseCompatibleStateImageBehavior = false;
+            this.Inventory_lbox.View = System.Windows.Forms.View.List;
+            this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
             // 
-            // label12
+            // Spells_lbox
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(213, 35);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(16, 13);
-            this.label12.TabIndex = 81;
-            this.label12.Text = "L:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(280, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(19, 13);
-            this.label13.TabIndex = 82;
-            this.label13.Text = "M:";
-            // 
-            // GenEnchants_cbox
-            // 
-            this.GenEnchants_cbox.AutoSize = true;
-            this.GenEnchants_cbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.GenEnchants_cbox.Checked = true;
-            this.GenEnchants_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.GenEnchants_cbox.ForeColor = System.Drawing.SystemColors.Control;
-            this.GenEnchants_cbox.Location = new System.Drawing.Point(411, 31);
-            this.GenEnchants_cbox.Name = "GenEnchants_cbox";
-            this.GenEnchants_cbox.Size = new System.Drawing.Size(97, 17);
-            this.GenEnchants_cbox.TabIndex = 83;
-            this.GenEnchants_cbox.Text = "GEN Enchants";
-            this.GenEnchants_cbox.UseVisualStyleBackColor = false;
-            // 
-            // Creature_Ammount_UD
-            // 
-            this.Creature_Ammount_UD.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Creature_Ammount_UD.ForeColor = System.Drawing.SystemColors.Control;
-            this.Creature_Ammount_UD.Location = new System.Drawing.Point(3, 400);
-            this.Creature_Ammount_UD.Maximum = new decimal(new int[] {
-            1316134911,
-            2328,
-            0,
-            0});
-            this.Creature_Ammount_UD.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Creature_Ammount_UD.Name = "Creature_Ammount_UD";
-            this.Creature_Ammount_UD.Size = new System.Drawing.Size(72, 20);
-            this.Creature_Ammount_UD.TabIndex = 84;
-            this.Creature_Ammount_UD.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // ItemFilter_sbox
-            // 
-            this.ItemFilter_sbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ItemFilter_sbox.FormattingEnabled = true;
-            this.ItemFilter_sbox.Location = new System.Drawing.Point(271, 19);
-            this.ItemFilter_sbox.Name = "ItemFilter_sbox";
-            this.ItemFilter_sbox.Size = new System.Drawing.Size(143, 21);
-            this.ItemFilter_sbox.TabIndex = 67;
-            this.ItemFilter_sbox.SelectedIndexChanged += new System.EventHandler(this.ItemFilter_sbox_SelectedIndexChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(238, 22);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(32, 13);
-            this.label14.TabIndex = 68;
-            this.label14.Text = "Filter:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(238, 22);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(32, 13);
-            this.label15.TabIndex = 72;
-            this.label15.Text = "Filter:";
-            // 
-            // SpellFilter_sbox
-            // 
-            this.SpellFilter_sbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.SpellFilter_sbox.FormattingEnabled = true;
-            this.SpellFilter_sbox.Location = new System.Drawing.Point(271, 19);
-            this.SpellFilter_sbox.Name = "SpellFilter_sbox";
-            this.SpellFilter_sbox.Size = new System.Drawing.Size(143, 21);
-            this.SpellFilter_sbox.TabIndex = 71;
-            this.SpellFilter_sbox.SelectedIndexChanged += new System.EventHandler(this.SpellFilter_sbox_SelectedIndexChanged);
+            this.Spells_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Spells_lbox.Location = new System.Drawing.Point(3, 3);
+            this.Spells_lbox.Name = "Spells_lbox";
+            this.Spells_lbox.Size = new System.Drawing.Size(838, 586);
+            this.Spells_lbox.TabIndex = 5;
+            this.Spells_lbox.UseCompatibleStateImageBehavior = false;
+            this.Spells_lbox.View = System.Windows.Forms.View.List;
+            this.Spells_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_lbox_SelectedIndexChanged);
             // 
             // User
             // 
@@ -5056,6 +5159,8 @@
             this.EGROUP.PerformLayout();
             this.Inventory_tab.ResumeLayout(false);
             this.Spells_tab.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GameMaster_tab.ResumeLayout(false);
             this.GameMaster_stabs.ResumeLayout(false);
             this.NPCM_tab.ResumeLayout(false);
@@ -5063,6 +5168,14 @@
             this.groupBox1.PerformLayout();
             this.NPCC_tab.ResumeLayout(false);
             this.NPCC_tab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSMEL_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSELCK_ud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Creature_Ammount_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCXP_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSMSP_UD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLCK_UD)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CCHP_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCMP_UD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCATK_UD)).EndInit();
@@ -5123,14 +5236,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.MSlots_Spell_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank_Spell_editor_ud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tier_Spell_editor_ud)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CCCUSLCK_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCCUSMSP_UD)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCXP_UD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Creature_Ammount_UD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5141,7 +5246,6 @@
         private System.Windows.Forms.TabControl Main_tabs;
         private System.Windows.Forms.TabPage Equipment_tab;
         private System.Windows.Forms.TabPage Inventory_tab;
-        private System.Windows.Forms.ListBox Inventory_lbox;
         private System.Windows.Forms.TabPage Spells_tab;
         private System.Windows.Forms.TabPage GameMaster_tab;
         private System.Windows.Forms.TabControl GameMaster_stabs;
@@ -5284,7 +5388,6 @@
         private System.Windows.Forms.TextBox M_STR_tbox;
         private System.Windows.Forms.TextBox M_INT_tbox;
         private System.Windows.Forms.TextBox M_PERC_tbox;
-        private System.Windows.Forms.ListBox Spells_lbox;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ListView Spells_Edititor_lbox;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -5516,5 +5619,13 @@
         private System.Windows.Forms.ComboBox ItemFilter_sbox;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox SpellFilter_sbox;
+        private System.Windows.Forms.NumericUpDown CCCUSMEL_UD;
+        private System.Windows.Forms.NumericUpDown CCCUSELCK_ud;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ComboBox InvSort;
+        private System.Windows.Forms.ComboBox SpellSort;
+        private System.Windows.Forms.ListView Inventory_lbox;
+        private System.Windows.Forms.ListView Spells_lbox;
     }
 }
