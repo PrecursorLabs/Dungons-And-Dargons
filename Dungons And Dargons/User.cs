@@ -36,7 +36,7 @@ namespace Dungons_And_Dargons
 
         public User(int PlayerID, string ip, string password)
         {
-            String version = "1.1.6.0";
+            String version = "1.1.7.0";
             string LatestVersion = "0.0.0.0";
             DBip = ip;
             DBpassword = password;
@@ -238,30 +238,12 @@ namespace Dungons_And_Dargons
                 + MyPlayer.DEX + MyPlayer.M_STR + MyPlayer.STR + MyPlayer.M_INT + MyPlayer.INTEL + MyPlayer.M_PERC + MyPlayer.PERC); ;
 
             Knowledge_lbox.Items.Clear();
-            if (MyPlayer.Earth > 0)
-            {
-                Knowledge_lbox.Items.Add("Earth Knowledge: " + MyPlayer.Earth);
-            }
-            if (MyPlayer.Fire > 0)
-            {
-                Knowledge_lbox.Items.Add("Fire Knowledge: " + MyPlayer.Fire);
-            }
-            if (MyPlayer.Lightning > 0)
-            {
-                Knowledge_lbox.Items.Add("Lightning Knowledge: " + MyPlayer.Lightning);
-            }
-            if (MyPlayer.Ice > 0)
-            {
-                Knowledge_lbox.Items.Add("Ice Knowledge: " + MyPlayer.Ice);
-            }
-            if (MyPlayer.Holy > 0)
-            {
-                Knowledge_lbox.Items.Add("Holy Knowledge: " + MyPlayer.Holy);
-            }
-            if (MyPlayer.Unholy > 0)
-            {
-                Knowledge_lbox.Items.Add("Unholy Knowledge: " + MyPlayer.Unholy);
-            }
+            Knowledge_lbox.Items.Add("Earth Knowledge: " + MyPlayer.Earth);
+            Knowledge_lbox.Items.Add("Fire Knowledge: " + MyPlayer.Fire);
+            Knowledge_lbox.Items.Add("Lightning Knowledge: " + MyPlayer.Lightning);
+            Knowledge_lbox.Items.Add("Ice Knowledge: " + MyPlayer.Ice);
+            Knowledge_lbox.Items.Add("Holy Knowledge: " + MyPlayer.Holy);
+            Knowledge_lbox.Items.Add("Unholy Knowledge: " + MyPlayer.Unholy);
 
             if (MyPlayer.Helmet.Name != null)
             {

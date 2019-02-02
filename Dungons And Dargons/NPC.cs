@@ -289,13 +289,13 @@ namespace Dungons_And_Dargons
                 DC_ITEM.PostData();
                 if (WeaponLeft.Name != null)
                 {
-                    WeaponRight.ItemID = DC_ITEM.ItemID;
-                    WeaponRight.Name = DC_ITEM.Name;
-                    WeaponRight.GetData();
-                } else {
                     WeaponLeft.ItemID = DC_ITEM.ItemID;
                     WeaponLeft.Name = DC_ITEM.Name;
                     WeaponLeft.GetData();
+                } else {
+                    WeaponRight.ItemID = DC_ITEM.ItemID;
+                    WeaponRight.Name = DC_ITEM.Name;
+                    WeaponRight.GetData();
                 }
             }
 

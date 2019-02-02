@@ -63,10 +63,12 @@
             this.Inventory_tab = new System.Windows.Forms.TabPage();
             this.InvSort = new System.Windows.Forms.ComboBox();
             this.itemInfo_CNTRL = new System.Windows.Forms.GroupBox();
+            this.Inventory_lbox = new System.Windows.Forms.ListView();
             this.Spells_tab = new System.Windows.Forms.TabPage();
             this.SpellSort = new System.Windows.Forms.ComboBox();
-            this.SpellInfo_CNTRL = new System.Windows.Forms.GroupBox();
+            this.Spells_lbox = new System.Windows.Forms.ListView();
             this.Knowledge_lbox = new System.Windows.Forms.ListBox();
+            this.SpellInfo_CNTRL = new System.Windows.Forms.GroupBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GameMaster_tab = new System.Windows.Forms.TabPage();
@@ -413,8 +415,6 @@
             this.Power_Level_tbox = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
             this.AutoRefresh_cbox = new System.Windows.Forms.CheckBox();
-            this.Inventory_lbox = new System.Windows.Forms.ListView();
-            this.Spells_lbox = new System.Windows.Forms.ListView();
             this.Main_tabs.SuspendLayout();
             this.Equipment_tab.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -535,11 +535,11 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.Equipable_lbox);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox7.Location = new System.Drawing.Point(3, 3);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox7.Size = new System.Drawing.Size(401, 582);
+            this.groupBox7.Size = new System.Drawing.Size(430, 582);
             this.groupBox7.TabIndex = 197;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Equipable";
@@ -552,7 +552,7 @@
             this.Equipable_lbox.Location = new System.Drawing.Point(3, 16);
             this.Equipable_lbox.Name = "Equipable_lbox";
             this.Equipable_lbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Equipable_lbox.Size = new System.Drawing.Size(395, 563);
+            this.Equipable_lbox.Size = new System.Drawing.Size(424, 563);
             this.Equipable_lbox.Sorted = true;
             this.Equipable_lbox.TabIndex = 2;
             this.Equipable_lbox.SelectedIndexChanged += new System.EventHandler(this.Equipable_lbox_SelectedIndexChanged);
@@ -596,10 +596,10 @@
             // WeaponRight_tbox
             // 
             this.WeaponRight_tbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.WeaponRight_tbox.Location = new System.Drawing.Point(143, 149);
+            this.WeaponRight_tbox.Location = new System.Drawing.Point(191, 149);
             this.WeaponRight_tbox.Name = "WeaponRight_tbox";
             this.WeaponRight_tbox.ReadOnly = true;
-            this.WeaponRight_tbox.Size = new System.Drawing.Size(80, 20);
+            this.WeaponRight_tbox.Size = new System.Drawing.Size(126, 20);
             this.WeaponRight_tbox.TabIndex = 26;
             this.WeaponRight_tbox.Click += new System.EventHandler(this.WeaponRight_tbox_Click);
             // 
@@ -610,7 +610,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Equipment_info_CTRL.Location = new System.Drawing.Point(12, 230);
             this.Equipment_info_CTRL.Name = "Equipment_info_CTRL";
-            this.Equipment_info_CTRL.Size = new System.Drawing.Size(292, 344);
+            this.Equipment_info_CTRL.Size = new System.Drawing.Size(384, 344);
             this.Equipment_info_CTRL.TabIndex = 25;
             this.Equipment_info_CTRL.TabStop = false;
             this.Equipment_info_CTRL.Text = "Item Info";
@@ -618,7 +618,7 @@
             // DeEquip_Artifact_btn
             // 
             this.DeEquip_Artifact_btn.FlatAppearance.BorderSize = 0;
-            this.DeEquip_Artifact_btn.Location = new System.Drawing.Point(229, 173);
+            this.DeEquip_Artifact_btn.Location = new System.Drawing.Point(323, 173);
             this.DeEquip_Artifact_btn.Name = "DeEquip_Artifact_btn";
             this.DeEquip_Artifact_btn.Size = new System.Drawing.Size(75, 23);
             this.DeEquip_Artifact_btn.TabIndex = 24;
@@ -632,7 +632,7 @@
             this.Artifact_tbox.Location = new System.Drawing.Point(58, 175);
             this.Artifact_tbox.Name = "Artifact_tbox";
             this.Artifact_tbox.ReadOnly = true;
-            this.Artifact_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Artifact_tbox.Size = new System.Drawing.Size(259, 20);
             this.Artifact_tbox.TabIndex = 23;
             this.Artifact_tbox.Click += new System.EventHandler(this.Artifact_tbox_Click);
             // 
@@ -649,7 +649,7 @@
             // DeEquip_Weapon_btn
             // 
             this.DeEquip_Weapon_btn.FlatAppearance.BorderSize = 0;
-            this.DeEquip_Weapon_btn.Location = new System.Drawing.Point(229, 147);
+            this.DeEquip_Weapon_btn.Location = new System.Drawing.Point(323, 147);
             this.DeEquip_Weapon_btn.Name = "DeEquip_Weapon_btn";
             this.DeEquip_Weapon_btn.Size = new System.Drawing.Size(75, 23);
             this.DeEquip_Weapon_btn.TabIndex = 21;
@@ -663,7 +663,7 @@
             this.WeaponLeft_tbox.Location = new System.Drawing.Point(58, 149);
             this.WeaponLeft_tbox.Name = "WeaponLeft_tbox";
             this.WeaponLeft_tbox.ReadOnly = true;
-            this.WeaponLeft_tbox.Size = new System.Drawing.Size(80, 20);
+            this.WeaponLeft_tbox.Size = new System.Drawing.Size(126, 20);
             this.WeaponLeft_tbox.TabIndex = 20;
             this.WeaponLeft_tbox.Click += new System.EventHandler(this.Weapon_tbox_Click);
             // 
@@ -680,7 +680,7 @@
             // DeEquip_Gloves_btn
             // 
             this.DeEquip_Gloves_btn.FlatAppearance.BorderSize = 0;
-            this.DeEquip_Gloves_btn.Location = new System.Drawing.Point(229, 121);
+            this.DeEquip_Gloves_btn.Location = new System.Drawing.Point(323, 121);
             this.DeEquip_Gloves_btn.Name = "DeEquip_Gloves_btn";
             this.DeEquip_Gloves_btn.Size = new System.Drawing.Size(75, 23);
             this.DeEquip_Gloves_btn.TabIndex = 18;
@@ -694,7 +694,7 @@
             this.Gloves_tbox.Location = new System.Drawing.Point(58, 123);
             this.Gloves_tbox.Name = "Gloves_tbox";
             this.Gloves_tbox.ReadOnly = true;
-            this.Gloves_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Gloves_tbox.Size = new System.Drawing.Size(259, 20);
             this.Gloves_tbox.TabIndex = 17;
             this.Gloves_tbox.Click += new System.EventHandler(this.Gloves_tbox_Click);
             // 
@@ -711,7 +711,7 @@
             // DeEquip_Boots_btn
             // 
             this.DeEquip_Boots_btn.FlatAppearance.BorderSize = 0;
-            this.DeEquip_Boots_btn.Location = new System.Drawing.Point(229, 95);
+            this.DeEquip_Boots_btn.Location = new System.Drawing.Point(323, 95);
             this.DeEquip_Boots_btn.Name = "DeEquip_Boots_btn";
             this.DeEquip_Boots_btn.Size = new System.Drawing.Size(75, 23);
             this.DeEquip_Boots_btn.TabIndex = 15;
@@ -725,7 +725,7 @@
             this.Boots_tbox.Location = new System.Drawing.Point(58, 97);
             this.Boots_tbox.Name = "Boots_tbox";
             this.Boots_tbox.ReadOnly = true;
-            this.Boots_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Boots_tbox.Size = new System.Drawing.Size(259, 20);
             this.Boots_tbox.TabIndex = 14;
             this.Boots_tbox.Click += new System.EventHandler(this.Boots_tbox_Click);
             // 
@@ -742,7 +742,7 @@
             // DeEquip_Pants_btn
             // 
             this.DeEquip_Pants_btn.FlatAppearance.BorderSize = 0;
-            this.DeEquip_Pants_btn.Location = new System.Drawing.Point(229, 69);
+            this.DeEquip_Pants_btn.Location = new System.Drawing.Point(323, 69);
             this.DeEquip_Pants_btn.Name = "DeEquip_Pants_btn";
             this.DeEquip_Pants_btn.Size = new System.Drawing.Size(75, 23);
             this.DeEquip_Pants_btn.TabIndex = 12;
@@ -756,7 +756,7 @@
             this.Pants__tbox.Location = new System.Drawing.Point(58, 71);
             this.Pants__tbox.Name = "Pants__tbox";
             this.Pants__tbox.ReadOnly = true;
-            this.Pants__tbox.Size = new System.Drawing.Size(165, 20);
+            this.Pants__tbox.Size = new System.Drawing.Size(259, 20);
             this.Pants__tbox.TabIndex = 11;
             this.Pants__tbox.Click += new System.EventHandler(this.Pants__tbox_Click);
             // 
@@ -773,7 +773,7 @@
             // DeEquip_Maille_btn
             // 
             this.DeEquip_Maille_btn.FlatAppearance.BorderSize = 0;
-            this.DeEquip_Maille_btn.Location = new System.Drawing.Point(229, 43);
+            this.DeEquip_Maille_btn.Location = new System.Drawing.Point(323, 43);
             this.DeEquip_Maille_btn.Name = "DeEquip_Maille_btn";
             this.DeEquip_Maille_btn.Size = new System.Drawing.Size(75, 23);
             this.DeEquip_Maille_btn.TabIndex = 9;
@@ -787,7 +787,7 @@
             this.Maille_tbox.Location = new System.Drawing.Point(58, 45);
             this.Maille_tbox.Name = "Maille_tbox";
             this.Maille_tbox.ReadOnly = true;
-            this.Maille_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Maille_tbox.Size = new System.Drawing.Size(259, 20);
             this.Maille_tbox.TabIndex = 8;
             this.Maille_tbox.Click += new System.EventHandler(this.Maille_tbox_Click);
             // 
@@ -804,7 +804,7 @@
             // DeEquip_Helmet_btn
             // 
             this.DeEquip_Helmet_btn.FlatAppearance.BorderSize = 0;
-            this.DeEquip_Helmet_btn.Location = new System.Drawing.Point(229, 17);
+            this.DeEquip_Helmet_btn.Location = new System.Drawing.Point(323, 17);
             this.DeEquip_Helmet_btn.Name = "DeEquip_Helmet_btn";
             this.DeEquip_Helmet_btn.Size = new System.Drawing.Size(75, 23);
             this.DeEquip_Helmet_btn.TabIndex = 6;
@@ -818,7 +818,7 @@
             this.Helmet_tbox.Location = new System.Drawing.Point(58, 19);
             this.Helmet_tbox.Name = "Helmet_tbox";
             this.Helmet_tbox.ReadOnly = true;
-            this.Helmet_tbox.Size = new System.Drawing.Size(165, 20);
+            this.Helmet_tbox.Size = new System.Drawing.Size(259, 20);
             this.Helmet_tbox.TabIndex = 5;
             this.Helmet_tbox.Click += new System.EventHandler(this.Helmet_tbox_Click);
             // 
@@ -836,7 +836,7 @@
             // 
             this.DeEquipAll_btn.Location = new System.Drawing.Point(12, 201);
             this.DeEquipAll_btn.Name = "DeEquipAll_btn";
-            this.DeEquipAll_btn.Size = new System.Drawing.Size(292, 23);
+            this.DeEquipAll_btn.Size = new System.Drawing.Size(386, 23);
             this.DeEquipAll_btn.TabIndex = 3;
             this.DeEquipAll_btn.Text = "UnEquip All";
             this.DeEquipAll_btn.UseVisualStyleBackColor = true;
@@ -857,6 +857,7 @@
             // 
             // InvSort
             // 
+            this.InvSort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.InvSort.FormattingEnabled = true;
             this.InvSort.Items.AddRange(new object[] {
             "A-Z",
@@ -878,13 +879,25 @@
             this.itemInfo_CNTRL.TabIndex = 1;
             this.itemInfo_CNTRL.TabStop = false;
             // 
+            // Inventory_lbox
+            // 
+            this.Inventory_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Inventory_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Inventory_lbox.Location = new System.Drawing.Point(3, 3);
+            this.Inventory_lbox.Name = "Inventory_lbox";
+            this.Inventory_lbox.Size = new System.Drawing.Size(838, 586);
+            this.Inventory_lbox.TabIndex = 3;
+            this.Inventory_lbox.UseCompatibleStateImageBehavior = false;
+            this.Inventory_lbox.View = System.Windows.Forms.View.List;
+            this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
+            // 
             // Spells_tab
             // 
             this.Spells_tab.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Spells_tab.Controls.Add(this.SpellSort);
-            this.Spells_tab.Controls.Add(this.SpellInfo_CNTRL);
-            this.Spells_tab.Controls.Add(this.Knowledge_lbox);
             this.Spells_tab.Controls.Add(this.Spells_lbox);
+            this.Spells_tab.Controls.Add(this.Knowledge_lbox);
+            this.Spells_tab.Controls.Add(this.SpellInfo_CNTRL);
             this.Spells_tab.Location = new System.Drawing.Point(4, 22);
             this.Spells_tab.Name = "Spells_tab";
             this.Spells_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -895,38 +908,55 @@
             // 
             // SpellSort
             // 
+            this.SpellSort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SpellSort.FormattingEnabled = true;
             this.SpellSort.Items.AddRange(new object[] {
             "A-Z",
             "Z-A",
             "Old-New",
             "New-Old"});
-            this.SpellSort.Location = new System.Drawing.Point(153, 11);
+            this.SpellSort.Location = new System.Drawing.Point(436, 6);
             this.SpellSort.Name = "SpellSort";
             this.SpellSort.Size = new System.Drawing.Size(121, 21);
             this.SpellSort.TabIndex = 4;
             this.SpellSort.SelectedIndexChanged += new System.EventHandler(this.SpellSort_SelectedIndexChanged);
             // 
-            // SpellInfo_CNTRL
+            // Spells_lbox
             // 
-            this.SpellInfo_CNTRL.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SpellInfo_CNTRL.Dock = System.Windows.Forms.DockStyle.Right;
-            this.SpellInfo_CNTRL.Location = new System.Drawing.Point(280, 3);
-            this.SpellInfo_CNTRL.Name = "SpellInfo_CNTRL";
-            this.SpellInfo_CNTRL.Size = new System.Drawing.Size(269, 586);
-            this.SpellInfo_CNTRL.TabIndex = 3;
-            this.SpellInfo_CNTRL.TabStop = false;
-            this.SpellInfo_CNTRL.Text = "Spell Info";
+            this.Spells_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Spells_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Spells_lbox.Location = new System.Drawing.Point(3, 3);
+            this.Spells_lbox.Name = "Spells_lbox";
+            this.Spells_lbox.Size = new System.Drawing.Size(563, 586);
+            this.Spells_lbox.TabIndex = 5;
+            this.Spells_lbox.UseCompatibleStateImageBehavior = false;
+            this.Spells_lbox.View = System.Windows.Forms.View.List;
+            this.Spells_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_lbox_SelectedIndexChanged);
             // 
             // Knowledge_lbox
             // 
+            this.Knowledge_lbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Knowledge_lbox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Knowledge_lbox.Dock = System.Windows.Forms.DockStyle.Right;
             this.Knowledge_lbox.FormattingEnabled = true;
-            this.Knowledge_lbox.Location = new System.Drawing.Point(549, 3);
+            this.Knowledge_lbox.Location = new System.Drawing.Point(572, 422);
             this.Knowledge_lbox.Name = "Knowledge_lbox";
-            this.Knowledge_lbox.Size = new System.Drawing.Size(292, 586);
+            this.Knowledge_lbox.Size = new System.Drawing.Size(269, 160);
             this.Knowledge_lbox.TabIndex = 2;
+            // 
+            // SpellInfo_CNTRL
+            // 
+            this.SpellInfo_CNTRL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SpellInfo_CNTRL.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SpellInfo_CNTRL.Location = new System.Drawing.Point(572, 0);
+            this.SpellInfo_CNTRL.Name = "SpellInfo_CNTRL";
+            this.SpellInfo_CNTRL.Size = new System.Drawing.Size(269, 423);
+            this.SpellInfo_CNTRL.TabIndex = 3;
+            this.SpellInfo_CNTRL.TabStop = false;
+            this.SpellInfo_CNTRL.Text = "Spell Info";
             // 
             // tabPage2
             // 
@@ -5023,6 +5053,7 @@
             // 
             // AutoRefresh_cbox
             // 
+            this.AutoRefresh_cbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AutoRefresh_cbox.AutoSize = true;
             this.AutoRefresh_cbox.Checked = true;
             this.AutoRefresh_cbox.CheckState = System.Windows.Forms.CheckState.Checked;
@@ -5033,30 +5064,6 @@
             this.AutoRefresh_cbox.Text = "Auto Refresh";
             this.AutoRefresh_cbox.UseVisualStyleBackColor = true;
             this.AutoRefresh_cbox.CheckedChanged += new System.EventHandler(this.AutoRefresh_cbox_CheckedChanged);
-            // 
-            // Inventory_lbox
-            // 
-            this.Inventory_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Inventory_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Inventory_lbox.Location = new System.Drawing.Point(3, 3);
-            this.Inventory_lbox.Name = "Inventory_lbox";
-            this.Inventory_lbox.Size = new System.Drawing.Size(838, 586);
-            this.Inventory_lbox.TabIndex = 3;
-            this.Inventory_lbox.UseCompatibleStateImageBehavior = false;
-            this.Inventory_lbox.View = System.Windows.Forms.View.List;
-            this.Inventory_lbox.SelectedIndexChanged += new System.EventHandler(this.Inventory_lbox_SelectedIndexChanged);
-            // 
-            // Spells_lbox
-            // 
-            this.Spells_lbox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Spells_lbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Spells_lbox.Location = new System.Drawing.Point(3, 3);
-            this.Spells_lbox.Name = "Spells_lbox";
-            this.Spells_lbox.Size = new System.Drawing.Size(838, 586);
-            this.Spells_lbox.TabIndex = 5;
-            this.Spells_lbox.UseCompatibleStateImageBehavior = false;
-            this.Spells_lbox.View = System.Windows.Forms.View.List;
-            this.Spells_lbox.SelectedIndexChanged += new System.EventHandler(this.Spells_lbox_SelectedIndexChanged);
             // 
             // User
             // 
