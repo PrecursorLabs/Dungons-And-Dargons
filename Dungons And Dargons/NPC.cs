@@ -287,7 +287,7 @@ namespace Dungons_And_Dargons
                 success = true;
                 DC_ITEM.Equipped = true;
                 DC_ITEM.PostData();
-                if (WeaponLeft.Name != null)
+                if (WeaponRight.Name != null)
                 {
                     WeaponLeft.ItemID = DC_ITEM.ItemID;
                     WeaponLeft.Name = DC_ITEM.Name;
