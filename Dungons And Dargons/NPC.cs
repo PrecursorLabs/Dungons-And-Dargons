@@ -541,7 +541,6 @@ namespace Dungons_And_Dargons
                     " `Unholy` = '" + Unholy + "'," +
                     " `Holy` = '" + Holy + "'" +
                     " WHERE `idPlayer`='" + PlayerID + "'";
-                MessageBox.Show(sql);
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
