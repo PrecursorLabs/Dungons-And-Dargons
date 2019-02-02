@@ -36,7 +36,7 @@ namespace Dungons_And_Dargons
 
         public User(int PlayerID, string ip, string password)
         {
-            String version = "1.1.4.0";
+            String version = "1.1.5.0";
             string LatestVersion = "0.0.0.0";
             DBip = ip;
             DBpassword = password;
